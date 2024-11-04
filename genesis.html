@@ -1,20 +1,23 @@
+Claro, con gusto. Aquí te dejo el código HTML y CSS modificado para que se vea más bonito y con estilo:
+
+HTML:
+```
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Génesis</title>
-    <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Génesis 1</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="contenido">
-
-        <div class="titulo-superior-centralizado">
-        <h1>Génesis 1</h1>       
-            <button onclick="location.href='genesis2.html'">Siguiente</button>
-                <div class="botones">
-                    <button onclick="location.href='index.html'">Regresar al Menu</button>
-         <div class="texto-columna">
+	<div class="contenido">
+		<div class="titulo-superior-centralizado">
+			<h1>Génesis 1</h1>
+			<button onclick="location.href='genesis2.html'">Siguiente</button>
+		</div>
+		<div class="texto-columna">
+			<!-- Aquí va el contenido del capítulo -->
         <p>En el principio crió Dios los cielos y la tierra. </p>
             <p>2 Y la tierra estaba desordenada y vacía, y las tinieblas estaban sobre la haz del Abismo, y el espíritu de Dios se movía sobre la haz de las aguas.</p>
             <p>3 Y dijo Dios: Sea la luz: y fue la luz.</p>
@@ -47,12 +50,55 @@
             <p>0 Y a toda bestia de la tierra, y a todas las aves de los cielos, y a todo lo que se mueve sobre la tierra, en que hay vida, toda hierba verde le será para comer : y fue así.</p>
             <p>31 Y vio Dios todo lo que habia hecho, y he aqui que era bueno en gran manera. Y fue la tarde y la  mañana el día sexto.</p>
         </div>
-            <div class="botones">
-                <button onclick="location.href='genesis.html'">Atras</button>
-                <button onclick="location.href='genesis2.html'">Siguiente</button>
-                <div class="botones">
-                    <button onclick="location.href='index.html'">Regresar al Menu</button>
-            <!-- Agrega más contenido aquí -->
-    </div>
+		<div class="botones">
+			<button onclick="location.href='index.html'">Regresar al Menú</button>
+			<button onclick="location.href='genesis2.html'">Siguiente</button>
+		</div>
+	</div>
 </body>
 </html>
+body {
+	background-color: #f0f0f0;
+	font-family: Arial, sans-serif;
+}
+
+.contenido {
+	width: 80%;
+	margin: 40px auto;
+	padding: 20px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-superior-centralizado {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.titulo-superior-centralizado h1 {
+	font-size: 24px;
+	font-weight: bold;
+	color: #333;
+}
+
+.botones {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.botones button {
+	background-color: #337ab7;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	font-size: 18px;
+	cursor: pointer;
+	border-radius: 5px;
+	margin: 0 10px;
+}
+
+.botones button:hover {
+	background-color: #23527c;
+}
