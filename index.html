@@ -1,82 +1,126 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <title>La Biblia</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      background-image: url('https://images.app.goo.gl/1KSg8pkgU6VbcwQV6');
-      background-size: cover;
-      background-position: center;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-
-    h1 {
-      margin: 0;
-      padding: 0;
-      font-size: 36px;
-    }
-
-    h2 {
-      margin: 0;
-      padding: 0;
-      font-size: 24px;
-    }
-
-    main {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-    }
-
-    .portadas {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .portadas img {
-      width: 50%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-
-    .portadas a {
-      text-decoration: none;
-      color: #337ab7;
-    }
-
-    .portadas a:hover {
-      color: #23527c;
-    }
-  </style>
+	<title>La Biblia</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<style>
+		/* Estilos para la página principal */
+		body {
+			background-image: url('imagen-de-fondo.jpg');
+			background-size: cover;
+			background-position: center;
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		
+		header {
+			background-color: #333;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+		}
+		
+		h1 {
+			margin: 0;
+			padding: 0;
+			font-size: 36px;
+		}
+		
+		h2 {
+			margin: 0;
+			padding: 0;
+			font-size: 24px;
+		}
+		
+		main {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 20px;
+		}
+		
+		.portadas {
+			display: flex;
+			justify-content: space-between;
+		}
+		
+		.portadas img {
+			width: 50%;
+			height: 200px;
+			object-fit: cover;
+			border-radius: 10px;
+		}
+		
+		.portadas a {
+			text-decoration: none;
+			color: #337ab7;
+		}
+		
+		.portadas a:hover {
+			color: #23527c;
+		}
+		
+		/* Estilos para el botón de búsqueda */
+		#buscador {
+			width: 50%;
+			padding: 10px;
+			font-size: 18px;
+			border: none;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+		
+		#boton-buscar {
+			background-color: #337ab7;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 10px;
+			cursor: pointer;
+		}
+		
+		#boton-buscar:hover {
+			background-color: #23527c;
+		}
+		
+		/* Estilos para los resultados de la búsqueda */
+		#resultados {
+			margin-top: 20px;
+			padding: 20px;
+			background-color: #f9f9f9;
+			border: 1px solid #ddd;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+	</style>
 </head>
 <body>
-  <header>
-    <h1>La Biblia Reina Valera Revisada por Casiodoro</h1>
-    <h2>La palabra de Dios para ti</h2>
-  </header>
-  <main>
-    <div class="portadas">
-      <a href="viejo-testamento.html">
-        <img src="https://images.app.goo.gl/V7WiR5bmuMKvA1Y2A" alt="Portada del Viejo Testamento">
-      </a>
-      <a href="nuevo-testamento.html">
-        <img src="https://images.app.goo.gl/uyW1yzCMT9twGEEG6" alt="Portada del Nuevo Testamento">
-      </a>
-    </div>
-  </main
+	<header>
+		<h1>La Biblia Reina Valera Revisada por Casiodoro</h1>
+		<h2>La palabra de Dios para ti</h2>
+	</header>
+	<main>
+		<!-- Botón de búsqueda de palabras -->
+		<input type="search" id="buscador" placeholder="Buscar...">
+		<button id="boton-buscar">Buscar</button>
+		<!-- Resultados de la búsqueda -->
+		<div id="resultados"></div>
+		
+		<!-- Enlaces a los libros de la Biblia -->
+		<div class="portadas">
+			<a href="genesis.html">
+				<img src="portada-viejo-testamento.jpg" alt="Portada del Viejo Testamento">
+			</a>
+			<a href="nuevo-testamento.html">
+				<img src="portada-nuevo-testamento.jpg" alt="Portada del Nuevo Testamento">
+			</a>
+		</div>
+	</main>
+	
+	<script src="script.js"></script>
 </body>
 </html>
