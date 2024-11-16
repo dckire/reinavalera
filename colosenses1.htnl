@@ -10,7 +10,7 @@
 	<div class="contenido">
 		<div class="titulo-superior-centralizado">
 			<h1>Colosenses 1</h1>
-			<button onclick="location.href='genesis2.html'">▶️</button>
+			<button onclick="location.href='colosenses2.html'">▶️</button>
 		</div>
 		<div class="texto-columna">
 			<!-- Aquí va el contenido del capítulo -->
