@@ -1,1 +1,85 @@
+/* Estilos para la página principal */
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+background-color: #f0f0f0;
+}
 
+.contenedor {
+max-width: 800px;
+margin: 40px auto;
+background-color: #fff;
+padding: 20px;
+border: 1px solid #ddd;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.titulo {
+background-color: #337ab7;
+color: #fff;
+padding: 10px;
+text-align: center;
+border-radius: 5px 5px 0 0;
+}
+
+.contenido {
+padding: 20px;
+}
+
+.ultimos-capitulos {
+background-color: #f0f0f0;
+padding: 10px;
+border: 1px solid #ddd;
+border-radius: 5px;
+margin-bottom: 20px;
+}
+
+.ultimos-capitulos h2 {
+color: #337ab7;
+}
+
+.ultimos-capitulos ul {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.ultimos-capitulos li {
+margin-bottom: 10px;
+}
+
+.ultimos-capitulos a {
+color: #337ab7;
+text-decoration: none;
+}
+
+.ultimos-capitulos a:hover {
+color: #23527c;
+}
+
+.buscar {
+background-color: #f0f0f0;
+padding: 10px;
+border: 1px solid #ddd;
+border-radius: 5px;
+margin-bottom: 20px;
+}
+
+.buscar h2 {
+color: #337ab7;
+}
+
+.buscar form {
+margin: 0;
+padding: 0;
+}
+
+.buscar input[type="text"] {
+width: 70%;
+height: 30px;
+padding: 10px;
+margin-bottom: 10px;
+border: 1px solid #ddd;
+border-radius:
