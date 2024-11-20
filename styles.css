@@ -1,85 +1,46 @@
-/* Estilos para la página principal */
+.select-biblia {
+background-image: linear-gradient(to top, #0097A7, #FF0000);
+color: #333;
+font-family: "Playfair Display", serif;
+text-align: center;
+padding: 20px;
+border: none;
+border-radius: 50px;
+box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.select-biblia select {
+width: 200px;
+padding: 10px;
+border: none;
+border-radius: 5px;
+background-color: #fff;
+color: #333;
+font-size: 18px;
+}
+
+.titulo {
+  font-family: 'Gothic';
+font-size: 45px;
+color: #333;
+margin-bottom: 20px;
+  text-align: center;
+}
+
 body {
-font-family: Arial, sans-serif;
-margin: 0;
-padding: 0;
-background-color: #f0f0f0;
+background-color: #333333;
+background-size: cover;
+background-position: center;
+font-family: "Open Sans", sans-serif;
 }
 
 .contenedor {
 max-width: 800px;
-margin: 40px auto;
-background-color: #fff;
-padding: 20px;
-border: 1px solid #ddd;
-border-radius: 5px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 450px;
+margin: 40 auto;
+padding: 30px;
+border: 5px;
+border-radius: 20px;
+box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  background-color: #FF99CC;
 }
-
-.titulo {
-background-color: #337ab7;
-color: #fff;
-padding: 10px;
-text-align: center;
-border-radius: 5px 5px 0 0;
-}
-
-.contenido {
-padding: 20px;
-}
-
-.ultimos-capitulos {
-background-color: #f0f0f0;
-padding: 10px;
-border: 1px solid #ddd;
-border-radius: 5px;
-margin-bottom: 20px;
-}
-
-.ultimos-capitulos h2 {
-color: #337ab7;
-}
-
-.ultimos-capitulos ul {
-list-style: none;
-margin: 0;
-padding: 0;
-}
-
-.ultimos-capitulos li {
-margin-bottom: 10px;
-}
-
-.ultimos-capitulos a {
-color: #337ab7;
-text-decoration: none;
-}
-
-.ultimos-capitulos a:hover {
-color: #23527c;
-}
-
-.buscar {
-background-color: #f0f0f0;
-padding: 10px;
-border: 1px solid #ddd;
-border-radius: 5px;
-margin-bottom: 20px;
-}
-
-.buscar h2 {
-color: #337ab7;
-}
-
-.buscar form {
-margin: 0;
-padding: 0;
-}
-
-.buscar input[type="text"] {
-width: 70%;
-height: 30px;
-padding: 10px;
-margin-bottom: 10px;
-border: 1px solid #ddd;
-border-radius:
