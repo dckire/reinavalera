@@ -1,3 +1,4 @@
+
 .select-biblia {
 background-image: linear-gradient(to top, #0097A7, #FF0000);
 color: #333;
@@ -43,4 +44,13 @@ border: 5px;
 border-radius: 5px;
 box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   background-image: url("https://www.shutterstock.com/image-photo/dark-stormy-background-beam-light-600nw-2489623157.jpg");
+}
+
+
+p {
+  font-family: 'Gothic';
+font-size: 15px;
+color: #000000;
+margin-bottom: 20px;
+  text-align: center;
 }
