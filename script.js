@@ -77,6 +77,12 @@ menu.addEventListener('change', function() {
 });
 
 });
-```
 
-Este código utiliza un objeto para mapear los valores seleccionados en el menú desplegable con los archivos correspondientes. Luego, agrega un evento de cambio al menú desplegable para redirigir al archivo correspondiente cuando se selecciona un valor. Recuerda reemplazar `'menu'` con el ID real de tu menú desplegable.
+const selectorDeColor = document.getElementById("selector-de-color");
+const colorElegido = document.getElementById("color-elegido");
+
+selectorDeColor.addEventListener("change", function() {
+const color = selectorDeColor.value;
+colorElegido.style.background = color;
+});
+
