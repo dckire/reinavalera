@@ -78,11 +78,4 @@ menu.addEventListener('change', function() {
 
 });
 
-const selectorDeColor = document.getElementById("selector-de-color");
-const colorElegido = document.getElementById("color-elegido");
-
-selectorDeColor.addEventListener("change", function() {
-const color = selectorDeColor.value;
-colorElegido.style.background = color;
-});
 
