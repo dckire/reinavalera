@@ -1,96 +1,113 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>La Biblia Reina Valera 1569-1602</title>
-  <link rel="stylesheet" href="styles.css">
-	<script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrusel 3D</title>
+    <style>
+        .contenedor {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 1000px;
+        }
+
+        .carrusel {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: rotar 40s infinite linear;
+        }
+
+        .tarjeta {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: blueviolet;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        .tarjeta img {
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+
+        .tarjeta h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .tarjeta p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        @keyframes rotar {
+            0% {
+                transform: rotateY(0deg);
+            }
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
+
+        div {
+            background-color:black
+        }
+
+        .imagen_centro {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            z-index: -1;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 </head>
 <body>
-  <div class="contenedor">
-	  <h1 class="titulo">LA</h1>
-    <h1 class="titulo">BIBLIA</h1>
-    	<h1 class="titulo">ANTIGUA VERSION</h1>
-		<h1 class="titulo">DE CASIODORO DE REINA (1569)</h1>
-		<h1 class="titulo">REVISADA POR CIPRIANO DE VALERA (1602)</h1> 
-
-    <div class="select-biblia">
-      <select id="libros" onchange="window.location.href=this.value">
-        <OPTION value="">Selecciona un libro</OPTION>
-        <OPTION value="genesis.html">Génesis </OPTION>
-        <OPTION value="exodo.html">Éxodo </OPTION>
-        <OPTION value="levitico.html">Levítico </OPTION>
-        <OPTION value="numeros.html">Números </OPTION>
-        <OPTION value="deuteronomio.html">Deuteronomio </OPTION>
-        <OPTION value="josue.html">Josué </OPTION>
-        <OPTION value="jueces.html">Jueces </OPTION>
-        <OPTION value="ruth.html">Rut </OPTION>
-        <OPTION value="1samuel.html">1 Samuel </OPTION>
-        <OPTION value="2samuel.html">2 Samuel </OPTION>
-        <OPTION value="1reyes.html">1 Reyes </OPTION>
-        <OPTION value="2reyes.html">2 Reyes </OPTION>
-        <OPTION value="1cronicas.html">1 Crónicas </OPTION>
-        <OPTION value="2cronicas.html">2 Crónicas </OPTION>
-        <OPTION value="esdras.html">Esdras </OPTION>
-        <OPTION value="nehemias.html">Nehemías </OPTION>
-        <OPTION value="esther.html">Ester </OPTION>
-        <OPTION value="job.html">Job </OPTION>
-        <OPTION value="salmos.html">Salmos </OPTION>
-        <OPTION value="proverbios.html">Proverbios </OPTION>
-        <OPTION value="eclesiastes.html">Eclesiastés </OPTION>
-        <OPTION value="cantares.html">Cantares </OPTION>
-        <OPTION value="isaias.html">Isaías </OPTION>
-        <OPTION value="jeremias.html">Jeremías </OPTION>
-        <OPTION value="lamentaciones.html">Lamentaciones </OPTION>
-        <OPTION value="ezequiel.html">Ezequiel </OPTION>
-        <OPTION value="daniel.html">Daniel </OPTION>
-        <OPTION value="oseas.html">Oseas </OPTION>
-        <OPTION value="joel.html">Joel </OPTION>
-        <OPTION value="amos.html">Amós </OPTION>
-        <OPTION value="abadias.html">Abdías </OPTION>
-        <OPTION value="jonas.html">Jonás </OPTION>
-        <OPTION value="miqueas.html">Miqueas </OPTION>
-        <OPTION value="nahum.html">Nahúm </OPTION>
-        <OPTION value="habacuc.html">Habacuc </OPTION>
-        <OPTION value="sofonias.html">Sofonías </OPTION>
-        <OPTION value="ageo1.html">Ageo </OPTION>
-        <OPTION value="zacarias.html">Zacarías </OPTION>
-        <OPTION value="malaquias.html">Malaquías </OPTION>
-        <OPTION value="mateo.html">Mateo </OPTION>
-        <OPTION value="marcos1.html">Marcos </OPTION>
-        <OPTION value="lucas.html">Lucas </OPTION>
-        <OPTION value="juan.html">Juan </OPTION>
-        <OPTION value="hechos.html">Hechos </OPTION>
-        <OPTION value="romanos.html">Romanos </OPTION>
-        <OPTION value="1corintios.html">1 Corintios 1</OPTION>
-        <OPTION value="2corintios.html">2 Corintios </OPTION>
-        <OPTION value="galatas.html">Gálatas </OPTION>
-        <OPTION value="efesios.html">Efesios </OPTION>
-        <OPTION value="filipenses.html">Filipenses </OPTION>
-        <OPTION value="colosenses.html">Colosenses </OPTION>
-        <OPTION value="1tesalonicenses.html">1 Tesalonicenses </OPTION>
-        <OPTION value="2tesalonicenses.html">2 Tesalonicenses </OPTION>
-        <OPTION value="1timoteo.html">1 Timoteo </OPTION>
-        <OPTION value="2timoteo.html">2 Timoteo </OPTION>
-        <OPTION value="tito1.html">Tito </OPTION>
-        <OPTION value="filemon.html">Filemón </OPTION>
-        <OPTION value="hebreos.html">Hebreos </OPTION>
-        <OPTION value="santiago.html">Santiago </OPTION>
-        <OPTION value="1pedro.html">1 Pedro </OPTION>
-        <OPTION value="2pedro.html">2 Pedro </OPTION>
-        <OPTION value="1juan.html">1 Juan </OPTION>
-        <OPTION value="2juan.html">2 Juan </OPTION>
-        <OPTION value="3juan.html">3 Juan </OPTION>
-        <OPTION value="judas.html">Judas </OPTION>
-        <OPTION value="apocalipsis.html">Apocalipsis </OPTION>
-
-        <!-- Agrega las demás opciones aquí -->
-      </select>
+    <div class="contenedor">
+        <div class="carrusel">
+            <img src="data:image/jpeg;base64,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" alt="Imagen central"
+            class="imagen_centro">
+<div class="tarjeta" style="transform: rotateY(0deg) translateZ(200px);">
+    <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEBUSEBIVEBAVEhAVFRUVEhcVFRAVFRUWFxUVFRUYHSggGBolGxUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGBAQFysdHR0tLS0tLS0tLS0tKy0tLS0tKy0tLS4tLS0tLS0tLS0tLS0rLSstLS0tLS0tLS0tKy03Lf/AABEIAKgBLAMBIgACEQEDEQH/xAAbAAACAgMBAAAAAAAAAAAAAAADBQIEAAEGB//EAEAQAAEDAgIGCAQDBgYDAQAAAAEAAgMEESExBRJBUWGBBiIycZGhscETI9HwQnLhB1JigsLxFBUzQ6LiktLyJP/EABkBAAMBAQEAAAAAAAAAAAAAAAECAwQABf/EACIRAAMAAgMBAAMAAwAAAAAAAAABAgMREiExQQQTUSJhgf/aAAwDAQACEQMRAD8A8SWLFsLgmLYCwKQCATAERjFpoR4x6rgpE/gckRlNfAj9FfhjuSANp7tmV0X/AA9sRiN21qm7KcBHPAWnHLYd6FZPzGHXBxv9MwlVVTarrDEYEc001sWp0VbLFMhYAnJsPSpvSFKYsEwpnrmjkx78ezAN59E10JNa57ly8s+IG5PNFy2A71NrodPs7vRdTs/it4WCdjSB181yGhZ+z4+p+iZRz3k8FFlEegR1fU5KjJXHFV4pvljuS2WbEpNnaF2la467hvbfwH6JDpGq1mOHAH3VnTMnzG8WkeZHukEk1x3tt7KkoDE08/WQ6iW7VQqJDdY2bCyvonyKVScVRkKtVJVR6bQNgiVsFaKwLjjaPHT7Sp08QwKutZfL+yRspM7KXwVqaGyY/DsPdVqj6oKtjONIoFqE4Ky8KuUwjQMhRKIQoFERmlixYuAaWwsWBccSCmFBqIAuGJMCOwIcQRBmlHSHNI0a2GVz/Smscd+B3pVTdrn6hqbQOG02WezRKKtZTatnDvIHqN2aT1jbu5BdFWuGr/L9Ehqx1uQT4mJlWkL3sUWtViRqEGrQjMwjRZWKc2VXWRTJZqIoZslyndPLZvL1XNwOxT1gs1v8RHgEtBR12hpMe5vpYJjSy3fzSPREnVcfyjxuVfoJevzWel6Xk7tj/lckt+L1laDvk/y/RKmv6yimPoV6fNjGeL/LVXPO3bnOH34LoekI6jTueR4j9FzdWbOf+YO8f/pWjwnRz2lG2ce8/VUY5MVf0t2r7wPp7JQXWK0rwi/QtQ26puVsm4VOVccQcotWyVgXBGNIy4H3tTSGIWyS6iyH3tTeHJZ7Zqxror1OSWVAx8U2qskoqzj4roY1rorSIJR3DBAIVUZ6IlDciOQyiIzSxYsRFMWwFoKYC4JtoRbYLTAiuGCGx0jcIUtvNagWnHE96X6P8HFOcefs1MYnJXTOud+PsFdjwyw4bFCkXkLUuw5fRK6s9bkFenNxbbbHySusNncgnxCZWRIQ3IgN1BwV0ZmQWp8gpNGKlK3BMKQohdwXQSOu5o3A+31SShYbp1C35h4e2aWmFDygNmc/QBWNHSdfmq1Obg8Ai6Pb1gs7+lkvDv2n/wDP/L7tSiM9ZOYo705/L/U1J2N6yzpltAOkDfk33SMPk4e65WsHWPFgPgP+q6/TrL08nDUP/Nv1XKy26jjuc3wP/ZXxvola7Od0tHYC+eKRS5rpdKRkh182n3sVzlQMVqnwz16bjyQZUSNyjI1E4rOW2rHNWNCARnRnqj73prAcEqom4D72pqwYblnyGvH4CrMkoqHY+Kb1XZSef3KEDX4RHZQQMUYdnxQmjFVRGl4Rc1BcFaeEBwRTEaBELSmQopibMCIAoNRWhAKROMIr+z4eqiwKUmXgl+lV4ajWbT3rcOax3aPeu+nfBjSH78EwYUrg+/JMInKNl5B1ElvD0sqdWLlXKhqoTux4WT4yeUCx9jwVlzcEF8e0ItK78Jy9FYgkCcLI8Lb5oksBvZFigOxds7iW9F0RL7AE8skyoKW8uIABKtaCgka0yNBAIIuO6x9fNMdHUTjqWHWDm7tp+vqoVfpVYyh8MtLgd9kw0ZBcg9yZ6Q0b1HG2qdfVB/C4jDHHCw25IWh4DcclF3tFZnTOzpIvkH8n9TUmdH1+a6uig+Qfy+4SOSH5nNZpodIo11MXxysAzieeAsL3PguPdSt1QSbhr8cLDEHC/HVXoNbtaMnNI/NcEe64Ke4Y5gNtWxOeLr2N+4G3JacTJWhLpZl3G34jiFydVGQ4g5glekT0IEbZXYkg6o3WwJ8brhtMNHxHW+zYXWrHW+jPc6EwOKmXKJYtKxMxwWmsWwERoQCXaYWaO76phAcFVp29UdxTCJmCz5DXjKtUlE5x8U2qylE/1Qge/DWzxUGdoI7B1OZQG9oJ19JNeE3hV3BWXID1yFtAnKCI5QKcmzGojUMIjVxyDNKlJl4KDVN+ST6UT6MhzCx3aPeshWyMT3rvp3wuR/fkrsD0vp1cYFOkWkLOqNSzFWJLnigy3vyCaOhMnYJmB9UUw/iClFGHcCrsEJabEYbk7YinYegj+K3VPbAJH8Q3K3S0mNjsRKaiIIezK9xbYV0X+W/Eb8Ro1XfiHHeOBWesmmaJx7GXROnHZtdpvnlz5XTh+hzCHOjLXMcAOyLtxGR91W6NUhDh337l3EVDs1QWn7yWZt7GpqTkH0ZfTEWxDwfzDAEjuVTRdOAcRtFuC7d+iAGloc4A3sCcADstuSZujyyTVdhljvF80rbR00q8HtLH8r+UeqR1EXzOa6GBvUO3D3SednzOamCPWbdRvJBjtdtjrH8PdfauXi6OmR8r3nUYXSDLrPxv1dme1egR0fVOtiDbC+BA3jb3JXpUBhL3G18G3NgBbHAYk8Ary2kJyTejhOkkPwobswY0NDATc6xF/G9yea8tqISTbivTelDnPJ3Bx1QeO3h/ZcjWUOqL7T6bT7LXhrSJ3GzkZo7IOondRS2zVR8C0qiDkoBqmwIzoTsCJDBbPy+q7ZyReoosAr7sAgwZDkiSuxUL7NEC+rGCTzDFOqoYJRKMUJHrw2wdTmUFo6yP+DmgsPWTL6I/hN6A9HkKA5GRaBFQKmVApyTMCm1DCm0rmcgzVN2SGCpE4JRtm2qbTjzQmlSC4Oy7Fmr0RVCBMIQpUXk2GAlSbEdouN/6rRZjgiwEg7R3LkcycVDrdg47jgUyo6VzSGyNuO6xbxRaFrXEAjwwPhku36O6PEjwwnWab9puLBYnDw2FRvI0VnGtbK3RrQPxJRquBisC6+GAIuBuNiu2oOjkEZNtd3AuFvIBWdGaJigN4wbltid4vcYZK1PgNyjvYlX/AAlR0ELewy3MlMmWSyJ9lfhkuqxozXsnLCCqstMDi4ZZK6CtOF11wmtoSaaKIb1T3e6XxR/MvbG+HDimsjcD97UKji6xd9hZlPaRom9S2WHDdifdK63QzpH6znC2Gd8LJyDuQJnLTxRGaafRymlOiJkdcPZbcbpFVdBJ3Ekvi4C7sAMh2V19ZIRiMeedkudXHjwxxCTlrw0S6ZxGlegkjI3yOla5zWk6jWk61sbAm3ouPq9EvZ/qMcy982kZZ4kL1usrDbv8VzWkiJmFj8SLll3WAdawJ4Jp/Ia9GeJM89kjAGH37lV3RkZroNIaJkjeWuABBthjfAHA7cCPFUJKbetU2mRcMHTjqhTlCmLALT8Qg2NPQunySmXPmm1ScEonzTSCmRLsEOM4hbchtOKbQjYd5QHKRcoOK5IFMGVBTcoJibNBTBQ1IIgCAqV1AKQQGTJNRAoNCmAgMi5TpnGltK3FO6anuLqVl4NwxWxVmCnBOdlJ8VskelALsQpNlUkO9F6MJtazvNelUEMdNGBtwJviWktAIB3Zrh9ANaJQRezbE47QL/RG0zpVznEA4ff6rHTbZa48R2EeltbIq38cOtj5Lz2mmeLYpzR17rjHcuXROoWujq2uV6B656KtumdJU3VORCo6HbHKV1TZIj618U/MzuTcowKGDYW5lGtcKtNmlfuxl30Ga7BUampAzVnWSjSnkbouuhonsVaUnF+qb+yWukwzVWvcWuvdBbUgixwKTZoU6LEji4ZpVPHZyJLOW3sbpbWVTil0VRd0zVF8ABNyzEY7sCPvcuHqZDe2XcnE0rje5z9wqej6ISMN+01xba/MeR8lfFqF2C55eC+IlWH5JrHor+FAnpQFbmmR4tCKpalVSMU9rIdoSKoabqsk6KjyhhWxDcKvJHZOSZC6iSsKiiLs05RW3KKIpINU2tUmhFaEApEAxEEaI1isRRoNjJAY4UdkCtsjRY4Umx1JqlhXQaPguqFNBiuh0fFZRyUXhaLUWjQ61wt1VAI43PFg4DC4wucBlmmlOzDNKNO1oc5sTDcNN3d+QHqsy22Xn0uaHaQwuP3tK18PHH7+8Vw2mekk7ZHRRO1Y2usC3AkgAOuRnjdKJdLVDs5ZP/Nw8gVRYKfewVlWz1J0gGZso/5zTR9uojad2uCfAG68ocC7tEu78fVTZEPspv0L+i8z1NvTmhZ+N8p3Njd5a1ken/adTDBtLUO5MH9a8sYBw80wo3C+PokrHKHieT7PYdF/tIpJCA+KeHi5jSP+LifJdvRTMlaHRuDmnaPcHJeFaIkAdl98ivW+i0zdUWwWR5dXrXQ35P40zHKTqGMQJ4blWGOVevm1WE3stmRxOPkeXG3WkUqyuhh/1ZGs/M4XPcMykGkelNEOqZcbbI3n+lcR0omHxXOvc3zuuarJ+yb45eBv7rHNuz2I/DiVum9nVV3SiieSBL3Xifz2KrBpelOU7B3nV9V57VNAee/yQ2NWpYlr0jWkz1Jhidi17XdzwUKpphY2Xm3wbqTZZG9mR7e5xHoU36v9i8tHY1ECTuldFMC3KSzTfeL2PmlR0pUD/dce+zvUKxS1UkwIkIOqWub1QDe+eH3imUNenK/h1EVbdtvxdyrOBccVdoImubrN2+R2hGFIkTSDXYgqqfck81GL5LrpqVLKin4Ks2RpHOmnsqVRTroJIFUmgVVRJyc/JAq7o06ngVKSNVTJtFAsUNRWnhDIRE0QajMQGorSuCi1GrMapscrUTkrHRdhKuwhL2PV2CTvU2UQ0gNk0pprbEmgl4q78cgZ+ihSLSMq/TohZgLvODW8d5A2LlqnSRY0k4zOue4naVSq46lzy42JvgbgYXwGAQHaKndiQPFVnHKXbFeR/EUCdpzWtbir40DNuHiof5FP+6q/4/0n/l/CnrBbEw71b/yWo/cKLH0dqT/tnxQbj+hXP4iiKngUaKuI/CnNL0QqHZx25j3TEfs8mOLR4kKVXiXrKwsopo9Mvab2b3X+hXaaG6dNisHRvJIwsRq527X6JQ39m1QdmzePdEi6GVsIsIDKzcSDzBBuCseRYKNk1bWn4er6B6YwysxcGncVz3Tvp02NurH1zt/uuXpNBTjOin5StHso6U6MVEjcKKQu/jkFh4WuoKJb1T2v+HLDjl8l6ctV9JPik6rSDf8AF7WzSmXS78iG4Hh/7Lo5f2f1rhcx6vAFthyBSar6HVTDjGfBb8f6PE0Ry1mYtlrycbBSZWcCrB6L1FuwVOPo1U/uFXTx/wBMz/b/AA1DWN4hXoHNdkfJCb0cqB+GyuU2hpwcWoPh8YU7+oFPS4XwWqNhY4G2GR7iujh0Q4tsbXUm6DNuz5qfNDaZmiaj4by0jqusb7k9e9IHaMlGIVxtQ5reukpJ9obYaolSuoesqKu+RPl9FRlqd59PojKEZkiryAKEtRxVaWq4qiQjB1KWzKzPPdL5ZFVIlTAyFCJW3uQtZUJs00ojSggqQK4XZYa5GZIqYcph6Gh0xjG9W4pQk7XIrXpXI6Y/iqVdiqQuZZKPsozKncFNwUVnTicHOwHgrUAaRuHeVzEUgvc/or8VV3KbkpNHUwNarTA1cvHWgf2RGaRB2KThlUzsII2XvmrrXtGQ9FxsdYNnqR6I8Vc3gpuBkztYZL7Eyp5hvXn5r2khouDmbEiwHEb0zp9IAd35ipVA2tnoEE4VuOpaVwrNJtA7VuaPHpQHLHibKfEDx7O5D2ob5wFy0WlLbR98kVtcDibHlmjoT9Q5fUC9iPLNClYw5gJVJWt2NHgFB1a05geSGh1IethaB1LX2C10pil62q/qutyKlUTM2AeGSVV0jXC2AOYcBYg8s086G0xjJADibEqtIGjZiqbK0W9R6oM9W0pgaCTSjcq/+OIVKefiqE1VZUkVoZVGlEtqdIh390vnqQls7hmM1aZJ09DCapCpT1XFLpJuGKC+RXUEXZbkqUB86rOkQ3PTqSboK+VAe9aLlAuTpE2zTioXWyVFMIYsWLFwDd1IFaWLgktZSD1ixAOyTXozZrLFiAyYRtUVMVZWLEGkMqYRtZxR2VfFYsSOUUVMsx13FSfpEjLE+nJYsScEU5vRGCtcHaxuTtx2K5/jtwWLEtJDy2XIq8/3KtxaQdhbDuxWlijUotLLzNLuA2qTNMu2lYsUuCKEzpsDb5oL9N4dpYsTLGheRUn02Tk4+Spy6XP760sVZxoR5GAGkzrX1sMiMu4+3NbfpTisWI8EJzZXl0lx81TlrlixUUIR2yrJV8VXfULFiopRGrYF8qE6RaWKiRJsgXrWssWIikS5aJWliIpixYsXAP/Z" alt="Imagen 1" width="200" height="150">
+    <h2>LA BIBLIA</h2>
+    <p>REYNA VALERA ANTIGUA VERSION (1569-1602).</p>
+   <a href="main.html">Ir a la Biblia Online</a>
+         </div>
+            <div class="tarjeta" style="transform: rotateY(120deg) translateZ(200px);">
+                <img src="https://img.freepik.com/fotos-premium/genesis-principio-dios-creo-cielos-tierra_994641-2502.jpg?w=360" alt="Imagen 1" width="200" height="150">
+    <h2>ANTIGUO TESTAMENTO</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              
+            </div>
+            <div class="tarjeta" style="transform: rotateY(240deg) translateZ(200px);">
+                <<img src="https://img.freepik.com/fotos-premium/genesis-principio-dios-creo-cielos-tierra_994641-2502.jpg?w=360" alt="Imagen 1" width="200" height="150">
+                <h2>NUEVO TESTAMENTO</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                
+        </div>
+        </div>
     </div>
-  </div>
-	
-	
-	<p>&copy; 2024 La Biblia Online</p>
+    <script>
+        // No hay código JavaScript en este ejemplo
+    </script>
+    <p>&copy; 2024 La Biblia Online</p>
 </body>
 </html>
