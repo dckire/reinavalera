@@ -14,26 +14,54 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
     
-    .galeria {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+    .galeria-3d {
+      perspective: 1000px;
+      perspective-origin: 50% 50%;
     }
     
-    .galeria img {
+    .galeria-3d .libro {
+      position: relative;
+      display: inline-block;
       width: 200px;
       height: 200px;
       margin: 10px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transform-style: preserve-3d;
+      transition: transform 0.5s;
     }
     
-    .galeria a {
+    .galeria-3d .libro:hover {
+      transform: rotateY(180deg);
+    }
+    
+    .galeria-3d .libro .frontal {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      transform: rotateY(0deg);
+    }
+    
+    .galeria-3d .libro .trasera {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      transform: rotateY(180deg);
+    }
+    
+    .galeria-3d .libro a {
       text-decoration: none;
       color: #333;
     }
     
-    .galeria a:hover {
+    .galeria-3d .libro a:hover {
       color: #666;
     }
   </style>
@@ -43,19 +71,25 @@
     <h1 class="titulo">LA BIBLIA ANTIGUA VERSION</h1>
     <h1 class="titulo">DE CASIODORO DE REINA (1569)</h1>
     <h1 class="titulo">REVISADA POR CIPRIANO DE VALERA (1602)</h1>
-    <div class="galeria">
-      <a href="genesis.html">
-        <img src="genesis.jpg" alt="Génesis">
-        <p>Génesis</p>
-      </a>
-      <a href="exodo.html">
-        <img src="exodo.jpg" alt="Éxodo">
-        <p>Éxodo</p>
-      </a>
-      <a href="levitico.html">
-        <img src="levitico.jpg" alt="Levítico">
-        <p>Levítico</p>
-      </a>
+    <div class="galeria-3d">
+      <div class="libro">
+        <div class="frontal" style="background-image: url('genesis.jpg');"></div>
+        <div class="trasera">
+          <a href="genesis.html">Génesis</a>
+        </div>
+      </div>
+      <div class="libro">
+        <div class="frontal" style="background-image: url('exodo.jpg');"></div>
+        <div class="trasera">
+          <a href="exodo.html">Éxodo</a>
+        </div>
+      </div>
+      <div class="libro">
+        <div class="frontal" style="background-image: url('levitico.jpg');"></div>
+        <div class="trasera">
+          <a href="levitico.html">Levítico</a>
+        </div>
+      </div>
       <!-- Agrega más libros aquí -->
     </div>
   </div>
