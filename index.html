@@ -107,7 +107,66 @@
             background-image: url('https://www.gndiario.com/sites/default/files/styles/noticia_detalle_noticia_2_1/public/noticias/espacio-exterior.jpg?itok=w1izcUxx');
             background-size: cover;
             background-position: center;
-        }
+        } 
+
+    /* Estilos generales */
+    .sidebar {
+      width: 60px;
+      height: 100%;
+      background-color: #222;
+      padding: 20px;
+      box-sizing: border-box;
+      color: #fff;
+      overflow: hidden;
+      border-radius: 1rem 1rem;
+      transition: width 0.75s ease;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    /* ... */
+
+    /* Media queries */
+    @media only screen and (max-width: 768px) {
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+      .contenido {
+        margin-left: 0;
+      }
+    }
+
+    @media only screen and (min-width: 769px) and (max-width: 1024px) {
+      .sidebar {
+        width: 200px;
+        height: 100%;
+      }
+      .contenido {
+        margin-left: 200px;
+      }
+      .carrusel {
+        width: 300px;
+        height: 300px;
+      }
+    }
+
+    @media only screen and (min-width: 1025px) {
+      .sidebar {
+        width: 250px;
+        height: 100%;
+      }
+      .contenido {
+        margin-left: 250px;
+      }
+      .carrusel {
+        width: 400px;
+        height: 400px;
+      }
+    }
   </style>
 </head>
 
