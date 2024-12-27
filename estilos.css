@@ -1,4 +1,3 @@
-
 @media only screen and (max-width: 768px) {
   body { margin: 0; padding: 0; }
   .wave { position: relative; width: 100%; height: 100vh; overflow: hidden; }
