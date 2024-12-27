@@ -113,3 +113,36 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   0% { -moz-transform: rotateY(0deg); }
   100% { -moz-transform: rotateY(360deg); }
 }
+
+/* Pantallas pequeñas (celulares) */
+@media only screen and (max-width: 768px) {
+  .carrusel {
+    width: 200px;
+    height: 200px;
+  }
+  .tarjeta {
+    font-size: 14px;
+  }
+}
+
+/* Pantallas medianas (tablets) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .carrusel {
+    width: 300px;
+    height: 300px;
+  }
+  .tarjeta {
+    font-size: 18px;
+  }
+}
+
+/* Pantallas grandes (ordenadores) */
+@media only screen and (min-width: 1025px) {
+  .carrusel {
+    width: 400px;
+    height: 400px;
+  }
+  .tarjeta {
+    font-size: 22px;
+  }
+}
