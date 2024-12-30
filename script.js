@@ -1,15 +1,4 @@
-const hamburger = document.querySelector('.hamburger');
-const menu = document.querySelector('.menu');
 
-hamburger.addEventListener('click', () => {
-  menu.classList.toggle('show');
-});
-
-document.addEventListener('click', (e) => {
-  if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
-    menu.classList.remove('show');
-  }
-});
 const archivos = {
   'Génesis': 'genesis1.html',
   'Éxodo': 'exodo1.html',
@@ -89,3 +78,16 @@ menu.addEventListener('change', function() {
 
 });
 
+
+const hamburger = document.querySelector('.hamburger');
+const menu = document.querySelector('.menu');
+
+hamburger.addEventListener('click', () => {
+  menu.classList.toggle('show');
+});
+
+document.addEventListener('click', (e) => {
+  if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+    menu.classList.remove('show');
+  }
+});
