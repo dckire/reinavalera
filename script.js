@@ -68,23 +68,6 @@ const archivos = {
   'Apocalipsis': 'apocalipsis1.html'
 };
 
-const menu = document.getElementById('menu');
-
-menu.addEventListener('change', function() {
-  const valorSeleccionado = menu.value;
-  const archivo = archivos[valorSeleccionado];
-  window.location.href = archivo;
-});
-
-});
-
-
-const hamburger = document.querySelector('.hamburger');
-const menu = document.querySelector('.menu');
-
-hamburger.addEventListener('click', () => {
-  menu.classList.toggle('show');
-});
 
 document.addEventListener('click', (e) => {
   if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
