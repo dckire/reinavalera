@@ -2,12 +2,12 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-width=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>La Biblia</title>
   <link rel="stylesheet" href="#">
-  <style>
-    body {
-    background-color: hsl(258, 93%, 16%);
+  <styles>
+   body {
+    background-color: burlywood;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -98,46 +98,127 @@
     width: 100%;
    }
 
-  </style>
-  
+
+  .bottom-line {
+    margin-top: 25px;
+  }
+/* codigo de 3d bar */
+  @import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
+@import url(https://use.fontaweome.com/releases/v6.4.2/css.all.css);
+
+ul {
+  position: relative;
+  transform: skewY(-15deg);
+}
+
+li {
+  position: relative;
+  list-style: none;
+  width: 200px;
+  padding: 15px;
+  background: #3e3f46;
+  z-index: calc(1 * var(--i));
+  transition: 0.5s;
+}
+
+li:hover {
+  background: #996fae;
+  transform: translateX(-50px);
+}
+
+li::before {
+  font-family: "FontAwesome";
+  color: #999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: attr(data-icon);
+  position: absolute;
+  top: 0;
+  left: -40px;
+  width: 40px;
+  height: 100%;
+  background: #2e3133;
+  transform-origin: right;
+  transform: skewY(45deg);
+  transition: 0.5s;
+}
+
+li:hover::before {
+  background: #7b5190;
+}
+
+li::after {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 0px;
+  width: 100%;
+  height: 40px;
+  background: #35383e;
+  transform-origin: bottom;
+  transform: skewX(45deg);
+  transition: 0.5s;
+}
+
+li:hover::after {
+  background: #86589d;
+}
+
+li a {
+  text-decoration: none;
+  color: #999;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+}
+
+li:hover a {
+  color: #fff;
+}
+
+li:last-child::after {
+  box-shadow: -120px 120px 20px rgba(0, 0, 0, 0.25);
+} 
+  </styles>
 </head>
 <body>
-  <header>
-    <nav>
-      <button class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <ul class="menu">
-        <li><a href="#"><span style="font-size: 20px;">🏚️</span> home</a></li>
-        <li><a href="mapas.html"><span style="font-size: 20px;">🗺️</span> Map</a></li>    
-<li><a href="diccionario.html"><span style="font-size: 20px;">📚</span> Dictionary</a></li>
-        <li><a href="#"><span style="font-size: 20px;">📂</span> Bible Topic</a></li>
-        <li><a href="viejo.html"><span style="font-size: 20px;">📕</span> Old Testament</a></li>    
-<li><a href="nuevo.html"><span style="font-size: 20px;">📕</span> New Testament</a></li>
-      </ul>
-    </nav>
-    <h1>La Biblia</h1>
-  </header>
-  <main>
-    <p id="texto-biblia"></p>
-  </main> 
-  <script>
-    const hamburger = document.querySelector('.hamburger');
-const menu = document.querySelector('.menu');
-
-hamburger.addEventListener('click', () => {
-  menu.classList.toggle('show');
-});
-
-document.addEventListener('click', (e) => {
-  if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
-    menu.classList.remove('show');
-  }
-});
-
-  </script>
+  <div class="contenedor-principal">
+    <header>
+      <h1 style="margin-bottom: 20px;">La Biblia</h1>
+      <nav>
+        <ul>
+          <li style="--i: 6;" data-icon="🏠">
+            <a href="#">Home</a>
+          </li>
+          <li style="--i: 5;" data-icon="🗺️">
+            <a href="mapas.html">Maps</a>
+          </li>
+          <li style="--i: 4;" data-icon="📚">
+            <a href="diccionario.html">Dictionary</a>
+          </li>
+          <li style="--i: 3;" data-icon="📁">
+            <a href="#">Bible Topic</a>
+          </li>
+          <li style="--i: 2;" data-icon="📕">
+            <a href="viejo.html">Old Testament</a>
+          </li>
+          <li style="--i: 1;" data-icon="📕">
+            <a href="nuevo.html">New Testament</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="seccion-principal">
+        <p id="texto-biblia"></p>
+      </section>
+    </main>
+    
+      <script src="script.js"></script>
+      <p>&trade; 2024</p>
+    
+  </div>
 </body>
-<p>&trade; 2024</p>
 </html>
