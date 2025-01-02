@@ -4,78 +4,84 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>La Biblia</title>
-  <link rel="stylesheet" href="#">
-<!-- Favicon para pantallas de computadora -->
-<link rel="icon" type="image/png" href="https://photos.app.goo.gl/dTyKNNzk9MMqLVWS6" sizes="32x32">
-<!-- Favicon para dispositivos móviles -->
-<link rel="icon" type="image/png" href="https://photos.app.goo.gl/dTyKNNzk9MMqLVWS6" sizes="192x192">
-<!-- Favicon para Apple Touch Icon -->
-<link rel="apple-touch-icon" type="image/png" href="https://photos.app.goo.gl/dTyKNNzk9MMqLVWS6" sizes="180x180">
+  <link rel="icon" type="image/png" href="https://photos.app.goo.gl/dTyKNNzk9MMqLVWS6" sizes="32x32">
+  <link rel="icon" type="image/png" href="https://photos.app.goo.gl/dTyKNNzk9MMqLVWS6" sizes="192x192">
+  <link rel="apple-touch-icon" type="image/png" href="https://photos.app.goo.gl/dTyKNNzk9MMqLVWS6" sizes="180x180">
   <style>
-   body {
-    background-color: burlywood;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 1em;
-    text-align: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-  }
-  
-  header h1 {
-    font-size: 24px;
-    margin: 0;
-  }
-  
-  
-  
-  
-  #texto-biblia {
-    font-size: 18px;
-    color: #fff;
-    text-align: center;
-  }
-   
+    body {
+      background-color: hsl(33, 9%, 60%);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100vh;
+    }
+    
+    title {
+      text-align: auto;
+    }
+    .contenedor-principal {
+      max-width: auto;
+      margin: 0 auto;
+      padding: auto;
+    }
 
-  .bottom-line {
-    margin-top: 25px;
-  }
-/* codigo de 3d bar */
- 
+    header {
+      background-color: bisque;
+      color: #fff;
+      padding: 1em;
+      text-align: center;
+      width: 100%;
+    }
 
-ul {
+    header h1 {
+      font-size: 30px;
+      margin: 0;
+    }
+    
+    .nav-izquierda ul {
   position: relative;
-  transform: skewY(-15deg);
+transform: skewY(-30deg);
 }
 
-li {
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  top: 80px;
-  list-style: none;
-  width: 200px;
-  padding: 15px;
-  background: #F7D2CA;
-  z-index: calc(1 * var(--i));
-  transition: 0.5s;
+.nav-derecha ul {
+position: relative;
+transform: skewY(30deg);
+}
+.nav-izquierda li {
+position: relative;
+top: 50px;
+list-style: none;
+width: 60%;
+padding: 15px;
+background: #3e3f46;
+z-index: calc(1 * var(--i));
+transition: 0.5s;
+
+}
+
+.nav-derecha li {
+position: relative;
+top: 63px;
+list-style: none;
+width: 60%;
+padding: 15px;
+background: #3e3f46;
+z-index: calc(1 * var(--i));
+transition: 0.5s;
+
 }
 
 li:hover {
   background: #996fae;
-  transform: translateX(-50px);
+  transform: translateX(50px);
 }
 
-li::before {
+ .nav-izquierda li:hover {
+  background: #996fae;
+  transform: translateX(-50px);
+}
+.nav-derecha li::before {
   font-family: "FontAwesome";
   color: #999;
   display: flex;
@@ -83,18 +89,36 @@ li::before {
   align-items: center;
   content: attr(data-icon);
   position: absolute;
-  top: 0;
+  top: -40px;
+  right: -45px;
+  width: 50px;
+  height: 100%;
+  background: #2e3133;
+  transform-origin: right;
+  transform: skewY(-40deg);
+  transition: 0.5s;
+}
+
+.nav-izquierda li::before {
+  font-family: "FontAwesome";
+  color: #999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: attr(data-icon);
+  position: absolute;
+  top: -40px;
   left: -40px;
   width: 40px;
   height: 100%;
   background: #2e3133;
-  transform-origin: right;
+  transform-origin: left;
   transform: skewY(45deg);
   transition: 0.5s;
 }
 
 li:hover::before {
-  background: #F8E231;
+  background: #7b5190;
 }
 
 li::after {
@@ -109,10 +133,21 @@ li::after {
   transform: skewX(45deg);
   transition: 0.5s;
 }
-
+ .nav-derecha li::after {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 0px;
+  width: 100%;
+  height: 40px;
+  background: #35383e;
+  transform-origin: bottom;
+  transform: skewX(-49deg);
+  transition: 0.5s;
+ }
 li:hover::after {
-  background: #ADD8E6;
-}
+  background: #86589d;
+} 
 
 li a {
   text-decoration: none;
@@ -121,53 +156,108 @@ li a {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   transition: 0.5s;
+
 }
 
 li:hover a {
   color: #fff;
 }
 
+.nav-derecha
 li:last-child::after {
-  box-shadow: -120px 120px 20px rgba(0, 0, 0, 0.25);
-} 
+  box-shadow: 120px 120px 20px #000000fa;
+}
+.nav-izquierda
+li:last-child::after {
+  box-shadow: -120px 120px 20px #070707ef;
+}
+ .nav-container {
+  display: flex;
+  justify-content: space-between;
+ }
+ .nav-izquierda {
+  margin-right: auto;
+  justify-self: flex-start;
+ }
+
+ .nav-derecha {
+  margin-left: auto;
+  justify-self: flex-end;
+ }
+
+ @media (max-width: 768px) {
+  .nav-container {
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+  .nav-izquierda {
+    margin-top: 20px;
+    margin-left: 0px;
+    padding-top: 0px;
+  }
+  .nav-derecha {
+    margin-right: 0px;
+  }
+ }
+
   </style>
 </head>
 <body>
   <div class="contenedor-principal">
     <header>
-      <h1 style="margin-bottom: 20px;">La Biblia</h1>
-      <nav>
-        <ul>
-          <li style="--i: 6;" data-icon="🏠">
-            <a href="#">Home</a>
-          </li>
-          <li style="--i: 5;" data-icon="🗺️">
-            <a href="mapas.html">Maps</a>
-          </li>
-          <li style="--i: 4;" data-icon="📚">
-            <a href="diccionario.html">Dictionary</a>
-          </li>
-          <li style="--i: 3;" data-icon="📁">
-            <a href="#">Bible Topic</a>
-          </li>
-          <li style="--i: 2;" data-icon="📕">
-            <a href="viejo.html">Old Testament</a>
-          </li>
-          <li style="--i: 1;" data-icon="📕">
-            <a href="nuevo.html">New Testament</a>
-          </li>
-        </ul>
-      </nav>
+      <h1>La Biblia</h1>
     </header>
-    <main>
-      <section class="seccion-principal">
-        <p id="texto-biblia"></p>
-      </section>
-    </main>
-    
-      <script src="script.js"></script>
-      <p>&trade; 2024</p>
-    
-  </div>
+    <nav>
+      <div class="nav-container">
+        <div class="nav-izquierda">
+          <ul>
+            <li style="--i: 6;" data-icon="🏠">
+              <a href="#">Izquierda</a>
+            </li>
+            <li style="--i: 5;" data-icon="🗺️">
+              <a href="mapas.html">Maps</a>
+            </li>
+            <li style="--i: 4;" data-icon="📚">
+              <a href="diccionario.html">Dictionary</a>
+            </li>
+            <li style="--i: 3;" data-icon="📖">
+              <a href="#">Bible Topic</a>
+            </li>
+            <li style="--i: 2;" data-icon="📖">
+              <a href="viejo.html">Old Testament</a>
+            </li>
+            <li style="--i: 1;" data-icon="📖">
+              <a href="nuevo.html">New Testament</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-container">
+        <div class="nav-derecha">
+          <ul>
+            <!-- elementos de la barra derecha -->
+            <li style="--i: 6;" data-icon="🏠">
+              <a href="#">Home</a>
+            </li>
+            <li style="--i: 5;" data-icon="🗺️">
+              <a href="mapas.html">Maps</a>
+            </li>
+            <li style="--i: 4;" data-icon="📚">
+              <a href="diccionario.html">Dictionary</a>
+            </li>
+            <li style="--i: 3;" data-icon="📖">
+              <a href="#">Bible Topic</a>
+            </li>
+            <li style="--i: 2;" data-icon="📖">
+              <a href="viejo.html">Old Testament</a>
+            </li>
+            <li style="--i: 1;" data-icon="📖">
+              <a href="nuevo.html">New Testament</a>
+            </li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    </div>
+    </nav>
 </body>
 </html>
