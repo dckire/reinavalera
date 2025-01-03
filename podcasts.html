@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Narraciones de la  Biblia</title>
+	<style>
+	body {
+			font-family: Arial, sans-serif;
+			background-color: hsl(249, 95%, 16%);
+		}
+		.contenedor {
+            background-image: url('https://www.orcam.com/media/jdogg666_photo_of_a_podcast_d3f1a207-fb27-4b79-a2be-a73e13131a45.png');
+            background-size: cover;
+			width: 80%;
+			margin: 40px auto;
+			background-position: center;
+			padding: 20px;
+			border: 5px solid hsl(101, 91%, 34%);
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+		.contenedor.glow-pulse {
+			animation: glowPulse 2s infinite;
+		}
+		@keyframes glowPulse {
+			0%, 100% {
+				box-shadow: 0 0 10px hwb(19 0% 0%);
+				text-shadow: 0 0 10px hwb(147 0% 0%);
+			}
+			50% {
+				box-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+				text-shadow: 0 0 20px hwb(138 0% 0%), 0 0 30px #ff00ff;
+			}
+		}
+		.barra-navegacion {
+			background-color: #333;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+		}
+		.barra-navegacion a {
+			color: #fff;
+			text-decoration: none;
+		}
+		.barra-navegacion a:hover {
+			color: #ccc;
+		}
+		.lista-audios {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		.lista-audios li {
+			margin-bottom: 40px;
+		}
+		.lista-audios a {
+            font-size: 26px;
+			text-decoration:underline;
+			color: hwb(207 91% 5%);
+		}
+		.lista-audios a:hover {
+			color: hsl(210, 29%, 95%);
+		}
+
+		#audio {
+			width: 100%;
+			margin: 20px auto;
+			background-color: #333;
+			padding: 10px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+	</style>	
+</head>
+<body>
+	<div class="contenedor glow-pulse">
+		<div class="barra-navegacion">
+			<a href="index.html">Home</a>
+		</div>
+		<div>
+			<h2>Naracion de la biblia 1</h2>
+		<audio id="audio" controls>
+        <source src="data:audio/ mpeg;base64,(#)" type="audio/mpeg">
+		</audio>
+	</div>
+	<div>
+		<h2>Naracion de la biblia 2</h2>
+	<audio id="audio" controls>
+	<source src="data:audio/ mpeg;base64,(#)" type="audio/mpeg">
+	</audio>
+</div>
+<div>
+	
+	<h2>Naracion de la biblia 4</h2>
+<audio id="audio" controls>
+<source src="data:audio/ mpeg;base64,(#)" type="audio/mpeg">
+</audio>
+</div>
+<div>
+	<h2>Naracion de la biblia 5</h2>
+<audio id="audio" controls>
+<source src="data:audio/ mpeg;base64,(#)" type="audio/mpeg">
+</audio>
+</div>
+<div>
+	<h2>Naracion de la biblia 6</h2>
+<audio id="audio" controls>
+<source src="data:audio/ mpeg;base64,(#)" type="audio/mpeg">
+</audio>
+</div>
+<div>
+	<h2>Grabando audio</h2>
+<audio id="audio" controls>
+<source src="data:audio/ mpeg;base64,(#)" type="audio/mpeg">
+</audio>
+</div>
+</body>
+</html>
