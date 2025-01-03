@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Audios de la Biblia</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: hsl(249, 95%, 16%);
+		}
+		.contenedor {
+			width: 80%;
+			margin: 40px auto;
+			background-color: hwb(168 95% 3%);
+			padding: 20px;
+			border: 1px solid hsl(101, 91%, 34%);
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+		.contenedor.glow-pulse {
+			animation: glowPulse 2s infinite;
+		}
+		@keyframes glowPulse {
+			0%, 100% {
+				box-shadow: 0 0 5px hwb(19 0% 0%);
+				text-shadow: 0 0 5px hwb(147 0% 0%);
+			}
+			50% {
+				box-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+				text-shadow: 0 0 20px hwb(138 0% 0%), 0 0 30px #ff00ff;
+			}
+		}
+		.barra-navegacion {
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+		}
+		.barra-navegacion a {
+			color: #fff;
+			text-decoration: none;
+		}
+		.barra-navegacion a:hover {
+			color: #ccc;
+		}
+		.lista-audios {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		.lista-audios li {
+			margin-bottom: 20px;
+		}
+		.lista-audios a {
+			text-decoration: none;
+			color: hsl(208, 85%, 8%);
+		}
+		.lista-audios a:hover {
+			color: #23527c;
+		}
+	</style>
+</head>
+<body>
+	<div class="contenedor glow-pulse">
+		<div class="barra-navegacion">
+			<a href="index.html">Home</a>
+		</div>
+		<ul class="lista-audios">
+			<li><a href="https://drive.google.com/file/d/149bDTSvJfsUhObYgtjGQA9bnERkvO7Ky/view?usp=sharing">Audio 1: Génesis</a></li>
+			<li><a href="https://drive.google.com/file/d/1W0j6lEKUjRf9HqwtEJJNL772MRr2PjQl/view?usp=sharing">Audio 2: Genesis</a></li>
+			<li><a href="https://drive.google.com/file/d/1LVM0gdqzQLVkBLIVpJmggnvBEPmmPVJZ/view?usp=sharing">Audio 3: Genesis</a></li>
+			<li><a href="https://drive.google.com/file/d/1XxnXckiWHGlK4P_KZKQOiKXQ0NJc8Sd-/view?usp=sharing">Audio 4: Génesis</a></li>
+			<li><a href="https://drive.google.com/file/d/1ydCzEDpi2iHCr-v5f66TBBU7jd6JLWSI/view?usp=sharing">Episodio 7: Genesis</a></li>
+			<li><a href="https://drive.google.com/file/d/1Zz--vxGG0kCkfhl8bZv5Y8sH8-UiL1cX/view?usp=sharing">Episodio 6: Genesis</a></li>
+			<!-- Agrega más audios aquí -->
+		</ul>
+	</div>
+</body>
+</html>
