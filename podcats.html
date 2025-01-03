@@ -3,16 +3,18 @@
 <head>
 	<title>Audios de la Biblia</title>
 	<style>
-		body {
+	body {
 			font-family: Arial, sans-serif;
 			background-color: hsl(249, 95%, 16%);
 		}
 		.contenedor {
+            background-image: url('https://www.orcam.com/media/jdogg666_photo_of_a_podcast_d3f1a207-fb27-4b79-a2be-a73e13131a45.png');
+            background-size: cover;
 			width: 80%;
 			margin: 40px auto;
-			background-color: hwb(168 95% 3%);
+			background-position: center;
 			padding: 20px;
-			border: 1px solid hsl(101, 91%, 34%);
+			border: 5px solid hsl(101, 91%, 34%);
 			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 		}
 		.contenedor.glow-pulse {
@@ -20,8 +22,8 @@
 		}
 		@keyframes glowPulse {
 			0%, 100% {
-				box-shadow: 0 0 5px hwb(19 0% 0%);
-				text-shadow: 0 0 5px hwb(147 0% 0%);
+				box-shadow: 0 0 10px hwb(19 0% 0%);
+				text-shadow: 0 0 10px hwb(147 0% 0%);
 			}
 			50% {
 				box-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff;
@@ -47,17 +49,17 @@
 			margin: 0;
 		}
 		.lista-audios li {
-			margin-bottom: 20px;
+			margin-bottom: 40px;
 		}
 		.lista-audios a {
-			font-size: 26px;
-			text-decoration: underline;
-			color: hsl(208, 85%, 8%);
+            font-size: 26px;
+			text-decoration:underline;
+			color: hwb(207 91% 5%);
 		}
 		.lista-audios a:hover {
-			color: #23527c;
+			color: hsl(210, 29%, 95%);
 		}
-	</style>
+	</style>	
 </head>
 <body>
 	<div class="contenedor glow-pulse">
