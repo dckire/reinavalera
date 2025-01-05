@@ -5,117 +5,63 @@
   <style>
     body {
       background-image: url('https://play-lh.googleusercontent.com/emMVz-GsPzDHtBLNTRmORAsEWPYt9LTAivnrBRNtuYHP4IQrgkPb22hl1UqGHu_zBJU');
-      /* imagen de fondo */
       background-size: cover;
     }
+
     .contenedor {
       background-color: rgba(0, 0, 0, 0.5);
-      /* fondo transparente */
       border-radius: 30px;
       box-shadow: 0 0 20px #FF00FF;
-      /* efecto de glow pulse */
       padding: 200px;
       width: 400px;
-      /* establece el ancho */
       height: 400px;
-      /* establece la altura */
       margin: 200px auto;
-      /* ajusta la posición vertical y horizontal */
     }
-    .barra-controles {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 50px;
-      /* ajusta la posición vertical de la barra de controles */
-    }
-    .boton-atras {
-      background-color: #4CAF50;
-      /* verde */
-      color: #fff;
-      padding: 50px 70px;
-      border: none;
-      border-radius: 20px;
-      cursor: pointer;
-      font-size: 30px;
-    }
+
     .boton-play {
-      background-color: #ff0000;
-      /* rojo */
-      color: #fff;
-      padding: 40px 50px;
-      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 40px;
+      cursor: pointer;
       border-radius: 30px;
-      cursor: pointer;
-      font-size: 30px;
-    }
-    .boton-adelante {
-      background-color: #4CAF50;
-      /* verde */
-      color: #fff;
-      padding: 50px 70px;
+      background-color: greenyellow;
       border: none;
-      border-radius: 20px;
-      cursor: pointer;
-      font-size: 30px;
-    }
-    .barra-progreso {
-      width: 100%;
-      height: 10px;
-      background-color: #ccc;
-      border-radius: 5px;
-      margin-top: 40px;
-    }
-    .barra-progreso-fill {
-      width: 10%;
-      /* ejemplo de progreso */
-      height: 10px;
-      background-color: #ff0000;
-      /* rojo */
-      border-radius: 5px;
-    }
-    @keyframes glowPulse {
-      0%,
-      100% {
-        box-shadow: 0 0 30px #ff00ff;
-        text-shadow: 0 0 30px #ff00ff;
-      }
-      50% {
-        box-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff;
-        text-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff;
-      }
-    }
-    .glow-pulse {
-      animation: glowPulse 2s infinite;
+      font-size: 40px;
+      margin: 20px auto;
+      display: block;
+      min-width: 120px;
+      min-height: 180px;
+      width: 200px;
+      height: 50px;
     }
 
-    .audio {
-        width: 100%;
-        margin: 20px;
-        text-align: center;
-    }
-
-
-    .audio audio {
-        width: 100%;
-        height: 60px;
-        margin: 40px;
-        padding: 10px;
+    .boton-play:hover {
+      border: 2px solid greenyellow;
+      box-shadow: 0 0 5px greenyellow;
+      color: greenyellow;
+      background-color: transparent;
     }
   </style>
 </head>
 <body>
-  <div class="contenedor glow-pulse">
-    <h1 style="color: #fff; font-size: 45px;">Episodio :</h1>
+  <div class="contenedor">
+    <h1 style="color: #fff; font-size: 45px;">Episodio 8: </h1>
     <p style="color: #fff; font-size: 30px;">#</p>
   </div>
-  
-    
-  <div class="audio">
-     <audio controls>
-       <source src="data:audio/mpg;base64,[TU CODIGO BASE64 AQUI]" type="audio/mpeg">
-       Tu navegador no soporta el elemento audio.
-     </audio>
-  </div>
+  <button class="boton-play">Play</button>
+  <audio id="audio" style="display: none;">
+    <source src="data:audio/mpg;base64,[TU CODIGO BASE64 AQUI]" type="audio/mpeg">
+    Tu navegador no soporta el elemento audio.
+  </audio>
+
+  <script>
+    const botonPlay = document.querySelector('.boton-play');
+    const audio = document.getElementById('audio');
+
+    botonPlay.addEventListener('click', () => {
+      audio.play();
+    });
+  </script>
 </body>
 </html>
