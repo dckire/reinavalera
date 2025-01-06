@@ -7,7 +7,6 @@
       background-image: url('https://play-lh.googleusercontent.com/emMVz-GsPzDHtBLNTRmORAsEWPYt9LTAivnrBRNtuYHP4IQrgkPb22hl1UqGHu_zBJU');
       background-size: cover;
     }
-
     .contenedor {
       background-color: rgba(0, 0, 0, 0.5);
       border-radius: 30px;
@@ -17,7 +16,6 @@
       height: 400px;
       margin: 200px auto;
     }
-
     .boton-play {
       display: flex;
       justify-content: center;
@@ -35,33 +33,23 @@
       width: 200px;
       height: 50px;
     }
-
     .boton-play:hover {
       border: 2px solid greenyellow;
       box-shadow: 0 0 5px greenyellow;
-      color: greenyellow;
-      background-color: transparent;
     }
   </style>
 </head>
 <body>
   <div class="contenedor">
-    <h1 style="color: #fff; font-size: 45px;">Episodio 5: Noe y el Arca</h1>
-    <p style="color: #fff; font-size: 30px;">#</p>
+    <div id="audioList"></div>
+    <div>
+      <input type="file" id="audioFile" accept="audio/*">
+      <input type="text" id="audioDescription" placeholder="Descripción del audio">
+      <button id="uploadButton">Subir Audio</button>
+    </div>
   </div>
-  <button class="boton-play">Play</button>
-  <audio id="audio" style="display: none;">
-    <source src="data:audio/mpg;base64,[TU CODIGO BASE64 AQUI]" type="audio/mpeg">
-    Tu navegador no soporta el elemento audio.
-  </audio>
-
   <script>
-    const botonPlay = document.querySelector('.boton-play');
-    const audio = document.getElementById('audio');
-
-    botonPlay.addEventListener('click', () => {
-      audio.play();
-    });
+    // Aquí irá el código JavaScript para manejar la subida de archivos y la reproducción de audio
   </script>
 </body>
 </html>
