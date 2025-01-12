@@ -1,257 +1,269 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>La Biblia</title>
-  <link rel="icon" type="image/png" href="https://photos.app.goo.gl/dTyKNNzk9MMqLVWS6" sizes="32x32">
-  <link rel="icon" type="image/png" href="https://photos.app.goo.gl/dTyKNNzk9MMqLVWS6" sizes="192x192">
-  <link rel="apple-touch-icon" type="image/png" href="https://photos.app.goo.gl/dTyKNNzk9MMqLVWS6" sizes="180x180">
+  <title>The bible learning time </title>
+  <hr>
+  <link rel="stylesheet" href="estilos.css">
   <style>
-    body {
-      background-color: hsl(33, 9%, 60%);
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100vh;
+
+    hr {
+      border: 1px solid #000;
+      margin: 10px 0;
     }
-    
-    title {
-      text-align: auto;
-    }
-    .contenedor-principal {
-      max-width: auto;
-      margin: 0 auto;
-      padding: auto;
-    }
-
-    header {
-      background-color: bisque;
-      color: #fff;
-      padding: 1em;
-      text-align: center;
-      width: 100%;
-    }
-
-    header h1 {
-      font-size: 30px;
-      margin: 0;
-    }
-    
-    .nav-izquierda ul {
-  position: relative;
-transform: skewY(-30deg);
+  
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #000;
 }
 
-.nav-derecha ul {
-position: relative;
-transform: skewY(30deg);
-}
-.nav-izquierda li {
-position: relative;
-top: 50px;
-list-style: none;
-width: 60%;
-padding: 15px;
-background: #3e3f46;
-z-index: calc(1 * var(--i));
-transition: 0.5s;
-
+header {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
 }
 
-.nav-derecha li {
-position: relative;
-top: 63px;
-list-style: none;
-width: 60%;
-padding: 15px;
-background: #3e3f46;
-z-index: calc(1 * var(--i));
-transition: 0.5s;
-
+.titulo-periodico {
+  font-size: 55px;
+  font-weight: bold;
+  margin-bottom: 0px;
 }
 
-li:hover {
-  background: #996fae;
-  transform: translateX(50px);
-}
-
- .nav-izquierda li:hover {
-  background: #996fae;
-  transform: translateX(-50px);
-}
-.nav-derecha li::before {
-  font-family: "FontAwesome";
-  color: #999;
+main {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  content: attr(data-icon);
-  position: absolute;
-  top: -40px;
-  right: -45px;
-  width: 50px;
-  height: 100%;
-  background: #2e3133;
-  transform-origin: right;
-  transform: skewY(-40deg);
-  transition: 0.5s;
+  padding: 20px;
 }
 
-.nav-izquierda li::before {
-  font-family: "FontAwesome";
-  color: #999;
+
+footer {
+  background-color: #fff;
+  padding: 10px;
+  text-align: center;
+  clear: both;
+}
+
+.contenido-principal {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  content: attr(data-icon);
-  position: absolute;
-  top: -40px;
-  left: -40px;
-  width: 40px;
-  height: 100%;
-  background: #2e3133;
-  transform-origin: left;
-  transform: skewY(45deg);
-  transition: 0.5s;
-}
-
-li:hover::before {
-  background: #7b5190;
-}
-
-li::after {
-  content: "";
-  position: absolute;
-  top: -40px;
-  left: 0px;
-  width: 100%;
-  height: 40px;
-  background: #35383e;
-  transform-origin: bottom;
-  transform: skewX(45deg);
-  transition: 0.5s;
-}
- .nav-derecha li::after {
-  content: "";
-  position: absolute;
-  top: -40px;
-  left: 0px;
-  width: 100%;
-  height: 40px;
-  background: #35383e;
-  transform-origin: bottom;
-  transform: skewX(-49deg);
-  transition: 0.5s;
- }
-li:hover::after {
-  background: #86589d;
-} 
-
-li a {
-  text-decoration: none;
-  color: #999;
-  display: block;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  transition: 0.5s;
-
-}
-
-li:hover a {
-  color: #fff;
-}
-
-.nav-derecha
-li:last-child::after {
-  box-shadow: 120px 120px 20px #000000fa;
-}
-.nav-izquierda
-li:last-child::after {
-  box-shadow: -120px 120px 20px #070707ef;
-}
- .nav-container {
-  display: flex;
+  flex-direction: row;
   justify-content: space-between;
- }
- .nav-izquierda {
-  margin-right: auto;
-  justify-self: flex-start;
- }
+  padding: 20px;
+}
 
- .nav-derecha {
-  margin-left: auto;
-  justify-self: flex-end;
- }
+.foto-principal {
+  width: 50%;
+  text-align: center;
+}
 
- @media (max-width: 768px) {
-  .nav-container {
-    flex-wrap: nowrap;
+.foto-principal img {
+  width: 100%;
+  height: auto;
+}
+
+.titulo-foto {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.linea-horizontal {
+  width: 100%;
+  border: 1px solid #000;
+  margin-bottom: 20px;
+}
+
+.contenido-izquierdo {
+    width: 45%;
+    padding: 20px;
+  }
+  
+  .columnas {
+    display: flex;
     flex-direction: row;
+    justify-content: space-between;
   }
-  .nav-izquierda {
-    margin-top: 20px;
-    margin-left: 0px;
-    padding-top: 0px;
+  
+  .columna-1, .columna-2 {
+    width: 45%;
+    padding: 10px;
   }
-  .nav-derecha {
-    margin-right: 0px;
+  
+  .titulo-seccion {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
   }
- }
+  
+  .parrafo {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
+  .izquierda {
+    margin-right: auto;
+  }
+  
+  .derecha {
+    margin-left: auto;
+  }
+.galeria-fotos {
+  margin-bottom: 0px;
+  text-align: left;
+  padding-left: 0;
+  margin-left: 0;
+}
+ 
+.galeria-fotos img {
+  width: 50%;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
   </style>
 </head>
 <body>
-  <div class="contenedor-principal">
-    <header>
-      <h1>La Biblia</h1>
-    </header>
-    <nav>
-      <div class="nav-container">
-        <div class="nav-izquierda">
-          <ul>
-            <li style="--i: 6;" data-icon="🏠">
-              <a href="viejo.html">Old Testament</a>
-            </li>
-            <li style="--i: 5;" data-icon="🗺️">
-              <a href="mapas.html">Maps</a>
-            </li>
-            <li style="--i: 4;" data-icon="📚">
-              <a href="diccionario.html">Dictionary</a>
-            </li>
-            <li style="--i: 3;" data-icon="📖">
-              <a href="#">Bible Topic</a>
-            </li>
-            <li style="--i: 2;" data-icon="📰">
-              <a href="https://www.enlacejudio.com/">News</a>
-            </li>
-          </ul>
-        </div>
-        <div class="nav-container">
-        <div class="nav-derecha">
-          <ul>
-            <!-- elementos de la barra derecha -->
-            <li style="--i: 5;" data-icon="🏠">
-              <a href="nuevo.html">New Testament</a>
-            </li>
-            <li style="--i: 4;" data-icon="🗺️">
-              <a href="mapas2.html">Maps</a>
-            </li>
-            <li style="--i: 3;" data-icon="📚">
-               <a href="diccionario.html">Dictionary</a>
-            </li>
-            <li style="--i: 2;" data-icon="🎧">
-              <a href="podcats.html">Podcasts</a>
-            </li>
-            <li style="--i: 1;" data-icon="📖">
-              <a href="">Mas</a>
-            </li>
-          </ul>
-        </div>
-        </div>
+  <header>
+    <h1 class="titulo-periodico">THE BIBLE LEARNING TIME</h1>
+    <div class="separador-fecha">
+      <hr>
+      <div class="container">
+        <a href="podcats.html" class="izquerda">Podcats</a>
+        <p class="fecha" id="fecha-actual" style="flex-grow: 1; text-align: center;"></p>
+        <a href="mapas.html" class="derecha">Mapas</a>
+      </div>
+      <hr>
+    </div>
+  </header>
+  <main>
+    
+<div class="contenido-principal">
+  <div class="foto-principal">
+    <img src="https://yt3.googleusercontent.com/ytc/AIdro_k7HIcDPNUlJfIrbI0PcRbY6MqemMEP5Gc3qdOaKDa8N5o=s900-c-k-c0x00ffffff-no-rj" alt="Foto principal">
+    <h2 class="titulo-foto">Habacuc 2:20</h2>
+    <hr class="linea-horizontal">
+    <p> Mas Jehová está en su santo templo: calle delante de él toda la tierra.</p>
+  </div>
+  
+  <div class="contenido-izquierdo">
+    <hr class="linea-horizontal-izquierda">
+    <div class="columnas">
+      <div class="columna-1">
+        <a href="viejo.html">
+        <h2 class="titulo-seccion">El antiguo testamento</h2></a>
+        <hr class="linea-horizontal-izquierda">
+        <p class="parrafo">Y FUÉ palabra de Jehová a Jonás, hijo de Amittai, diciendo:
+
+          Levántate, y ve a Nínive, ciudad grande, y pregona contra ella; porque su maldad ha subido delante de mí.
+          
+          Y Jonás se levantó para huir de la presencia de Jehová a Tarsis, y descendió a Joppe ; y halló un navio que partía para Tarsis ; y pagando su pasaje entró en él, para irse con ellos a Tarsis de delante de Jehová.
+          
+         Mas Jehová hizo levantar un gran viento en la mar, e hízose una tangran tempestad en la mar, que pensóse se rompería la nave.
+          
+         Y los marineros tuvieron miedo, y cada uno llamaba a su dios: y lecharon a la mar los enseres que había en la nave, para descargarla de ellos. Jonás empero se había bajado a los lados del buque, y se había echado a dormir.
+          
+         Y el maestre de la nave se llegó a él, y le dijo: ¿Qué tienes, dormilón? Levántate, y clama a tu Dios ; quizá él tendrá compasión de nosotros, y no pereceremos.
+
+         Y dijeron cada uno a su compañero: Venid, y "echemos suertes, para saber por quién nos ha venido este mal. Y echaron suertes, y la suerte cayó sobre Jonás.
+         
+         Entonces le dijeron ellos: decláranos ahora por qué nos ha venido este mal. ¿Qué oficio tienes, y de dónde vienes? ¿cuál es tu tierra, y de qué pueblo eres?
+         
+         Y él les respondió : Hebreo soy, y temo a Jehová, Dios de los cielos, que hizo la mar y la tierra.
+         
+         Y aquellos hombres temieron sobremanera, y dijéronle: ¿Por qué has hecho esto? Porque ellos entendieron que huía de delante de Jehová, porque se lo había declarado.
+         
+         Y dijéronle: ¿Qué te haremos, para que la mar se nos quiete? porque la mar iba a más, y se embravecía.
+      </div>
+      <div class="columna-2">
+        <a href="nuevo.html">
+        <h2 class="titulo-seccion">El nuevo testamento</h2></a>
+        <hr class="linea-horizontal-izquierda">
+        <p class="parrafo">Y COMO acabó todas sus palabras oyéndole el pueblo, entró en Capernaum.
+
+         Y el siervo de un centurión, al cual tenía él en estima, estaba enfermo y a punto de morir.
+          
+          Y como oyó hablar de Jesús, envió a él los ancianos de los Judíos, rogándole que viniese y librase a su siervo.
+          
+          Y viniendo ellos a Jesús, rogáronle con diligencia, diciéndole : Porque es digno de concederle esto ;
+          
+          Que ama nuestra nación, y él nos edificó una sinagoga.
+          
+          Y Jesús fué con ellos. Mas como ya no estuviesen lejos de su casa, envió el centurión amigos a él, diciéndole: Señor, no te incomodes, que no soy digno que entres debajo de mi tejado;
+          
+          Por lo cual ni aun me tuve por digno de venir a ti ; mas di la palabra, y mi siervo será sano.
+          
+          Porque también yo soy hombre puesto en potestad, que tengo debajo de mí soldados ; y digo a éste : Ve, y va ; y al otro : Ven, y viene ; y a mi siervo : Haz esto, y lo hace.
+          
+          Lo cual oyendo Jesús, se maravilló de él, y vuelto, dijo a las gentes que le seguían: Os digo que ni aun en Israel he hallado tanta fe.
+          
+          Y vueltos a casa los que habían sido enviados, hallaron sano al siervo que había estado enfermo.</p>
       </div>
     </div>
-    </nav>
+    <hr class="linea-horizontal-izquierda">
+  </div> 
+</div>
+<section class="galeria-fotos">
+  <h2>Galeria de fotos</h2>
+  <img src="https://i.pinimg.com/736x/61/3c/a1/613ca111cca098ff0ff6420d671babb2.jpg" alt="Foto principal">
+  <p><a href="mapas2.html">mapas del antiguo testamento</a></p>
+</section>
+  </main>
+  <footer>
+    <p>&copy; 2025 The bible learning time</p>
+  </footer>
+  <script>
+   
+const fechaActual = document.getElementById('fecha-actual');
+
+const fecha = new Date();
+const dia = fecha.getDate();
+const mes = fecha.getMonth() + 1;
+const año = fecha.getFullYear();
+
+const fechaFormateada = `${dia} de ${getMes(mes)} de ${año}`;
+
+fechaActual.textContent = fechaFormateada;
+
+function getMes(mes) {
+  switch (mes) {
+    case 1:
+      return 'enero';
+    case 2:
+      return 'febrero';
+    case 3:
+      return 'marzo';
+    case 4:
+      return 'abril';
+    case 5:
+      return 'mayo';
+    case 6:
+      return 'junio';
+    case 7:
+      return 'julio';
+    case 8:
+      return 'agosto';
+    case 9:
+      return 'septiembre';
+    case 10:
+      return 'octubre';
+    case 11:
+      return 'noviembre';
+    case 12:
+      return 'diciembre';
+    default:
+      return '';
+  }
+}
+</script>
 </body>
 </html>
