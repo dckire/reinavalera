@@ -1,269 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The bible learning time </title>
-  <hr>
-  <link rel="stylesheet" href="estilos.css">
+  <title>IN GOD WE TRUST</title>
   <style>
+    /* Estilos para la página */
+<style>
 
-    hr {
-      border: 1px solid #000;
-      margin: 10px 0;
-    }
+  /* Estilos generales */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
   
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #fff;
-  color: #000;
-}
-
-header {
-  background-color: #fff;
-  padding: 20px;
-  text-align: center;
-}
-
-.titulo-periodico {
-  font-size: 55px;
-  font-weight: bold;
-  margin-bottom: 0px;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
-
-
-footer {
-  background-color: #fff;
-  padding: 10px;
-  text-align: center;
-  clear: both;
-}
-
-.contenido-principal {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 20px;
-}
-
-.foto-principal {
-  width: 50%;
-  text-align: center;
-}
-
-.foto-principal img {
-  width: 100%;
-  height: auto;
-}
-
-.titulo-foto {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.linea-horizontal {
-  width: 100%;
-  border: 1px solid #000;
-  margin-bottom: 20px;
-}
-
-.contenido-izquierdo {
-    width: 45%;
+  /* Parte superior con líneas horizontales y título */
+  .parte-superior {
+    background-color: #f0f0f0;
     padding: 20px;
+    text-align: center;
   }
   
-  .columnas {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  
-  .columna-1, .columna-2 {
-    width: 45%;
-    padding: 10px;
-  }
-  
-  .titulo-seccion {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .parrafo {
-    font-size: 14px;
-    margin-bottom: 20px;
-  }
-  
-  .container {
+  .titulo-logo {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-
-  .izquierda {
-    margin-right: auto;
+  
+  .titulo {
+    font-size: 24px;
+    font-weight: bold;
   }
   
-  .derecha {
-    margin-left: auto;
+  .logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
   }
-.galeria-fotos {
-  margin-bottom: 0px;
-  text-align: left;
-  padding-left: 0;
-  margin-left: 0;
+  
+  /* Contenido principal */
+  .contenido-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+
+.imagen-titulo-enlace {
+  width: 400px; /* Ajusta el ancho según el tamaño de la imagen */
+  margin: 0 auto; /* Centra el contenido */
 }
- 
-.galeria-fotos img {
-  width: 50%;
-  margin: 20px 0;
+
+.imagen-titulo-enlace img {
+    text-align: center;
+  width: 130%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+  height: 330px; /* Ajusta el alto de la imagen */
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-  </style>
+
+.imagen-titulo-enlace h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 10px;
+  width: 130%; /* Ajusta el ancho del título al 100% del contenedor */
+  text-align: center;
+}
+  
+  /* Parte inferior con margen de línea azul cielo y texto de derechos reservados */
+  .parte-inferior {
+    background-color: #ADD8E6;
+    padding: 10px;
+    text-align: center;
+    clear: both;
+  }
+  
+  .margen-azul {
+    border-top: 1px solid #0000FF;
+    padding-top: 10px;
+  }
+</style>
 </head>
 <body>
-  <header>
-    <h1 class="titulo-periodico">THE BIBLE LEARNING TIME</h1>
-    <div class="separador-fecha">
-      <hr>
-      <div class="container">
-        <a href="podcats.html" class="izquerda">Podcats</a>
-        <p class="fecha" id="fecha-actual" style="flex-grow: 1; text-align: center;"></p>
-        <a href="mapas.html" class="derecha">Mapas</a>
-      </div>
-      <hr>
+  <!-- Parte superior con líneas horizontales y título -->
+  <div class="parte-superior">
+    <hr>
+    <p class="fecha" id="fecha-actual" style="flex-grow: 1; text-align: center;"></p>
+    <div class="titulo-logo">
+      <span class="titulo">LA BIBLIA REINA VALERA (1569-1602)</span>
+      <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
     </div>
-  </header>
-  <main>
-    
-<div class="contenido-principal">
-  <div class="foto-principal">
-    <img src="https://yt3.googleusercontent.com/ytc/AIdro_k7HIcDPNUlJfIrbI0PcRbY6MqemMEP5Gc3qdOaKDa8N5o=s900-c-k-c0x00ffffff-no-rj" alt="Foto principal">
-    <h2 class="titulo-foto">Habacuc 2:20</h2>
-    <hr class="linea-horizontal">
-    <p> Mas Jehová está en su santo templo: calle delante de él toda la tierra.</p>
+    <hr>
   </div>
-  
-  <div class="contenido-izquierdo">
-    <hr class="linea-horizontal-izquierda">
-    <div class="columnas">
-      <div class="columna-1">
-        <a href="viejo.html">
-        <h2 class="titulo-seccion">El antiguo testamento</h2></a>
-        <hr class="linea-horizontal-izquierda">
-        <p class="parrafo">Y FUÉ palabra de Jehová a Jonás, hijo de Amittai, diciendo:
-
-          Levántate, y ve a Nínive, ciudad grande, y pregona contra ella; porque su maldad ha subido delante de mí.
-          
-          Y Jonás se levantó para huir de la presencia de Jehová a Tarsis, y descendió a Joppe ; y halló un navio que partía para Tarsis ; y pagando su pasaje entró en él, para irse con ellos a Tarsis de delante de Jehová.
-          
-         Mas Jehová hizo levantar un gran viento en la mar, e hízose una tangran tempestad en la mar, que pensóse se rompería la nave.
-          
-         Y los marineros tuvieron miedo, y cada uno llamaba a su dios: y lecharon a la mar los enseres que había en la nave, para descargarla de ellos. Jonás empero se había bajado a los lados del buque, y se había echado a dormir.
-          
-         Y el maestre de la nave se llegó a él, y le dijo: ¿Qué tienes, dormilón? Levántate, y clama a tu Dios ; quizá él tendrá compasión de nosotros, y no pereceremos.
-
-         Y dijeron cada uno a su compañero: Venid, y "echemos suertes, para saber por quién nos ha venido este mal. Y echaron suertes, y la suerte cayó sobre Jonás.
-         
-         Entonces le dijeron ellos: decláranos ahora por qué nos ha venido este mal. ¿Qué oficio tienes, y de dónde vienes? ¿cuál es tu tierra, y de qué pueblo eres?
-         
-         Y él les respondió : Hebreo soy, y temo a Jehová, Dios de los cielos, que hizo la mar y la tierra.
-         
-         Y aquellos hombres temieron sobremanera, y dijéronle: ¿Por qué has hecho esto? Porque ellos entendieron que huía de delante de Jehová, porque se lo había declarado.
-         
-         Y dijéronle: ¿Qué te haremos, para que la mar se nos quiete? porque la mar iba a más, y se embravecía.
-      </div>
-      <div class="columna-2">
-        <a href="nuevo.html">
-        <h2 class="titulo-seccion">El nuevo testamento</h2></a>
-        <hr class="linea-horizontal-izquierda">
-        <p class="parrafo">Y COMO acabó todas sus palabras oyéndole el pueblo, entró en Capernaum.
-
-         Y el siervo de un centurión, al cual tenía él en estima, estaba enfermo y a punto de morir.
-          
-          Y como oyó hablar de Jesús, envió a él los ancianos de los Judíos, rogándole que viniese y librase a su siervo.
-          
-          Y viniendo ellos a Jesús, rogáronle con diligencia, diciéndole : Porque es digno de concederle esto ;
-          
-          Que ama nuestra nación, y él nos edificó una sinagoga.
-          
-          Y Jesús fué con ellos. Mas como ya no estuviesen lejos de su casa, envió el centurión amigos a él, diciéndole: Señor, no te incomodes, que no soy digno que entres debajo de mi tejado;
-          
-          Por lo cual ni aun me tuve por digno de venir a ti ; mas di la palabra, y mi siervo será sano.
-          
-          Porque también yo soy hombre puesto en potestad, que tengo debajo de mí soldados ; y digo a éste : Ve, y va ; y al otro : Ven, y viene ; y a mi siervo : Haz esto, y lo hace.
-          
-          Lo cual oyendo Jesús, se maravilló de él, y vuelto, dijo a las gentes que le seguían: Os digo que ni aun en Israel he hallado tanta fe.
-          
-          Y vueltos a casa los que habían sido enviados, hallaron sano al siervo que había estado enfermo.</p>
-      </div>
+  <!-- Contenido principal -->
+  <div class="contenido-principal">
+    <div class="imagen-titulo-enlace">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgz-3E4E35hQAELB7j_HGO6AaxhPI4XKTGNBlP87LlD_zCTBgTUkQYNEigTcqPYrNwF7Vm8nNLAzlt2UtU8AAAbQ_PU9CAhfU0mJFnga6vTr6kUH2SVYZLZJYTByNQGb4C11G0V7YD3wf-4WMc0ytbyrcwEXfScJ2i6ggTo8sLXYvRerFFNMS3NT5qfU0k/s320/IMG-20250118-WA0008~2.jpg" alt="Imagen 1">
+      <h2><a href="viejo.html">En el principio crio Dios los cielos y la tierra. y la tierra estaba desordenada y vacia, y las tinieblas estaban sobre la haz del abismo, y el Espiritu de Dios se movia sobre las aguas.</a></h2>
     </div>
-    <hr class="linea-horizontal-izquierda">
-  </div> 
-</div>
-<section class="galeria-fotos">
-  <h2>Galeria de fotos</h2>
-  <img src="https://i.pinimg.com/736x/61/3c/a1/613ca111cca098ff0ff6420d671babb2.jpg" alt="Foto principal">
-  <p><a href="mapas2.html">mapas del antiguo testamento</a></p>
-</section>
-  </main>
-  <footer>
-    <p>&copy; 2025 The bible learning time</p>
-  </footer>
-  <script>
+    <div class="imagen-titulo-enlace">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLadYFwduUxwkdwBeH6q2rY0kZTiDRkpnkwXvarv6TFp3DIpSbWQu4PvswbMzvjf5fGuEAFIVzw_1iEgFmMYqR3QPRtpn8FRvz_7n3BJT1vPNm9hg4L7GsKUMNrgvrUk4PTZNUV0P7l2HEYETPPyFV9tEmyz0xYdeF2GD7cSGrMa9TTDqvlubC9PgrYmo/s320/IMG-20250118-WA0008~3.jpg" alt="Imagen 2">
+      <h2><a href="nuevo.html">Libro de las generaciones de Jesucristo, hijo de david, hijo de Abraham. Abraham engendro a Isaac: e Isaac engendro a Jacob: y Jacob engendro a Judas...</a></h2>
+    </div>
+    <div class="imagen-titulo-enlace">
+        <img src="https://churchofjesuschrist.org/imgs/841da514ca6aae1f5bb6829bf6f30862b62b0c99/full/640%2C/0/default" alt="Imagen 2">
+        <h2><a href="mapas2.html">Mapas del antiguo testamento</a></h2>
+      </div>
+      <div class="imagen-titulo-enlace">
+        <img src="https://churchofjesuschrist.org/imgs/89d360ab18a99b979c9f9f11df4325b43de60776/full/640%2C/0/default" alt="Imagen 2">
+        <h2><a href="mapas.html">Mapas del nuevo testamento</a></h2>
+      </div>
+      <div class="imagen-titulo-enlace">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_kOSHo0tkN2FrFe7-oMrmNwacMT7E8gDyaZ9Ab5WqWZeWAJa5RnHTgh7a-hIap5rEAYOTjb45QoAvFBt4yLq24oL3IgZjsHgcUbyz3_sqsWtoQulx9P1EHfTmeWIQOK73OSZejQix02B71kU_htL6gFN0N8EZrEYddWbVLdeYk9IgZbb11D0XcnFaQbY/s320/IMG-20250118-WA0020~2.jpg" alt="Imagen 2">
+        <h2><a href="podcats.html">podcats</a></h2>
+      </div>
+      </div>
+      <div class="imagen-titulo-enlace">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQp9opHd50RSf8aleYPci8Pn8wGBgS-prD9aOrEhOAb4tm_GoMwJyaAi0D-SN1ElBKh06V6IOnE3f7RaJsLZ9hXnGNW-A5dFlWUt_viFmkDmDy9UeVAffy5XFx9HyDVwMCbZTS1wLcO4Rx43fAYigO5g_Cs0xJxclEJNMqi7K_e7e4DAMRod7ZUiU_Cwc/s320/IMG-20250118-WA0028~2.jpg" alt="Imagen 2">
+        <h2><a href="diccionario.html">El nombre Abraham tiene origen hebreo y significa "padre de muchas naciones" o "padre de multitudes". En la Biblia, Abraham es considerado el patriarca de los israelitas y es recordado por su fe y obediencia a Dios. El nombre Abraham ha sido muy popular a lo largo de la historia y sigue siendo un nombre común en muchas culturas.</a></h2>
+      </div>
+      </div>
+      <script>
    
-const fechaActual = document.getElementById('fecha-actual');
-
-const fecha = new Date();
-const dia = fecha.getDate();
-const mes = fecha.getMonth() + 1;
-const año = fecha.getFullYear();
-
-const fechaFormateada = `${dia} de ${getMes(mes)} de ${año}`;
-
-fechaActual.textContent = fechaFormateada;
-
-function getMes(mes) {
-  switch (mes) {
-    case 1:
-      return 'enero';
-    case 2:
-      return 'febrero';
-    case 3:
-      return 'marzo';
-    case 4:
-      return 'abril';
-    case 5:
-      return 'mayo';
-    case 6:
-      return 'junio';
-    case 7:
-      return 'julio';
-    case 8:
-      return 'agosto';
-    case 9:
-      return 'septiembre';
-    case 10:
-      return 'octubre';
-    case 11:
-      return 'noviembre';
-    case 12:
-      return 'diciembre';
-    default:
-      return '';
-  }
-}
-</script>
+        const fechaActual = document.getElementById('fecha-actual');
+        
+        const fecha = new Date();
+        const dia = fecha.getDate();
+        const mes = fecha.getMonth() + 1;
+        const año = fecha.getFullYear();
+        
+        const fechaFormateada = `${dia} de ${getMes(mes)} de ${año}`;
+        
+        fechaActual.textContent = fechaFormateada;
+        
+        function getMes(mes) {
+          switch (mes) {
+            case 1:
+              return 'enero';
+            case 2:
+              return 'febrero';
+            case 3:
+              return 'marzo';
+            case 4:
+              return 'abril';
+            case 5:
+              return 'mayo';
+            case 6:
+              return 'junio';
+            case 7:
+              return 'julio';
+            case 8:
+              return 'agosto';
+            case 9:
+              return 'septiembre';
+            case 10:
+              return 'octubre';
+            case 11:
+              return 'noviembre';
+            case 12:
+              return 'diciembre';
+            default:
+              return '';
+          }
+        }
+        </script>
 </body>
+<!-- Parte inferior con margen de linea azul cielo y texto de derechos reservados-->
+<div class="parte-inferior">
+    <div class="margen-azul">
+      <p>&copy; 2025 IN GOD WE TRUST</p>
+    </div>
+  </div>
 </html>
