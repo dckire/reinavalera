@@ -38,6 +38,7 @@
   .contenido-principal {
     display: flex;
     flex-direction: column;
+    margin-top: 180px;
     margin-right: 380px;
     padding: 20px;
   }
@@ -78,19 +79,32 @@
 
   h2 a {
     color: #FFFFFF;
+  } 
+
+  .header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 50px;
+   background-color: #f0f0f0;
+   text-align: center;
+   padding: 10px;
   }
 </style>
 </head>
 <body>
+  <header class="header">
   <!-- Parte superior con líneas horizontales y título -->
   <div class="parte-superior">
     <hr>
-    <p class="fecha" id="fecha-actual" style="flex-grow: 1; text-align: center;"></p>
+    <p class="fecha" id="fecha-actual" style="flex-grow: 1; text-align: center; font-size: 24px;"></p>
 <div class="titulo-logo" style="text-align: center;">
   <span class="titulo">LA BIBLIA REINA VALERA (1569-1602)</span>
 </div>
     <hr>
   </div>
+  </header>
   <!-- Contenido principal -->
   <div class="contenido-principal">
     <div class="imagen-titulo-enlace">
