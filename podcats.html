@@ -1,163 +1,92 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>Podcats</title>
- <style>
- body {
- background-color: #000;
- color: #fff;
- font-family: Arial, sans-serif;
- }
- .contenedor {
- width: 80%;
- margin: 40px auto;
- }
- .contenedor-gris {
- background-color: #2f2f2f;
- padding: 20px;
- border-radius: 10px;
- box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
- }
- .lista-tracks {
- list-style: none;
- padding: 0;
- margin: 0;
- }
- .lista-tracks li {
- margin-bottom: 20px;
- border-bottom: 1px solid #444;
- }
- .track {
- display: flex;
- align-items: center;
- }
- .track-icono {
- width: 40px;
- height: 20px;
- margin-right: 10px;
- }
- .track-titulo {
- font-size: 40px;
- color: #fff;
- }
- .track-duracion {
- font-size: 14px;
- color: #ccc;
- }
- .titulo-podcast {
- font-size: 80px;
- text-align: center;
- margin-bottom: 20px;
- }
- .enlace-principal {
- text-align: center;
- margin-top: 20px;
- }
- .boton-principal {
- background-color: #4CAF50;
- color: #fff;
- padding: 10px 20px;
- border: none;
- border-radius: 5px;
- cursor: pointer;
- transition: background-color 0.3s ease;
- }
- .boton-principal:hover {
- background-color: #3e8e41;
- box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
- transform: translateY(-2px);
- }
- </style>
+  <title>Podcast</title>
+  <style>
+    /* Estilos para el header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: hsl(0, 6%, 58%);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    /* Estilos para el cuerpo de la página */
+    body {
+        background-color: #2e2c2c;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    /* Estilos para la sección de contenido */
+    .contenido {
+    margin-top: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    
+    /* Estilos para las tarjetas de podcast */
+    .tarjeta-podcast {
+      margin-bottom: 50px;
+      width: 80%;
+      background-color: #f7f7f7;
+      padding: 20px;
+      border: 1px solid #ddd;
+      box-shadow: 0px 0px 10px hwb(0 30% 69% / 0.102);
+      border-radius: 25px;
+    }
+    
+    /* Estilos para las imágenes de podcast */
+    .imagen-podcast {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+  </style>
 </head>
 <body>
- <div class="contenedor">
- <div class="enlace-principal">
- <button class="boton-principal"><a href="index.html" style="color: #fff; text-decoration: none;">Home</a></button>
- </div>
- <h1 class="titulo-podcast">Podcast</h1>
- <div class="contenedor-gris">
- <ul class="lista-tracks">
- <li>
- <div class="track">
- <img class="track-icono" src="icono1.png" alt="Icono del género">
- <div>
- <h2 class="track-titulo"><a href="podcats1.html" style="color: #fff; text-decoration: none;">Episodio 1: La Creacion </a></h2>
- <p class="track-duracion">0:00</p>
- </div>
- </div>
- </li>
- <li>
- <div class="track">
- <img class="track-icono" src="icono2.png" alt="Icono del género">
- <div>
- <h2 class="track-titulo"><a href="podcats2.html" style="color: #fff; text-decoration: none;">Episodio 2: El paraiso y el pecado</a></h2>
- <p class="track-duracion">0:00</p>
- </div>
- </div>
- </li>
-    <li>
-    <div class="track">
-    <img class="track-icono" src="💿" alt="Icono del género">
-    <div>
-    <h2 class="track-titulo"><a href="podcats3.html" style="color: #fff; text-decoration: none;">Episodio 3: Cain y Abel</a></h2>
-    <p class="track-duracion">0:00</p>
+  <header>
+    <hr>
+    <h1>Podcast</h1>
+    <hr>
+  </header>
+  <div class="contenido">
+    <div class="tarjeta-podcast">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMVu6Or1qFtzi3_yce8QOe3ywG0gYEfYFcqeLGpJThdmiwOS8uC2oy-Ja-9WmKPxz3ojRwMCW_Qfs9EBmngAW-4HzOFml5-dF33a07f49qtBoV9esR6JENJCW8YTyOquY7QSzDkVIntossbNfrkB5i-uAyS2YS0S2dESgPc8TFbZnzVmJb0vQ-OkmNuig/s320/Screenshot_20250121_201031_Samsung%20Music~2.jpg" alt="Imagen del podcast 1" class="imagen-podcast">
+      <h2><a href="#">Episodio 1:La creacion</a></h2>
     </div>
+    <div class="tarjeta-podcast">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMVu6Or1qFtzi3_yce8QOe3ywG0gYEfYFcqeLGpJThdmiwOS8uC2oy-Ja-9WmKPxz3ojRwMCW_Qfs9EBmngAW-4HzOFml5-dF33a07f49qtBoV9esR6JENJCW8YTyOquY7QSzDkVIntossbNfrkB5i-uAyS2YS0S2dESgPc8TFbZnzVmJb0vQ-OkmNuig/s320/Screenshot_20250121_201031_Samsung%20Music~2.jpg" alt="Imagen del podcast 2" class="imagen-podcast">
+      <h2><a href="#">Episodio 2:El paraiso y el pecado</a></h2>
     </div>
-    </li>
-    <li>
-    <div class="track">
-    <img class="track-icono" src="💿" alt="Icono del género">
-    <div>
-    <h2 class="track-titulo"><a href="podcats4.html" style="color: #fff; text-decoration: none;">Episodio 4: Genologia de Seth</a></h2>
-    <p class="track-duracion">0:00</p>
+    <div class="tarjeta-podcast">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMVu6Or1qFtzi3_yce8QOe3ywG0gYEfYFcqeLGpJThdmiwOS8uC2oy-Ja-9WmKPxz3ojRwMCW_Qfs9EBmngAW-4HzOFml5-dF33a07f49qtBoV9esR6JENJCW8YTyOquY7QSzDkVIntossbNfrkB5i-uAyS2YS0S2dESgPc8TFbZnzVmJb0vQ-OkmNuig/s320/Screenshot_20250121_201031_Samsung%20Music~2.jpg" alt="Imagen del podcast 3" class="imagen-podcast">
+      <h2><a href="#">Episodio 3:Cain y Abel</a></h2>
+      </div>
+      <div class="tarjeta-podcast">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMVu6Or1qFtzi3_yce8QOe3ywG0gYEfYFcqeLGpJThdmiwOS8uC2oy-Ja-9WmKPxz3ojRwMCW_Qfs9EBmngAW-4HzOFml5-dF33a07f49qtBoV9esR6JENJCW8YTyOquY7QSzDkVIntossbNfrkB5i-uAyS2YS0S2dESgPc8TFbZnzVmJb0vQ-OkmNuig/s320/Screenshot_20250121_201031_Samsung%20Music~2.jpg" alt="Imagen del podcast 4" class="imagen-podcast">
+        <h2><a href="#">Episodio 4:Geneologia de Seth</a></h2>
+      </div>
+      <div class="tarjeta-podcast">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMVu6Or1qFtzi3_yce8QOe3ywG0gYEfYFcqeLGpJThdmiwOS8uC2oy-Ja-9WmKPxz3ojRwMCW_Qfs9EBmngAW-4HzOFml5-dF33a07f49qtBoV9esR6JENJCW8YTyOquY7QSzDkVIntossbNfrkB5i-uAyS2YS0S2dESgPc8TFbZnzVmJb0vQ-OkmNuig/s320/Screenshot_20250121_201031_Samsung%20Music~2.jpg" alt="Imagen del podcast 5" class="imagen-podcast">
+        <h2><a href="#">Episodio 5:Noe y el Arca</a></h2>
+      </div>
+      <div class="tarjeta-podcast">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMVu6Or1qFtzi3_yce8QOe3ywG0gYEfYFcqeLGpJThdmiwOS8uC2oy-Ja-9WmKPxz3ojRwMCW_Qfs9EBmngAW-4HzOFml5-dF33a07f49qtBoV9esR6JENJCW8YTyOquY7QSzDkVIntossbNfrkB5i-uAyS2YS0S2dESgPc8TFbZnzVmJb0vQ-OkmNuig/s320/Screenshot_20250121_201031_Samsung%20Music~2.jpg" alt="Imagen del podcast 6" class="imagen-podcast">
+        <h2><a href="#">Episodio 6:La salida del Arca</a></h2>
     </div>
+    <div class="tarjeta-podcast">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMVu6Or1qFtzi3_yce8QOe3ywG0gYEfYFcqeLGpJThdmiwOS8uC2oy-Ja-9WmKPxz3ojRwMCW_Qfs9EBmngAW-4HzOFml5-dF33a07f49qtBoV9esR6JENJCW8YTyOquY7QSzDkVIntossbNfrkB5i-uAyS2YS0S2dESgPc8TFbZnzVmJb0vQ-OkmNuig/s320/Screenshot_20250121_201031_Samsung%20Music~2.jpg" alt="Imagen del podcats 7" class="imagen-podcast">
+        <h2><a href="#">Episodio 7:Geneologia de los hijos de Noe</a></h2>
     </div>
-    </li>
-    <li>
-    <div class="track">
-    <img class="track-icono" src="💿" alt="Icono del género">
-    <div>
-    <h2 class="track-titulo"><a href="podcats5.html" style="color: #fff; text-decoration: none;">Episodio 5: Noe y el Arca</a></h2>
-    <p class="track-duracion">0:00</p>
-    </div>
-    </div>
-    </li>
-    <li>
-    <div class="track">
-    <img class="track-icono" src="💿" alt="Icono del género">
-    <div>
-    <h2 class="track-titulo"><a href="podcats6.html" style="color: #fff; text-decoration: none;">Episodio 6: La Salida del Arca</a></h2>
-    <p class="track-duracion">:00</p>
-    </div>
-    </div>
-    </li>
-    <li>
-    <div class="track">
-    <img class="track-icono" src="💿" alt="Icono del género">
-    <div>
-    <h2 class="track-titulo"><a href="podcats7.html" style="color: #fff; text-decoration: none;">Episodio 7: Geneologia de los hijos de Noe</a></h2>
-    <p class="track-duracion">0:</p>
-    </div>
-    </div>
-    </li>
-    <li>
-    <div class="track">
-    <img class="track-icono" src="💿" alt="Icono del género">
-    <div>
-    <h2 class="track-titulo"><a href="#" style="color: #fff; text-decoration: none;">Título de la canción 2</a></h2>
-    <p class="track-duracion">4:10</p>
-    </div>
-    </div>
-    </li>
- <!-- Agrega más tracks aquí -->
- </ul> 
-<div id="audioList"></div>
-<div>
-    <input type="file" id="audioFile" accept="audio/*">
-    <input type="text" id="audioDescription" placeholder="Descripción del audio">
-    <button id="uploadButton">Subir Audio</button>
-</div>
- </div>
- </div>
+  </div>
 </body>
 </html>
