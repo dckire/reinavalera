@@ -3,108 +3,125 @@
 <head>
   <title>Podcast</title>
   <style>
-    /* Estilos para el header */
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
     header {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      background-color: hsl(0, 6%, 58%);
+      background-color: #333;
       color: #fff;
-      padding: 20px;
       text-align: center;
+      padding: 20px;
+      border-bottom: 1px solid #444;
+      transition: background-color 0.5s ease;
     }
-    
-    /* Estilos para el cuerpo de la página */
-    body {
-        background-color: #2e2c2c;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
+
+    header.transparent {
+      background-color: transparent;
     }
-    
-    /* Estilos para la sección de contenido */
-    .contenido {
-    margin-top: 200px;
+    .podcast { 
+      right: 300px;
+      position: relative;
+      width: 300px;
+      margin: 80px auto 20px auto;
+      padding: 20px;
+      background-color: #000;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
+      flex-direction: row;
+      flex-wrap: wrap;
     }
-    
-    /* Estilos para las tarjetas de podcast */
-    .tarjeta-podcast {
-      margin-bottom: 50px;
-      width: 80%;
-      background-color: #f7f7f7;
-      padding: 20px;
-      border: 1px solid #ddd;
-      box-shadow: 0px 0px 10px hwb(0 30% 69% / 0.102);
-      border-radius: 25px;
-    }
-    
-    /* Estilos para las imágenes de podcast */
-    .imagen-podcast {
-      width: 100%;
-      height: 400px;
+    .podcast img {
+      width: 150px;
+      height: 150px;
       object-fit: cover;
-      border-radius: 20px;
+      border-radius: 10px;
+    }
+    .podcast .info {
+      margin-left: 20px;
+      width: calc(100% - 170px);
+    }
+    .podcast .info h2 {
+      font-size: 18px;
+      margin: 0;
+    }
+    .podcast .info p {
+      font-size: 14px;
+      color: #666;
+      margin: 0;
+    }
+    .podcast .audio {
+      margin-top: 20px;
+      width: 100%;
+    }
+    .podcast .audio audio {
+      width: 100%;
+      height: 30px;
+      background-color: #000;
+      border: none;
+      padding: 10px;
+      color: #fff;
     }
 
-    
-    h1 {
-      font-size: 50px;
-      color: hsl(0, 7%, 3%);
-    }
-
-    h2 {
-      text-align: center;
+    hr {
+      border: none;
+      height: 10px;
+      background-color: yellowgreen;
+      margin: 10px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <hr>
+  <header id="header">
     <h1>Podcast</h1>
-    <hr>
   </header>
-  <div class="contenido">
-    <div class="tarjeta-podcast">
-      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMVu6Or1qFtzi3_yce8QOe3ywG0gYEfYFcqeLGpJThdmiwOS8uC2oy-Ja-9WmKPxz3ojRwMCW_Qfs9EBmngAW-4HzOFml5-dF33a07f49qtBoV9esR6JENJCW8YTyOquY7QSzDkVIntossbNfrkB5i-uAyS2YS0S2dESgPc8TFbZnzVmJb0vQ-OkmNuig/s320/Screenshot_20250121_201031_Samsung%20Music~2.jpg" alt="Imagen del podcast 1" class="imagen-podcast">
-      <h2><a href="podcats1.html">Episodio 1:La creacion</a></h2>
-    </div>
-    <div class="tarjeta-podcast">
-      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMVu6Or1qFtzi3_yce8QOe3ywG0gYEfYFcqeLGpJThdmiwOS8uC2oy-Ja-9WmKPxz3ojRwMCW_Qfs9EBmngAW-4HzOFml5-dF33a07f49qtBoV9esR6JENJCW8YTyOquY7QSzDkVIntossbNfrkB5i-uAyS2YS0S2dESgPc8TFbZnzVmJb0vQ-OkmNuig/s320/Screenshot_20250121_201031_Samsung%20Music~2.jpg" alt="Imagen del podcast 2" class="imagen-podcast">
-      <h2><a href="podcats2.html">Episodio 2:El paraiso y el pecado</a></h2>
-    </div>
-    <div class="tarjeta-podcast">
-      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMVu6Or1qFtzi3_yce8QOe3ywG0gYEfYFcqeLGpJThdmiwOS8uC2oy-Ja-9WmKPxz3ojRwMCW_Qfs9EBmngAW-4HzOFml5-dF33a07f49qtBoV9esR6JENJCW8YTyOquY7QSzDkVIntossbNfrkB5i-uAyS2YS0S2dESgPc8TFbZnzVmJb0vQ-OkmNuig/s320/Screenshot_20250121_201031_Samsung%20Music~2.jpg" alt="Imagen del podcast 3" class="imagen-podcast">
-      <h2><a href="podcats3.html">Episodio 3:Cain y Abel</a></h2>
-      </div>
-      <div class="tarjeta-podcast">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMVu6Or1qFtzi3_yce8QOe3ywG0gYEfYFcqeLGpJThdmiwOS8uC2oy-Ja-9WmKPxz3ojRwMCW_Qfs9EBmngAW-4HzOFml5-dF33a07f49qtBoV9esR6JENJCW8YTyOquY7QSzDkVIntossbNfrkB5i-uAyS2YS0S2dESgPc8TFbZnzVmJb0vQ-OkmNuig/s320/Screenshot_20250121_201031_Samsung%20Music~2.jpg" alt="Imagen del podcast 4" class="imagen-podcast">
-        <h2><a href="podcats4.html">Episodio 4:Geneologia de Seth</a></h2>
-      </div>
-      <div class="tarjeta-podcast">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMVu6Or1qFtzi3_yce8QOe3ywG0gYEfYFcqeLGpJThdmiwOS8uC2oy-Ja-9WmKPxz3ojRwMCW_Qfs9EBmngAW-4HzOFml5-dF33a07f49qtBoV9esR6JENJCW8YTyOquY7QSzDkVIntossbNfrkB5i-uAyS2YS0S2dESgPc8TFbZnzVmJb0vQ-OkmNuig/s320/Screenshot_20250121_201031_Samsung%20Music~2.jpg" alt="Imagen del podcast 5" class="imagen-podcast">
-        <h2><a href="podcats5.html">Episodio 5:Noe y el Arca</a></h2>
-      </div>
-      <div class="tarjeta-podcast">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMVu6Or1qFtzi3_yce8QOe3ywG0gYEfYFcqeLGpJThdmiwOS8uC2oy-Ja-9WmKPxz3ojRwMCW_Qfs9EBmngAW-4HzOFml5-dF33a07f49qtBoV9esR6JENJCW8YTyOquY7QSzDkVIntossbNfrkB5i-uAyS2YS0S2dESgPc8TFbZnzVmJb0vQ-OkmNuig/s320/Screenshot_20250121_201031_Samsung%20Music~2.jpg" alt="Imagen del podcast 6" class="imagen-podcast">
-        <h2><a href="podcats6.html">Episodio 6:La salida del Arca</a></h2>
-    </div>
-    <div class="tarjeta-podcast">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMVu6Or1qFtzi3_yce8QOe3ywG0gYEfYFcqeLGpJThdmiwOS8uC2oy-Ja-9WmKPxz3ojRwMCW_Qfs9EBmngAW-4HzOFml5-dF33a07f49qtBoV9esR6JENJCW8YTyOquY7QSzDkVIntossbNfrkB5i-uAyS2YS0S2dESgPc8TFbZnzVmJb0vQ-OkmNuig/s320/Screenshot_20250121_201031_Samsung%20Music~2.jpg" alt="Imagen del podcats 7" class="imagen-podcast">
-        <h2><a href="podcats7.html">Episodio 7:Geneologia de los hijos de Noe</a></h2>
-    </div>
-    <div class="tarjeta-podcast">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMVu6Or1qFtzi3_yce8QOe3ywG0gYEfYFcqeLGpJThdmiwOS8uC2oy-Ja-9WmKPxz3ojRwMCW_Qfs9EBmngAW-4HzOFml5-dF33a07f49qtBoV9esR6JENJCW8YTyOquY7QSzDkVIntossbNfrkB5i-uAyS2YS0S2dESgPc8TFbZnzVmJb0vQ-OkmNuig/s320/Screenshot_20250121_201031_Samsung%20Music~2.jpg" alt="Imagen del podcats 7" class="imagen-podcast">
-        <h2><a href="podcats8.html">Episodio 8:#</a></h2>
-    </div>
-    <div class="tarjeta-podcast">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMVu6Or1qFtzi3_yce8QOe3ywG0gYEfYFcqeLGpJThdmiwOS8uC2oy-Ja-9WmKPxz3ojRwMCW_Qfs9EBmngAW-4HzOFml5-dF33a07f49qtBoV9esR6JENJCW8YTyOquY7QSzDkVIntossbNfrkB5i-uAyS2YS0S2dESgPc8TFbZnzVmJb0vQ-OkmNuig/s320/Screenshot_20250121_201031_Samsung%20Music~2.jpg" alt="Imagen del podcats 7" class="imagen-podcast">
-        <h2><a href="podcats9.html">Episodio 9:#</a></h2>
-    </div>
-  </div>
-</body>
-</html>
+  <div style="margin-top: 130px;">
+  <div class="podcast">
+    <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2017518293&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/erick-camacho-397671657" title="erick camacho" target="_blank" style="color: #cccccc; text-decoration: none;">erick camacho</a> · <a href="https://soundcloud.com/erick-camacho-397671657/episodio1genesis" title="episodio1genesis" target="_blank" style="color: #cccccc; text-decoration: none;">episodio1genesis</a></div>
+                   <hr>         
+  <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2017537485&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/erick-camacho-397671657" title="erick camacho" target="_blank" style="color: #cccccc; text-decoration: none;">erick camacho</a> · <a href="https://soundcloud.com/erick-camacho-397671657/elparaisoyelpecado" title="elparaisoyelpecado" target="_blank" style="color: #cccccc; text-decoration: none;">elparaisoyelpecado</a></div>
+            <hr>  
+            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2017547193&color=%2310080c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/erick-camacho-397671657" title="IN GOD WE TRUST" target="_blank" style="color: #cccccc; text-decoration: none;">IN GOD WE TRUST</a> · <a href="https://soundcloud.com/erick-camacho-397671657/episodio3genesis" title="episodio3genesis" target="_blank" style="color: #cccccc; text-decoration: none;">episodio3genesis</a></div>
+            <hr>   
+            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2017550233&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/erick-camacho-397671657" title="IN GOD WE TRUST" target="_blank" style="color: #cccccc; text-decoration: none;">IN GOD WE TRUST</a> · <a href="https://soundcloud.com/erick-camacho-397671657/episodio-4-genologia-de-seth" title="Episodio 4: Genologia de Seth" target="_blank" style="color: #cccccc; text-decoration: none;">Episodio 4: Genologia de Seth</a></div>
+            <hr> 
+            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2017560637&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/erick-camacho-397671657" title="IN GOD WE TRUST" target="_blank" style="color: #cccccc; text-decoration: none;">IN GOD WE TRUST</a> · <a href="https://soundcloud.com/erick-camacho-397671657/episodio-5-noe-y-el-arca" title="Episodio 5: Noe y el Arca" target="_blank" style="color: #cccccc; text-decoration: none;">Episodio 5: Noe y el Arca</a></div>
+            <hr>          
+</div>
+                                  </div>
+                                </div>
+  <script>
+    const header = document.getElementById('header');
+    const podcast = document.querySelector('.podcast');
+    let ultimaPosicion = 0;
+    window.addEventListener('scroll', () => {
+      const posicionActual = window.scrollY;
+      if (posicionActual > ultimaPosicion) {
+        header.classList.add('transparente');
+      } else {
+        header.classList.remove('transparente');
+      }
+      ultimaPosicion = posicionActual;
+    });
+
+const audio = document.querySelector('audio');
+
+audio.addEventListener('ended', () => {
+  // Acciones a realizar cuando el audio termina de reproducirse
+});
+
+audio.addEventListener('error', () => {
+  // Acciones a realizar cuando ocurre un error al reproducir el audio
+});
+
+                                  </script>
+                              </body>
+                            </html>
