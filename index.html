@@ -1,183 +1,142 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>THE BIBLE</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LA BIBLIA REINA VALERA (1569-1602)</title>
   <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
-<style>
+  <style>
+    :root {
+      --color-fondo: #454545;
+      --color-header: #f0f0f0;
+      --color-footer: #ADD8E6;
+      --color-texto: hsl(0, 0%, 3%);
+    }
 
-  /* Estilos generales */
+    body {
+      background-color: var(--color-fondo);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: var(--color-texto);
+    }
 
-  body {
-    background-color: #454545;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Parte superior con líneas horizontales y título */
-  .parte-superior {
-    background-color: #f0f0f0;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  
-  .titulo {
-    font-size: 30px;
-    font-weight: bold;
-    align-items: center;
-  }
-  
-  .logo {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-  }
-  
-  /* Contenido principal */
-  .contenido-principal {
-    display: flex;
-    flex-direction: column;
-    margin-top: 200px;
-    margin-right: 380px;
-    padding: 20px;
-  }
-  
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: var(--color-header);
+      text-align: center;
+      padding: 10px 0;
+    }
 
-.imagen-titulo-enlace {
-  width: 480px; /* Ajusta el ancho según el tamaño de la imagen */
-  margin: 0 auto; /* Centra el contenido */
-}
+    .parte-superior {
+      padding: 20px;
+    }
 
-.imagen-titulo-enlace img {
-    text-align: center;
-  width: 180%; /* Ajusta el ancho de la imagen al 100% del contenedor */
-  height: 480px; /* Ajusta el alto de la imagen */
-  border-radius: 20px;
-}
+    .titulo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
 
-.imagen-titulo-enlace h2 {
-  font-size: 35px;
-  font-weight: bold;
-  margin-top: 10px;
-  width: 180%; /* Ajusta el ancho del título al 100% del contenedor */
-  text-align: center;
-}
-  
-  /* Parte inferior con margen de línea azul cielo y texto de derechos reservados */
-  .parte-inferior {
-    background-color: #ADD8E6;
-    padding: 10px;
-    text-align: center;
-    clear: both;
-  }
-  
-  .margen-azul {
-    border-top: 1px solid #0000FF;
-    padding-top: 10px;
-  }
+    .contenido-principal {
+      margin-top: 200px;
+      padding: 20px;
+    }
 
-  h2 a {
-    color: #FFFFFF;
-  } 
+    .imagen-titulo-enlace {
+      max-width: 100%;
+      margin: 20px auto;
+      text-align: center;
+    }
 
-  .header {
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 50px;
-   background-color: #f0f0f0;
-   text-align: center;
-   padding: 0;
-  }
-</style>
+    .imagen-titulo-enlace img {
+      width: 100%;
+      max-width: 480px;
+      height: auto;
+      border-radius: 20px;
+    }
+
+    .imagen-titulo-enlace h2 {
+      font-size: 1.5rem;
+      margin-top: 10px;
+    }
+
+    .parte-inferior {
+      background-color: var(--color-footer);
+      padding: 10px;
+      text-align: center;
+    }
+
+    .margen-azul {
+      border-top: 1px solid #0000FF;
+      padding-top: 10px;
+    }
+
+    h2 a {
+      color: var(--color-texto);
+      text-decoration: none;
+    }
+
+    .logo {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+  </style>
 </head>
 <body>
   <header class="header">
-  <!-- Parte superior con líneas horizontales y título -->
-  <div class="parte-superior">
-    <hr>
-    <p class="fecha" id="fecha-actual" style="flex-grow: 1; text-align: center; font-size: 24px;"></p>
-<div class="titulo-logo" style="text-align: center;">
-  <span class="titulo">LA BIBLIA REINA VALERA (1569-1602)</span>
-</div>
-    <hr>
-  </div>
+    <div class="parte-superior">
+      <hr>
+      <p class="fecha" id="fecha-actual"></p>
+      <div class="titulo-logo">
+        <span class="titulo">LA BIBLIA REINA VALERA (1569-1602)</span>
+      </div>
+      <hr>
+    </div>
   </header>
-  <!-- Contenido principal -->
+
   <div class="contenido-principal">
     <div class="imagen-titulo-enlace">
-      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgz-3E4E35hQAELB7j_HGO6AaxhPI4XKTGNBlP87LlD_zCTBgTUkQYNEigTcqPYrNwF7Vm8nNLAzlt2UtU8AAAbQ_PU9CAhfU0mJFnga6vTr6kUH2SVYZLZJYTByNQGb4C11G0V7YD3wf-4WMc0ytbyrcwEXfScJ2i6ggTo8sLXYvRerFFNMS3NT5qfU0k/s320/IMG-20250118-WA0008~2.jpg" alt="Imagen 1">
-      <h2><a href="viejo.html">En el principio crio Dios los cielos y la tierra. y la tierra estaba desordenada y vacia, y las tinieblas estaban sobre la haz del abismo, y el Espiritu de Dios se movia sobre las aguas.</a></h2>
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgz-3E4E35hQAELB7j_HGO6AaxhPI4XKTGNBlP87LlD_zCTBgTUkQYNEigTcqPYrNwF7Vm8nNLAzlt2UtU8AAAbQ_PU9CAhfU0mJFnga6vTr6kUH2SVYZLZJYTByNQGb4C11G0V7YD3wf-4WMc0ytbyrcwEXfScJ2i6ggTo8sLXYvRerFFNMS3NT5qfU0k/s320/IMG-20250118-WA0008~2.jpg" alt="Génesis">
+      <h2><a href="viejo.html">En el principio creó Dios los cielos y la tierra...</a></h2>
     </div>
     <div class="imagen-titulo-enlace">
-      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLadYFwduUxwkdwBeH6q2rY0kZTiDRkpnkwXvarv6TFp3DIpSbWQu4PvswbMzvjf5fGuEAFIVzw_1iEgFmMYqR3QPRtpn8FRvz_7n3BJT1vPNm9hg4L7GsKUMNrgvrUk4PTZNUV0P7l2HEYETPPyFV9tEmyz0xYdeF2GD7cSGrMa9TTDqvlubC9PgrYmo/s320/IMG-20250118-WA0008~3.jpg" alt="Imagen 2">
-      <h2><a href="nuevo.html">Libro de las generaciones de Jesucristo, hijo de david, hijo de Abraham. Abraham engendro a Isaac: e Isaac engendro a Jacob: y Jacob engendro a Judas...</a></h2>
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLadYFwduUxwkdwBeH6q2rY0kZTiDRkpnkwXvarv6TFp3DIpSbWQu4PvswbMzvjf5fGuEAFIVzw_1iEgFmMYqR3QPRtpn8FRvz_7n3BJT1vPNm9hg4L7GsKUMNrgvrUk4PTZNUV0P7l2HEYETPPyFV9tEmyz0xYdeF2GD7cSGrMa9TTDqvlubC9PgrYmo/s320/IMG-20250118-WA0008~3.jpg" alt="Nuevo Testamento">
+      <h2><a href="nuevo.html">Libro de las generaciones de Jesucristo...</a></h2>
     </div>
     <div class="imagen-titulo-enlace">
-        <img src="https://churchofjesuschrist.org/imgs/841da514ca6aae1f5bb6829bf6f30862b62b0c99/full/640%2C/0/default" alt="Imagen 2">
-        <h2><a href="mapas.html">Mapas del antiguo testamento</a></h2>
-      </div>
-      <div class="imagen-titulo-enlace">
-        <img src="https://churchofjesuschrist.org/imgs/89d360ab18a99b979c9f9f11df4325b43de60776/full/640%2C/0/default" alt="Imagen 2">
-        <h2><a href="mapas2.html">Mapas del nuevo testamento</a></h2>
-      </div>
-      <div class="imagen-titulo-enlace">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_kOSHo0tkN2FrFe7-oMrmNwacMT7E8gDyaZ9Ab5WqWZeWAJa5RnHTgh7a-hIap5rEAYOTjb45QoAvFBt4yLq24oL3IgZjsHgcUbyz3_sqsWtoQulx9P1EHfTmeWIQOK73OSZejQix02B71kU_htL6gFN0N8EZrEYddWbVLdeYk9IgZbb11D0XcnFaQbY/s320/IMG-20250118-WA0020~2.jpg" alt="Imagen 2">
-        <h2><a href="podcats.html">podcasts</a></h2>
-      </div>
+      <img src="https://churchofjesuschrist.org/imgs/841da514ca6aae1f5bb6829bf6f30862b62b0c99/full/640%2C/0/default" alt="Mapas del Antiguo Testamento">
+      <h2><a href="mapas.html">Mapas del Antiguo Testamento</a></h2>
+    </div>
+    <div class="imagen-titulo-enlace">
+      <img src="https://churchofjesuschrist.org/imgs/89d360ab18a99b979c9f9f11df4325b43de60776/full/640%2C/0/default" alt="Mapas del Nuevo Testamento">
+      <h2><a href="mapas2.html">Mapas del Nuevo Testamento</a></h2>
+    </div>
+    <div class="imagen-titulo-enlace">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_kOSHo0tkN2FrFe7-oMrmNwacMT7E8gDyaZ9Ab5WqWZeWAJa5RnHTgh7a-hIap5rEAYOTjb45QoAvFBt4yLq24oL3IgZjsHgcUbyz3_sqsWtoQulx9P1EHfTmeWIQOK73OSZejQix02B71kU_htL6gFN0N8EZrEYddWbVLdeYk9IgZbb11D0XcnFaQbY/s320/IMG-20250118-WA0020~2.jpg" alt="Podcasts">
+      <h2><a href="podcasts.html">Podcasts</a></h2>
+    </div>
   </div>
-      <script>
-   
-        const fechaActual = document.getElementById('fecha-actual');
-        
-        const fecha = new Date();
-        const dia = fecha.getDate();
-        const mes = fecha.getMonth() + 1;
-        const año = fecha.getFullYear();
-        
-        const fechaFormateada = `${dia} de ${getMes(mes)} de ${año}`;
-        
-        fechaActual.textContent = fechaFormateada;
-        
-        function getMes(mes) {
-          switch (mes) {
-            case 1:
-              return 'enero';
-            case 2:
-              return 'febrero';
-            case 3:
-              return 'marzo';
-            case 4:
-              return 'abril';
-            case 5:
-              return 'mayo';
-            case 6:
-              return 'junio';
-            case 7:
-              return 'julio';
-            case 8:
-              return 'agosto';
-            case 9:
-              return 'septiembre';
-            case 10:
-              return 'octubre';
-            case 11:
-              return 'noviembre';
-            case 12:
-              return 'diciembre';
-            default:
-              return '';
-          }
-        }
-        </script>
-</body>
-<!-- Parte inferior con margen de linea azul cielo y texto de derechos reservados-->
-<div class="parte-inferior">
+
+  <footer class="parte-inferior">
     <div class="margen-azul">
       <p>&copy; 2025 IN GOD WE TRUST</p>
       <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
     </div>
-  </div>
+  </footer>
+
+  <script>
+    const fechaActual = document.getElementById('fecha-actual');
+    const fecha = new Date();
+    const dia = fecha.getDate();
+    const mes = fecha.getMonth() + 1;
+    const año = fecha.getFullYear();
+    const meses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+    const fechaFormateada = `${dia} de ${meses[mes - 1]} de ${año}`;
+    fechaActual.textContent = fechaFormateada;
+  </script>
+</body>
 </html>
