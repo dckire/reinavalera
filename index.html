@@ -6,11 +6,129 @@
   <title>LA BIBLIA REINA VALERA (1569-1602)</title>
   <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
   <style>
+    .contenido-principal {
+  margin-top: 120px; /* Ajusta según la altura del header */
+  padding: 20px;
+}
+
+.bienvenida, .versiculo-del-dia, .buscador, .plan-lectura, .recursos {
+  margin-bottom: 40px;
+}
+
+.bienvenida h2, .versiculo-del-dia h2, .buscador h2, .plan-lectura h2, .recursos h2 {
+  font-size: 1.8rem;
+  color: var(--color-texto);
+  margin-bottom: 10px;
+}
+
+.bienvenida p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.versiculo-del-dia blockquote {
+  font-size: 1.2rem;
+  font-style: italic;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-left: 5px solid var(--color-boton);
+  margin: 0;
+}
+
+.versiculo-del-dia cite {
+  display: block;
+  margin-top: 10px;
+  font-size: 1rem;
+  text-align: right;
+}
+
+
+
+
+.plan-lectura ul {
+  list-style: none;
+  padding: 0;
+}
+
+.plan-lectura ul li {
+  margin-bottom: 10px;
+}
+
+.plan-lectura a {
+  color: var(--color-boton);
+  text-decoration: none;
+}
+
+.plan-lectura a:hover {
+  text-decoration: underline;
+}
+
+.recursos-lista {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.recurso {
+  text-align: center;
+  text-decoration: none;
+  color: var(--color-texto);
+}
+
+.recurso img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.recurso p {
+  font-size: 1rem;
+}
+    .parte-inferior {
+  background-color: var(--color-footer);
+  padding: 20px;
+  text-align: center;
+}
+
+.margen-azul {
+  border-top: 1px solid #0000FF;
+  padding-top: 10px;
+}
+
+.enlaces-footer {
+  margin: 10px 0;
+}
+
+.enlaces-footer a {
+  color: var(--color-texto);
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.enlaces-footer a:hover {
+  text-decoration: underline;
+}
+
+.redes-sociales {
+  margin: 10px 0;
+}
+
+.redes-sociales a {
+  margin: 0 10px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-top: 10px;
+}
     :root {
-      --color-fondo: #454545;
+      --color-fondo: hwb(0 29% 69% / 0);
       --color-header: #f0f0f0;
       --color-footer: #ADD8E6;
       --color-texto: hsl(0, 0%, 3%);
+      --color-boton: #007BFF;
     }
 
     body {
@@ -29,15 +147,84 @@
       background-color: var(--color-header);
       text-align: center;
       padding: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .parte-superior {
       padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
+    .p {
+      text-align: center;
+      font-size: 20px;
+      color: #000;
+    }
+
+    #fecha-actual {
+      font-weight: bold;
+    }
     .titulo {
       font-size: 1.5rem;
       font-weight: bold;
+    }
+
+    /* Estilos para el botón hamburguesa */
+    .boton-hamburguesa {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .boton-hamburguesa span {
+      width: 25px;
+      height: 3px;
+      background-color: var(--color-texto);
+    }
+
+    /* Menú desplegable */
+    .menu-desplegable {
+      position: fixed;
+      top: 60px; /* Ajusta según la altura del header */
+      left: -250px; /* Oculta el menú por defecto */
+      width: 200px;
+      background-color: var(--color-header);
+      box-shadow: 2px 2px 5px rgba(236, 230, 230, 0.2);
+      transition: left 0.3s ease;
+      z-index: 1000;
+    }
+
+    .menu-desplegable.abierto {
+      left: 0; /* Muestra el menú */
+    }
+
+    .menu-desplegable ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu-desplegable ul li {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .menu-desplegable ul li a {
+      color: var(--color-texto);
+      text-decoration: none;
+      display: block;
+    }
+
+    .menu-desplegable ul li a:hover {
+      background-color: #f0f0f0;
     }
 
     .contenido-principal {
@@ -87,43 +274,114 @@
   </style>
 </head>
 <body>
+  <!-- Botón de menú hamburguesa -->
   <header class="header">
     <div class="parte-superior">
-      <hr>
+      <button class="boton-hamburguesa" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <span class="titulo">LA BIBLIA REINA VALERA (1569-1602)</span>
       <p class="fecha" id="fecha-actual"></p>
-      <div class="titulo-logo">
-        <span class="titulo">LA BIBLIA REINA VALERA (1569-1602)</span>
-      </div>
-      <hr>
     </div>
   </header>
 
+  <!-- Menú desplegable -->
+  <div class="menu-desplegable" id="menuDesplegable">
+    <ul>
+      <li><a href="viejo.html">Antiguo Testamento</a></li>
+      <li><a href="nuevo.html">Nuevo Testamento</a></li>
+      <li><a href="mapas1.html">mapas </a></li>
+      <li><a href="mapas.html">mapas</a></li>
+      <li><a href="faq.html">Preguntas Frecuentes</a></li>
+      <li><a href="https://on.soundcloud.com/bm6JijgTLFuXLtUh7">Podcasts</a></li>
+    </ul>
+  </div>
+
   <div class="contenido-principal">
-    <div class="imagen-titulo-enlace">
-      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgz-3E4E35hQAELB7j_HGO6AaxhPI4XKTGNBlP87LlD_zCTBgTUkQYNEigTcqPYrNwF7Vm8nNLAzlt2UtU8AAAbQ_PU9CAhfU0mJFnga6vTr6kUH2SVYZLZJYTByNQGb4C11G0V7YD3wf-4WMc0ytbyrcwEXfScJ2i6ggTo8sLXYvRerFFNMS3NT5qfU0k/s320/IMG-20250118-WA0008~2.jpg" alt="Génesis">
-      <h2><a href="viejo.html">En el principio creó Dios los cielos y la tierra...</a></h2>
+  <!-- Mensaje de Bienvenida -->
+  <section class="bienvenida">
+    <h2>ANTIGUA VERSIÓN DE CASIODORO DE REINA (1569), REVISADA POR CIPRIANO DE VALERA (1602) Y COTEJADA POSTERIORMENTE CON DIVERSAS TRADUCCIONES, Y CON LOS TEXTOS HEBREO Y GRIEGO
+
+    </h2>
+    <p> </p>
+  </section>
+
+  <!-- Versículo del Día -->
+  <section class="versiculo-del-dia">
+    <h2>Versículo del Día</h2>
+    <blockquote>
+      "Porque de tal manera amó Dios al mundo, que ha dado a su Hijo unigénito, para que todo aquel que en él cree no se pierda, mas tenga vida eterna."<br>
+      <cite>Juan 3:16</cite>
+    </blockquote>
+  </section>
+
+
+  <!-- Plan de Lectura -->
+  <section class="plan-lectura">
+    <h2>Plan de Lectura Bíblica</h2>
+    <p>Sigue nuestro plan de lectura para completar la Biblia en un año. Hoy lee:</p>
+    <ul>
+      <li><strong>Génesis 1-3</strong>: La creación del mundo.</li>
+      <li><strong>Mateo 1-2</strong>: El nacimiento de Jesús.</li>
+    </ul>
+    <a href="genesis1.html">Ver plan completo</a>
+  </section>
+
+  <!-- Recursos Destacados -->
+  <section class="recursos">
+    <h2>Recursos Destacados</h2>
+    <div class="recursos-lista">
+      <a href="index.html" class="recurso">
+        <img src="https://churchofjesuschrist.org/imgs/841da514ca6aae1f5bb6829bf6f30862b62b0c99/full/640%2C/0/default" alt="Mapas Bíblicos">
+        <p>Mapas Bíblicos</p>
+      </a>
+      <a href="https://dckire.github.io/reinavalera/extenuacion.html" class="recurso">
+        <img src="https://cdn-icons-png.flaticon.com/512/2232/2232688.png" alt="Diccionario Bíblico">
+        <p>Diccionario Bíblico</p>
+      </a>
+      <a href="index.html" class="recurso">
+        <img src="https://cdn-icons-png.flaticon.com/512/2103/2103789.png" alt="Estudios Bíblicos">
+        <p>Estudios Bíblicos</p>
+      </a>
     </div>
-    <div class="imagen-titulo-enlace">
-      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLadYFwduUxwkdwBeH6q2rY0kZTiDRkpnkwXvarv6TFp3DIpSbWQu4PvswbMzvjf5fGuEAFIVzw_1iEgFmMYqR3QPRtpn8FRvz_7n3BJT1vPNm9hg4L7GsKUMNrgvrUk4PTZNUV0P7l2HEYETPPyFV9tEmyz0xYdeF2GD7cSGrMa9TTDqvlubC9PgrYmo/s320/IMG-20250118-WA0008~3.jpg" alt="Nuevo Testamento">
-      <h2><a href="nuevo.html">Libro de las generaciones de Jesucristo...</a></h2>
-    </div>
-    <div class="imagen-titulo-enlace">
-      <img src="https://churchofjesuschrist.org/imgs/841da514ca6aae1f5bb6829bf6f30862b62b0c99/full/640%2C/0/default" alt="Mapas del Antiguo Testamento">
-      <h2><a href="mapas.html">Mapas del Antiguo Testamento</a></h2>
-    </div>
-    <div class="imagen-titulo-enlace">
-      <img src="https://churchofjesuschrist.org/imgs/89d360ab18a99b979c9f9f11df4325b43de60776/full/640%2C/0/default" alt="Mapas del Nuevo Testamento">
-      <h2><a href="mapas2.html">Mapas del Nuevo Testamento</a></h2>
-    </div>
-    <div class="imagen-titulo-enlace">
-      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg_kOSHo0tkN2FrFe7-oMrmNwacMT7E8gDyaZ9Ab5WqWZeWAJa5RnHTgh7a-hIap5rEAYOTjb45QoAvFBt4yLq24oL3IgZjsHgcUbyz3_sqsWtoQulx9P1EHfTmeWIQOK73OSZejQix02B71kU_htL6gFN0N8EZrEYddWbVLdeYk9IgZbb11D0XcnFaQbY/s320/IMG-20250118-WA0020~2.jpg" alt="Podcasts">
-      <h2><a href="podcats.html">Podcasts</a></h2>
-    </div>
+  </section>
   </div>
 
   <footer class="parte-inferior">
     <div class="margen-azul">
       <p>&copy; 2025 IN GOD WE TRUST</p>
+      <div class="enlaces-footer">
+        <a href="acercade.html">Acerca de</a> |
+        <a href="https://dckire.github.io/reinavalera/levitico26.html#:~:text=45%20Antes%20me%20acordar%C3%A9%20de%20ellos%20por%20el%20pacto%20antiguo%2C%20cuando%20los%20saqu%C3%A9%20de%20la%20tierra%20de%20Egipto%20a%20los%20ojos%20de%20las%20gentes%2C%20para%20ser%20su%20Dios%3A%20Yo%20Jehov%C3%A1.">Versículos Destacados</a> |
+        <a href="genesis1.html">Plan de Lectura</a> |
+        <a href="contacto.html">Contacto</a>
+      </div>
+      <div class="redes-sociales">
+<a href="https://on.soundcloud.com/bm6JijgTLFuXLtUh7" target="_blank" title="Síguenos en SoundCloud" class="soundcloud-link" rel="noopener noreferrer">
+  <img src="https://cdn-icons-png.flaticon.com/512/5968/5968935.png" alt="SoundCloud" width="24">
+</a>
+<a href="#" target="_blank" title="Síguenos en YouTube" class="youtube-link" rel="noopener noreferrer">
+  <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" width="24">
+</a>
+
+<a href="https://wa.me/[tu número de teléfono]" target="_blank" title="Síguenos en WhatsApp" class="whatsapp-link" rel="noopener noreferrer">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="24">
+</a>
+
+<a href="https://www.instagram.com/[tu nombre de usuario]" target="_blank" title="Síguenos en Instagram" class="instagram-link" rel="noopener noreferrer">
+  <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" width="24">
+</a>
+
+<a href="https://www.facebook.com/[tu nombre de usuario]" target="_blank" title="Síguenos en Facebook" class="facebook-link" rel="noopener noreferrer">
+  <img src="https://cdn-icons-png.flaticon.com/512/1384/1384061.png" alt="Facebook" width="24">
+</a>
+
+<a href="https://x.com/[tu nombre de usuario]" target="_blank" title="Síguenos en X" class="x-link" rel="noopener noreferrer">
+  <img src="https://cdn-icons-png.flaticon.com/512/1384/1384062.png" alt="X" width="24">
+</a>
+      </div>
       <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
     </div>
   </footer>
@@ -137,6 +395,12 @@
     const meses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
     const fechaFormateada = `${dia} de ${meses[mes - 1]} de ${año}`;
     fechaActual.textContent = fechaFormateada;
+
+    // Función para abrir/cerrar el menú
+    function toggleMenu() {
+      const menu = document.getElementById('menuDesplegable');
+      menu.classList.toggle('abierto');
+    }
   </script>
 </body>
 </html>
