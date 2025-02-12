@@ -266,6 +266,43 @@ height: 200px;
 object-fit: cover;
 margin-bottom: 20px;
 }
+
+#nota-advertencia {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#nota-advertencia h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#nota-advertencia p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+#nota-advertencia #btn-aceptar {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#nota-advertencia #btn-aceptar:hover {
+  background-color: #3e8e41;
+}
   </style>
 </head>
 <body>
@@ -276,6 +313,17 @@ margin-bottom: 20px;
       <p class="fecha" id="fecha-actual"></p>
     </div>
   </header>
+
+
+<div id="nota-advertencia" style="display: none;">
+  <h2>Nota importante</h2>
+  <p>"Recuerda que la Biblia física es una herramienta invaluable para tu crecimiento espiritual. Este sitio web está diseñado para ser un complemento, no un reemplazo, de tu lectura y estudio de la Biblia. Utilízalo cuando no tengas acceso a una Biblia física, pero no te olvides de volver a las páginas sagradas para una experiencia más profunda y significativa."
+
+"Recuerda que la Biblia física es tu mejor compañero espiritual,(Utilízalo cuando sea necesario,")</p>
+  <button id="btn-aceptar">Aceptar</button>
+</div>
+
+<!-- resto del contenido de la página -->
 
   <div class="contenido-principal">
       <a href="viejo.html" class="button">
@@ -409,6 +457,25 @@ margin-bottom: 20px;
       const menu = document.getElementById('menuDesplegable');
       menu.classList.toggle('abierto');
     }
+
+    // Función para mostrar la nota de advertencia
+function mostrarNotaAdvertencia() {
+  var notaAdvertencia = document.getElementById("nota-advertencia");
+  notaAdvertencia.style.display = "block";
+}
+
+// Llamar a la función cuando se carga la página
+window.onload = mostrarNotaAdvertencia;
+
+// Función para ocultar la nota de advertencia cuando se acepta
+function aceptarNotaAdvertencia() {
+  var notaAdvertencia = document.getElementById("nota-advertencia");
+  notaAdvertencia.style.display = "none";
+}
+
+// Agregar evento de clic al botón de aceptar
+document.getElementById("btn-aceptar").addEventListener("click", aceptarNotaAdvertencia);
+
   </script>
 </body>
 </html>
