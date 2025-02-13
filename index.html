@@ -33,7 +33,7 @@
 
 .versiculo-del-dia cite {
   display: block;
-  margin-top: 10px;
+  margin-top: 50px;
   font-size: 1rem;
   text-align: right;
 }
@@ -123,16 +123,8 @@
       --color-fondo: hwb(0 29% 69% / 0);
       --color-header: #f0f0f0;
       --color-footer: #ADD8E6;
-      --color-texto: hsl(0, 0%, 3%);
+      --color-texto: hsl(0, 24%, 96%);
       --color-boton: #007BFF;
-    }
-
-    body {
-      background-color: var(--color-fondo);
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      color: var(--color-texto);
     }
 
     .header {
@@ -155,7 +147,7 @@
       gap: 10px;
     }
 
-    .p {
+    .p .a {
       text-align: center;
       font-size: 20px;
       color: #000;
@@ -259,13 +251,14 @@
   box-shadow: none;
 }
 
-    
 .imagen-versiculo {
-width: 100%;
-height: 200px;
-object-fit: cover;
-margin-bottom: 20px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
+
 
 #nota-advertencia {
   position: fixed;
@@ -303,10 +296,19 @@ margin-bottom: 20px;
 #nota-advertencia #btn-aceptar:hover {
   background-color: #3e8e41;
 }
+
+body {
+  background-color: rgb(56, 42, 245); /* color claro inicial */
+  transition: background-color 0.5s ease;
+}
+
+body.scrolled {
+  background-color: #333; /* color oscuro cuando se desplaza */
+}
+
   </style>
 </head>
 <body>
-  <!-- Botón de menú hamburguesa -->
   <header class="header">
     <div class="parte-superior">
       <span class="titulo">LA BIBLIA REINA VALERA (1569-1602)</span>
@@ -320,40 +322,8 @@ margin-bottom: 20px;
   <p>"Recuerda que la Biblia física es una herramienta invaluable para tu crecimiento espiritual. Este sitio web está diseñado para ser un complemento, no un reemplazo, de tu lectura y estudio de la Biblia. Utilízalo cuando no tengas acceso a una Biblia física, pero no te olvides de volver a las páginas sagradas para una experiencia más profunda y significativa."
 
 "Recuerda que la Biblia física es tu mejor compañero espiritual,(Utilízalo cuando sea necesario,")</p>
-  <button id="btn-aceptar">Ok</button>
+  <button id="btn-aceptar">Aceptar</button>
 </div>
-
-<!-- resto del contenido de la página -->
-
-  <div class="contenido-principal">
-      <a href="viejo.html" class="button">
-        <div class="inner">
-          <div class="svgs">
-            <svg viewBox="0 0 256 256" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" class="svg-l" >
-              <path d="M240 128a15.79 15.79 0 0 1-10.5 15l-63.44 23.07L143 229.5a16 16 0 0 1-30 0l-23.06-63.44L26.5 143a16 16 0 0 1 0-30l63.44-23.06L113 26.5a16 16 0 0 1 30 0l23.07 63.44L229.5 113a15.79 15.79 0 0 1 10.5 15" fill="currentColor" ></path>
-            </svg>
-            <svg viewBox="0 0 256 256" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" class="svg-s" >
-              <path d="M240 128a15.79 15.79 0 0 1-10.5 15l-63.44 23.07L143 229.5a16 16 0 0 1-30 0l-23.06-63.44L26.5 143a16 16 0 0 1 0-30l63.44-23.06L113 26.5a16 16 0 0 1 30 0l23.07 63.44L229.5 113a15.79 15.79 0 0 1 10.5 15" fill="currentColor" ></path>
-            </svg>
-          </div>
-          Antiguo Testamento
-        </div>
-      </a>
-  
-      <a href="nuevo.html" class="button">
-        <div class="inner">
-          <div class="svgs">
-            <svg viewBox="0 0 256 256" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" class="svg-l" >
-              <path d="M240 128a15.79 15.79 0 0 1-10.5 15l-63.44 23.07L143 229.5a16 16 0 0 1-30 0l-23.06-63.44L26.5 143a16 16 0 0 1 0-30l63.44-23.06L113 26.5a16 16 0 0 1 30 0l23.07 63.44L229.5 113a15.79 15.79 0 0 1 10.5 15" fill="currentColor" ></path>
-            </svg>
-            <svg viewBox="0 0 256 256" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" class="svg-s" >
-              <path d="M240 128a15.79 15.79 0 0 1-10.5 15l-63.44 23.07L143 229.5a16 16 0 0 1-30 0l-23.06-63.44L26.5 143a16 16 0 0 1 0-30l63.44-23.06L113 26.5a16 16 0 0 1 30 0l23.07 63.44L229.5 113a15.79 15.79 0 0 1 10.5 15" fill="currentColor" ></path>
-            </svg>
-          </div>
-          Nuevo Testamento
-        </div>
-      </a>
-    
   <!-- Versículo del Día -->
  
 <section class="versiculo-del-dia">
@@ -402,23 +372,53 @@ margin-bottom: 20px;
         <p>Estudios Bíblicos</p>
       </a>
     </div>
-  </section>
-  </div>
 
+  <div class="contenido-principal">
+      <a href="viejo.html" class="button">
+        <div class="inner">
+          <div class="svgs">
+            <svg viewBox="0 0 256 256" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" class="svg-l" >
+              <path d="M240 128a15.79 15.79 0 0 1-10.5 15l-63.44 23.07L143 229.5a16 16 0 0 1-30 0l-23.06-63.44L26.5 143a16 16 0 0 1 0-30l63.44-23.06L113 26.5a16 16 0 0 1 30 0l23.07 63.44L229.5 113a15.79 15.79 0 0 1 10.5 15" fill="currentColor" ></path>
+            </svg>
+            <svg viewBox="0 0 256 256" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" class="svg-s" >
+              <path d="M240 128a15.79 15.79 0 0 1-10.5 15l-63.44 23.07L143 229.5a16 16 0 0 1-30 0l-23.06-63.44L26.5 143a16 16 0 0 1 0-30l63.44-23.06L113 26.5a16 16 0 0 1 30 0l23.07 63.44L229.5 113a15.79 15.79 0 0 1 10.5 15" fill="currentColor" ></path>
+            </svg>
+          </div>
+          Antiguo Testamento
+        </div>
+      </a>
+  
+<a href="nuevo.html" class="button">
+        <div class="inner">
+          <div class="svgs">
+            <svg viewBox="0 0 256 256" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" class="svg-l" >
+              <path d="M240 128a15.79 15.79 0 0 1-10.5 15l-63.44 23.07L143 229.5a16 16 0 0 1-30 0l-23.06-63.44L26.5 143a16 16 0 0 1 0-30l63.44-23.06L113 26.5a16 16 0 0 1 30 0l23.07 63.44L229.5 113a15.79 15.79 0 0 1 10.5 15" fill="currentColor" ></path>
+            </svg>
+            <svg viewBox="0 0 256 256" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" class="svg-s" >
+              <path d="M240 128a15.79 15.79 0 0 1-10.5 15l-63.44 23.07L143 229.5a16 16 0 0 1-30 0l-23.06-63.44L26.5 143a16 16 0 0 1 0-30l63.44-23.06L113 26.5a16 16 0 0 1 30 0l23.07 63.44L229.5 113a15.79 15.79 0 0 1 10.5 15" fill="currentColor" ></path>
+            </svg>
+          </div>
+          Nuevo Testamento
+        </div>
+      </a>
+      </section>
+  </div>
   <footer class="parte-inferior">
     <div class="margen-azul">
       <p>&copy; 2025 IN GOD WE TRUST</p>
       <div class="enlaces-footer">
-        <a href="acercade.html">Acerca de</a> |
-        <a href="https://dckire.github.io/reinavalera/levitico26.html#:~:text=45%20Antes%20me%20acordar%C3%A9%20de%20ellos%20por%20el%20pacto%20antiguo%2C%20cuando%20los%20saqu%C3%A9%20de%20la%20tierra%20de%20Egipto%20a%20los%20ojos%20de%20las%20gentes%2C%20para%20ser%20su%20Dios%3A%20Yo%20Jehov%C3%A1.">Versículos Destacados</a> |
-        <a href="plan-de-lectura.html">Plan de Lectura</a> |
-        <a href="contacto.html">Contacto</a>
+       
+<a style="color: #000;" href="acercade.html">Acerca de</a> | 
+<a style="color: #000;" href="https://dckire.github.io/reinavalera/levitico26.html#:~:text=45%20Antes%20me%20acordar%C3%A9%20de%20ellos%20por%20el%20pacto%20antiguo%2C%20cuando%20los%20saqu%C3%A9%20de%20la%20tierra%20de%20Egipto%20a%20los%20ojos%20de%20las%20gentes%2C%20para%20ser%20su%20Dios%3A%20Yo%20Jehov%C3%A1.">Versículos Destacados</a> | 
+<a style="color: #000;" href="plan-de-lectura.html">Plan de Lectura</a> | 
+<a style="color: #000;" href="contacto.html">Contacto</a>
+
       </div>
       <div class="redes-sociales">
 <a href="https://on.soundcloud.com/bm6JijgTLFuXLtUh7" target="_blank" title="Síguenos en SoundCloud" class="soundcloud-link" rel="noopener noreferrer">
   <img src="https://cdn-icons-png.flaticon.com/512/5968/5968935.png" alt="SoundCloud" width="24">
 </a>
-<a href="https://youtube.com/@dckire?si=l3UVK4VAL2_Lp6dc" target="_blank" title="Síguenos en YouTube" class="youtube-link" rel="noopener noreferrer">
+<a href="https://www.youtube.com/@dckire" target="_blank" title="Síguenos en YouTube" class="youtube-link" rel="noopener noreferrer">
   <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" width="24">
 </a>
 
@@ -426,17 +426,6 @@ margin-bottom: 20px;
   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="24">
 </a>
 
-<a href="https://www.instagram.com/[tu nombre de usuario]" target="_blank" title="Síguenos en Instagram" class="instagram-link" rel="noopener noreferrer">
-  <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram" width="24">
-</a>
-
-<a href="https://www.facebook.com/[tu nombre de usuario]" target="_blank" title="Síguenos en Facebook" class="facebook-link" rel="noopener noreferrer">
-  <img src="https://cdn-icons-png.flaticon.com/512/1384/1384061.png" alt="Facebook" width="24">
-</a>
-
-<a href="https://x.com/[tu nombre de usuario]" target="_blank" title="Síguenos en X" class="x-link" rel="noopener noreferrer">
-  <img src="https://cdn-icons-png.flaticon.com/512/1384/1384062.png" alt="X" width="24">
-</a>
       </div>
       <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
     </div>
@@ -475,6 +464,16 @@ function aceptarNotaAdvertencia() {
 
 // Agregar evento de clic al botón de aceptar
 document.getElementById("btn-aceptar").addEventListener("click", aceptarNotaAdvertencia);
+
+const body = document.body;
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 50) { /* ajusta el valor según sea necesario */
+    body.classList.add('scrolled');
+  } else {
+    body.classList.remove('scrolled');
+  }
+});
 
   </script>
 </body>
