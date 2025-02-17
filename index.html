@@ -1,214 +1,232 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LA BIBLIA REINA VALERA (1569-1602)</title>
-  <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
-  <style>
-    .contenido-principal {
-  margin-top: 120px; /* Ajusta según la altura del header */
-  padding: 20px;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LA BIBLIA REINA VALERA (1569-1602)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+     <style>
+        :root {
+            --color-fondo: rgba(118, 117, 133, 0);
+            --color-header: #f0f0f0;
+            --color-footer: #ADD8E6;
+            --color-texto: hsl(0, 24%, 96%);
+            --color-boton: #007BFF;
+        }
 
-.versiculo-del-dia, .plan-lectura, .recursos {
-  margin-bottom: 40px;
-}
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(118, 117, 133);
+            transition: background-color 5s ease;
+            margin: 0;
+            padding: 0;
+        }
 
-.versiculo-del-dia h2, .plan-lectura h2, .recursos h2 {
-  font-size: 1.8rem;
-  color: var(--color-texto);
-  margin-bottom: 10px;
-}
+        body.scrolled {
+            background-color: #000;
+        }
 
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--color-header);
+            text-align: center;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
 
-.versiculo-del-dia blockquote {
-  font-size: 1.2rem;
-  font-style: italic;
-  background-color: #f0f0f0;
-  padding: 20px;
-  border-left: 5px solid var(--color-boton);
-  margin: 0;
-}
+        .header .titulo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
 
-.versiculo-del-dia cite {
-  display: block;
-  margin-top: 50px;
-  font-size: 1rem;
-  text-align: right;
-}
+        .contenido-principal {
+            margin-top: 120px;
+            padding: 20px;
+        }
 
+        .imagen {
+          margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: auto;
+        }
 
+        .imagen-versiculo {
+            max-width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
 
+        .versiculo-del-dia, .plan-lectura, .recursos {
+            margin-bottom: 40px;
+        }
 
-.plan-lectura ul {
-  list-style: none;
-  padding: 0;
-}
+        .versiculo-del-dia h2, .plan-lectura h2, .recursos h2 {
+            font-size: 1.8rem;
+            color: var(--color-texto);
+            margin-bottom: 10px;
+        }
 
-.plan-lectura ul li {
-  margin-bottom: 10px;
-}
+        .versiculo-del-dia blockquote {
+            font-size: 1.2rem;
+            font-style: italic;
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-left: 5px solid var(--color-boton);
+            margin: 0;
+        }
 
-.plan-lectura a {
-  color: var(--color-boton);
-  text-decoration: none;
-}
+        .versiculo-del-dia cite {
+            display: block;
+            margin-top: 10px;
+            font-size: 1rem;
+            text-align: right;
+        }
 
-.plan-lectura a:hover {
-  text-decoration: underline;
-}
+        .plan-lectura ul {
+            list-style: none;
+            padding: 0;
+        }
 
-.recursos-lista {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
+        .plan-lectura ul li {
+            margin-bottom: 10px;
+        }
 
-.recurso {
-  text-align: center;
-  text-decoration: none;
-  color: var(--color-texto);
-}
+        .plan-lectura a {
+            color: var(--color-boton);
+            text-decoration: none;
+        }
 
-.recurso img {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 10px;
-}
+        .plan-lectura a:hover {
+            text-decoration: underline;
+        }
 
-.recurso p {
-  font-size: 1rem;
-}
-    .parte-inferior {
-  background-color: var(--color-footer);
-  padding: 20px;
-  text-align: center;
-}
+        .recursos-lista {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
-.margen-azul {
-  border-top: 1px solid #0000FF;
-  padding-top: 10px;
-}
+        .recurso {
+            text-align: center;
+            text-decoration: none;
+            color: var(--color-texto);
+        }
 
-.enlaces-footer {
-  margin: 10px 0;
-}
+        .recurso img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+        }
 
-.enlaces-footer a {
-  color: var(--color-texto);
-  text-decoration: none;
-  margin: 0 10px;
-}
+        .recurso p {
+            font-size: 1rem;
+        }
 
-.enlaces-footer a:hover {
-  text-decoration: underline;
-}
+        .parte-inferior {
+            background-color: var(--color-footer);
+            padding: 20px;
+            text-align: center;
+        }
 
-.redes-sociales {
-  margin: 10px 0;
-}
+        .margen-azul {
+            border-top: 1px solid #0000FF;
+            padding-top: 10px;
+        }
 
-.redes-sociales a {
-  margin: 0 10px;
-}
+        .enlaces-footer {
+            margin: 10px 0;
+        }
 
-.logo {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  margin-top: 10px;
-}
-    :root {
-      --color-fondo: hwb(0 29% 69% / 0);
-      --color-header: #f0f0f0;
-      --color-footer: #ADD8E6;
-      --color-texto: hsl(0, 24%, 96%);
-      --color-boton: #007BFF;
-    }
+        .enlaces-footer a {
+            color: var(--color-texto);
+            text-decoration: none;
+            margin: 0 10px;
+        }
 
-    .header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: var(--color-header);
-      text-align: center;
-      padding: 10px 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+        .enlaces-footer a:hover {
+            text-decoration: underline;
+        }
 
-    .parte-superior {
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+        .redes-sociales {
+            margin: 10px 0;
+        }
 
-    .p .a {
-      text-align: center;
-      font-size: 20px;
-      color: #000;
-    }
+        .redes-sociales a {
+            margin: 0 10px;
+        }
 
-    #fecha-actual {
-      font-weight: bold;
-    }
-    .titulo {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
+        .logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-top: 10px;
+        }
 
+        #nota-advertencia {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 1001;
+        }
 
+        #nota-advertencia h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
 
-    .contenido-principal {
-      margin-top: 200px;
-      padding: 20px;
-    }
+        #nota-advertencia p {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
 
-    .imagen-titulo-enlace {
-      max-width: 100%;
-      margin: 20px auto;
-      text-align: center;
-    }
+        #nota-advertencia #btn-aceptar {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-    .imagen-titulo-enlace img {
-      width: 100%;
-      max-width: 480px;
-      height: auto;
-      border-radius: 20px;
-    }
+        #nota-advertencia #btn-aceptar:hover {
+            background-color: #3e8e41;
+        }
 
-    .imagen-titulo-enlace h2 {
-      font-size: 1.5rem;
-      margin-top: 10px;
-    }
+        @media (max-width: 768px) {
+            .contenido-principal {
+                margin-top: 100px;
+            }
 
-    .parte-inferior {
-      background-color: var(--color-footer);
-      padding: 10px;
-      text-align: center;
-    }
+            .imagen-versiculo {
+                height: auto;
+            }
+        }
 
-    .margen-azul {
-      border-top: 1px solid #0000FF;
-      padding-top: 10px;
-    }
+        @media (min-width: 769px) {
+            .imagen-versiculo {
+                height: 240px;
+            }
+        }
 
-    h2 a {
-      color: var(--color-texto);
-      text-decoration: none;
-    }
-
-    .logo {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-    }
-
-    /* From Uiverse.io by Spacious74 */ 
+         /* From Uiverse.io by Spacious74 */ 
 .button {
   cursor: pointer;
   border: solid 4px #161616;
@@ -251,246 +269,177 @@
   box-shadow: none;
 }
 
-.imagen-versiculo {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-  margin-top: 80px;
-  margin-bottom: 20px;
-}
-
-/* Para dispositivos móviles */
-@media (max-width: 768px) {
-  .imagen-versiculo {
-    height: auto;
-  }
-}
-
-/* Para dispositivos de escritorio */
-@media (min-width: 769px) {
-  .imagen-versiculo {
-    height: 240px;
-  }
-}
-
-#nota-advertencia {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
-  border: 1px solid #ddd;
-  padding: 20px;
-  width: 80%;
-  max-width: 400px;
-  text-align: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-#nota-advertencia h2 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-#nota-advertencia p {
-  font-size: 14px;
-  margin-bottom: 20px;
-}
-
-#nota-advertencia #btn-aceptar {
-  background-color: #4CAF50;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-#nota-advertencia #btn-aceptar:hover {
-  background-color: #3e8e41;
-}
-
-body {
-  background-color: rgb(118, 117, 133); /* color claro inicial */
-  transition: background-color 5s ease;
-}
-
-body.scrolled {
-  background-color: #000; /* color oscuro cuando se desplaza */
-}
-
-  </style>
+    </style>
 </head>
 <body>
-  <header class="header">
-    <div class="parte-superior">
-      <span class="titulo">LA BIBLIA REINA VALERA (1569-1602)</span>
-      <p class="fecha" id="fecha-actual"></p>
+    <header class="header">
+        <div class="parte-superior">
+            <span class="titulo">LA BIBLIA REINA VALERA (1569-1602)</span>
+            <p class="fecha" id="fecha-actual"></p>
+        </div>
+    </header>
+
+    <div id="nota-advertencia" style="display: none;">
+        <h2>Nota importante</h2>
+        <p>Disculpen las inconveniencias, nuestra página web aún no ha sido terminada al 100%. Estamos trabajando arduamente para completarla lo antes posible.</p>
+        <p>Gracias por su paciencia y comprensión.</p>
+        <button id="btn-aceptar">Confirmed</button>
     </div>
-  </header>
 
+    <div class="contenido-principal">
+        <div class="imagen">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhyepCx7LcMzn8X14IGHIqlPz7cby0kD2BRtzM-omgovy4L4FMp_k2UIQ-1Ur9rLJ8hmkOqfNJb_Oaof6rIUDZV75EX28dmKCUGkdm_pST08tvlVlaN5CclmhocuyVRInbJFHl9_s2ejk3HJoG7sSuBJ7ZR0J4neZi4-5d5NKMT9mjG4IepXgCT2SffJco/s320/IMG-20250215-WA0014.jpg" alt="Imagen del versículo del día" class="imagen-versiculo">
+        </div>
 
-<div id="nota-advertencia" style="display: none;">
-  <h2>Nota importante</h2>
-  
-  <p>Disculpen las inconveniencias, nuestra página web aún no ha sido terminada al 100%. Estamos trabajando arduamente para completarla lo antes posible.</p>
-  <p>Gracias por su paciencia y comprensión.</p>
- <button id="btn-aceptar">Aceptar</button>
-</div>
-  <!-- Versículo del Día -->
- 
-<section class="versiculo-del-dia">
-<h2>Versículo del Día</h2>
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhyepCx7LcMzn8X14IGHIqlPz7cby0kD2BRtzM-omgovy4L4FMp_k2UIQ-1Ur9rLJ8hmkOqfNJb_Oaof6rIUDZV75EX28dmKCUGkdm_pST08tvlVlaN5CclmhocuyVRInbJFHl9_s2ejk3HJoG7sSuBJ7ZR0J4neZi4-5d5NKMT9mjG4IepXgCT2SffJco/s320/IMG-20250215-WA0014.jpg" alt="Imagen del versículo del día" class="imagen-versiculo">
-<blockquote>
-21 Y vendrán los moradores de la una a la otra, y dirán: Vamos a implorar el favor de Jehová, y a buscar a Jehová de los ejércitos. Yo también iré.
-
-22 Y vendrán muchos pueblos y fuertes naciones a buscar a Jehová de los ejércitos en Jerusalem, y a implorar el favor de Jehová.
-
-<cite>Zacarias 8:21-22</cite>
-</blockquote>
-</section>
+        <section class="versiculo-del-dia">
+            <h2>Versículo del Día</h2>
+            <blockquote>
+                21 Y vendrán los moradores de la una a la otra, y dirán: Vamos a implorar el favor de Jehová, y a buscar a Jehová de los ejércitos. Yo también iré.
+                22 Y vendrán muchos pueblos y fuertes naciones a buscar a Jehová de los ejércitos en Jerusalem, y a implorar el favor de Jehová.
+                <cite>Zacarias 8:21-22</cite>
+            </blockquote>
+        </section>
 
   <!-- Plan de Lectura -->
   <section class="plan-lectura">
  
-<h2 style="color: hsl(0, 20%, 99%);">Parábolas del Antiguo Testamento</h2>
-<li style="color: hsl(0, 18%, 97%);">- La parábola del sembrador <strong>Isaías 5:1-7</strong></li>
-<li style="color: hsl(0, 13%, 95%);">- La parábola de la oveja perdida <strong>Ezequiel 34:11-16</strong></li>
-<li style="color: hsl(0, 33%, 96%);">- La parábola del viñador <strong>Isaías 5:1-7</strong></li>
-
-<ul>
-  <h2 style="color: hsl(0, 31%, 93%);">Parábolas del Nuevo Testamento</h2>
-  <li style="color: hsl(0, 29%, 93%);">- La parábola del sembrador <strong>Mateo 13:1-23</strong></li>
-  <li style="color: hsl(0, 21%, 93%);">- La parábola de la oveja perdida <strong>Lucas 15:1-7</strong></li>
-  <li style="color: hsl(0, 15%, 92%);">- La parábola del hijo pródigo <strong>Lucas 15:11-32</strong></li>
-  <li style="color: hsl(0, 33%, 97%);">- La parábola de los talentos <strong>Mateo 25:14-30</strong></li>
-</ul>
-
+    <h2 style="color: hsl(0, 20%, 99%);">Parábolas del Antiguo Testamento</h2>
+    <li style="color: hsl(0, 18%, 97%);">- La parábola del sembrador <strong>Isaías 5:1-7</strong></li>
+    <li style="color: hsl(0, 13%, 95%);">- La parábola de la oveja perdida <strong>Ezequiel 34:11-16</strong></li>
+    <li style="color: hsl(0, 33%, 96%);">- La parábola del viñador <strong>Isaías 5:1-7</strong></li>
+    
+    <ul>
+      <h2 style="color: hsl(0, 31%, 93%);">Parábolas del Nuevo Testamento</h2>
+      <li style="color: hsl(0, 29%, 93%);">- La parábola del sembrador <strong>Mateo 13:1-23</strong></li>
+      <li style="color: hsl(0, 21%, 93%);">- La parábola de la oveja perdida <strong>Lucas 15:1-7</strong></li>
+      <li style="color: hsl(0, 15%, 92%);">- La parábola del hijo pródigo <strong>Lucas 15:11-32</strong></li>
+      <li style="color: hsl(0, 33%, 97%);">- La parábola de los talentos <strong>Mateo 25:14-30</strong></li>
     </ul>
-    <a href="parabolas.html">Ver completo</a>
-  </section>
-</div>
-  <!-- Recursos Destacados -->
-  <section class="recursos">
-    <h2>Recursos Destacados</h2>
-    <div class="recursos-lista">
-      <a href="mapas.html" class="recurso">
-        <img src="https://churchofjesuschrist.org/imgs/841da514ca6aae1f5bb6829bf6f30862b62b0c99/full/640%2C/0/default" alt="Mapas Bíblicos">
-        <p>Mapas Bíblicos</p>
-      </a>
-      <a href="https://dckire.github.io/reinavalera/extenuacion.html" class="recurso">
-        <img src="https://cdn-icons-png.flaticon.com/512/2232/2232688.png" alt="Diccionario Bíblico">
-        <p>Diccionario Bíblico</p>
-      </a>
-      <a href="index.html" class="recurso">
-        <img src="https://cdn-icons-png.flaticon.com/512/2103/2103789.png" alt="Estudios Bíblicos">
-        <p>Estudios Bíblicos</p>
-      </a>
-    </div>
-
-  <div class="contenido-principal">
-      <a href="viejo.html" class="button">
-        <div class="inner">
-          <div class="svgs">
-            <svg viewBox="0 0 256 256" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" class="svg-l" >
-              <path d="M240 128a15.79 15.79 0 0 1-10.5 15l-63.44 23.07L143 229.5a16 16 0 0 1-30 0l-23.06-63.44L26.5 143a16 16 0 0 1 0-30l63.44-23.06L113 26.5a16 16 0 0 1 30 0l23.07 63.44L229.5 113a15.79 15.79 0 0 1 10.5 15" fill="currentColor" ></path>
-            </svg>
-            <svg viewBox="0 0 256 256" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" class="svg-s" >
-              <path d="M240 128a15.79 15.79 0 0 1-10.5 15l-63.44 23.07L143 229.5a16 16 0 0 1-30 0l-23.06-63.44L26.5 143a16 16 0 0 1 0-30l63.44-23.06L113 26.5a16 16 0 0 1 30 0l23.07 63.44L229.5 113a15.79 15.79 0 0 1 10.5 15" fill="currentColor" ></path>
-            </svg>
-          </div>
-          Antiguo Testamento
-        </div>
-      </a>
-  
-<a href="nuevo.html" class="button">
-        <div class="inner">
-          <div class="svgs">
-            <svg viewBox="0 0 256 256" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" class="svg-l" >
-              <path d="M240 128a15.79 15.79 0 0 1-10.5 15l-63.44 23.07L143 229.5a16 16 0 0 1-30 0l-23.06-63.44L26.5 143a16 16 0 0 1 0-30l63.44-23.06L113 26.5a16 16 0 0 1 30 0l23.07 63.44L229.5 113a15.79 15.79 0 0 1 10.5 15" fill="currentColor" ></path>
-            </svg>
-            <svg viewBox="0 0 256 256" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" class="svg-s" >
-              <path d="M240 128a15.79 15.79 0 0 1-10.5 15l-63.44 23.07L143 229.5a16 16 0 0 1-30 0l-23.06-63.44L26.5 143a16 16 0 0 1 0-30l63.44-23.06L113 26.5a16 16 0 0 1 30 0l23.07 63.44L229.5 113a15.79 15.79 0 0 1 10.5 15" fill="currentColor" ></path>
-            </svg>
-          </div>
-          Nuevo Testamento
-        </div>
-      </a>
+    
+        </ul>
+        <a href="parabolas.html">Ver completo</a>
       </section>
-  </div>
-  <footer class="parte-inferior">
-    <div class="margen-azul">
-      <p>&copy; 2025 IN GOD WE TRUST</p>
-      <div class="enlaces-footer">
-       
-<a style="color: #000;" href="acercade.html">Acerca de</a> | 
-<a style="color: #000;" href="https://dckire.github.io/reinavalera/levitico26.html#:~:text=45%20Antes%20me%20acordar%C3%A9%20de%20ellos%20por%20el%20pacto%20antiguo%2C%20cuando%20los%20saqu%C3%A9%20de%20la%20tierra%20de%20Egipto%20a%20los%20ojos%20de%20las%20gentes%2C%20para%20ser%20su%20Dios%3A%20Yo%20Jehov%C3%A1.">Versículos Destacados</a> | 
-<a style="color: #000;" href="plan-de-lectura.html">Plan de Lectura</a> | 
-<a style="color: #000;" href="contacto.html">Contacto</a>
-
-      </div>
-      <div class="redes-sociales">
-<a href="https://on.soundcloud.com/bm6JijgTLFuXLtUh7" target="_blank" title="Síguenos en SoundCloud" class="soundcloud-link" rel="noopener noreferrer">
-  <img src="https://cdn-icons-png.flaticon.com/512/5968/5968935.png" alt="SoundCloud" width="24">
-</a>
-<a href="https://www.youtube.com/@dckire" target="_blank" title="Síguenos en YouTube" class="youtube-link" rel="noopener noreferrer">
-  <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" width="24">
-</a>
-
-<a href="https://whatsapp.com/channel/0029Vb6M02nHrDZXhtHmy93q" target="_blank" title="Síguenos en WhatsApp" class="whatsapp-link" rel="noopener noreferrer">
-  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="24">
-</a>
-
-      </div>
-      <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
     </div>
-  </footer>
-
-  <script>
-    const fechaActual = document.getElementById('fecha-actual');
-    const fecha = new Date();
-    const dia = fecha.getDate();
-    const mes = fecha.getMonth() + 1;
-    const año = fecha.getFullYear();
-    const meses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
-    const fechaFormateada = `${dia} de ${meses[mes - 1]} de ${año}`;
-    fechaActual.textContent = fechaFormateada;
-
-    // Función para abrir/cerrar el menú
-    function toggleMenu() {
-      const menu = document.getElementById('menuDesplegable');
-      menu.classList.toggle('abierto');
+      <!-- Recursos Destacados -->
+      <section class="recursos">
+        <h2>Recursos Destacados</h2>
+        <div class="recursos-lista">
+          <a href="mapas.html" class="recurso">
+            <img src="https://churchofjesuschrist.org/imgs/841da514ca6aae1f5bb6829bf6f30862b62b0c99/full/640%2C/0/default" alt="Mapas Bíblicos">
+            <p>Mapas</p>
+          </a>
+          <a href="https://dckire.github.io/reinavalera/extenuacion.html" class="recurso">
+            <img src="https://cdn-icons-png.flaticon.com/512/2232/2232688.png" alt="Diccionario Bíblico">
+            <p>Diccionario Bíblico</p>
+          </a>
+          <a href="index.html" class="recurso">
+            <img src="https://cdn-icons-png.flaticon.com/512/2103/2103789.png" alt="Estudios Bíblicos">
+            <p>Estudios Bíblicos</p>
+          </a>
+        </div>
+    
+      <div class="contenido-principal">
+          <a href="viejo.html" class="button">
+            <div class="inner">
+              <div class="svgs">
+                <svg viewBox="0 0 256 256" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" class="svg-l" >
+                  <path d="M240 128a15.79 15.79 0 0 1-10.5 15l-63.44 23.07L143 229.5a16 16 0 0 1-30 0l-23.06-63.44L26.5 143a16 16 0 0 1 0-30l63.44-23.06L113 26.5a16 16 0 0 1 30 0l23.07 63.44L229.5 113a15.79 15.79 0 0 1 10.5 15" fill="currentColor" ></path>
+                </svg>
+                <svg viewBox="0 0 256 256" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" class="svg-s" >
+                  <path d="M240 128a15.79 15.79 0 0 1-10.5 15l-63.44 23.07L143 229.5a16 16 0 0 1-30 0l-23.06-63.44L26.5 143a16 16 0 0 1 0-30l63.44-23.06L113 26.5a16 16 0 0 1 30 0l23.07 63.44L229.5 113a15.79 15.79 0 0 1 10.5 15" fill="currentColor" ></path>
+                </svg>
+              </div>
+              Antiguo Testamento
+            </div>
+          </a>
+      
+    <a href="nuevo.html" class="button">
+            <div class="inner">
+              <div class="svgs">
+                <svg viewBox="0 0 256 256" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" class="svg-l" >
+                  <path d="M240 128a15.79 15.79 0 0 1-10.5 15l-63.44 23.07L143 229.5a16 16 0 0 1-30 0l-23.06-63.44L26.5 143a16 16 0 0 1 0-30l63.44-23.06L113 26.5a16 16 0 0 1 30 0l23.07 63.44L229.5 113a15.79 15.79 0 0 1 10.5 15" fill="currentColor" ></path>
+                </svg>
+                <svg viewBox="0 0 256 256" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" class="svg-s" >
+                  <path d="M240 128a15.79 15.79 0 0 1-10.5 15l-63.44 23.07L143 229.5a16 16 0 0 1-30 0l-23.06-63.44L26.5 143a16 16 0 0 1 0-30l63.44-23.06L113 26.5a16 16 0 0 1 30 0l23.07 63.44L229.5 113a15.79 15.79 0 0 1 10.5 15" fill="currentColor" ></path>
+                </svg>
+              </div>
+              Nuevo Testamento
+            </div>
+          </a>
+          </section>
+      </div>
+      <footer class="parte-inferior">
+        <div class="margen-azul">
+          <p>&copy; 2025 IN GOD WE TRUST</p>
+          <div class="enlaces-footer">
+           
+    <a style="color: #000;" href="acercade.html">Acerca de</a> | 
+    <a style="color: #000;" href="https://dckire.github.io/reinavalera/levitico26.html#:~:text=45%20Antes%20me%20acordar%C3%A9%20de%20ellos%20por%20el%20pacto%20antiguo%2C%20cuando%20los%20saqu%C3%A9%20de%20la%20tierra%20de%20Egipto%20a%20los%20ojos%20de%20las%20gentes%2C%20para%20ser%20su%20Dios%3A%20Yo%20Jehov%C3%A1.">Versículos Destacados</a> | 
+    <a style="color: #000;" href="plan-de-lectura.html">Plan de Lectura</a> | 
+    <a style="color: #000;" href="contacto.html">Contacto</a>
+    
+          </div>
+          <div class="redes-sociales">
+    <a href="https://on.soundcloud.com/bm6JijgTLFuXLtUh7" target="_blank" title="Síguenos en SoundCloud" class="soundcloud-link" rel="noopener noreferrer">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968935.png" alt="SoundCloud" width="24">
+    </a>
+    <a href="https://www.youtube.com/@dckire" target="_blank" title="Síguenos en YouTube" class="youtube-link" rel="noopener noreferrer">
+      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" width="24">
+    </a>
+    
+    <a href="https://whatsapp.com/channel/0029Vb6M02nHrDZXhtHmy93q" target="_blank" title="Síguenos en WhatsApp" class="whatsapp-link" rel="noopener noreferrer">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="24">
+    </a>
+    
+          </div>
+          <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+        </div>
+      </footer>
+    
+      <script>
+        const fechaActual = document.getElementById('fecha-actual');
+        const fecha = new Date();
+        const dia = fecha.getDate();
+        const mes = fecha.getMonth() + 1;
+        const año = fecha.getFullYear();
+        const meses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+        const fechaFormateada = `${dia} de ${meses[mes - 1]} de ${año}`;
+        fechaActual.textContent = fechaFormateada;
+    
+        // Función para abrir/cerrar el menú
+        function toggleMenu() {
+          const menu = document.getElementById('menuDesplegable');
+          menu.classList.toggle('abierto');
+        }
+    
+        // Función para mostrar la nota de advertencia
+    function mostrarNotaAdvertencia() {
+      var notaAdvertencia = document.getElementById("nota-advertencia");
+      notaAdvertencia.style.display = "block";
     }
-
-    // Función para mostrar la nota de advertencia
-function mostrarNotaAdvertencia() {
-  var notaAdvertencia = document.getElementById("nota-advertencia");
-  notaAdvertencia.style.display = "block";
-}
-
-// Llamar a la función cuando se carga la página
-window.onload = mostrarNotaAdvertencia;
-
-// Función para ocultar la nota de advertencia cuando se acepta
-function aceptarNotaAdvertencia() {
-  var notaAdvertencia = document.getElementById("nota-advertencia");
-  notaAdvertencia.style.display = "none";
-}
-
-// Agregar evento de clic al botón de aceptar
-document.getElementById("btn-aceptar").addEventListener("click", aceptarNotaAdvertencia);
-
-const body = document.body;
-
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 50) { /* ajusta el valor según sea necesario */
-    body.classList.add('scrolled');
-  } else {
-    body.classList.remove('scrolled');
-  }
-});
-
-  </script>
-</body>
-</html>
+    
+    // Llamar a la función cuando se carga la página
+    window.onload = mostrarNotaAdvertencia;
+    
+    // Función para ocultar la nota de advertencia cuando se acepta
+    function aceptarNotaAdvertencia() {
+      var notaAdvertencia = document.getElementById("nota-advertencia");
+      notaAdvertencia.style.display = "none";
+    }
+    
+    // Agregar evento de clic al botón de aceptar
+    document.getElementById("btn-aceptar").addEventListener("click", aceptarNotaAdvertencia);
+    
+    const body = document.body;
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) { /* ajusta el valor según sea necesario */
+        body.classList.add('scrolled');
+      } else {
+        body.classList.remove('scrolled');
+      }
+    });
+    
+      </script>
+    </body>
+    </html>
