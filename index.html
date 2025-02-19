@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LA BIBLIA REINA VALERA (1569-1602)</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-     <style>
-        :root {
+    <style>
+
+:root {
             --color-fondo: rgba(118, 117, 133, 0);
             --color-header: #f0f0f0;
             --color-footer: #ADD8E6;
@@ -269,10 +270,42 @@
   box-shadow: none;
 }
 
+        /* Tus estilos existentes... */
+
+        /* Animación para hacer aparecer los elementos */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Clase para aplicar la animación */
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 0; /* Inicialmente invisible */
+        }
+
+        /* Retrasos para que los elementos aparezcan uno por uno */
+        .fade-in:nth-child(1) { animation-delay: 0.5s; }
+        .fade-in:nth-child(2) { animation-delay: 1s; }
+        .fade-in:nth-child(3) { animation-delay: 1.5s; }
+        .fade-in:nth-child(4) { animation-delay: 2s; }
+        .fade-in:nth-child(5) { animation-delay: 2.5s; }
+        .fade-in:nth-child(6) { animation-delay: 3s; }
+        .fade-in:nth-child(7) { animation-delay: 3.5s; }
+        .fade-in:nth-child(8) { animation-delay: 4s; }
+        .fade-in:nth-child(9) { animation-delay: 4.5s; }
+        .fade-in:nth-child(10) { animation-delay: 5s; }
     </style>
 </head>
 <body>
-    <header class="header">
+    <!-- Tu contenido HTML existente... -->
+	<header class="header">
         <div class="parte-superior">
             <span class="titulo">LA BIBLIA REINA VALERA (1569-1602)</span>
             <p class="fecha" id="fecha-actual"></p>
@@ -325,15 +358,15 @@
         <h2>Recursos Destacados</h2>
         <div class="recursos-lista">
           <a href="mapas.html" class="recurso">
-            <img src="https://churchofjesuschrist.org/imgs/841da514ca6aae1f5bb6829bf6f30862b62b0c99/full/640%2C/0/default" alt="Mapas Bíblicos">
+            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhtFgwcAf4W2_Oh0OXr_sCW37KFqnGbEwANliyjj3TX3X5IwUn-f-NiBJEVaMuK3ej8gmggLnnYfWtD3h4sxfxCBFSmx_V_VUbjHPh6ub7VeyMvxBV2OSCIugul-RbhRsaw-tVF_iolmGqamiiDwpFRmDaAHLza-3MWq_edQ93ZT6wJljWjZ2CTGVSYyAA" alt="Mapas Bíblicos">
             <p>Mapas</p>
           </a>
           <a href="https://dckire.github.io/reinavalera/extenuacion.html" class="recurso">
-            <img src="https://cdn-icons-png.flaticon.com/512/2232/2232688.png" alt="Diccionario Bíblico">
+            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgs5T7DR0EZWiyLy5WCMRygr7NOk5VOwvMD9AD6luY7AQKnmuJXRv46fyoeJQ9td0gJXZDLcWUAtb6EO0oeo7qWNWZaonwZji90xuAdXwcyf_FXEVuZfM1Lzub3jeHdJnVHtYI3Ah6S-zJVWonffNMOjZL604fEBZGelsPOm_mGMTZDCXlSGYqRvOeGGks" alt="Diccionario Bíblico">
             <p>Diccionario Bíblico</p>
           </a>
           <a href="index.html" class="recurso">
-            <img src="https://cdn-icons-png.flaticon.com/512/2103/2103789.png" alt="Estudios Bíblicos">
+            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhY_ZVwhWjCGMYTuCi1U1r1LPNfVQ-nfUrXdu5csf_ErT2NSieOYxT_COqryHNZZknQQKKD6iwOLu1tU1Syaf-iPzbkZmZffU2LCLILu3NiLhRnXwEy85XGQZGtaCK6w7HOMcmOuhUtGcPZ6ZE6hRTeRz1jnT2-7ZGSsr38QNOco51izEcL2kUwbqcmpGU" alt="Estudios Bíblicos">
             <p>Estudios Bíblicos</p>
           </a>
         </div>
@@ -396,8 +429,9 @@
         </div>
       </footer>
     
-      <script>
-        const fechaActual = document.getElementById('fecha-actual');
+    <script>
+
+const fechaActual = document.getElementById('fecha-actual');
         const fecha = new Date();
         const dia = fecha.getDate();
         const mes = fecha.getMonth() + 1;
@@ -440,6 +474,14 @@
       }
     });
     
-      </script>
-    </body>
-    </html>
+        document.addEventListener("DOMContentLoaded", function() {
+            const elementos = document.querySelectorAll('.fade-in');
+            elementos.forEach((elemento, index) => {
+                setTimeout(() => {
+                    elemento.style.opacity = 1;
+                }, index * 500); // Ajusta el tiempo de retraso entre elementos
+            });
+        });
+    </script>
+</body>
+</html>
