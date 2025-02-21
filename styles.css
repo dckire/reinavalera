@@ -1,1 +1,97 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
 
+h1, h2 {
+    font-family: 'Georgia', serif;
+    text-align: center;
+    color: #2c3e50;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+/* Contenedor principal */
+.contenido {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Botones de navegación */
+.botones-navegacion {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.botones-navegacion button {
+    background-color: #2c3e50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.botones-navegacion button:hover {
+    background-color: #34495e;
+}
+
+/* Texto del capítulo */
+.texto-columna {
+    text-align: justify;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+/* Parte inferior */
+.parte-inferior {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: #fff;
+    margin-top: 40px;
+}
+
+.margen-azul {
+    border-top: 3px solid #3498db;
+    padding-top: 10px;
+}
+
+.margen-azul p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.margen-azul img.logo {
+    width: 50px;
+    height: auto;
+    margin-top: 10px;
+} 
