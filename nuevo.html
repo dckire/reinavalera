@@ -1,23 +1,142 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>La Biblia Reina Valera 1569-1602</title>
-  <link rel="stylesheet" href="style.css">
-	<script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>La Biblia Reina Valera 1569-1602</title>
+    <style>
+        /* Estilos generales */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Playfair Display', serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #0c0b0b;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        /* Contenedor principal */
+        .contenedor {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            width: 90%;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Títulos */
+        .titulo {
+            font-size: 3rem;
+            margin: 10px 0;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent; /* Hace el texto transparente para mostrar el gradiente */
+        }
+
+        .titulo:nth-child(2) {
+            background: linear-gradient(90deg, #a1c4fd, #c2e9fb);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .titulo:nth-child(3),
+        .titulo:nth-child(4),
+        .titulo:nth-child(5) {
+            font-size: 2rem;
+            background: linear-gradient(90deg, #84fab0, #8fd3f4);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            font-weight: normal;
+        }
+
+        /* Selector de libros */
+        .select-biblia {
+            margin-top: 40px;
+            position: relative;
+        }
+
+        .select-biblia select {
+            width: 100%;
+            padding: 15px 20px;
+            font-size: 1.2rem;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            cursor: pointer;
+            appearance: none;
+            transition: all 0.3s ease;
+            background-color: hsl(263, 21%, 55%);
+        }
+        .select-biblia select:hover {
+            border-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+
+        .select-biblia select:focus {
+            outline: none;
+            border-color: rgba(255, 255, 255, 1);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Flecha personalizada del select */
+        .select-biblia::after {
+            content: "▼";
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            color: rgba(255, 255, 255, 0.8);
+            pointer-events: none;
+            font-size: 1rem;
+        }
+
+        /* Pie de página */
+        footer {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        footer a {
+            color: #ff9a9e;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #fad0c4;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="contenedor">
-	  <h1 class="titulo">LA</h1>
-    <h1 class="titulo">BIBLIA</h1>
-    	<h1 class="titulo">ANTIGUA VERSION</h1>
-		<h1 class="titulo">DE CASIODORO DE REINA (1569)</h1>
-		<h1 class="titulo">REVISADA POR CIPRIANO DE VALERA (1602)</h1> 
+    <div class="contenedor">
+        <h1 class="titulo">LA</h1>
+        <h1 class="titulo">BIBLIA</h1>
+        <h1 class="titulo">ANTIGUA VERSIÓN</h1>
+        <h1 class="titulo">DE CASIODORO DE REINA (1569)</h1>
+        <h1 class="titulo">REVISADA POR CIPRIANO DE VALERA (1602)</h1>
 
-    <div class="select-biblia">
-      <select id="libros" onchange="window.location.href=this.value">
-        <OPTION value="">Selecciona un libro</OPTION>
-        <OPTION value="mateo.html">Mateo </OPTION>
+        <div class="select-biblia">
+            <select id="libros" onchange="window.location.href=this.value">
+                <option value="">Selecciona un libro</option>
+                <OPTION value="mateo.html">Mateo </OPTION>
         <OPTION value="marcos1.html">Marcos </OPTION>
         <OPTION value="lucas.html">Lucas </OPTION>
         <OPTION value="juan.html">Juan </OPTION>
@@ -44,11 +163,11 @@
         <OPTION value="3juan.html">3 Juan </OPTION>
         <OPTION value="judas.html">Judas </OPTION>
         <OPTION value="apocalipsis.html">Apocalipsis </OPTION>
-
-        <!-- Agrega las demás opciones aquí -->
-      </select>
+            </select>
+        </div>
     </div>
-  </div>
-	<p>&copy; 2024 La Biblia Online</p>
+    <footer>
+        <p>&copy; 2024 <a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjuMdBfjKdAlJ2ozNJf7RvzRJduxMmx_QReDjKoxy73o_KPylRdkip1p20U4BGkKfZG-0BjuR5UC2s1II7IOqUHW0E8lkhZpDB2iSbr9Cl8bcescbphxQpvYdWpgMNz2ne9qQj7MGoT3-wH2P7cmkEYPuLdl4BpbcEG8fcsUArCAbVsiMaiWnyywzTIcd8/s200/IMG-20250213-WA0020.jpg">La Biblia Online</a></p>
+    </footer>
 </body>
 </html>
