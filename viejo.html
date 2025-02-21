@@ -1,66 +1,185 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>La Biblia Reina Valera 1569-1602</title>
-  <link rel="stylesheet" href="style.css">
-	<script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>La Biblia Reina Valera 1569-1602</title>
+    <style>
+        /* Estilos generales */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Playfair Display', serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #0c0b0b;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        /* Contenedor principal */
+        .contenedor {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            width: 90%;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Títulos */
+        .titulo {
+            font-size: 3rem;
+            margin: 10px 0;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent; /* Hace el texto transparente para mostrar el gradiente */
+        }
+
+        .titulo:nth-child(2) {
+            background: linear-gradient(90deg, #a1c4fd, #c2e9fb);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .titulo:nth-child(3),
+        .titulo:nth-child(4),
+        .titulo:nth-child(5) {
+            font-size: 2rem;
+            background: linear-gradient(90deg, #84fab0, #8fd3f4);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            font-weight: normal;
+        }
+
+        /* Selector de libros */
+        .select-biblia {
+            margin-top: 40px;
+            position: relative;
+        }
+
+        .select-biblia select {
+            width: 100%;
+            padding: 15px 20px;
+            font-size: 1.2rem;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            cursor: pointer;
+            appearance: none;
+            transition: all 0.3s ease;
+            background-color: hsl(263, 21%, 55%);
+        }
+        .select-biblia select:hover {
+            border-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+
+        .select-biblia select:focus {
+            outline: none;
+            border-color: rgba(255, 255, 255, 1);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Flecha personalizada del select */
+        .select-biblia::after {
+            content: "▼";
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            color: rgba(255, 255, 255, 0.8);
+            pointer-events: none;
+            font-size: 1rem;
+        }
+
+        /* Pie de página */
+        footer {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        footer a {
+            color: #ff9a9e;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #fad0c4;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="contenedor">
-	  <h1 class="titulo">LA</h1>
-    <h1 class="titulo">BIBLIA</h1>
-    	<h1 class="titulo">ANTIGUA VERSION</h1>
-		<h1 class="titulo">DE CASIODORO DE REINA (1569)</h1>
-		<h1 class="titulo">REVISADA POR CIPRIANO DE VALERA (1602)</h1> 
+    <div class="contenedor">
+        <h1 class="titulo">LA</h1>
+        <h1 class="titulo">BIBLIA</h1>
+        <h1 class="titulo">ANTIGUA VERSIÓN</h1>
+        <h1 class="titulo">DE CASIODORO DE REINA (1569)</h1>
+        <h1 class="titulo">REVISADA POR CIPRIANO DE VALERA (1602)</h1>
 
-    <div class="select-biblia">
-      <select id="libros" onchange="window.location.href=this.value">
-        <OPTION value="">Selecciona un libro</OPTION>
-        <OPTION value="genesis.html">Génesis </OPTION>
-        <OPTION value="exodo.html">Éxodo </OPTION>
-        <OPTION value="levitico.html">Levítico </OPTION>
-        <OPTION value="numeros.html">Números </OPTION>
-        <OPTION value="deuteronomio.html">Deuteronomio </OPTION>
-        <OPTION value="josue.html">Josué </OPTION>
-        <OPTION value="jueces.html">Jueces </OPTION>
-        <OPTION value="ruth.html">Rut </OPTION>
-        <OPTION value="1samuel.html">1 Samuel </OPTION>
-        <OPTION value="2samuel.html">2 Samuel </OPTION>
-        <OPTION value="1reyes.html">1 Reyes </OPTION>
-        <OPTION value="2reyes.html">2 Reyes </OPTION>
-        <OPTION value="1cronicas.html">1 Crónicas </OPTION>
-        <OPTION value="2cronicas.html">2 Crónicas </OPTION>
-        <OPTION value="esdras.html">Esdras </OPTION>
-        <OPTION value="nehemias.html">Nehemías </OPTION>
-        <OPTION value="esther.html">Ester </OPTION>
-        <OPTION value="job.html">Job </OPTION>
-        <OPTION value="salmos.html">Salmos </OPTION>
-        <OPTION value="proverbios.html">Proverbios </OPTION>
-        <OPTION value="eclesiastes.html">Eclesiastés </OPTION>
-        <OPTION value="cantares.html">Cantares </OPTION>
-        <OPTION value="isaias.html">Isaías </OPTION>
-        <OPTION value="jeremias.html">Jeremías </OPTION>
-        <OPTION value="lamentaciones.html">Lamentaciones </OPTION>
-        <OPTION value="ezequiel.html">Ezequiel </OPTION>
-        <OPTION value="daniel.html">Daniel </OPTION>
-        <OPTION value="oseas.html">Oseas </OPTION>
-        <OPTION value="joel.html">Joel </OPTION>
-        <OPTION value="amos.html">Amós </OPTION>
-        <OPTION value="abadias.html">Abdías </OPTION>
-        <OPTION value="jonas.html">Jonás </OPTION>
-        <OPTION value="miqueas.html">Miqueas </OPTION>
-        <OPTION value="nahum.html">Nahúm </OPTION>
-        <OPTION value="habacuc.html">Habacuc </OPTION>
-        <OPTION value="sofonias.html">Sofonías </OPTION>
-        <OPTION value="ageo.html">Ageo </OPTION>
-        <OPTION value="zacarias.html">Zacarías </OPTION>
-        <OPTION value="malaquias.html">Malaquías </OPTION>
-        
-        <!-- Agrega las demás opciones aquí -->
-      </select>
+        <div class="select-biblia">
+            <select id="libros" onchange="window.location.href=this.value">
+                <option value="">Selecciona un libro</option>
+                <option value="genesis.html">Génesis</option>
+                <option value="exodo.html">Éxodo</option>
+                <option value="levitico.html">Levítico</option>
+                <option value="numeros.html">Números</option>
+                <option value="deuteronomio.html">Deuteronomio</option>
+                <option value="josue.html">Josué</option>
+                <option value="jueces.html">Jueces</option>
+                <option value="ruth.html">Rut</option>
+                <option value="1samuel.html">1 Samuel</option>
+                <option value="2samuel.html">2 Samuel</option>
+                <option value="1reyes.html">1 Reyes</option>
+                <option value="2reyes.html">2 Reyes</option>
+                <option value="1cronicas.html">1 Crónicas</option>
+                <option value="2cronicas.html">2 Crónicas</option>
+                <option value="esdras.html">Esdras</option>
+                <option value="nehemias.html">Nehemías</option>
+                <option value="esther.html">Ester</option>
+                <option value="job.html">Job</option>
+                <option value="salmos.html">Salmos</option>
+                <option value="proverbios.html">Proverbios</option>
+                <option value="eclesiastes.html">Eclesiastés</option>
+                <option value="cantares.html">Cantares</option>
+                <option value="isaias.html">Isaías</option>
+                <option value="jeremias.html">Jeremías</option>
+                <option value="lamentaciones.html">Lamentaciones</option>
+                <option value="ezequiel.html">Ezequiel</option>
+                <option value="daniel.html">Daniel</option>
+                <option value="oseas.html">Oseas</option>
+                <option value="joel.html">Joel</option>
+                <option value="amos.html">Amós</option>
+                <option value="abadias.html">Abdías</option>
+                <option value="jonas.html">Jonás</option>
+                <option value="miqueas.html">Miqueas</option>
+                <option value="nahum.html">Nahúm</option>
+                <option value="habacuc.html">Habacuc</option>
+                <option value="sofonias.html">Sofonías</option>
+                <option value="ageo.html">Ageo</option>
+                <option value="zacarias.html">Zacarías</option>
+                <option value="malaquias.html">Malaquías</option>
+            </select>
+        </div>
     </div>
-  </div>
-	<p>&copy; 2024 La Biblia Online</p>
+    <footer>
+        <p>&copy; 2024 <a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjuMdBfjKdAlJ2ozNJf7RvzRJduxMmx_QReDjKoxy73o_KPylRdkip1p20U4BGkKfZG-0BjuR5UC2s1II7IOqUHW0E8lkhZpDB2iSbr9Cl8bcescbphxQpvYdWpgMNz2ne9qQj7MGoT3-wH2P7cmkEYPuLdl4BpbcEG8fcsUArCAbVsiMaiWnyywzTIcd8/s200/IMG-20250213-WA0020.jpg">La Biblia Online</a></p>
+    </footer>
 </body>
 </html>
