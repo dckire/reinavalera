@@ -95,3 +95,9 @@ p {
     height: auto;
     margin-top: 10px;
 } 
+
+	  .logo {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+  }
