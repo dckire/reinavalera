@@ -1,25 +1,36 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Notas Guardadas</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f9;
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
         }
+
         h1 {
             color: #333;
+            margin-bottom: 20px;
         }
+
         #contenedor-notas {
-            max-width: 600px;
-            margin: 0 auto;
+            max-width: 800px;
+            width: 100%;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
         textarea {
             width: 100%;
             height: 150px;
@@ -28,7 +39,9 @@
             border: 1px solid #ccc;
             border-radius: 5px;
             margin-bottom: 10px;
+            resize: vertical;
         }
+
         button {
             padding: 10px 20px;
             font-size: 16px;
@@ -37,10 +50,14 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
         }
+
         button:hover {
             background-color: #218838;
         }
+
         .nota {
             background-color: white;
             padding: 15px;
@@ -48,7 +65,9 @@
             border-radius: 5px;
             margin-bottom: 10px;
             position: relative;
+            animation: fadeIn 0.5s ease;
         }
+
         .nota button {
             background-color: #dc3545;
             padding: 5px 10px;
@@ -56,12 +75,47 @@
             position: absolute;
             top: 10px;
             right: 10px;
+            transition: background-color 0.3s ease;
         }
+
         .nota button:hover {
             background-color: #c82333;
         }
+
         .nota p {
-            white-space: pre-line; /* Respeta los saltos de línea */
+            white-space: pre-line;
+            margin: 0;
+        }
+
+        .parte-inferior {
+            width: 100%;
+            background-color: #e3f2fd;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: auto;
+            border-top: 2px solid #90caf9;
+        }
+
+        .parte-inferior p {
+            margin: 0;
+            color: #333;
+        }
+
+        .logo {
+            width: 50px;
+            height: auto;
+            margin-top: 10px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
@@ -71,8 +125,14 @@
         <textarea id="entrada-nota" placeholder="Escribe tu nota aquí..."></textarea>
         <button onclick="agregarNota()">Guardar Nota</button>
         <button onclick="cargarNotas()">Ver Notas Guardadas</button>
-
         <div id="lista-notas"></div>
+    </div>
+
+    <div class="parte-inferior">
+        <div class="margen-azul">
+            <p>&copy; 2025 IN GOD WE TRUST</p>
+            <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+        </div>
     </div>
 
     <script>
@@ -126,11 +186,4 @@
         }
     </script>
 </body>
-    <!-- Parte inferior con margen de linea azul cielo y texto de derechos reservados-->
-<div class="parte-inferior">
-  <div class="margen-azul">
-    <p>&copy; 2025 IN GOD WE TRUST</p>
-    <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
-  </div>
-</div>
 </html>
