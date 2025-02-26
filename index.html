@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portada de la Biblia</title>
+    <style>
+        /* Estilos generales */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #8B4513; /* Color marrón para simular cuero */
+            font-family: 'Times New Roman', serif;
+            color: #DAA520; /* Color dorado para el texto */
+            perspective: 1000px; /* Perspectiva 3D */
+            overflow: hidden;
+        }
+
+        /* Contenedor del libro */
+        .book {
+            width: 90vw;
+            max-width: 600px;
+            height: 80vh;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 1s ease-in-out;
+            cursor: pointer; /* Cambia el cursor al pasar sobre el libro */
+        }
+
+        /* Páginas del libro */
+        .page {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            backface-visibility: hidden; /* Oculta la parte trasera de la página */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 5vh 5vw;
+            box-sizing: border-box;
+        }
+
+        /* Portada */
+        .front {
+            background-color: #8B4513; /* Color marrón para simular cuero */
+            border: 2vh solid #5C4033; /* Borde más oscuro */
+        }
+
+        /* Estilos para el título */
+        h1 {
+            font-size: 8vw;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Estilos para el subtítulo */
+        p {
+            font-size: 4vw;
+            margin: 2vh 0 0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Media queries para ajustes adicionales */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 10vw;
+            }
+
+            p {
+                font-size: 5vw;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            h1 {
+                font-size: 6vw;
+            }
+
+            p {
+                font-size: 3vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="book">
+        <!-- Portada -->
+        <div class="page front">
+            <div class="portada">
+                <h1>Santa Biblia</h1>
+                <p>Reina-Valera 1960</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const book = document.querySelector('.book');
+
+        // Función para redirigir a pagina.html después de la animación
+        function flipPage() {
+            book.style.transform = 'rotateY(-180deg)';
+            setTimeout(() => {
+                window.location.href = 'pagina.html'; // Redirige a pagina.html
+            }, 1000); // Espera 1 segundo (duración de la animación)
+        }
+
+        // Evento para girar la página al hacer clic
+        book.addEventListener('click', flipPage);
+    </script>
+</body>
+</html>
