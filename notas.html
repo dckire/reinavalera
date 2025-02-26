@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas Guardadas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        #contenedor-notas, #ver-notas {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .nota {
+            background-color: white;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        .nota button {
+            background-color: #dc3545;
+            padding: 5px 10px;
+            font-size: 12px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .nota button:hover {
+            background-color: #c82333;
+        }
+        .oculto {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sección para escribir notas -->
+    <div id="contenedor-notas">
+        <h1>Nueva Nota</h1>
+        <textarea id="entrada-nota" placeholder="Escribe tu nota aquí..."></textarea>
+        <button onclick="agregarNota()">Guardar Nota</button>
+        <button onclick="mostrarSeccion('ver-notas')">Ver Notas Guardadas</button>
+    </div>
+
+    <!-- Sección para ver notas guardadas -->
+    <div id="ver-notas" class="oculto">
+        <h1>Notas Guardadas</h1>
+        <button onclick="mostrarSeccion('contenedor-notas')">Volver a Escribir Notas</button>
+        <div id="lista-notas"></div>
+    </div>
+
+    <script>
+        // Obtener elementos del DOM
+        const entradaNota = document.getElementById('entrada-nota');
+        const listaNotas = document.getElementById('lista-notas');
+        const contenedorNotas = document.getElementById('contenedor-notas');
+        const verNotas = document.getElementById('ver-notas');
+
+        // Función para cambiar entre secciones
+        function mostrarSeccion(seccion) {
+            if (seccion === 'contenedor-notas') {
+                contenedorNotas.classList.remove('oculto');
+                verNotas.classList.add('oculto');
+            } else if (seccion === 'ver-notas') {
+                contenedorNotas.classList.add('oculto');
+                verNotas.classList.remove('oculto');
+                cargarNotas(); // Cargar notas al mostrar esta sección
+            }
+        }
+
+        // Función para agregar una nueva nota
+        function agregarNota() {
+            const textoNota = entradaNota.value.trim();
+            if (textoNota === "") {
+                alert("Por favor, escribe algo en la nota.");
+                return;
+            }
+
+            // Obtener notas existentes
+            const notas = JSON.parse(localStorage.getItem('notas')) || [];
+
+            // Agregar la nueva nota
+            notas.push(textoNota);
+
+            // Guardar en localStorage
+            localStorage.setItem('notas', JSON.stringify(notas));
+
+            // Limpiar el campo de texto
+            entradaNota.value = "";
+
+            // Mostrar mensaje de éxito
+            alert("Nota guardada correctamente.");
+        }
+
+        // Función para cargar y mostrar las notas
+        function cargarNotas() {
+            const notas = JSON.parse(localStorage.getItem('notas')) || [];
+            listaNotas.innerHTML = ""; // Limpiar la lista
+
+            notas.forEach((nota, index) => {
+                const divNota = document.createElement('div');
+                divNota.className = 'nota';
+                divNota.innerHTML = `
+                    <p>${nota}</p>
+                    <button onclick="eliminarNota(${index})">Eliminar</button>
+                `;
+                listaNotas.appendChild(divNota);
+            });
+        }
+
+        // Función para eliminar una nota
+        function eliminarNota(index) {
+            const notas = JSON.parse(localStorage.getItem('notas')) || [];
+            notas.splice(index, 1); // Eliminar la nota del array
+            localStorage.setItem('notas', JSON.stringify(notas)); // Actualizar localStorage
+            cargarNotas(); // Recargar la lista de notas
+        }
+    </script>
+</body>
+</html>
