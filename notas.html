@@ -8,117 +8,125 @@
     <link rel="icon" type="image/jpg" href="https://blogger.googleusercontent.com/img/a/AVvXsEhRmRJeDUnkwBIX_AXguL_SdzbzZPoWIMSLf15NABu2veTMQrV22bHxyDp3RnvJzbPvFcznYnrGZzy2x2j6G3ryP5SME8h48vsZPrlUIdCZhBMVsmH64UB53j3heH17pDmRmIhLZ2uqqR3Gr1OjJE942xXz_I1lq1dMLWYMGOpuK1TzjXp3ReAoiparsl8">
     <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-        }
+        /* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #000000; /* Texto en negro */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
 
-        h1 {
-            color: #333;
-            margin-bottom: 20px;
-        }
+h1 {
+    color: #333; /* Título en gris oscuro */
+    margin-bottom: 20px;
+}
 
-        #contenedor-notas {
-            max-width: 800px;
-            width: 100%;
-            padding: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+#contenedor-notas {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #000000; /* Texto en negro */
+}
 
-        textarea {
-            width: 100%;
-            height: 150px;
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-bottom: 10px;
-            resize: vertical;
-        }
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    resize: vertical;
+    color: #000000; /* Texto en negro */
+}
 
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-right: 10px;
-            transition: background-color 0.3s ease;
-        }
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white; /* Texto en blanco para botones */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
 
-        button:hover {
-            background-color: #218838;
-        }
+button:hover {
+    background-color: #218838;
+}
 
-        .nota {
-            background-color: white;
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin-bottom: 10px;
-            position: relative;
-            animation: fadeIn 0.5s ease;
-        }
+.nota {
+    background-color: white;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    position: relative;
+    animation: fadeIn 0.5s ease;
+    color: #000000; /* Texto en negro */
+}
 
-        .nota button {
-            background-color: #dc3545;
-            padding: 5px 10px;
-            font-size: 12px;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            transition: background-color 0.3s ease;
-        }
+.nota button {
+    background-color: #dc3545;
+    padding: 5px 10px;
+    font-size: 12px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: background-color 0.3s ease;
+    color: white; /* Texto en blanco para botones */
+}
 
-        .nota button:hover {
-            background-color: #c82333;
-        }
+.nota button:hover {
+    background-color: #c82333;
+}
 
-        .nota p {
-            white-space: pre-line;
-            margin: 0;
-        }
+.nota p {
+    white-space: pre-line;
+    margin: 0;
+    color: #000000; /* Texto en negro */
+}
 
-        .parte-inferior {
-            width: 100%;
-            background-color: #e3f2fd;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: auto;
-            border-top: 2px solid #90caf9;
-        }
+.parte-inferior {
+    width: 100%;
+    background-color: #e3f2fd;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+    border-top: 2px solid #90caf9;
+    color: #000000; /* Texto en negro */
+}
 
-        .parte-inferior p {
-            margin: 0;
-            color: #333;
-        }
+.parte-inferior p {
+    margin: 0;
+    color: #000000; /* Texto en negro */
+}
 
-        .logo {
-            width: 50px;
-            height: auto;
-            margin-top: 10px;
-        }
+.logo {
+    width: 50px;
+    height: auto;
+    margin-top: 10px;
+}
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
     </style>
 </head>
 <body>
