@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -14,7 +15,7 @@
         h1 {
             color: #333;
         }
-        #contenedor-notas, #ver-notas {
+        #contenedor-notas {
             max-width: 600px;
             margin: 0 auto;
         }
@@ -58,49 +59,25 @@
         .nota button:hover {
             background-color: #c82333;
         }
-        .oculto {
-            display: none;
+        .nota p {
+            white-space: pre-line; /* Respeta los saltos de línea */
         }
     </style>
 </head>
 <body>
-    <!-- Sección para escribir notas -->
     <div id="contenedor-notas">
         <h1>Nueva Nota</h1>
         <textarea id="entrada-nota" placeholder="Escribe tu nota aquí..."></textarea>
         <button onclick="agregarNota()">Guardar Nota</button>
-        <button onclick="mostrarSeccion('ver-notas')">Ver Notas Guardadas</button>
-    </div>
+        <button onclick="cargarNotas()">Ver Notas Guardadas</button>
 
-    <!-- Sección para ver notas guardadas -->
-    <div id="ver-notas" class="oculto">
-        <h1>Notas Guardadas</h1>
-        <button onclick="mostrarSeccion('contenedor-notas')">Volver a Escribir Notas</button>
         <div id="lista-notas"></div>
     </div>
 
     <script>
-        // Obtener elementos del DOM
-        const entradaNota = document.getElementById('entrada-nota');
-        const listaNotas = document.getElementById('lista-notas');
-        const contenedorNotas = document.getElementById('contenedor-notas');
-        const verNotas = document.getElementById('ver-notas');
-
-        // Función para cambiar entre secciones
-        function mostrarSeccion(seccion) {
-            if (seccion === 'contenedor-notas') {
-                contenedorNotas.classList.remove('oculto');
-                verNotas.classList.add('oculto');
-            } else if (seccion === 'ver-notas') {
-                contenedorNotas.classList.add('oculto');
-                verNotas.classList.remove('oculto');
-                cargarNotas(); // Cargar notas al mostrar esta sección
-            }
-        }
-
         // Función para agregar una nueva nota
         function agregarNota() {
-            const textoNota = entradaNota.value.trim();
+            const textoNota = document.getElementById('entrada-nota').value.trim();
             if (textoNota === "") {
                 alert("Por favor, escribe algo en la nota.");
                 return;
@@ -116,7 +93,7 @@
             localStorage.setItem('notas', JSON.stringify(notas));
 
             // Limpiar el campo de texto
-            entradaNota.value = "";
+            document.getElementById('entrada-nota').value = "";
 
             // Mostrar mensaje de éxito
             alert("Nota guardada correctamente.");
@@ -125,13 +102,14 @@
         // Función para cargar y mostrar las notas
         function cargarNotas() {
             const notas = JSON.parse(localStorage.getItem('notas')) || [];
+            const listaNotas = document.getElementById('lista-notas');
             listaNotas.innerHTML = ""; // Limpiar la lista
 
             notas.forEach((nota, index) => {
                 const divNota = document.createElement('div');
                 divNota.className = 'nota';
                 divNota.innerHTML = `
-                    <p>${nota}</p>
+                    <p>${nota.replace(/\n/g, '<br>')}</p>
                     <button onclick="eliminarNota(${index})">Eliminar</button>
                 `;
                 listaNotas.appendChild(divNota);
