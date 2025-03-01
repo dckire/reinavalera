@@ -77,6 +77,12 @@
             background-color: yellow;
             font-weight: bold;
         }
+
+        .libro-capitulo {
+            font-weight: bold;
+            color: #28a745;
+            margin-bottom: 5px;
+        }
     </style>
 </head>
 <body>
@@ -115,31 +121,93 @@
             }
 
             const urls = [
-                'https://dckire.github.io/reinavalera/genesis1.html',
-                'https://dckire.github.io/reinavalera/genesis2.html',
-                'https://dckire.github.io/reinavalera/genesis3.html',
-                // Agrega más URLs aquí
+                { url: 'https://dckire.github.io/reinavalera/genesis1.html', libro: 'Génesis', capitulo: 1 },
+                { url: 'https://dckire.github.io/reinavalera/genesis2.html', libro: 'Génesis', capitulo: 2 },
+                { url: 'https://dckire.github.io/reinavalera/genesis3.html', libro: 'Génesis', capitulo: 3 },
+                { url: 'https://dckire.github.io/reinavalera/genesis4.html', libro: 'Génesis', capitulo: 4 },
+                { url: 'https://dckire.github.io/reinavalera/genesis5.html', libro: 'Génesis', capitulo: 5 },
+                { url: 'https://dckire.github.io/reinavalera/genesis6.html', libro: 'Génesis', capitulo: 6 },
+                { url: 'https://dckire.github.io/reinavalera/genesis7.html', libro: 'Génesis', capitulo: 7 },
+                { url: 'https://dckire.github.io/reinavalera/genesis8.html', libro: 'Génesis', capitulo: 8 },
+                { url: 'https://dckire.github.io/reinavalera/genesis9.html', libro: 'Génesis', capitulo: 9 },
+                { url: 'https://dckire.github.io/reinavalera/genesis10.html', libro: 'Génesis', capitulo: 10 },
+                { url: 'https://dckire.github.io/reinavalera/genesis11.html', libro: 'Génesis', capitulo: 11 },
+                { url: 'https://dckire.github.io/reinavalera/genesis12.html', libro: 'Génesis', capitulo: 12 },
+                { url: 'https://dckire.github.io/reinavalera/genesis13.html', libro: 'Génesis', capitulo: 13 },
+                { url: 'https://dckire.github.io/reinavalera/genesis14.html', libro: 'Génesis', capitulo: 14 },
+                { url: 'https://dckire.github.io/reinavalera/genesis15.html', libro: 'Génesis', capitulo: 15 },
+                { url: 'https://dckire.github.io/reinavalera/genesis16.html', libro: 'Génesis', capitulo: 16 },
+                { url: 'https://dckire.github.io/reinavalera/genesis17.html', libro: 'Génesis', capitulo: 17 },
+                { url: 'https://dckire.github.io/reinavalera/genesis18.html', libro: 'Génesis', capitulo: 18 },
+                { url: 'https://dckire.github.io/reinavalera/genesis19.html', libro: 'Génesis', capitulo: 19 },
+                { url: 'https://dckire.github.io/reinavalera/genesis20.html', libro: 'Génesis', capitulo: 20 },
+                { url: 'https://dckire.github.io/reinavalera/genesis21.html', libro: 'Génesis', capitulo: 21 },
+                { url: 'https://dckire.github.io/reinavalera/genesis22.html', libro: 'Génesis', capitulo: 22 },
+                { url: 'https://dckire.github.io/reinavalera/genesis23.html', libro: 'Génesis', capitulo: 23 },
+                { url: 'https://dckire.github.io/reinavalera/genesis24.html', libro: 'Génesis', capitulo: 24 },
+                { url: 'https://dckire.github.io/reinavalera/genesis25.html', libro: 'Génesis', capitulo: 25 },
+                { url: 'https://dckire.github.io/reinavalera/genesis26.html', libro: 'Génesis', capitulo: 26 },
+                { url: 'https://dckire.github.io/reinavalera/genesis27.html', libro: 'Génesis', capitulo: 27 },
+                { url: 'https://dckire.github.io/reinavalera/genesis28.html', libro: 'Génesis', capitulo: 28 },
+                { url: 'https://dckire.github.io/reinavalera/genesis29.html', libro: 'Génesis', capitulo: 29 },
+                { url: 'https://dckire.github.io/reinavalera/genesis30.html', libro: 'Génesis', capitulo: 30 },
+                { url: 'https://dckire.github.io/reinavalera/genesis31.html', libro: 'Génesis', capitulo: 31 },
+                { url: 'https://dckire.github.io/reinavalera/genesis32.html', libro: 'Génesis', capitulo: 32 },
+                { url: 'https://dckire.github.io/reinavalera/genesis33.html', libro: 'Génesis', capitulo: 33 },
+                { url: 'https://dckire.github.io/reinavalera/genesis34.html', libro: 'Génesis', capitulo: 34 },
+                { url: 'https://dckire.github.io/reinavalera/genesis35.html', libro: 'Génesis', capitulo: 35 },
+                { url: 'https://dckire.github.io/reinavalera/genesis36.html', libro: 'Génesis', capitulo: 36 },
+                { url: 'https://dckire.github.io/reinavalera/genesis37.html', libro: 'Génesis', capitulo: 37 },
+                { url: 'https://dckire.github.io/reinavalera/genesis38.html', libro: 'Génesis', capitulo: 38 },
+                { url: 'https://dckire.github.io/reinavalera/genesis39.html', libro: 'Génesis', capitulo: 39 },
+                { url: 'https://dckire.github.io/reinavalera/genesis40.html', libro: 'Génesis', capitulo: 40 },
+                { url: 'https://dckire.github.io/reinavalera/genesis41.html', libro: 'Génesis', capitulo: 41 },
+                { url: 'https://dckire.github.io/reinavalera/genesis42.html', libro: 'Génesis', capitulo: 42 },
+                { url: 'https://dckire.github.io/reinavalera/genesis43.html', libro: 'Génesis', capitulo: 43 },
+                { url: 'https://dckire.github.io/reinavalera/genesis44.html', libro: 'Génesis', capitulo: 44 },
+                { url: 'https://dckire.github.io/reinavalera/genesis45.html', libro: 'Génesis', capitulo: 45 },
+                { url: 'https://dckire.github.io/reinavalera/genesis46.html', libro: 'Génesis', capitulo: 46 },
+                { url: 'https://dckire.github.io/reinavalera/genesis47.html', libro: 'Génesis', capitulo: 47 },
+                { url: 'https://dckire.github.io/reinavalera/genesis48.html', libro: 'Génesis', capitulo: 48 },
+                { url: 'https://dckire.github.io/reinavalera/genesis49.html', libro: 'Génesis', capitulo: 49 },
+                { url: 'https://dckire.github.io/reinavalera/genesis50.html', libro: 'Génesis', capitulo: 50 },
+                                
+
+                                
+
+                
+
+
+
+                // Agrega más URLs aquí con su libro y capítulo correspondiente
             ];
 
             cargarBiblia(urls).then(contenidos => {
-                const contenidoTotal = contenidos.join('');
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(contenidoTotal, 'text/html');
-                const versiculos = doc.querySelectorAll('p');
                 let encontrados = 0;
 
-                versiculos.forEach(versiculo => {
-                    const texto = versiculo.innerText.toLowerCase();
+                contenidos.forEach(({ contenido, libro, capitulo }) => {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(contenido, 'text/html');
+                    const versiculos = doc.querySelectorAll('p');
 
-                    if (texto.includes(palabra)) {
-                        const textoResaltado = versiculo.innerHTML.replace(
-                            new RegExp(palabra, 'gi'),
-                            (match) => `<span class="resaltado">${match}</span>`
-                        );
+                    versiculos.forEach(versiculo => {
+                        const texto = versiculo.innerText.toLowerCase();
 
-                        resultado.innerHTML += `<div class="versiculo">${textoResaltado}</div>`;
-                        encontrados++;
-                    }
+                        if (texto.includes(palabra)) {
+                            const textoResaltado = versiculo.innerHTML.replace(
+                                new RegExp(palabra, 'gi'),
+                                (match) => `<span class="resaltado">${match}</span>`
+                            );
+
+                            resultado.innerHTML += `
+                                <div class="versiculo">
+                                    <div class="libro-capitulo">${libro} ${capitulo}</div>
+                                    ${textoResaltado}
+                                </div>
+                            `;
+                            encontrados++;
+                        }
+                    });
                 });
 
                 if (encontrados === 0) {
@@ -150,14 +218,14 @@
 
         // Función para cargar la Biblia desde las URLs
         function cargarBiblia(urls) {
-            const promesas = urls.map(url => {
+            const promesas = urls.map(({ url, libro, capitulo }) => {
                 return fetch(url)
                     .then(response => response.text())
                     .then(html => {
                         const parser = new DOMParser();
                         const doc = parser.parseFromString(html, 'text/html');
                         const contenidoBiblia = doc.body.innerHTML;
-                        return contenidoBiblia;
+                        return { contenido: contenidoBiblia, libro, capitulo };
                     })
                     .catch(error => console.error(error));
             });
