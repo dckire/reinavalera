@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de la Biblia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #444;
+            text-align: center;
+        }
+
+        .buscador {
+            margin: 20px auto;
+            max-width: 600px;
+            text-align: center;
+            position: relative;
+        }
+
+        .lupa {
+            font-size: 24px;
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            display: none; /* Oculto inicialmente */
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: none; /* Oculto inicialmente */
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .resultado {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #555;
+        }
+
+        .versiculo {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .resaltado {
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Buscador de la Biblia</h1>
+
+    <div class="buscador">
+        <div class="lupa" onclick="mostrarBusqueda()">🔍</div>
+        <input type="text" id="palabra" placeholder="Escribe una palabra o frase">
+        <button onclick="buscarPalabra()">Buscar</button>
+    </div>
+
+    <div class="resultado" id="resultado">
+        <!-- Aquí se mostrarán los resultados de la búsqueda -->
+    </div>
+
+    <script>
+        // Función para mostrar el campo de búsqueda y el botón
+        function mostrarBusqueda() {
+            const input = document.getElementById('palabra');
+            const boton = document.querySelector('.buscador button');
+            input.style.display = 'block';
+            boton.style.display = 'inline-block';
+            input.focus(); // Enfocar el campo de búsqueda
+        }
+
+        // Función para buscar la palabra
+        function buscarPalabra() {
+            const palabra = document.getElementById('palabra').value.trim().toLowerCase();
+            const resultado = document.getElementById('resultado');
+            resultado.innerHTML = '';
+
+            if (!palabra) {
+                resultado.innerHTML = `<p class="error">Por favor, escribe una palabra o frase.</p>`;
+                return;
+            }
+
+            const urls = [
+                'https://dckire.github.io/reinavalera/genesis1.html',
+                'https://dckire.github.io/reinavalera/genesis2.html',
+                'https://dckire.github.io/reinavalera/genesis3.html',
+                // Agrega más URLs aquí
+            ];
+
+            cargarBiblia(urls).then(contenidos => {
+                const contenidoTotal = contenidos.join('');
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(contenidoTotal, 'text/html');
+                const versiculos = doc.querySelectorAll('p');
+                let encontrados = 0;
+
+                versiculos.forEach(versiculo => {
+                    const texto = versiculo.innerText.toLowerCase();
+
+                    if (texto.includes(palabra)) {
+                        const textoResaltado = versiculo.innerHTML.replace(
+                            new RegExp(palabra, 'gi'),
+                            (match) => `<span class="resaltado">${match}</span>`
+                        );
+
+                        resultado.innerHTML += `<div class="versiculo">${textoResaltado}</div>`;
+                        encontrados++;
+                    }
+                });
+
+                if (encontrados === 0) {
+                    resultado.innerHTML = `<p class="error">No se encontraron resultados para "${palabra}".</p>`;
+                }
+            });
+        }
+
+        // Función para cargar la Biblia desde las URLs
+        function cargarBiblia(urls) {
+            const promesas = urls.map(url => {
+                return fetch(url)
+                    .then(response => response.text())
+                    .then(html => {
+                        const parser = new DOMParser();
+                        const doc = parser.parseFromString(html, 'text/html');
+                        const contenidoBiblia = doc.body.innerHTML;
+                        return contenidoBiblia;
+                    })
+                    .catch(error => console.error(error));
+            });
+
+            return Promise.all(promesas);
+        }
+    </script>
+</body>
+</html>
