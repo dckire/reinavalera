@@ -3,35 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
     <title>El Tiempo de los Gentiles se está Terminando</title>
     <style>
+        /* Estilos iniciales */
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            margin: 0;
             padding: 0;
             background-color: #f9f9f9;
             color: #333;
+            transition: background-color 5s ease, color 5s ease; /* Transición más lenta */
+        }
+
+        h1, h2, h3 {
+            color: #2c3e50;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         h1 {
             text-align: center;
+            font-size: 2.5rem;
+            margin-top: 20px;
         }
-        h1, h2, h3 {
-            color: #444;
+
+        h2 {
+            font-size: 2rem;
+            margin-top: 30px;
         }
-        p {
-            margin-bottom: 15px;
+
+        h3 {
+            font-size: 1.5rem;
+            margin-top: 20px;
         }
+
+        p, a, blockquote, .verse {
+            color: #555;
+            transition: color 1.5s ease; /* Transición de color para texto */
+        }
+
+        a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
         blockquote {
             margin: 20px 0;
-            padding: 10px 20px;
+            padding: 20px;
             background-color: #f1f1f1;
             border-left: 5px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
         }
+
         .verse {
             font-style: italic;
-            color: #555;
+        }
+
+        /* Estilos al desplazarse */
+        body.scrolled {
+            background-color: #2c3e50; /* Fondo oscuro */
+        }
+
+        body.scrolled h1,
+        body.scrolled h2,
+        body.scrolled h3,
+        body.scrolled p,
+        body.scrolled a,
+        body.scrolled blockquote,
+        body.scrolled .verse {
+            color: #ecf0f1; /* Texto blanco */
+        }
+
+        body.scrolled blockquote {
+            background-color: #34495e; /* Fondo oscuro para blockquotes */
+            border-left: 5px solid #7f8c8d; /* Borde más claro */
+        }
+
+        /* Parte inferior */
+        .parte-inferior {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            margin-top: 40px;
+        }
+
+        .parte-inferior p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        .parte-inferior img {
+            width: 50px;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -80,8 +149,26 @@
     </section>
 
     <footer>
-        <p>ESTUDIO BASADO EN LAS SANTAS ESCRITURAS. MEDITA Y ORA PARA ENTENDER EL CUMPLIMIENTO DE ESTAS PROFECIAS.</p>
+        <p>ESTUDIO BASADO EN LAS SANTAS ESCRITURAS. MEDITA Y ORA PARA ENTENDER EL CUMPLIMIENTO DE ESTAS PROFECÍAS.</p>
     </footer>
 
+    <div class="parte-inferior">
+        <div class="margen-azul">
+            <p>&copy; 2025 IN GOD WE TRUST</p>
+            <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+        </div>
+    </div>
+
+    <script>
+        // Función para detectar el desplazamiento
+        window.addEventListener("scroll", function() {
+            const body = document.body;
+            if (window.scrollY > 50) { // Cambia el color después de desplazarse 50px
+                body.classList.add("scrolled");
+            } else {
+                body.classList.remove("scrolled");
+            }
+        });
+    </script>
 </body>
 </html>
