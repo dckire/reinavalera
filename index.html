@@ -6,123 +6,123 @@
     <title>𝕷𝕬 𝕾𝖆𝖓𝖙𝖆 𝕭𝖎𝖇𝖑𝖎𝖆</title>
     <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhgwgBGyNl7pogSSNnjpTBJOv5nbEOFXROjjH4uLWhy4WC58XK0tyqV0MpcpQaj299jzXOdCAGg7auVteyx_X7I-LNjhziPyQ27HwCH5j2ZspwuxsMTM20Ai4vZ4MTvASh4fEwMmlnzXLU11P8EiwuWNpkee8zy8y1i1ZInRtHsy0lAVzEUXBNV7NGHsHM/s200/Screenshot_20250226_213012_Chrome.jpg">
     <style>
-    /* Estilos generales */
-    body {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #8B4513; /* Color marrón para simular cuero */
-      font-family: 'Times New Roman', serif;
-      color: #FFD700; /* Color dorado para el texto */
-      perspective: 1000px; /* Perspectiva 3D */
-      overflow: hidden;
-    }
+        /* Estilos generales */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #8B4513;
+            font-family: 'Times New Roman', serif;
+            color: #FFD700;
+            perspective: 1000px;
+            overflow: hidden;
+        }
 
-    /* Importar fuente gótica */
-    @import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+        /* Importar fuente gótica */
+        @import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
 
-    /* Contenedor del libro */
-    .book {
-      width: 90vw;
-      max-width: 600px;
-      height: 80vh;
-      position: relative;
-      transform-style: preserve-3d;
-      transition: transform 1s ease-in-out;
-      cursor: pointer; /* Cambia el cursor al pasar sobre el libro */
-    }
+        /* Contenedor del libro */
+        .book {
+            width: 90vw;
+            max-width: 600px;
+            height: 80vh;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 1s ease-in-out;
+            cursor: pointer;
+        }
 
-    /* Páginas del libro */
-    .page {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-      backface-visibility: hidden; /* Oculta la parte trasera de la página */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 5vh 5vw;
-      box-sizing: border-box;
-    }
+        /* Páginas del libro */
+        .page {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 5vh 5vw;
+            box-sizing: border-box;
+        }
 
-    /* Portada */
-    .front {
-      background-color: #8B4513; /* Color marrón para simular cuero */
-      border: 2vh solid #030303; /* Borde más oscuro */
-      background-image: url('https://www.transparenttextures.com/patterns/old-map.png'); /* Textura de cuero */
-      background-blend-mode: multiply;
-      box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.5);
-    }
+        /* Portada */
+        .front {
+            background-color: #8B4513;
+            border: 2vh solid #030303;
+            background-image: url('https://www.transparenttextures.com/patterns/old-map.png');
+            background-blend-mode: multiply;
+            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.5);
+        }
 
-    /* Estilos para el título con fuente gótica */
-    h1 {
-      font-family: 'UnifrakturMaguntia', cursive;
-      font-size: 8vw;
-      margin: 0;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-      letter-spacing: 2px;
-      font-weight: normal; /* La fuente gótica ya tiene un estilo fuerte */
-    }
+        /* Estilos para el título con fuente gótica */
+        h1 {
+            font-family: 'UnifrakturMaguntia', cursive;
+            font-size: 8vw;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            letter-spacing: 2px;
+            font-weight: normal;
+        }
 
-    /* Estilos para el subtítulo */
-    p {
-      font-size: 4vw;
-      margin: 2vh 0 0;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-      font-style: italic;
-    }
+        /* Estilos para el subtítulo */
+        p {
+            font-size: 4vw;
+            margin: 2vh 0 0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            font-style: italic;
+        }
 
-    /* Media queries para ajustes adicionales */
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 10vw;
-      }
-      p {
-        font-size: 5vw;
-      }
-    }
+        /* Media queries para ajustes adicionales */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 10vw;
+            }
+            p {
+                font-size: 5vw;
+            }
+        }
 
-    @media (min-width: 1200px) {
-      h1 {
-        font-size: 6vw;
-      }
-      p {
-        font-size: 3vw;
-      }
-    }
-  </style>
+        @media (min-width: 1200px) {
+            h1 {
+                font-size: 6vw;
+            }
+            p {
+                font-size: 3vw;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="book">
-    <!-- Portada -->
-    <div class="page front">
-      <div class="portada">
-        <h1>𝕷𝕬</h1>
-        <h1>𝕾𝖆𝖓𝖙𝖆 𝕭𝖎𝖇𝖑𝖎𝖆</h1>
-        <p>Reina-Valera 1569-1602</p>
-      </div>
+    <div class="book" aria-label="Libro antiguo, haz clic para abrir">
+        <!-- Portada -->
+        <div class="page front">
+            <div class="portada">
+                <h1>𝕷𝕬</h1>
+                <h1>𝕾𝖆𝖓𝖙𝖆 𝕭𝖎𝖇𝖑𝖎𝖆</h1>
+                <p>Reina-Valera 1569-1602</p>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <script>
-    const book = document.querySelector('.book');
+    <script>
+        const book = document.querySelector('.book');
 
-    // Función para redirigir a pagina.html después de la animación
-    function flipPage() {
-      book.style.transform = 'rotateY(-180deg)';
-      setTimeout(() => {
-        window.location.href = 'pagina.html'; // Redirige a pagina.html
-      }, 1000); // Espera 1 segundo (duración de la animación)
-    }
+        // Función para redirigir a pagina.html después de la animación
+        function flipPage() {
+            book.style.transform = 'rotateY(-180deg)';
+            setTimeout(() => {
+                window.location.href = 'pagina.html'; // Redirige a pagina.html
+            }, 1000); // Espera 1 segundo (duración de la animación)
+        }
 
-    // Evento para girar la página al hacer clic
-    book.addEventListener('click', flipPage);
-  </script>
+        // Evento para girar la página al hacer clic
+        book.addEventListener('click', flipPage);
+    </script>
 </body>
 </html>
