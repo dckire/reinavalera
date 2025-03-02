@@ -1284,58 +1284,34 @@
     { url: 'https://dckire.github.io/reinavalera/tito3.html', libro: 'Tito', capitulo: 3 },
 			
     { url: 'https://dckire.github.io/reinavalera/filemon.html', libro: 'Filemon', capitulo: 1 },
-                // Agrega más URLs aquí con su libro y capítulo correspondiente
+
+                // Agrega más URLs de los capítulos que desees buscar
             ];
 
-            cargarBiblia(urls).then(contenidos => {
-                let encontrados = 0;
-
-                contenidos.forEach(({ contenido, libro, capitulo }) => {
+            urls.forEach(async (item) => {
+                try {
+                    const response = await fetch(item.url);
+                    const text = await response.text();
                     const parser = new DOMParser();
-                    const doc = parser.parseFromString(contenido, 'text/html');
+                    const doc = parser.parseFromString(text, 'text/html');
                     const versiculos = doc.querySelectorAll('p');
 
-                    versiculos.forEach(versiculo => {
-                        const texto = versiculo.innerText.toLowerCase();
-
-                        if (texto.includes(palabra)) {
-                            const textoResaltado = versiculo.innerHTML.replace(
-                                new RegExp(palabra, 'gi'),
-                                (match) => `<span class="resaltado">${match}</span>`
-                            );
-
+                    versiculos.forEach((versiculo, index) => {
+                        const textoVersiculo = versiculo.textContent.toLowerCase();
+                        if (textoVersiculo.includes(palabra)) {
+                            const versiculoResaltado = textoVersiculo.replace(new RegExp(palabra, 'gi'), (match) => `<span class="resaltado">${match}</span>`);
                             resultado.innerHTML += `
                                 <div class="versiculo">
-                                    <div class="libro-capitulo">${libro} ${capitulo}</div>
-                                    ${textoResaltado}
+                                    <div class="libro-capitulo">${item.libro} ${item.capitulo}:${index + 1}</div>
+                                    <p>${versiculoResaltado}</p>
                                 </div>
                             `;
-                            encontrados++;
                         }
                     });
-                });
-
-                if (encontrados === 0) {
-                    resultado.innerHTML = `<p class="error">No se encontraron resultados para "${palabra}".</p>`;
+                } catch (error) {
+                    console.error('Error al cargar el capítulo:', error);
                 }
             });
-        }
-
-        // Función para cargar la Biblia desde las URLs
-        function cargarBiblia(urls) {
-            const promesas = urls.map(({ url, libro, capitulo }) => {
-                return fetch(url)
-                    .then(response => response.text())
-                    .then(html => {
-                        const parser = new DOMParser();
-                        const doc = parser.parseFromString(html, 'text/html');
-                        const contenidoBiblia = doc.body.innerHTML;
-                        return { contenido: contenidoBiblia, libro, capitulo };
-                    })
-                    .catch(error => console.error(error));
-            });
-
-            return Promise.all(promesas);
         }
     </script>
 </body>
