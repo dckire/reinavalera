@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>𝕷𝕬 𝕾𝖆𝖓𝖙𝖆 𝕭𝖎𝖇𝖑𝖎𝖆</title>
-    <link rel="icon" type="https://blogger.googleusercontent.com/img/a/AVvXsEhzcgV_fa1r-wMFQMNnTanEQSj9juTMGLT-JOOt_VFHUtiXTp5cl8SJfKUxacJypWOl7En7wLyeaMEnaEu2Bvg_454SHoeSrQVloL1Cifz4Pn5gjCLX1EYQl4HeInCwXVxPhOuU6dy9WSlcuWXRdl-ufReTP_om0vpiNsSlT8jGzAeYkUssk6E84L43Sn4">
+    <link rel="icon" type="image/png" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgdeMEOqN6Z2IZiQ7Rfcky7dH4f3Uj0Wv1NhwW-4yi4T7pTrfsVhOofTa4LJeow5ui62bYrFKw0C3K6LtbKuEcniYncW6wAhFfkRqgWYehPbM_ESXw4vbXTSY5QeSu6MtMXnaLpq-HX3hys4DsGOjZZlCW_DgfB3tLxxllYPJrUySbbOrvKlG6_hVyPDy0/s200/icon-512x512.jpg">
+    <link rel="manifest" href="manifest.json">
     <style>
         /* Estilos generales */
         body {
@@ -110,6 +111,13 @@
         </div>
     </div>
 
+    <!-- Botón de instalación -->
+    <div id="installButton" style="display: none; position: fixed; bottom: 20px; right: 20px;">
+        <button onclick="installApp()" style="padding: 10px 20px; font-size: 16px; background-color: #FFD700; color: #8B4513; border: none; border-radius: 5px; cursor: pointer;">
+            Instalar la aplicación
+        </button>
+    </div>
+
     <script>
         const book = document.querySelector('.book');
 
@@ -123,6 +131,40 @@
 
         // Evento para girar la página al hacer clic
         book.addEventListener('click', flipPage);
+
+        // PWA: Instalación
+        let deferredPrompt;
+
+        window.addEventListener('beforeinstallprompt', (event) => {
+            event.preventDefault();
+            deferredPrompt = event;
+            document.getElementById('installButton').style.display = 'block';
+        });
+
+        function installApp() {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then((choiceResult) => {
+                    if (choiceResult.outcome === 'accepted') {
+                        console.log('Usuario instaló la aplicación');
+                    } else {
+                        console.log('Usuario no instaló la aplicación');
+                    }
+                    deferredPrompt = null;
+                });
+            }
+        }
+
+        // Registrar Service Worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+                .then((registration) => {
+                    console.log('Service Worker registrado con éxito:', registration);
+                })
+                .catch((error) => {
+                    console.log('Error al registrar el Service Worker:', error);
+                });
+        }
     </script>
 </body>
 </html>
