@@ -1,0 +1,22 @@
+{
+    "short_name": "Santa Biblia",
+    "name": "La Santa Biblia Reina-Valera",
+    "description": "Una aplicación para leer la Santa Biblia Reina-Valera 1569-1602.",
+    "icons": [
+      {
+        "src": "icon-192x192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "icon-512x512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "/",
+    "background_color": "#8B4513",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#8B4513"
+  }
