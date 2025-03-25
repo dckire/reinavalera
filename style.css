@@ -153,3 +153,114 @@ p {
 .botones button:hover {
 	background-color: #23527c;
 }
+/* significados */
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif; /* Tipografía moderna y legible */
+    background-color: black; /* Fondo negro */
+    color: white; /* Texto en blanco para contrastar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    line-height: 1.6; /* Espaciado entre líneas para mejor legibilidad */
+}
+
+/* Contenedor principal */
+.contenido {
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+/* Título superior */
+.titulo-superior-centralizado h1 {
+    font-size: 3rem; /* Más grande */
+    margin-bottom: 30px; /* Más espacio debajo del título */
+    font-weight: 700; /* Negrita para el título */
+    color: #87CEEB; /* Color azul cielo para el título */
+}
+
+/* Lista de enlaces (botones) */
+.titulo-superior-centralizado ul {
+    list-style: none;
+    padding: 0;
+}
+
+.titulo-superior-centralizado ul li {
+    margin: 15px 0; /* Más espacio entre botones */
+}
+
+.titulo-superior-centralizado ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem; /* Más grande */
+    font-weight: 500; /* Peso medio para los botones */
+    background-color: #87CEEB; /* Fondo azul cielo */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    display: inline-block; /* Para que el padding funcione correctamente */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+}
+
+.titulo-superior-centralizado ul li a:hover {
+    background-color: #6ca6cd; /* Color más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Efecto de escala al pasar el mouse */
+}
+
+/* Parte inferior */
+.parte-inferior {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid #87CEEB; /* Línea azul cielo */
+    width: 100%;
+    text-align: center;
+}
+
+.margen-azul p {
+    margin: 0;
+    font-size: 1.2rem; /* Más grande */
+    color: #87CEEB; /* Texto azul cielo */
+    font-weight: 300; /* Peso ligero para el texto del footer */
+}
+
+/* Estilos específicos para el logo en el footer */
+.margen-azul img.logo {
+    width: 60px; /* Más grande */
+    height: auto; /* Mantener la proporción */
+    border-radius: 50%; /* Hacer el logo circular (opcional) */
+    border: 2px solid #87CEEB; /* Borde azul cielo alrededor del logo */
+    padding: 5px; /* Espacio entre el borde y la imagen */
+    margin-top: 10px; /* Margen superior para separar del texto */
+    transition: transform 0.3s ease; /* Efecto de hover suave */
+}
+
+/* Efecto de hover para el logo */
+.margen-azul img.logo:hover {
+    transform: scale(1.1); /* Escalar ligeramente el logo al pasar el mouse */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    /* Ajustes para móviles */
+    .titulo-superior-centralizado h1 {
+        font-size: 2.5rem; /* Tamaño de fuente más pequeño para móviles */
+    }
+
+    .titulo-superior-centralizado ul li a {
+        font-size: 1.2rem; /* Tamaño de fuente más pequeño para móviles */
+        padding: 8px 16px; /* Espaciado interno más pequeño */
+    }
+
+    .margen-azul p {
+        font-size: 1rem; /* Tamaño de fuente más pequeño para móviles */
+    }
+
+    .margen-azul img.logo {
+        width: 50px; /* Tamaño de logo más pequeño para móviles */
+    }
+}
