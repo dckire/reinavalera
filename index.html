@@ -381,10 +381,19 @@
             <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhY_ZVwhWjCGMYTuCi1U1r1LPNfVQ-nfUrXdu5csf_ErT2NSieOYxT_COqryHNZZknQQKKD6iwOLu1tU1Syaf-iPzbkZmZffU2LCLILu3NiLhRnXwEy85XGQZGtaCK6w7HOMcmOuhUtGcPZ6ZE6hRTeRz1jnT2-7ZGSsr38QNOco51izEcL2kUwbqcmpGU" alt="Estudios Bíblicos">
             <p>Estudios Bíblicos</p>
           </a>
-		<div class="recurso" onclick="window.open('sabaticas.html', '_blank', 'width=600,height=400')" style="cursor: pointer;">
-            <img src="https://blogger.googleusercontent.com/img/a/AVvXsEi38Cu3T5aSmYPC1QSEpJ1hZA68Ogd0d8odQ1AC9U13NxFHVxznIUMMdlgHczmd1QXsk3Il-4JNiw6HogTm6ZJS1Eco518EVOwarYE3N3DGrD0sTsncMiZbsqKjNUMfN90jfCBLFsWejq_-IBBX941i7-yX9IPWUVk7OzXEk03ZKQ2pD3fRolcpMcksYlc" alt="Escuela sabatica">
-            <p>Escuela Sabatica</p>
-          </div>
+		<!-- Botón/enlace que abre el modal -->
+<a href="#" class="recurso" onclick="abrirModal(); return false;">
+  <img src="https://blogger.googleusercontent.com/img/a/AVvXsEi38Cu3T5aSmYPC1QSEpJ1hZA68Ogd0d8odQ1AC9U13NxFHVxznIUMMdlgHczmd1QXsk3Il-4JNiw6HogTm6ZJS1Eco518EVOwarYE3N3DGrD0sTsncMiZbsqKjNUMfN90jfCBLFsWejq_-IBBX941i7-yX9IPWUVk7OzXEk03ZKQ2pD3fRolcpMcksYlc" alt="Escuela sabatica">
+  <p>Escuela Sabatica</p>
+</a>
+
+<!-- Ventana modal (oculta inicialmente) -->
+<div id="modalEscuelaSabatica" class="modal" style="display: none;">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModal()">&times;</span>
+    <iframe src="sabaticas.html" style="width: 100%; height: 80vh; border: none;"></iframe>
+  </div>
+</div>
 		
         </div>
     
@@ -501,6 +510,33 @@ const fechaActual = document.getElementById('fecha-actual');
                 }, index * 500); // Ajusta el tiempo de retraso entre elementos
             });
         });
+	  
+
+<!-- JavaScript para abrir/cerrar el modal -->
+<script>
+  // Elementos del DOM
+  const abrirModalBtn = document.getElementById('abrirModal');
+  const modal = document.getElementById('modalEscuelaSabatica');
+  const cerrarModalBtn = document.querySelector('.cerrar');
+
+  // Abrir modal al hacer clic en el enlace
+  abrirModalBtn.addEventListener('click', function(e) {
+    e.preventDefault(); // Evita que el enlace recargue la página
+    modal.style.display = 'flex';
+  });
+
+  // Cerrar modal al hacer clic en la "X"
+  cerrarModalBtn.addEventListener('click', function() {
+    modal.style.display = 'none';
+  });
+
+  // Cerrar modal al hacer clic fuera del contenido
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+
     </script>
 </body>
 </html>
