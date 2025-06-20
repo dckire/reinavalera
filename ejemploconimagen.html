@@ -50,16 +50,22 @@
     border-radius: 50%;
   }
   p {
-text-decoration: none;
-color: #fff;
-}
-  img {
-  border: 1px solid #ccc;
-  margin: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-  </style>
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  /* Estilos añadidos para la imagen */
+  .imagen-contenedor {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .imagen-contenedor img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+</style>
 </head>
 <body>
 	<div class="contenido">
@@ -67,15 +73,20 @@ color: #fff;
 			<h1></h1>
 		</div>
 		<div class="texto-columna">
-			<!-- Aquí va el contenido del capítulo -->
-       <p></p>
-      
-      <img src="URL_de_la_imagen" alt="Descripción de la imagen">
-
+			<!-- Texto en párrafo -->
+			<p>Este es mi texto principal.</p>
+			
+			<!-- Imagen anidada aparte -->
+			<div class="imagen-contenedor">
+				<img src="https://via.placeholder.com/400" alt="Imagen de ejemplo">
+			</div>
+			
+			<!-- Más texto si es necesario -->
+			<p>Más texto después de la imagen.</p>
     </div>
-<div class="botones">
-	<button onclick="window.history.back()">◀️</button>
-		</div>
+    <div class="botones">
+      <button onclick="window.history.back()">◀️</button>
+    </div>
 	</div>
 </body>
 <!-- Parte inferior con margen de linea azul cielo y texto de derechos reservados-->
