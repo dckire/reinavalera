@@ -17,32 +17,29 @@
             .texto-columna {
                 column-count: 1;
             }
-        
-       
+        }
+        body {
+            touch-action: manipulation;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+        .contenido {
+            min-height: 100vh;
+        }
     </style>
 </head>
 <body>
     <div class="contenido">
         <div class="titulo-superior-centralizado">
             <h1>Juan 12</h1>
-			<div class="botones">
-			<button onclick="location.href='juan13.html'">▶️</button>
-		</div>
-		 </div>
+        </div>
         <div class="texto-columna" id="texto-capitulo">
             <!-- El texto se insertará aquí -->
-        </div>
-        
-        <!-- Botones de navegación inferiores -->
-        <div class="botones">
-            <button onclick="location.href='juan11.html'">◀️</button>
-            <button onclick="location.href='juan.html'">🏠</button>
-            <button onclick="location.href='juan13.html'">▶️</button>
         </div>
     </div>
 
     <script>
-        const textoJuan9 = `
+        const textoJuan12 = `
 Y JESUS, seis días antes de la  Pascua, vino a Bethania, donde estaba Lázaro, que había sido muerto, al cual había resucitado de los muertos.
 2 E hiciéronle allí una cena: y Marta servía, y Lázaro era uno de los que estaban sentados a la mesa juntamente con él
 3 Entonces María tomó duna libra de ungüento de nardo líquido de mucho precio, y Amgió los pies de Jesús, y limpio sus pies con sus cabellos: y la casa se llenó del olor del ungüento.
@@ -75,7 +72,40 @@ Y JESUS, seis días antes de la  Pascua, vino a Bethania, donde estaba Lázaro, 
             return htmlFinal;
         }
 
-        document.getElementById('texto-capitulo').innerHTML = formatearVersos(textoJuan9);
+        document.getElementById('texto-capitulo').innerHTML = formatearVersos(textoJuan12);
+
+        // Configuración del doble toque para cambiar de capítulo
+        let lastTap = 0;
+        const tapDelay = 300; // milisegundos entre toques para considerarlo doble toque
+        
+        document.addEventListener('touchend', function(event) {
+            const currentTime = new Date().getTime();
+            const tapLength = currentTime - lastTap;
+            
+            if (tapLength < tapDelay && tapLength > 0) {
+                // Doble toque detectado
+                cambiarCapitulo();
+                event.preventDefault(); // Evitar zoom u otros comportamientos
+            }
+            
+            lastTap = currentTime;
+        });
+
+        // También para clicks dobles en dispositivos con mouse
+        document.addEventListener('dblclick', function() {
+            cambiarCapitulo();
+        });
+
+        function cambiarCapitulo() {
+            // Aquí puedes implementar la lógica para cambiar al siguiente capítulo
+            // Por ahora solo redirige al capítulo 13 como ejemplo
+            window.location.href = 'juan13.html';
+            
+            // En una implementación completa podrías:
+            // 1. Cargar dinámicamente el siguiente capítulo
+            // 2. Tener un sistema de navegación circular (volver al primero después del último)
+            // 3. Incluir animaciones de transición
+        }
     </script>
 
     <div class="parte-inferior">
