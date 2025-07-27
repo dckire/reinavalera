@@ -3,113 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juan 10</title>
+    <title>Juan 9</title>
     <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
-    <link rel="stylesheet" href="style.css">
     <style>
         .texto-columna {
             column-count: 1;
-            column-gap: 20px;
             text-align: justify;
             padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
         }
-        @media (min-width: 768px) {
-            .texto-columna {
-                column-count: 2;
-            }
+        .texto-columna p {
+            margin-bottom: 1em;
         }
-        /* Eliminamos .numero-verso para que el número sea igual al texto */
+        .numero-verso {
+            font-weight: bold;
+            color: #0066cc;
+        }
+        /* Estilo para los botones */
+        .botones {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .botones button {
+            background: #0066cc;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 0 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <div class="contenido">
         <div class="titulo-superior-centralizado">
-            <h1>Juan 10</h1>
+            <h1>Juan 9</h1>
             <div class="botones">
-                <button onclick="location.href='juan9.html'">◀️</button>
-                <button onclick="location.href='juan.html'">🏠</button>
-                <button onclick="location.href='juan11.html'">▶️</button>
+                <button onclick="location.href='juan8.html'">◀️ Anterior</button>
+                <button onclick="location.href='juan.html'">🏠 Inicio</button>
+                <button onclick="location.href='juan10.html'">▶️ Siguiente</button>
             </div>
         </div>
         <div class="texto-columna" id="texto-capitulo">
-            <!-- El texto se insertará aquí automáticamente -->
+            <!-- El texto se insertará aquí -->
+        </div>
+        
+        <!-- Botones de navegación inferiores -->
+        <div class="botones">
+            <button onclick="location.href='juan8.html'">◀️ Anterior</button>
+            <button onclick="location.href='juan.html'">🏠 Inicio</button>
+            <button onclick="location.href='juan10.html'">▶️ Siguiente</button>
         </div>
     </div>
 
     <script>
-        // Texto de Juan 10 (versión Reina Valera, versos separados por \n)
-        const textoJuan10 = ` 
-        DE cierto, de cierto os digo: El que no entra por la puerta en el corral de las ovejas, mas sube por otra parte, el tal es ladrón y robador.
-2 Mas el que entra por la puerta, el pastor de las ovejas es.
-3 A éste abre el portero, y las ovejas oyen su voz: y a sus ovejas llama por nombre, y las saca.
-4 Y como ha sacado fuera todas las propias, va delante de ellas; y las ovejas le siguen, porque conocen su voz.
-5 Mas al extraño no seguirán, antes huirán de él: porque no conocen la voz de los extraños.
-6 Esta parábola les dijo Jesús; 6mas ellos no entendieron qué era lo que les decía.
-7 Volvióles, pues, Jesús a decir : De cierto, de cierto os digo: Yo soy la .puerta de las ovejas.
-8 Todos los que antes de mí vinieron, ladrones son y robadores; mas no los oyeron las ovejas.
-9 Yo soy dla puerta: el que por mí entrare, será salvo; y entrará, y saldrá, y «hallará pastos.
-10 El ladrón no viene sino para hurtar, y matar, y destruir: yo he venido para que tengan vida, y para que la tengan en abundancia.
-11 Yo soy el buen pastor: /lel buen pastor su vida da por las ovejas.
-12 Mas el asalariado, y que no es el pastor, de quien no son propias las ovejas, ve al lobo que viene, y ^deja las ovejas, y huye, y el lobo las arrebata, y esparce las ovejas.
-13 Así que, el asalariado, huye, porque es asalariado, y no tiene cuidado de las ovejas.
-14 Yo soy el buen pastor; y "conozco mis ovejas, y las mías me conocen.
-15 Como el Padre "me conoce, y yo conozco al Padre; pj pongo mi vida por las ovejas.
-16 También tengo rotras ovejas que no son de este redil; "aquéllas también me conviene traer, y oirán mi voz ; y habrá un rebaño, y un pastor.  
-17 aPor eso me ama el Padre, porque 6yo pongo mi vida, para volverla a tomar.
-18 Nadie me la quita, mas yo la pongo de mí mismo. Tengo poder para ponerla, y d tengo poder para volverla á tomar. ^Este mandamiento recibí de mi Padre.
-19 Y ''volvió a haber disensión entre los J udíos por estas palabras.
-20 Y muchos de ellos decían : lDemonio tiene, y *está fuera de sí; ¿para qué le oís?
-21 Decían otros: Estas palabras no son de endemoniado: '"¿puede el demonio abrir los ojos de los ciegos?
-22 Y se hacía la fiesta de la dedicación en Jerusalem ; y era invierno ;
-23 Y Jesús andaba en el templo por °el portal de Salomón.
-24 Y rodeáronle los Judíos y dijéronle: ¿Hasta cuándo nos has de turbar el alma? Si tú eres el Cristo, dínos/o abiertamente.
-25 Respondióles Jesús: Os lo he dicho, y no creéis : '"las obras que yo hago en nombre de mi Padre, ellas dan testimonio de mí;
-26 Mas vosotros no creéis, porque no sois de mis ovejas, como os he dicho.
-27 "Mis ovejas oyen mi voz, y yo las conozco, y me siguen ;
-28 Y yo les doy vida eterna : y ^no perecerán para siempre, ni nadie las arrebatará de mi mano.
-29 Mi Padre que me las dió, mayor que todos es : y nadie las puede arrebatar de la mano de mi Padre.
-30 Yo y el Padre zuna cosa somos.
-31 Entonces "volvieron a tomar piedras los J udíos para apedrearle.
-32 Respondióles Jesús : Muchas buenas obras os he mostrado de mi Padre; ¿por cuál obra de esas me apedreáis ?
-33 Respondiéronle los Judíos, diciendo: Por buena obra no te apedreamos, sino por cla blasfemia; y porque tú, siendo hombre, dte haces Dios.
-34 Respondióles Jesús: ¿No está escrito en •'vuestra ley: °Yo dije, Dioses sois?
-35 Si dijo, dioses, a aquellos a loscuales fué hecha palabra de Dios (y la Escritura no puede ser quebrantada) ;
-36 ¿A quien el Padre "santificó y envió al mundo, vosotros decís: Tú blasfemas, "porque dije: -Tíyo de Dios soy?
-37 Si no hago obras de mi Padre, no me creáis.
-38 Mas si las hago, aunque a mí no creáis, j creed a las obras; para que conozcáis y creáis 'que el Padre está en mí, y yo en el Padre.
-39 Y procuraban otra vez prenderle ; mas él se salió de sus manos ;
-40 Y volvióse tras el Jordán, a aquel lugar "donde primero había estado bautizando Juan; y estúvose allí.
-41 Y muchos venían a él, y decían : Juan, a la verdad, ninguna señal hizo; ^mas todo lo que Juan dijo de éste, era verdad.
-42 Y ''muchos creyeron allí en él.
-';
+        const textoJuan9 = `
+1 Al pasar Jesús, vio a un hombre ciego de nacimiento.
+2 Y sus discípulos le preguntaron, diciendo: Rabí, ¿quién pecó, éste o sus padres, para que haya nacido ciego?
+3 Respondió Jesús: No es que pecó éste, ni sus padres, sino para que las obras de Dios se manifiesten en él.
+[... resto del texto ...]
+        `;
 
-        // Función para procesar el texto y agregar <p> a cada verso
         function formatearVersos(texto) {
-            // Dividir el texto por saltos de línea
-        const versos = texto.trim().split('\n');
+            const versos = texto.trim().split('\n');
             let htmlFinal = '';
-
-            // Recorrer cada verso y envolverlo en <p>
             versos.forEach(verso => {
                 if (verso.trim() !== '') {
-                    // Extraer el número del versículo (primera palabra)
                     const partes = verso.split(' ');
                     const numVerso = partes[0];
                     const textoVerso = partes.slice(1).join(' ');
-
-                    // Crear el HTML con <p> (sin clase especial para el número)
-                    htmlFinal += `<p>${numVerso} ${textoVerso}</p>`;
+                    htmlFinal += `<p><span class="numero-verso">${numVerso}</span> ${textoVerso}</p>`;
                 }
             });
-
             return htmlFinal;
         }
 
-        // Insertar el texto formateado en el HTML
         document.getElementById('texto-capitulo').innerHTML = formatearVersos(textoJuan9);
     </script>
 
-    <!-- Footer -->
     <div class="parte-inferior">
         <div class="margen-azul">
             <p>&copy; 2025 IN GOD WE TRUST</p>
