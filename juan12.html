@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juan 12</title>
     <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
-    <link rel="stylesheet" href="style.css">
     <style>
         .texto-columna {
             column-count: 1;
@@ -22,9 +21,33 @@
             touch-action: manipulation;
             user-select: none;
             -webkit-user-select: none;
+            margin: 0;
+            padding: 0;
         }
         .contenido {
             min-height: 100vh;
+            position: relative;
+        }
+        .zona-izquierda, .zona-derecha {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            width: 50%;
+            z-index: 10;
+        }
+        .zona-izquierda {
+            left: 0;
+        }
+        .zona-derecha {
+            right: 0;
+        }
+        .indicador-navegacion {
+            position: fixed;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
         }
     </style>
 </head>
@@ -35,6 +58,15 @@
         </div>
         <div class="texto-columna" id="texto-capitulo">
             <!-- El texto se insertará aquí -->
+        </div>
+        
+        <!-- Zonas invisibles para navegación -->
+        <div class="zona-izquierda" id="zona-anterior"></div>
+        <div class="zona-derecha" id="zona-siguiente"></div>
+        
+        <!-- Indicador para el usuario -->
+        <div class="indicador-navegacion">
+            Doble toque izquierda: Anterior | Doble toque derecha: Siguiente
         </div>
     </div>
 
@@ -74,37 +106,43 @@ Y JESUS, seis días antes de la  Pascua, vino a Bethania, donde estaba Lázaro, 
 
         document.getElementById('texto-capitulo').innerHTML = formatearVersos(textoJuan12);
 
-        // Configuración del doble toque para cambiar de capítulo
-        let lastTap = 0;
-        const tapDelay = 300; // milisegundos entre toques para considerarlo doble toque
+        // Configuración de navegación por zonas táctiles
+        const zonaAnterior = document.getElementById('zona-anterior');
+        const zonaSiguiente = document.getElementById('zona-siguiente');
         
-        document.addEventListener('touchend', function(event) {
-            const currentTime = new Date().getTime();
-            const tapLength = currentTime - lastTap;
-            
-            if (tapLength < tapDelay && tapLength > 0) {
-                // Doble toque detectado
-                cambiarCapitulo();
-                event.preventDefault(); // Evitar zoom u otros comportamientos
-            }
-            
-            lastTap = currentTime;
-        });
-
+        // Configurar detectores de doble toque para cada zona
+        setupDoubleTap(zonaAnterior, navegarAnterior);
+        setupDoubleTap(zonaSiguiente, navegarSiguiente);
+        
         // También para clicks dobles en dispositivos con mouse
-        document.addEventListener('dblclick', function() {
-            cambiarCapitulo();
-        });
-
-        function cambiarCapitulo() {
-            // Aquí puedes implementar la lógica para cambiar al siguiente capítulo
-            // Por ahora solo redirige al capítulo 13 como ejemplo
-            window.location.href = 'juan13.html';
+        zonaAnterior.addEventListener('dblclick', navegarAnterior);
+        zonaSiguiente.addEventListener('dblclick', navegarSiguiente);
+        
+        function setupDoubleTap(element, action) {
+            let lastTap = 0;
+            const tapDelay = 300; // milisegundos entre toques para considerarlo doble toque
             
-            // En una implementación completa podrías:
-            // 1. Cargar dinámicamente el siguiente capítulo
-            // 2. Tener un sistema de navegación circular (volver al primero después del último)
-            // 3. Incluir animaciones de transición
+            element.addEventListener('touchend', function(event) {
+                const currentTime = new Date().getTime();
+                const tapLength = currentTime - lastTap;
+                
+                if (tapLength < tapDelay && tapLength > 0) {
+                    action();
+                    event.preventDefault();
+                }
+                
+                lastTap = currentTime;
+            });
+        }
+        
+        function navegarAnterior() {
+            // Navegar al capítulo anterior
+            window.location.href = 'juan11.html';
+        }
+        
+        function navegarSiguiente() {
+            // Navegar al siguiente capítulo
+            window.location.href = 'juan13.html';
         }
     </script>
 
