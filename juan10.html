@@ -1,35 +1,119 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Juan 10</title>
-  <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
-	<link rel="stylesheet" href="style.css">
- 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan 9</title>
+    <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .texto-columna {
+            column-count: 1;
+            column-gap: 20px;
+            text-align: justify;
+            padding: 20px;
+        }
+        @media (min-width: 768px) {
+            .texto-columna {
+                column-count: 2;
+            }
+        }
+        /* Eliminamos .numero-verso para que el número sea igual al texto */
+    </style>
 </head>
 <body>
-	<div class="contenido">
-		<div class="titulo-superior-centralizado">
-			<h1>Juan 10</h1>
-			<div class="botones">
-			<button onclick="location.href='juan11.html'">▶️</button>
-		</div>
-		<div class="texto-columna">
-			<!-- Aquí va el contenido del capítulo -->
-<p></p>
-<div class="botones">
-		<button onclick="location.href='juan9.html'">◀️</button>
-			<button onclick="location.href='juan.html'">🏠</button>
-			<button onclick="location.href='juan11.html'">▶️</button>
-		</div>
-	</div>
+    <div class="contenido">
+        <div class="titulo-superior-centralizado">
+            <h1>Juan 9</h1>
+            <div class="botones">
+                <button onclick="location.href='juan8.html'">◀️</button>
+                <button onclick="location.href='juan.html'">🏠</button>
+                <button onclick="location.href='juan10.html'">▶️</button>
+            </div>
+        </div>
+        <div class="texto-columna" id="texto-capitulo">
+            <!-- El texto se insertará aquí automáticamente -->
+        </div>
+    </div>
+
+    <script>
+        // Texto de Juan 9 (versión Reina Valera, versos separados por \n)
+        const textoJuan9 = `
+1 Al pasar Jesús, vio a un hombre ciego de nacimiento.
+2 Y sus discípulos le preguntaron, diciendo: Rabí, ¿quién pecó, éste o sus padres, para que haya nacido ciego?
+3 Respondió Jesús: No es que pecó éste, ni sus padres, sino para que las obras de Dios se manifiesten en él.
+4 Me es necesario hacer las obras del que me envió, entre tanto que el día dura; la noche viene, cuando nadie puede trabajar.
+5 Entre tanto que estoy en el mundo, luz soy del mundo.
+6 Dicho esto, escupió en tierra, e hizo lodo con la saliva, y untó con el lodo los ojos del ciego,
+7 y le dijo: Ve a lavarte en el estanque de Siloé (que traducido es, Enviado). Fue entonces, y se lavó, y regresó viendo.
+8 Entonces los vecinos, y los que antes le habían visto que era ciego, decían: ¿No es éste el que se sentaba y mendigaba?
+9 Unos decían: Él es; y otros: A él se parece. El decía: Yo soy.
+10 Y le dijeron: ¿Cómo te fueron abiertos los ojos?
+11 Respondió él y dijo: Aquel hombre que se llama Jesús hizo lodo, y untó mis ojos, y me dijo: Ve al Siloé y lávate; y fui, y me lavé, y recibí la vista.
+12 Entonces le dijeron: ¿Dónde está él? El dijo: No sé.
+13 Llevaron ante los fariseos al que había sido ciego.
+14 Y era día de reposo cuando Jesús había hecho el lodo, y le había abierto los ojos.
+15 Volvieron, pues, a preguntarle también los fariseos cómo había recibido la vista. El les dijo: Me puso lodo sobre los ojos, y me lavé, y veo.
+16 Entonces algunos de los fariseos decían: Ese hombre no procede de Dios, porque no guarda el día de reposo. Otros decían: ¿Cómo puede un hombre pecador hacer estas señales? Y había disensión entre ellos.
+17 Volvieron a decirle al ciego: ¿Tú qué dices del que te abrió los ojos? Y él dijo: Que es profeta.
+18 Pero los judíos no creían que él había sido ciego, y que había recibido la vista, hasta que llamaron a los padres del que había recibido la vista.
+19 Y les preguntaron, diciendo: ¿Es éste vuestro hijo, el que vosotros decís que nació ciego? ¿Cómo, pues, ve ahora?
+20 Sus padres respondieron y les dijeron: Sabemos que éste es nuestro hijo, y que nació ciego;
+21 pero cómo vea ahora, no lo sabemos; o quién le haya abierto los ojos, nosotros tampoco lo sabemos; edad tiene, preguntadle a él; él hablará por sí mismo.
+22 Esto dijeron sus padres, porque tenían miedo de los judíos, por cuanto los judíos ya habían acordado que si alguno confesaba que Jesús era el Mesías, fuera expulsado de la sinagoga.
+23 Por eso dijeron sus padres: Edad tiene, preguntadle a él.
+24 Entonces volvieron a llamar al hombre que había sido ciego, y le dijeron: Da gloria a Dios; nosotros sabemos que ese hombre es pecador.
+25 Entonces él respondió y dijo: Si es pecador, no lo sé; una cosa sé, que habiendo yo sido ciego, ahora veo.
+26 Le volvieron a decir: ¿Qué te hizo? ¿Cómo te abrió los ojos?
+27 El les respondió: Ya os lo he dicho, y no habéis querido oír; ¿por qué lo queréis oír otra vez? ¿Queréis también vosotros haceros sus discípulos?
+28 Y le injuriaron, y dijeron: Tú eres su discípulo; pero nosotros somos discípulos de Moisés.
+29 Nosotros sabemos que Dios ha hablado a Moisés; pero respecto a ése, no sabemos de dónde sea.
+30 Respondió el hombre y les dijo: Pues esto es lo maravilloso, que vosotros no sepáis de dónde sea, y a mí me abrió los ojos.
+31 Y sabemos que Dios no oye a los pecadores; pero si alguno es temeroso de Dios, y hace su voluntad, a ése oye.
+32 Desde el principio no se ha oído decir que alguno abriese los ojos a uno que nació ciego.
+33 Si éste no viniera de Dios, nada podría hacer.
+34 Respondieron y le dijeron: Tú naciste del todo en pecado, ¿y nos enseñas a nosotros? Y le expulsaron.
+35 Oyó Jesús que le habían expulsado; y hallándole, le dijo: ¿Crees tú en el Hijo de Dios?
+36 Respondió él y dijo: ¿Quién es, Señor, para que crea en él?
+37 Le dijo Jesús: Pues le has visto, y el que habla contigo, él es.
+38 Y él dijo: Creo, Señor; y le adoró.
+39 Dijo Jesús: Para juicio he venido yo a este mundo; para que los que no ven, vean, y los que ven, sean cegados.
+40 Entonces algunos de los fariseos que estaban con él, al oír esto, le dijeron: ¿Acaso nosotros somos también ciegos?
+41 Jesús les dijo: Si fuerais ciegos, no tendríais pecado; mas ahora, porque decís: Vemos, vuestro pecado permanece.
+        `;
+
+        // Función para procesar el texto y agregar <p> a cada verso
+        function formatearVersos(texto) {
+            // Dividir el texto por saltos de línea
+            const versos = texto.trim().split('\n');
+            let htmlFinal = '';
+
+            // Recorrer cada verso y envolverlo en <p>
+            versos.forEach(verso => {
+                if (verso.trim() !== '') {
+                    // Extraer el número del versículo (primera palabra)
+                    const partes = verso.split(' ');
+                    const numVerso = partes[0];
+                    const textoVerso = partes.slice(1).join(' ');
+
+                    // Crear el HTML con <p> (sin clase especial para el número)
+                    htmlFinal += `<p>${numVerso} ${textoVerso}</p>`;
+                }
+            });
+
+            return htmlFinal;
+        }
+
+        // Insertar el texto formateado en el HTML
+        document.getElementById('texto-capitulo').innerHTML = formatearVersos(textoJuan9);
+    </script>
+
+    <!-- Footer -->
+    <div class="parte-inferior">
+        <div class="margen-azul">
+            <p>&copy; 2025 IN GOD WE TRUST</p>
+            <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+        </div>
+    </div>
 </body>
-<!-- Parte inferior con margen de linea azul cielo y texto de derechos reservados-->
-<div class="parte-inferior">
-  <div class="margen-azul">
-    <p>&copy; 2025 IN GOD WE TRUST</p>
-    <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
-  </div>
-</div>
 </html>
