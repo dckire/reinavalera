@@ -43,3 +43,31 @@
 
     <script>
         const textoJuan9 = `
+	
+`;
+
+        function formatearVersos(texto) {
+            const versos = texto.trim().split('\n');
+            let htmlFinal = '';
+            versos.forEach(verso => {
+                if (verso.trim() !== '') {
+                    const partes = verso.split(' ');
+                    const numVerso = partes[0];
+                    const textoVerso = partes.slice(1).join(' ');
+                    htmlFinal += `<p><span class="numero-verso">${numVerso}</span> ${textoVerso}</p>`;
+                }
+            });
+            return htmlFinal;
+        }
+
+        document.getElementById('texto-capitulo').innerHTML = formatearVersos(textoJuan9);
+    </script>
+
+    <div class="parte-inferior">
+        <div class="margen-azul">
+            <p>&copy; 2025 IN GOD WE TRUST</p>
+            <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+        </div>
+    </div>
+</body>
+</html>
