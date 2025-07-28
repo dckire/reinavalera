@@ -1,49 +1,41 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juan 13</title>
-    <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .texto-columna {
-            column-count: 1;
-            column-gap: 20px;
-            text-align: justify;
-            padding: 20px;
-        }
-        @media (min-width: 768px) {
-            .texto-columna {
-                column-count: 1;
-            }
-        
-       
-    </style>
-</head>
+
 <body>
     <div class="contenido">
         <div class="titulo-superior-centralizado">
-            <h1>Juan 13</h1>
-			<div class="botones">
-			<button onclick="location.href='juan14.html'">▶️</button>
-		</div>
-		 </div>
+            <h1>Juan 12</h1>
+        </div>
         <div class="texto-columna" id="texto-capitulo">
             <!-- El texto se insertará aquí -->
         </div>
         
-        <!-- Botones de navegación inferiores -->
-        <div class="botones">
-            <button onclick="location.href='juan12.html'">◀️</button>
-            <button onclick="location.href='juan.html'">🏠</button>
-            <button onclick="location.href='juan14.html'">▶️</button>
+        <!-- Zonas invisibles para navegación -->
+        <div class="zona-izquierda" id="zona-anterior"></div>
+        <div class="zona-derecha" id="zona-siguiente"></div>
+        
+        <!-- Indicador para el usuario -->
+        <div class="indicador-navegacion">
+            Doble toque izquierda: Anterior | Doble toque derecha: Siguiente
         </div>
     </div>
 
     <script>
-        const textoJuan9 = `
-	
+        const textoJuan12 = `
+Y JESUS, seis días antes de la  Pascua, vino a Bethania, donde estaba Lázaro, que había sido muerto, al cual había resucitado de los muertos.
+2 E hiciéronle allí una cena: y Marta servía, y Lázaro era uno de los que estaban sentados a la mesa juntamente con él
+3 Entonces María tomó duna libra de ungüento de nardo líquido de mucho precio, y Amgió los pies de Jesús, y limpio sus pies con sus cabellos: y la casa se llenó del olor del ungüento.
+4 Y dijo uno de sus discípulos, Judas Iscariote, hijo de Simón, el que le había de entregar:
+5 ¿Por qué no se ha vendido este ungüento por trescientos dineros, y se dió a los pobres?
+6 Mas dijo esto, no por el cuidado que él tenía de los pobres; sino porque era ladrón, y tenía la bolsa, y traía lo que se echaba en ella,
+7 Entonces Jesús dijo: Déjala: para el día de mi sepultura ha guardado esto;
+8 Porque a los pobres siempre los tenéis con vosotros, mas a mí no siempre me tenéis.
+9 Entonces mucha gente de los Judíos entendió que él estaba allí ; y vinieron no solamente por causa de Jesús, mas también por ver a Lázaro, "al cual había resucitado de los muertos.
+10 Consultaron asimismo los príncipes de los sacerdotes, de matar también a Lázaro;
+11 Porque muchos de los Judíos iban y creían en Jesús por causa de éL
+12 El siguiente día, mucha gente que había venido a la fiesta, como oyeron que Jesús venía a Jerusalem,
+13 Tomaron ramos de palmas, y salieron a recibirle, y clamaban: ¡Hosanna, Bendito el que viene en el nombre del Señor, el Rey de Israel!
+14 Y halló Jesús un asnillo, y se sentó sobre él, como está escrito:
+15 No temas, hija de Sión : he aquí tu Rey viene, sentado sobre un pollino de asna.
+16 Estas cosas uno las entendieron sus discípulos de primero: ^empero cuando Jesús fué glorificado, entonces se acordaron de que estas cosas
 `;
 
         function formatearVersos(texto) {
@@ -60,7 +52,46 @@
             return htmlFinal;
         }
 
-        document.getElementById('texto-capitulo').innerHTML = formatearVersos(textoJuan9);
+        document.getElementById('texto-capitulo').innerHTML = formatearVersos(textoJuan12);
+
+        // Configuración de navegación por zonas táctiles
+        const zonaAnterior = document.getElementById('zona-anterior');
+        const zonaSiguiente = document.getElementById('zona-siguiente');
+        
+        // Configurar detectores de doble toque para cada zona
+        setupDoubleTap(zonaAnterior, navegarAnterior);
+        setupDoubleTap(zonaSiguiente, navegarSiguiente);
+        
+        // También para clicks dobles en dispositivos con mouse
+        zonaAnterior.addEventListener('dblclick', navegarAnterior);
+        zonaSiguiente.addEventListener('dblclick', navegarSiguiente);
+        
+        function setupDoubleTap(element, action) {
+            let lastTap = 0;
+            const tapDelay = 300; // milisegundos entre toques para considerarlo doble toque
+            
+            element.addEventListener('touchend', function(event) {
+                const currentTime = new Date().getTime();
+                const tapLength = currentTime - lastTap;
+                
+                if (tapLength < tapDelay && tapLength > 0) {
+                    action();
+                    event.preventDefault();
+                }
+                
+                lastTap = currentTime;
+            });
+        }
+        
+        function navegarAnterior() {
+            // Navegar al capítulo anterior
+            window.location.href = 'juan11.html';
+        }
+        
+        function navegarSiguiente() {
+            // Navegar al siguiente capítulo
+            window.location.href = 'juan13.html';
+        }
     </script>
 
     <div class="parte-inferior">
