@@ -264,3 +264,47 @@ body {
         width: 50px; /* Tamaño de logo más pequeño para móviles */
     }
 }
+
+ .texto-columna {
+            column-count: 1;
+            column-gap: 20px;
+            text-align: justify;
+            padding: 20px;
+        }
+        @media (min-width: 768px) {
+            .texto-columna {
+                column-count: 1;
+            }
+        }
+        body {
+            touch-action: manipulation;
+            user-select: none;
+            -webkit-user-select: none;
+            margin: 0;
+            padding: 0;
+        }
+        .contenido {
+            min-height: 100vh;
+            position: relative;
+        }
+        .zona-izquierda, .zona-derecha {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            width: 50%;
+            z-index: 10;
+        }
+        .zona-izquierda {
+            left: 0;
+        }
+        .zona-derecha {
+            right: 0;
+        }
+        .indicador-navegacion {
+            position: fixed;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+        }
