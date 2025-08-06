@@ -1,48 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juan 10</title>
-    <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .texto-columna {
-            column-count: 1;
-            column-gap: 20px;
-            text-align: justify;
-            padding: 20px;
-        }
-        @media (min-width: 768px) {
-            .texto-columna {
-                column-count: 1;
-            }
-        
-       
-    </style>
-</head>
-<body>
-    <div class="contenido">
-        <div class="titulo-superior-centralizado">
-            <h1>Juan 10</h1>
-            <div class="botones">
-                
-                 <button onclick="location.href='juan11.html'">▶️</button>
-        </div>
-        <div class="texto-columna" id="texto-capitulo">
-            <!-- El texto se insertará aquí -->
-        </div>
-        
-        <!-- Botones de navegación inferiores -->
-        <div class="botones">
-            <button onclick="location.href='juan9.html'">◀️</button>
-            <button onclick="location.href='juan.html'">🏠</button>
-            <button onclick="location.href='juan11.html'">▶️</button>
-        </div>
-    </div>
 
-    <script>
-        const textoJuan9 = `
 DE cierto, de cierto os digo: El que no entra por la puerta en el corral de las ovejas, mas sube por otra parte, el tal es ladrón y robador.
 2 Mas el que entra por la puerta, el pastor de las ovejas es.
 3 A éste abre el portero, y las ovejas oyen su voz: y a sus ovejas llama por nombre, y las saca.
@@ -85,30 +41,4 @@ DE cierto, de cierto os digo: El que no entra por la puerta en el corral de las 
 40 Y volvióse tras el Jordán, a aquel lugar donde primero había estado bautizando Juan; y estúvose allí.
 41 Y muchos venían a él, y decían: Juan, a la verdad, ninguna señal hizo; mas todo lo que Juan dijo de éste, era verdad.
 42 Y muchos creyeron allí en él.
-        `;
-
-        function formatearVersos(texto) {
-            const versos = texto.trim().split('\n');
-            let htmlFinal = '';
-            versos.forEach(verso => {
-                if (verso.trim() !== '') {
-                    const partes = verso.split(' ');
-                    const numVerso = partes[0];
-                    const textoVerso = partes.slice(1).join(' ');
-                    htmlFinal += `<p><span class="numero-verso">${numVerso}</span> ${textoVerso}</p>`;
-                }
-            });
-            return htmlFinal;
-        }
-
-        document.getElementById('texto-capitulo').innerHTML = formatearVersos(textoJuan9);
-    </script>
-
-    <div class="parte-inferior">
-        <div class="margen-azul">
-            <p>&copy; 2025 IN GOD WE TRUST</p>
-            <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
-        </div>
-    </div>
-</body>
-</html>
+        
