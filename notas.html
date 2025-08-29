@@ -2,174 +2,458 @@
 <html lang="es">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-BYMJS3X12P');
-</script>
-	<meta name="google-site-verification" content="KWZFlVdcT-h9cB1Qnj0LgSLJP-J-NS4bgjhnQG_c140" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BYMJS3X12P');
+    </script>
+    <meta name="google-site-verification" content="KWZFlVdcT-h9cB1Qnj0LgSLJP-J-NS4bgjhnQG_c140" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notas Guardadas</title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/jpg" href="https://blogger.googleusercontent.com/img/a/AVvXsEhRmRJeDUnkwBIX_AXguL_SdzbzZPoWIMSLf15NABu2veTMQrV22bHxyDp3RnvJzbPvFcznYnrGZzy2x2j6G3ryP5SME8h48vsZPrlUIdCZhBMVsmH64UB53j3heH17pDmRmIhLZ2uqqR3Gr1OjJE942xXz_I1lq1dMLWYMGOpuK1TzjXp3ReAoiparsl8">
-    <link rel="stylesheet" href="style.css">
+    <title>Notas Bíblicas</title>
+    <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
-    background-image: url('https://images.ctfassets.net/lzny33ho1g45/66zDmwVz2N4aN4k589RRjB/36f5339cd45ed61b6560292a696e91d5/notes?w=1400');
+        :root {
+            --color-primary: #3a5e30;
+            --color-secondary: #8b5a2b;
+            --color-accent: #d4af37;
+            --color-light: #f8f4e9;
+            --color-dark: #1e1e1e;
+            --color-background: #0f1a0d;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            --transition: all 0.3s ease;
+        }
 
-    color: #000000; /* Texto en negro */
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-h1 {
-    color: #333; /* Título en gris oscuro */
-    margin-bottom: 20px;
-}
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--color-background);
+            color: var(--color-light);
+            line-height: 1.6;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%231a2716"/><path d="M0 0L100 100" stroke="%232c3e26" stroke-width="1"/><path d="M100 0L0 100" stroke="%232c3e26" stroke-width="1"/></svg>');
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
 
-#contenedor-notas {
-    max-width: 800px;
-    width: 100%;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: #000000; /* Texto en negro */
-}
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            flex: 1;
+        }
 
-textarea {
-    width: 100%;
-    height: 150px;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    resize: vertical;
-    color: #000000; /* Texto en negro */
-}
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-dark) 100%);
+            padding: 20px 0;
+            box-shadow: var(--shadow);
+        }
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #28a745;
-    color: white; /* Texto en blanco para botones */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-right: 10px;
-    transition: background-color 0.3s ease;
-}
+        .header-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
 
-button:hover {
-    background-color: #218838;
-}
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            transition: var(--transition);
+        }
 
-.nota {
-    background-color: white;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    position: relative;
-    animation: fadeIn 0.5s ease;
-    color: #000000; /* Texto en negro */
-}
+        .logo:hover {
+            transform: scale(1.05);
+        }
 
-.nota button {
-    background-color: #dc3545;
-    padding: 5px 10px;
-    font-size: 12px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    transition: background-color 0.3s ease;
-    color: white; /* Texto en blanco para botones */
-}
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid var(--color-accent);
+            transition: var(--transition);
+        }
 
-.nota button:hover {
-    background-color: #c82333;
-}
+        .logo:hover img {
+            border-color: var(--color-light);
+        }
 
-.nota p {
-    white-space: pre-line;
-    margin: 0;
-    color: #000000; /* Texto en negro */
-}
+        .logo h1 {
+            font-size: 2rem;
+            color: var(--color-light);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
 
-.parte-inferior {
-    width: 100%;
-    background-color: #e3f2fd;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: auto;
-    border-top: 2px solid #90caf9;
-    color: #000000; /* Texto en negro */
-}
+        /* Main Content */
+        .page-title {
+            text-align: center;
+            margin: 30px 0;
+            color: var(--color-accent);
+            font-size: 2.2rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
 
-.parte-inferior p {
-    margin: 0;
-    color: #000000; /* Texto en negro */
-}
+        .page-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--color-accent);
+        }
 
-.logo {
-    width: 50px;
-    height: auto;
-    margin-top: 10px;
-}
+        .notes-subtitle {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+        /* Navigation */
+        .navigation {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .nav-button {
+            padding: 12px 25px;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Notes Container */
+        .notes-container {
+            background: linear-gradient(135deg, rgba(58, 94, 48, 0.2) 0%, rgba(30, 30, 30, 0.7) 100%);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            margin-bottom: 40px;
+        }
+
+        .note-input {
+            width: 100%;
+            min-height: 150px;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--color-light);
+            font-size: 1rem;
+            resize: vertical;
+            margin-bottom: 20px;
+            transition: var(--transition);
+        }
+
+        .note-input:focus {
+            outline: none;
+            border-color: var(--color-accent);
+            box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.3);
+        }
+
+        .note-input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .buttons-container {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--color-light);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Notes List */
+        .notes-list {
+            display: grid;
+            gap: 20px;
+        }
+
+        .note-item {
+            background: rgba(30, 30, 30, 0.6);
+            border-radius: 8px;
+            padding: 20px;
+            border-left: 4px solid var(--color-accent);
+            position: relative;
+            animation: fadeIn 0.5s ease;
+            transition: var(--transition);
+        }
+
+        .note-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .note-text {
+            white-space: pre-line;
+            margin-bottom: 15px;
+            color: var(--color-light);
+        }
+
+        .note-date {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 15px;
+        }
+
+        .note-actions {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .btn-delete {
+            background-color: rgba(220, 53, 69, 0.8);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .btn-delete:hover {
+            background-color: rgba(200, 35, 51, 1);
+            transform: translateY(-2px);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 40px 20px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .empty-state i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: var(--color-accent);
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-dark) 100%);
+            padding: 30px 0;
+            margin-top: 50px;
+            border-top: 2px solid var(--color-accent);
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-logo:hover {
+            transform: scale(1.05);
+        }
+
+        .footer-logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .page-title {
+                font-size: 1.8rem;
+            }
+
+            .buttons-container {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .navigation {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 <body>
-    <div id="contenedor-notas">
-        <h1>Nueva Nota</h1>
-        <textarea id="entrada-nota" placeholder="Escribe tu nota aquí..."></textarea>
-        <button onclick="agregarNota()">Guardar Nota</button>
-        <button onclick="cargarNotas()">Ver Notas Guardadas</button>
-        <div id="lista-notas"></div>
-    </div>
-
-    <div class="parte-inferior">
-        <div class="margen-azul">
-            <p>&copy; 2025 IN GOD WE TRUST</p>
-            <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo IN GOD WE TRUST">
+                
+            </a>
         </div>
-    </div>
+    </header>
+
+    <main class="container">
+        <h2 class="page-title">Notas Bíblicas</h2>
+        <p class="notes-subtitle">Guarda tus reflexiones, estudios y notas espirituales</p>
+
+       
+
+        <div class="notes-container">
+            <textarea class="note-input" id="entrada-nota" placeholder="Escribe tu nota aquí... Puedes incluir versículos, reflexiones o ideas para estudiar después."></textarea>
+
+            <div class="buttons-container">
+                <button class="btn btn-primary" onclick="agregarNota()">
+                    <i class="fas fa-save"></i> Guardar Nota
+                </button>
+                <button class="btn btn-secondary" onclick="cargarNotas()">
+                    <i class="fas fa-book-open"></i> Ver Notas Guardadas
+                </button>
+                <button class="btn btn-secondary" onclick="limpiarNotas()">
+                    <i class="fas fa-trash-alt"></i> Limpiar Todo
+                </button>
+            </div>
+
+            <div id="lista-notas" class="notes-list">
+                <!-- Las notas se cargarán aquí -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <a href="index.html" class="footer-logo">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+                
+                </a>
+                <p>Guardando la Palabra en nuestro corazón</p>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 IN GOD WE TRUST. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
 
     <script>
         // Función para agregar una nueva nota
         function agregarNota() {
             const textoNota = document.getElementById('entrada-nota').value.trim();
             if (textoNota === "") {
-                alert("Por favor, escribe algo en la nota.");
+                mostrarAlerta("Por favor, escribe algo en la nota.", "warning");
                 return;
             }
 
             // Obtener notas existentes
             const notas = JSON.parse(localStorage.getItem('notas')) || [];
 
+            // Crear objeto de nota con fecha
+            const nuevaNota = {
+                texto: textoNota,
+                fecha: new Date().toLocaleString('es-ES')
+            };
+
             // Agregar la nueva nota
-            notas.push(textoNota);
+            notas.push(nuevaNota);
 
             // Guardar en localStorage
             localStorage.setItem('notas', JSON.stringify(notas));
@@ -178,7 +462,10 @@ button:hover {
             document.getElementById('entrada-nota').value = "";
 
             // Mostrar mensaje de éxito
-            alert("Nota guardada correctamente.");
+            mostrarAlerta("Nota guardada correctamente.", "success");
+
+            // Recargar notas
+            cargarNotas();
         }
 
         // Función para cargar y mostrar las notas
@@ -187,12 +474,30 @@ button:hover {
             const listaNotas = document.getElementById('lista-notas');
             listaNotas.innerHTML = ""; // Limpiar la lista
 
-            notas.forEach((nota, index) => {
+            if (notas.length === 0) {
+                listaNotas.innerHTML = `
+                    <div class="empty-state">
+                        <i class="fas fa-sticky-note"></i>
+                        <h3>No hay notas guardadas</h3>
+                        <p>Comienza agregando tu primera nota usando el campo de texto arriba.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            // Mostrar notas en orden inverso (más recientes primero)
+            notas.reverse().forEach((nota, index) => {
+                const notaIndex = notas.length - 1 - index; // Índice original para eliminar
                 const divNota = document.createElement('div');
-                divNota.className = 'nota';
+                divNota.className = 'note-item';
                 divNota.innerHTML = `
-                    <p>${nota.replace(/\n/g, '<br>')}</p>
-                    <button onclick="eliminarNota(${index})">Eliminar</button>
+                    <div class="note-text">${nota.texto.replace(/\n/g, '<br>')}</div>
+                    <div class="note-date"><i class="far fa-clock"></i> ${nota.fecha}</div>
+                    <div class="note-actions">
+                        <button class="btn-delete" onclick="eliminarNota(${notaIndex})">
+                            <i class="fas fa-trash"></i> Eliminar
+                        </button>
+                    </div>
                 `;
                 listaNotas.appendChild(divNota);
             });
@@ -201,10 +506,65 @@ button:hover {
         // Función para eliminar una nota
         function eliminarNota(index) {
             const notas = JSON.parse(localStorage.getItem('notas')) || [];
-            notas.splice(index, 1); // Eliminar la nota del array
+
+            // Convertir índice (las mostramos en orden inverso)
+            const realIndex = notas.length - 1 - index;
+
+            notas.splice(realIndex, 1); // Eliminar la nota del array
             localStorage.setItem('notas', JSON.stringify(notas)); // Actualizar localStorage
             cargarNotas(); // Recargar la lista de notas
+
+            mostrarAlerta("Nota eliminada correctamente.", "success");
         }
+
+        // Función para limpiar todas las notas
+        function limpiarNotas() {
+            if (confirm("¿Estás seguro de que quieres eliminar todas las notas? Esta acción no se puede deshacer.")) {
+                localStorage.removeItem('notas');
+                cargarNotas();
+                mostrarAlerta("Todas las notas han sido eliminadas.", "success");
+            }
+        }
+
+        // Función para mostrar alertas
+        function mostrarAlerta(mensaje, tipo) {
+            // Crear elemento de alerta
+            const alerta = document.createElement('div');
+            alerta.style.position = 'fixed';
+            alerta.style.top = '20px';
+            alerta.style.right = '20px';
+            alerta.style.padding = '15px 20px';
+            alerta.style.borderRadius = '5px';
+            alerta.style.color = 'white';
+            alerta.style.fontWeight = '600';
+            alerta.style.zIndex = '1000';
+            alerta.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+            alerta.style.animation = 'fadeIn 0.3s ease';
+
+            if (tipo === 'success') {
+                alerta.style.background = 'linear-gradient(135deg, #3a5e30 0%, #4c7a3a 100%)';
+            } else if (tipo === 'warning') {
+                alerta.style.background = 'linear-gradient(135deg, #d4af37 0%, #e0ba45 100%)';
+            } else {
+                alerta.style.background = 'linear-gradient(135deg, #8b5a2b 0%, #a56a3b 100%)';
+            }
+
+            alerta.textContent = mensaje;
+            document.body.appendChild(alerta);
+
+            // Eliminar alerta después de 3 segundos
+            setTimeout(() => {
+                alerta.style.animation = 'fadeIn 0.3s ease reverse';
+                setTimeout(() => {
+                    document.body.removeChild(alerta);
+                }, 300);
+            }, 3000);
+        }
+
+        // Cargar notas al iniciar la página
+        document.addEventListener('DOMContentLoaded', function() {
+            cargarNotas();
+        });
     </script>
 </body>
 </html>
