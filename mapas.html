@@ -1,420 +1,1230 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BYMJS3X12P');
+    </script>
+    <meta name="google-site-verification" content="KWZFlVdcT-h9cB1Qnj0LgSLJP-J-NS4bgjhnQG_c140" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapas Bíblicos - Colección Completa</title>
+    <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --color-primary: #3a5e30;
+            --color-secondary: #8b5a2b;
+            --color-accent: #d4af37;
+            --color-light: #f8f4e9;
+            --color-dark: #1e1e1e;
+            --color-background: #0f1a0d;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--color-background);
+            color: var(--color-light);
+            line-height: 1.6;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%231a2716"/><path d="M0 0L100 100" stroke="%232c3e26" stroke-width="1"/><path d="M100 0L0 100" stroke="%232c3e26" stroke-width="1"/></svg>');
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-dark) 100%);
+            padding: 20px 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid var(--color-accent);
+        }
+        
+        .logo h1 {
+            font-size: 1.8rem;
+            color: var(--color-light);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* Navigation */
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+        
+        nav a {
+            color: var(--color-light);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: var(--transition);
+        }
+        
+        nav a:hover, nav a.active {
+            background-color: var(--color-accent);
+            color: var(--color-dark);
+        }
+        
+        /* Search Bar */
+        .search-container {
+            margin: 20px 0;
+            position: relative;
+        }
+        
+        .search-container input {
+            width: 100%;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 30px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--color-light);
+            font-size: 1rem;
+            padding-left: 45px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .search-container i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--color-accent);
+        }
+        
+        /* Categories */
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .category-btn {
+            padding: 8px 15px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--color-light);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .category-btn:hover, .category-btn.active {
+            background-color: var(--color-accent);
+            color: var(--color-dark);
+        }
+        
+        /* Map Grid */
+        .maps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .map-card {
+            background: linear-gradient(135deg, rgba(58, 94, 48, 0.2) 0%, rgba(30, 30, 30, 0.7) 100%);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        .map-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            border-color: var(--color-accent);
+        }
+        
+        .map-image {
+            position: relative;
+            overflow: hidden;
+            height: 200px;
+        }
+        
+        .map-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .map-card:hover .map-image img {
+            transform: scale(1.05);
+        }
+        
+        .map-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            padding: 15px;
+            color: white;
+        }
+        
+        .map-content {
+            padding: 20px;
+        }
+        
+        .map-content h2 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--color-accent);
+        }
+        
+        .map-content p {
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .map-toggle {
+            background: none;
+            border: none;
+            color: var(--color-accent);
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 0;
+            margin-top: 10px;
+        }
+        
+        .map-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+        
+        .map-details.active {
+            max-height: 1000px;
+        }
+        
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .lightbox.active {
+            display: flex;
+        }
+        
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+        }
+        
+        .lightbox-content img {
+            max-width: 100%;
+            max-height: 100%;
+            border: 3px solid var(--color-accent);
+            border-radius: 5px;
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .lightbox-close:hover {
+            color: var(--color-accent);
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-dark) 100%);
+            padding: 30px 0;
+            margin-top: 50px;
+            border-top: 2px solid var(--color-accent);
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .footer-logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .maps-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
 
-  gtag('config', 'G-BYMJS3X12P');
-</script>
-	<meta name="google-site-verification" content="KWZFlVdcT-h9cB1Qnj0LgSLJP-J-NS4bgjhnQG_c140" />
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Mapas</title>
-  <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
-	<link rel="stylesheet" href="style.css">
-  <style>
-    body {
-        background-color: black;
-      font-family: Arial, sans-serif;
-      margin: 20px;
-    }
-    
-    .mapa {
-      margin-bottom: 20px;
-    }
-    
-    .mapa img {
-      width: 100%;
-      height: auto;
-      border: 1px solid #ddd;
-    }
-    
-    .mapa h2 {
-        color: hsl(0, 33%, 97%);
-      margin-top: 0;
-    }
+        /* Estilos para secciones ocultas */
+        .section {
+            display: none;
+        }
+        
+        .section.active {
+            display: block;
+        }
 
-    p {
-       color: hsl(0, 33%, 97%);
-      margin-top: 0;
-    }
-
-  </style>
+        /* Botón volver arriba */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--color-accent);
+            color: var(--color-dark);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            background-color: var(--color-light);
+        }
+    </style>
 </head>
 <body>
-  <h1>Mapas Bíblicos</h1>
-<div class="mapa">
-    <h2>la Tierra Santa</h2>
-    <img src="https://www.churchofjesuschrist.org/imgs/e08b9e0bb610226859d39ffbce081568f75ce1e0/full/!1600%2C/0/default" alt="la Tierra Santa">
-  <p></p>
-  </div>
-  <div class="mapa">
-    <h2>El éxodo de los Israelitas de Egipto y su entrada en Canaán</h2>
-    <img src="https://www.churchofjesuschrist.org/imgs/8745c13da5538c06052f909c06ee9fb524e8f54a/full/!1600%2C/0/default" alt="#">
-    <p>1 Ramesés Israel fue sacado de Egipto (Éx. 12; Núm. 33:5).</p>
-
-<p>2 Sucot Después que los hebreos partieron de este, que fue su primer campamento, Jehová los guio desde una columna de nube de día y desde una columna de fuego de noche (Éx. 13:20–22).</p>
-
-<p>3 Pihahiroth Israel cruzó el mar Rojo <a href="https://dckire.github.io/reinavalera/exodo14.html#:~:text=2%20Habla%20a%20los%20hijos%20de%20Israel%20que%20den%20la%20vuelta%2C%20y%20asienten%20su%20campo%20delante%20de%20Pihahiroth%2C%20entre%20Migdol%20y%20la%20mar%20hacia%20Baalzeph%C3%B3n%3A%20delante%20de%20%C3%A9l%20asentar%C3%A9is%20el%20campo%2C%20junto%20a%20la%20mar.">(Éx. 14:2</a> <a href="">Núm. 33:8).</a></p>
-
-<p>4 Mara El Señor sanó las aguas de Mara (Éx. 15:23–26).</p>
-
-<p>5 Elim Israel acampó junto a las doce fuentes de aguas (Éx. 15:27).</p>
-
-<p>6 Desierto de Sin El Señor mandó maná y codornices para alimentar a Israel (Éx. 16).</p>
-
-<p>7 Refidim Israel luchó contra Amalec (Éx. 17:8–16).</p>
-
-<p>8 Monte Sinaí (monte Horeb o Jebel Musa) El Señor reveló los Diez Mandamientos (Éx. 19–20).</p>
-
-<p>9 Desierto de Sinaí Israel construyó el tabernáculo (Éx. 25–30).</p>
-
-<p>10 Campamentos en el desierto Se llamó a setenta ancianos para ayudar a Moisés en el gobierno del pueblo (Núm. 11:16–17).</p>
-
-<p>11 Ezión-geber Israel atravesó pacíficamente las tierras de Esaú y de Amón (Deut. 2).</p>
-
-<p>12 Cades-barnea Moisés envió espías a la tierra prometida; Israel se rebeló y no pudo entrar en la tierra; Cades sirvió de campamento principal para Israel durante muchos años (Núm. 13:1–3, 17–33; 14; 32:8; Deut. 2:14).</p>
-
-<p>13 Desierto oriental Israel evitó entrar en conflicto con Edom y Moab (Núm. 20:14–21; 22–24).</p>
-
-<p>14 Río Arnón Israel destruyó a los amorreos que lucharon contra él (Deut. 2:24–37).</p>
-
-<p>15 Monte Nebo Moisés contempló la tierra prometida (Deut. 34:1–4) y pronunció sus tres últimos discursos (Deut. 1–32).</p>
-
-<p>16 Llanura de Moab Jehová dijo a Israel que dividiera la tierra y echara a sus habitantes (Núm. 33:50–56).</p>
-
-<p>17 Río Jordán Israel cruzó el río Jordán sobre tierra seca. Cerca de Gilgal se colocaron piedras del lecho del río Jordán en conmemoración de la división de sus aguas (Josué 3:1–5:1).</p>
-
-<p>18 Jericó Los hijos de Israel tomaron la ciudad y la destruyeron (Josué 6).</p>
-  </div>
-  <div class="mapa">
-    <h2>La división de las Doce Tribus</h2>
-    <img src="https://www.churchofjesuschrist.org/imgs/2381f656db21901cdc97de983c989dd414c4c17e/full/!1600%2C/0/default" alt="La división de las Doce Tribus">
-  <p></p>
-  </div>
-  <div class="mapa">
-    <h2>El Imperio de David y de Salomón</h2>
-    <img src="https://www.churchofjesuschrist.org/imgs/3dc5dabbbc1202f474d5ef2a3b358e7991c373ec/full/!1600%2C/0/default" alt="El Imperio de David y de Salomón">
-    <p></p>
-  </div>
-  <div class="mapa">
-    <h2>El Imperio Asirio</h2>
-    <img src="https://www.churchofjesuschrist.org/imgs/638264ff2b2d0daf0fdf61a48bfe761b2694f605/full/!1600%2C/0/default" alt="El Imperio Asirio">
-    <p></p>
-  </div>
-  <div class="mapa">
-    <h2>El nuevo Imperio Babilónico y el reino de Egipto</h2>
-    <img src="https://www.churchofjesuschrist.org/imgs/eb23b24041b3b5eaf0958c1993071a5088307ee2/full/!1600%2C/0/default" alt="El nuevo Imperio Babilónico y el reino de Egipto">
-    <p></p>
-  </div>
-   <div class="mapa">
-    <h2>El Imperio Persa</h2>
-    <img src="https://www.churchofjesuschrist.org/imgs/66f47dba4b07f62e6d239a4056d4eca46f0e3dfc/full/!1600%2C/0/default" alt="El Imperio Persa">
-    <p></p>
-  </div>
-  <div class="mapa">
-    <h2> El Imperio Romano</h2>
-    <img src="https://www.churchofjesuschrist.org/imgs/649fbacd6c059150c88e04578b9dd834e2d7d62f/full/!1600%2C/0/default" alt="8. El Imperio Romano">
-    <p></p>
-  </div>
-  <div class="mapa">
-    <h2>El mundo del Antiguo Testamento</h2>
-    <img src="https://www.churchofjesuschrist.org/imgs/841da514ca6aae1f5bb6829bf6f30862b62b0c99/full/!1600%2C/0/default" alt="El mundo del Antiguo Testamento">
-    <p>1 Monte Ararat Lugar donde, según la tradición, reposó el arca de Noé (Gén. 8:4). Se desconoce la ubicación exacta.</p>
-
-<p>2 Ur Tierra natal de Abraham, cerca de la desembocadura del Éufrates, donde estuvo a punto de ser la víctima de un sacrificio humano, vio al ángel de Jehová y recibió el Urim y Tumim (Gén. 11:28–12:1; Abr. 1; 3:1). (Nótese también otro posible sitio de Ur al norte de Mesopotamia).</p>
-
-<p>3 Babilonia, Babel (Sinar) Fue habitada en el principio por Cus hijo de Cam, y por Nimrod. Zona de origen de los jareditas en la época de la Torre de Babel, en las llanuras de Sinar. Posteriormente fue la capital provincial de Babilonia y residencia de los reyes babilonios, aun de Nabucodonosor, quien llevó a muchos judíos cautivos a dicha ciudad tras la destrucción de Jerusalén (587 a.C.). Los judíos estuvieron cautivos en Babilonia durante setenta años hasta la época del rey Ciro, quien les permitió regresar a Jerusalén para reedificar el templo. Daniel el profeta vivió allí durante el reinado de Nabucodonosor, de Belsasar y de Darío Ⅰ (Gén. 10:10; 11:1–9; 2 Rey. 24–25; Jer. 27:1–29:10; Ezeq. 1:1; Dan. 1–12; Omni 1:22; Éter 1:33–43).</p>
-
-<p>4 Susa Capital del imperio persa bajo el reinado de Darío Ⅰ (Darío el Grande), de Jerjes (Asuero) y de Artajerjes. Lugar de residencia de la reina Ester, cuyo valor y fe salvaron a los judíos. Daniel, y posteriormente Nehemías, también sirvieron allí (Neh. 1:1; 2:1; Ester 1:1; Dan. 8:2).</p>
-
-<p>5 Llanura de Dura Sadrac, Mesac y Abed-nego fueron echados a un horno de fuego ardiendo cuando se negaron a adorar la imagen de oro de Nabucodonosor; el Hijo de Dios los preservó y salieron del horno sin ningún daño (Dan. 3).</p>
-
-<p>6 Asiria Asur fue la primera capital de Asiria, y después lo fue Nínive. Los gobernantes asirios Salmanasar Ⅴ y Sargón Ⅱ conquistaron el reino del norte de Israel y se llevaron cautivas a las diez tribus en el año 721 a.C. (2 Rey. 14–15; 17–19). Asiria fue una amenaza para Judá hasta el año 612 a.C., cuando Asiria fue conquistada por Babilonia.</p>
-
-<p>7 Nínive Capital de Asiria. Asiria atacó la tierra de Judá durante el reinado de Ezequías y el ministerio del profeta Isaías. Jerusalén, capital de Judá, se salvó milagrosamente cuando un ángel mató a 185.000 soldados asirios (2 Rey. 19:32–37). El Señor dijo al profeta Jonás que llamara a esta ciudad al arrepentimiento (Jonás 1:2; 3:1–4).</p>
-
-<p>8 Harán Abraham se estableció allí por un tiempo antes de dirigirse a Canaán. Su padre y su hermano se quedaron en este lugar. Rebeca (esposa de Isaac), Raquel, Lea, Bilha y Zilpa (esposas de Jacob), procedían de esta zona (Gén. 11:31–32; 24:10; 29:4–6; Abr. 2:4–5).</p>
-
-<p>9 Carquemis El faraón Necao fue derrotado por Nabucodonosor en este lugar, con lo que se puso fin al poder de Egipto en Canaán (2 Cró. 35:20–36:6).</p>
-
-<p>10 Sidón Esta ciudad fue fundada por Sidón, nieto de Cam, y es la ciudad cananea situada más al norte (Gén. 10:15–20). Fue residencia de Jezabel, quien introdujo la adoración de Baal en Israel (1 Rey. 16:30–33).</p>
-
-<p>11 Tiro Fue una importante ciudad comercial y portuaria de Siria. Hiram de Tiro envió madera de cedro, oro y artesanos para ayudar a Salomón en la construcción del templo (1 Rey. 5:1–10, 18; 9:11).</p>
-
-<p>12 Damasco Abraham rescató a Lot cerca de allí. Era la ciudad principal de Siria. Los israelitas conquistaron la ciudad durante el reinado del rey David. Elías el Profeta ungió a Hazael para ser rey de Damasco (Gén. 14:14–15; 2 Sam. 8:5–6; 1 Rey. 19:15).</p>
-
-<p>13 Canaán A Abraham, a Isaac, a Jacob y a sus descendientes se les dio esta tierra por posesión eterna (Gén. 17:8; 28).<p>
-
-<p>14 Monte Sinaí (Horeb) Allí el Señor habló a Moisés desde una zarza ardiendo (Éx. 3:1–2). Moisés recibió allí la Ley y los Diez Mandamientos (Éx. 19–20). El Señor habló a Elías el Profeta con un silbo apacible y delicado (1 Rey. 19:8–12).</p>
-
-<p>15 Ezión-geber El rey Salomón construyó una flota de naves en este lugar (1 Rey. 9:26). Probablemente la reina de Sabá haya desembarcado en este puerto para ir a ver a Salomón tras haber oído de su fama (1 Rey. 10:1–13).</p>
-
-<p>16 Egipto Abraham se trasladó allí debido a que se agravó el hambre en Ur (Abr. 2:1, 21). El Señor le dijo a Abraham que enseñara a los egipcios lo que Él le había revelado (Abr. 3:15). Después que los hermanos de José lo vendieron como esclavo (Gén. 37:28), José se convirtió allí en el mayordomo principal de la casa de Potifar; fue encarcelado, interpretó el sueño de Faraón y se le concedió un cargo de autoridad en Egipto. José y sus hermanos se encontraron nuevamente en este país, a donde se trasladaron Jacob y su familia (Gén. 39–46). Los hijos de Israel moraron en Gosén durante su permanencia en Egipto (Gén. 47:6).
-
- Los israelitas se multiplicaron y se fortalecieron “en extremo”; posteriormente, fueron hechos cautivos por los egipcios (Éx. 1:7–14), pero tras una serie de plagas, Faraón permitió que Israel abandonara Egipto (Éx. 12:31–41). Jeremías fue llevado a Egipto (Jer. 43:4–7).</p>
-
-  <p>17 Caftor (Creta) La antigua tierra de los minoicos.</p>
-  </div>
-  <div class="mapa">
-    <h2>Canaán en los tiempos del Antiguo Testamento</h2>
-    <img src="https://www.churchofjesuschrist.org/imgs/831a6634b4a0182696ba6f168e2b1842bbea6615/full/!1600%2C/0/default" alt="Canaán en los tiempos del Antiguo Testamento">
-    <p>1 Dan (Lais) Jeroboam mandó construir un becerro de oro para que el reino del norte lo adorara (1 Rey. 12:26–33). Dan era el límite norte del antiguo Israel.</p>
-
-<p>2 Monte Carmelo Elías el Profeta desafió a los profetas de Baal e hizo descender lluvia del cielo (1 Rey. 18:17–46).</p>
-
-<p>3 Meguido Un lugar de muchas batallas (Jue. 4:13–16; 5:19; 2 Rey. 23:29; 2 Cró. 35:20–23). Salomón decretó una leva para edificar Meguido (1 Rey. 9:15). El rey Josías, rey de Judá, resultó mortalmente herido en una batalla contra el faraón Necao, de Egipto (2 Rey. 23:29–30). En el tiempo de la segunda venida del Señor, tendrá lugar un gran conflicto final en el valle de Jezreel, que será parte de la batalla de Armagedón (Joel 3:14; Apoc. 16:16; 19:11–21). El nombre Armagedón es una transliteración griega del hebreo Har Megiddon, que significa montaña de Meguido.</p>
-
-<p>4 Jezreel Nombre de una ciudad situada en el valle del mismo nombre, el más grande y más fértil de Israel. Los reyes del reino del norte construyeron un palacio allí (2 Sam. 2:8–9; 1 Rey. 21:1–2). La inicua reina Jezabel vivió y murió en este sitio (1 Rey. 21; 2 Rey. 9:30).</p>
-
-<p>5 Bet-sán Israel enfrentó a los cananeos en este lugar (Josué 17:12–16). En el muro de este fuerte se colgó el cuerpo de Saúl (1 Sam. 31:10–13).</p>
-
-<p>6 Dotán José fue vendido como esclavo por sus hermanos (Gén. 37:17, 28; 45:4). Eliseo tuvo una visión de la montaña llena de gente a caballo y de carros de fuego (2 Rey. 6:12–17).</p>
-
-<p>7 Samaria Capital del reino del norte (1 Rey. 16:24–29). El rey Acab construyó un templo a Baal (1 Rey. 16:32–33). Elías el Profeta y Eliseo ministraron allí (1 Rey. 18:2; 2 Rey. 6:19–20). Los asirios la conquistaron en el año 721 a.C., y llevaron cautivos a las diez tribus (2 Rey. 18:9–10).</p>
-
-<p>8 Siquem Abraham edificó un altar allí (Gén. 12:6–7). Jacob vivió cerca de allí. Simeón y Leví mataron a todos los varones de esta ciudad (Gén. 34:25). En Siquem, Josué arengó al pueblo a que escogiera servir a Dios (Josué 24:15). Jeroboam estableció allí la primera capital del reino del norte (1 Rey. 12).</p>
-
-<p>9 Monte Ebal y monte Gerizim Josué dividió Israel en estos dos montes: las bendiciones de la ley se proclamaron en el monte Gerizim, mientras que las maldiciones se pronunciaron en el monte Ebal (Josué 8:33). Más tarde, los samaritanos construyeron un templo en Gerizim (2 Rey. 17:32–33).</p>
-
-<p>10 Penuel (Peniel) Allí luchó Jacob toda la noche con un mensajero del Señor (Gén. 32:24–32). Gedeón derribó una torre madianita (Jue. 8:5, 8–9).</p>
-
-<p>11 Jope Jonás se embarcó allí para dirigirse a Tarsis y huir de su misión a Nínive (Jonás 1:1–3).</p>
-
-<p>12 Silo Durante el tiempo de los jueces, era la capital de Israel y el tabernáculo se hallaba allí (1 Sam. 4:3–4).</p>
-
-<p>13 Betel (Luz) Allí fue donde Abraham se separó de Lot (Gén. 13:1–11) y tuvo una visión (Gén. 13; Abr. 2:19–20). Jacob tuvo la visión de una escalera que llegaba al cielo (Gén. 28:10–22). El tabernáculo estuvo allí durante un tiempo (Jue. 20:26–28). Jeroboam mandó construir un becerro de oro para que el reino del norte lo adorara (1 Rey. 12:26–33).</p>
-
-<p>14 Gabaón Los heveos de este lugar engañaron a Josué para concertar un tratado (Josué 9). El sol se detuvo mientras Josué ganaba una batalla (Josué 10:2–13). También fue ese un lugar provisional para el tabernáculo (1 Cró. 16:39).</p>
-
-<p>15 Gaza, Asdod, Ascalón, Ecrón y Gat (las cinco ciudades filisteas) Los filisteos guerreaban con Israel con frecuencia desde estas ciudades.</p>
-
-<p>16 Belén Raquel quedó enterrada cerca de allí (Gén. 35:19). Rut y Booz vivieron en este lugar (Rut 1:1–2; 2:1, 4). Se le llamó la ciudad de David (Lucas 2:4).</p>
-
-<p>17 Hebrón Abraham (Gén. 13:18), Isaac, Jacob (Gén. 35:27), David (2 Sam. 2:1–4) y Absalón (2 Sam. 15:10) vivieron allí. Fue la primera capital de Judá durante el reinado de David (2 Sam. 2:11). Se cree que Abraham, Sara, Isaac, Rebeca, Jacob y Lea fueron enterrados en la cueva de Macpela (Gén. 23:17–20; 49:31, 33).</p>
-
-<p>18 En-gadi David se escondió allí de Saúl y le perdonó la vida (1 Sam. 23:29–24:22).</p>
-
-<p>19 Gerar Abraham e Isaac vivieron allí durante un tiempo (Gén. 20–22; 26).</p>
-
-<p>20 Beerseba Abraham cavó un pozo en este sitio e hizo convenio con Abimelec (Gén. 21:31). Isaac vio al Señor (Gén. 26:17, 23–24) y Jacob vivió allí (Gén. 35:10; 46:1).</p>
-
-<p>21 Sodoma y Gomorra Lot decidió vivir en Sodoma (Gén. 13:11–12; 14:12). Dios destruyó ambas ciudades por motivo de su iniquidad (Gén. 19:24–26). Posteriormente, Jesús empleó estas ciudades como símbolos de maldad (Mateo 10:15).</p>
-  </div>
-  <div class="mapa">
-    <h2>!mas mapas aqui!</h2>
-    <img src="#" alt="Mapas">
-    <p></p>
-  </div>
-  <!DOCTYPE html>
-<html>
-<head>
-  <title>Mapas Bíblicos</title>
-  <style>
-    body {
-        background-color: black;
-      font-family: Arial, sans-serif;
-      margin: 20px;
-    }
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo Mapas Bíblicos">
+                <h1>Mapas Bíblicos</h1>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="#" class="active nav-link" data-section="inicio">Inicio</a></li>
+                    <li><a href="#" class="nav-link" data-section="antiguo-testamento">Antiguo Testamento</a></li>
+                    <li><a href="#" class="nav-link" data-section="nuevo-testamento">Nuevo Testamento</a></li>
+                    <li><a href="#" class="nav-link" data-section="imperios">Imperios</a></li>
+                    <li><a href="#" class="nav-link" data-section="recorridos">Recorridos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     
-    .mapa {
-      margin-bottom: 20px;
-    }
+    <main class="container">
+        <!-- Sección de Inicio -->
+        <section id="inicio" class="section active">
+            <div class="search-container">
+                <i class="fas fa-search"></i>
+                <input type="text" id="search-input" placeholder="Buscar mapas...">
+            </div>
+            
+            <div class="categories">
+                <button class="category-btn active" data-category="todos">Todos</button>
+                <button class="category-btn" data-category="tierra-santa">Tierra Santa</button>
+                <button class="category-btn" data-category="exodo">Éxodo</button>
+                <button class="category-btn" data-category="tribus">Tribus</button>
+                <button class="category-btn" data-category="imperios">Imperios</button>
+                <button class="category-btn" data-category="nuevo-testamento">Nuevo Testamento</button>
+            </div>
+            
+            <div class="maps-grid">
+                <!-- Mapa 1 - Tierra Santa -->
+                <div class="map-card" data-category="tierra-santa">
+                    <div class="map-image">
+                        <img src="https://www.churchofjesuschrist.org/imgs/e08b9e0bb610226859d39ffbce081568f75ce1e0/full/!1600%2C/0/default" alt="La Tierra Santa">
+                        <div class="map-overlay">
+                            <h2>La Tierra Santa</h2>
+                        </div>
+                    </div>
+                    <div class="map-content">
+                        <p>Mapa que muestra la región bíblica de la Tierra Santa con sus principales lugares históricos.</p>
+                        <button class="map-toggle" onclick="toggleDetails(this)">
+                            Ver detalles <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="map-details">
+                            <p>La Tierra Santa es la región donde se desarrollaron la mayoría de los eventos bíblicos, con lugares significativos como Jerusalén, Belén, Nazaret y el Mar de Galilea.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mapa 2 - Éxodo -->
+                <div class="map-card" data-category="exodo">
+                    <div class="map-image">
+                        <img src="https://www.churchofjesuschrist.org/imgs/8745c13da5538c06052f909c06ee9fb524e8f54a/full/!1600%2C/0/default" alt="El éxodo de los Israelitas">
+                        <div class="map-overlay">
+                            <h2>El Éxodo de Israel</h2>
+                        </div>
+                    </div>
+                    <div class="map-content">
+                        <p>Ruta del Éxodo de los Israelitas desde Egipto hasta la Tierra Prometida.</p>
+                        <button class="map-toggle" onclick="toggleDetails(this)">
+                            Ver detalles <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="map-details">
+                            <p>1 Ramesés - Israel fue sacado de Egipto (Éx. 12; Núm. 33:5).</p>
+                            <p>2 Sucot - Después que los hebreos partieron de este, que fue su primer campamento, Jehová los guio desde una columna de nube de día y desde una columna de fuego de noche (Éx. 13:20–22).</p>
+                            <p>3 Pihahiroth - Israel cruzó el mar Rojo (Éx. 14:2; Núm. 33:8).</p>
+                            <p>4 Mara - El Señor sanó las aguas de Mara (Éx. 15:23–26).</p>
+                            <p>5 Elim - Israel acampó junto a las doce fuentes de aguas (Éx. 15:27).</p>
+                            <p>6 Desierto de Sin - El Señor mandó maná y codornices para alimentar a Israel (Éx. 16).</p>
+                            <p>7 Refidim - Israel luchó contra Amalec (Éx. 17:8–16).</p>
+                            <p>8 Monte Sinaí (monte Horeb o Jebel Musa) - El Señor reveló los Diez Mandamientos (Éx. 19–20).</p>
+                            <p>9 Desierto de Sinaí - Israel construyó el tabernáculo (Éx. 25–30).</p>
+                            <p>10 Campamentos en el desierto - Se llamó a setenta ancianos para ayudar a Moisés en el gobierno del pueblo (Núm. 11:16–17).</p>
+                            <p>11 Ezión-geber - Israel atravesó pacíficamente las tierras de Esaú y de Amón (Deut. 2).</p>
+                            <p>12 Cades-barnea - Moisés envió espías a la tierra prometida; Israel se rebeló y no pudo entrar en la tierra; Cades sirvió de campamento principal para Israel durante muchos años (Núm. 13:1–3, 17–33; 14; 32:8; Deut. 2:14).</p>
+                            <p>13 Desierto oriental - Israel evitó entrar en conflicto con Edom y Moab (Núm. 20:14–21; 22–24).</p>
+                            <p>14 Río Arnón - Israel destruyó a los amorreos que lucharon contra él (Deut. 2:24–37).</p>
+                            <p>15 Monte Nebo - Moisés contempló la tierra prometida (Deut. 34:1–4) y pronunció sus tres últimos discursos (Deut. 1–32).</p>
+                            <p>16 Llanura de Moab - Jehová dijo a Israel que dividiera la tierra y echara a sus habitantes (Núm. 33:50–56).</p>
+                            <p>17 Río Jordán - Israel cruzó el río Jordán sobre tierra seca. Cerca de Gilgal se colocaron piedras del lecho del río Jordán en conmemoración de la división de sus aguas (Josué 3:1–5:1).</p>
+                            <p>18 Jericó - Los hijos de Israel tomaron la ciudad y la destruyeron (Josué 6).</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mapa 3 - Tribus -->
+                <div class="map-card" data-category="tribus">
+                    <div class="map-image">
+                        <img src="https://www.churchofjesuschrist.org/imgs/2381f656db21901cdc97de983c989dd414c4c17e/full/!1600%2C/0/default" alt="División de las Doce Tribus">
+                        <div class="map-overlay">
+                            <h2>Las Doce Tribus</h2>
+                        </div>
+                    </div>
+                    <div class="map-content">
+                        <p>Mapa de la división de la Tierra Prometida entre las doce tribus de Israel.</p>
+                        <button class="map-toggle" onclick="toggleDetails(this)">
+                            Ver detalles <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="map-details">
+                            <p>Después de la conquista de Canaán, la tierra fue dividida entre las doce tribus de Israel, cada una recibiendo su herencia según lo establecido por Josué.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mapa 4 - Imperio David y Salomón -->
+                <div class="map-card" data-category="imperios">
+                    <div class="map-image">
+                        <img src="https://www.churchofjesuschrist.org/imgs/3dc5dabbbc1202f474d5ef2a3b358e7991c373ec/full/!1600%2C/0/default" alt="Imperio de David y Salomón">
+                        <div class="map-overlay">
+                            <h2>Imperio de David y Salomón</h2>
+                        </div>
+                    </div>
+                    <div class="map-content">
+                        <p>Extensión máxima del reino unido de Israel bajo el reinado de David y Salomón.</p>
+                        <button class="map-toggle" onclick="toggleDetails(this)">
+                            Ver detalles <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="map-details">
+                            <p>Este mapa muestra el territorio controlado por Israel durante el reinado de David y Salomón, representando la máxima extensión del reino unido.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mapa 5 - Imperio Asirio -->
+                <div class="map-card" data-category="imperios">
+                    <div class="map-image">
+                        <img src="https://www.churchofjesuschrist.org/imgs/638264ff2b2d0daf0fdf61a48bfe761b2694f605/full/!1600%2C/0/default" alt="Imperio Asirio">
+                        <div class="map-overlay">
+                            <h2>Imperio Asirio</h2>
+                        </div>
+                    </div>
+                    <div class="map-content">
+                        <p>Mapa del Imperio Asirio en su máxima extensión.</p>
+                        <button class="map-toggle" onclick="toggleDetails(this)">
+                            Ver detalles <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="map-details">
+                            <p>El Imperio Asirio fue una de las grandes potencias del Antiguo Oriente Próximo que conquistó el reino del norte de Israel.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mapa 6 - Imperio Babilónico -->
+                <div class="map-card" data-category="imperios">
+                    <div class="map-image">
+                        <img src="https://www.churchofjesuschrist.org/imgs/eb23b24041b3b5eaf0958c1993071a5088307ee2/full/!1600%2C/0/default" alt="Imperio Babilónico">
+                        <div class="map-overlay">
+                            <h2>Imperio Babilónico</h2>
+                        </div>
+                    </div>
+                    <div class="map-content">
+                        <p>Mapa del Imperio Neobabilónico y el reino de Egipto.</p>
+                        <button class="map-toggle" onclick="toggleDetails(this)">
+                            Ver detalles <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="map-details">
+                            <p>El Imperio Neobabilónico bajo Nabucodonosor conquistó Judá y destruyó Jerusalén en el 586 a.C.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mapa 7 - Imperio Persa -->
+                <div class="map-card" data-category="imperios">
+                    <div class="map-image">
+                        <img src="https://www.churchofjesuschrist.org/imgs/66f47dba4b07f62e6d239a4056d4eca46f0e3dfc/full/!1600%2C/0/default" alt="Imperio Persa">
+                        <div class="map-overlay">
+                            <h2>Imperio Persa</h2>
+                        </div>
+                    </div>
+                    <div class="map-content">
+                        <p>Mapa del Imperio Persa en su máxima extensión.</p>
+                        <button class="map-toggle" onclick="toggleDetails(this)">
+                            Ver detalles <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="map-details">
+                            <p>El Imperio Persa permitió el regreso de los judíos a Jerusalén después del exilio babilónico.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mapa 8 - Imperio Romano -->
+                <div class="map-card" data-category="imperios">
+                    <div class="map-image">
+                        <img src="https://www.churchofjesuschrist.org/imgs/649fbacd6c059150c88e04578b9dd834e2d7d62f/full/!1600%2C/0/default" alt="Imperio Romano">
+                        <div class="map-overlay">
+                            <h2>Imperio Romano</h2>
+                        </div>
+                    </div>
+                    <div class="map-content">
+                        <p>Mapa del Imperio Romano durante el tiempo de Jesús.</p>
+                        <button class="map-toggle" onclick="toggleDetails(this)">
+                            Ver detalles <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="map-details">
+                            <p>El Imperio Romano controlaba la región durante el ministerio de Jesús y la expansión del cristianismo primitivo.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mapa 9 - Mundo Antiguo Testamento -->
+                <div class="map-card" data-category="tierra-santa">
+                    <div class="map-image">
+                        <img src="https://www.churchofjesuschrist.org/imgs/841da514ca6aae1f5bb6829bf6f30862b62b0c99/full/!1600%2C/0/default" alt="Mundo del Antiguo Testamento">
+                        <div class="map-overlay">
+                            <h2>Mundo del Antiguo Testamento</h2>
+                        </div>
+                    </div>
+                    <div class="map-content">
+                        <p>Mapa del mundo conocido durante los tiempos del Antiguo Testamento.</p>
+                        <button class="map-toggle" onclick="toggleDetails(this)">
+                            Ver detalles <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="map-details">
+                            <p>1 Monte Ararat - Lugar donde, según la tradición, reposó el arca de Noé (Gén. 8:4). Se desconoce la ubicación exacta.</p>
+                            <p>2 Ur - Tierra natal de Abraham, cerca de la desembocadura del Éufrates, donde estuvo a punto de ser la víctima de un sacrificio humano, vio al ángel de Jehová y recibió el Urim y Tumim (Gén. 11:28–12:1; Abr. 1; 3:1). (Nótese también otro posible sitio de Ur al norte de Mesopotamia).</p>
+                            <p>3 Babilonia, Babel (Sinar) - Fue habitada en el principio por Cus hijo de Cam, y por Nimrod. Zona de origen de los jareditas en la época de la Torre de Babel, en las llanuras de Sinar.</p>
+                            <p>4 Susa - Capital del imperio persa bajo el reinado de Darío I (Darío el Grande), de Jerjes (Asuero) y de Artajerjes.</p>
+                            <p>5 Llanura de Dura - Sadrac, Mesac y Abed-nego fueron echados a un horno de fuego ardiendo cuando se negaron a adorar la imagen de oro de Nabucodonosor.</p>
+                            <p>6 Asiria - Asur fue la primera capital de Asiria, y después lo fue Nínive.</p>
+                            <p>7 Nínive - Capital de Asiria. El Señor dijo al profeta Jonás que llamara a esta ciudad al arrepentimiento (Jonás 1:2; 3:1–4).</p>
+                            <p>8 Harán - Abraham se estableció allí por un tiempo antes de dirigirse to Canaán.</p>
+                            <p>9 Carquemis - El faraón Necao fue derrotado por Nabucodonosor en este lugar.</p>
+                            <p>10 Sidón - Esta ciudad fue fundada por Sidón, nieto de Cam.</p>
+                            <p>11 Tiro - Fue una importante ciudad comercial y portuaria de Siria.</p>
+                            <p>12 Damasco - Abraham rescató a Lot cerca de allí.</p>
+                            <p>13 Canaán - A Abraham, a Isaac, a Jacob y a sus descendientes se les dio esta tierra por posesión eterna (Gén. 17:8; 28).</p>
+                            <p>14 Monte Sinaí (Horeb) - Allí el Señor habló a Moisés desde una zarza ardiendo (Éx. 3:1–2).</p>
+                            <p>15 Ezión-geber - El rey Salomón construyó una flota de naves en este lugar (1 Rey. 9:26).</p>
+                            <p>16 Egipto - Abraham se trasladó allí debido a que se agravó el hambre en Ur (Abr. 2:1, 21).</p>
+                            <p>17 Caftor (Creta) - La antigua tierra de los minoicos.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mapa 10 - Canaán AT -->
+                <div class="map-card" data-category="tierra-santa">
+                    <div class="map-image">
+                        <img src="https://www.churchofjesuschrist.org/imgs/831a6634b4a0182696ba6f168e2b1842bbea6615/full/!1600%2C/0/default" alt="Canaán en tiempos del AT">
+                        <div class="map-overlay">
+                            <h2>Canaán en el Antiguo Testamento</h2>
+                        </div>
+                    </div>
+                    <div class="map-content">
+                        <p>Mapa de Canaán durante los tiempos del Antiguo Testamento.</p>
+                        <button class="map-toggle" onclick="toggleDetails(this)">
+                            Ver detalles <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="map-details">
+                            <p>1 Dan (Lais) - Jeroboam mandó construir un becerro de oro para que el reino del norte lo adorara (1 Rey. 12:26–33).</p>
+                            <p>2 Monte Carmelo - Elías el Profeta desafió a los profetas de Baal e hizo descender lluvia del cielo (1 Rey. 18:17–46).</p>
+                            <p>3 Meguido - Un lugar de muchas batallas (Jue. 4:13–16; 5:19; 2 Rey. 23:29; 2 Cró. 35:20–23).</p>
+                            <p>4 Jezreel - Nombre de una ciudad situada en el valle del mismo nombre.</p>
+                            <p>5 Bet-sán - Israel enfrentó a los cananeos en este lugar (Josué 17:12–16).</p>
+                            <p>6 Dotán - José fue vendido como esclavo por sus hermanos (Gén. 37:17, 28; 45:4).</p>
+                            <p>7 Samaria - Capital del reino del norte (1 Rey. 16:24–29).</p>
+                            <p>8 Siquem - Abraham edificó un altar allí (Gén. 12:6–7).</p>
+                            <p>9 Monte Ebal y monte Gerizim - Josué dividió Israel en estos dos montes.</p>
+                            <p>10 Penuel (Peniel) - Allí luchó Jacob toda la noche con un mensajero del Señor (Gén. 32:24–32).</p>
+                            <p>11 Jope - Jonás se embarcó allí para dirigirse a Tarsis y huir de su misión a Nínive (Jonás 1:1–3).</p>
+                            <p>12 Silo - Durante el tiempo de los jueces, era la capital de Israel y el tabernáculo se hallaba allí (1 Sam. 4:3–4).</p>
+                            <p>13 Betel (Luz) - Allí fue donde Abraham se separó de Lot (Gén. 13:1–11).</p>
+                            <p>14 Gabaón - Los heveos de este lugar engañaron a Josué para concertar un tratado (Josué 9).</p>
+                            <p>15 Gaza, Asdod, Ascalón, Ecrón y Gat - Las cinco ciudades filisteas.</p>
+                            <p>16 Belén - Raquel quedó enterrada cerca de allí (Gén. 35:19).</p>
+                            <p>17 Hebrón - Abraham (Gén. 13:18), Isaac, Jacob (Gén. 35:27), David (2 Sam. 2:1–4) y Absalón (2 Sam. 15:10) vivieron allí.</p>
+                            <p>18 En-gadi - David se escondió allí de Saúl y le perdonó la vida (1 Sam. 23:29–24:22).</p>
+                            <p>19 Gerar - Abraham e Isaac vivieron allí durante un tiempo (Gén. 20–22; 26).</p>
+                            <p>20 Beerseba - Abraham cavó un pozo en este sitio e hizo convenio con Abimelec (Gén. 21:31).</p>
+                            <p>21 Sodoma y Gomorra - Lot decidió vivir en Sodoma (Gén. 13:11–12; 14:12).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mapa 11 - Tierra Santa NT -->
+                <div class="map-card" data-category="nuevo-testamento">
+                    <div class="map-image">
+                        <img src="https://www.churchofjesuschrist.org/imgs/89d360ab18a99b979c9f9f11df4325b43de60776/full/!1600%2C/0/default" alt="Tierra Santa en tiempos de Jesús">
+                        <div class="map-overlay">
+                            <h2>Tierra Santa en tiempos de Jesús</h2>
+                        </div>
+                    </div>
+                    <div class="map-content">
+                        <p>Mapa de la Tierra Santa durante el ministerio de Jesucristo.</p>
+                        <button class="map-toggle" onclick="toggleDetails(this)">
+                            Ver detalles <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="map-details">
+                            <p>1 Tiro y Sidón - Jesús comparó Corazín y Betsaida con Tiro y Sidón (Mateo 11:20–22).</p>
+                            <p>2 Monte de la Transfiguración - Jesús se transfiguró delante de Pedro, Santiago y Juan.</p>
+                            <p>3 Cesarea de Filipo - Pedro testificó que Jesús es el Cristo y se le prometieron las llaves del reino.</p>
+                            <p>4 Región de Galilea - Jesús pasó la mayor parte de Su vida y ministerio en Galilea.</p>
+                            <p>5 Mar de Galilea - Jesús enseñó allí desde la barca de Pedro (Lucas 5:1–3).</p>
+                            <p>6 Betsaida - Pedro, Andrés y Felipe nacieron en Betsaida (Juan 1:44).</p>
+                            <p>7 Capernaúm - Era el lugar donde vivía Pedro (Mateo 8:5, 14).</p>
+                            <p>8 Magdala - Residencia de María Magdalena (Mar. 16:9).</p>
+                            <p>9 Caná - Allí Jesús convirtió el agua en vino (Juan 2:1–11).</p>
+                            <p>10 Nazaret - Las anunciaciones a María y a José ocurrieron en Nazaret.</p>
+                            <p>11 Jericó - Jesús dio la vista a un ciego (Lucas 18:35–43).</p>
+                            <p>12 Betábara - En este lugar, Juan el Bautista testificó que él era "la voz de uno que clama en el desierto".</p>
+                            <p>13 Desierto de Judea - Juan el Bautista predicó en este desierto (Mateo 3:1–4).</p>
+                            <p>14 Emaús - El Cristo resucitado caminó con dos de Sus discípulos por el camino de Emaús (Lucas 24:13–32).</p>
+                            <p>15 Betfagé - Dos discípulos llevaron a Jesús un pollino sobre el que comenzó Su entrada triunfal en Jerusalén.</p>
+                            <p>16 Betania - Era la ciudad de María, Marta and Lázaro (Juan 11:1).</p>
+                            <p>17 Belén - Jesús nació allí y lo acostaron en un pesebre (Lucas 2:1–7).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mapa 12 - Jerusalén -->
+                <div class="map-card" data-category="nuevo-testamento">
+                    <div class="map-image">
+                        <img src="https://www.churchofjesuschrist.org/imgs/ada21d43dad8041ae26f4406bb788852c6cfa8c0/full/!1600%2C/0/default" alt="Jerusalén en la época de Jesús">
+                        <div class="map-overlay">
+                            <h2>Jerusalén en tiempos de Jesús</h2>
+                        </div>
+                    </div>
+                    <div class="map-content">
+                        <p>Mapa de Jerusalén durante el ministerio de Jesús.</p>
+                        <button class="map-toggle" onclick="toggleDetails(this)">
+                            Ver detalles <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="map-details">
+                            <p>1 Gólgota - Posible lugar de la crucifixión de Jesús (Mateo 27:33–37).</p>
+                            <p>2 El sepulcro en el huerto - Un posible sitio del sepulcro en el que se colocó el cuerpo de Jesús.</p>
+                            <p>3 Torre (Fuerte) Antonia - Es posible que Jesús haya sido acusado, condenado, ridiculizado y azotado en este lugar.</p>
+                            <p>4 Estanque de Betesda - Jesús sanó allí a un paralítico en el día de reposo (Juan 5:2–9).</p>
+                            <p>5 Templo - Lugar donde Gabriel prometió a Zacarías que Elisabet daría a luz un hijo.</p>
+                            <p>6 Pórtico de Salomón - Jesús proclamó allí que Él era el Hijo de Dios.</p>
+                            <p>7 Puerta Hermosa - Donde Pedro y Juan sanaron a un hombre cojo de nacimiento.</p>
+                            <p>8 Pináculo del templo - Jesús fue tentado allí por Satanás (Mateo 4:5–7).</p>
+                            <p>9 Santo Monte - La tradición sostiene que fue allí donde Abraham edificó un altar para el sacrificio de Isaac.</p>
+                            <p>10 Jardín o Huerto de Getsemaní - Jesús padeció, fue entregado y arrestado en este lugar.</p>
+                            <p>11 Monte de los Olivos - Jesús predijo allí la destrucción de Jerusalén y del templo.</p>
+                            <p>12 Manantial de Gihón - Donde Salomón fue ungido rey (1 Rey. 1:38–39).</p>
+                            <p>13 Puerta de las Aguas - En este sitio Esdras leyó e interpretó la ley de Moisés al pueblo.</p>
+                            <p>14 Valle de Hinom - Allí se adoraba al falso dios Moloc.</p>
+                            <p>15 Casa de Caifás - Jesús fue llevado ante Caifás (Mateo 26:57–68).</p>
+                            <p>16 Aposento alto - Lugar donde, según la tradición, Jesús comió la pascua e instituyó la Santa Cena.</p>
+                            <p>17 Palacio de Herodes - Cristo fue llevado ante Herodes probablemente en este lugar.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mapa 13 - Viajes de Pablo -->
+                <div class="map-card" data-category="nuevo-testamento">
+                    <div class="map-image">
+                        <img src="https://www.churchofjesuschrist.org/imgs/e87a7484c52b388901a44cb27a87a8730f81ec2b/full/!1600%2C/0/default" alt="Viajes de Pablo">
+                        <div class="map-overlay">
+                            <h2>Viajes Misionales de Pablo</h2>
+                        </div>
+                    </div>
+                    <div class="map-content">
+                        <p>Mapa de los viajes misionales del apóstol Pablo.</p>
+                        <button class="map-toggle" onclick="toggleDetails(this)">
+                            Ver detalles <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="map-details">
+                            <p>1 Gaza - Felipe predicó de Cristo y bautizó a un etíope eunuco que iba camino a Gaza.</p>
+                            <p>2 Jerusalén - Centro del cristianismo primitivo.</p>
+                            <p>3 Jope - Pedro tuvo la visión por la que Dios concede el don del arrepentimiento a los gentiles.</p>
+                            <p>4 Samaria - Felipe ministró en Samaria (Hech. 8:5–13).</p>
+                            <p>5 Cesarea - Allí, después de que un ángel ministró a un centurión llamado Cornelio, Pedro permitió que este fuera bautizado.</p>
+                            <p>6 Damasco - Jesús apareció a Saulo (Hech. 9:1–7).</p>
+                            <p>7 Antioquía (en Siria) - Allí se les llamó cristianos a los discípulos por primera vez.</p>
+                            <p>8 Tarso - Ciudad natal de Pablo.</p>
+                            <p>9 Chipre - Después de ser perseguidos, algunos santos se marcharon a esta isla.</p>
+                            <p>10 Pafos - Pablo maldijo a un mago en este lugar.</p>
+                            <p>11 Derbe - Pablo y Bernabé predicaron el Evangelio en esta ciudad.</p>
+                            <p>12 Listra - Cuando Pablo sanó allí a un hombre paralítico, él y Bernabé fueron aclamados como dioses.</p>
+                            <p>13 Iconio - Durante su primera misión, Pablo y Bernabé predicaron en este lugar.</p>
+                            <p>14 Laodicea y Colosas - Laodicea era una de las ramas de la Iglesia que Pablo visitó.</p>
+                            <p>15 Antioquía (en Pisidia) - Durante su primera misión, Pablo y Bernabé enseñaron a los judíos que Cristo era descendiente de David.</p>
+                            <p>16 Mileto - Mientras estuvo allí durante su tercera misión, Pablo advirtió a los ancianos de la Iglesia.</p>
+                            <p>17 Patmos - Juan estaba cautivo en esta isla cuando recibió las visiones que componen el libro del Apocalipsis.</p>
+                            <p>18 Éfeso - Apolos predicó con poder en este lugar.</p>
+                            <p>19 Troas - Mientras Pablo se hallaba allí durante su segundo viaje misional, tuvo la visión de un hombre de Macedonia.</p>
+                            <p>20 Filipos - Pablo, Silas y Timoteo convirtieron allí a una mujer llamada Lidia.</p>
+                            <p>21 Atenas - Durante su segunda misión a Atenas, Pablo predicó sobre el "dios no conocido".</p>
+                            <p>22 Corinto - Pablo fue a Corinto durante su segunda misión y se quedó con Aquila y Priscila.</p>
+                            <p>23 Tesalónica - Pablo predicó allí durante su segundo viaje misional.</p>
+                            <p>24 Berea - Pablo, Silas y Timoteo hallaron almas nobles a las que enseñar.</p>
+                            <p>25 Macedonia - Pablo enseñó allí durante su segundo y tercer viaje.</p>
+                            <p>26 Malta - Pablo naufragó en esta isla de camino a Roma.</p>
+                            <p>27 Roma - Pablo predicó allí dos años cuando lo tuvieron arrestado en su propia casa.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mapa 14 - Relieve -->
+                <div class="map-card" data-category="recorridos">
+                    <div class="map-image">
+                        <img src="https://www.churchofjesuschrist.org/imgs/17a94867f1268b87d29bb0c3d4d6265f40cd81bb/full/!1600%2C/0/default" alt="Relieve de la Tierra Santa">
+                        <div class="map-overlay">
+                            <h2>Relieve de la Tierra Santa</h2>
+                        </div>
+                    </div>
+                    <div class="map-content">
+                        <p>Mapa topográfico que muestra el relieve de la Tierra Santa.</p>
+                        <button class="map-toggle" onclick="toggleDetails(this)">
+                            Ver detalles <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="map-details">
+                            <p>Este mapa muestra la topografía y el relieve de la Tierra Santa, incluyendo las regiones montañosas, valles y planicies que fueron escenario de los eventos bíblicos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Antiguo Testamento -->
+        <section id="antiguo-testamento" class="section">
+            <h2 style="margin: 20px 0; color: var(--color-accent); text-align: center;">Mapas del Antiguo Testamento</h2>
+            <div class="maps-grid">
+                <!-- Mapa 1 - Tierra Santa -->
+                <div class="map-card">
+                    <div class="map-image">
+                        <img src="https://www.churchofjesuschrist.org/imgs/e08b9e0bb610226859d39ffbce081568f75ce1e0/full/!1600%2C/0/default" alt="La Tierra Santa">
+                        <div class="map-overlay">
+                            <h2>La Tierra Santa</h2>
+                        </div>
+                    </div>
+                    <div class="map-content">
+                        <p>Mapa que muestra la región bíblica de la Tierra Santa con sus principales lugares históricos.</p>
+                    </div>
+                </div>
+                
+                <!-- Mapa 2 - Éxodo -->
+                <div class="map-card">
+                    <div class="map-image">
+                        <img src="https://www.churchofjesuschrist.org/imgs/8745c13da5538c06052f909c06ee9fb524e8f54a/full/!1600%2C/0/default" alt="El éxodo de los Israelitas">
+                        <div class="map-overlay">
+                            <h2>El Éxodo de Israel</h2>
+                        </div>
+                    </div>
+                    <div class="map-content">
+                        <p>Ruta del Éxodo de los Israelitas desde Egipto hasta la Tierra Prometida.</p>
+                        <button class="map-toggle" onclick="toggleDetails(this)">
+                            Ver detalles <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="map-details">
+                            <p>1 Ramesés - Israel fue sacado de Egipto (Éx. 12; Núm. 33:5).</p>
+                            <p>2 Sucot - Después que los hebreos partieron de este, que fue su primer campamento, Jehová los guio desde una columna de nube de día y desde una columna de fuego de noche (Éx. 13:20–22).</p>
+                            <p>3 Pihahiroth - Israel cruzó el mar Rojo (Éx. 14:2; Núm. 33:8).</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mapa 3 - Tribus -->
+                <div class="map-card">
+                    <div class="map-image">
+                        <img src="https://www.churchofjesuschrist.org/imgs/2381f656db21901cdc97de983c989dd414c4c17e/full/!1600%2C/0/default" alt="División de las Doce Tribus">
+                        <div class="map-overlay">
+                            <h2>Las Doce Tribus</h2>
+                        </div>
+                    </div>
+                    <div class="map-content">
+                        <p>Mapa de la división de la Tierra Prometida entre las doce tribus de Israel.</p>
+                    </div>
+                </div>
+
+                <!-- Mapa 4 - Mundo Antiguo Testamento -->
+                <div class="map-card">
+                    <div class="map-image">
+                        <img src="https://www.churchofjesuschrist.org/imgs/841da514ca6aae1f5bb6829bf6f30862b62b0c99/full/!1600%2C/0/default" alt="Mundo del Antiguo Testamento">
+                        <div class="map-overlay">
+                            <h2>Mundo del Antiguo Testamento</h2>
+                        </div>
+                    </div>
+                    <div class="map-content">
+                        <p>Mapa del mundo conocido durante los tiempos del Antiguo Testamento.</p>
+                        <button class="map-toggle" onclick="toggleDetails(this)">
+                            Ver detalles <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="map-details">
+                            <p>1 Monte Ararat - Lugar donde, según la tradición, reposó el arca de Noé (Gén. 8:4).</p>
+                            <p>2 Ur - Tierra natal de Abraham, cerca de la desembocadura del Éufrates.</p>
+                            <p>3 Babilonia, Babel (Sinar) - Zona de origen de los jareditas en la época de la Torre de Babel.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mapa 5 - Canaán -->
+                <div class="map-card">
+                    <div class="map-image">
+                        <img src="https://www.churchofjesuschrist.org/imgs/831a6634b4a0182696ba6f168e2b1842bbea6615/full/!1600%2C/0/default" alt="Canaán en tiempos del AT">
+                        <div class="map-overlay">
+                            <h2>Canaán en el Antiguo Testamento</h2>
+                        </div>
+                    </div>
+                    <div class="map-content">
+                        <p>Mapa de Canaán durante los tiempos del Antiguo Testamento.</p>
+                        <button class="map-toggle" onclick="toggleDetails(this)">
+                            Ver detalles <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="map-details">
+                            <p>1 Dan (Lais) - Jeroboam mandó construir un becerro de oro para que el reino del norte lo adorara (1 Rey. 12:26–33).</p>
+                            <p>2 Monte Carmelo - Elías el Profeta desafió a los profetas de Baal e hizo descender lluvia del cielo (1 Rey. 18:17–46).</p>
+                            <p>3 Meguido - Un lugar de muchas batallas (Jue. 4:13–16; 5:19; 2 Rey. 23:29).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Nuevo Testamento -->
+        <section id="nuevo-testamento" class="section">
+            <h2 style="margin: 20px 0; color: var(--color-accent); text-align: center;">Mapas del Nuevo Testamento</h2>
+            <div class="maps-grid">
+                <!-- Mapa 1 - Tierra Santa NT -->
+                <div class="map-card">
+                    <div class="map-image">
+                        <img src="https://www.churchofjesuschrist.org/imgs/89d360ab18a99b979c9f9f11df4325b43de60776/full/!1600%2C/0/default" alt="Tierra Santa en tiempos de Jesús">
+                        <div class="map-overlay">
+                            <h2>Tierra Santa en tiempos de Jesús</h2>
+                        </div>
+                    </div>
+                    <div class="map-content">
+                        <p>Mapa de la Tierra Santa durante el ministerio de Jesucristo.</p>
+                        <button class="map-toggle" onclick="toggleDetails(this)">
+                            Ver detalles <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="map-details">
+                            <p>1 Tiro y Sidón - Jesús comparó Corazín y Betsaida con Tiro y Sidón (Mateo 11:20–22).</p>
+                            <p>2 Monte de la Transfiguración - Jesús se transfiguró delante de Pedro, Santiago y Juan.</p>
+                            <p>3 Cesarea de Filipo - Pedro testificó que Jesús es el Cristo y se le prometieron las llaves del reino.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mapa 2 - Jerusalén -->
+                <div class="map-card">
+                    <div class="map-image">
+                        <img src="https://www.churchofjesuschrist.org/imgs/ada21d43dad8041ae26f4406bb788852c6cfa8c0/full/!1600%2C/0/default" alt="Jerusalén en la época de Jesús">
+                        <div class="map-overlay">
+                            <h2>Jerusalén en tiempos de Jesús</h2>
+                        </div>
+                    </div>
+                    <div class="map-content">
+                        <p>Mapa de Jerusalén durante el ministerio de Jesús.</p>
+                        <button class="map-toggle" onclick="toggleDetails(this)">
+                            Ver detalles <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="map-details">
+                            <p>1 Gólgota - Posible lugar de la crucifixión de Jesús (Mateo 27:33–37).</p>
+                            <p>2 El sepulcro en el huerto - Un posible sitio del sepulcro en el que se colocó el cuerpo de Jesús.</p>
+                            <p>3 Torre Antonia - Es posible que Jesús haya sido acusado, condenado, ridiculizado y azotado en este lugar.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mapa 3 - Viajes de Pablo -->
+                <div class="map-card">
+                    <div class="map-image">
+                        <img src="https://www.churchofjesuschrist.org/imgs/e87a7484c52b388901a44cb27a87a8730f81ec2b/full/!1600%2C/0/default" alt="Viajes de Pablo">
+                        <div class="map-overlay">
+                            <h2>Viajes Misionales de Pablo</h2>
+                        </div>
+                    </div>
+                    <div class="map-content">
+                        <p>Mapa de los viajes misionales del apóstol Pablo.</p>
+                        <button class="map-toggle" onclick="toggleDetails(this)">
+                            Ver detalles <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="map-details">
+                            <p>1 Gaza - Felipe predicó de Cristo y bautizó a un etíope eunuco que iba camino to Gaza.</p>
+                            <p>2 Jerusalén - Centro del cristianismo primitivo.</p>
+                            <p>3 Jope - Pedro tuvo la visión por la que Dios concede el don del arrepentimiento a los gentiles.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Imperios -->
+        <section id="imperios" class="section">
+            <h2 style="margin: 20px 0; color: var(--color-accent); text-align: center;">Mapas de Imperios Bíblicos</h2>
+            <div class="maps-grid">
+                <!-- Mapa 1 - Imperio David y Salomón -->
+                <div class="map-card">
+                    <div class="map-image">
+                        <img src="https://www.churchofjesuschrist.org/imgs/3dc5dabbbc1202f474d5ef2a3b358e7991c373ec/full/!1600%2C/0/default" alt="Imperio de David and Salomón">
+                        <div class="map-overlay">
+                            <h2>Imperio de David y Salomón</h2>
+                        </div>
+                    </div>
+                    <div class="map-content">
+                        <p>Extensión máxima del reino unido de Israel bajo el reinado de David y Salomón.</p>
+                    </div>
+                </div>
+                
+                <!-- Mapa 2 - Imperio Asirio -->
+                <div class="map-card">
+                    <div class="map-image">
+                        <img src="https://www.churchofjesuschrist.org/imgs/638264ff2b2d0daf0fdf61a48bfe761b2694f605/full/!1600%2C/0/default" alt="Imperio Asirio">
+                        <div class="map-overlay">
+                            <h2>Imperio Asirio</h2>
+                        </div>
+                    </div>
+                    <div class="map-content">
+                        <p>Mapa del Imperio Asirio en su máxima extensión.</p>
+                    </div>
+                </div>
+                
+                <!-- Mapa 3 - Imperio Babilónico -->
+                <div class="map-card">
+                    <div class="map-image">
+                        <img src="https://www.churchofjesuschrist.org/imgs/eb23b24041b3b5eaf0958c1993071a5088307ee2/full/!1600%2C/0/default" alt="Imperio Babilónico">
+                        <div class="map-overlay">
+                            <h2>Imperio Babilónico</h2>
+                        </div>
+                    </div>
+                    <div class="map-content">
+                        <p>Mapa del Imperio Neobabilónico y el reino de Egipto.</p>
+                    </div>
+                </div>
+
+                <!-- Mapa 4 - Imperio Persa -->
+                <div class="map-card">
+                    <div class="map-image">
+                        <img src="https://www.churchofjesuschrist.org/imgs/66f47dba4b07f62e6d239a4056d4eca46f0e3dfc/full/!1600%2C/0/default" alt="Imperio Persa">
+                        <div class="map-overlay">
+                            <h2>Imperio Persa</h2>
+                        </div>
+                    </div>
+                    <div class="map-content">
+                        <p>Mapa del Imperio Persa en su máxima extensión.</p>
+                    </div>
+                </div>
+
+                <!-- Mapa 5 - Imperio Romano -->
+                <div class="map-card">
+                    <div class="map-image">
+                        <img src="https://www.churchofjesuschrist.org/imgs/649fbacd6c059150c88e04578b9dd834e2d7d62f/full/!1600%2C/0/default" alt="Imperio Romano">
+                        <div class="map-overlay">
+                            <h2>Imperio Romano</h2>
+                        </div>
+                    </div>
+                    <div class="map-content">
+                        <p>Mapa del Imperio Romano durante el tiempo de Jesús.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Recorridos -->
+        <section id="recorridos" class="section">
+            <h2 style="margin: 20px 0; color: var(--color-accent); text-align: center;">Recorridos Bíblicos</h2>
+            <div class="maps-grid">
+                <!-- Mapa 1 - Relieve -->
+                <div class="map-card">
+                    <div class="map-image">
+                        <img src="https://www.churchofjesuschrist.org/imgs/17a94867f1268b87d29bb0c3d4d6265f40cd81bb/full/!1600%2C/0/default" alt="Relieve de la Tierra Santa">
+                        <div class="map-overlay">
+                            <h2>Relieve de la Tierra Santa</h2>
+                        </div>
+                    </div>
+                    <div class="map-content">
+                        <p>Mapa topográfico que muestra el relieve de la Tierra Santa.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
     
-    .mapa img {
-      width: 100%;
-      height: auto;
-      border: 1px solid #ddd;
-    }
-    
-    .mapa h2 {
-        color: hsl(0, 33%, 97%);
-      margin-top: 0;
-    }
-
-    p {
-       color: hsl(0, 33%, 97%);
-      margin-top: 0;
-    }
-  </style>
-</head>
-<body>
-  <h1>Mapas Bíblicos</h1>
-<div class="mapa">
- <h2>11. La Tierra Santa en los tiempos del Nuevo Testamento</h2>
-    <img src="https://www.churchofjesuschrist.org/imgs/89d360ab18a99b979c9f9f11df4325b43de60776/full/!1600%2C/0/default" alt="11. La Tierra Santa en los tiempos del Nuevo Testamento">
-    <p>1 Tiro y Sidón Jesús comparó Corazín y Betsaida con Tiro y Sidón (Mateo 11:20–22). Allí sanó a la hija de una mujer gentil (Mateo 15:21–28).</p>
-<p>2 Monte de la Transfiguración Jesús se transfiguró delante de Pedro, Santiago y Juan, quienes recibieron las llaves del reino (Mateo 17:1–13). (Algunos creen que el monte de la Transfiguración es el monte Hermón, mientras que otros creen que es el monte Tabor).</p>
-
-<p>3 Cesarea de Filipo Pedro testificó que Jesús es el Cristo y se le prometieron las llaves del reino (Mateo 16:13–20). Jesús predijo allí Su muerte y resurrección (Mateo 16:21–28).</p>
-
-<p>4 Región de Galilea Jesús pasó la mayor parte de Su vida y ministerio en Galilea (Mateo 4:23–25). Allí pronunció el Sermón del Monte (Mateo 5–7); y sanó a un leproso (Mateo 8:1–4); y escogió, ordenó y envió a los Doce Apóstoles, de los cuales aparentemente solo Judas Iscariote no era galileo (Mar. 3:13–19). En Galilea, el Cristo resucitado apareció a los Apóstoles. (Mateo 28:16–20).</p>
-
-<p>5 Mar de Galilea, llamado posteriormente mar de Tiberias Jesús enseñó allí desde la barca de Pedro (Lucas 5:1–3) y llamó a Pedro, a Andrés, a Santiago y a Juan para ser pescadores de hombres (Mateo 4:18–22; Lucas 5:1–11). También calmó la tempestad (Lucas 8:22–25), enseñó parábolas desde una barca (Mateo 13), anduvo sobre el mar (Mateo 14:22–32), y apareció a Sus discípulos después de Su resurrección (Juan 21).</p>
-
-<p>6 Betsaida Pedro, Andrés y Felipe nacieron en Betsaida (Juan 1:44). Jesús y los Apóstoles se retiraron para estar solos cerca de Betsaida. La multitud los siguió y Él alimentó a los 5.000 (Lucas 9:10–17; Juan 6:1–14). Allí Jesús sanó a un ciego (Mar. 8:22–26).</p>
-
-<p>7 Capernaúm Era el lugar donde vivía Pedro (Mateo 8:5, 14). En esta ciudad, a la que Mateo denominó la ciudad de Jesús, el Salvador sanó a un paralítico (Mateo 9:1–7; Mar. 2:1–12), curó al criado de un centurión y a la suegra de Pedro (Mateo 8:5–15), llamó a Mateo para que fuese uno de Sus apóstoles (Mateo 9:9), sanó a ciegos, echó a un demonio (Mateo 9:27–33), sanó al hombre de la mano seca en el día de reposo (Mateo 12:9–13), pronunció el discurso sobre el pan de vida (Juan 6:22–65), y accedió a pagar los impuestos, para lo cual dijo a Pedro que tomara el dinero de la boca de un pez (Mateo 17:24–27).</p>
-
-<p>8 Magdala Residencia de María Magdalena (Mar. 16:9). Jesús fue a este lugar tras haber alimentado a los 4.000 (Mateo 15:32–39), y los fariseos y los saduceos le pidieron que les mostrase una señal del cielo (Mateo 16:1–4).</p>
-
-<p>9 Caná Allí Jesús convirtió el agua en vino (Juan 2:1–11) y sanó al hijo del noble que estaba en Capernaúm (Juan 4:46–54). Caná también era el lugar donde vivía Natanael (Juan 21:2).</p>
-
-<p>10 Nazaret Las anunciaciones a María y a José ocurrieron en Nazaret (Mateo 1:18–25; Lucas 1:26–38; 2:4–5). Después de volver de Egipto, Jesús pasó Su infancia y juventud en este lugar (Mateo 2:19–23; Lucas 2:51–52), anunció que Él era el Mesías y fue rechazado por Sus coterráneos (Lucas 4:14–32).</p>
-
-<p>11 Jericó Jesús dio la vista a un ciego (Lucas 18:35–43). También cenó con Zaqueo, “que era jefe de los publicanos” (Lucas 19:1–10).</p>
-
-<p>12 Betábara En este lugar, Juan el Bautista testificó que él era “la voz de uno que clama en el desierto” (Juan 1:19–28). Después bautizó a Jesús en el río Jordán y testificó que Jesús era el Cordero de Dios (Juan 1:28–34).</p>
-
-<p>13 Desierto de Judea Juan el Bautista predicó en este desierto (Mateo 3:1–4), donde Jesús ayunó cuarenta días y fue tentado (Mateo 4:1–11).</p>
-
-<p>14 Emaús El Cristo resucitado caminó con dos de Sus discípulos por el camino de Emaús (Lucas 24:13–32).</p>
-
-<p>15 Betfagé Dos discípulos llevaron a Jesús un pollino sobre el que comenzó Su entrada triunfal en Jerusalén (Mateo 21:1–11).</p>
-
-<p>16 Betania Era la ciudad de María, Marta y Lázaro (Juan 11:1). Allí María oyó las palabras de Jesús, y Él habló a Marta con respecto a escoger “la buena parte” (Lucas 10:38–42); Jesús levantó a Lázaro de los muertos (Juan 11:1–44); y María ungió los pies del Salvador (Mateo 26:6–13; Juan 12:1–8).</p>
-
-<p>17 Belén Jesús nació allí y lo acostaron en un pesebre (Lucas 2:1–7); los ángeles anunciaron a los pastores el nacimiento del Salvador (Lucas 2:8–20); una estrella guio a los magos hasta Jesús (Mateo 2:1–12); y Herodes mandó matar a los niños pequeños (Mateo 2:16–18).</p>
-  </div>
-   <div class="mapa">
-    <h2>Jerusalén en la época de Jesús</h2>
-    <img src="https://www.churchofjesuschrist.org/imgs/ada21d43dad8041ae26f4406bb788852c6cfa8c0/full/!1600%2C/0/default" alt="Jerusalén en la época de Jesús">
-    <p>1 Gólgota Posible lugar de la crucifixión de Jesús (Mateo 27:33–37).</p>
-
-<p>2 El sepulcro en el huerto Un posible sitio del sepulcro en el que se colocó el cuerpo de Jesús (Juan 19:38–42). El Cristo resucitado apareció a María Magdalena en el huerto fuera de Su sepulcro (Juan 20:1–17).</p>
-
-<p>3 Torre (Fuerte) Antonia Es posible que Jesús haya sido acusado, condenado, ridiculizado y azotado en este lugar (Juan 18:28–19:16). Allí Pablo fue arrestado y relató su conversión (Hech. 21:31–22:21).</p>
-
-<p>4 Estanque de Betesda Jesús sanó allí a un paralítico en el día de reposo (Juan 5:2–9).</p>
-
-<p>5 Templo Lugar donde Gabriel prometió a Zacarías que Elisabet daría a luz un hijo (Lucas 1:5–25). El velo del templo se partió a la muerte del Salvador (Mateo 27:51).</p>
-
-<p>6 Pórtico de Salomón Jesús proclamó allí que Él era el Hijo de Dios y los judíos intentaron apedrearlo (Juan 10:22–39). Pedro predicó el arrepentimiento después de haber sanado a un hombre cojo de nacimiento (Hech. 3:11–26).</p>
-
-<p>7 Puerta Hermosa Donde Pedro y Juan sanaron a un hombre cojo de nacimiento (Hech. 3:1–10).</p>
-
-<p>8 Pináculo del templo Jesús fue tentado allí por Satanás (Mateo 4:5–7). (Un posible lugar donde ocurrió ese acontecimiento).</p>
-
-<p>9 Santo Monte (lugares sin especificar):
-
-La tradición sostiene que fue allí donde Abraham edificó un altar para el sacrificio de Isaac (Gén. 22:9–14).</p>
-
-<p>10 Salomón construyó el templo (1 Rey. 6:1–10; 2 Cró. 3:1).
-
-Los babilonios destruyeron el templo aproximadamente en el año 587 a.C. (2 Rey. 25:8–9).
-
- Zorobabel reconstruyó el templo aproximadamente en el año 515 a.C. (Esdras 3:8–10; 5:2; 6:14–16).
-
- Herodes amplió la explanada del templo e inició su reconstrucción en el año 17 a.C. Jesús fue presentado en el templo cuando era bebé (Lucas 2:22–39).
-
-Jesús enseñó en el templo a los doce años de edad (Lucas 2:41–50).
-
-Jesús purificó el templo (Mateo 21:12–16; Juan 2:13–17).
-
-Jesús enseñó en el templo en diversas ocasiones (Mateo 21:23–23:39; Juan 7:14–8:59).
-
-Los romanos, bajo el mando de Tito, destruyeron el templo en el año 70 de nuestra era.
-
-Jardín o Huerto de Getsemaní Jesús padeció, fue entregado y arrestado en este lugar (Mateo 26:36–46; Lucas 22:39–54).</p>
-
-<p>11 Monte de los Olivos
-
- Jesús predijo allí la destrucción de Jerusalén y del templo. También habló de la Segunda Venida (Mateo 24:3–25:46; véase también JS—M).
-
-Jesús ascendió al cielo en este lugar (Hech. 1:9–12).</p>
-
-<p> 12 Manantial de Gihón Donde Salomón fue ungido rey (1 Rey. 1:38–39). Ezequías mandó cavar un túnel para conducir el agua del manantial a la ciudad (2 Cró. 32:30).</p>
-
-<p>13 Puerta de las Aguas En este sitio Esdras leyó e interpretó la ley de Moisés al pueblo (Neh. 8:1–8).</p>
-
-<p>14 Valle de Hinom Allí se adoraba al falso dios Moloc, lo cual comprendía el sacrificio de niños (2 Rey. 23:10; 2 Cró. 28:3).</p>
-
-<p>15 Casa de Caifás Jesús fue llevado ante Caifás (Mateo 26:57–68). Pedro negó conocer a Jesús (Mateo 26:69–75).</p>
-
-<p>16 Aposento alto Lugar donde, según la tradición, Jesús comió la pascua e instituyó la Santa Cena (Mateo 26:20–30). Allí lavó los pies de los Apóstoles (Juan 13:4–17) y les enseñó (Juan 13:18–17:26).</p>
-
- <p>17 Palacio  de Herodes Cristo fue llevado ante Herodes probablemente en este lugar (Lucas 23:7–11).</p>
-
-<p>18 Jerusalén (lugares sin especificar):</p>
-
-
-  </div>
-   <div class="mapa">
-    <h2>Los viajes misionales del apóstol Pablo</h2>
-    <img src="https://www.churchofjesuschrist.org/imgs/e87a7484c52b388901a44cb27a87a8730f81ec2b/full/!1600%2C/0/default" alt="Los viajes misionales del apóstol Pablo">
-    <p>1 Gaza Felipe predicó de Cristo y bautizó a un etíope eunuco que iba camino a Gaza (Hech. 8:26–39).</p>
-
-<p>2 Jerusalén Véase el mapa 12 para saber sobre los hechos que ocurrieron allí.</p>
-
-<p>3 Jope Pedro tuvo la visión por la que Dios concede el don del arrepentimiento a los gentiles (Hech. 10; 11:5–18). Pedro levantó a Tabita de los muertos (Hech. 9:36–42).</p>
-
-<p>4 Samaria Felipe ministró en Samaria (Hech. 8:5–13), y posteriormente Pedro y Juan enseñaron allí (Hech. 8:14–25). Después de que hubieron conferido el don del Espíritu Santo, Simón el mago intentó comprarles ese don (Hech. 8:9–24).</p>
-
-<p>5 Cesarea Allí, después de que un ángel ministró a un centurión llamado Cornelio, Pedro permitió que este fuera bautizado (Hech. 10). En este lugar, Pablo se defendió ante Agripa (Hech. 25–26; véase también JS—H 1:24–25).</p>
-
-<p>6 Damasco Jesús apareció a Saulo (Hech. 9:1–7). Después que Ananías le restauró la vista, Saulo se bautizó e inició su ministerio (Hech. 9:10–27).</p>
-
-<p>7 Antioquía (en Siria) Allí se les llamó cristianos a los discípulos por primera vez (Hech. 11:26). Agabo profetizó una gran hambre (Hech. 11:27–28). Surgió una gran disensión en Antioquía en cuanto a la circuncisión (Hech. 14:26–28; 15:1–9). Pablo dio comienzo en Antioquía a su segunda misión con Silas, Bernabé y Judas Barsabás (Hech. 15:22, 30, 35).</p>
-
-<p>8 Tarso Ciudad natal de Pablo, adonde le enviaron los líderes de la Iglesia para protegerlo (Hech. 9:29–30).</p>
-
-<p>9 Chipre Después de ser perseguidos, algunos santos se marcharon a esta isla (Hech. 11:19). Pablo viajó por Chipre en su primer viaje misional (Hech. 13:4–5), y después lo hicieron Bernabé y Marcos (Hech. 15:39).</p>
-
-<p>10 Pafos Pablo maldijo a un mago en este lugar (Hech. 13:6–11).</p>
-
-<p>11 Derbe Pablo y Bernabé predicaron el Evangelio en esta ciudad (Hech. 14:6–7, 20–21).</p>
-
-<p>12 Listra Cuando Pablo sanó allí a un hombre paralítico, él y Bernabé fueron aclamados como dioses. Pablo fue apedreado y dado por muerto, pero revivió y siguió predicando (Hech. 14:6–21). Lugar natal de Timoteo (Hech. 16:1–3).</p>
-
-<p>13 Iconio Durante su primera misión, Pablo y Bernabé predicaron en este lugar y los amenazaron con apedrearlos (Hech. 13:51–14:7).</p>
-
-<p>14 Laodicea y Colosas Laodicea era una de las ramas de la Iglesia que Pablo visitó y de las que recibió epístolas (Col. 4:16). Es también una de las siete ciudades que se mencionan en el libro del Apocalipsis (las restantes son Éfeso, Esmirna, Pérgamo, Tiatira, Sardis y Filadelfia; véase Apoc. 1:11). Colosas está a 18 km al este de Laodicea, y Pablo escribió a los santos que vivían allí.</p>
-
-<p>15 Antioquía (en Pisidia) Durante su primera misión, Pablo y Bernabé enseñaron a los judíos que Cristo era descendiente de David. Pablo ofreció el Evangelio primero a Israel, luego a los gentiles. Él y Bernabé fueron perseguidos y expulsados (Hech. 13:14–50).</p>
-
-<p>16 Mileto Mientras estuvo allí durante su tercera misión, Pablo advirtió a los ancianos de la Iglesia que “lobos rapaces” entrarían en el rebaño (Hech. 20:29–31).</p>
-
-<p>17 Patmos Juan estaba cautivo en esta isla cuando recibió las visiones que componen el libro del Apocalipsis (Apoc. 1:9).</p>
-
-<p>18 Éfeso Apolos predicó con poder en este lugar (Hech. 18:24–28). Durante su tercera misión, Pablo enseñó dos años en Éfeso y convirtió a mucha gente (Hech. 19:10, 18). Allí confirió el don del Espíritu Santo mediante la imposición de manos (Hech. 19:1–7) y efectuó muchos milagros, incluso la expulsión de espíritus malignos (Hech. 19:8–21). Los adoradores de Diana instigaron un tumulto contra Pablo (Hech. 19:22–41). Parte del libro del Apocalipsis iba dirigido a la Iglesia en Éfeso (Apoc. 1:11).</p>
-
-<p>19 Troas Mientras Pablo se hallaba allí durante su segundo viaje misional, tuvo la visión de un hombre de Macedonia que pedía ayuda (Hech. 16:9–12). Durante su tercera misión en este lugar, Pablo levantó a Eutico de los muertos (Hech. 20:6–12).</p>
-
-<p>20 Filipos Pablo, Silas y Timoteo convirtieron allí a una mujer llamada Lidia, echaron a un espíritu inmundo y fueron azotados (Hech. 16:11–23). Recibieron ayuda divina y escaparon de la cárcel (Hech. 16:23–26).</p>
-
-<p>21 Atenas Durante su segunda misión a Atenas, Pablo predicó sobre el “dios no conocido” en la colina de Marte (el Areópago) (Hech. 17:22–34).</p>
-
-<p>22 Corinto Pablo fue a Corinto durante su segunda misión y se quedó con Aquila y Priscila; allí predicó y bautizó a mucha gente (Hech. 18:1–18). Desde Corinto, Pablo escribió su epístola a los romanos.</p>
-
-<p>23 Tesalónica Pablo predicó allí durante su segundo viaje misional, pero su grupo de misioneros tuvo que partir hacia Berea una vez que los judíos amenazaron su seguridad (Hech. 17:1–10).</p>
-
-<p>24 Berea Pablo, Silas y Timoteo hallaron almas nobles a las que enseñar durante el segundo viaje misional de Pablo. Los judíos de Tesalónica los siguieron y los persiguieron (Hech. 17:10–13).</p>
-
-<p>25 Macedonia Pablo enseñó allí durante su segundo y tercer viaje (Hech. 16:9–40; 19:21). Alabó la generosidad de los santos macedonios, quienes compartieron sus ofrendas con él y con los santos pobres de Jerusalén (Rom. 15:26; 2 Cor. 8:1–5; 11:9).</p>
-
-<p>26 Malta Pablo naufragó en esta isla de camino a Roma (Hech. 26:32; 27:1, 41–44). Resultó ileso después de la mordedura de una víbora y sanó a muchos que estaban enfermos en Malta (Hech. 28:1–9).</p>
-
-<p>27 Roma Pablo predicó allí dos años cuando lo tuvieron arrestado en su propia casa (Hech. 28:16–31). Además, mientras estuvo preso en Roma escribió epístolas, o cartas, a los efesios, a los filipenses y a los colosenses, a Timoteo y a Filemón. Pedro escribió su primera carta desde “Babilonia”, que probablemente fuera Roma, poco después de las persecuciones de Nerón a los cristianos en el año 64. Por lo general, se cree que Pedro y Pablo padecieron el martirio allí.</p>
-     <h2>Relieve de la Tierra Santa</h2>
-    <img src="https://www.churchofjesuschrist.org/imgs/17a94867f1268b87d29bb0c3d4d6265f40cd81bb/full/!1600%2C/0/default" alt="Relieve de la Tierra Santa">
-    <p></p>
-  </div>
-  
-   <div class="mapa">
-    <h2>!mas mapas aqui!</h2>
-    <img src="#" alt="#">
-    <p></p>
-  </div>
-</body>
-<!-- Parte inferior con margen de linea azul cielo y texto de derechos reservados-->
-<div class="parte-inferior">
-    <div class="margen-azul">
-      <p>&copy; 2025 IN GOD WE TRUST</p>
-      <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+    <!-- Lightbox para imágenes -->
+    <div class="lightbox" id="image-lightbox">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightbox-image">
+        </div>
     </div>
-  </div>
+
+    <!-- Botón para volver arriba -->
+    <div class="back-to-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+                    <h3>Mapas Bíblicos</h3>
+                </div>
+                <p>Explorando la geografía de las Escrituras</p>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 IN GOD WE TRUST. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Función para alternar la visualización de detalles
+        function toggleDetails(button) {
+            const details = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            details.classList.toggle('active');
+            
+            if (details.classList.contains('active')) {
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+                button.innerHTML = 'Ocultar detalles <i class="fas fa-chevron-up"></i>';
+            } else {
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+                button.innerHTML = 'Ver detalles <i class="fas fa-chevron-down"></i>';
+            }
+        }
+        
+        // Función para abrir lightbox con la imagen
+        function openLightbox(imageSrc) {
+            const lightbox = document.getElementById('image-lightbox');
+            const lightboxImage = document.getElementById('lightbox-image');
+            
+            lightboxImage.src = imageSrc;
+            lightbox.classList.add('active');
+        }
+        
+        // Función para cerrar lightbox
+        function closeLightbox() {
+            const lightbox = document.getElementById('image-lightbox');
+            lightbox.classList.remove('active');
+        }
+        
+        // Función para cambiar de sección
+        function changeSection(sectionId) {
+            // Ocultar todas las secciones
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Mostrar la sección seleccionada
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Actualizar navegación activa
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('data-section') === sectionId) {
+                    link.classList.add('active');
+                }
+            });
+            
+            // Scroll hacia arriba
+            window.scrollTo(0, 0);
+        }
+        
+        // Función para scroll suave hacia arriba
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+        
+        // Inicialización cuando el DOM está cargado
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hacer que las imágenes sean clickeables para abrir el lightbox
+            const mapImages = document.querySelectorAll('.map-image img');
+            
+            mapImages.forEach(image => {
+                image.addEventListener('click', function() {
+                    openLightbox(this.src);
+                });
+                
+                // Agregar cursor pointer para indicar que es clickeable
+                image.style.cursor = 'pointer';
+            });
+            
+            // Filtrar mapas por categoría
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            const mapCards = document.querySelectorAll('.map-card');
+            
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Quitar clase active de todos los botones
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    // Agregar clase active al botón clickeado
+                    this.classList.add('active');
+                    
+                    const category = this.getAttribute('data-category');
+                    
+                    // Mostrar u ocultar mapas según la categoría
+                    mapCards.forEach(card => {
+                        if (category === 'todos') {
+                            card.style.display = 'block';
+                        } else {
+                            const cardCategory = card.getAttribute('data-category');
+                            if (cardCategory === category) {
+                                card.style.display = 'block';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+            
+            // Funcionalidad de búsqueda
+            const searchInput = document.getElementById('search-input');
+            
+            searchInput.addEventListener('keyup', function() {
+                const searchText = this.value.toLowerCase();
+                
+                mapCards.forEach(card => {
+                    const title = card.querySelector('h2').textContent.toLowerCase();
+                    const description = card.querySelector('p').textContent.toLowerCase();
+                    
+                    if (title.includes(searchText) || description.includes(searchText)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+            
+            // Navegación entre secciones
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const sectionId = this.getAttribute('data-section');
+                    changeSection(sectionId);
+                });
+            });
+            
+            // Mostrar/ocultar botón de volver arriba
+            window.addEventListener('scroll', function() {
+                const backToTopButton = document.querySelector('.back-to-top');
+                if (window.scrollY > 300) {
+                    backToTopButton.classList.add('visible');
+                } else {
+                    backToTopButton.classList.remove('visible');
+                }
+            });
+        });
+    </script>
+</body>
 </html>
