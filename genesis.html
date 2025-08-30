@@ -1,182 +1,493 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BYMJS3X12P');
+    </script>
+    <meta name="google-site-verification" content="KWZFlVdcT-h9cB1Qnj0LgSLJP-J-NS4bgjhnQG_c140" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Génesis - IN GOD WE TRUST</title>
+    <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --color-primary: #3a5e30;
+            --color-secondary: #8b5a2b;
+            --color-accent: #d4af37;
+            --color-light: #f8f4e9;
+            --color-dark: #1e1e1e;
+            --color-background: #0f1a0d;
+            --color-terminal-bg: #0a1209;
+            --color-terminal-border: #3a5e30;
+            --color-terminal-text: #d4af37;
+            --color-terminal-command: #8b5a2b;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            --transition: all 0.3s ease;
+        }
 
-  gtag('config', 'G-BYMJS3X12P');
-</script>
-	<meta name="google-site-verification" content="KWZFlVdcT-h9cB1Qnj0LgSLJP-J-NS4bgjhnQG_c140" />
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Genesis</title>
-  <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
-<style>
-	/* Parte inferior con margen de línea azul cielo y texto de derechos reservados */
-	.parte-inferior {
-    background-color: hsl(0, 0%, 3%);
-    padding: 10px;
-    text-align: center;
-    clear: both;
-  }
-  
-  .margen-azul {
-    border-top: 1px solid hwb(59 4% 19%);
-    padding-top: 10px;
-  }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  h2 a {
-    color: #FFFFFF;
-  } 
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: var(--color-background);
+            color: var(--color-light);
+            line-height: 1.6;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%230a1209"/><path d="M0 0L100 100" stroke="%231a2716" stroke-width="1"/><path d="M100 0L0 100" stroke="%231a2716" stroke-width="1"/></svg>');
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
 
-  .header {
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 50px;
-   background-color: #f0f0f0;
-   text-align: center;
-   padding: 0;
-  }
-	  .logo {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-  }
-body {
-	background-color: #000000;
-	background-size: cover;
-	background-position: center;
-	font-family: Arial, sans-serif;
-	text-align: center;
-}
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+            flex: 1;
+        }
 
-.contenido {
-	color: #fff;
-	width: 80%;
-	margin: 40px auto;
-	padding: 20px;
-	background-color: #fff;
-	border: 1px solid #ddd;
-	border-radius: 10px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.contenido {
-padding: 20px;
-margin: 40px auto;
-width: 80%;
-background-color: #000000;
-border: 1px solid #ddd;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-h1 {
-color: #fff;
-}
-ul {
-list-style: none;
-padding: 0;
-margin: 0;
-}
-li {
-margin-bottom: 10px;
-}
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-dark) 100%);
+            padding: 20px 0;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
 
-p {
-text-decoration: none;
-color: #fff;
-}
-a {
-text-decoration: none;
-color: #fff;
-}
-a:hover {
-color: #23527c;
-}
+        .header-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
 
-   button {
-    background-color: #337ab7;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  button:hover {
-    background-color: #23527c;
-  }
-</style>
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid var(--color-accent);
+            transition: var(--transition);
+        }
+
+        .logo:hover img {
+            border-color: var(--color-light);
+        }
+
+        .logo h1 {
+            font-size: 2rem;
+            color: var(--color-light);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Main Content */
+        .page-title {
+            text-align: center;
+            margin: 30px 0 20px;
+            color: var(--color-accent);
+            font-size: 2.2rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .page-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 3px;
+            background: var(--color-accent);
+        }
+
+        .page-subtitle {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-style: italic;
+        }
+
+        /* Navigation */
+        .navigation {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .nav-button {
+            padding: 12px 25px;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-block;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .nav-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Terminal Styles */
+        .terminal-container {
+            background: linear-gradient(135deg, rgba(58, 94, 48, 0.2) 0%, rgba(30, 30, 30, 0.7) 100%);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            margin-bottom: 40px;
+        }
+
+        .terminal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--color-terminal-border);
+        }
+
+        .terminal-title {
+            color: var(--color-accent);
+            font-weight: bold;
+        }
+
+        .terminal-controls {
+            display: flex;
+            gap: 8px;
+        }
+
+        .terminal-control {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .control-close { background-color: #ff5f56; }
+        .control-minimize { background-color: #ffbd2e; }
+        .control-maximize { background-color: #27c93f; }
+
+        #terminal {
+            width: 100%;
+            height: auto;
+            min-height: 400px;
+            background-color: var(--color-terminal-bg);
+            border: 2px solid var(--color-terminal-border);
+            border-radius: 8px;
+            padding: 20px;
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+            color: var(--color-terminal-text);
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .title {
+            color: var(--color-accent);
+            font-weight: bold;
+            font-size: 1.2rem;
+            display: block;
+            margin-bottom: 15px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .command {
+            color: var(--color-terminal-command);
+            font-weight: bold;
+        }
+
+        .verse {
+            color: var(--color-terminal-text);
+            margin-left: 20px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .line {
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 2px solid var(--color-terminal-border);
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 8px;
+            height: 16px;
+            background-color: var(--color-terminal-text);
+            animation: blink 1s infinite;
+            vertical-align: middle;
+        }
+
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+
+        /* Chapters Grid */
+        .chapters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .chapter-link {
+            display: block;
+            background: linear-gradient(to bottom, var(--color-primary), var(--color-secondary));
+            color: white;
+            padding: 10px 5px;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            font-size: 0.9rem;
+        }
+
+        .chapter-link:hover {
+            background: linear-gradient(to bottom, var(--color-secondary), var(--color-primary));
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Instructions */
+        .instructions {
+            text-align: center;
+            margin-top: 15px;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-dark) 100%);
+            padding: 30px 0;
+            margin-top: 50px;
+            border-top: 2px solid var(--color-accent);
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-logo:hover {
+            transform: scale(1.05);
+        }
+
+        .footer-logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .page-title {
+                font-size: 1.8rem;
+            }
+
+            .page-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .navigation {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+
+            #terminal {
+                font-size: 14px;
+            }
+
+            .chapters-grid {
+                grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            #terminal {
+                padding: 15px;
+                font-size: 12px;
+            }
+
+            .terminal-container {
+                padding: 15px;
+            }
+
+            .chapters-grid {
+                grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+                gap: 8px;
+            }
+
+            .chapter-link {
+                padding: 8px 3px;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-<div class="contenido">
-<h1>Génesis</h1>
-<ul>
-<li><a href="genesis1.html">Capítulo 1</a></li>
-<li><a href="genesis2.html">Capítulo 2</a></li>
-<li><a href="genesis3.html">Capítulo 3</a></li>
-  <li><a href="genesis4.html">Capítulo 4</a></li>
-<li><a href="genesis5.html">Capítulo 5</a></li>
-<li><a href="genesis6.html">Capítulo 6</a></li>
-  <li><a href="genesis7.html">Capítulo 7</a></li>
-<li><a href="genesis8.html">Capítulo 8</a></li>
-<li><a href="genesis9.html">Capítulo 9</a></li>
-<li><a href="genesis10.html">Capítulo 10</a></li>
-<li><a href="genesis11.html">Capítulo 11</a></li>
-<li><a href="genesis12.html">Capítulo 12</a></li>
-  <li><a href="genesis13.html">Capítulo 13</a></li>
-<li><a href="genesis14.html">Capítulo 14</a></li>
-<li><a href="genesis15.html">Capítulo 15</a></li>
-  <li><a href="genesis16.html">Capítulo 16</a></li>
-<li><a href="genesis17.html">Capítulo 17</a></li>
-<li><a href="genesis18.html">Capítulo 18</a></li>
-  <li><a href="genesis19.html">Capítulo 19</a></li>
-<li><a href="genesis20.html">Capítulo 20</a></li>
-<li><a href="genesis21.html">Capítulo 21</a></li>
-  <li><a href="genesis22.html">Capítulo 22</a></li>
-<li><a href="genesis23.html">Capítulo 23</a></li>
-<li><a href="genesis24.html">Capítulo 24</a></li>
-<li><a href="genesis25.html">Capítulo 25</a></li>
-  <li><a href="genesis26.html">Capítulo 26</a></li>
-<li><a href="genesis27.html">Capítulo 27</a></li>
-<li><a href="genesis28.html">Capítulo 28</a></li>
-  <li><a href="genesis29.html">Capítulo 29</a></li>
-<li><a href="genesis30.html">Capítulo 30</a></li>
-<li><a href="genesis31.html">Capítulo 31</a></li>
-  <li><a href="genesis32.html">Capítulo 32</a></li>
-<li><a href="genesis33.html">Capítulo 33</a></li>
-<li><a href="genesis34.html">Capítulo 34</a></li>
-  <li><a href="genesis35.html">Capítulo 35</a></li>
-<li><a href="genesis36.html">Capítulo 36</a></li>
-<li><a href="genesis37.html">Capítulo 37</a></li>
-  <li><a href="genesis38.html">Capítulo 38</a></li>
-<li><a href="genesis39.html">Capítulo 39</a></li>
-<li><a href="genesis40.html">Capítulo 40</a></li>
-  <li><a href="genesis41.html">Capítulo 41</a></li>
-<li><a href="genesis42.html">Capítulo 42</a></li>
-<li><a href="genesis43.html">Capítulo 43</a></li>
-  <li><a href="genesis44.html">Capítulo 44</a></li>
-<li><a href="genesis45.html">Capítulo 45</a></li>
-<li><a href="genesis46.html">Capítulo 46</a></li>
-  <li><a href="genesis47.html">Capítulo 47</a></li>
-<li><a href="genesis48.html">Capítulo 48</a></li>
-<li><a href="genesis49.html">Capítulo 49</a></li>
-  <li><a href="genesis50.html">Capitulo 50</a></li>
-</ul>
-	<button onclick="location.href='index.html'">◀️</button>
-</div>
-</div>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo IN GOD WE TRUST">
+                
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2 class="page-title">LIBRO DE GÉNESIS</h2>
+        <p class="page-subtitle">Selecciona un capítulo para leer</p>
+
+        
+
+        <div class="terminal-container">
+            <div class="terminal-header">
+                <div class="terminal-title">genesis.exe</div>
+                <div class="terminal-controls">
+                    <div class="terminal-control control-close"></div>
+                    <div class="terminal-control control-minimize"></div>
+                    <div class="terminal-control control-maximize"></div>
+                </div>
+            </div>
+
+            <div id="terminal">
+                <span class="title">LIBRO DE GÉNESIS - CAPÍTULOS</span>
+                <div class="chapters-grid">
+                    <a href="genesis1.html" class="chapter-link">Cap. 1</a>
+                    <a href="genesis2.html" class="chapter-link">Cap. 2</a>
+                    <a href="genesis3.html" class="chapter-link">Cap. 3</a>
+                    <a href="genesis4.html" class="chapter-link">Cap. 4</a>
+                    <a href="genesis5.html" class="chapter-link">Cap. 5</a>
+                    <a href="genesis6.html" class="chapter-link">Cap. 6</a>
+                    <a href="genesis7.html" class="chapter-link">Cap. 7</a>
+                    <a href="genesis8.html" class="chapter-link">Cap. 8</a>
+                    <a href="genesis9.html" class="chapter-link">Cap. 9</a>
+                    <a href="genesis10.html" class="chapter-link">Cap. 10</a>
+                    <a href="genesis11.html" class="chapter-link">Cap. 11</a>
+                    <a href="genesis12.html" class="chapter-link">Cap. 12</a>
+                    <a href="genesis13.html" class="chapter-link">Cap. 13</a>
+                    <a href="genesis14.html" class="chapter-link">Cap. 14</a>
+                    <a href="genesis15.html" class="chapter-link">Cap. 15</a>
+                    <a href="genesis16.html" class="chapter-link">Cap. 16</a>
+                    <a href="genesis17.html" class="chapter-link">Cap. 17</a>
+                    <a href="genesis18.html" class="chapter-link">Cap. 18</a>
+                    <a href="genesis19.html" class="chapter-link">Cap. 19</a>
+                    <a href="genesis20.html" class="chapter-link">Cap. 20</a>
+                    <a href="genesis21.html" class="chapter-link">Cap. 21</a>
+                    <a href="genesis22.html" class="chapter-link">Cap. 22</a>
+                    <a href="genesis23.html" class="chapter-link">Cap. 23</a>
+                    <a href="genesis24.html" class="chapter-link">Cap. 24</a>
+                    <a href="genesis25.html" class="chapter-link">Cap. 25</a>
+                    <a href="genesis26.html" class="chapter-link">Cap. 26</a>
+                    <a href="genesis27.html" class="chapter-link">Cap. 27</a>
+                    <a href="genesis28.html" class="chapter-link">Cap. 28</a>
+                    <a href="genesis29.html" class="chapter-link">Cap. 29</a>
+                    <a href="genesis30.html" class="chapter-link">Cap. 30</a>
+                    <a href="genesis31.html" class="chapter-link">Cap. 31</a>
+                    <a href="genesis32.html" class="chapter-link">Cap. 32</a>
+                    <a href="genesis33.html" class="chapter-link">Cap. 33</a>
+                    <a href="genesis34.html" class="chapter-link">Cap. 34</a>
+                    <a href="genesis35.html" class="chapter-link">Cap. 35</a>
+                    <a href="genesis36.html" class="chapter-link">Cap. 36</a>
+                    <a href="genesis37.html" class="chapter-link">Cap. 37</a>
+                    <a href="genesis38.html" class="chapter-link">Cap. 38</a>
+                    <a href="genesis39.html" class="chapter-link">Cap. 39</a>
+                    <a href="genesis40.html" class="chapter-link">Cap. 40</a>
+                    <a href="genesis41.html" class="chapter-link">Cap. 41</a>
+                    <a href="genesis42.html" class="chapter-link">Cap. 42</a>
+                    <a href="genesis43.html" class="chapter-link">Cap. 43</a>
+                    <a href="genesis44.html" class="chapter-link">Cap. 44</a>
+                    <a href="genesis45.html" class="chapter-link">Cap. 45</a>
+                    <a href="genesis46.html" class="chapter-link">Cap. 46</a>
+                    <a href="genesis47.html" class="chapter-link">Cap. 47</a>
+                    <a href="genesis48.html" class="chapter-link">Cap. 48</a>
+                    <a href="genesis49.html" class="chapter-link">Cap. 49</a>
+                    <a href="genesis50.html" class="chapter-link">Cap. 50</a>
+                </div>
+            </div>
+
+            <p class="instructions">Haz clic en cualquier capítulo para leerlo</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <a href="index.html" class="footer-logo">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+                    
+                </a>
+                <p>Buscando la verdad según las Sagradas Escrituras</p>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 IN GOD WE TRUST. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
 </body>
-<!-- Parte inferior con margen de linea azul cielo y texto de derechos reservados-->
-<div class="parte-inferior">
-	<div class="margen-azul">
-	  <p>&copy; 2025 IN GOD WE TRUST</p>
-	  <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
-	</div>
-  </div>
 </html>
