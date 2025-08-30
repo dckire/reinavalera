@@ -1,31 +1,327 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BYMJS3X12P');
+    </script>
+    <meta name="google-site-verification" content="KWZFlVdcT-h9cB1Qnj0LgSLJP-J-NS4bgjhnQG_c140" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Génesis 1 - IN GOD WE TRUST</title>
+    <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-	<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f1a0d 0%, #1e1e1e 100%);
+            color: #f8f4e9;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
 
-  gtag('config', 'G-BYMJS3X12P');
-</script>
-	<meta name="google-site-verification" content="KWZFlVdcT-h9cB1Qnj0LgSLJP-J-NS4bgjhnQG_c140" />
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Génesis 1</title>
-	<link rel="stylesheet" href="style.css">
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #3a5e30 0%, #1e1e1e 100%);
+            padding: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            border-bottom: 2px solid #d4af37;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid #d4af37;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover img {
+            border-color: #f8f4e9;
+        }
+
+        .logo h1 {
+            font-size: 2rem;
+            color: #f8f4e9;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Main Content */
+        .page-title {
+            text-align: center;
+            margin: 30px 0 20px;
+            color: #d4af37;
+            font-size: 2.2rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .page-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 3px;
+            background: #d4af37;
+        }
+
+        .page-subtitle {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-style: italic;
+        }
+
+        /* Navigation */
+        .navigation {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .nav-button {
+            padding: 12px 25px;
+            background: linear-gradient(135deg, #3a5e30 0%, #8b5a2b 100%);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Content Box */
+        .content-box {
+            background: rgba(26, 27, 33, 0.9);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            border: 1px solid #3a5e30;
+        }
+
+        .chapter-title {
+            color: #d4af37;
+            font-weight: bold;
+            font-size: 1.5rem;
+            display: block;
+            margin-bottom: 25px;
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #3a5e30;
+        }
+
+        .verse {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: rgba(58, 94, 48, 0.1);
+            border-radius: 8px;
+            border-left: 4px solid #8b5a2b;
+            transition: all 0.3s ease;
+        }
+
+        .verse:hover {
+            background: rgba(58, 94, 48, 0.2);
+            transform: translateX(5px);
+        }
+
+        .verse-number {
+            color: #d4af37;
+            font-weight: bold;
+            margin-right: 8px;
+            font-size: 1.1rem;
+        }
+
+        .verse-text {
+            color: #f8f4e9;
+            line-height: 1.8;
+        }
+
+        /* Controls */
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .control-btn {
+            padding: 12px 25px;
+            background: linear-gradient(135deg, #3a5e30 0%, #8b5a2b 100%);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .control-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #3a5e30 0%, #1e1e1e 100%);
+            padding: 30px 0;
+            margin-top: 50px;
+            border-top: 2px solid #d4af37;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-logo:hover {
+            transform: scale(1.05);
+        }
+
+        .footer-logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .page-title {
+                font-size: 1.8rem;
+            }
+
+            .page-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .navigation {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-button {
+                width: 100%;
+                text-align: center;
+            }
+
+            .content-box {
+                padding: 20px;
+            }
+
+            .controls {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .control-btn {
+                width: 100%;
+                text-align: center;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .verse {
+                padding: 10px;
+            }
+
+            .verse-number {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-	<div class="contenido">
-		<div class="titulo-superior-centralizado">
-			<h1>Génesis 1</h1>
-			<div class="botones">
-			<button onclick="location.href='genesis2.html'">▶️</button>
-		</div>
-		<div class="texto-columna">
-			<!-- Aquí va el contenido del capítulo -->
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo IN GOD WE TRUST">
+                
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2 class="page-title">LIBRO DE GÉNESIS</h2>
+        <p class="page-subtitle">Capítulo 1 - La creación del mundo</p>
+
+        <div class="texto-columna">
+            <!-- Aquí va el contenido del capítulo -->
         <p>En el principio crió Dios los cielos y la tierra. </p>
             <p>2 Y la tierra estaba desordenada y vacía, y las tinieblas estaban sobre la haz del Abismo, y el espíritu de Dios se movía sobre la haz de las aguas.</p>
             <p>3 Y dijo Dios: Sea la luz: y fue la luz.</p>
@@ -57,19 +353,34 @@
             <p>29 Y dijo Dios : He aquí que os he dado toda hierba que da simiente, que está sobre la haz de toda la tierra ; y todo árbol en que hay fruto de árbol que da simiente, seros ha para comer.</p>
             <p>30 Y a toda bestia de la tierra, y a todas las aves de los cielos, y a todo lo que se mueve sobre la tierra, en que hay vida, toda hierba verde le será para comer : y fue así.</p>
             <p>31 Y vio Dios todo lo que habia hecho, y he aqui que era bueno en gran manera. Y fue la tarde y la  mañana el día sexto.</p>
-      
-<div class="botones">
-		
-			<button onclick="location.href='genesis.html'">🏠</button>
-			<button onclick="location.href='genesis2.html'">▶️</button>
-		</div>
-	</div>
+
+
+       
+
+            <div class="controls">
+                <button class="control-btn" onclick="location.href='genesis.html'">
+                    <span>🏠</span> Inicio
+                </button>
+                <button class="control-btn" onclick="location.href='genesis2.html'">
+                    <span>▶️</span> Siguiente Capítulo
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <a href="index.html" class="footer-logo">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+                    
+                </a>
+                
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 IN GOD WE TRUST. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
 </body>
-<!-- Parte inferior con margen de linea azul cielo y texto de derechos reservados-->
-<div class="parte-inferior">
-  <div class="margen-azul">
-    <p>&copy; 2025 IN GOD WE TRUST</p>
-    <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
-  </div>
-</div>
 </html>
