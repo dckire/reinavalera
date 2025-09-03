@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Damasco - Hechos 9:2 - Significado Bíblico</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
+    <style>
+        :root {
+            --color-primary: #8b5a2b;
+            --color-secondary: #3a5e30;
+            --color-accent: #c19b2e;
+            --color-light: #f8f4e9;
+            --color-dark: #2c2c2c;
+            --color-background: #f5f1e6;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--color-background);
+            color: var(--color-dark);
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+        }
+
+        .header-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+
+        .title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .breadcrumb {
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--color-primary);
+        }
+
+        .breadcrumb a {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Word Definition */
+        .word-header {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--color-accent);
+        }
+
+        .word-title {
+            color: var(--color-primary);
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .word-subtitle {
+            color: var(--color-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .bible-reference {
+            background: var(--color-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            border-left: 4px solid var(--color-accent);
+        }
+
+        .bible-reference .verse {
+            font-weight: 600;
+            color: var(--color-primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Content Sections */
+        .content-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .section-title {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-accent);
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title i {
+            margin-right: 10px;
+            color: var(--color-accent);
+        }
+
+        /* Historical Context */
+        .historical-context {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .context-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: var(--transition);
+            border: 1px solid #e0d9c5;
+        }
+
+        .context-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .card-header i {
+            font-size: 1.8rem;
+            color: var(--color-accent);
+            margin-right: 10px;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            color: var(--color-primary);
+        }
+
+        /* Map Section */
+        .map-section {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .map-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .map-image {
+            width: 100%;
+            display: block;
+        }
+
+        .map-caption {
+            margin-top: 1rem;
+            font-style: italic;
+            color: var(--color-secondary);
+        }
+
+        /* Biblical Events */
+        .events-timeline {
+            margin: 2rem 0;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .events-timeline::before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: var(--color-accent);
+        }
+
+        .event-item {
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .event-item::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--color-primary);
+            border: 2px solid var(--color-accent);
+        }
+
+        .event-title {
+            color: var(--color-primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--color-accent);
+        }
+
+        .copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .title {
+                margin-top: 10px;
+                font-size: 1.3rem;
+            }
+
+            .word-title {
+                font-size: 1.8rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo" class="header-logo">
+                <h1 class="title">DICCIONARIO BÍBLICO</h1>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Inicio</a> > <a href="diccionario.html">Diccionario Bíblico</a> > <a href="mapas-biblicos.html">Mapas Bíblicos</a> > Damasco
+        </div>
+
+        <div class="word-header">
+            <h1 class="word-title">Damasco</h1>
+            <p class="word-subtitle">Una de las ciudades más antiguas del mundo y de gran importancia bíblica</p>
+
+            <div class="bible-reference">
+                <span class="verse">Hechos 9:2 (Reina-Valera 1960)</span>
+                "y le pidió cartas para las sinagogas de Damasco, a fin de que si hallase algunos hombres o mujeres de este Camino, los trajese presos a Jerusalén."
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-info-circle"></i> Significado e Importancia</h2>
+            <p><strong>Damasco</strong> es la capital de Siria y una de las ciudades continuamente habitadas más antiguas del mundo, con más de 4,000 años de historia registrada. Su nombre en árabe es "Dimashq" y en hebreo "Dammeseq".</p>
+
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-history"></i>
+                        <h3 class="card-title">Antigüedad</h3>
+                    </div>
+                    <p>Damasco es mencionada por primera vez en textos egipcios del siglo XV a.C. y en la Biblia en tiempos de Abraham.</p>
+                </div>
+
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-trade"></i>
+                        <h3 class="card-title">Ubicación Estratégica</h3>
+                    </div>
+                    <p>Situada en un oasis junto al río Barada, Damasco era un importante centro comercial en las rutas entre África, Asia y Europa.</p>
+                </div>
+
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-cross"></i>
+                        <h3 class="card-title">Significado Cristiano</h3>
+                    </div>
+                    <p>Damasco es famosa por ser el lugar donde Saulo (luego Pablo) tuvo su encuentro transformador con Jesucristo.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-map-marked-alt"></i> Ubicación Geográfica</h2>
+
+            <div class="map-section">
+                <div class="map-container">
+                    <img src="https://www.bibleplaces.com/wp-content/uploads/2015/09/Damascus_from_Air_2.jpg" alt="Vista aérea de Damasco" class="map-image">
+                </div>
+                <p class="map-caption">Vista aérea de Damasco, mostrando la ciudad antigua y moderna</p>
+            </div>
+
+            <p>Damasco está situada en el suroeste de Siria, al pie de la cordillera del Antilíbano. La ciudad se encuentra en una meseta a 680 metros sobre el nivel del mar, regada por el río Barada que fluye desde las montañas y crea el oasis de Ghouta que rodea la ciudad.</p>
+            <p>Su ubicación estratégica en las rutas comerciales entre Mesopotamia y el Mediterráneo, así como entre Arabia y Asia Menor, la convirtió en un importante centro comercial y cultural durante milenios.</p>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-bible"></i> Damasco en la Biblia</h2>
+            <p>Damasco aparece numerosas veces en las Escrituras, tanto en el Antiguo como en el Nuevo Testamento:</p>
+
+            <div class="events-timeline">
+                <div class="event-item">
+                    <div class="event-title">Génesis 14:15</div>
+                    <p>Abraham persiguió a los reyes que habían capturado a Lot hasta Hobá, al norte de Damasco.</p>
+                </div>
+
+                <div class="event-item">
+                    <div class="event-title">Génesis 15:2</div>
+                    <p>Abraham menciona a Eliezer de Damasco como su mayordomo y posible heredero antes del nacimiento de Isaac.</p>
+                </div>
+
+                <div class="event-item">
+                    <div class="event-title">2 Samuel 8:5-6</div>
+                    <p>David derrotó a los sirios de Damasco cuando vinieron a ayudar a los ammonitas.</p>
+                </div>
+
+                <div class="event-item">
+                    <div class="event-title">1 Reyes 11:23-24</div>
+                    <p>Rezón, siervo de Hadad-ezer, rey de Soba, huyó a Damasco y se estableció como rey.</p>
+                </div>
+
+                <div class="event-item">
+                    <div class="event-title">1 Reyes 15:18</div>
+                    <p>Asa, rey de Judá, envió plata y oro a Ben-adad, rey de Damasco, para que rompiera su alianza con Baasa, rey de Israel.</p>
+                </div>
+
+                <div class="event-item">
+                    <div class="event-title">2 Reyes 16:10-11</div>
+                    <p>Acaz, rey de Judá, visitó Damasco y copió el altar que vio allí para instalarlo en Jerusalén.</p>
+                </div>
+
+                <div class="event-item">
+                    <div class="event-title">Isaías 7:8</div>
+                    <p>Isaías profetizó que dentro de 65 años Efraín (Israel) sería quebrantado y dejaría de ser pueblo, refiriéndose a la conquista asiria que incluyó Damasco.</p>
+                </div>
+
+                <div class="event-item">
+                    <div class="event-title">Hechos 9:1-22</div>
+                    <p>La conversión de Saulo (Pablo) en el camino a Damasco, donde iba para perseguir a los cristianos.</p>
+                </div>
+
+                <div class="event-item">
+                    <div class="event-title">2 Corintios 11:32-33</div>
+                    <p>Pablo relata cómo escapó de Damasco siendo bajado en una canasta por el muro de la ciudad.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-road"></i> El Camino a Damasco</h2>
+            <p>El evento más famoso asociado con Damasco en la Biblia es la conversión de Saulo de Tarso:</p>
+
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-search"></i>
+                        <h3 class="card-title">La Misión de Saulo</h3>
+                    </div>
+                    <p>Saulo obtenía cartas del sumo sacerdote para perseguir a los seguidores de "El Camino" en Damasco y llevarlos presos a Jerusalén.</p>
+                </div>
+
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3 class="card-title">El Encuentro Divino</h3>
+                    </div>
+                    <p>Cerca de Damasco, una luz celestial brilló alrededor de Saulo y escuchó la voz de Jesús preguntándole: "Saulo, Saulo, ¿por qué me persigues?"</p>
+                </div>
+
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-blind"></i>
+                        <h3 class="card-title">Ceguera y Curación</h3>
+                    </div>
+                    <p>Saulo quedó ciego y fue llevado a Damasco, donde después de tres días, Ananías lo visitó y restauró su vista.</p>
+                </div>
+            </div>
+
+            <p>Este evento transformó al perseguidor de cristianos en el apóstol Pablo, quien se convertiría en el misionero más influyente del cristianismo primitivo.</p>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-landmark"></i> Damasco en la Actualidad</h2>
+            <p>Hoy en día, Damasco sigue siendo una ciudad importante y conserva muchos lugares de interés bíblico:</p>
+
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-street-view"></i>
+                        <h3 class="card-title">Calle La Derecha</h3>
+                    </div>
+                    <p>Mencionada en Hechos 9:11, todavía existe en el casco antiguo de Damasco y es un activo mercado.</p>
+                </div>
+
+
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-wall"></i>
+                        <h3 class="card-title">Puerta Oriental</h3>
+                    </div>
+                    <p>Se cree que cerca de esta puerta de la ciudad antigua ocurrió el escape de Pablo en una canasta.</p>
+                </div>
+            </div>
+
+            <p>A pesar de los conflictos recientes en Siria, Damasco mantiene su estatus como una de las ciudades más históricamente significativas del mundo bíblico.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+                <h3>IN GOD WE TRUST</h3>
+            </div>
+
+
+            <div class="copyright">
+                <p>&copy; 2025 IN GOD WE TRUST. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
