@@ -1,1 +1,541 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barjesús - Hechos 13:6 - Significado Bíblico</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
+    <style>
+        :root {
+            --color-primary: #8b5a2b;
+            --color-secondary: #3a5e30;
+            --color-accent: #c19b2e;
+            --color-light: #f8f4e9;
+            --color-dark: #2c2c2c;
+            --color-background: #f5f1e6;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--color-background);
+            color: var(--color-dark);
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+        }
+
+        .header-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+
+        .title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .breadcrumb {
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--color-primary);
+        }
+
+        .breadcrumb a {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Word Definition */
+        .word-header {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--color-accent);
+        }
+
+        .word-title {
+            color: var(--color-primary);
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .word-subtitle {
+            color: var(--color-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .bible-reference {
+            background: var(--color-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            border-left: 4px solid var(--color-accent);
+        }
+
+        .bible-reference .verse {
+            font-weight: 600;
+            color: var(--color-primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Content Sections */
+        .content-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .section-title {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-accent);
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title i {
+            margin-right: 10px;
+            color: var(--color-accent);
+        }
+
+        /* Historical Context */
+        .historical-context {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .context-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: var(--transition);
+            border: 1px solid #e0d9c5;
+        }
+
+        .context-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .card-header i {
+            font-size: 1.8rem;
+            color: var(--color-accent);
+            margin-right: 10px;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            color: var(--color-primary);
+        }
+
+        /* Name Meaning */
+        .name-meaning {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: white;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+
+        .name-hebrew {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-family: 'Times New Roman', serif;
+        }
+
+        .name-translation {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        /* Contrast Section */
+        .contrast-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .contrast-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .contrast-card.true {
+            border-top: 4px solid #3a5e30;
+        }
+
+        .contrast-card.false {
+            border-top: 4px solid #8b2c2c;
+        }
+
+        .contrast-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .true .contrast-icon {
+            color: #3a5e30;
+        }
+
+        .false .contrast-icon {
+            color: #8b2c2c;
+        }
+
+        /* Warning Box */
+        .warning-box {
+            background: #fff4f4;
+            border-left: 4px solid #d9534f;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .warning-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            color: #d9534f;
+        }
+
+        .warning-header i {
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--color-accent);
+        }
+
+        .copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .title {
+                margin-top: 10px;
+                font-size: 1.3rem;
+            }
+
+            .word-title {
+                font-size: 1.8rem;
+            }
+
+            .contrast-section {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo" class="header-logo">
+                <h1 class="title">DICCIONARIO BÍBLICO</h1>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Inicio</a> >Diccionario Bíblico</a> > Barjesús
+        </div>
+
+        <div class="word-header">
+            <h1 class="word-title">Barjesús</h1>
+            <p class="word-subtitle">El falso profeto que se enfrentó a Pablo y Bernabé</p>
+
+            <div class="bible-reference">
+                <span class="verse">Hechos 13:6-8 (Reina-Valera 1960)</span>
+                "Y habiendo atravesado toda la isla hasta Pafos, hallaron a cierto mago, falso profeta, judío, llamado Barjesús, que estaba con el procónsul Sergio Paulo, varón prudente. Este, llamando a Bernabé y a Saulo, deseaba oír la palabra de Dios. Pero les resistía Elimas, el mago (pues así se traduce su nombre), procurando apartar de la fe al procónsul."
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-info-circle"></i> Significado e Identidad</h2>
+            <p><strong>Barjesús</strong> (también conocido como Elimas) fue un mago y falso profeta judío que se menciona en Hechos 13 durante el primer viaje misionero de Pablo y Bernabé. Su nombre significa "hijo de Jesús" o "hijo de Josué", lo cual es irónico dado su oposición al mensaje del verdadero Jesús.</p>
+
+            <div class="name-meaning">
+                <div class="name-hebrew">בַּר יֵשׁוּעַ</div>
+                <div class="name-translation">"Hijo de Jesús" o "Hijo de Josué"</div>
+                <p>Significado del nombre Barjesús en arameo</p>
+            </div>
+
+            <p>Barjesús es identificado también como Elimas, que según el texto bíblico significa "mago" o "hechicero". Este personaje estaba asociado con Sergio Paulo, el procónsul romano de Chipre, y trató de oponerse a la predicación de Pablo y Bernabé.</p>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-history"></i> Contexto Histórico</h2>
+
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h3 class="card-title">Ubicación: Pafos, Chipre</h3>
+                    </div>
+                    <p>Pafos era la capital romana de Chipre y un centro importante del culto a Afrodita. Allí, Pablo y Bernabé encontraron a Barjesús en la corte del procónsul.</p>
+                </div>
+
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-user-tie"></i>
+                        <h3 class="card-title">Sergio Paulo</h3>
+                    </div>
+                    <p>El procónsul romano, descrito como "varón prudente", mostró interés en escuchar el mensaje de Pablo y Bernabé, lo que provocó la oposición de Barjesús.</p>
+                </div>
+
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-hat-wizard"></i>
+                        <h3 class="card-title">Magia en el Mundo Antiguo</h3>
+                    </div>
+                    <p>Los magos y hechiceros eran comunes en las cortes romanas, donde se les consultaba para tomar decisiones importantes y predecir el futuro.</p>
+                </div>
+            </div>
+
+            <p>Barjesús representaba la oposición espiritual que Pablo y Bernabé enfrentarían repetidamente en su ministerio misionero. Su presencia en la corte del procónsul muestra cómo las fuerzas espirituales de oscuridad intentan infiltrarse e influir en las esferas de poder.</p>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-balance-scale"></i> Contraste: Verdad vs. Engaño</h2>
+
+            <div class="contrast-section">
+                <div class="contrast-card true">
+                    <div class="contrast-icon">
+                        <i class="fas fa-cross"></i>
+                    </div>
+                    <h3>Pablo y Bernabé</h3>
+                    <p>Enviados por el Espíritu Santo (Hechos 13:4)</p>
+                    <p>Predicaban la Palabra de Dios</p>
+                    <p>Buscan la salvación del procónsul</p>
+                    <p>Poder divino auténtico</p>
+                </div>
+
+                <div class="contrast-card false">
+                    <div class="contrast-icon">
+                        <i class="fas fa-hat-wizard"></i>
+                    </div>
+                    <h3>Barjesús (Elimas)</h3>
+                    <p>Motivado por intereses personales</p>
+                    <p>Practicaba magia y hechicería</p>
+                    <p>Busca mantener su influencia sobre el procónsul</p>
+                    <p>Poder demoníaco engañoso</p>
+                </div>
+            </div>
+
+            <p>Este enfrentamiento representa la batalla espiritual entre la verdad del Evangelio y el engaño satánico. Barjesús intentó "apartar de la fe al procónsul", mostrando cómo el enemigo busca actively impedir que las personas reciban la Palabra de Dios.</p>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-exclamation-triangle"></i> El Juicio Divino</h2>
+
+            <div class="warning-box">
+                <div class="warning-header">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <h3>La Respuesta de Pablo</h3>
+                </div>
+                <p>Pablo, lleno del Espíritu Santo, confrontó directamente a Barjesús/Elimas con palabras de juicio:</p>
+                <p><em>"¡Oh, lleno de todo engaño y de toda maldad, hijo del diablo, enemigo de toda justicia! ¿No cesarás de trastornar los caminos rectos del Señor? Ahora, pues, he aquí la mano del Señor está contra ti, y serás ciego, y no verás el sol por algún tiempo."</em> (Hechos 13:10-11)</p>
+            </div>
+
+            <p>Inmediatamente después de estas palabras, Barjesús quedó ciego y tuvo que ser guiado de la mano. Este juicio divino:</p>
+
+            <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem;">
+                <li>Demostró la autoridad apostólica de Pablo</li>
+                <li>Confirmó el mensaje del Evangelio como verdadero</li>
+                <li>Mostró la superioridad del poder de Dios sobre la magia</li>
+                <li>Resultó en la conversión del procónsul Sergio Paulo</li>
+            </ul>
+
+            <p>La ceguera física de Barjesús era un símbolo de su ceguera espiritual. Es interesante notar que Pablo mismo había experimentado ceguera temporal en su encuentro con Jesús (Hechos 9:8-9), pero con un propósito redentor muy diferente.</p>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-church"></i> Significado Teológico</h2>
+            <p>La historia de Barjesús enseña importantes lecciones espirituales:</p>
+
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3 class="card-title">Oposición Espiritual</h3>
+                    </div>
+                    <p>El ministerio del Evangelio siempre enfrentará oposición espiritual. Barjesús representa las fuerzas demoníacas que se oponen a la propagación de la verdad.</p>
+                </div>
+
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-gavel"></i>
+                        <h3 class="card-title">Autoridad Apostólica</h3>
+                    </div>
+                    <p>Pablo demostró la autoridad espiritual dada por Jesús a sus apóstoles para confrontar directamente el poder demoníaco.</p>
+                </div>
+
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-eye-slash"></i>
+                        <h3 class="card-title">Juicio Divino</h3>
+                    </div>
+                    <p>Dios juzga a aquellos que intentan desviar a otros de la fe, especialmente aquellos que pretenden tener autoridad espiritual mientras sirven al diablo.</p>
+                </div>
+            </div>
+
+            <p>Este incidente también muestra el patrón del Evangelio avanzando primero a los judíos (representados por Barjesús, aunque apostata) y luego a los gentiles (representados por Sergio Paulo), con el mensaje finalmente siendo recibido por los gentiles cuando es rechazado por los judíos.</p>
+        </div>
+
+        
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+                <h3>IN GOD WE TRUST</h3>
+            </div>
+
+
+            <div class="copyright">
+                <p>&copy; 2025 IN GOD WE TRUST. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
