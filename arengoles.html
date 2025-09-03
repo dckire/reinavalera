@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hechos 12:21 - "Y arengóles" - Explicación</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
+    <style>
+        :root {
+            --color-primary: #8b5a2b;
+            --color-secondary: #3a5e30;
+            --color-accent: #c19b2e;
+            --color-light: #f8f4e9;
+            --color-dark: #2c2c2c;
+            --color-background: #f5f1e6;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--color-background);
+            color: var(--color-dark);
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+        }
+
+        .header-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+
+        .title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .breadcrumb {
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--color-primary);
+        }
+
+        .breadcrumb a {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Word Definition */
+        .word-header {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--color-accent);
+        }
+
+        .word-title {
+            color: var(--color-primary);
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .word-subtitle {
+            color: var(--color-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .bible-reference {
+            background: var(--color-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            border-left: 4px solid var(--color-accent);
+        }
+
+        .bible-reference .verse {
+            font-weight: 600;
+            color: var(--color-primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Content Sections */
+        .content-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .section-title {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-accent);
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title i {
+            margin-right: 10px;
+            color: var(--color-accent);
+        }
+
+        /* Historical Context */
+        .historical-context {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .context-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: var(--transition);
+            border: 1px solid #e0d9c5;
+        }
+
+        .context-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .card-header i {
+            font-size: 1.8rem;
+            color: var(--color-accent);
+            margin-right: 10px;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            color: var(--color-primary);
+        }
+
+        /* Linguistic Explanation */
+        .linguistic-explanation {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .language-card {
+            flex: 1;
+            min-width: 250px;
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .language-card i {
+            font-size: 2.5rem;
+            color: var(--color-accent);
+            margin-bottom: 1rem;
+        }
+
+        /* Theological Application */
+        .application-points {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .application-points li {
+            margin-bottom: 0.8rem;
+            padding-left: 0.5rem;
+        }
+
+        .application-points li strong {
+            color: var(--color-primary);
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--color-accent);
+        }
+
+        .copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .title {
+                margin-top: 10px;
+                font-size: 1.3rem;
+            }
+
+            .word-title {
+                font-size: 1.8rem;
+            }
+
+            .linguistic-explanation {
+                flex-direction: column;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo" class="header-logo">
+                <h1 class="title">DICCIONARIO BÍBLICO</h1>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Inicio</a> > <a href="diccionario.html">Diccionario Bíblico</a> > Hechos 12:21 - "Y arengóles"
+        </div>
+
+        <div class="word-header">
+            <h1 class="word-title">"Y arengóles" - Hechos 12:21</h1>
+            <p class="word-subtitle">Significado y contexto del término "arengóles" en la Biblia</p>
+
+            <div class="bible-reference">
+                <span class="verse">Hechos 12:21-23 (Reina-Valera 1569-1606)</span>
+                "Y un día señalado, Herodes, vestido de ropas reales, se sentó en el tribunal y <strong>arengóles</strong>.
+                Y el pueblo aclamaba gritando: ¡Voz de Dios, y no de hombre!
+                Al momento un ángel del Señor le hirió, por cuanto no dio la gloria a Dios; y expiró comido de gusanos."
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-info-circle"></i> Significado de "arengóles"</h2>
+            <p>El término <strong>"arengóles"</strong> proviene del verbo "arengar", que significa:</p>
+
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-microphone"></i>
+                        <h3 class="card-title">Discurso Público</h3>
+                    </div>
+                    <p>Pronunciar un discurso o speech ante una audiencia, generalmente con el propósito de persuadir, motivar o influir en los oyentes.</p>
+                </div>
+
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-crown"></i>
+                        <h3 class="card-title">Contexto Real</h3>
+                    </div>
+                    <p>En el contexto de Hechos 12, Herodes Agripa I se dirigió al pueblo con un discurso solemne desde su tribunal, vistiendo ropas reales.</p>
+                </div>
+
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-theater-masks"></i>
+                        <h3 class="card-title">Ocasión Especial</h3>
+                    </div>
+                    <p>El texto menciona que era "un día señalado", probablemente una festividad o celebración importante, donde Herodes buscaba ganar favor popular.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-language"></i> Explicación Lingüística</h2>
+
+            <div class="linguistic-explanation">
+                <div class="language-card">
+                    <i class="fas fa-greek"></i>
+                    <h3>Griego Original</h3>
+                    <p>En el texto griego original, se utiliza el verbo "δημηγορέω" (dēmēgoreō), que significa "dirigirse al pueblo" o "dar un discurso público".</p>
+                </div>
+
+                <div class="language-card">
+                    <i class="fas fa-font"></i>
+                    <h3>Traducción al Español</h3>
+                    <p>La Reina-Valera 1960 tradujo este verbo como "arengóles", donde "arengó" proviene de "arengar" y "les" es el pronombre de objeto indirecto ("a ellos").</p>
+                </div>
+
+                <div class="language-card">
+                    <i class="fas fa-book"></i>
+                    <h3>Otras Traducciones</h3>
+                    <p>Otras versiones bíblicas traducen este verbo como: "les habló" (NVI), "pronunció un discurso" (DHH), "arengaba" (Nácar-Colunga).</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-history"></i> Contexto Histórico</h2>
+            <p>El evento descrito en Hechos 12:21 ocurrió en Cesarea, durante una celebración en honor al emperador Claudio. Herodes Agripa I, nieto de Herodes el Grande, era rey de Judea y buscaba congraciarse con sus súbditos.</p>
+            <p>Según el historiador judío Flavio Josefo, Herodes vestía un manto real tejido completamente de plata, que brillaba espectacularmente bajo el sol. Cuando Herodes arengó al pueblo (les dio su discurso), éste comenzó a aclamarlo como a un dios, gritando: "¡Voz de Dios, y no de hombre!"</p>
+            <p>La dramática respuesta divina -la inmediata muerte de Herodes por no dar gloria a Dios- demuestra el serio juicio de Dios contra la arrogancia y la auto-glorificación.</p>
+        </div>
+
+       
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+                <h3>IN GOD WE TRUST</h3>
+            </div>
+
+
+            <div class="copyright">
+                <p>&copy; 2025 IN GOD WE TRUST. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
