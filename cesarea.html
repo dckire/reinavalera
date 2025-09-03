@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cesárea - Hechos 10:1 - Significado Bíblico</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
+    <style>
+        :root {
+            --color-primary: #8b5a2b;
+            --color-secondary: #3a5e30;
+            --color-accent: #c19b2e;
+            --color-light: #f8f4e9;
+            --color-dark: #2c2c2c;
+            --color-background: #f5f1e6;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--color-background);
+            color: var(--color-dark);
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+        }
+
+        .header-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+
+        .title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .breadcrumb {
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--color-primary);
+        }
+
+        .breadcrumb a {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Word Definition */
+        .word-header {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--color-accent);
+        }
+
+        .word-title {
+            color: var(--color-primary);
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .word-subtitle {
+            color: var(--color-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .bible-reference {
+            background: var(--color-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            border-left: 4px solid var(--color-accent);
+        }
+
+        .bible-reference .verse {
+            font-weight: 600;
+            color: var(--color-primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Content Sections */
+        .content-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .section-title {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-accent);
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title i {
+            margin-right: 10px;
+            color: var(--color-accent);
+        }
+
+        /* Historical Context */
+        .historical-context {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .context-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: var(--transition);
+            border: 1px solid #e0d9c5;
+        }
+
+        .context-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .card-header i {
+            font-size: 1.8rem;
+            color: var(--color-accent);
+            margin-right: 10px;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            color: var(--color-primary);
+        }
+
+        /* Map Section */
+        .map-section {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .map-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .map-image {
+            width: 100%;
+            display: block;
+        }
+
+        .map-caption {
+            margin-top: 1rem;
+            font-style: italic;
+            color: var(--color-secondary);
+        }
+
+        /* Biblical Events */
+        .events-timeline {
+            margin: 2rem 0;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .events-timeline::before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: var(--color-accent);
+        }
+
+        .event-item {
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .event-item::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--color-primary);
+            border: 2px solid var(--color-accent);
+        }
+
+        .event-title {
+            color: var(--color-primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--color-accent);
+        }
+
+        .copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .title {
+                margin-top: 10px;
+                font-size: 1.3rem;
+            }
+
+            .word-title {
+                font-size: 1.8rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo" class="header-logo">
+                <h1 class="title">DICCIONARIO BÍBLICO</h1>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Inicio</a> > <a href="diccionario.html">Diccionario Bíblico</a> > <a href="mapas-biblicos.html">Mapas Bíblicos</a> > Cesárea
+        </div>
+
+        <div class="word-header">
+            <h1 class="word-title">Cesárea</h1>
+            <p class="word-subtitle">Ciudad portuaria de importancia en el Nuevo Testamento</p>
+
+            <div class="bible-reference">
+                <span class="verse">Hechos 10:1 (Reina-Valera 1960)</span>
+                "Había en Cesárea un hombre llamado Cornelio, centurión de la compañía llamada la Italiana"
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-info-circle"></i> Significado e Importancia</h2>
+            <p><strong>Cesárea</strong>, también conocida como Cesárea Marítima o Cesárea de Palestina, fue una importante ciudad portuaria en la costa mediterránea de Israel, situada entre Tel Aviv y Haifa. Fundada por Herodes el Grande entre los años 25 y 13 a.C., fue nombrada en honor al emperador romano César Augusto.</p>
+
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-landmark"></i>
+                        <h3 class="card-title">Centro Administrativo</h3>
+                    </div>
+                    <p>Cesárea sirvió como capital administrativa de la provincia romana de Judea y residencia de los procuradores romanos, incluido Poncio Pilato.</p>
+                </div>
+
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-anchor"></i>
+                        <h3 class="card-title">Puerto Importante</h3>
+                    </div>
+                    <p>Herodes construyó un impresionante puerto artificial que se convirtió en uno de los más importantes del Mediterráneo oriental.</p>
+                </div>
+
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-cross"></i>
+                        <h3 class="card-title">Significado Cristiano</h3>
+                    </div>
+                    <p>Cesárea fue escenario de importantes eventos del cristianismo primitivo, incluyendo la conversión de Cornelio, el primer gentil convertido.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-map-marked-alt"></i> Ubicación Geográfica</h2>
+
+            <div class="map-section">
+                <div class="map-container">
+                    <img src="https://www.bibleplaces.com/wp-content/uploads/2015/09/Caesarea_Maritima_Overview_from_south-2.jpg" alt="Vista de las ruinas de Cesárea Marítima" class="map-image">
+                </div>
+                <p class="map-caption">Vista aérea de las ruinas de Cesárea Marítima en la actualidad</p>
+            </div>
+
+            <p>Cesárea estaba estratégicamente ubicada en la costa del Mar Mediterráneo, aproximadamente a mitad de camino entre Jope (actual Jaffa) y el Monte Carmelo. Su posición la convertía en un importante centro comercial y de comunicaciones entre Judea y el Imperio Romano.</p>
+            <p>La ciudad contaba con modernas instalaciones para su época, incluyendo un acueducto que traía agua desde los manantiales del Monte Carmelo, un teatro, un anfiteatro, hipódromo y templos dedicados a Roma y Augusto.</p>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-bible"></i> Cesárea en la Biblia</h2>
+            <p>Cesárea aparece múltiples veces en el Nuevo Testamento, especialmente en el libro de Hechos de los Apóstoles:</p>
+
+            <div class="events-timeline">
+                <div class="event-item">
+                    <div class="event-title">Hechos 8:40</div>
+                    <p>Felipe el evangelista predicó en Cesárea después de bautizar al eunuco etíope.</p>
+                </div>
+
+                <div class="event-item">
+                    <div class="event-title">Hechos 9:30</div>
+                    <p>Los discípulos llevaron a Pablo a Cesárea para enviarlo a Tarso, protegiéndolo de los judíos que querían matarlo.</p>
+                </div>
+
+                <div class="event-item">
+                    <div class="event-title">Hechos 10</div>
+                    <p>Pedro visitó Cesárea y bautizó a Cornelio y su household, el primer grupo de gentiles convertidos al cristianismo.</p>
+                </div>
+
+                <div class="event-item">
+                    <div class="event-title">Hechos 12:19-23</div>
+                    <p>Herodes Agripa I murió en Cesárea, comido por gusanos por aceptar adoración como dios.</p>
+                </div>
+
+                <div class="event-item">
+                    <div class="event-title">Hechos 23:23-35</div>
+                    <p>Pablo fue encarcelado en Cesárea durante dos años antes de ser enviado a Roma para su juicio.</p>
+                </div>
+
+                <div class="event-item">
+                    <div class="event-title">Hechos 25:1-13</div>
+                    <p>Pablo compareció ante Festo y Agripa II en Cesárea antes de apelar a César.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-church"></i> Importancia en la Historia Cristiana</h2>
+            <p>Cesárea jugó un papel crucial en la expansión del cristianismo más allá del judaísmo:</p>
+
+            <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem;">
+                <li><strong>Puerta a los gentiles:</strong> La conversión de Cornelio marcó un hito al demostrar que el evangelio era para todos los pueblos, no solo para los judíos.</li>
+                <li><strong>Centro de enseñanza:</strong> En el siglo III, Orígenes estableció una importante escuela teológica en Cesárea.</li>
+                <li><strong>Preservación de textos:</strong> Eusebio de Cesárea, obispo del siglo IV, compiló importantes obras históricas y teológicas.</li>
+               
+            
+
+            <p>La ciudad continuó siendo un importante centro cristiano durante el período bizantino antes de ser conquistada por los musulmanes en el año 640 d.C.</p>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-excavation"></i> Cesárea en la Actualidad</h2>
+            <p>Hoy en día, Cesárea es un importante sitio arqueológico y turístico en Israel:</p>
+
+            
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+                <h3>IN GOD WE TRUST</h3>
+            </div>
+
+
+            <div class="copyright">
+                <p>&copy; 2025 IN GOD WE TRUST. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
