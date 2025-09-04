@@ -2,115 +2,342 @@
 <html lang="es">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-BYMJS3X12P');
-</script>
-	<meta name="google-site-verification" content="KWZFlVdcT-h9cB1Qnj0LgSLJP-J-NS4bgjhnQG_c140" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BYMJS3X12P');
+    </script>
+    <meta name="google-site-verification" content="KWZFlVdcT-h9cB1Qnj0LgSLJP-J-NS4bgjhnQG_c140" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
     <title>El Tiempo de los Gentiles se está Terminando</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Estilos iniciales */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.8;
+        :root {
+            --color-primary: #8b5a2b;
+            --color-secondary: #3a5e30;
+            --color-accent: #c19b2e;
+            --color-light: #f8f4e9;
+            --color-dark: #2c2c2c;
+            --color-background: #f5f1e6;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-            transition: background-color 5s ease, color 5s ease; /* Transición más lenta */
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
-        h1, h2, h3 {
-            color: #2c3e50;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        
+        body {
+            background-color: var(--color-background);
+            color: var(--color-dark);
+            line-height: 1.8;
+            transition: background-color 5s ease, color 5s ease;
         }
-
-        h1 {
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 3rem 1rem;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" opacity="0.1"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="40" fill="none" stroke="white" stroke-width="2"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.1;
+        }
+        
+        h1 {
             font-size: 2.5rem;
-            margin-top: 20px;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            position: relative;
         }
-
-        h2 {
-            font-size: 2rem;
-            margin-top: 30px;
+        
+        .subtitle {
+            font-size: 1.2rem;
+            font-style: italic;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
         }
-
-        h3 {
-            font-size: 1.5rem;
-            margin-top: 20px;
+        
+        /* Main Content */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
         }
-
-        p, a, blockquote, .verse {
-            color: #555;
-            transition: color 1.5s ease; /* Transición de color para texto */
+        
+        .intro-text {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
         }
-
-        a {
-            color: #2980b9;
+        
+        /* Section Styles */
+        .section {
+            background: white;
+            border-radius: 10px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--color-accent), var(--color-primary));
+        }
+        
+        .section-title {
+            color: var(--color-primary);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title i {
+            margin-right: 10px;
+            color: var(--color-accent);
+        }
+        
+        /* Bible References */
+        .bible-ref {
+            color: var(--color-secondary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        
+        .verse {
+            background: var(--color-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            font-style: italic;
+            border-left: 4px solid var(--color-accent);
+            position: relative;
+        }
+        
+        .verse-ref {
+            display: block;
+            font-weight: bold;
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .read-more {
+            display: inline-block;
+            margin-top: 0.5rem;
+            color: var(--color-secondary);
+            font-size: 0.9rem;
             text-decoration: none;
         }
-
-        a:hover {
+        
+        .read-more:hover {
             text-decoration: underline;
         }
-
-        blockquote {
-            margin: 20px 0;
-            padding: 20px;
-            background-color: #f1f1f1;
-            border-left: 5px solid #ccc;
-            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        
+        /* Prophecy Timeline */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
         }
-
-        .verse {
-            font-style: italic;
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--color-accent);
+            transform: translateX(-50%);
         }
-
-        /* Estilos al desplazarse */
-        body.scrolled {
-            background-color: #2c3e50; /* Fondo oscuro */
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            width: 45%;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
         }
-
-        body.scrolled h1,
-        body.scrolled h2,
-        body.scrolled h3,
-        body.scrolled p,
-        body.scrolled a,
-        body.scrolled blockquote,
-        body.scrolled .verse {
-            color: #ecf0f1; /* Texto blanco */
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
         }
-
-        body.scrolled blockquote {
-            background-color: #34495e; /* Fondo oscuro para blockquotes */
-            border-left: 5px solid #7f8c8d; /* Borde más claro */
+        
+        .timeline-item:nth-child(even) {
+            left: 55%;
         }
-
-        /* Parte inferior */
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            top: 1.5rem;
+            width: 20px;
+            height: 20px;
+            background: var(--color-primary);
+            border-radius: 50%;
+            border: 3px solid var(--color-accent);
+        }
+        
+        .timeline-item:nth-child(odd)::after {
+            right: -12px;
+        }
+        
+        .timeline-item:nth-child(even)::after {
+            left: -12px;
+        }
+        
+        .timeline-title {
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Call to Action */
+        .cta {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: white;
+            border-radius: 10px;
+            margin: 3rem 0;
+        }
+        
+        .cta-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: var(--color-accent);
+            color: var(--color-dark);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--color-dark);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
         .parte-inferior {
             text-align: center;
             padding: 20px;
+            background-color: var(--color-dark);
+            color: white;
+        }
+        
+        .margen-azul {
+            border-top: 2px solid var(--color-accent);
+            padding-top: 15px;
+        }
+        
+        .logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-top: 10px;
+            border: 2px solid var(--color-accent);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .section {
+                padding: 1.5rem;
+            }
+            
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                width: 85%;
+                left: 40px !important;
+            }
+            
+            .timeline-item:nth-child(odd)::after,
+            .timeline-item:nth-child(even)::after {
+                left: -12px;
+            }
+        }
+        
+        /* Scrolled State */
+        body.scrolled {
             background-color: #2c3e50;
             color: #ecf0f1;
-            margin-top: 40px;
         }
-
-        .parte-inferior p {
-            margin: 0;
-            font-size: 0.9rem;
+        
+        body.scrolled .section {
+            background: #34495e;
+            color: #ecf0f1;
         }
-
-        .parte-inferior img {
-            width: 50px;
-            margin-top: 10px;
+        
+        body.scrolled .verse {
+            background: #2c3e50;
+            color: #ecf0f1;
+        }
+        
+        body.scrolled .section-title {
+            color: #ecf0f1;
+        }
+        
+        body.scrolled .bible-ref,
+        body.scrolled .verse-ref {
+            color: #c19b2e;
         }
     </style>
 </head>
@@ -118,45 +345,108 @@
 
     <header>
         <h1>El Tiempo de los Gentiles se está Terminando</h1>
+        <p class="subtitle">"Y caerán a filo de espada, y serán llevados cautivos a todas las naciones; y Jerusalén será hollada por los gentiles, hasta que los tiempos de los gentiles se cumplan." - Lucas 21:24</p>
     </header>
 
-    <section>
-        <h2>Dios habló del pueblo de Israel en términos proféticos, Que los judíos andarían esparcidos por distintos lugares de la tierra sin tener su propio país, y esto se cumplió.</h2>
-
-        <h3>1. Su patria fue hallada después</h3>
-        <p><strong>Deuteronomio 28:46-52</strong> <a href="https://dckire.github.io/reinavalera/deuteronomio28.html#:~:text=46%20Y%20ser%C3%A1n,te%20habr%C3%A1%20dado.">(leer)</a></p>
-        <blockquote class="verse">
-            <p><strong>Daniel 12:11</strong>: Y desde el tiempo que fuere quitado el continuo sacrificio hasta la abominación espantosa, habrá mil doscientos y noventa días.</p>
-            <p><strong>Ezequiel 4:5-6</strong>: Yo te he dado los años de su maldad por el número de los días, trescientos noventa días; y llevarás la maldad de la casa de Israel. Y cumplidos estos, dormirás sobre tu lado derecho segunda vez, y llevarás la maldad de la casa de Judá cuarenta días: día por año, día por año te lo he dado.</p>
-        </blockquote>
-    </section>
-
-    <section>
-        <h2>2. El tiempo de la gracia de Cristo se acabaría para los gentiles cuando los judíos acepten a Cristo, y estamos entrando en estos cumplimientos de esta profecía.</h2>
-
-        <blockquote class="verse">
-            <p><strong>Oseas 3:4-5</strong>: Porque muchos días estarán los hijos de Israel sin rey, sin príncipe, y sin sacrificio, y sin estatua, y sin efod, y sin terafim. Después volverán los hijos de Israel, y buscarán a Jehová su Dios, y a David su rey, y temerán a Jehová y a su bondad en el fin de los días.</p>
-            <p><strong>Zacarías 12:10</strong>: Y derramaré sobre la casa de David, y sobre los moradores de Jerusalén, espíritu de gracia y de oración; y mirarán a mí, a quien traspasaron; y harán llanto sobre él, como llanto sobre unigénito, afligiéndose sobre él como quien se aflige sobre su primogénito.</p>
-            <p><strong>Isaías 44:22</strong>: Yo deshice como a nube tus rebeliones, y como a niebla tus pecados: vuélvete a mí, porque yo te redimí.</p>
-            <p><strong>Isaías 59:19-21</strong>: Y temerán desde el occidente el nombre de Jehová, y desde el nacimiento del sol de su gloria: porque vendrá el enemigo como río, mas el espíritu de Jehová levantará bandera contra él. Y vendrá el Redentor a Sión, y a los que se volvieren de la iniquidad en Jacob, dice Jehová. Y este será mi pacto con ellos, dijo Jehová: El espíritu mío que está sobre ti, y...</p>
-            <p><strong>Isaías 11:15-16</strong>: Y secará Jehová la lengua de la mar de Egipto; y levantará su mano con fortaleza de su espíritu sobre el río, y herirálo en sus siete brazos, y hará que pasen por él con zapatos. Y habrá camino para las reliquias de su pueblo, las que quedaron de Asiria, de la manera que lo hubo para Israel el día que subió de la tierra de Egipto.</p>
-            <p><strong>Isaías 14:1-2</strong>: Porque Jehová tendrá piedad de Jacob, y todavía escogerá a Israel, y les hará reposar en su tierra: y allegaránse a la familia de Jacob. Y tomarán los pueblos, y traeránlos a su lugar y la casa de Israel los poseerá por siervos y criadas en la tierra de Jehová: y cautivarán a los que los cautivaron, y señorearán a los que los oprimieron.</p>
-           
-            </blockquote>
-    </section>
-
-    <section>
-        <h2>3. Después de esto, que ya se está cumpliendo, la Palabra de Dios dice que los judíos serían reunidos en su lugar de origen y adorarán a Jehová como al principio</h2>
-
-        <blockquote class="verse">
-            <p><strong>Isaías 27:12-13</strong>: Y acontecerá en aquel día, que herirá Jehová desde el álveo del río hasta el torrente de Egipto, y vosotros, hijos de Israel, seréis reunidos uno a uno. Acontecerá también en aquel día, que se tañerá con gran trompeta, y vendrán los que habían sido esparcidos en la tierra de Asiria, y los que habían sido echados en tierra de Egipto, y adorarán a Jehová en el monte santo, en Jerusalén.</p>
-            <p><strong>Ezequiel 37:21</strong>: Y les dirás: Así ha dicho el Señor Jehová: He aquí; yo tomo a los hijos de Israel de entre las gentes a las cuales fueron, y los juntaré de todas partes, y los traeré a su tierra.</p>
-            <p><strong>Romanos 11:25-29</strong>: Porque no quiero, hermanos, que ignoréis este misterio, para que no seáis acerca de vosotros mismos arrogantes: que el endurecimiento en parte ha acontecido en Israel, hasta que haya entrado la plenitud de los Gentiles; y luego todo Israel será salvo; como está escrito: Vendrá de Sión el Libertador, que quitará de Jacob la impiedad; y este es mi pacto con ellos, cuando quitare sus pecados. Así que, cuanto al evangelio, son enemigos por causa de vosotros: mas cuanto a la elección, son muy amados por causa de los padres. Porque sin arrepentimiento son las mercedes y la vocación de Dios.</p>
-            <p><strong>Apocalipsis 22:11</strong>: El que es injusto, sea injusto todavía: y el que es sucio, ensúciese todavía: y el que es justo, sea todavía justificado: y el santo sea santificado todavía.</p>
-            <p><strong>1 Timoteo 2:3-4</strong>: Porque esto es bueno y agradable delante de Dios nuestro Salvador, el cual quiere que todos los hombres sean salvos, y que vengan al conocimiento de la verdad.</p>
-            <p><strong>Apocalipsis 12:3-10</strong> <a href="https://dckire.github.io/reinavalera/apocalipsis12.html#:~:text=3%20Y%20fu%C3%A9,d%C3%ADa%20y%20noche.">(leer)</a></p>
-        </blockquote>
-    </section>
+    <div class="container">
+        <div class="intro-text">
+            <p>Dios habló del pueblo de Israel en términos proféticos, que los judíos andarían esparcidos por distintos lugares de la tierra sin tener su propio país, y esto se cumplió. Hoy presenciamos el cumplimiento de las profecías bíblicas sobre el fin de los tiempos y la restauración de Israel.</p>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-history"></i> 1. Profecía sobre la dispersión y restauración de Israel</h2>
+            <p>Las Escrituras profetizaron que Israel sería esparcido entre las naciones y luego restaurado en los últimos tiempos.</p>
+            
+            <span class="bible-ref">Deuteronomio 28:46-52</span>
+            <a href="https://dckire.github.io/reinavalera/deuteronomio28.html#:~:text=46%20Y%20ser%C3%A1n,te%20habr%C3%A1%20dado." class="read-more">Leer pasaje completo</a>
+            
+            <div class="verse">
+                <span class="verse-ref">Daniel 12:11</span>
+                "Y desde el tiempo que fuere quitado el continuo sacrificio hasta la abominación espantosa, habrá mil doscientos y noventa días."
+            </div>
+            
+            <div class="verse">
+                <span class="verse-ref">Ezequiel 4:5-6</span>
+                "Yo te he dado los años de su maldad por el número de los días, trescientos noventa días; y llevarás la maldad de la casa de Israel. Y cumplidos estos, dormirás sobre tu lado derecho segunda vez, y llevarás la maldad de la casa de Judá cuarenta días: día por año, día por año te lo he dado."
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-hourglass-end"></i> 2. El tiempo de los gentiles se está cumpliendo</h2>
+            <p>El tiempo de la gracia para los gentiles se acercaría a su fin cuando Israel como nación reconozca a Jesucristo como Mesías.</p>
+            
+            <div class="verse">
+                <span class="verse-ref">Oseas 3:4-5</span>
+                "Porque muchos días estarán los hijos de Israel sin rey, sin príncipe, y sin sacrificio, y sin estatua, y sin efod, y sin terafim. Después volverán los hijos de Israel, y buscarán a Jehová su Dios, y a David su rey, y temerán a Jehová y a su bondad en el fin de los días."
+            </div>
+            
+            <div class="verse">
+                <span class="verse-ref">Zacarías 12:10</span>
+                "Y derramaré sobre la casa de David, y sobre los moradores de Jerusalén, espíritu de gracia y de oración; y mirarán a mí, a quien traspasaron; y harán llanto sobre él, como llanto sobre unigénito, afligiéndose sobre él como quien se aflige sobre su primogénito."
+            </div>
+            
+            <div class="verse">
+                <span class="verse-ref">Romanos 11:25-26</span>
+                "Porque no quiero, hermanos, que ignoréis este misterio, para que no seáis acerca de vosotros mismos arrogantes: que el endurecimiento en parte ha acontecido en Israel, hasta que haya entrado la plenitud de los Gentiles; y luego todo Israel será salvo; como está escrito: Vendrá de Sión el Libertador, que quitará de Jacob la impiedad."
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-cross"></i> 3. La restauración final de Israel</h2>
+            <p>Después del tiempo de los gentiles, Dios reunirá a su pueblo de entre todas las naciones y establecerá su reino.</p>
+            
+            <div class="verse">
+                <span class="verse-ref">Isaías 27:12-13</span>
+                "Y acontecerá en aquel día, que herirá Jehová desde el álveo del río hasta el torrente de Egipto, y vosotros, hijos de Israel, seréis reunidos uno a uno. Acontecerá también en aquel día, que se tañerá con gran trompeta, y vendrán los que habían sido esparcidos en la tierra de Asiria, y los que habían sido echados en tierra de Egipto, y adorarán a Jehová en el monte santo, en Jerusalén."
+            </div>
+            
+            <div class="verse">
+                <span class="verse-ref">Ezequiel 37:21</span>
+                "Y les dirás: Así ha dicho el Señor Jehová: He aquí; yo tomo a los hijos de Israel de entre las gentes a las cuales fueron, y los juntaré de todas partes, y los traeré a su tierra."
+            </div>
+            
+            <div class="verse">
+                <span class="verse-ref">Apocalipsis 12:3-10</span>
+                <a href="https://dckire.github.io/reinavalera/apocalipsis12.html#:~:text=3%20Y%20fu%C3%A9,d%C3%ADa%20y%20noche." class="read-more">Leer pasaje completo</a>
+            </div>
+        </div>
+        
+        <div class="timeline">
+            <h2 style="text-align: center; color: var(--color-primary); margin-bottom: 2rem;">Cronología Profética</h2>
+            
+            <div class="timeline-item">
+                <h3 class="timeline-title">Dispersión de Israel</h3>
+                <p>Cumplimiento de las profecías sobre el exilio judío entre las naciones.</p>
+            </div>
+            
+            <div class="timeline-item">
+                <h3 class="timeline-title">1948 - Renacimiento de Israel</h3>
+                <p>Israel se convierte nuevamente en una nación, cumpliendo Ezequiel 37.</p>
+            </div>
+            
+            <div class="timeline-item">
+                <h3 class="timeline-title">Tiempo de los Gentiles</h3>
+                <p>Período de oportunidad para las naciones no judías de recibir el Evangelio.</p>
+            </div>
+            
+            <div class="timeline-item">
+                <h3 class="timeline-title">Fin de los Tiempos de los Gentiles</h3>
+                <p>El enfoque profético retorna a Israel y su reconocimiento del Mesías.</p>
+            </div>
+            
+            <div class="timeline-item">
+                <h3 class="timeline-title">Segunda Venida</h3>
+                <p>Cristo regresa para establecer su reino milenial desde Jerusalén.</p>
+            </div>
+        </div>
+        
+        <div class="cta">
+            <h2 class="cta-title">¿Estás Preparado?</h2>
+            <p>El tiempo se acorta y las señales se cumplen. Acepta a Jesucristo como tu Salvador mientras hay oportunidad.</p>
+            <p>"He aquí ahora el tiempo aceptable; he aquí ahora el día de salvación." - 2 Corintios 6:2</p>
+            <a href="#" class="cta-button">Estudiar más profecías</a>
+        </div>
+    </div>
 
     <footer>
         <p>ESTUDIO BASADO EN LAS SANTAS ESCRITURAS. MEDITA Y ORA PARA ENTENDER EL CUMPLIMIENTO DE ESTAS PROFECÍAS.</p>
@@ -173,7 +463,7 @@
         // Función para detectar el desplazamiento
         window.addEventListener("scroll", function() {
             const body = document.body;
-            if (window.scrollY > 50) { // Cambia el color después de desplazarse 50px
+            if (window.scrollY > 50) {
                 body.classList.add("scrolled");
             } else {
                 body.classList.remove("scrolled");
@@ -181,4 +471,4 @@
         });
     </script>
 </body>
-</html>
+	</html>
