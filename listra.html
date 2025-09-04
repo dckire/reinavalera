@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listra y Derbe - Hechos 14:6 - Significado Bíblico</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
+    <style>
+        :root {
+            --color-primary: #8b5a2b;
+            --color-secondary: #3a5e30;
+            --color-accent: #c19b2e;
+            --color-light: #f8f4e9;
+            --color-dark: #2c2c2c;
+            --color-background: #f5f1e6;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--color-background);
+            color: var(--color-dark);
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+        }
+
+        .header-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+
+        .title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .breadcrumb {
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--color-primary);
+        }
+
+        .breadcrumb a {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Word Definition */
+        .word-header {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--color-accent);
+        }
+
+        .word-title {
+            color: var(--color-primary);
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .word-subtitle {
+            color: var(--color-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .bible-reference {
+            background: var(--color-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            border-left: 4px solid var(--color-accent);
+        }
+
+        .bible-reference .verse {
+            font-weight: 600;
+            color: var(--color-primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Content Sections */
+        .content-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .section-title {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-accent);
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title i {
+            margin-right: 10px;
+            color: var(--color-accent);
+        }
+
+        /* Historical Context */
+        .historical-context {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .context-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: var(--transition);
+            border: 1px solid #e0d9c5;
+        }
+
+        .context-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .card-header i {
+            font-size: 1.8rem;
+            color: var(--color-accent);
+            margin-right: 10px;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            color: var(--color-primary);
+        }
+
+        /* City Comparison */
+        .city-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .city-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .city-icon {
+            font-size: 2.5rem;
+            color: var(--color-accent);
+            margin-bottom: 1rem;
+        }
+
+        .city-name {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Map Section */
+        .map-section {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .map-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .map-image {
+            width: 100%;
+            display: block;
+        }
+
+        .map-caption {
+            margin-top: 1rem;
+            font-style: italic;
+            color: var(--color-secondary);
+        }
+
+        /* Biblical Events */
+        .events-timeline {
+            margin: 2rem 0;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .events-timeline::before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: var(--color-accent);
+        }
+
+        .event-item {
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .event-item::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--color-primary);
+            border: 2px solid var(--color-accent);
+        }
+
+        .event-title {
+            color: var(--color-primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--color-accent);
+        }
+
+        .copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .title {
+                margin-top: 10px;
+                font-size: 1.3rem;
+            }
+
+            .word-title {
+                font-size: 1.8rem;
+            }
+
+            .city-comparison {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo" class="header-logo">
+                <h1 class="title">DICCIONARIO BÍBLICO</h1>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Inicio</a> >Listra y Derbe
+        </div>
+
+        <div class="word-header">
+            <h1 class="word-title">Listra y Derbe</h1>
+            <p class="word-subtitle">Ciudades de Licaonia visitadas por Pablo en su primer viaje misionero</p>
+
+            <div class="bible-reference">
+                <span class="verse">Hechos 14:6 (Reina-Valera 1960)</span>
+                "al enterarse de ello, huyeron a Listra y Derbe, ciudades de Licaonia, y a toda la región circunvecina."
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-info-circle"></i> Significado e Importancia</h2>
+            <p><strong>Listra y Derbe</strong> fueron dos ciudades de la región de Licaonia, en Asia Menor (actual Turquía), que jugaron un papel importante en el primer viaje misionero de Pablo. Estas ciudades representan tanto el éxito como la oposición que Pablo experimentó en su ministerio.</p>
+
+            <div class="city-comparison">
+                <div class="city-card">
+                    <div class="city-icon">
+                        <i class="fas fa-city"></i>
+                    </div>
+                    <h3 class="city-name">Listra</h3>
+                    <p>Colonia romana ubicada a unos 29 km al suroeste de Iconio. Conocida por el incidente en que sus habitantes confundieron a Pablo y Bernabé con dioses.</p>
+                </div>
+
+                <div class="city-card">
+                    <div class="city-icon">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <h3 class="city-name">Derbe</h3>
+                    <p>Ciudad fronteriza situada a unos 100 km al sureste de Listra. Lugar de refugio y éxito evangelístico sin mención de oposición.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-map-marked-alt"></i> Ubicación Geográfica</h2>
+
+            <div class="map-section">
+                <div class="map-container">
+                    <img src="https://www.bibleplaces.com/wp-content/uploads/2015/09/Lystra_Overview_from_south-2.jpg" alt="Región de Licaonia con Listra y Derbe" class="map-image">
+                </div>
+                <p class="map-caption">Vista de la región de Licaonia donde se encontraban Listra y Derbe</p>
+            </div>
+
+            <p>Listra y Derbe estaban ubicadas en la región de Licaonia, una meseta central en Asia Menor. Esta región se caracterizaba por:</p>
+
+            <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem;">
+                <li>Terreno montañoso y volcánico</li>
+                <li>Clima continental con veranos calurosos e inviernos fríos</li>
+                <li>Población mayoritariamente rural y agrícola</li>
+                <li>Idioma licaonio distincto del griego común</li>
+                <li>Menor influencia de la cultura grecorromana que en las ciudades costeras</li>
+            </ul>
+
+            <p>Listra estaba situada en un importante cruce de caminos, mientras que Derbe estaba más aislada, cerca de la frontera con la región de Capadocia.</p>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-bible"></i> Listra y Derbe en la Biblia</h2>
+            <p>Estas ciudades aparecen en el contexto del primer viaje misionero de Pablo:</p>
+
+            <div class="events-timeline">
+                <div class="event-item">
+                    <div class="event-title">Hechos 14:6-7</div>
+                    <p>Pablo y Bernabé huyen de Iconio a Listra y Derbe debido a una conspiración para apedrearlos, y allí continúan predicando el evangelio.</p>
+                </div>
+
+                <div class="event-item">
+                    <div class="event-title">Hechos 14:8-20</div>
+                    <p>En Listra, Pablo sana a un cojo de nacimiento. La multitud cree que Pablo y Bernabé son los dioses Zeus y Hermes y quieren ofrecerles sacrificios. Pablo les dirige un discurso corrigiendo su error. Poco después, judíos de Antioquía e Iconio persuaden a la multitud para que apedree a Pablo, dejándolo por muerto.</p>
+                </div>
+
+                <div class="event-item">
+                    <div class="event-title">Hechos 14:21</div>
+                    <p>Después de predicar en Derbe y hacer muchos discípulos, Pablo y Bernabé regresan a Listra, Iconio y Antioquía para fortalecer a los creyentes.</p>
+                </div>
+
+                <div class="event-item">
+                    <div class="event-title">Hechos 16:1-3</div>
+                    <p>Pablo regresa a Listra en su segundo viaje misionero y conoce a Timoteo, hijo de una mujer judía creyente y de padre griego, quien se convierte en su colaborador.</p>
+                </div>
+
+                <div class="event-item">
+                    <div class="event-title">Hechos 20:4</div>
+                    <p>Gayo de Derbe es mencionado como uno de los compañeros de viaje de Pablo.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-church"></i> La Iglesia en Listra y Derbe</h2>
+            <p>Las comunidades cristianas en estas ciudades tuvieron características distintivas:</p>
+
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-users"></i>
+                        <h3 class="card-title">Comunidad Gentil</h3>
+                    </div>
+                    <p>A diferencia de otras ciudades, no se menciona una sinagoga en Listra o Derbe, sugiriendo que las iglesias allí estaban compuestas principalmente por gentiles.</p>
+                </div>
+
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-heart"></i>
+                        <h3 class="card-title">Crecimiento en la Adversidad</h3>
+                    </div>
+                    <p>A pesar de la violenta oposición en Listra, la iglesia creció y produjo creyentes notables como Timoteo.</p>
+                </div>
+
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3 class="card-title">Refugio Espiritual</h3>
+                    </div>
+                    <p>Derbe sirvió como lugar de refugio y rejuvenecimiento ministerial después del trauma de Listra.</p>
+                </div>
+            </div>
+
+            <p>La iglesia en Listra es especialmente notable por haber sido el lugar de origen de Timoteo, quien se convertiría en el compañero más cercano de Pablo y receptor de dos epístolas del Nuevo Testamento.</p>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-monument"></i> Contexto Cultural y Religioso</h2>
+            <p>El incidente en Listra donde Pablo y Bernabé fueron confundidos con dioses se explica por el contexto cultural:</p>
+
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-history"></i>
+                        <h3 class="card-title">Leyenda Local</h3>
+                    </div>
+                    <p>Una leyenda local contaba que Zeus y Hermes habían visitado la región disfrazados de mortales y solo una pareja anciana, Filemón y Baucis, los había recibido hospitalariamente.</p>
+                </div>
+
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-language"></i>
+                        <h3 class="card-title">Barrera Lingüística</h3>
+                    </div>
+                    <p>Los licaonios hablaban su propio idioma, lo que puede explicar por qué no entendieron inicialmente a Pablo y Bernabé cuando estos trataron de disuadirlos.</p>
+                </div>
+
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-sync-alt"></i>
+                        <h3 class="card-title">Volubilidad Popular</h3>
+                    </div>
+                    <p>La misma multitud que quería adorar a Pablo como dios poco después quiso matarlo, mostrando la inconstancia de las masas influenciadas fácilmente.</p>
+                </div>
+            </div>
+
+        </div>
+
+   
+                    
+            </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+                <h3>IN GOD WE TRUST</h3>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2025 IN GOD WE TRUST. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
