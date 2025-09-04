@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circuncisión - Hechos 15:1 - Significado Bíblico</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
+    <style>
+        :root {
+            --color-primary: #8b5a2b;
+            --color-secondary: #3a5e30;
+            --color-accent: #c19b2e;
+            --color-light: #f8f4e9;
+            --color-dark: #2c2c2c;
+            --color-background: #f5f1e6;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--color-background);
+            color: var(--color-dark);
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+        }
+
+        .header-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+
+        .title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .breadcrumb {
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--color-primary);
+        }
+
+        .breadcrumb a {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Word Definition */
+        .word-header {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--color-accent);
+        }
+
+        .word-title {
+            color: var(--color-primary);
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .word-subtitle {
+            color: var(--color-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .bible-reference {
+            background: var(--color-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            border-left: 4px solid var(--color-accent);
+        }
+
+        .bible-reference .verse {
+            font-weight: 600;
+            color: var(--color-primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Content Sections */
+        .content-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .section-title {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-accent);
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title i {
+            margin-right: 10px;
+            color: var(--color-accent);
+        }
+
+        /* Historical Context */
+        .historical-context {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .context-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: var(--transition);
+            border: 1px solid #e0d9c5;
+        }
+
+        .context-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .card-header i {
+            font-size: 1.8rem;
+            color: var(--color-accent);
+            margin-right: 10px;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            color: var(--color-primary);
+        }
+
+        /* Comparison Section */
+        .comparison-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .comparison-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .comparison-title {
+            color: var(--color-primary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Council Decision */
+        .council-section {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+
+        .council-title {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .decision-list {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .decision-list li {
+            margin-bottom: 0.8rem;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--color-accent);
+        }
+
+        .copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .title {
+                margin-top: 10px;
+                font-size: 1.3rem;
+            }
+
+            .word-title {
+                font-size: 1.8rem;
+            }
+
+            .comparison-section {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo" class="header-logo">
+                <h1 class="title">DICCIONARIO BÍBLICO</h1>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Inicio</a> >Circuncisión
+        </div>
+
+        <div class="word-header">
+            <h1 class="word-title">Circuncisión</h1>
+            <p class="word-subtitle">La controversia en la iglesia primitiva sobre la circuncisión de los gentiles</p>
+
+            <div class="bible-reference">
+                <span class="verse">Hechos 15:1-2 (Reina-Valera 1569-1602)</span>
+                "Entonces algunos que venían de Judea enseñaban a los hermanos: Si no os circuncidáis conforme al rito de Moisés, no podéis ser salvos. Como Pablo y Bernabé tuviesen una discusión y contienda no pequeña con ellos, se dispuso que subiesen Pablo y Bernabé a Jerusalén, y algunos otros de ellos, a los apóstoles y a los ancianos, para tratar esta cuestión."
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-info-circle"></i> Significado de la Controversia</h2>
+            <p>La controversia sobre la <strong>circuncisión</strong> en Hechos 15 representa uno de los momentos decisivos en la historia de la iglesia primitiva. Este debate confrontaba dos visiones diferentes sobre lo que significaba ser seguidor de Jesucristo:</p>
+
+            <div class="comparison-section">
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Visión Judaizante</h3>
+                    <p>Algunos creyentes judíos insistían en que los gentiles convertidos al cristianismo debían circuncidarse y guardar la ley mosaica para ser salvos, viendo el cristianismo como una extensión del judaísmo.</p>
+                </div>
+
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Visión de Pablo y Bernabé</h3>
+                    <p>Pablo y Bernabé defendían que la salvación era por gracia mediante la fe en Jesucristo, no por obras de la ley, incluyendo la circuncisión.</p>
+                </div>
+            </div>
+
+            <p>Esta controversia amenazaba con dividir la iglesia entre creyentes judíos y gentiles, y tenía implicaciones fundamentales sobre la naturaleza del evangelio y la salvación.</p>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-history"></i> Trasfondo de la Circuncisión</h2>
+
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-bible"></i>
+                        <h3 class="card-title">Origen Bíblico</h3>
+                    </div>
+                    <p>La circuncisión fue establecida como señal del pacto entre Dios y Abraham en Génesis 17:9-14. Era el rito de iniciación al pueblo de Israel.</p>
+                </div>
+
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-star-of-david"></i>
+                        <h3 class="card-title">Significado Religioso</h3>
+                    </div>
+                    <p>Para los judíos, la circuncisión representaba la pertenencia al pueblo escogido de Dios y la sumisión a la ley mosaica.</p>
+                </div>
+
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-people-arrows"></i>
+                        <h3 class="card-title">Barrera Cultural</h3>
+                    </div>
+                    <p>La circuncisión creaba una barrera entre judíos y gentiles, siendo vista por estos últimos como una práctica bárbara y repulsiva.</p>
+                </div>
+            </div>
+
+            <p>En el primer siglo, la circuncisión no era meramente un procedimiento físico, sino un marcador de identidad étnica y religiosa que distinguía radicalmente a los judíos de los demás pueblos.</p>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-balance-scale"></i> El Concilio de Jerusalén</h2>
+            <p>Para resolver esta controversia, se convocó lo que se conoce como el Concilio de Jerusalén (Hechos 15:6-29), el primer concilio eclesiástico de la historia:</p>
+
+            <div class="council-section">
+                <h3 class="council-title">Proceso del Concilio</h3>
+
+                <ul class="decision-list">
+                    <li><strong>Debate:</strong> Hubo "grande discusión" entre los apóstoles y ancianos (v. 7)</li>
+                    <li><strong>Testimonios:</strong> Pedro relató cómo Dios había aceptado a los gentiles sin circuncisión (vv. 7-11)</li>
+                    <li><strong>Experiencia misionera:</strong> Pablo y Bernabé contaron las señales que Dios había hecho entre los gentiles (v. 12)</li>
+                    <li><strong>Base bíblica:</strong> Santiago citó las Escrituras para apoyar la inclusión de los gentiles (vv. 13-18)</li>
+                    <li><strong>Decisión conciliar:</strong> Se llegó a un acuerdo y se redactó un documento oficial (vv. 19-29)</li>
+                </ul>
+            </div>
+
+            <p>El concilio decidió que no era necesario circuncidarse para ser salvo, estableciendo que la salvación es por gracia mediante la fe en Jesucristo, tanto para judíos como para gentiles.</p>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-scroll"></i> El Decreto Apostólico</h2>
+            <p>El concilio emitió un decreto que equilibraba la libertad cristiana con la sensibilidad hacia los creyentes judíos:</p>
+
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-ban"></i>
+                        <h3 class="card-title">Prohibiciones</h3>
+                    </div>
+                    <p>Los creyentes gentiles debían abstenerse de:
+                    <ul>
+                        <li>Alimentos sacrificados a ídolos</li>
+                        <li>Sangre</li>
+                        <li>Animales estrangulados</li>
+                        <li>Inmoralidad sexual etc..</li>
+                    </ul>
+                    </p>
+                </div>
+
+                
+            </div>
+
+            <p>Este decreto mostraba sabiduría de Dios al balancear la verdad que la salvación es por gracia. </p>
+        </div>
+
+       
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+                <h3>IN GOD WE TRUST</h3>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2025 IN GOD WE TRUST. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
