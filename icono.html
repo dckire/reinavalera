@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iconio - Hechos 14:1 - Significado Bíblico</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
+    <style>
+        :root {
+            --color-primary: #8b5a2b;
+            --color-secondary: #3a5e30;
+            --color-accent: #c19b2e;
+            --color-light: #f8f4e9;
+            --color-dark: #2c2c2c;
+            --color-background: #f5f1e6;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--color-background);
+            color: var(--color-dark);
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+        }
+
+        .header-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+
+        .title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .breadcrumb {
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--color-primary);
+        }
+
+        .breadcrumb a {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Word Definition */
+        .word-header {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--color-accent);
+        }
+
+        .word-title {
+            color: var(--color-primary);
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .word-subtitle {
+            color: var(--color-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .bible-reference {
+            background: var(--color-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            border-left: 4px solid var(--color-accent);
+        }
+
+        .bible-reference .verse {
+            font-weight: 600;
+            color: var(--color-primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Content Sections */
+        .content-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .section-title {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-accent);
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title i {
+            margin-right: 10px;
+            color: var(--color-accent);
+        }
+
+        /* Historical Context */
+        .historical-context {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .context-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: var(--transition);
+            border: 1px solid #e0d9c5;
+        }
+
+        .context-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .card-header i {
+            font-size: 1.8rem;
+            color: var(--color-accent);
+            margin-right: 10px;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            color: var(--color-primary);
+        }
+
+        /* Map Section */
+        .map-section {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .map-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .map-image {
+            width: 100%;
+            display: block;
+        }
+
+        .map-caption {
+            margin-top: 1rem;
+            font-style: italic;
+            color: var(--color-secondary);
+        }
+
+        /* Biblical Events */
+        .events-timeline {
+            margin: 2rem 0;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .events-timeline::before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: var(--color-accent);
+        }
+
+        .event-item {
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .event-item::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--color-primary);
+            border: 2px solid var(--color-accent);
+        }
+
+        .event-title {
+            color: var(--color-primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--color-accent);
+        }
+
+        .copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .title {
+                margin-top: 10px;
+                font-size: 1.3rem;
+            }
+
+            .word-title {
+                font-size: 1.8rem;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo" class="header-logo">
+                <h1 class="title">DICCIONARIO BÍBLICO</h1>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Inicio</a> 
+        </div>
+
+        <div class="word-header">
+            <h1 class="word-title">Iconio</h1>
+            <p class="word-subtitle">Ciudad importante en los viajes misioneros de Pablo</p>
+
+            <div class="bible-reference">
+                <span class="verse">Hechos 14:1 (Reina-Valera 1960)</span>
+                "Aconteció en Iconio que entraron juntos en la sinagoga de los judíos, y hablaron de tal manera que creyó una gran multitud de judíos, y asimismo de griegos."
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-info-circle"></i> Significado e Importancia</h2>
+            <p><strong>Iconio</strong> (en griego: Ἰκόνιον, Ikónion) fue una importante ciudad de la antigua región de Asia Menor, situada en lo que hoy es Turquía. En la actualidad es la ciudad de Konya, la séptima más grande de Turquía.</p>
+
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h3 class="card-title">Ubicación Estratégica</h3>
+                    </div>
+                    <p>Iconio estaba situada en una meseta fértil a unos 1,027 metros sobre el nivel del mar, en la región de Licaonia, pero culturalmente influenciada por Frigia.</p>
+                </div>
+
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-road"></i>
+                        <h3 class="card-title">Encrucijada Comercial</h3>
+                    </div>
+                    <p>La ciudad se encontraba en una importante ruta comercial que conectaba Éfeso con Siria, lo que la convertía en un centro comercial y cultural significativo.</p>
+                </div>
+
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-history"></i>
+                        <h3 class="card-title">Historia Antigua</h3>
+                    </div>
+                    <p>Según la leyenda griega, Iconio fue fundada por el héroe Perseus, quien derrotó a la Medusa y nombró la ciudad por el "icono" o imagen de la cabeza de la Medusa.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-map-marked-alt"></i> Ubicación Geográfica</h2>
+
+            <div class="map-section">
+                <div class="map-container">
+                    <img src="https://www.bibleplaces.com/wp-content/uploads/2015/09/Konya_Overview_2.jpg" alt="Vista de la moderna Konya (antigua Iconio)" class="map-image">
+                </div>
+                <p class="map-caption">Vista de la moderna Konya, ubicada donde antiguamente estaba Iconio</p>
+            </div>
+
+            <p>Iconio estaba situada en la meseta central de Anatolia, en la región que los romanos llamaban Galacia. La ciudad se encontraba a unos 120 km al sur de Antioquía de Pisidia y a unos 250 km al norte de la costa mediterránea.</p>
+            <p>Su ubicación en una meseta fértil la convertía en un centro agrícola importante, conocido por la producción de cereales y otros cultivos. La región circundante era conocida como la llanura de Iconio.</p>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-bible"></i> Iconio en la Biblia</h2>
+            <p>Iconio aparece varias veces en el libro de Hechos, siempre en relación con los viajes misioneros de Pablo:</p>
+
+            <div class="events-timeline">
+                <div class="event-item">
+                    <div class="event-title">Hechos 13:51</div>
+                    <p>Pablo y Bernabé son expulsados de Antioquía de Pisidia y se dirigen a Iconio.</p>
+                </div>
+
+                <div class="event-item">
+                    <div class="event-title">Hechos 14:1-7</div>
+                    <p>Pablo y Bernabé predican en la sinagoga de Iconio, donde muchos judíos y griegos creen. Permanecieron allí "mucho tiempo" hablando con denuedo, pero finalmente surgió oposición y planearon apedrearlos.</p>
+                </div>
+
+                <div class="event-item">
+                    <div class="event-title">Hechos 14:21</div>
+                    <p>Después de visitar Listra y Derbe, Pablo y Bernabé regresan a Iconio para fortalecer a los discípulos y animarlos a permanecer firmes en la fe.</p>
+                </div>
+
+                <div class="event-item">
+                    <div class="event-title">Hechos 16:2</div>
+                    <p>Timoteo, quien se convertiría en un importante colaborador de Pablo, era de Listra pero era bien conocido por los creyentes de Iconio.</p>
+                </div>
+
+                <div class="event-item">
+                    <div class="event-title">2 Timoteo 3:11</div>
+                    <p>Pablo hace referencia a sus persecuciones en Antioquía, Iconio y Listra, mostrando que estas experiencias fueron significativas en su ministerio.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-church"></i> La Iglesia en Iconio</h2>
+            <p>La comunidad cristiana en Iconio fue una de las primeras fundadas por Pablo y se convirtió en un centro importante del cristianismo primitivo:</p>
+
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-users"></i>
+                        <h3 class="card-title">Comunidad Multicultural</h3>
+                    </div>
+                    <p>La iglesia en Iconio incluía tanto judíos como griegos (gentiles), reflejando el patrón típico de las iglesias fundadas por Pablo.</p>
+                </div>
+
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-fist-raised"></i>
+                        <h3 class="card-title">Perseverancia ante la Persecución</h3>
+                    </div>
+                    <p>Los creyentes de Iconio enfrentaron oposición y persecución, pero permanecieron firmes en la fe, como lo atestigua el regreso de Pablo para animarlos.</p>
+                </div>
+
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-place-of-worship"></i>
+                        <h3 class="card-title">Iglesia Establecida</h3>
+                    </div>
+                    <p>Iconio se convirtió en un centro cristiano lo suficientemente importante como para ser mencionado en conexión con Timoteo y en las cartas pastorales.</p>
+                </div>
+            </div>
+
+            <p>La mención de Iconio en 2 Timoteo 3:11 sugiere que la iglesia allí continuó existiendo y enfrentando desafíos, pero manteniéndose fiel al Evangelio que Pablo les había predicado.</p>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-landmark"></i> Iconio en la Historia Cristiana</h2>
+            <p>Después del período del Nuevo Testamento, Iconio continuó siendo un importante centro cristiano:</p>
+
+            <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem;">
+                <li>En el siglo III, Iconio fue sede de un concilio eclesiástico que trató cuestiones relacionadas con el bautismo de los herejes.</li>
+                <li>La ciudad fue el hogar de varios santos y mártires cristianos en los primeros siglos.</li>
+                <li>Durante el período bizantino, Iconio fue sede de un obispado importante.</li>
+                <li>En 1190, durante la Tercera Cruzada, el emperador Federico Barbarroja murió cerca de Iconio.</li>
+                <li>La ciudad fue conquistada por los selyúcidas en el siglo XI y se convirtió en la capital del Sultanato de Rum.</li>
+            </ul>
+
+            <p>Hoy en día, Konya es conocida principalmente como un centro de la cultura islámica sufí, particularmente como el hogar del famoso místico Jelaleddin Rumi (Mevlana), pero su historia cristiana sigue siendo una parte importante de su herencia.</p>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-lesson"></i> Lecciones de Iconio para Hoy</h2>
+            <p>La experiencia de Pablo en Iconio ofrece valiosas lecciones para los creyentes modernos:</p>
+
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-bold"></i>
+                        <h3 class="card-title">Valentía en la Predicación</h3>
+                    </div>
+                    <p>Pablo y Bernabé hablaron "con denuedo" en Iconio a pesar del potencial de oposición, mostrando la importancia de la valentía en el testimonio cristiano.</p>
+                </div>
+
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-handshake"></i>
+                        <h3 class="card-title">Ministerio a Diversas Audiencias</h3>
+                    </div>
+                    <p>El ministerio en Iconio alcanzó tanto a judíos como a griegos, modelando el enfoque inclusivo del Evangelio.</p>
+                </div>
+
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-undo"></i>
+                        <h3 class="card-title">Importancia del Seguimiento</h3>
+                    </div>
+                    <p>El regreso de Pablo a Iconio para fortalecer a los creyentes muestra la importancia del discipulado continuo y el cuidado pastoral.</p>
+                </div>
+            </div>
+
+            <p>Iconio representa una de las muchas ciudades donde el Evangelio echó raíces a través del ministerio fiel de Pablo, enfrentando oposición pero produciendo creyentes firmes que mantuvieron su fe a través de las dificultades.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+                <h3>IN GOD WE TRUST</h3>
+            </div>
+
+
+            <div class="copyright">
+                <p>&copy; 2025 IN GOD WE TRUST. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
