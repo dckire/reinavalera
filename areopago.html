@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Areópago - Hechos 17 - Significado Bíblico</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
+    <style>
+        :root {
+            --color-primary: #8b5a2b;
+            --color-secondary: #3a5e30;
+            --color-accent: #c19b2e;
+            --color-light: #f8f4e9;
+            --color-dark: #2c2c2c;
+            --color-background: #f5f1e6;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--color-background);
+            color: var(--color-dark);
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .header-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+        
+        .title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .breadcrumb {
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--color-primary);
+        }
+        
+        .breadcrumb a {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Word Definition */
+        .word-header {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--color-accent);
+        }
+        
+        .word-title {
+            color: var(--color-primary);
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .word-subtitle {
+            color: var(--color-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        
+        .bible-reference {
+            background: var(--color-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            border-left: 4px solid var(--color-accent);
+        }
+        
+        .bible-reference .verse {
+            font-weight: 600;
+            color: var(--color-primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .section-title {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-accent);
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title i {
+            margin-right: 10px;
+            color: var(--color-accent);
+        }
+        
+        /* Historical Context */
+        .historical-context {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .context-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: var(--transition);
+            border: 1px solid #e0d9c5;
+        }
+        
+        .context-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+        
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .card-header i {
+            font-size: 1.8rem;
+            color: var(--color-accent);
+            margin-right: 10px;
+        }
+        
+        .card-title {
+            font-size: 1.2rem;
+            color: var(--color-primary);
+        }
+        
+        /* Map Section */
+        .map-section {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .map-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .map-image {
+            width: 100%;
+            display: block;
+        }
+        
+        .map-caption {
+            margin-top: 1rem;
+            font-style: italic;
+            color: var(--color-secondary);
+        }
+        
+        /* Paul's Speech */
+        .speech-section {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .speech-title {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .speech-points {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .speech-points li {
+            margin-bottom: 0.8rem;
+        }
+        
+        /* Comparison Section */
+        .comparison-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .comparison-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        .comparison-title {
+            color: var(--color-primary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--color-accent);
+        }
+        
+        .copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .title {
+                margin-top: 10px;
+                font-size: 1.3rem;
+            }
+            
+            .word-title {
+                font-size: 1.8rem;
+            }
+            
+            .comparison-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo" class="header-logo">
+                <h1 class="title">DICCIONARIO BÍBLICO</h1>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Inicio</a> > Areópago
+        </div>
+        
+        <div class="word-header">
+            <h1 class="word-title">Areópago</h1>
+            <p class="word-subtitle">El lugar donde Pablo pronunció su famoso discurso en Atenas</p>
+            
+            <div class="bible-reference">
+                <span class="verse">Hechos 17:19-22 (Reina-Valera 1960)</span>
+                "Y tomándole, le trajeron al Areópago, diciendo: ¿Podremos saber qué es esta nueva enseñanza de que hablas? Pues traes a nuestros oídos cosas extrañas. Queremos, pues, saber qué quiere decir esto. (Porque todos los atenienses y los extranjeros residentes allí, en ninguna otra cosa se interesaban sino en decir o en oír algo nuevo.) Entonces Pablo, puesto en pie en medio del Areópago, dijo: Varones atenienses, en todo observo que sois muy religiosos."
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-info-circle"></i> Significado e Importancia</h2>
+            <p>El <strong>Areópago</strong> (en griego: Ἄρειος πάγος, "Colina de Ares") era una colina rocosa en Atenas y también el nombre del consejo que se reunía allí. Este lugar fue testigo de uno de los discursos más significativos de Pablo, donde presentó el Evangelio a la élite intelectual de Atenas.</p>
+            
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-hill-rocks"></i>
+                        <h3 class="card-title">Ubicación Física</h3>
+                    </div>
+                    <p>El Areópago era una colina de mármol situada al noroeste de la Acrópolis de Atenas, frente a la entrada de los Propileos.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-gavel"></i>
+                        <h3 class="card-title">Consejo del Areópago</h3>
+                    </div>
+                    <p>Era el consejo más antiguo de Atenas, originalmente un tribunal para casos de homicidio, que luego amplió su autoridad a asuntos religiosos y educativos.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-landmark"></i>
+                        <h3 class="card-title">Significado Histórico</h3>
+                    </div>
+                    <p>El Areópago era símbolo de autoridad, tradición y élite intelectual en la Atenas clásica y del período romano.</p>
+                </div>
+            </div>
+            
+            <p>Que Pablo fuera llevado al Areópago indica que los filósofos atenienses consideraban sus enseñanzas lo suficientemente importantes como para ser examinadas por la autoridad competente en matters intelectuales y religiosos.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-map-marked-alt"></i> Ubicación y Contexto Geográfico</h2>
+            
+            <div class="map-section">
+                <div class="map-container">
+                    <img src="https://www.bibleplaces.com/wp-content/uploads/2015/09/Areopagus_from_Acropolis-2.jpg" alt="Vista del Areópago desde la Acrópolis de Atenas" class="map-image">
+                </div>
+                <p class="map-caption">Vista del Areópago desde la Acrópolis de Atenas</p>
+            </div>
+            
+            <p>El Areópago estaba estratégicamente situado en relación con otros importantes monumentos atenienses:</p>
+            
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-mountain"></i>
+                        <h3 class="card-title">Cerca de la Acrópolis</h3>
+                    </div>
+                    <p>Se ubicaba justo al noroeste de la Acrópolis, el centro religioso y cultural de Atenas.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-store"></i>
+                        <h3 class="card-title">Cerca del Ágora</h3>
+                    </div>
+                    <p>Estaba próximo al Ágora, la plaza principal donde Pablo había estado discutiendo con los filósofos.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-city"></i>
+                        <h3 class="card-title">Vista Panorámica</h3>
+                    </div>
+                    <p>Desde su cima se tenía una vista panorámica de Atenas, incluyendo los principales templos y monumentos.</p>
+                </div>
+            </div>
+            
+            <p>Esta ubicación estratégica convertía al Areópago en un lugar simbólicamente importante para dirigirse a los líderes intelectuales y religiosos de Atenas.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-history"></i> Contexto Histórico del Areópago</h2>
+            <p>El Areópago tenía una rica historia y significado en la Atenas del primer siglo:</p>
+            
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-scales"></i>
+                        <h3 class="card-title">Tribunal</h3>
+                    </div>
+                    <p>Originalmente fue el tribunal para casos de homicidio y crímenes graves en la Atenas clásica.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-book"></i>
+                        <h3 class="card-title">Autoridad Educativa</h3>
+                    </div>
+                    <p>En la época de Pablo, supervisaba la educación y tenía autoridad sobre profesores y filósofos.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-temple"></i>
+                        <h3 class="card-title">Supervisión Religiosa</h3>
+                    </div>
+                    <p>El consejo del Areópago tenía autoridad en matters religiosos, incluyendo la introducción de nuevos dioses o doctrinas.</p>
+                </div>
+            </div>
+            
+            <p>El hecho de que llevaran a Pablo al Areópago sugiere que los filósofos consideraban sus enseñanzas como una posible innovación religiosa que requería examen oficial.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-microphone"></i> El Discurso de Pablo en el Areópago</h2>
+            <p>El discurso de Pablo en el Areópago (Hechos 17:22-31) es un modelo de contextualización del Evangelio:</p>
+            
+            <div class="speech-section">
+                <h3 class="speech-title">Características del Discurso de Pablo</h3>
+                
+                <ul class="speech-points">
+                    <li><strong>Punto de contacto:</strong> Comienza reconociendo la religiosidad de los atenienses (v. 22)</li>
+                    <li><strong>Referencia cultural:</strong> Menciona el altar "al Dios no conocido" (v. 23)</li>
+                    <li><strong>Verdades comunes:</strong> Afirma que Dios creó el mundo y es Señor de todo (vv. 24-26)</li>
+                    <li><strong>Cita de poetas:</strong> Usa citas de poetas griegos para conectar con su audiencia (v. 28)</li>
+                    <li><strong>Llamado al arrepentimiento:</strong> Concluye con un llamado claro al arrepentimiento (v. 30)</li>
+                    <li><strong>Anuncio del juicio:</strong> Presenta a Jesús como juez designado por Dios (v. 31)</li>
+                    <li><strong>Resurrección:</strong> Menciona la resurrección, que resultó controversial para algunos (v. 32)</li>
+                </ul>
+            </div>
+            
+            <p>Este discurso muestra la habilidad de Pablo para adaptar su mensaje a una audiencia griega culta, usando su propio lenguaje y conceptos como puente para presentar el Evangelio.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-balance-scale"></i> Estrategia de Pablo en el Areópago</h2>
+            <p>Pablo empleó varias estrategias significativas en su enfoque ante el Areópago:</p>
+            
+            <div class="comparison-section">
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Contextualización Cultural</h3>
+                    <p>Pablo usó referencias culturales atenienses (como el altar al Dios no conocido y citas de poetas griegos) para construir puentes de comunicación.</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Verdades</h3>
+                    <p>Comenzó con verdades generales sobre Dios como Creador, que podían ser aceptadas por su audiencia, antes de presentar las distinctivas cristianas.</p>
+                </div>
+            </div>
+            
+            </div>
+            
+            <p>Este enfoque muestra el balance de Pablo entre la adaptación cultural necesaria y la fidelidad al mensaje esencial del Evangelio.</p>
+        </div>
+        
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-user-plus"></i>
+                        <h3 class="card-title">Conversiones</h3>
+                    </div>
+                    <p>Algunos creyeron, incluyendo a Dionisio el Areopagita, una mujer llamada Dámaris y otros más.</p>
+                </div>
+            </div>
+            
+        
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+                <h3>IN GOD WE TRUST</h3>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 IN GOD WE TRUST. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
