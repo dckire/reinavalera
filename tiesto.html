@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Significado Bíblico de "Tiesto" - Diccionario Bíblico</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
+    <style>
+        :root {
+            --color-primary: #8b5a2b;
+            --color-secondary: #3a5e30;
+            --color-accent: #c19b2e;
+            --color-light: #f8f4e9;
+            --color-dark: #2c2c2c;
+            --color-background: #f5f1e6;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--color-background);
+            color: var(--color-dark);
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .header-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+        
+        .title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .breadcrumb {
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--color-primary);
+        }
+        
+        .breadcrumb a {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Word Definition */
+        .word-header {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--color-accent);
+        }
+        
+        .word-title {
+            color: var(--color-primary);
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .word-subtitle {
+            color: var(--color-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        
+        .bible-reference {
+            background: var(--color-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            border-left: 4px solid var(--color-accent);
+        }
+        
+        .bible-reference .verse {
+            font-weight: 600;
+            color: var(--color-primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .section-title {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-accent);
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title i {
+            margin-right: 10px;
+            color: var(--color-accent);
+        }
+        
+        /* Historical Context */
+        .historical-context {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .context-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: var(--transition);
+            border: 1px solid #e0d9c5;
+        }
+        
+        .context-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+        
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .card-header i {
+            font-size: 1.8rem;
+            color: var(--color-accent);
+            margin-right: 10px;
+        }
+        
+        .card-title {
+            font-size: 1.2rem;
+            color: var(--color-primary);
+        }
+        
+        /* Warning Section */
+        .warning-section {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .warning-title {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .warning-list {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .warning-list li {
+            margin-bottom: 0.8rem;
+        }
+        
+        /* Greek Meaning */
+        .greek-section {
+            text-align: center;
+            padding: 2rem;
+            background: var(--color-light);
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .greek-word {
+            font-size: 3rem;
+            font-family: 'Times New Roman', serif;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+        }
+        
+        .greek-translation {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: var(--color-secondary);
+        }
+        
+        /* Comparison Section */
+        .comparison-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .comparison-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        .comparison-title {
+            color: var(--color-primary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--color-accent);
+        }
+        
+        .copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .title {
+                margin-top: 10px;
+                font-size: 1.3rem;
+            }
+            
+            .word-title {
+                font-size: 1.8rem;
+            }
+            
+            .comparison-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo" class="header-logo">
+                <h1 class="title">DICCIONARIO BÍBLICO</h1>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Inicio</a> > Significado de "Tiesto"
+        </div>
+        
+        <div class="word-header">
+            <h1 class="word-title">"Tiesto" - Significado Bíblico</h1>
+            <p class="word-subtitle">Fragmento de barro cocido en las Escrituras</p>
+            
+            <div class="bible-reference">
+                <span class="verse">Isaías 45:9 (Reina-Valera 1569-1602)</span>
+                "¡Ay del que pleitea con su Hacedor! ¡El tiesto con los tiestos de la tierra! ¿Dirá el barro al que lo forma: ¿Qué haces?; o tu obra: ¿No tiene manos?"
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-info-circle"></i> Significado de la Palabra</h2>
+            <p>La palabra "<strong>Tiesto</strong>" aparece en varias ocasiones en la Biblia y se refiere a un fragmento de barro cocido, generalmente de una vasija rota. En el contexto bíblico, simboliza fragilidad, quebrantamiento y la relación entre el Creador y la creación.</p>
+            
+            <div class="greek-section">
+                <div class="greek-word">ὄστρακον</div>
+                <div class="greek-translation">"Ostrakon" - Fragmento de cerámica</div>
+                <p>Transliteración y significado de la palabra griega</p>
+            </div>
+            
+            <p>En las Escrituras, el tiesto representa la naturaleza frágil del ser humano en contraste con la soberanía y poder de Dios como alfarero divino.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-history"></i> Contexto Bíblico</h2>
+            
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-book-bible"></i>
+                        <h3 class="card-title">Uso en el Antiguo Testamento</h3>
+                    </div>
+                    <p>La palabra "tiesto" aparece principalmente en los libros proféticos, donde se utiliza como metáfora de la relación entre Dios y su pueblo.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-feather-alt"></i>
+                        <h3 class="card-title">Significado Simbólico</h3>
+                    </div>
+                    <p>Representa la fragilidad humana y la autoridad divina para moldear y quebrantar según su voluntad.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-landmark"></i>
+                        <h3 class="card-title">Contexto Cultural</h3>
+                    </div>
+                    <p>En la antigüedad, los tiestos se usaban para escribir notas, raspar y como material desechable, lo que añade significado a su uso metafórico.</p>
+                </div>
+            </div>
+            
+            <p>El uso del término "tiesto" en la Biblia enfatiza la dependencia humana de Dios y la necedad de cuestionar al Creador.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-exclamation-triangle"></i> Apariciones en las Escrituras</h2>
+            <p>La palabra "tiesto" aparece en varios pasajes bíblicos clave:</p>
+            
+            <div class="warning-section">
+                <h3 class="warning-title">Referencias Bíblicas del Tiesto</h3>
+                
+                <ul class="warning-list">
+                    <li><strong>Job 2:8:</strong> "Y tomaba un tiesto para rascarse..." - Uso práctico como instrumento.</li>
+                    <li><strong>Salmos 22:15:</strong> "Me has puesto como un tiesto de barro..." - Símbolo de fragilidad.</li>
+                    <li><strong>Isaías 45:9:</strong> "¿Dirá el tiesto al que lo forma...?" - Alegoría de sumisión al Creador.</li>
+                    <li><strong>Jeremías 19:11:</strong> "...y quebraré a este pueblo... como se quiebra un vaso de alfarero..." - Juicio divino.</li>
+                </ul>
+            </div>
+            
+            <p>Estas referencias muestran la evolución del simbolismo del tiesto, desde un objeto cotidiano hasta una poderosa metáfora espiritual.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-eye-slash"></i> Significado Teológico</h2>
+            <p>El tiesto representa varias verdades teológicas importantes:</p>
+            
+            <div class="comparison-section">
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Fragilidad Humana</h3>
+                    <p>El ser humano es frágil y dependiente de Dios, como un tiesto quebradizo en manos del alfarero.</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Soberanía Divina</h3>
+                    <p>Dios tiene derecho absoluto sobre su creación, tal como el alfarero tiene potestad sobre el barro.</p>
+                </div>
+            </div>
+            
+            <div class="comparison-section">
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Quebrantamiento y Restauración</h3>
+                    <p>Dios puede quebrantar para luego restaurar, creando algo nuevo a partir de los fragmentos.</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Humildad y Sumisión</h3>
+                    <p>El tiesto nos recuerda la actitud adecuada del ser humano ante su Creador: humildad y sumisión.</p>
+                </div>
+            </div>
+            
+            <p>Esta metáfora enseña que nuestro valor no está en nuestra propia fortaleza, sino en estar en las manos del Alfarero divino.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-gem"></i> Implicaciones Espirituales</h2>
+            <p>El simbolismo del tiesto contiene importantes principios espirituales:</p>
+            
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-hands-praying"></i>
+                        <h3 class="card-title">Dependencia de Dios</h3>
+                    </div>
+                    <p>Reconocer nuestra fragilidad nos lleva a depender completamente de Dios en todo momento.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-heart"></i>
+                        <h3 class="card-title">Quebrantamiento Voluntario</h3>
+                    </div>
+                    <p>El proceso de ser quebrantados por Dios produce mayor sensibilidad espiritual y utilidad.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-cross"></i>
+                        <h3 class="card-title">Transformación</h3>
+                    </div>
+                    <p>Dios puede tomar nuestros pedazos rotos y transformarlos en algo útil para su gloria.</p>
+                </div>
+            </div>
+            
+            <p>Estas implicaciones nos muestran que el quebrantamiento no es un fin en sí mismo, sino un proceso hacia la transformación espiritual.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-bible"></i> Conexiones con el Nuevo Testamento</h2>
+            <p>El concepto del tiesto encuentra eco en varias enseñanzas del Nuevo Testamento:</p>
+            
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-book-romans"></i>
+                        <h3 class="card-title">Romanos 9:20-21</h3>
+                    </div>
+                    <p>"¿Mas quién eres tú, para que alterques con Dios? ¿Dirá el vaso de barro al que lo formó: ¿Por qué me has hecho así?"</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-book-corinthians"></i>
+                        <h3 class="card-title">2 Corintios 4:7</h3>
+                    </div>
+                    <p>"Pero tenemos este tesoro en vasos de barro, para que la excelencia del poder sea de Dios, y no de nosotros."</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-book-timothy"></i>
+                        <h3 class="card-title">2 Timoteo 2:20-21</h3>
+                    </div>
+                    <p>"En una casa grande... hay vasos de oro y de plata, y de madera y de barro..." - Diferentes usos según la calidad.</p>
+                </div>
+            </div>
+            
+            <p>El Nuevo Testamento expande la metáfora, mostrando cómo Dios usa nuestra fragilidad para manifestar su poder.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-lesson"></i> Aplicación Práctica</h2>
+            <p>La enseñanza del tiesto ofrece relevantes lecciones para la vida cristiana:</p>
+            
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-search"></i>
+                        <h3 class="card-title">Examen de Actitud</h3>
+                    </div>
+                    <p>¿Nos rebelamos contra Dios o aceptamos con humildad su soberanía en nuestras vidas?</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <h3 class="card-title">Aceptación del Quebrantamiento</h3>
+                    </div>
+                    <p>Permitir que Dios nos moldee aunque el proceso incluya momentos dolorosos de quebrantamiento.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-hands"></i>
+                        <h3 class="card-title">Confianza en el Alfarero</h3>
+                    </div>
+                    <p>Confiar en que Dios sabe lo que hace, incluso cuando no entendemos sus procesos.</p>
+                </div>
+            </div>
+            
+            <p>La metáfora del tiesto nos desafía a vivir en sumisión y confianza, reconociendo que el Alfarero divino conoce el diseño final que tenemos en Cristo.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-pray"></i> Reflexión Final</h2>
+            <p>El simbolismo del tiesto nos enseña valiosas lecciones sobre nuestra relación con Dios:</p>
+            
+            <div class="warning-section">
+                <h3 class="warning-title">Enseñanzas del Tiesto</h3>
+                
+                <ul class="warning-list">
+                    <li>Nuestra fragilidad no es un defecto sino una oportunidad para depender de Dios</li>
+                    <li>Dios puede redimir y usar incluso nuestros quebrantamientos</li>
+                    <li>La sumisión al Alfarero divino produce paz y propósito</li>
+                    <li>El valor del tiesto no está en sí mismo sino en las manos que lo sostienen</li>
+                    <li>Dios especializa en crear belleza a partir de lo quebrado</li>
+                </ul>
+            </div>
+            
+            <p>Esta metáfora nos invita a descansar en las manos del Alfarero, confiando en que Él está formando en nosotros el carácter de Cristo a través de cada circunstancia.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+                <h3>IN GOD WE TRUST</h3>
+            </div>
+            
+            
+            <div class="copyright">
+                <p>&copy; 2025 IN GOD WE TRUST. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
