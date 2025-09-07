@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tito 3:2 - "No ser pendencieros" - Significado Bíblico</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
+    <style>
+        :root {
+            --color-primary: #8b5a2b;
+            --color-secondary: #3a5e30;
+            --color-accent: #c19b2e;
+            --color-light: #f8f4e9;
+            --color-dark: #2c2c2c;
+            --color-background: #f5f1e6;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--color-background);
+            color: var(--color-dark);
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .header-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+        
+        .title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .breadcrumb {
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--color-primary);
+        }
+        
+        .breadcrumb a {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Word Definition */
+        .word-header {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--color-accent);
+        }
+        
+        .word-title {
+            color: var(--color-primary);
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .word-subtitle {
+            color: var(--color-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        
+        .bible-reference {
+            background: var(--color-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            border-left: 4px solid var(--color-accent);
+        }
+        
+        .bible-reference .verse {
+            font-weight: 600;
+            color: var(--color-primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .section-title {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-accent);
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title i {
+            margin-right: 10px;
+            color: var(--color-accent);
+        }
+        
+        /* Historical Context */
+        .historical-context {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .context-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: var(--transition);
+            border: 1px solid #e0d9c5;
+        }
+        
+        .context-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+        
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .card-header i {
+            font-size: 1.8rem;
+            color: var(--color-accent);
+            margin-right: 10px;
+        }
+        
+        .card-title {
+            font-size: 1.2rem;
+            color: var(--color-primary);
+        }
+        
+        /* Warning Section */
+        .warning-section {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .warning-title {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .warning-list {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .warning-list li {
+            margin-bottom: 0.8rem;
+        }
+        
+        /* Greek Meaning */
+        .greek-section {
+            text-align: center;
+            padding: 2rem;
+            background: var(--color-light);
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .greek-word {
+            font-size: 3rem;
+            font-family: 'Times New Roman', serif;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+        }
+        
+        .greek-translation {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: var(--color-secondary);
+        }
+        
+        /* Comparison Section */
+        .comparison-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .comparison-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        .comparison-title {
+            color: var(--color-primary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Contrast Section */
+        .contrast-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .positive-card, .negative-card {
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        .positive-card {
+            background: linear-gradient(135deg, #3a5e30 0%, #2b4a22 100%);
+            color: white;
+        }
+        
+        .negative-card {
+            background: linear-gradient(135deg, #8b5a2b 0%, #6b4423 100%);
+            color: white;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--color-accent);
+        }
+        
+        .copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .title {
+                margin-top: 10px;
+                font-size: 1.3rem;
+            }
+            
+            .word-title {
+                font-size: 1.8rem;
+            }
+            
+            .comparison-section, .contrast-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo" class="header-logo">
+                <h1 class="title">DICCIONARIO BÍBLICO</h1>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Inicio</a> > <a href="diccionario.html">Diccionario Bíblico</a> > Tito 3:2
+        </div>
+        
+        <div class="word-header">
+            <h1 class="word-title">"No ser pendencieros"</h1>
+            <p class="word-subtitle">La exhortación de Pablo a Tito sobre la conducta cristiana</p>
+            
+            <div class="bible-reference">
+                <span class="verse">Tito 3:2 (Reina-Valera 1960)</span>
+                "Que a nadie difamen, que no sean pendencieros, sino amables, mostrando toda mansedumbre para con todos los hombres."
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-info-circle"></i> Significado de "Pendencieros"</h2>
+            <p>La palabra "<strong>pendencieros</strong>" proviene del griego "ámachos" (ἄμαχος) que significa "no combativo" o "pacífico". En el contexto bíblico, se refiere a la actitud de evitar disputas, contiendas y altercados innecesarios. Pablo exhorta a los creyentes a rechazar esta conducta como parte de su testimonio cristiano.</p>
+            
+            <div class="greek-section">
+                <div class="greek-word">ἄμαχος</div>
+                <div class="greek-translation">"ámachos" - no combativo, pacífico</div>
+                <p>Transliteración y significado de la palabra griega original</p>
+            </div>
+            
+            <p>Ser "pendenciero" implica una tendencia a buscar pleitos, discusiones acaloradas y conflictos, lo cual es contrario al espíritu de mansedumbre y amor que debe caracterizar al creyente.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-history"></i> Contexto de Tito 3</h2>
+            
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-book"></i>
+                        <h3 class="card-title">La Epístola a Tito</h3>
+                    </div>
+                    <p>Pablo escribe a Tito, quien había sido dejado en Creta para organizar las iglesias y appoint ancianos (Tito 1:5).</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-users"></i>
+                        <h3 class="card-title">Contexto Cultural</h3>
+                    </div>
+                    <p>Los cretenses eran conocidos por su carácter difícil (Tito 1:12), lo que hacía necesario enfatizar la conducta pacífica.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-scroll"></i>
+                        <h3 class="card-title">Enseñanzas Prácticas</h3>
+                    </div>
+                    <p>El capítulo 3 contiene instrucciones prácticas para la conducta cristiana en la sociedad.</p>
+                </div>
+            </div>
+            
+            <p>La exhortación a "no ser pendencieros" forma parte de un conjunto más amplio de instrucciones sobre cómo los creyentes deben relacionarse con las autoridades y la sociedad en general.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-exclamation-triangle"></i> Análisis de Tito 3:1-2</h2>
+            <p>Pablo establece un contraste entre la conducta que se debe evitar y la que se debe practicar:</p>
+            
+            <div class="warning-section">
+                <h3 class="warning-title">Conducta que se debe evitar</h3>
+                
+                <ul class="warning-list">
+                    <li><strong>Difamar:</strong> Hablar mal de otros, dañar su reputación.</li>
+                    <li><strong>Ser pendencieros:</strong> Buscar pleitos y discusiones.</li>
+                </ul>
+                
+                <h3 class="warning-title" style="margin-top: 2rem;">Conducta que se debe practicar</h3>
+                
+                <ul class="warning-list">
+                    <li><strong>Ser amables:</strong> Mostrar bondad y consideración hacia todos.</li>
+                    <li><strong>Mansedumbre:</strong> Demostrar humildad y gentileza en el trato.</li>
+                </ul>
+            </div>
+            
+            <p>Este contraste muestra el cambio radical que el evangelio produce en el carácter y las relaciones humanas.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-theater-masks"></i> Contraste entre lo Viejo y lo Nuevo</h2>
+            <p>Tito 3:3 establece el contraste con la vida anterior antes de conocer a Cristo:</p>
+            
+            <div class="contrast-section">
+                <div class="positive-card">
+                    <h3 class="comparison-title">Vida en Cristo (Tito 3:2)</h3>
+                    <p>"Que a nadie difamen, que no sean pendencieros, sino amables, mostrando toda mansedumbre para con todos los hombres."</p>
+                </div>
+                
+                <div class="negative-card">
+                    <h3 class="comparison-title">Vida Pasada (Tito 3:3)</h3>
+                    <p>"Porque nosotros también éramos en otro tiempo insensatos, rebeldes, extraviados, esclavos de concupiscencias y deleites diversos, viviendo en malicia y envidia, aborrecibles, y aborreciéndonos unos a otros."</p>
+                </div>
+            </div>
+            
+            <p>Este contraste muestra la transformación que experimenta el creyente: de una vida caracterizada por conflictos y actitudes negativas a una vida marcada por la paz y la amabilidad.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-eye-slash"></i> El Peligro de la Actitud Pendenciera</h2>
+            <p>La Biblia advierte en múltiples pasajes sobre los peligros de la actitud pendenciera:</p>
+            
+            <div class="comparison-section">
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Daña el Testimonio</h3>
+                    <p>Las disputas y contiendas entre creyentes dañan el testimonio ante el mundo y obstaculizan la evangelización.</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Divide la Iglesia</h3>
+                    <p>El espíritu de contienda puede causar divisiones en el cuerpo de Cristo y debilitar la unidad de la fe.</p>
+                </div>
+            </div>
+            
+            <div class="comparison-section">
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Afecta la Comunión</h3>
+                    <p>Las actitudes pendencieras crean barreras en la comunión fraternal y dificultan el crecimiento espiritual.</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Contradice el Evangelio</h3>
+                    <p>El mensaje de reconciliación que proclamamos debe reflejarse en nuestras relaciones y actitudes.</p>
+                </div>
+            </div>
+            
+            <p>Por estas razones, Pablo enfatiza la importancia de rechazar toda actitud pendenciera y cultivar instead la paz y la unidad.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-gem"></i> Implicaciones Teológicas</h2>
+            <p>La exhortación a no ser pendencieros se basa en importantes verdades teológicas:</p>
+            
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-heart"></i>
+                        <h3 class="card-title">Nueva Naturaleza</h3>
+                    </div>
+                    <p>El creyente ha sido transformado por el Espíritu Santo y ahora tiene capacidad para reflejar el carácter de Cristo.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-dove"></i>
+                        <h3 class="card-title">Fruto del Espíritu</h3>
+                    </div>
+                    <p>La mansedumbre y amabilidad son manifestaciones del fruto del Espíritu en la vida del creyente.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-hands-helping"></i>
+                        <h3 class="card-title">Reconciliación</h3>
+                    </div>
+                    <p>El evangelio nos reconcilia con Dios y con los demás, llamándonos a ser agentes de reconciliación.</p>
+                </div>
+            </div>
+            
+            <p>Estas implicaciones muestran que la exhortación a no ser pendencieros no es solo un mandamiento ético, sino el resultado natural de una vida transformada por el evangelio.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-bible"></i> Conexiones con Otros Pasajes Bíblicos</h2>
+            <p>El tema de evitar contiendas y buscar la paz aparece en toda la Escritura:</p>
+            
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-book-romans"></i>
+                        <h3 class="card-title">Romanos 12:18</h3>
+                    </div>
+                    <p>"Si es posible, en cuanto dependa de vosotros, estad en paz con todos los hombres."</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-book-timothy"></i>
+                        <h3 class="card-title">2 Timoteo 2:24</h3>
+                    </div>
+                    <p>"Porque el siervo del Señor no debe ser contencioso, sino amable para con todos..."</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-book-proverbs"></i>
+                        <h3 class="card-title">Proverbios 20:3</h3>
+                    </div>
+                    <p>"Honra es del hombre dejar la contienda, pero todo insensato se envolverá en ella."</p>
+                </div>
+            </div>
+            
+            <p>El principio de buscar la paz y evitar contiendas es consistente throughout toda la Escritura, tanto en el Antiguo como en el Nuevo Testamento.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-lesson"></i> Aplicación Contemporánea</h2>
+            <p>La exhortación de Pablo ofrece relevantes lecciones para la iglesia actual:</p>
+            
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-church"></i>
+                        <h3 class="card-title">Unidad Eclesiástica</h3>
+                    </div>
+                    <p>Evitar actitudes pendencieras fortalece la unidad de la iglesia y su testimonio en el mundo.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-network-wired"></i>
+                        <h3 class="card-title">Redes Sociales</h3>
+                    </div>
+                    <p>La exhortación aplica también a nuestras interacciones digitales, donde fácilmente podemos caer en contiendas.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-handshake"></i>
+                        <h3 class="card-title">Resolución de Conflictos</h3>
+                    </div>
+                    <p>Los creyentes debemos aprender a resolver diferencias de manera bíblica, sin caer en actitudes pendencieras.</p>
+                </div>
+            </div>
+            
+            <p>El mensaje de Pablo nos desafía a examinar nuestras actitudes y relaciones, buscando siempre la paz y la edificación mutua.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-pray"></i> Cómo Cultivar una Actitud Pacífica</h2>
+            <p>La Biblia ofrece principios prácticos para evitar actitudes pendencieras:</p>
+            
+            <div class="warning-section">
+                <h3 class="warning-title">Principios para la Paz</h3>
+                
+                <ul class="warning-list">
+                    <li><strong>Autocontrol:</strong> Gobernar nuestro espíritu (Proverbios 16:32)</li>
+                    <li><strong>Humildad:</strong> Considerar a otros como superiores a nosotros mismos (Filipenses 2:3)</li>
+                    <li><strong>Amor:</strong> Cubrir multitud de faltas (1 Pedro 4:8)</li>
+                    <li><strong>Perdón:</strong> Perdonar como Cristo nos perdonó (Colosenses 3:13)</li>
+                    <li><strong>Oración:</strong> Buscar la sabiduría de Dios en situaciones conflictivas (Santiago 1:5)</li>
+                </ul>
+            </div>
+            
+            <p>Estos principios nos muestran que evitar actitudes pendencieras requiere dependencia del Espíritu Santo y práctica intencional de las virtudes cristianas.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+                <h3>IN GOD WE TRUST</h3>
+            </div>
+            
+            <div class="footer-links">
+                <a href="acerca.html">Acerca de</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="privacidad.html">Privacidad</a>
+                <a href="terminos.html">Términos de Uso</a>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 IN GOD WE TRUST. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
