@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hechos 19:9 - La escuela de Tirano - Significado Bíblico</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
+    <style>
+        :root {
+            --color-primary: #8b5a2b;
+            --color-secondary: #3a5e30;
+            --color-accent: #c19b2e;
+            --color-light: #f8f4e9;
+            --color-dark: #2c2c2c;
+            --color-background: #f5f1e6;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--color-background);
+            color: var(--color-dark);
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .header-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+        
+        .title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .breadcrumb {
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--color-primary);
+        }
+        
+        .breadcrumb a {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Word Definition */
+        .word-header {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--color-accent);
+        }
+        
+        .word-title {
+            color: var(--color-primary);
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .word-subtitle {
+            color: var(--color-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        
+        .bible-reference {
+            background: var(--color-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            border-left: 4px solid var(--color-accent);
+        }
+        
+        .bible-reference .verse {
+            font-weight: 600;
+            color: var(--color-primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .section-title {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-accent);
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title i {
+            margin-right: 10px;
+            color: var(--color-accent);
+        }
+        
+        /* Historical Context */
+        .historical-context {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .context-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: var(--transition);
+            border: 1px solid #e0d9c5;
+        }
+        
+        .context-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+        
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .card-header i {
+            font-size: 1.8rem;
+            color: var(--color-accent);
+            margin-right: 10px;
+        }
+        
+        .card-title {
+            font-size: 1.2rem;
+            color: var(--color-primary);
+        }
+        
+        /* Warning Section */
+        .warning-section {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .warning-title {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .warning-list {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .warning-list li {
+            margin-bottom: 0.8rem;
+        }
+        
+        /* Greek Meaning */
+        .greek-section {
+            text-align: center;
+            padding: 2rem;
+            background: var(--color-light);
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .greek-word {
+            font-size: 3rem;
+            font-family: 'Times New Roman', serif;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+        }
+        
+        .greek-translation {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: var(--color-secondary);
+        }
+        
+        /* Comparison Section */
+        .comparison-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .comparison-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        .comparison-title {
+            color: var(--color-primary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Map Section */
+        .map-section {
+            text-align: center;
+            padding: 2rem;
+            background: var(--color-light);
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .map-title {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .map-container {
+            max-width: 600px;
+            margin: 0 auto;
+            border: 3px solid var(--color-accent);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .map-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Timeline Section */
+        .timeline {
+            margin: 2rem 0;
+            position: relative;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background-color: var(--color-accent);
+        }
+        
+        .timeline-item {
+            width: 50%;
+            padding: 1.5rem;
+            position: relative;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            padding-right: 3rem;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            padding-left: 3rem;
+        }
+        
+        .timeline-content {
+            background: var(--color-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+        
+        .timeline-date {
+            font-weight: bold;
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--color-accent);
+        }
+        
+        .copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .title {
+                margin-top: 10px;
+                font-size: 1.3rem;
+            }
+            
+            .word-title {
+                font-size: 1.8rem;
+            }
+            
+            .comparison-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 50px;
+                padding-right: 0;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo" class="header-logo">
+                <h1 class="title">DICCIONARIO BÍBLICO</h1>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Inicio</a> > Hechos 19:9
+        </div>
+        
+        <div class="word-header">
+            <h1 class="word-title">"La escuela de Tirano"</h1>
+            <p class="word-subtitle">El lugar donde Pablo enseñó diariamente en Éfeso</p>
+            
+            <div class="bible-reference">
+                <span class="verse">Hechos 19:9 (Reina-Valera 1569-1602)</span>
+                "Pero endureciéndose algunos y no creyendo, maldiciendo el Camino delante de la multitud, se apartó Pablo de ellos y separó a los discípulos, discutiendo cada día en la escuela de uno llamado Tirano."
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-info-circle"></i> Significado del Versículo</h2>
+            <p>El versículo de <strong>Hechos 19:9</strong> describe un punto crucial en el ministerio de Pablo en Éfeso. Después de enfrentar oposición en la sinagoga, Pablo traslada sus actividades de enseñanza a "la escuela de Tirano", donde continúa discutiendo diariamente durante dos años.</p>
+            
+            <div class="greek-section">
+                <div class="greek-word">Τυράννου</div>
+                <div class="greek-translation">"Tyrannou" - De Tirano</div>
+                <p>Transliteración y significado del nombre griego</p>
+            </div>
+            
+            <p>Este cambio de locación marcó un momento significativo en la expansión del evangelio, permitiendo que tanto judíos como gentiles tuvieran acceso libre a las enseñanzas de Pablo.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-history"></i> Contexto del Ministerio en Éfeso</h2>
+            
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-city"></i>
+                        <h3 class="card-title">Éfeso en el Siglo I</h3>
+                    </div>
+                    <p>Éfeso era una de las ciudades más importantes del Imperio Romano, centro comercial, político y religioso de Asia Menor.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-synagogue"></i>
+                        <h3 class="card-title">Ministerio en la Sinagoga</h3>
+                    </div>
+                    <p>Inicialmente, Pablo enseñó en la sinagoga durante tres meses (Hechos 19:8), siguiendo su costumbre de comenzar con los judíos.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-archway"></i>
+                        <h3 class="card-title">Oposición y Transición</h3>
+                    </div>
+                    <p>La creciente oposición obligó a Pablo a buscar un nuevo lugar para enseñar, llevándolo a la escuela de Tirano.</p>
+                </div>
+            </div>
+            
+            <p>Este cambio estratégico demostró la flexibilidad de Pablo en su enfoque misionero y su compromiso con la propagación del evangelio.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-exclamation-triangle"></i> ¿Quién era Tirano?</h2>
+            <p>La identidad de Tirano sigue siendo tema de debate entre los estudiosos bíblicos:</p>
+            
+            <div class="warning-section">
+                <h3 class="warning-title">Teorías sobre Tirano</h3>
+                
+                <ul class="warning-list">
+                    <li><strong>Filósofo o retórico:</strong> Posiblemente un profesor griego o romano que alquilaba su espacio cuando no lo usaba.</li>
+                    <li><strong>Dueño del edificio:</strong> Un hombre llamado Tirano que era propietario del edificio donde funcionaba la escuela.</li>
+                    <li><strong>Judío helenista:</strong> Algunos sugieren que podría haber sido un judío de habla griega con simpatías hacia el cristianismo.</li>
+                    <li><strong>Convertido al cristianismo:</strong> Es posible que Tirano mismo se hubiera convertido y ofreciera su escuela para las enseñanzas de Pablo.</li>
+                </ul>
+            </div>
+            
+            <p>El texto bíblico no proporciona más detalles sobre Tirano, pero su escuela se convirtió en un centro estratégico para la difusión del evangelio en Asia Menor.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-map-marked-alt"></i> Contexto Geográfico e Importancia</h2>
+            <p>La escuela de Tirano se ubicaba en Éfeso, una ciudad estratégica para la expansión del cristianismo:</p>
+            
+            <div class="map-section">
+                <h3 class="map-title">Éfeso en el Mundo Mediterráneo</h3>
+                <div class="map-container">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNDAwIiB2aWV3Qm94PSIwIDAgNjAwIDQwMCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2Y4ZjRlOSIvPjxjaXJjbGUgY3g9IjE1MCIgY3k9IjE1MCIgcj0iMzAiIGZpbGw9IiNjMTliMmUiIHN0cm9rZT0iIzhiNWEyYiIgc3Ryb2tlLXdpZHRoPSIzIi8+PHRleHQgeD0iMTUwIiB5PSIxNTAiIGZvbnQtc2l6ZT0iMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMyYzJjMmMiPkF0ZW5hczwvdGV4dD48Y2lyY2xlIGN4PSIzMDAiIGN5PSIxNTAiIHI9IjQwIiBmaWxsPSIjM2E1ZTMwIiBzdHJva2U9IiM4YjVhMmIiIHN0cm9rZS13aWR0aD0iMyIvPjx0ZXh0IHg9IjMwMCIgeT0iMTUwIiBmb250LXNpemU9IjE2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjZmZmIj7DgWZlc288L3RleHQ+PGNpcmNsZSBjeD0iMjAwIiBjeT0iMjUwIiByPSI1MCIgZmlsbD0iIzhiNWEyYiIgc3Ryb2tlPSIjM2E1ZTMwIiBzdHJva2Utd2lkdGg9IjMiLz48dGV4dCB4PSIyMDAiIHk9IjI1MCIgZm9udC1zaXplPSIxOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2ZmZiI+Q29yaW50bzwvdGV4dD48Y2lyY2xlIGN4PSI0MDAiIGN5PSIyMDAiIHI9IjQ1IiBmaWxsPSIjOGE1YTJiIiBzdHJva2U9IiMzYTVlMzAiIHN0cm9rZS13aWR0aD0iMyIvPjx0ZXh0IHg9IjQwMCIgeT0iMjAwIiBmb250LXNpemU9IjE2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjZmZmIj5BbnRpcXVhPC90ZXh0PjxwYXRoIGQ9Ik0xNTAsMTUwIEMxODAsMTMwIDI1MCwxMjAgMzAwLDE1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjM2E1ZTMwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1kYXNoYXJyYXk9IjUsNSIvPjxwYXRoIGQ9Ik0yMDAsMjUwIEMyMjAsMjIwIDI2MCwxODAgMzAwLDE1MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOGE1YTJiIiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBkPSJNMzAwLDE1MCBDMzUwLDE3MCA0MDAsMTgwIDQwMCwyMDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2MxOWIyZSIgc3Ryb2tlLXdpZHRoPSIyIi8+PC9zdmc+" alt="Mapa del Mediterráneo mostrando Éfeso y otras ciudades importantes" class="map-image">
+                </div>
+                <p>Mapa que muestra la ubicación estratégica de Éfeso en Asia Menor y sus conexiones con otras ciudades</p>
+            </div>
+            
+            <p>Éfeso era una ciudad portuaria importante y centro de comercio, lo que convertía a la escuela de Tirano en un lugar ideal para alcanzar a personas de diversas regiones con el mensaje del evangelio.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-users"></i> Impacto del Ministerio en la Escuela de Tirano</h2>
+            <p>El ministerio de Pablo en la escuela de Tirano tuvo un impacto significativo:</p>
+            
+            <div class="comparison-section">
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Duración Extendida</h3>
+                    <p>Pablo enseñó aquí durante dos años, mucho más tiempo que en la sinagoga (Hechos 19:10).</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Alcance Ampliado</h3>
+                    <p>Tanto judíos como griegos tuvieron la oportunidad de escuchar el mensaje (Hechos 19:10).</p>
+                </div>
+            </div>
+            
+            <div class="comparison-section">
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Difusión Regional</h3>
+                    <p>La palabra del Señor se extendió por toda Asia Menor desde este centro (Hechos 19:10).</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Milagros y Señales</h3>
+                    <p>Dios hacía milagros extraordinarios por mano de Pablo durante este período (Hechos 19:11-12).</p>
+                </div>
+            </div>
+            
+            <p>La escuela de Tirano se convirtió en el centro de uno de los ministerios más efectivos de Pablo, resultando en la establecimiento de iglesias en toda la región de Asia Menor.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-gem"></i> Implicaciones Teológicas</h2>
+            <p>Este evento histórico revela importantes verdades teológicas:</p>
+            
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-hand-pointing"></i>
+                        <h3 class="card-title">Soberanía Divina</h3>
+                    </div>
+                    <p>Dios usó la oposición para expandir el alcance del evangelio más allá de la comunidad judía.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-globe"></i>
+                        <h3 class="card-title">Universalidad del Evangelio</h3>
+                    </div>
+                    <p>El cambio a la escuela de Tirano facilitó el acceso de los gentiles al mensaje cristiano.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-church"></i>
+                        <h3 class="card-title">Adaptabilidad Misionera</h3>
+                    </div>
+                    <p>Pablo demostró flexibilidad en sus métodos sin comprometer el mensaje del evangelio.</p>
+                </div>
+            </div>
+            
+            <p>Este pasaje muestra cómo Dios puede usar circunstancias aparentemente adversas para avanzar sus propósitos redentores.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-bible"></i> Conexiones con Otros Pasajes Bíblicos</h2>
+            <p>El tema de la enseñanza en espacios no tradicionales aparece en otros pasajes:</p>
+            
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-book-acts"></i>
+                        <h3 class="card-title">Hechos 20:20</h3>
+                    </div>
+                    <p>Pablo recuerda cómo enseñó "públicamente y por las casas", mostrando su enfoque comprehensivo.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-book-acts"></i>
+                        <h3 class="card-title">Hechos 28:30-31</h3>
+                    </div>
+                    <p>En Roma, Pablo alquiló su propia casa para enseñar durante dos años, un enfoque similar.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-book-corinthians"></i>
+                        <h3 class="card-title">1 Corintios 16:9</h3>
+                    </div>
+                    <p>Pablo habla de una "puerta grande y eficaz" que se le había abierto en Éfeso, refiriéndose probablemente a este período.</p>
+                </div>
+            </div>
+            
+            <p>El patrón bíblico muestra que Dios abre puertas para la propagación del evangelio en diversos contextos y lugares.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-hourglass-half"></i> Cronología del Ministerio en Éfeso</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">52-55 d.C.</div>
+                        <p>Pablo llega a Éfeso durante su tercer viaje misionero (Hechos 19:1).</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Primeros 3 meses</div>
+                        <p>Pablo enseña en la sinagoga de Éfeso (Hechos 19:8).</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Año 1</div>
+                        <p>Tras la oposición, Pablo se traslada a la escuela de Tirano donde enseña diariamente durante dos años (Hechos 19:9-10).</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Año 2</div>
+                        <p>El ministerio de Pablo resulta en la evangelización de toda Asia Menor (Hechos 19:10).</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Final del período</div>
+                        <p>El incidente con los plateros y el templo de Artemisa lleva a la partida de Pablo (Hechos 19:23-41).</p>
+                    </div>
+                </div>
+            </div>
+            
+            <p>El tiempo de Pablo en Éfeso fue uno de los más largos y productivos de su ministerio misionero.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-lesson"></i> Aplicación Contemporánea</h2>
+            <p>El relato de Hechos 19:9 ofrece relevantes lecciones para hoy:</p>
+            
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-search"></i>
+                        <h3 class="card-title">Flexibilidad en la Misión</h3>
+                    </div>
+                    <p>Necesitamos estar dispuestos a adaptar nuestros métodos sin comprometer el mensaje del evangelio.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <h3 class="card-title">Uso de Espacios Seculares</h3>
+                    </div>
+                    <p>Podemos utilizar espacios no tradicionales (escuelas, cafés, hogares) para compartir el evangelio.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-hands-helping"></i>
+                        <h3 class="card-title">Perseverancia en la Enseñanza</h3>
+                    </div>
+                    <p>El compromiso de Pablo con la enseñanza diaria nos desafía a ser constantes en el discipulado.</p>
+                </div>
+            </div>
+            
+            <p>Este pasaje nos anima a buscar creativamente formas de llevar el mensaje del evangelio a diferentes contextos culturales.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+                <h3>IN GOD WE TRUST</h3>
+            </div>
+            
+            
+            <div class="copyright">
+                <p>&copy; 2025 IN GOD WE TRUST. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
