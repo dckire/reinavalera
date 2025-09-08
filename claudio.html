@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hechos 18:2 - Decreto de Claudio - Significado Bíblico</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
+    <style>
+        :root {
+            --color-primary: #8b5a2b;
+            --color-secondary: #3a5e30;
+            --color-accent: #c19b2e;
+            --color-light: #f8f4e9;
+            --color-dark: #2c2c2c;
+            --color-background: #f5f1e6;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--color-background);
+            color: var(--color-dark);
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .header-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+        
+        .title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .breadcrumb {
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--color-primary);
+        }
+        
+        .breadcrumb a {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Word Definition */
+        .word-header {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--color-accent);
+        }
+        
+        .word-title {
+            color: var(--color-primary);
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .word-subtitle {
+            color: var(--color-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        
+        .bible-reference {
+            background: var(--color-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            border-left: 4px solid var(--color-accent);
+        }
+        
+        .bible-reference .verse {
+            font-weight: 600;
+            color: var(--color-primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .section-title {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-accent);
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title i {
+            margin-right: 10px;
+            color: var(--color-accent);
+        }
+        
+        /* Historical Context */
+        .historical-context {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .context-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: var(--transition);
+            border: 1px solid #e0d9c5;
+        }
+        
+        .context-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+        
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .card-header i {
+            font-size: 1.8rem;
+            color: var(--color-accent);
+            margin-right: 10px;
+        }
+        
+        .card-title {
+            font-size: 1.2rem;
+            color: var(--color-primary);
+        }
+        
+        /* Warning Section */
+        .warning-section {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .warning-title {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .warning-list {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .warning-list li {
+            margin-bottom: 0.8rem;
+        }
+        
+        /* Greek Meaning */
+        .greek-section {
+            text-align: center;
+            padding: 2rem;
+            background: var(--color-light);
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .greek-word {
+            font-size: 3rem;
+            font-family: 'Times New Roman', serif;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+        }
+        
+        .greek-translation {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: var(--color-secondary);
+        }
+        
+        /* Comparison Section */
+        .comparison-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .comparison-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        .comparison-title {
+            color: var(--color-primary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Map Section */
+        .map-section {
+            text-align: center;
+            padding: 2rem;
+            background: var(--color-light);
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .map-title {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .map-container {
+            max-width: 600px;
+            margin: 0 auto;
+            border: 3px solid var(--color-accent);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .map-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Timeline Section */
+        .timeline {
+            margin: 2rem 0;
+            position: relative;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background-color: var(--color-accent);
+        }
+        
+        .timeline-item {
+            width: 50%;
+            padding: 1.5rem;
+            position: relative;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            padding-right: 3rem;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            padding-left: 3rem;
+        }
+        
+        .timeline-content {
+            background: var(--color-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+        
+        .timeline-date {
+            font-weight: bold;
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--color-accent);
+        }
+        
+        .copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .title {
+                margin-top: 10px;
+                font-size: 1.3rem;
+            }
+            
+            .word-title {
+                font-size: 1.8rem;
+            }
+            
+            .comparison-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 50px;
+                padding-right: 0;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo" class="header-logo">
+                <h1 class="title">DICCIONARIO BÍBLICO</h1>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Inicio</a> > Hechos 18:2
+        </div>
+        
+        <div class="word-header">
+            <h1 class="word-title">"Claudio había mandado que todos los judíos saliesen de Roma"</h1>
+            <p class="word-subtitle">El decreto del emperador Claudio y su impacto en el cristianismo primitivo</p>
+            
+            <div class="bible-reference">
+                <span class="verse">Hechos 18:2 (Reina-Valera 1960)</span>
+                "Y halló a un judío llamado Aquila, natural del Ponto, recién venido de Italia con Priscila su mujer, por cuanto Claudio había mandado que todos los judíos saliesen de Roma. Fue a ellos."
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-info-circle"></i> Significado del Versículo</h2>
+            <p>El versículo de <strong>Hechos 18:2</strong> menciona un decreto histórico del emperador Claudio que ordenaba la expulsión de todos los judíos de Roma. Este evento histórico, confirmado por fuentes extrabíblicas, tuvo importantes implicaciones para la expansión del cristianismo en el primer siglo.</p>
+            
+            <div class="greek-section">
+                <div class="greek-word">Κλαύδιος</div>
+                <div class="greek-translation">"Klaudios" - Claudio</div>
+                <p>Transliteración y significado del nombre griego del emperador</p>
+            </div>
+            
+            <p>Este decreto explica por qué Aquila y Priscila, colaboradores importantes del apóstol Pablo, se encontraban en Corinto en lugar de Roma, permitiendo así su encuentro providencial con Pablo.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-history"></i> Contexto Histórico del Decreto</h2>
+            
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-crown"></i>
+                        <h3 class="card-title">Emperador Claudio</h3>
+                    </div>
+                    <p>Claudio fue emperador romano desde el 41 al 54 d.C. Gobernó durante un período crucial para la iglesia primitiva.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-monument"></i>
+                        <h3 class="card-title">Roma en el Siglo I</h3>
+                    </div>
+                    <p>Roma tenía una población judía significativa, estimada entre 20,000 y 50,000 personas en el siglo I.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-scroll"></i>
+                        <h3 class="card-title">Confirmación Histórica</h3>
+                    </div>
+                    <p>El historiador romano Suetonio confirma este edicto en su obra "Vida de Claudio" (25.4), escrito alrededor del 120 d.C.</p>
+                </div>
+            </div>
+            
+            <p>El decreto de Claudio se emitió alrededor del año 49 d.C., lo que ayuda a fechar con precisión los eventos del ministerio de Pablo en Corinto.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-exclamation-triangle"></i> Causas del Decreto de Expulsión</h2>
+            <p>Según las fuentes históricas, la expulsión de los judíos de Roma fue resultado de:</p>
+            
+            <div class="warning-section">
+                <h3 class="warning-title">Conflictos en la Comunidad Judía</h3>
+                
+                <ul class="warning-list">
+                    <li><strong>Disputas sobre "Chrestus":</strong> Suetonio menciona disturbios entre judíos "instigados por Chrestus", posible referencia a disputas sobre Cristo.</li>
+                    <li><strong>Tensiones entre judíos y cristianos:</strong> El crecimiento del cristianismo dentro de la comunidad judía causaba divisiones.</li>
+                    <li><strong>Inestabilidad social:</strong> Los romanos veían las disputas religiosas judías como amenazas al orden público.</li>
+                    <li><strong>Intolerancia religiosa:</strong> Los romanos eran suspicaces hacia religiones monoteístas que rechazaban el culto imperial.</li>
+                </ul>
+            </div>
+            
+            <p>Claudio, conocido por su relativa tolerancia religiosa, probablemente decretó la expulsión como medida para restaurar el orden más que por antisemitismo.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-map-marked-alt"></i> Contexto Geográfico</h2>
+            <p>El decreto de Claudio afectó el movimiento de personas en el Mediterráneo oriental:</p>
+            
+            <div class="map-section">
+                <h3 class="map-title">Rutas de los Judíos Expulsados de Roma</h3>
+                <div class="map-container">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MDAiIGhlaWdodD0iNDAwIiB2aWV3Qm94PSIwIDAgNjAwIDQwMCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2Y4ZjRlOSIvPjxjaXJjbGUgY3g9IjE1MCIgY3k9IjE1MCIgcj0iMzAiIGZpbGw9IiNjMTliMmUiIHN0cm9rZT0iIzhiNWEyYiIgc3Ryb2tlLXdpZHRoPSIzIi8+PHRleHQgeD0iMTUwIiB5PSIxNTAiIGZvbnQtc2l6ZT0iMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMyYzJjMmMiPkZvbmlhPC90ZXh0PjxjaXJjbGUgY3g9IjMwMCIgY3k9IjEwMCIgcj0iNDAiIGZpbGw9IiMzYTVlMzAiIHN0cm9rZT0iIzhiNWEyYiIgc3Ryb2tlLXdpZHRoPSIzIi8+PHRleHQgeD0iMzAwIiB5PSIxMDAiIGZvbnQtc2l6ZT0iMTYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNmZmYiPkNvcmludG88L3RleHQ+PGNpcmNsZSBjeD0iMjAwIiBjeT0iMjUwIiByPSI1MCIgZmlsbD0iIzhiNWEyYiIgc3Ryb2tlPSIjM2E1ZTMwIiBzdHJva2Utd2lkdGg9IjMiLz48dGV4dCB4PSIyMDAiIHk9IjI1MCIgZm9udC1zaXplPSIxOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2ZmZiI+Um9tYTwvdGV4dD48cGF0aCBkPSJNMTUwLDE1MCBDMTgwLDEzMCAyNTAsOTAgMzAwLDEwMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjM2E1ZTMwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1kYXNoYXJyYXk9IjUsNSIvPjxwYXRoIGQ9Ik0yMDAsMjUwIEMyMjAsMjIwIDI2MCwxNDAgMzAwLDEwMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOGE1YTJiIiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4=" alt="Mapa del Mediterráneo mostrando Roma, Corinto y las rutas de viaje" class="map-image">
+                </div>
+                <p>Mapa que muestra la ruta desde Roma hasta Corinto, donde Aquila y Priscila se establecieron tras la expulsión</p>
+            </div>
+            
+            <p>Muchos judíos expulsados de Roma se establecieron en importantes ciudades del Imperio como Corinto, Éfeso y Alejandría, facilitando la posterior expansión del cristianismo.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-users"></i> Personajes Clave: Aquila y Priscila</h2>
+            <p>El encuentro con estos colaboradores fue crucial para el ministerio de Pablo:</p>
+            
+            <div class="comparison-section">
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Aquila</h3>
+                    <p>Judío originario del Ponto (actual Turquía), fabricante de tiendas como Pablo. Se convirtió en colaborador clave del apóstol.</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Priscila</h3>
+                    <p>Esposa de Aquila, mencionada frecuentemente antes que su marido, lo que sugiere su prominencia en la iglesia primitiva.</p>
+                </div>
+            </div>
+            
+            <div class="comparison-section">
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Ministerio Conjunto</h3>
+                    <p>La pareja trabajó con Pablo en Corinto, Éfeso y Roma, hospedando iglesias en su casa y enseñando a nuevos convertidos.</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Importancia Eclesiástica</h3>
+                    <p>Aquila y Priscila son mencionados en Hechos, Romanos, 1 Corintios y 2 Timoteo, evidenciando su significativa contribución.</p>
+                </div>
+            </div>
+            
+            <p>Sin el decreto de Claudio, este encuentro estratégico podría no haber ocurrido, demostrando la soberanía de Dios sobre los eventos históricos.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-gem"></i> Implicaciones Teológicas</h2>
+            <p>Este evento histórico revela importantes verdades teológicas:</p>
+            
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-hand-pointing"></i>
+                        <h3 class="card-title">Providencia Divina</h3>
+                    </div>
+                    <p>Dios usa incluso decretos paganos para cumplir sus propósitos en la expansión del Evangelio.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-globe"></i>
+                        <h3 class="card-title">Universalidad del Evangelio</h3>
+                    </div>
+                    <p>La dispersión de creyentes facilitó la difusión del cristianismo más allá de Jerusalén.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-church"></i>
+                        <h3 class="card-title">Iglesia en las Casas</h3>
+                    </div>
+                    <p>La expulsión fomentó el modelo de iglesias domésticas que caracterizó al cristianismo primitivo.</p>
+                </div>
+            </div>
+            
+            <p>El decreto de Claudio, aunque aparentemente adverso, resultó en el avance del Evangelio a través de la dispersión de creyentes.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-bible"></i> Conexiones con Otros Pasajes Bíblicos</h2>
+            <p>El tema de la dispersión y la providencia divina aparece en toda la Escritura:</p>
+            
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-book-genesis"></i>
+                        <h3 class="card-title">Génesis 50:20</h3>
+                    </div>
+                    <p>"Vosotros pensasteis mal contra mí, mas Dios lo encaminó a bien..." - José reconoce la providencia divina.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-book-acts"></i>
+                        <h3 class="card-title">Hechos 8:1, 4</h3>
+                    </div>
+                    <p>"En aquel día hubo una gran persecución... y todos fueron esparcidos... y los que fueron esparcidos iban por todas partes anunciando el evangelio."</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-book-romans"></i>
+                        <h3 class="card-title">Romanos 8:28</h3>
+                    </div>
+                    <p>"Y sabemos que a los que aman a Dios, todas las cosas les ayudan a bien..." - El principio de la providencia divina.</p>
+                </div>
+            </div>
+            
+            <p>El patrón bíblico muestra que Dios frecuentemente usa circunstancias adversas para avanzar sus propósitos redentores.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-hourglass-half"></i> Cronología del Decreto de Claudio</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">41 d.C.</div>
+                        <p>Claudio becomes emperor of Rome after the assassination of Caligula.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">49 d.C.</div>
+                        <p>Claudio emite el edicto expulsando a los judíos de Roma debido a los disturbios sobre "Chrestus".</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">50 d.C.</div>
+                        <p>Pablo llega a Corinto y se encuentra con Aquila y Priscila, recién llegados de Italia.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">54 d.C.</div>
+                        <p>Muerte de Claudio y ascenso de Nerón, quien revoca probablemente el edicto de expulsión.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">56 d.C.</div>
+                        <p>Aquila y Priscila están de vuelta en Roma, hospedando una iglesia en su casa (Romanos 16:3-5).</p>
+                    </div>
+                </div>
+            </div>
+            
+            <p>Esta cronología muestra cómo el decreto temporal de Claudio afectó momentáneamente pero no impidió el establecimiento de una iglesia fuerte en Roma.</p>
+        </div>
+        
+            </div>
+             </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+                <h3>IN GOD WE TRUST</h3>
+            </div>
+            
+            
+            <div class="copyright">
+                <p>&copy; 2025 IN GOD WE TRUST. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
