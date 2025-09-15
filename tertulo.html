@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hechos 24:1 - Tértulo | Análisis Bíblico</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
+    <style>
+        :root {
+            --color-primary: #8b5a2b;
+            --color-secondary: #3a5e30;
+            --color-accent: #c19b2e;
+            --color-light: #f8f4e9;
+            --color-dark: #2c2c2c;
+            --color-background: #f5f1e6;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--color-background);
+            color: var(--color-dark);
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .header-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+        
+        .title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .breadcrumb {
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--color-primary);
+        }
+        
+        .breadcrumb a {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Word Definition */
+        .word-header {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--color-accent);
+        }
+        
+        .word-title {
+            color: var(--color-primary);
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .word-subtitle {
+            color: var(--color-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        
+        .bible-reference {
+            background: var(--color-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            border-left: 4px solid var(--color-accent);
+        }
+        
+        .bible-reference .verse {
+            font-weight: 600;
+            color: var(--color-primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .section-title {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-accent);
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title i {
+            margin-right: 10px;
+            color: var(--color-accent);
+        }
+        
+        /* Historical Context */
+        .historical-context {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .context-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: var(--transition);
+            border: 1px solid #e0d9c5;
+        }
+        
+        .context-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+        
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .card-header i {
+            font-size: 1.8rem;
+            color: var(--color-accent);
+            margin-right: 10px;
+        }
+        
+        .card-title {
+            font-size: 1.2rem;
+            color: var(--color-primary);
+        }
+        
+        /* Warning Section */
+        .warning-section {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .warning-title {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .warning-list {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .warning-list li {
+            margin-bottom: 0.8rem;
+        }
+        
+        /* Greek Meaning */
+        .greek-section {
+            text-align: center;
+            padding: 2rem;
+            background: var(--color-light);
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .greek-word {
+            font-size: 3rem;
+            font-family: 'Times New Roman', serif;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+        }
+        
+        .greek-translation {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: var(--color-secondary);
+        }
+        
+        /* Comparison Section */
+        .comparison-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .comparison-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        .comparison-title {
+            color: var(--color-primary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Contrast Section */
+        .contrast-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .blessing-card, .woe-card {
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        .blessing-card {
+            background: linear-gradient(135deg, #3a5e30 0%, #2b4a22 100%);
+            color: white;
+        }
+        
+        .woe-card {
+            background: linear-gradient(135deg, #8b5a2b 0%, #6b4423 100%);
+            color: white;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--color-accent);
+        }
+        
+        .copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .title {
+                margin-top: 10px;
+                font-size: 1.3rem;
+            }
+            
+            .word-title {
+                font-size: 1.8rem;
+            }
+            
+            .comparison-section, .contrast-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo" class="header-logo">
+                <h1 class="title">DICCIONARIO BÍBLICO</h1>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Inicio</a> > Hechos 24:1 - Tértulo
+        </div>
+        
+        <div class="word-header">
+            <h1 class="word-title">Hechos 24:1 - Tértulo</h1>
+            <p class="word-subtitle">El  que acusó a Pablo ante Félix</p>
+            
+            <div class="bible-reference">
+                <span class="verse">Hechos 24:1 (Reina-Valera 1960)</span>
+                "Cinco días después, descendió el sumo sacerdote Ananías con algunos de los ancianos y un cierto orador llamado Tértulo, y comparecieron ante el gobernador contra Pablo."
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-info-circle"></i> ¿Quién fue Tértulo?</h2>
+            <p><strong>Tértulo</strong> fue un orador contratado por los líderes judíos para presentar el caso contra Pablo ante el gobernador romano Félix. Su nombre sugiere que probablemente era romano o al menos tenía ciudadanía romana, y era experto en leyes y procedimientos romanos.</p>
+            
+            <div class="greek-section">
+                <div class="greek-word">Τέρτυλλος</div>
+                <div class="greek-translation">"Tértulos" - Diminutivo del nombre romano Tertius</div>
+                <p>Transliteración y significado del nombre griego original</p>
+            </div>
+            
+            <p>Los líderes judíos necesitaban a alguien como Tértulo porque, aunque conocían bien la ley mosaica, no estaban tan familiarizados con el sistema legal romano y cómo presentar efectivamente un caso ante una autoridad romana.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-history"></i> Contexto del Juicio de Pablo</h2>
+            
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-balance-scale"></i>
+                        <h3 class="card-title">Marco Legal Romano</h3>
+                    </div>
+                    <p>Pablo había sido arrestado en Jerusalén pero, como ciudadano romano, tenía derecho a un juicio ante autoridades romanas, no religiosas.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-users"></i>
+                        <h3 class="card-title">La Delegación Judía</h3>
+                    </div>
+                    <p>El sumo sacerdote Ananías y varios ancianos viajaron a Cesarea para presentar cargos contra Pablo ante Félix.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-landmark"></i>
+                        <h3 class="card-title">Félix el Gobernador</h3>
+                    </div>
+                    <p>Antonio Félix era el procurador romano de Judea (52-60 d.C.), conocido por su crueldad y corrupción según el historiador Josefo.</p>
+                </div>
+            </div>
+            
+            <p>Este contexto muestra por qué los líderes judíos contrataron a un experto en derecho romano como Tértulo: necesitaban presentar su caso de manera convincente dentro del sistema legal romano.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-exclamation-triangle"></i> La Acusación de Tértulo</h2>
+            <p>En Hechos 24:2-8, Tértulo presenta tres acusaciones principales contra Pablo:</p>
+            
+            <div class="warning-section">
+                <h3 class="warning-title">Las Tres Acusaciones contra Pablo</h3>
+                
+                <ul class="warning-list">
+                    <li><strong>Sedición:</strong> Acusó a Pablo de ser un agitador que promovía disturbios entre los judíos por todo el mundo.</li>
+                    <li><strong>Herejía religiosa:</strong> Lo presentó como cabecilla de la secta de los nazarenos que profanaba el templo.</li>
+                    <li><strong>Alteración del orden público:</strong> Alegó que Pablo había intentado profanar el templo, lo que causó un tumulto.</li>
+                </ul>
+            </div>
+            
+            <p>Tértulo comenzó su discurso con una elaborada adulación a Félix (Hechos 24:2-4), una técnica retórica común en la oratoria antigua para ganar el favor del juez.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-theater-masks"></i> Estrategia Retórica de Tértulo</h2>
+            <p>Tértulo empleó varias técnicas persuasivas en su discurso:</p>
+            
+            <div class="contrast-section">
+                <div class="blessing-card">
+                    <h3 class="comparison-title">Captatio Benevolentiae</h3>
+                    <p>Inició con adulación excesiva hacia Félix, alabando su gobierno para ganar su favor.</p>
+                </div>
+                
+                <div class="woe-card">
+                    <h3 class="comparison-title">Distorsión de Hechos</h3>
+                    <p>Presentó una versión alterada de los eventos, exagerando la culpabilidad de Pablo.</p>
+                </div>
+            </div>
+            
+            <div class="contrast-section">
+                <div class="blessing-card">
+                    <h3 class="comparison-title">Apelación Legal Romana</h3>
+                    <p>Enmarcó las acusaciones en términos de delitos contra el Estado romano, no solo contra la religión judía.</p>
+                </div>
+                
+                <div class="woe-card">
+                    <h3 class="comparison-title">Generalizaciones</h3>
+                    <p>Usó términos vagos como "plaga" y "agitador" para crear una imagen negativa de Pablo sin evidencias concretas.</p>
+                </div>
+            </div>
+            
+            <p>Estas técnicas muestran que Tértulo era un orador experimentado que conocía cómo manipular las percepciones dentro de un tribunal romano.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-eye-slash"></i> La Respuesta de Pablo</h2>
+            <p>Pablo respondió a las acusaciones de Tértulo punto por punto (Hechos 24:10-21):</p>
+            
+            <div class="comparison-section">
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Defensa contra la Sedición</h3>
+                    <p>Pablo argumentó que había subido a Jerusalén para adorar, no para causar disturbios, y que no había agitado a nadie.</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Defensa contra la Herejía</h3>
+                    <p>Afirmó que servía al Dios de sus padres según el Camino (nombre primitivo del cristianismo), creyendo en la Ley y los Profetas.</p>
+                </div>
+            </div>
+            
+            <div class="comparison-section">
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Defensa contra la Profanación</h3>
+                    <p>Señaló que sus acusadores no podían probar las acusaciones sobre profanación del templo.</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Verdadera Razón</h3>
+                    <p>Pablo identificó la verdadera causa: su creencia en la resurrección de los muertos, doctrina que dividía a saduceos y fariseos.</p>
+                </div>
+            </div>
+            
+            <p>La defensa de Pablo fue efectiva, ya que Félix pospuso la decisión y mantuvo a Pablo bajo custodia relativamente suave durante dos años.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-gem"></i> Implicaciones Teológicas</h2>
+            <p>El caso de Tértulo contra Pablo tiene importantes dimensiones teológicas:</p>
+            
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-cross"></i>
+                        <h3 class="card-title">Cumplimiento Profético</h3>
+                    </div>
+                    <p>Jesús había predicho que sus seguidores serían llevados ante gobernantes y reyes (Mateo 10:18).</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-globe"></i>
+                        <h3 class="card-title">Expansión del Evangelio</h3>
+                    </div>
+                    <p>Este juicio llevó el mensaje del Evangelio a las más altas esferas del gobierno romano.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-gavel"></i>
+                        <h3 class="card-title">Justicia Divina</h3>
+                    </div>
+                    <p>Dios usó el sistema legal romano para proteger a Pablo de sus acusadores judíos.</p>
+                </div>
+            </div>
+            
+            <p>Este evento muestra cómo Dios puede usar incluso sistemas seculares para cumplir sus propósitos y proteger a su pueblo.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-bible"></i> Tértulo en el Contexto Bíblico</h2>
+            <p>La figura de Tértulo representa un fenómeno más amplio en el Nuevo Testamento:</p>
+            
+                
+                
+            </div>
+            
+            <p>La mención de Tértulo añade autenticidad histórica al relato de Hechos, mostrando el conocimiento preciso de Lucas sobre procedimientos legales romanos.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-lesson"></i> Lecciones Contemporáneas</h2>
+            <p>La historia de Tértulo y su acusación contra Pablo ofrece lecciones relevantes hoy:</p>
+
+                    <p>Tértulo usó el lenguaje para manipular y distorsionar, recordándonos la responsabilidad ética en nuestra comunicación.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-scale-balanced"></i>
+                        <h3 class="card-title">Justicia versus Manipulación</h3>
+                    </div>
+                    <p>Su ejemplo muestra la diferencia entre buscar justicia y manipular el sistema para fines personales.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <h3 class="card-title">Integridad bajo Presión</h3>
+                    </div>
+                    <p>La respuesta serena y veraz de Pablo modela cómo mantener la integridad cuando somos falsamente acusados.</p>
+                </div>
+            </div>
+            </div>
+        
+            
+            <p>Estas preguntas sin respuesta nos recuerdan que las Escrituras se centran en la obra de Dios a través de su pueblo, no en los detalles secundarios de personajes menores.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+                <h3>IN GOD WE TRUST</h3>
+            </div>
+            
+            
+            <div class="copyright">
+                <p>&copy; 2025 IN GOD WE TRUST. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
