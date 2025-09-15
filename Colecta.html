@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hechos 24:17 - Limosnas y ofrendas | Análisis Bíblico</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
+    <style>
+        :root {
+            --color-primary: #8b5a2b;
+            --color-secondary: #3a5e30;
+            --color-accent: #c19b2e;
+            --color-light: #f8f4e9;
+            --color-dark: #2c2c2c;
+            --color-background: #f5f1e6;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--color-background);
+            color: var(--color-dark);
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .header-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+        
+        .title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .breadcrumb {
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--color-primary);
+        }
+        
+        .breadcrumb a {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Word Definition */
+        .word-header {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--color-accent);
+        }
+        
+        .word-title {
+            color: var(--color-primary);
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .word-subtitle {
+            color: var(--color-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        
+        .bible-reference {
+            background: var(--color-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            border-left: 4px solid var(--color-accent);
+        }
+        
+        .bible-reference .verse {
+            font-weight: 600;
+            color: var(--color-primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .section-title {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-accent);
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title i {
+            margin-right: 10px;
+            color: var(--color-accent);
+        }
+        
+        /* Historical Context */
+        .historical-context {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .context-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: var(--transition);
+            border: 1px solid #e0d9c5;
+        }
+        
+        .context-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+        
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .card-header i {
+            font-size: 1.8rem;
+            color: var(--color-accent);
+            margin-right: 10px;
+        }
+        
+        .card-title {
+            font-size: 1.2rem;
+            color: var(--color-primary);
+        }
+        
+        /* Warning Section */
+        .warning-section {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .warning-title {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .warning-list {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .warning-list li {
+            margin-bottom: 0.8rem;
+        }
+        
+        /* Greek Meaning */
+        .greek-section {
+            text-align: center;
+            padding: 2rem;
+            background: var(--color-light);
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .greek-word {
+            font-size: 3rem;
+            font-family: 'Times New Roman', serif;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+        }
+        
+        .greek-translation {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: var(--color-secondary);
+        }
+        
+        /* Comparison Section */
+        .comparison-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .comparison-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        .comparison-title {
+            color: var(--color-primary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Contrast Section */
+        .contrast-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .blessing-card, .woe-card {
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        .blessing-card {
+            background: linear-gradient(135deg, #3a5e30 0%, #2b4a22 100%);
+            color: white;
+        }
+        
+        .woe-card {
+            background: linear-gradient(135deg, #8b5a2b 0%, #6b4423 100%);
+            color: white;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--color-accent);
+        }
+        
+        .copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .title {
+                margin-top: 10px;
+                font-size: 1.3rem;
+            }
+            
+            .word-title {
+                font-size: 1.8rem;
+            }
+            
+            .comparison-section, .contrast-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo" class="header-logo">
+                <h1 class="title">DICCIONARIO BÍBLICO</h1>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Inicio</a> > <a href="diccionario.html">Diccionario Bíblico</a> > Hechos 24:17 - Limosnas y ofrendas
+        </div>
+        
+        <div class="word-header">
+            <h1 class="word-title">Hechos 24:17 - "Vine a hacer limosnas y ofrendas a mi nación"</h1>
+            <p class="word-subtitle">La defensa de Pablo y su compromiso con los necesitados</p>
+            
+            <div class="bible-reference">
+                <span class="verse">Hechos 24:17 (Reina-Valera 1960)</span>
+                "Pero pasados algunos años, vine a hacer limosnas a mi nación, y presentar ofrendas."
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-info-circle"></i> Significado del Versículo</h2>
+            <p>En <strong>Hechos 24:17</strong>, el apóstol Pablo se defiende ante el gobernador Félix explicando que su viaje a Jerusalén tenía un propósito caritativo y religioso: traer <strong>limosnas</strong> para los necesitados y <strong>ofrendas</strong> para el templo. Esta declaración forma parte de su defensa contra las acusaciones de sedición y profanación del templo.</p>
+            
+            <div class="greek-section">
+                <div class="greek-word">ἐλεημοσύνας</div>
+                <div class="greek-translation">"eleēmosynas" - Limosnas, actos de misericordia</div>
+                <p>Transliteración y significado de la palabra griega original para "limosnas"</p>
+            </div>
+            
+            <p>Pablo enfatiza que sus intenciones eran piadosas y benévolas, no sediciosas como alegaban sus acusadores.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-history"></i> Contexto de la Declaración</h2>
+            
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <h3 class="card-title">La Colecta para los Santos</h3>
+                    </div>
+                    <p>Pablo había organizado una colecta entre las iglesias gentiles para ayudar a los creyentes necesitados en Jerusalén (Romanos 15:25-28; 1 Corintios 16:1-4).</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-temple"></i>
+                        <h3 class="card-title">Ofrendas en el Templo</h3>
+                    </div>
+                    <p>Además de las limosnas, Pablo participaba en ritos religiosos judíos, como el voto nazareo, que incluía ofrendas (Hechos 21:23-26).</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-scale-balanced"></i>
+                        <h3 class="card-title">Defensa Legal</h3>
+                    </div>
+                    <p>Al mencionar sus motivos caritativos, Pablo demostraba que sus intenciones eran pacíficas y constructivas, no disruptivas.</p>
+                </div>
+            </div>
+            
+            <p>Este contexto muestra cómo Pablo mantenía su identidad judía mientras practicaba y promovía su fe en Jesús como Mesías.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-exclamation-triangle"></i> Importancia de las Limosnas</h2>
+            <p>La mención de las limosnas por Pablo revela varios aspectos importantes de su ministerio y teología:</p>
+            
+            <div class="warning-section">
+                <h3 class="warning-title">Significado de la Colecta Paulina</h3>
+                
+                <ul class="warning-list">
+                    <li><strong>Unidad eclesial:</strong> La colecta simbolizaba la unidad entre creyentes judíos y gentiles en el cuerpo de Cristo.</li>
+                    <li><strong>Solidaridad práctica:</strong> Demostraba que la fe se expresa mediante acciones concretas de amor y generosidad.</li>
+                    <li><strong>Testimonio evangelístico:</strong> La generosidad de los creyentes gentiles hacia los judíos era un poderoso testimonio del evangelio.</li>
+                    <li><strong>Compromiso con los pobres:</strong> Reflejaba la enseñanza y ejemplo de Jesús sobre la importancia de cuidar a los necesitados.</li>
+                </ul>
+            </div>
+            
+            <p>Para Pablo, esta colecta no era solo un acto de caridad, sino una expresión tangible del evangelio que reconcilia a pueblos divididos.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-theater-masks"></i> Significado Teológico</h2>
+            <p>La declaración de Pablo en Hechos 24:17 tiene profundas implicaciones teológicas:</p>
+            
+            <div class="contrast-section">
+                <div class="blessing-card">
+                    <h3 class="comparison-title">Continuidad con el Judaísmo</h3>
+                    <p>Pablo mostraba que su fe en Jesús no anulaba su identidad judía ni su compromiso con las prácticas piadosas tradicionales.</p>
+                </div>
+                
+                <div class="woe-card">
+                    <h3 class="comparison-title">Universalidad del Evangelio</h3>
+                    <p>La colecta de gentiles para judíos demostraba que el evangelio rompe barreras étnicas y culturales.</p>
+                </div>
+            </div>
+            
+            <div class="contrast-section">
+                <div class="blessing-card">
+                    <h3 class="comparison-title">Fe y Obras</h3>
+                    <p>Pablo practicaba lo que enseñaba: la fe genuina produce frutos de amor y generosidad hacia los demás.</p>
+                </div>
+                
+                <div class="woe-card">
+                    <h3 class="comparison-title">Mayordomía Cristiana</h3>
+                    <p>El uso de recursos para ayudar a necesitados refleja una comprensión bíblica de la mayordomía de los bienes materiales.</p>
+                </div>
+            </div>
+            
+            <p>Estas dimensiones teológicas muestran que la declaración de Pablo era mucho más que una simple defensa legal; era un testimonio de su comprensión integral del evangelio.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-eye-slash"></i> Relevancia para la Iglesia Actual</h2>
+            <p>El ejemplo de Pablo en Hechos 24:17 ofrece importantes lecciones para la iglesia contemporánea:</p>
+            
+            <div class="comparison-section">
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Generosidad Transcultural</h3>
+                    <p>La iglesia debe practicar la generosidad que cruza fronteras étnicas, culturales y económicas.</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Integridad Ministerial</h3>
+                    <p>Los líderes cristianos deben mantener transparencia en el manejo de recursos, como hizo Pablo al entregar personalmente la colecta.</p>
+                </div>
+            </div>
+            
+            <div class="comparison-section">
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Defensa de la Fe</h3>
+                    <p>Las buenas obras y la generosidad son una poderosa apologética que responde a críticas y malentendidos.</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Equilibrio Doctrinal</h3>
+                    <p>Pablo modela cómo mantener convicciones teológicas firmes sin descuidar la práctica del amor y la compasión.</p>
+                </div>
+            </div>
+            
+            <p>Este pasaje desafía a la iglesia a encarnar el evangelio mediante acciones concretas de amor y justicia, no solo mediante palabras.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-gem"></i> Conexiones con Otros Textos Bíblicos</h2>
+            <p>El tema de las limosnas y ofrendas aparece en múltiples pasajes bíblicos:</p>
+            
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-book-deuteronomy"></i>
+                        <h3 class="card-title">Antiguo Testamento</h3>
+                    </div>
+                    <p>La práctica de dar limosnas tiene profundas raíces en la ley mosaica (Deuteronomio 15:7-11) y la literatura sapiencial (Proverbios 19:17).</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-book-matthew"></i>
+                        <h3 class="card-title">Enseñanzas de Jesús</h3>
+                    </div>
+                    <p>Jesús enfatizó la importancia de dar limosnas como expresión de devoción a Dios (Mateo 6:1-4) y como evidencia de conversión (Lucas 19:8-9).</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-book-corinthians"></i>
+                        <h3 class="card-title">Epístolas Paulinas</h3>
+                    </div>
+                    <p>Pablo desarrolló una teología de la generosidad en sus cartas (2 Corintios 8-9), enfatizando la gracia de dar.</p>
+                </div>
+            </div>
+            
+            <p>Estas conexiones muestran que la declaración de Pablo en Hechos 24:17 no era aislada, sino parte de una comprensión bíblica integral sobre la generosidad.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-bible"></i> Implicaciones Prácticas</h2>
+            <p>La práctica de las limosnas y ofrendas según el modelo paulino tiene varias implicaciones prácticas:</p>
+            
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-cross"></i>
+                        <h3 class="card-title">Motivación Correcta</h3>
+                    </div>
+                    <p>Pablo no daba para ganar méritos sino como respuesta al evangelio de la gracia (2 Corintios 8:9).</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-globe"></i>
+                        <h3 class="card-title">Alcance Global</h3>
+                    </div>
+                    <p>La colecta paulina era transcultural, desafiando a la iglesia a extender su generosidad más allá de su comunidad inmediata.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <h3 class="card-title">Transparencia</h3>
+                    </div>
+                    <p>Pablo modeló accountability al viajar personalmente con la ofrenda y mencionarlo en su defensa legal.</p>
+                </div>
+            </div>
+            
+            <p>Estas implicaciones prácticas guían a la iglesia contemporánea en el desarrollo de ministerios de compasión y generosidad.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-lesson"></i> Lecciones Contemporáneas</h2>
+            <p>Hechos 24:17 ofrece lecciones relevantes para los creyentes hoy:</p>
+            
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-heart"></i>
+                        <h3 class="card-title">Generosidad como Testimonio</h3>
+                    </div>
+                    <p>La generosidad cristiana puede ser un poderoso testimonio en un mundo marcado por el egoísmo y la codicia.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-hands-helping"></i>
+                        <h3 class="card-title">Solidaridad Práctica</h3>
+                    </div>
+                    <p>La fe debe expresarse en acciones concretas de compasión y justicia, no solo en creencias abstractas.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-bridge"></i>
+                        <h3 class="card-title">Reconciliación</h3>
+                    </div>
+                    <p>Como la colecta de Pablo, nuestra generosidad puede construir puentes entre grupos divididos o en conflicto.</p>
+                </div>
+            </div>
+            
+            <p>Esta enseñanza desafía a los creyentes a encarnar el evangelio mediante una generosidad radical y transformadora.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-pray"></i> Aplicación Personal</h2>
+            <p>El ejemplo de Pablo en Hechos 24:17 invita a una reflexión personal sobre nuestra práctica de la generosidad:</p>
+            
+            <div class="warning-section">
+                <h3 class="warning-title">Preguntas para Reflexión</h3>
+                
+                <ul class="warning-list">
+                    <li>¿Cómo puedo practicar la generosidad de manera que testimonie el evangelio?</li>
+                    <li>¿Estoy dispuesto a cruzar barreras culturales o económicas para ayudar a quienes necesitan?</li>
+                    <li>¿Manejo los recursos con la transparencia e integridad que modeló Pablo?</li>
+                    <li>¿Veo la generosidad como respuesta a la gracia de Dios o como obligación religiosa?</li>
+                </ul>
+            </div>
+            
+            <p>Esta reflexión nos ayuda a evaluar si nuestra práctica de la generosidad refleja los valores del reino de Dios como lo hizo la de Pablo.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+                <h3>IN GOD WE TRUST</h3>
+            </div>
+            
+            <div class="footer-links">
+                <a href="acerca.html">Acerca de</a>
+                <a href="contacto.html">Contacto</a>
+                <a href="privacidad.html">Privacidad</a>
+                <a href="terminos.html">Términos de Uso</a>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 IN GOD WE TRUST. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
