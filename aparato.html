@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hechos 25:23 - "Con mucho aparato" | Análisis Bíblico</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
+    <style>
+        :root {
+            --color-primary: #8b5a2b;
+            --color-secondary: #3a5e30;
+            --color-accent: #c19b2e;
+            --color-light: #f8f4e9;
+            --color-dark: #2c2c2c;
+            --color-background: #f5f1e6;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--color-background);
+            color: var(--color-dark);
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .header-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+        
+        .title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .breadcrumb {
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--color-primary);
+        }
+        
+        .breadcrumb a {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Word Definition */
+        .word-header {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--color-accent);
+        }
+        
+        .word-title {
+            color: var(--color-primary);
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .word-subtitle {
+            color: var(--color-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        
+        .bible-reference {
+            background: var(--color-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            border-left: 4px solid var(--color-accent);
+        }
+        
+        .bible-reference .verse {
+            font-weight: 600;
+            color: var(--color-primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .section-title {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-accent);
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title i {
+            margin-right: 10px;
+            color: var(--color-accent);
+        }
+        
+        /* Historical Context */
+        .historical-context {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .context-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: var(--transition);
+            border: 1px solid #e0d9c5;
+        }
+        
+        .context-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+        
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .card-header i {
+            font-size: 1.8rem;
+            color: var(--color-accent);
+            margin-right: 10px;
+        }
+        
+        .card-title {
+            font-size: 1.2rem;
+            color: var(--color-primary);
+        }
+        
+        /* Warning Section */
+        .warning-section {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .warning-title {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .warning-list {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .warning-list li {
+            margin-bottom: 0.8rem;
+        }
+        
+        /* Greek Meaning */
+        .greek-section {
+            text-align: center;
+            padding: 2rem;
+            background: var(--color-light);
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .greek-word {
+            font-size: 3rem;
+            font-family: 'Times New Roman', serif;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+        }
+        
+        .greek-translation {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: var(--color-secondary);
+        }
+        
+        /* Comparison Section */
+        .comparison-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .comparison-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        .comparison-title {
+            color: var(--color-primary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Contrast Section */
+        .contrast-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .blessing-card, .woe-card {
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        .blessing-card {
+            background: linear-gradient(135deg, #3a5e30 0%, #2b4a22 100%);
+            color: white;
+        }
+        
+        .woe-card {
+            background: linear-gradient(135deg, #8b5a2b 0%, #6b4423 100%);
+            color: white;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--color-accent);
+        }
+        
+        .copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .title {
+                margin-top: 10px;
+                font-size: 1.3rem;
+            }
+            
+            .word-title {
+                font-size: 1.8rem;
+            }
+            
+            .comparison-section, .contrast-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo" class="header-logo">
+                <h1 class="title">DICCIONARIO BÍBLICO</h1>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Inicio</a> > Hechos 25:23 - "Con mucho aparato"
+        </div>
+        
+        <div class="word-header">
+            <h1 class="word-title">Hechos 25:23 - "Con mucho aparato"</h1>
+            <p class="word-subtitle">La audiencia real de Pablo ante Festo y Agripa</p>
+            
+            <div class="bible-reference">
+                <span class="verse">Hechos 25:23 (Reina-Valera 1569-1602)</span>
+                "Al otro día, cuando Agripa y Berenice vinieron con mucho aparato, y entraron en la audiencia con los tribunos y principales hombres de la ciudad, por mandato de Festo fue traído Pablo."
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-info-circle"></i> Significado del Versículo</h2>
+            <p>La expresión <strong>"con mucho aparato"</strong> describe la entrada ceremonial y pomposa del rey Agripa II y su hermana Berenice a la audiencia donde Pablo sería escuchado. Este "aparato" se refiere al despliegue de lujo, autoridad y acompañamiento protocolario que caracterizaba las apariciones públicas de la realeza.</p>
+            
+            <div class="greek-section">
+                <div class="greek-word">φαντασία</div>
+                <div class="greek-translation">"phantasia" - Aparato, pompa, exhibición</div>
+                <p>Transliteración y significado de la palabra griega original</p>
+            </div>
+            
+            <p>Este versículo contrasta la humildad de Pablo, prisionero, con la ostentación de la realeza judía y romana, mostrando cómo el mensaje del Evangelio se abría paso incluso en los círculos más poderosos del Imperio.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-history"></i> Contexto Histórico</h2>
+            
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-crown"></i>
+                        <h3 class="card-title">El Rey Agripa II</h3>
+                    </div>
+                    <p>Herodes Agripa II era el último de los reyes herodianos, gobernando territorios al norte de Palestina. Aunque tenía autoridad limitada bajo el dominio romano, mantenía influencia en asuntos religiosos judíos.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-queen"></i>
+                        <h3 class="card-title">Berenice</h3>
+                    </div>
+                    <p>Hermana de Agripa II, conocida por sus intrigas políticas y su relación con Tito, el futuro emperador romano. Su presencia añadía importancia al evento.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-gavel"></i>
+                        <h3 class="card-title">Festo el Procurador</h3>
+                    </div>
+                    <p>Porcio Festo sucedió a Félix como procurador romano de Judea. Buscaba resolver el caso de Pablo de manera que satisfaciera a las autoridades judías mientras mantenía la justicia romana.</p>
+                </div>
+            </div>
+            
+            <p>Este contexto muestra la importancia política del evento: un prisionero judío siendo escuchado por las más altas autoridades regionales con toda la pompa y ceremonia del poder romano.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-exclamation-triangle"></i> Significado del "Mucho Aparato"</h2>
+            <p>El "mucho aparato" mencionado en Hechos 25:23 incluía varios elementos ceremoniales:</p>
+            
+            <div class="warning-section">
+                <h3 class="warning-title">Elementos del Aparato Real</h3>
+                
+                <ul class="warning-list">
+                    <li><strong>Comitiva oficial:</strong> Guardias, sirvientes y funcionarios que acompañaban a la realeza</li>
+                    <li><strong>Vestimenta ceremonial:</strong> Ropajes especiales que denotaban autoridad y estatus</li>
+                    <li><strong>Protocolo formal:</strong> Rituales de entrada y presentación característicos de la corte</li>
+                    <li><strong>Autoridades acompañantes:</strong> Tribunos y principales hombres de la ciudad</li>
+                    <li><strong>Símbolos de poder:</strong> Insignias, sellos y otros elementos que representaban autoridad</li>
+                </ul>
+            </div>
+            
+            <p>Este despliegue de poder contrastaba marcadamente con la sencillez de Pablo, quien se presentó como prisionero pero con la autoridad espiritual que le daba su testimonio de Cristo.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-theater-masks"></i> Contrastes en la Escena</h2>
+            <p>La escena descrita en Hechos 25:23 presenta varios contrastes significativos:</p>
+            
+            <div class="contrast-section">
+                <div class="blessing-card">
+                    <h3 class="comparison-title">Poder Temporal</h3>
+                    <p>Agripa y Berenice representaban el poder político y real, con toda su pompa y autoridad terrenal.</p>
+                </div>
+                
+                <div class="woe-card">
+                    <h3 class="comparison-title">Poder Espiritual</h3>
+                    <p>Pablo, aunque prisionero, representaba el poder del Evangelio que transforma vidas y trasciende las estructuras terrenales.</p>
+                </div>
+            </div>
+            
+            <div class="contrast-section">
+                <div class="blessing-card">
+                    <h3 class="comparison-title">Autoridad Visible</h3>
+                    <p>La autoridad de Agripa era evidente en el "mucho aparato" y el reconocimiento oficial.</p>
+                </div>
+                
+                <div class="woe-card">
+                    <h3 class="comparison-title">Autoridad Invisible</h3>
+                    <p>La autoridad de Pablo provenía de su llamado divino y su comisión apostólica, no de reconocimientos humanos.</p>
+                </div>
+            </div>
+            
+            <p>Estos contrastes muestran cómo el Reino de Dios opera con principios diferentes a los reinos terrenales, donde la verdadera autoridad often viene disfrazada de debilidad humana.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-eye-slash"></i> Propósito de la Audiencia</h2>
+            <p>Festo organizó esta audiencia con "mucho aparato" por varias razones estratégicas:</p>
+            
+            <div class="comparison-section">
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Consulta Experta</h3>
+                    <p>Festo buscaba el consejo de Agripa, conocedor de las costumbres judías, para entender mejor el caso de Pablo.</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Demonstración de Autoridad</h3>
+                    <p>La pompa y ceremonia reforzaban la autoridad romana y mostraban el debido proceso legal.</p>
+                </div>
+            </div>
+            
+            <div class="comparison-section">
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Relaciones Públicas</h3>
+                    <p>Incluir a las autoridades locales en el proceso ayudaba a mantener la paz y cooperación en la región.</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Preparación para el Juicio</h3>
+                    <p>Festo necesitaba cargos claros para enviar a Pablo a Roma, ya que el caso se había vuelto políticomente delicado.</p>
+                </div>
+            </div>
+            
+            <p>Sin saberlo, Festo estaba facilitando el cumplimiento del plan de Dios para que Pablo testificara "a los reyes" (Hechos 9:15).</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-gem"></i> Implicaciones Teológicas</h2>
+            <p>Este evento tiene importantes dimensiones teológicas:</p>
+            
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-cross"></i>
+                        <h3 class="card-title">Cumplimiento Profético</h3>
+                    </div>
+                    <p>Jesús había prometido que sus discípulos serían llevados ante reyes y gobernantes (Mateo 10:18). Pablo ante Agripa cumplía esta profecía.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-globe"></i>
+                        <h3 class="card-title">Expansión del Evangelio</h3>
+                    </div>
+                    <p>El Evangelio llegaba a las más altas esferas de poder, demostrando su relevancia para todas las clases sociales.</p>
+                </div>
+                
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-book-daniel"></i>
+                        <h3 class="card-title">Daniel ante Nabucodonosor</h3>
+                    </div>
+                    <p>Daniel sirvió en la corte real babilónica manteniendo su fidelidad a Dios, similar a Pablo ante Agripa.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-book-1-samuel"></i>
+                        <h3 class="card-title">David ante Saúl</h3>
+                    </div>
+                    <p>David mostró respeto por la autoridad terrenal aun cuando había sido ungido como futuro rey.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-book-matthew"></i>
+                        <h3 class="card-title">Jesús ante Pilato</h3>
+                    </div>
+                    <p>Jesús enfrentó la autoridad romana con dignidad y verdad, modelo que Pablo siguió.</p>
+                </div>
+            </div>
+            
+            <p>Estas conexiones muestran un patrón bíblico de cómo los siervos de Dios interactúan con las autoridades terrenales.</p>
+        </div>
+        
+                
+                
+            
+            <p>La historia de Pablo ante Agripa nos desafía a examinar nuestras prioridades y nuestra dependencia de Dios en todas las circunstancias.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+                <h3>IN GOD WE TRUST</h3>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 IN GOD WE TRUST. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
