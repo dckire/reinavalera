@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hechos 28:30 - Casa de Alquiler | Análisis Bíblico</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
+    <style>
+        :root {
+            --color-primary: #5a2b8b;
+            --color-secondary: #4c305e;
+            --color-accent: #7f2ec1;
+            --color-light: #f1e9f8;
+            --color-dark: #2c2c2c;
+            --color-background: #f0e6f5;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--color-background);
+            color: var(--color-dark);
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .header-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+        
+        .title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .breadcrumb {
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--color-primary);
+        }
+        
+        .breadcrumb a {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Word Definition */
+        .word-header {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--color-accent);
+        }
+        
+        .word-title {
+            color: var(--color-primary);
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .word-subtitle {
+            color: var(--color-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        
+        .bible-reference {
+            background: var(--color-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            border-left: 4px solid var(--color-accent);
+        }
+        
+        .bible-reference .verse {
+            font-weight: 600;
+            color: var(--color-primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .section-title {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-accent);
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title i {
+            margin-right: 10px;
+            color: var(--color-accent);
+        }
+        
+        /* Historical Context */
+        .historical-context {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .context-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: var(--transition);
+            border: 1px solid #d9c5e0;
+        }
+        
+        .context-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+        
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .card-header i {
+            font-size: 1.8rem;
+            color: var(--color-accent);
+            margin-right: 10px;
+        }
+        
+        .card-title {
+            font-size: 1.2rem;
+            color: var(--color-primary);
+        }
+        
+        /* Warning Section */
+        .warning-section {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .warning-title {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .warning-list {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .warning-list li {
+            margin-bottom: 0.8rem;
+        }
+        
+        /* Greek Meaning */
+        .greek-section {
+            text-align: center;
+            padding: 2rem;
+            background: var(--color-light);
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .greek-word {
+            font-size: 3rem;
+            font-family: 'Times New Roman', serif;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+        }
+        
+        .greek-translation {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: var(--color-secondary);
+        }
+        
+        /* Comparison Section */
+        .comparison-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .comparison-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        .comparison-title {
+            color: var(--color-primary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Miracle Section */
+        .miracle-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .miracle-card {
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            color: white;
+        }
+        
+        .miracle-card:nth-child(1) {
+            background: linear-gradient(135deg, #5a2b8b 0%, #4c305e 100%);
+        }
+        
+        .miracle-card:nth-child(2) {
+            background: linear-gradient(135deg, #7f2ec1 0%, #5a2b8b 100%);
+        }
+        
+        /* Map Section */
+        .map-section {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .map-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .map-title {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .map-image {
+            width: 100%;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border: 1px solid #ddd;
+        }
+        
+        .map-alternative {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .map-alternative i {
+            font-size: 3rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+        
+        /* Timeline Section */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--color-primary);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-content {
+            padding: 20px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: var(--shadow);
+        }
+        
+        .timeline-date {
+            font-weight: bold;
+            color: var(--color-primary);
+            margin-bottom: 5px;
+        }
+        
+        /* Location Description */
+        .location-description {
+            background: var(--color-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+        
+        .location-title {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .location-title i {
+            margin-right: 10px;
+            color: var(--color-accent);
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--color-accent);
+        }
+        
+        .copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .title {
+                margin-top: 10px;
+                font-size: 1.3rem;
+            }
+            
+            .word-title {
+                font-size: 1.8rem;
+            }
+            
+            .comparison-section, .miracle-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo" class="header-logo">
+                <h1 class="title">DICCIONARIO BÍBLICO</h1>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Inicio</a> 
+        </div>
+        
+        <div class="word-header">
+            <h1 class="word-title">Hechos 28:30 - Casa de Alquiler</h1>
+            <p class="word-subtitle">El lugar donde Pablo permaneció dos años enteros predicando en Roma</p>
+            
+            <div class="bible-reference">
+                <span class="verse">Hechos 28:30-31 (Reina-Valera 1569-1602)</span>
+                "Y Pablo permaneció dos años enteros en una casa alquilada, donde recibía a todos los que a él venían, predicando el reino de Dios y enseñando acerca del Señor Jesucristo, abiertamente y sin impedimento."
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-home"></i> Significado de la Casa de Alquiler</h2>
+            <p>La mención de la <strong>casa alquilada</strong> (en griego: μίσθωμα, misthōma) donde Pablo permaneció durante su primer encarcelamiento en Roma es significativa por varias razones:</p>
+            
+            <div class="greek-section">
+                <div class="greek-word">μίσθωμα</div>
+                <div class="greek-translation">"misthōma" - casa alquilada, lugar arrendado</div>
+                <p>Transliteración y significado del término griego utilizado en Hechos 28:30</p>
+            </div>
+            
+            <p>Este término indica que Pablo alquiló una vivienda a su propio expense, lo que sugiere que:</p>
+            <ul class="warning-list">
+                <li>Tenía cierta libertad durante este encarcelamiento (custodia militar leve)</li>
+                <li>Contaba con recursos económicos para pagar el alquiler</li>
+                <li>Podía recibir visitas y continuar su ministerio</li>
+                <li>No estaba en una prisión estatal tradicional</li>
+            </ul>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-history"></i> Contexto del Encarcelamiento de Pablo</h2>
+            
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3 class="card-title">Llegada a Roma</h3>
+                    </div>
+                    <p>Pablo llegó a Roma como prisionero después de su apelación al César (Hechos 25:11). El viaje incluyó el naufragio en Malta antes de finalmente llegar a la capital del Imperio.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-user-shield"></i>
+                        <h3 class="card-title">Condiciones de Cautiverio</h3>
+                    </div>
+                    <p>Pablo estaba bajo custodia militar pero con considerables libertades. Vivía en su propio alojamiento alquilado con un soldado que lo custodiaba (Hechos 28:16).</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-clock"></i>
+                        <h3 class="card-title">Duración</h3>
+                    </div>
+                    <p>Permaneció dos años completos (probablemente 60-62 d.C.) en esta situación, esperando la audiencia ante Nerón mientras continuaba su ministerio.</p>
+                </div>
+            </div>
+            
+            <p>Este período de encarcelamiento domiciliario permitió a Pablo tener un ministerio fructífero a pesar de sus limitaciones físicas.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-church"></i> Ministerio desde la Casa Alquilada</h2>
+            <p>Desde esta casa alquilada, Pablo desarrolló un ministerio significativo:</p>
+            
+            <div class="warning-section">
+                <h3 class="warning-title">Actividades Ministeriales de Pablo</h3>
+                
+                <ul class="warning-list">
+                    <li><strong>Recibía visitantes:</strong> "Recibía a todos los que a él venían" - judíos, gentiles, creyentes, curiosos</li>
+                    <li><strong>Predicaba el reino de Dios:</strong> Enseñaba sobre el gobierno y soberanía de Dios</li>
+                    <li><strong>Enseñaba acerca de Jesús:</strong> Presentaba a Jesucristo como el Mesías y Salvador</li>
+                    <li><strong>Escribía cartas:</strong> Probablemente escribió Efesios, Filipenses, Colosenses y Filemón durante este tiempo</li>
+                    <li><strong>Preparaba defensa:</strong> Se preparaba para su comparecencia ante el emperador Nerón</li>
+                </ul>
+            </div>
+            
+            <p>A pesar de estar prisionero, el ministerio de Pablo prosperó "abiertamente y sin impedimento", cumpliendo su deseo de predicar en Roma (Hechos 19:21).</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fasfa-book"></i> Cartas escritas durante este período</h2>
+            <p>La tradición eclesiástica identifica cuatro epístolas escritas por Pablo durante su encarcelamiento en Roma:</p>
+            
+            <div class="miracle-section">
+                <div class="miracle-card">
+                    <h3 class="comparison-title">Efesios</h3>
+                    <p>Carta que enfatiza la unidad de la iglesia como cuerpo de Cristo y el propósito eterno de Dios.</p>
+                </div>
+                
+                <div class="miracle-card">
+                    <h3 class="comparison-title">Filipenses</h3>
+                    <p>Conocida como la "epístola del gozo", escrita a la iglesia que apoyaba económicamente a Pablo.</p>
+                </div>
+            </div>
+
+            <div class="miracle-section">
+                <div class="miracle-card">
+                    <h3 class="comparison-title">Colosenses</h3>
+                    <p>Enfocada en la supremacía de Cristo y la respuesta adecuada del creyente a Su señorío.</p>
+                </div>
+                
+                <div class="miracle-card">
+                    <h3 class="comparison-title">Filemón</h3>
+                    <p>Carta personal intercediendo por el esclavo fugitivo Onésimo, mostrando la aplicación práctica del evangelio.</p>
+                </div>
+            </div>
+            
+            <p>Estas cartas, conocidas como las "Epístolas de la Prisión", contienen profundas enseñanzas teológicas desarrolladas durante este tiempo de reflexión y ministerio limitado.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-calendar-alt"></i> Cronología del Encarcelamiento</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">58-60 d.C.</div>
+                        <p><strong>Viaje a Roma</strong><br>Pablo es enviado a Roma después de apelar al César, naufragando en Malta en el camino.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">60 d.C.</div>
+                        <p><strong>Llegada a Roma</strong><br>Pablo llega a Roma y se le permite alquilar una vivienda propia bajo custodia militar.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">60-62 d.C.</div>
+                        <p><strong>Ministerio desde la casa alquilada</strong><br>Pablo recibe visitantes, predica y escribe cartas durante dos años completos.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">62 d.C.</div>
+                        <p><strong>Comparecencia ante Nerón</strong><br>Después de dos años, Pablo finalmente comparece ante el emperador Nerón.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">62-64 d.C.</div>
+                        <p><strong>Libertad temporal</strong><br>Según la tradición, Pablo fue liberado y realizó más viajes misioneros.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">64-67 d.C.</div>
+                        <p><strong>Segundo encarcelamiento y martirio</strong><br>Después del gran incendio de Roma, Pablo es arrestado nuevamente y martirizado.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <p>Los "dos años enteros" mencionados en Hechos 28:30 representan un período significativo de ministerio fructífero a pesar de las circunstancias restrictivas.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-theater-masks"></i> Significado Teológico</h2>
+            <p>El relato de la casa alquilada tiene importantes implicaciones teológicas:</p>
+            
+            <div class="comparison-section">
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Soberanía de Dios</h3>
+                    <p>Dios usó incluso el encarcelamiento de Pablo para avanzar el evangelio en la capital del Imperio (Filipenses 1:12-14).</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Providencia Divina</h3>
+                    <p>La provisión de una casa alquilada muestra el cuidado de Dios por Sus siervos incluso en circunstancias difíciles.</p>
+                </div>
+            </div>
+            
+            <div class="comparison-section">
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Palabra sin Ataduras</h3>
+                    <p>Aunque Pablo estaba encadenado, el evangelio se propagaba "sin impedimento" (Hechos 28:31).</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Ministerio en Toda Circunstancia</h3>
+                    <p>Pablo demostró que se puede servir a Dios efectivamente en cualquier situación o lugar.</p>
+                </div>
+            </div>
+            
+            <p>Este episodio muestra cómo Dios puede usar nuestras limitaciones y circunstancias difíciles para cumplir Sus propósitos.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-gem"></i> Aplicaciones Prácticas</h2>
+            <p>La experiencia de Pablo en la casa alquilada ofrece valiosas lecciones para los creyentes hoy:</p>
+            
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-compass"></i>
+                        <h3 class="card-title">Fidelidad en Limitaciones</h3>
+                    </div>
+                    <p>Podemos servir a Dios fielmente incluso cuando nuestras circunstancias no son ideales o estamos limitados.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-door-open"></i>
+                        <h3 class="card-title">Hospitalidad Ministerial</h3>
+                    </div>
+                    <p>Nuestros hogares pueden convertirse en centros de ministerio y bendición para otros.</p>
+                </div>
+                
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-archway"></i> Evidencia Arqueológica</h2>
+            <p>Aunque no se ha identificado con certeza la ubicación exacta de la casa alquilada de Pablo, existen tradiciones e indicios históricos:</p>
+            
+            <div class="map-section">
+                <div class="map-container">
+                    <h3 class="map-title">Posible Ubicación en la Roma Antigua</h3>
+                    <p>Según la tradición, Pablo pudo haber vivido en el área del Foro Romano o cerca del Cuartel de la Guardia Pretoriana, donde estaría bajo la custodia de soldados pretorianos.</p>
+                    
+                    <div class="map-alternative">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h3>Roma en el siglo I d.C.</h3>
+                        <p>Imagen no disponible temporalmente</p>
+                        <p>La casa alquilada probablemente estaba en una zona accesible para visitantes pero bajo supervisión militar</p>
+                    </div>
+                    
+                    <div class="location-description">
+                        <h3 class="location-title"><i class="fas fa-info-circle"></i> Contexto histórico</h3>
+                        <p><strong>Custodia :</strong> Pablo estaba encadenado a un soldado romano que se rotaba regularmente</p>
+                        <p><strong>Accesibilidad:</strong> La ubicación permitía que tanto judíos como gentiles lo visitaran</p>
+                        <p><strong>Recursos económicos:</strong> Pablo posiblemente recibía apoyo de iglesias como la de Filipos (Filipenses 4:10-18)</p>
+                        <p><strong>Final del relato:</strong> Hechos termina con Pablo en Roma, pero la tradición indica que fue liberado temporalmente</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-bible"></i> Importancia en la Narrativa de Hechos</h2>
+            <p>La mención de la casa alquilada es significativa en la estructura literaria de Hechos:</p>
+            
+            
+            <p>El final de Hechos con Pablo ministrando desde su casa alquilada muestra que la obra del evangelio continúa más allá de la narrativa bíblica, invitando a cada generación a participar en su avance.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+                <h3>IN GOD WE TRUST</h3>
+            </div>
+            
+            
+            <div class="copyright">
+                <p>&copy; 2025 IN GOD WE TRUST. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
