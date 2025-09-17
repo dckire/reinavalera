@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hechos 27:2 - Adramitio | Análisis Bíblico</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
+    <style>
+        :root {
+            --color-primary: #2b588b;
+            --color-secondary: #304c5e;
+            --color-accent: #2e7fc1;
+            --color-light: #e9f1f8;
+            --color-dark: #2c2c2c;
+            --color-background: #e6f0f5;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--color-background);
+            color: var(--color-dark);
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .header-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+        
+        .title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .breadcrumb {
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--color-primary);
+        }
+        
+        .breadcrumb a {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Word Definition */
+        .word-header {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--color-accent);
+        }
+        
+        .word-title {
+            color: var(--color-primary);
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .word-subtitle {
+            color: var(--color-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        
+        .bible-reference {
+            background: var(--color-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            border-left: 4px solid var(--color-accent);
+        }
+        
+        .bible-reference .verse {
+            font-weight: 600;
+            color: var(--color-primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .section-title {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-accent);
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title i {
+            margin-right: 10px;
+            color: var(--color-accent);
+        }
+        
+        /* Historical Context */
+        .historical-context {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .context-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: var(--transition);
+            border: 1px solid #c5d9e0;
+        }
+        
+        .context-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+        
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .card-header i {
+            font-size: 1.8rem;
+            color: var(--color-accent);
+            margin-right: 10px;
+        }
+        
+        .card-title {
+            font-size: 1.2rem;
+            color: var(--color-primary);
+        }
+        
+        /* Warning Section */
+        .warning-section {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .warning-title {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .warning-list {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .warning-list li {
+            margin-bottom: 0.8rem;
+        }
+        
+        /* Greek Meaning */
+        .greek-section {
+            text-align: center;
+            padding: 2rem;
+            background: var(--color-light);
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .greek-word {
+            font-size: 3rem;
+            font-family: 'Times New Roman', serif;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+        }
+        
+        .greek-translation {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: var(--color-secondary);
+        }
+        
+        /* Comparison Section */
+        .comparison-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .comparison-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        .comparison-title {
+            color: var(--color-primary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Map Section */
+        .map-section {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .map-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .map-title {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .map-image {
+            width: 100%;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--color-accent);
+        }
+        
+        .copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .title {
+                margin-top: 10px;
+                font-size: 1.3rem;
+            }
+            
+            .word-title {
+                font-size: 1.8rem;
+            }
+            
+            .comparison-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo" class="header-logo">
+                <h1 class="title">DICCIONARIO BÍBLICO</h1>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Inicio</a> > <a href="euroclidon.html">Hechos 27:14 - Euroclidón</a> > Hechos 27:2 - Adramitio
+        </div>
+        
+        <div class="word-header">
+            <h1 class="word-title">Hechos 27:2 - Adramitio (Adrumentina)</h1>
+            <p class="word-subtitle">El puerto de inicio del viaje de Pablo a Roma</p>
+            
+            <div class="bible-reference">
+                <span class="verse">Hechos 27:2 (Reina-Valera 1960)</span>
+                "Y embarcándonos en una nave adramitena que partía para los puertos de Asia, zarpamos, navegando con nosotros Aristarco, macedonio de Tesalónica."
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-info-circle"></i> Significado de Adramitio</h2>
+            <p><strong>Adramitio</strong> (también conocida como Adramitene o Adrumentina) era una ciudad portuaria en la región de Misia, en el noroeste de Asia Menor (actual Turquía). La ciudad servía como importante puerto para el comercio y los viajes en el mar Egeo.</p>
+            
+            <div class="greek-section">
+                <div class="greek-word">Ἀδραμυττηνῷ</div>
+                <div class="greek-translation">"Adramyttēnō" - Adramitio, perteneciente a Adramitio</div>
+                <p>Transliteración y significado de la palabra griega original que describe la nave</p>
+            </div>
+            
+            <p>El término "nave adramitena" se refiere a un barco que tenía su puerto de origen en Adramitio o que seguía una ruta comercial regular que incluía este puerto. Estas naves generalmente realizaban viajes costeros a lo largo de Asia Menor.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-map-marked-alt"></i> Ubicación Geográfica</h2>
+            
+            <div class="map-section">
+                <div class="map-container">
+                    <h3 class="map-title">Ubicación de Adramitio en Asia Menor</h3>
+                    <p>Adramitio estaba situada en el golfo de Adramitio (actual Edremit Körfezi en Turquía), frente a la isla de Lesbos. Su ubicación estratégica la convertía en un puerto importante para el comercio entre Asia Menor, Grecia y las islas del Egeo.</p>
+                    
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Map_of_Assuwa_BC.svg/800px-Map_of_Assuwa_BC.svg.png" alt="Mapa de Asia Menor mostrando la ubicación de Adramitio" class="map-image">
+                    
+                    <p>La ciudad estaba aproximadamente a 100 km al norte de Éfeso y a 300 km al suroeste de Troya, en una región montañosa rica en recursos forestales y minerales.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-history"></i> Contexto Histórico del Viaje</h2>
+            
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-ship"></i>
+                        <h3 class="card-title">La Nave Adramitena</h3>
+                    </div>
+                    <p>Las naves adramitenas eran embarcaciones comerciales que realizaban viajes regulares a lo largo de la costa de Asia Menor. No eran barcos de larga distancia, por lo que Pablo y sus compañeros tendrían que cambiar de nave durante el viaje.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-anchor"></i>
+                        <h3 class="card-title">Estrategia de Navegación</h3>
+                    </div>
+                    <p>Dado que era finales de verano/principios de otoño, la navegación se volvía peligrosa. Embarcar en una nave costera era una estrategia prudente para avanzar gradualmente hacia Roma.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-users"></i>
+                        <h3 class="card-title">Compañeros de Viaje</h3>
+                    </div>
+                    <p>Aristarco, un compañero macedonio de Pablo, viajaba con ellos. Lucas (el autor de Hechos) también estaba presente, como se deduce del uso del pronombre "nosotros" en el relato.</p>
+                </div>
+            </div>
+            
+            <p>Este viaje marítimo marcó el inicio del trayecto de Pablo a Roma, donde apelaría su caso ante el emperador Nerón. Aunque comenzó como un viaje costero relativamente seguro, pronto se encontrarían con dificultades significativas.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-exchange-alt"></i> Itinerario del Viaje</h2>
+            <p>El viaje desde Cesarea hasta Roma siguió una ruta específica con varias paradas:</p>
+            
+            <div class="warning-section">
+                <h3 class="warning-title">Ruta de la Nave Adramitena</h3>
+                
+                <ul class="warning-list">
+                    <li><strong>Cesarea Marítima:</strong> Puerto de partida, donde Pablo había estado preso por dos años.</li>
+                    <li><strong>Sidón:</strong> Primera parada, donde Pablo pudo visitar a amigos (Hechos 27:3).</li>
+                    <li><strong>Costas de Chipre, Cilicia y Panfilia:</strong> Navegaron al abrigo de la isla de Chipre para protegerse de los vientos contrarios.</li>
+                    <li><strong>Mira de Licia:</strong> Donde cambiaron a una nave alejandrina que se dirigía a Italia (Hechos 27:5-6).</li>
+                </ul>
+            </div>
+            
+            <p>La elección de una nave adramitena fue estratégica, ya que estas embarcaciones seguían rutas costeras que permitían paradas frecuentes y menor exposición a mar abierto, algo importante considerando la época del año.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-theater-masks"></i> Importancia en la Narrativa Bíblica</h2>
+            <p>La mención de la nave adramitena tiene varios significados importantes en el relato bíblico:</p>
+            
+            <div class="comparison-section">
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Precisión Histórica</h3>
+                    <p>El detalle específico del tipo de nave demuestra el carácter histórico del relato y el conocimiento preciso de Lucas sobre la navegación en el Mediterráneo.</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Contexto del Viaje</h3>
+                    <p>Muestra que el viaje a Roma no fue directo, sino que involucró múltiples transbordos y estrategias de navegación, típicas de la época.</p>
+                </div>
+            </div>
+            
+            <div class="comparison-section">
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Providencia Divina</h3>
+                    <p>Aunque el viaje comenzó en una pequeña nave costera, Dios usaría este medio para llevar a Pablo a Roma, cumpliendo Su propósito.</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Contraste con el Euroclidón</h3>
+                    <p>El inicio del viaje en aguas relativamente tranquilas contrasta con la violenta tormenta que experimentarían más adelante, mostrando la imprevisibilidad de los viajes marítimos.</p>
+                </div>
+            </div>
+            
+            <p>Estos detalles enriquecen nuestra comprensión del relato bíblico y muestran cómo Dios obra a través de medios comunes y circunstancias ordinarias para cumplir Sus propósitos.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-monument"></i> Evidencia Arqueológica</h2>
+            <p>La existencia histórica de Adramitio y su importancia como puerto está confirmada por evidencias arqueológicas e históricas:</p>
+            
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-excavation"></i>
+                        <h3 class="card-title">Restos Arqueológicos</h3>
+                    </div>
+                    <p>Las ruinas de Adramitio (actual Edremit, Turquía) incluyen restos de murallas, un teatro y un ágora, testimonio de su importancia en la antigüedad.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-book"></i>
+                        <h3 class="card-title">Fuentes Históricas</h3>
+                    </div>
+                    <p>Autores clásicos como Estrabón, Plinio el Viejo y Tácito mencionan a Adramitio como un puerto importante en la región de Misia.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-coins"></i>
+                        <h3 class="card-title">Evidencia Numismática</h3>
+                    </div>
+                    <p>Se han encontrado monedas de Adramitio que datan de los períodos griego y romano, confirmando su importancia económica y comercial.</p>
+                </div>
+            </div>
+            
+            <p>Estas evidencias corroboran la exactitud histórica del relato de Hechos y refuerzan la confiabilidad de las Escrituras como documento histórico.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-gem"></i> Significado Teológico</h2>
+            <p>El inicio del viaje en Adramitio tiene dimensiones teológicas significativas:</p>
+            
+            <div class="comparison-section">
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Soberanía Divina</h3>
+                    <p>Dios usó medios comunes (una nave comercial ordinaria) para cumplir Sus propósitos de llevar a Pablo a Roma.</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Cuidado Providencial</h3>
+                    <p>La provisión de una nave costera mostraba el cuidado de Dios al permitir un inicio de viaje más seguro antes de las dificultades venideras.</p>
+                </div>
+            </div>
+            
+            <div class="comparison-section">
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Preparación para la Tormenta</h3>
+                    <p>El inicio relativamente tranquilo del viaje preparó a Pablo y sus compañeros para la prueba de fe que experimentarían con el Euroclidón.</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Testimonio Gradual</h3>
+                    <p>Pablo comenzó su testimonio en pequeña escala (con la tripulación de la nave adramitena) antes de testificar ante centuriones y gobernadores.</p>
+                </div>
+            </div>
+            
+            <p>Estas dimensiones muestran cómo Dios obra tanto en lo ordinario como en lo extraordinario para cumplir Sus propósitos y fortalecer la fe de Sus siervos.</p>
+        </div>
+        
+            
+            <p>Esta conexión muestra la complejidad del viaje de Pablo y cómo Dios obra a través de diferentes circunstancias para cumplir Sus propósitos.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+                <h3>IN GOD WE TRUST</h3>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 IN GOD WE TRUST. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
