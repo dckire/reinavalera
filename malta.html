@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hechos 28:1 - Melita | Análisis Bíblico</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
+    <style>
+        :root {
+            --color-primary: #5a2b8b;
+            --color-secondary: #4c305e;
+            --color-accent: #7f2ec1;
+            --color-light: #f1e9f8;
+            --color-dark: #2c2c2c;
+            --color-background: #f0e6f5;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--color-background);
+            color: var(--color-dark);
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .header-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+        
+        .title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .breadcrumb {
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--color-primary);
+        }
+        
+        .breadcrumb a {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Word Definition */
+        .word-header {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--color-accent);
+        }
+        
+        .word-title {
+            color: var(--color-primary);
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .word-subtitle {
+            color: var(--color-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        
+        .bible-reference {
+            background: var(--color-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            border-left: 4px solid var(--color-accent);
+        }
+        
+        .bible-reference .verse {
+            font-weight: 600;
+            color: var(--color-primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .section-title {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-accent);
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title i {
+            margin-right: 10px;
+            color: var(--color-accent);
+        }
+        
+        /* Historical Context */
+        .historical-context {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .context-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: var(--transition);
+            border: 1px solid #d9c5e0;
+        }
+        
+        .context-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+        
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .card-header i {
+            font-size: 1.8rem;
+            color: var(--color-accent);
+            margin-right: 10px;
+        }
+        
+        .card-title {
+            font-size: 1.2rem;
+            color: var(--color-primary);
+        }
+        
+        /* Warning Section */
+        .warning-section {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .warning-title {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .warning-list {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .warning-list li {
+            margin-bottom: 0.8rem;
+        }
+        
+        /* Greek Meaning */
+        .greek-section {
+            text-align: center;
+            padding: 2rem;
+            background: var(--color-light);
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .greek-word {
+            font-size: 3rem;
+            font-family: 'Times New Roman', serif;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+        }
+        
+        .greek-translation {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: var(--color-secondary);
+        }
+        
+        /* Comparison Section */
+        .comparison-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .comparison-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        .comparison-title {
+            color: var(--color-primary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Miracle Section */
+        .miracle-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .miracle-card {
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            color: white;
+        }
+        
+        .miracle-card:nth-child(1) {
+            background: linear-gradient(135deg, #5a2b8b 0%, #4c305e 100%);
+        }
+        
+        .miracle-card:nth-child(2) {
+            background: linear-gradient(135deg, #7f2ec1 0%, #5a2b8b 100%);
+        }
+        
+        /* Map Section */
+        .map-section {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .map-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .map-title {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .map-image {
+            width: 100%;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        /* Timeline Section */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--color-primary);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-content {
+            padding: 20px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: var(--shadow);
+        }
+        
+        .timeline-date {
+            font-weight: bold;
+            color: var(--color-primary);
+            margin-bottom: 5px;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--color-accent);
+        }
+        
+        .copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .title {
+                margin-top: 10px;
+                font-size: 1.3rem;
+            }
+            
+            .word-title {
+                font-size: 1.8rem;
+            }
+            
+            .comparison-section, .miracle-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo" class="header-logo">
+                <h1 class="title">DICCIONARIO BÍBLICO</h1>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Inicio</a> > Hechos 28:1 - Melita
+        </div>
+        
+        <div class="word-header">
+            <h1 class="word-title">Hechos 28:1 - Melita</h1>
+            <p class="word-subtitle">La isla donde naufragó Pablo y ocurrieron milagros</p>
+            
+            <div class="bible-reference">
+                <span class="verse">Hechos 28:1 (Reina-Valera 1569-1602)</span>
+                "Una vez a salvo, supimos que la isla se llamaba Melita. Los nativos nos trataron con una humanidad poco común; pues nos recibieron, encendiendo una hoguera, y nos acogieron a todos a causa de la lluvia que venía y del frío."
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-info-circle"></i> Significado de Melita</h2>
+            <p><strong>Melita</strong> (Μελίτη en griego) es el nombre antiguo de la actual isla de Malta, ubicada en el mar Mediterráneo, al sur de Sicilia. El nombre probablemente deriva de la palabra fenicia "Maleth" que significa "refugio" o "puerto", apropiado para una isla que ofrecía abrigo a los navegantes.</p>
+            
+            <div class="greek-section">
+                <div class="greek-word">Μελίτη</div>
+                <div class="greek-translation">"Melítē" - Melita, Malta</div>
+                <p>Transliteración y significado del nombre griego de la isla</p>
+            </div>
+            
+            <p>Melita era conocida en la antigüedad por su producción de miel (mel en griego) y algodón, así como por sus excelentes puertos naturales que la convertían en escala importante para las rutas comerciales del Mediterráneo.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-map-marked-alt"></i> Ubicación Geográfica de Melita (Malta)</h2>
+            
+            <div class="map-section">
+                <div class="map-container">
+                    <h3 class="map-title">Ubicación de la Isla de Malta en el Mediterráneo</h3>
+                    <p>Malta es un archipiélago ubicado en el centro del mar Mediterráneo, aproximadamente 80 km al sur de Sicilia (Italia) y 284 km al este de Túnez. Su posición estratégica la convirtió en un importante punto de escala para las rutas marítimas entre el oriente y occidente del Mediterráneo.</p>
+                    
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Map_of_Malta.gif/800px-Map_of_Malta.gif" alt="Mapa mostrando la ubicación de Malta en el Mediterráneo" class="map-image">
+                    
+                    <p>El lugar tradicional del naufragio de Pablo se identifica con la bahía de San Pablo en la costa noreste de Malta, que coincide con la descripción bíblica de una playa con una desembocadura entre dos mares (Hechos 27:41).</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-history"></i> Contexto Histórico del Naufragio</h2>
+            
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-ship"></i>
+                        <h3 class="card-title">El Naufragio</h3>
+                    </div>
+                    <p>Después de 14 días a la deriva durante la tormenta del Euroclidón, la nave encalló en un banco de arena frente a las costas de Melita, cumpliéndose la promesa de Dios de que todos sobrevivirían.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-swimmer"></i>
+                        <h3 class="card-title">Llegada a Tierra</h3>
+                    </div>
+                    <p>Algunos nadaron hasta la costa, mientras otros llegaron sobre tablas o restos del naufragio. Todos los 276 pasajeros llegaron salvos a tierra como Dios había prometido.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-users"></i>
+                        <h3 class="card-title">Recepción por los Nativos</h3>
+                    </div>
+                    <p>Los habitantes de Melita (llamados "bárbaros" por no hablar griego o latín) mostraron una hospitalidad extraordinaria, encendiendo fuego para calentar a los supervivientes.</p>
+                </div>
+            </div>
+            
+            <p>Este evento marcó el final del peligroso viaje por mar y el inicio de una temporada de ministerio y milagros en la isla de Melita.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-fire-alt"></i> El Incidente de la Víboras</h2>
+            <p>Uno de los eventos más notables durante la estadía en Melita fue el incidente con la víbora:</p>
+            
+            <div class="warning-section">
+                <h3 class="warning-title">Hechos 28:3-6</h3>
+                
+                <ul class="warning-list">
+                    <li><strong>Recolectando leña:</strong> Pablo ayudaba recogiendo leña para la hoguera.</li>
+                    <li><strong>La mordedura:</strong> Una víbora venenosa mordió la mano de Pablo.</li>
+                    <li><strong>Expectativa de los nativos:</strong> Esperaban que Pablo se hinchara y muriera, creyendo que era un criminal que recibía su castigo.</li>
+                    <li><strong>El milagro:</strong> Pablo sacudió la víbora al fuego sin sufrir daño alguno.</li>
+                    <li><strong>Cambio de percepción:</strong> Los nativos pensaron que era un dios por sobrevivir a la mordedura venenosa.</li>
+                </ul>
+            </div>
+            
+            <p>Este incidente demostró la protección divina sobre Pablo y abrió puertas para el ministerio entre los habitantes de la isla.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-heartbeat"></i> Milagros de Sanación en Melita</h2>
+            <p>La estadía en Melita incluyó varios milagros de sanación que impactaron a la población:</p>
+            
+            <div class="miracle-section">
+                <div class="miracle-card">
+                    <h3 class="comparison-title">Sanación del Padre de Publio</h3>
+                    <p>Publio, el hombre principal de la isla, hospedó al grupo. Pablo sanó a su padre que sufría de fiebre y disentería (Hechos 28:7-8).</p>
+                </div>
+                
+                <div class="miracle-card">
+                    <h3 class="comparison-title">Sanación de Otros Enfermos</h3>
+                    <p>Después de este milagro, todos los enfermos de la isla acudieron a Pablo y fueron sanados (Hechos 28:9).</p>
+                </div>
+            </div>
+            
+            <p>Estos milagros no solo demostraron el poder de Dios, sino que también resultaron en honores y provisiones para el viaje continuo a Roma.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-calendar-alt"></i> Cronología de la Estadía en Melita</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Invierno del 59-60 d.C.</div>
+                        <p><strong>Naufragio y llegada</strong><br>La nave encalla en Melita durante una tormenta. Todos los 276 pasajeros llegan a salvo a tierra.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Día 1</div>
+                        <p><strong>Hospitalidad de los nativos</strong><br>Los habitantes encienden una hoguera para calentar a los supervivientes.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Día 1</div>
+                        <p><strong>Incidente de la víbora</strong><br>Pablo es mordido por una víbora pero no sufre daño, impresionando a los nativos.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Días siguientes</div>
+                        <p><strong>Sanación del padre de Publio</strong><br>Pablo sana al padre de Publio, el hombre principal de la isla.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Semanas siguientes</div>
+                        <p><strong>Sanación de otros enfermos</strong><br>Pablo sana a muchos enfermos de la isla, ganando el favor de sus habitantes.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Tres meses después</div>
+                        <p><strong>Partida hacia Roma</strong><br>Después de pasar tres meses en Melita, el grupo parte hacia Roma en otra nave.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <p>Los tres meses en Melita (noviembre a febrero) correspondieron al invierno, cuando la navegación era imposible, mostrando la providencia de Dios al proveer refugio y oportunidades ministeriales durante este tiempo.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-theater-masks"></i> Significado Teológico</h2>
+            <p>Los eventos en Melita tienen importantes dimensiones teológicas:</p>
+            
+            <div class="comparison-section">
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Cumplimiento de la Promesa</h3>
+                    <p>El naufragio y supervivencia de todos demostró la fidelidad de Dios a Su palabra dada a Pablo (Hechos 27:22-24).</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Protection Divina</h3>
+                    <p>La inmunidad de Pablo al veneno de víbora cumplió la promesa de Marcos 16:18 sobre los creyentes.</p>
+                </div>
+            </div>
+            
+            <div class="comparison-section">
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Testimonio a los Gentiles</h3>
+                    <p>Los milagros en Melita mostraron el evangelio a personas que no habían oído de Jesús, anticipando la expansión a los gentiles.</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Providencia Divina</h3>
+                    <p>El naufragio en Melita, aunque parecía un desastre, fue usado por Dios para salvar vidas y esparcir el evangelio.</p>
+                </div>
+            </div>
+            
+            <p>Estos eventos muestran cómo Dios puede usar circunstancias aparentemente negativas para cumplir Sus propósitos y glorificar Su nombre.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-archway"></i> Evidencia Arqueológica e Histórica</h2>
+            <p>La historicidad del relato de Melita está respaldada por múltiples evidencias:</p>
+            
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-map-pin"></i>
+                        <h3 class="card-title">Tradición Local</h3>
+                    </div>
+                    <p>Malta conserva numerosas tradiciones del naufragio de Pablo, incluyendo la Bahía de San Pablo, la Gruta de San Pablo y la Catedral de San Pablo en Mdina.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-scroll"></i>
+                        <h3 class="card-title">Precisión de Detalles</h3>
+                    </div>
+                    <p>Lucas describe correctamente que Melita estaba bajo el gobierno romano pero con un "hombre principal" (πρῶτος) local, lo que coincide con la organización administrativa romana.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-tree"></i>
+                        <h3 class="card-title">Precisión Zoológica</h3>
+                    </div>
+                    <p>Malta efectivamente tiene una especie de víbora (Vipera aspis) cuyo veneno es peligroso pero no necesariamente mortal para adultos sanos.</p>
+                </div>
+            </div>
+            
+            <p>Estas evidencias corroboran la exactitud histórica del relato de Lucas y refuerzan la confiabilidad del libro de Hechos.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-church"></i> Legado Cristiano en Malta</h2>
+            <p>La visita de Pablo dejó un legado duradero en Malta:</p>
+            
+            <div class="warning-section">
+                <h3 class="warning-title">Influencia del Cristianismo en Malta</h3>
+                
+                <ul class="warning-list">
+                    <li><strong>Primera evangelización:</strong> La visita de Pablo marca el inicio del cristianismo en Malta, que perdura hasta hoy.</li>
+                    <li><strong>Tradiciones:</strong> Malta conserva numerosas tradiciones, lugares y reliquias asociadas con la visita de Pablo.</li>
+                    <li><strong>Fe duradera:</strong> Malta sigue siendo un país predominantemente católico, con una devoción especial a San Pablo.</li>
+                    <li><strong>Festividades:</strong> Se celebra la Fiesta del Naufragio de San Pablo el 10 de febrero cada año.</li>
+                    <li><strong>Arte y cultura:</strong> Numerosas obras de arte maltesas representan eventos del naufragio y la estadía de Pablo.</li>
+                </ul>
+            </div>
+            
+            <p>El impacto de la visita de tres meses de Pablo perdura más de dos mil años después, demostrando el poder transformador del evangelio.</p>
+        </div>
+        
+            </div>
+            
+            <p>Estas lecciones nos animan a confiar en la providencia divina, estemos en "tormentas" o en temporadas de ministerio inesperado.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+                <h3>IN GOD WE TRUST</h3>
+            </div>
+            
+            
+            <div class="copyright">
+                <p>&copy; 2025 IN GOD WE TRUST. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
