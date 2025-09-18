@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nerón y el Cristianismo | Contexto Histórico</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
+    <style>
+        :root {
+            --color-primary: #8b2b2b;
+            --color-secondary: #5e3030;
+            --color-accent: #c12e2e;
+            --color-light: #f8e9e9;
+            --color-dark: #2c2c2c;
+            --color-background: #f5e6e6;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--color-background);
+            color: var(--color-dark);
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .header-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+        
+        .title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .breadcrumb {
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--color-primary);
+        }
+        
+        .breadcrumb a {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Word Definition */
+        .word-header {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--color-accent);
+        }
+        
+        .word-title {
+            color: var(--color-primary);
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .word-subtitle {
+            color: var(--color-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        
+        .bible-reference {
+            background: var(--color-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            border-left: 4px solid var(--color-accent);
+        }
+        
+        .bible-reference .verse {
+            font-weight: 600;
+            color: var(--color-primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .section-title {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-accent);
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title i {
+            margin-right: 10px;
+            color: var(--color-accent);
+        }
+        
+        /* Historical Context */
+        .historical-context {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .context-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: var(--transition);
+            border: 1px solid #e0c5c5;
+        }
+        
+        .context-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+        
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .card-header i {
+            font-size: 1.8rem;
+            color: var(--color-accent);
+            margin-right: 10px;
+        }
+        
+        .card-title {
+            font-size: 1.2rem;
+            color: var(--color-primary);
+        }
+        
+        /* Warning Section */
+        .warning-section {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .warning-title {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .warning-list {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .warning-list li {
+            margin-bottom: 0.8rem;
+        }
+        
+        /* Greek Meaning */
+        .greek-section {
+            text-align: center;
+            padding: 2rem;
+            background: var(--color-light);
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .greek-word {
+            font-size: 3rem;
+            font-family: 'Times New Roman', serif;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+        }
+        
+        .greek-translation {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: var(--color-secondary);
+        }
+        
+        /* Comparison Section */
+        .comparison-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .comparison-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        .comparison-title {
+            color: var(--color-primary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Miracle Section */
+        .miracle-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .miracle-card {
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            color: white;
+        }
+        
+        .miracle-card:nth-child(1) {
+            background: linear-gradient(135deg, #8b2b2b 0%, #5e3030 100%);
+        }
+        
+        .miracle-card:nth-child(2) {
+            background: linear-gradient(135deg, #c12e2e 0%, #8b2b2b 100%);
+        }
+        
+        /* Map Section */
+        .map-section {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .map-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .map-title {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .map-image {
+            width: 100%;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border: 1px solid #ddd;
+        }
+        
+        .map-alternative {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .map-alternative i {
+            font-size: 3rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+        
+        /* Timeline Section */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--color-primary);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-content {
+            padding: 20px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: var(--shadow);
+        }
+        
+        .timeline-date {
+            font-weight: bold;
+            color: var(--color-primary);
+            margin-bottom: 5px;
+        }
+        
+        /* Location Description */
+        .location-description {
+            background: var(--color-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+        
+        .location-title {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .location-title i {
+            margin-right: 10px;
+            color: var(--color-accent);
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--color-accent);
+        }
+        
+        .copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .title {
+                margin-top: 10px;
+                font-size: 1.3rem;
+            }
+            
+            .word-title {
+                font-size: 1.8rem;
+            }
+            
+            .comparison-section, .miracle-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo" class="header-logo">
+                <h1 class="title">DICCIONARIO BÍBLICO</h1>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Inicio</a> > Nerón Claudio César Augusto Germánico y el Cristianismo
+        </div>
+        
+        <div class="word-header">
+            <h1 class="word-title">Nerón: El Emperador ante quien Pablo compareció</h1>
+            <p class="word-subtitle">Contexto histórico del imperio romano durante el ministerio de Pablo</p>
+            
+            <div class="bible-reference">
+                <span class="verse">2 Timoteo 4:16-17 (NVI)</span>
+                "En mi primera defensa, nadie me acompañó; todos me abandonaron. […] Pero el Señor estuvo a mi lado y me dio fuerzas para que por mi medio se proclamara cabalmente el mensaje y lo oyeran todos los gentiles. Así fui librado de la boca del león."
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-crown"></i> Quién fue Nerón</h2>
+            <p><strong>Nerón Claudio César Augusto Germánico</strong> (37-68 d.C.) fue el quinto emperador romano, gobernando desde el año 54 hasta su muerte en el 68 d.C. Es conocido en la historia bíblica por ser el César ante quien Pablo apeló y compareció durante su encarcelamiento en Roma.</p>
+            
+            <div class="greek-section">
+                <div class="greek-word">Καῖσαρ</div>
+                <div class="greek-translation">"Kaisar" - César</div>
+                <p>Transliteración y significado del término griego utilizado para referirse al emperador romano</p>
+            </div>
+            
+            <p>Nerón subió al trono a los 16 años, inicialmente bajo la influencia de su madre Agripina y el filósofo Séneca. Su reinado se divide típicamente en dos periodos: los primeros cinco años de gobierno moderado y los siguientes años de creciente tiranía y extravagancia.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-history"></i> Contexto del Reinado de Nerón</h2>
+            
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-calendar"></i>
+                        <h3 class="card-title">Cronología del Reinado</h3>
+                    </div>
+                    <p><strong>54 d.C.</strong> - Sube al trono a los 16 años<br>
+                    <strong>54-59 d.C.</strong> - "Buenos años" bajo influencia de Séneca<br>
+                    <strong>59 d.C.</strong> - Ordena el asesinato de su madre<br>
+                    <strong>64 d.C.</strong> - Gran incendio de Roma<br>
+                    <strong>65 d.C.</strong> - Conspiración de Pisón contra Nerón<br>
+                    <strong>68 d.C.</strong> - Suicidio forzado</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-landmark"></i>
+                        <h3 class="card-title">Roma en Tiempos de Nerón</h3>
+                    </div>
+                    <p>El Imperio Romano abarcaba todo el Mediterráneo. Roma era una metrópoli de aproximadamente un millón de habitantes, centro de poder, comercio y cultura, pero también de grandes contrastes sociales y desigualdades.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-scale-balanced"></i>
+                        <h3 class="card-title">Sistema Legal Romano</h3>
+                    </div>
+                    <p>Como ciudadano romano, Pablo tenía derecho a apelar al emperador (Hechos 25:11). Los juicios ante el emperador typically involucraban casos de traición, apelaciones de ciudadanos romanos, o asuntos que afectaban el orden público en las provincias.</p>
+                </div>
+            </div>
+            
+            <p>El reinado de Nerón proporciona el contexto histórico para los eventos finales del libro de Hechos y las epístolas paulinas escritas desde Roma.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-gavel"></i> Pablo ante Nerón</h2>
+            <p>El encuentro entre Pablo y Nerón fue un momento crucial en la historia del cristianismo primitivo:</p>
+            
+            <div class="warning-section">
+                <h3 class="warning-title">Hechos 25:10-12 - La Apelación de Pablo al César</h3>
+                
+                <ul class="warning-list">
+                    <li><strong>Contexto:</strong> Pablo estaba bajo custodia en Cesarea, acusado por líderes judíos</li>
+                    <li><strong>Derecho romano:</strong> Como ciudadano romano, Pablo podía apelar directamente al emperador</li>
+                    <li><strong>Decision:</strong> Festo aceptó la apelación: "Al César has apelado; al César irás"</li>
+                    <li><strong>Viaje a Roma:</strong> Esto resultó en el viaje por mar que terminó en naufragio en Malta</li>
+                    <li><strong>Resultado:</strong> Pablo finalmente compareció ante Nerón alrededor del 62 d.C.</li>
+                </ul>
+            </div>
+            
+            <p>Aunque las Escrituras no relatan detalles específicos del encuentro, las epístolas pastorales sugieren que Pablo fue liberado inicialmente después de esta primera defensa (2 Timoteo 4:16-17).</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-fire"></i> La Persecución de Nerón a los Cristianos</h2>
+            <p>Nerón es tristemente célebre por ser el primer emperador en perseguir sistemáticamente a los cristianos:</p>
+            
+            <div class="miracle-section">
+                <div class="miracle-card">
+                    <h3 class="comparison-title">El Gran Incendio de Roma</h3>
+                    <p>En julio del 64 d.C., un devastador incendio consumió Roma durante seis días. Aunque probablemente Nerón no "tocaba la lira mientras Roma ardía" como sugiere la leyenda, sí aprovechó la tragedia para culpar a los cristianos.</p>
+                </div>
+                
+                <div class="miracle-card">
+                    <h3 class="comparison-title">Persecución Sistemática</h3>
+                    <p>Los cristianos fueron acusados de "odio al género humano" y subjected to horribles torturas, including being burned alive as human torches, crucified, and thrown to wild animals in the arena.</p>
+                </div>
+            </div>
+            
+            <p>Esta persecución sentó un precedente para treatmento oficial de los cristianos en el Imperio Romano durante los siguientes dos siglos y medio.</p>
+            
+            <div class="bible-reference">
+                <span class="verse">1 Pedro 4:12-16 (NVI)</span>
+                "Queridos hermanos, no se extrañen del fuego de prueba que ha venido sobre ustedes, como si les sucediera algo extraño. […] Si alguno sufre por ser cristiano, que no se avergüence, sino que alabe a Dios por llevar ese nombre."
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-calendar-alt"></i> Cronología: Nerón y el Cristianismo</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">54 d.C.</div>
+                        <p><strong>Nerón asume el trono</strong><br>Comienza su reinado a los 16 años, inicialmente bajo influencia de su madre y Séneca.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">60 d.C.</div>
+                        <p><strong>Pablo llega a Roma</strong><br>Como prisionero apelando al César, alquila una casa donde vive bajo custodia militar.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">62 d.C.</div>
+                        <p><strong>Primera comparecencia de Pablo</strong><br>Pablo se presenta ante Nerón y es liberado temporalmente (2 Timoteo 4:16-17).</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">64 d.C.</div>
+                        <p><strong>Gran incendio de Roma</strong><br>Nerón culpa a los cristianos e inicia la primera persecución imperial.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">65-67 d.C.</div>
+                        <p><strong>Martirio de apóstoles</strong><br>Según la tradición, Pablo es decapitado y Pedro crucificado cabeza abajo durante esta persecución.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">68 d.C.</div>
+                        <p><strong>Muerte de Nerón</strong><br>El Senado lo declara enemigo público y Nerón se suicida, ending la dinastía Julio-Claudia.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <p>El reinado de Nerón coincidió con un período formativo crucial para el cristianismo primitivo, incluyendo el ministerio final de Pablo y la primera persecución imperial.</p>
+        </div>
+        
+                
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Nerón Redivivus</h3>
+                    <p>Circuló una leyenda que Nerón no había muerto sino que había huido al este y regresaría para reclaimar el trono, reflejando esperanzas mesiánicas judías y temores cristianos.</p>
+                </div>
+            </div>
+            
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Testimonios Extrabíblicos</h3>
+                    <p>Autores romanos como Tácito y Suetonio, así como el escritor judío Flavio Josefo, documentaron el reinado de Nerón y su persecución de los cristianos.</p>
+                </div>
+            </div>
+            
+            <p>Estas interpretaciones reflejan el impacto traumático que la persecución neroniana tuvo en la conciencia colectiva de la iglesia primitiva.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-balance-scale"></i> Significado Teológico</h2>
+            <p>El encuentro entre el apóstol Pablo y el emperador Nerón tiene profundas implicaciones teológicas:</p>
+            
+                
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-archway"></i> Evidencia Histórica y Arqueológica</h2>
+            <p>La historicidad del reinado de Nerón y su relación con el cristianismo está bien documentada:</p>
+            
+            <div class="map-section">
+                <div class="map-container">
+                    <h3 class="map-title">Testimonios sobre Nerón y los Cristianos</h3>
+                    
+                    <div class="map-alternative">
+                        <i class="fas fa-scroll"></i>
+                        <h3>Fuentes Históricas</h3>
+                        <p>Varias fuentes extrabíblicas confirman la persecución de neron</p>
+                    </div>
+                    
+                    <div class="location-description">
+                        <h3 class="location-title"><i class="fas fa-quote-left"></i> Tácito (Anales 15.44)</h3>
+                        <p>"Nerón […] sujetó a los más rebuscados tormentos a aquellos que el vulgo llamaba cristianos […] Una ingente multitud fue convicta no tanto del delito de incendio como de odio against el género humano."</p>
+                    </div>
+
+                    <div class="location-description">
+                        <h3 class="location-title"><i class="fas fa-quote-left"></i> Suetonio (Vida de Nerón 16)</h3>
+                        <p>"Se castigó a los cristianos, género de hombres de una superstición nueva y maléfica."</p>
+                    </div>
+                    
+                    <div class="location-description">
+                        <h3 class="location-title"><i class="fas fa-quote-left"></i> Clemente de Roma (1 Clemente 5-6)</h3>
+                        <p>Menciona los "sufrimientos de Pedro y Pablo" y una "gran multitud de elegidos" que sufrieron martirio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-gem"></i> Aplicaciones Contemporáneas</h2>
+            <p>La historia de Nerón y los primeros cristianos ofrece lecciones relevantes para los creyentes hoy:</p>
+            
+            <div class="warning-section">
+                <h3 class="warning-title">Lecciones del Enfrentamiento con el Poder Temporal</h3>
+                
+                <ul class="warning-list">
+                    <li><strong>Fidelidad en la adversidad:</strong> Los primeros cristianos mantuvieron su fe bajo persecución extrema</li>
+                    <li><strong>El poder del testimonio:</strong> La valentía de los mártires convenció a muchos observadores</li>
+                    <li><strong>Perspectiva eterna:</strong> Los creyentes entendían que su ciudadanía estaba en el cielo (Filipenses 3:20)</li>
+                    <li><strong>Oración por las autoridades:</strong> Pablo enseñó a orar por los gobernantes (1 Timoteo 2:1-2)</li>
+                    <li><strong>La soberanía de Dios:</strong> Aun en la persecución, Dios obraba para el bien de Su iglesia</li>
+                </ul>
+            </div>
+            
+            <p>El ejemplo de los creyentes bajo Nerón inspira a los cristianos de todas las épocas a mantenerse fieles ante la oposición y confiar en la soberanía de Dios sobre la historia.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+                <h3>IN GOD WE TRUST</h3>
+            </div>
+            
+            
+            <div class="copyright">
+                <p>&copy; 2025 IN GOD WE TRUST. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
