@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romanos 2:22 - Sacrilegio | Análisis Bíblico</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
+    <style>
+        :root {
+            --color-primary: #2b6e8b;
+            --color-secondary: #30495e;
+            --color-accent: #2e8fc1;
+            --color-light: #e9f1f8;
+            --color-dark: #2c2c2c;
+            --color-background: #e6f0f5;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--color-background);
+            color: var(--color-dark);
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .header-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+        
+        .title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .breadcrumb {
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--color-primary);
+        }
+        
+        .breadcrumb a {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Word Definition */
+        .word-header {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--color-accent);
+        }
+        
+        .word-title {
+            color: var(--color-primary);
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .word-subtitle {
+            color: var(--color-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        
+        .bible-reference {
+            background: var(--color-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            border-left: 4px solid var(--color-accent);
+        }
+        
+        .bible-reference .verse {
+            font-weight: 600;
+            color: var(--color-primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .section-title {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-accent);
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title i {
+            margin-right: 10px;
+            color: var(--color-accent);
+        }
+        
+        /* Historical Context */
+        .historical-context {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .context-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: var(--transition);
+            border: 1px solid #c5d6e0;
+        }
+        
+        .context-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+        
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .card-header i {
+            font-size: 1.8rem;
+            color: var(--color-accent);
+            margin-right: 10px;
+        }
+        
+        .card-title {
+            font-size: 1.2rem;
+            color: var(--color-primary);
+        }
+        
+        /* Warning Section */
+        .warning-section {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .warning-title {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .warning-list {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .warning-list li {
+            margin-bottom: 0.8rem;
+        }
+        
+        /* Greek Meaning */
+        .greek-section {
+            text-align: center;
+            padding: 2rem;
+            background: var(--color-light);
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .greek-word {
+            font-size: 3rem;
+            font-family: 'Times New Roman', serif;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+        }
+        
+        .greek-translation {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: var(--color-secondary);
+        }
+        
+        /* Comparison Section */
+        .comparison-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .comparison-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        .comparison-title {
+            color: var(--color-primary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Miracle Section */
+        .miracle-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .miracle-card {
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            color: white;
+        }
+        
+        .miracle-card:nth-child(1) {
+            background: linear-gradient(135deg, #2b6e8b 0%, #30495e 100%);
+        }
+        
+        .miracle-card:nth-child(2) {
+            background: linear-gradient(135deg, #2e8fc1 0%, #2b6e8b 100%);
+        }
+        
+        /* Map Section */
+        .map-section {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .map-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .map-title {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .map-image {
+            width: 100%;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border: 1px solid #ddd;
+        }
+        
+        .map-alternative {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .map-alternative i {
+            font-size: 3rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+        
+        /* Timeline Section */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--color-primary);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-content {
+            padding: 20px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: var(--shadow);
+        }
+        
+        .timeline-date {
+            font-weight: bold;
+            color: var(--color-primary);
+            margin-bottom: 5px;
+        }
+        
+        /* Location Description */
+        .location-description {
+            background: var(--color-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+        
+        .location-title {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .location-title i {
+            margin-right: 10px;
+            color: var(--color-accent);
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--color-accent);
+        }
+        
+        .copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .title {
+                margin-top: 10px;
+                font-size: 1.3rem;
+            }
+            
+            .word-title {
+                font-size: 1.8rem;
+            }
+            
+            .comparison-section, .miracle-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo" class="header-logo">
+                <h1 class="title">DICCIONARIO BÍBLICO</h1>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Inicio</a> > Sacrilegio
+        </div>
+        
+        <div class="word-header">
+            <h1 class="word-title">Romanos 2:22 - Sacrilegio</h1>
+            <p class="word-subtitle">La condena de Pablo a la inconsistencia moral y religiosa</p>
+            
+            <div class="bible-reference">
+                <span class="verse">Romanos 2:22 (Reina-Valera 1569-1602)</span>
+                "Tú que dices que no se ha de adulterar, ¿adulteras? Tú que abominas de los ídolos, ¿cometes sacrilegio?"
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-info-circle"></i> Significado de Sacrilegio</h2>
+            <p>El <strong>sacrilegio</strong> (del latín "sacrilegium") se refiere a la profanación o violación de lo que es considerado sagrado. En el contexto bíblico, implica tratar lo dedicado a Dios de manera irreverente o apropiarse indebidamente de lo consagrado.</p>
+            
+            <div class="greek-section">
+                <div class="greek-word">ἱεροσυλέω</div>
+                <div class="greek-translation">"hierosyleō" - cometer sacrilegio</div>
+                <p>Transliteración y significado del término griego utilizado en Romanos 2:22</p>
+            </div>
+            
+            <p>En el Antiguo Testamento, el sacrilegio era considerado una ofensa grave contra Dios, castigada severamente (Josué 7:1-26). Pablo utiliza este término para señalar la hipocresía de quienes condenan a otros mientras cometen faltas similares.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-history"></i> Contexto de Romanos 2</h2>
+            
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-scroll"></i>
+                        <h3 class="card-title">Audiencia Original</h3>
+                    </div>
+                    <p>Pablo se dirige principalmente a creyentes judíos en Roma que se enorgullecían de su conocimiento de la Ley pero eran inconsistentes en su práctica.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-balance-scale"></i>
+                        <h3 class="card-title">Tema Central</h3>
+                    </div>
+                    <p>El capítulo 2 de Romanos enfatiza que el juicio de Dios es según la verdad y que la mera posesión de la Ley no exime del juicio divino.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <h3 class="card-title">Advertencia contra la Hipocresía</h3>
+                    </div>
+                    <p>Pablo confronta la tendencia humana a señalar los pecados ajenos mientras se ignoran los propios, especialmente entre los religiosos.</p>
+                </div>
+            </div>
+            
+            <p>El versículo 22 forma parte de una serie de preguntas retóricas que exponen la inconsistencia entre el conocimiento religioso y la conducta práctica.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-bible"></i> Análisis Exegético de Romanos 2:22</h2>
+            <p>Este versículo contiene dos acusaciones específicas que ilustran la hipocresía religiosa:</p>
+            
+            <div class="warning-section">
+                <h3 class="warning-title">Estructura del Versículo</h3>
+                
+                <ul class="warning-list">
+                    <li><strong>Primera acusación:</strong> "Tú que dices que no se ha de adulterar, ¿adulteras?"</li>
+                    <li><strong>Segunda acusación:</strong> "Tú que abominas de los ídolos, ¿cometes sacrilegio?"</li>
+                    <li><strong>Patrón:</strong> Condenar en otros lo que se practica en privado</li>
+                    <li><strong>Propósito:</strong> Demostrar que todos son culpables ante Dios</li>
+                </ul>
+            </div>
+            
+            <p>Pablo utiliza esta técnica retórica para demostrar que tanto judíos como gentiles están bajo el pecado y necesitan la justicia de Dios por medio de la fe en Cristo (Romanos 3:9-23).</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-gem"></i> Formas de Sacrilegio en el Contexto Bíblico</h2>
+            <p>El sacrilegio podía manifestarse de diversas maneras en el mundo bíblico:</p>
+            
+            <div class="miracle-section">
+                <div class="miracle-card">
+                    <h3 class="comparison-title">Sacrilegio Ritual</h3>
+                    <p>Profanar el templo, los utensilios sagrados o los ritos de adoración (Daniel 5:2-3; Mateo 21:12-13).</p>
+                </div>
+                
+                <div class="miracle-card">
+                    <h3 class="comparison-title">Sacrilegio Material</h3>
+                    <p>Apropiarse de lo dedicado a Dios o usar para fines profanos lo que fue consagrado (Hechos 5:1-11).</p>
+                </div>
+            </div>
+
+            <div class="miracle-section">
+                <div class="miracle-card">
+                    <h3 class="comparison-title">Sacrilegio Doctrinal</h3>
+                    <p>Distorsionar las verdades divinas o usar el nombre de Dios para fines egoístas (Jeremías 23:11; Ezequiel 22:26).</p>
+                </div>
+                
+                <div class="miracle-card">
+                    <h3 class="comparison-title">Sacrilegio Moral</h3>
+                    <p>Vivir inmoralmente mientras se profesa fe en Dios, profanando así el nombre divino (Romanos 2:23-24).</p>
+                </div>
+            </div>
+            
+            <p>Pablo probablemente se refiere aquí al sacrilegio material o moral, donde los judíos que condenaban la idolatría gentil podían estar cometiendo apropiación indebida de lo consagrado a Dios o viviendo de manera inconsistente con su fe.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-balance-scale-right"></i> La Ley y el Sacrilegio en el Antiguo Testamento</h2>
+            <p>El Antiguo Testamento establecía prohibiciones claras contra el sacrilegio:</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Levítico 5:15-16</div>
+                        <p><strong>Compensación requerida</strong><br>Quien cometiera sacrilegio debía restaurar lo tomado más un quinto de su valor, además de ofrecer un sacrificio por la expiación.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Josué 7:1-26</div>
+                        <p><strong>Historia de Acán</strong><br>Acán tomó objetos dedicados al exterminio (herem), provocando la derrota de Israel ante Hai y resultando en su ejecución.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Daniel 5:2-3</div>
+                        <p><strong>Belsasar profana los vasos sagrados</div>
+                        <p>El rey Belsasar usó los vasos del templo de Jerusalén para una fiesta profana, lo que resultó en el juicio divino.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Malaquías 3:8-9</div>
+                        <p><strong>Robo a Dios</strong><br>Dios acusa al pueblo de robarlo al retener los diezmos y las ofrendas, una forma de sacrilegio.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <p>Estos antecedentes muestran la seriedad con que Dios ve la apropiación indebida o el uso profano de lo que le ha sido consagrado.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-theater-masks"></i> Aplicación en el Contexto del Nuevo Testamento</h2>
+            <p>Pablo reinterpreta el concepto de sacrilegio en el nuevo pacto:</p>
+            
+            <div class="comparison-section">
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Sacrilegio Espiritual</h3>
+                    <p>El creyente es templo del Espíritu Santo (1 Corintios 6:19), por lo que cualquier pecado contra el cuerpo o contra otros creyentes adquiere dimensión sacrílega.</p>
+                </div>
+                
+            </div>
+            
+                
+                <div class="comparison-card">
+                    <h3 class="comparison-title">La Solución en Cristo</h3>
+                    <p>Jesús ofrece perdón para el sacrilegio y toda transgresión, y nos capacita para vivir consistentemente con nuestra fe (Romanos 8:1-4).</p>
+                </div>
+            </div>
+            
+            <p>Pablo eleva el concepto de sacrilegio más allá de lo ritual para abarcar la inconsistencia entre la profesión de fe y la práctica de vida.</p>
+        </div>
+        
+                
+                </div>
+           </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+                <h3>IN GOD WE TRUST</h3>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 IN GOD WE TRUST. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
