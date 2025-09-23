@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 Timoteo 3:6 - Neófito | Análisis Bíblico</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
+    <style>
+        :root {
+            --color-primary: #2b8b5a;
+            --color-secondary: #305e44;
+            --color-accent: #2ec17f;
+            --color-light: #e9f8f1;
+            --color-dark: #2c2c2c;
+            --color-background: #e6f5ef;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--color-background);
+            color: var(--color-dark);
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .header-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+        
+        .title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .breadcrumb {
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--color-primary);
+        }
+        
+        .breadcrumb a {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Word Definition */
+        .word-header {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--color-accent);
+        }
+        
+        .word-title {
+            color: var(--color-primary);
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .word-subtitle {
+            color: var(--color-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        
+        .bible-reference {
+            background: var(--color-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            border-left: 4px solid var(--color-accent);
+        }
+        
+        .bible-reference .verse {
+            font-weight: 600;
+            color: var(--color-primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .section-title {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-accent);
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title i {
+            margin-right: 10px;
+            color: var(--color-accent);
+        }
+        
+        /* Historical Context */
+        .historical-context {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .context-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: var(--transition);
+            border: 1px solid #c5e0d4;
+        }
+        
+        .context-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+        
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .card-header i {
+            font-size: 1.8rem;
+            color: var(--color-accent);
+            margin-right: 10px;
+        }
+        
+        .card-title {
+            font-size: 1.2rem;
+            color: var(--color-primary);
+        }
+        
+        /* Warning Section */
+        .warning-section {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .warning-title {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .warning-list {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .warning-list li {
+            margin-bottom: 0.8rem;
+        }
+        
+        /* Greek Meaning */
+        .greek-section {
+            text-align: center;
+            padding: 2rem;
+            background: var(--color-light);
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .greek-word {
+            font-size: 3rem;
+            font-family: 'Times New Roman', serif;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+        }
+        
+        .greek-translation {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: var(--color-secondary);
+        }
+        
+        /* Comparison Section */
+        .comparison-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .comparison-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        .comparison-title {
+            color: var(--color-primary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Miracle Section */
+        .miracle-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .miracle-card {
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            color: white;
+        }
+        
+        .miracle-card:nth-child(1) {
+            background: linear-gradient(135deg, #2b8b5a 0%, #305e44 100%);
+        }
+        
+        .miracle-card:nth-child(2) {
+            background: linear-gradient(135deg, #2ec17f 0%, #2b8b5a 100%);
+        }
+        
+        /* Map Section */
+        .map-section {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .map-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .map-title {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .map-image {
+            width: 100%;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border: 1px solid #ddd;
+        }
+        
+        .map-alternative {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .map-alternative i {
+            font-size: 3rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+        
+        /* Timeline Section */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--color-primary);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-content {
+            padding: 20px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: var(--shadow);
+        }
+        
+        .timeline-date {
+            font-weight: bold;
+            color: var(--color-primary);
+            margin-bottom: 5px;
+        }
+        
+        /* Location Description */
+        .location-description {
+            background: var(--color-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+        
+        .location-title {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .location-title i {
+            margin-right: 10px;
+            color: var(--color-accent);
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--color-accent);
+        }
+        
+        .copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .title {
+                margin-top: 10px;
+                font-size: 1.3rem;
+            }
+            
+            .word-title {
+                font-size: 1.8rem;
+            }
+            
+            .comparison-section, .miracle-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-links {
+                justify-content: center;
+            }
+        }
+
+        /* Special styles for this page */
+        .leadership-section {
+            text-align: center;
+            padding: 2rem;
+            margin: 2rem 0;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: white;
+            border-radius: 10px;
+        }
+        
+        .leadership-text {
+            font-size: 1.8rem;
+            font-style: italic;
+            margin: 1rem 0;
+            line-height: 1.8;
+        }
+        
+        .highlight {
+            color: #ffd700;
+            font-weight: bold;
+        }
+        
+        .requirement-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .requirement-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        .requirement-title {
+            color: var(--color-primary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--color-accent);
+            padding-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo" class="header-logo">
+                <h1 class="title">DICCIONARIO BÍBLICO</h1>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Inicio</a> > 1 Timoteo 3:6 - Neófito
+        </div>
+        
+        <div class="word-header">
+            <h1 class="word-title">1 Timoteo 3:6 - "No un neófito"</h1>
+            <p class="word-subtitle">Requisito bíblico para el liderazgo en la iglesia</p>
+            
+            <div class="bible-reference">
+                <span class="verse">1 Timoteo 3:6 (Reina-Valera 1569-1602)</span>
+                "No un neófito, no sea que envaneciéndose caiga en la condenación del diablo."
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-info-circle"></i> ¿Qué es un Neófito?</h2>
+            <p>Un <strong>neófito</strong> (del griego νεόφυτος, "neóphytos") significa literalmente "recién plantado" o "nuevo convertido". Se refiere a una persona que recientemente ha llegado a la fe cristiana.</p>
+            
+            <div class="greek-section">
+                <div class="greek-word">νεόφυτος</div>
+                <div class="greek-translation">"neóphytos" - recién plantado, nuevo convertido</div>
+                <p>Transliteración y significado del término griego utilizado en 1 Timoteo 3:6</p>
+            </div>
+            
+            <p>En el contexto de 1 Timoteo 3, Pablo advierte contra colocar a nuevos creyentes en posiciones de liderazgo espiritual (como obispos o ancianos) debido a los peligros espirituales que esto conlleva.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-history"></i> Contexto de 1 Timoteo 3</h2>
+            
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-scroll"></i>
+                        <h3 class="card-title">Instrucciones a Timoteo</h3>
+                    </div>
+                    <p>Pablo escribe a Timoteo, quien pastorea la iglesia en Éfeso, dándole instrucciones sobre la organización y el liderazgo de la iglesia.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-church"></i>
+                        <h3 class="card-title">Cualidades de los Obispos</h3>
+                    </div>
+                    <p>1 Timoteo 3:1-7 enumera las cualidades requeridas para los obispos (también llamados ancianos o pastores).</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <h3 class="card-title">Problemas en Éfeso</h3>
+                    </div>
+                    <p>La iglesia en Éfeso enfrentaba problemas con falsas enseñanzas y líderes inmaduros (1 Timoteo 1:3-7).</p>
+                </div>
+            </div>
+            
+            <p>La advertencia contra los neófitos en el liderazgo forma parte de las instrucciones prácticas de Pablo para establecer un liderazgo saludable y maduro en la iglesia.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-bible"></i> Análisis Completo del Versículo</h2>
+            <p>1 Timoteo 3:6 contiene dos elementos importantes que merecen atención:</p>
+            
+            <div class="warning-section">
+                <h3 class="warning-title">Componentes de 1 Timoteo 3:6</h3>
+                
+                <ul class="warning-list">
+                    <li><strong>Prohibición:</strong> "No un neófito" - Restricción clara contra nuevos convertidos en el liderazgo</li>
+                    <li><strong>Peligro:</strong> "No sea que envaneciéndose" - El riesgo específico es el orgullo espiritual</li>
+                    <li><strong>Consecuencia:</strong> "Caiga en la condenación del diablo" - Grave resultado espiritual</li>
+                    <li><strong>Base teológica:</strong> La inmadurez espiritual conduce a caídas espirituales</li>
+                </ul>
+            </div>
+            
+            <p>Este versículo muestra la sabiduría pastoral de Pablo al reconocer los peligros espirituales inherentes al liderazgo prematuro.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-gem"></i> Peligros de un Líder Neófito</h2>
+            <p>Pablo identifica específicamente el peligro del orgullo espiritual en los nuevos creyentes:</p>
+            
+            <div class="requirement-list">
+                <div class="requirement-card">
+                    <h3 class="requirement-title">Falta de Madurez Espiritual</h3>
+                    <p>Los nuevos creyentes aún no han desarrollado el carácter cristiano necesario para el liderazgo (1 Timoteo 3:2-7).</p>
+                </div>
+                
+                <div class="requirement-card">
+                    <h3 class="requirement-title">Vulnerabilidad al Orgullo</h3>
+                    <p>La posición de liderazgo puede inflar el ego de alguien que aún no ha aprendido humildad.</p>
+                </div>
+                
+                <div class="requirement-card">
+                    <h3 class="requirement-title">Falta de Discernimiento</h3>
+                    <p>La inexperiencia espiritual dificulta discernir entre verdad y error (Hebreos 5:14).</p>
+                </div>
+                
+                <div class="requirement-card">
+                    <h3 class="requirement-title">Mal Testimonio</h3>
+                    <p>Un líder que cae daña el testimonio de la iglesia ante los incrédulos (1 Timoteo 3:7).</p>
+                </div>
+            </div>
+            
+            <p>Estos peligros explican por qué Pablo establece esta restricción como protección tanto para el individuo como para la iglesia.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-balance-scale-right"></i> "La Condenación del Diablo"</h2>
+            <p>Esta frase ha sido interpretada de varias maneras:</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Interpretación 1</div>
+                        <p><strong>Condenación que Sufrió el Diablo</strong><br>Se refiere al juicio que Dios pronunció sobre Satanás por su orgullo (Isaías 14:12-15; Ezequiel 28:12-17).</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Interpretación 2</div>
+                        <p><strong>Condenación que el Diablo Inflige</strong><br>Se refiere a la trampa o juicio que Satanás prepara para los orgullosos.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Interpretación 3</div>
+                        <p><strong>Condenación Similar a la del Diablo</strong><br>El neófito orgulloso experimentaría un juicio similar al que recibió Satanás.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Consenso</div>
+                        <p><strong>Advertencia contra el Orgullo</strong><br>Todas las interpretaciones coinciden en que es una seria advertencia contra el orgullo espiritual.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <p>La frase subraya la seriedad del peligro que enfrenta un neófito en posición de liderazgo.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-theater-masks"></i> Contraste con las Cualidades del Líder Maduro</h2>
+            <p>Pablo contrasta al neófito con las cualidades del obispo maduro:</p>
+            
+            <div class="comparison-section">
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Neófito (Inmaduro)</h3>
+                    <p>• Propenso al orgullo<br>• Falta de experiencia<br>• Vulnerable espiritualmente<br>• Puede caer fácilmente</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Obispo (Maduro)</h3>
+                    <p>• Irreprensible<br>• Marido de una sola mujer<br>• Sobrio, prudente<br>• Hospedador<br>• Apto para enseñar</p>
+                </div>
+            </div>
+            
+            <div class="comparison-section">
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Más Cualidades del Maduro</h3>
+                    <p>• No dado al vino<br>• No pendenciero<br>• No codicioso<br>• Que gobierne bien su casa</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Resultado del Maduro</h3>
+                    <p>• Buen testimonio<br>• Estabilidad espiritual<br>• Capacidad de guiar<br>• Protección contra el mal</p>
+                </div>
+            </div>
+            
+            <p>Este contraste muestra que el liderazgo espiritual requiere madurez demostrada, no solo entusiasmo o dones espirituales.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-user-check"></i> Aplicaciones Prácticas para Hoy</h2>
+            <p>El principio de 1 Timoteo 3:6 tiene aplicaciones importantes para la iglesia contemporánea:</p>
+            
+            <div class="warning-section">
+                <h3 class="warning-title">Lecciones para el Liderazgo Actual</h3>
+                
+                <ul class="warning-list">
+                    <li><strong>Proceso de discipulado:</strong> Los nuevos creyentes necesitan tiempo para crecer antes de liderar.</li>
+                    <li><strong>Evaluación del carácter:</strong> El liderazgo se basa en carácter probado, no solo en dones.</li>
+                    <li><strong>Protección de los nuevos creyentes:</strong> Evitar poner cargas prematura sobre ellos.</li>
+                    <li><strong>Modelo bíblico de desarrollo:</strong> Jesús invirtió 3 años en discipular antes de enviar.</li>
+                    <li><strong>Sabiduría en la selección:</strong> Evaluar la madurez espiritual, no solo el tiempo en la iglesia.</li>
+                </ul>
+            </div>
+            
+            <p>Este principio protege tanto a los individuos como a la iglesia de consecuencias dolorosas por un liderazgo prematuro.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-hands-helping"></i> Desarrollo de Líderes según el Modelo Bíblico</h2>
+            <p>La Biblia presenta un proceso para desarrollar líderes maduros:</p>
+            
+            <div class="leadership-section">
+                <p class="leadership-text">"Lo que has oído de mí ante muchos testigos, esto encarga a hombres fieles que sean idóneos para enseñar también a otros."</p>
+                <p>2 Timoteo 2:2</p>
+            </div>
+            
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3 class="card-title">Discipulado Personal</h3>
+                    </div>
+                    <p>Jesús modeló la inversión personal en unos pocos antes de enviarlos a liderar (Marcos 3:13-19).</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-tasks"></i>
+                        <h3 class="card-title">Prueba Progresiva</h3>
+                    </div>
+                    <p>Los líderes deben ser probados primero en responsabilidades menores (1 Timoteo 3:10).</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-user-friends"></i>
+                        <h3 class="card-title">Responsabilidad Compartida</h3>
+                    </div>
+                    <p>El liderazgo en el NT siempre era plural, proporcionando accountability y mentoría.</p>
+                </div>
+            </div>
+            
+            <p>El principio de no usar neófitos no es para excluir, sino para desarrollar líderes de manera saludable y bíblica.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-cross"></i> Excepciones y Consideraciones</h2>
+            <p>Aunque el principio es claro, hay consideraciones importantes:</p>
+            
+            <div class="map-section">
+                <div class="map-container">
+                    <h3 class="map-title">Matices en la Aplicación</h3>
+                    
+                    <div class="map-alternative">
+                        <i class="fas fa-clock"></i>
+                        <h3>¿Cuánto Tiempo es "No Neófito"?</h3>
+                        <p>La Biblia no especifica un tiempo exacto, sino que se enfoca en la madurez demostrada.</p>
+                    </div>
+                    
+                    <div class="location-description">
+                        <h3 class="location-title"><i class="fas fa-globe"></i> Contextos Misioneros</h3>
+                        <p>En campos nuevos, a veces nuevos creyentes deben asumir liderazgo por necesidad, pero con supervisión.</p>
+                    </div>
+
+                    <div class="location-description">
+                        <h3 class="location-title"><i class="fas fa-gem"></i> Dones vs. Madurez</h3>
+                        <p>Los dones espirituales deben ser ejercitados, pero el liderazgo requiere madurez de carácter.</p>
+                    </div>
+                    
+                    <div class="location-description">
+                        <h3 class="location-title"><i class="fas fa-balance-scale"></i> Grados de Liderazgo</h3>
+                        <p>Hay diferentes niveles de responsabilidad; algunos roles pueden ser apropiados antes que otros.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <p>La sabiduría pastoral requiere aplicar el principio con discernimiento, considerando tanto la madurez individual como las necesidades del contexto.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+                <h3>IN GOD WE TRUST</h3>
+            </div>
+            
+            
+            <div class="copyright">
+                <p>&copy; 2025 IN GOD WE TRUST. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
