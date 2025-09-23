@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romanos: Escrita desde Corinto | Análisis Bíblico</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
+    <style>
+        :root {
+            --color-primary: #8b4513;
+            --color-secondary: #654321;
+            --color-accent: #a0522d;
+            --color-light: #f8f1e9;
+            --color-dark: #2c2c2c;
+            --color-background: #f5ede6;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--color-background);
+            color: var(--color-dark);
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .header-logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+        
+        .title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .breadcrumb {
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--color-primary);
+        }
+        
+        .breadcrumb a {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Word Definition */
+        .word-header {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--color-accent);
+        }
+        
+        .word-title {
+            color: var(--color-primary);
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .word-subtitle {
+            color: var(--color-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        
+        .bible-reference {
+            background: var(--color-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            border-left: 4px solid var(--color-accent);
+        }
+        
+        .bible-reference .verse {
+            font-weight: 600;
+            color: var(--color-primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .section-title {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--color-accent);
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title i {
+            margin-right: 10px;
+            color: var(--color-accent);
+        }
+        
+        /* Historical Context */
+        .historical-context {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .context-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: var(--transition);
+            border: 1px solid #e0d4c5;
+        }
+        
+        .context-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+        
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .card-header i {
+            font-size: 1.8rem;
+            color: var(--color-accent);
+            margin-right: 10px;
+        }
+        
+        .card-title {
+            font-size: 1.2rem;
+            color: var(--color-primary);
+        }
+        
+        /* Warning Section */
+        .warning-section {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .warning-title {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .warning-list {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .warning-list li {
+            margin-bottom: 0.8rem;
+        }
+        
+        /* Greek Meaning */
+        .greek-section {
+            text-align: center;
+            padding: 2rem;
+            background: var(--color-light);
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .greek-word {
+            font-size: 3rem;
+            font-family: 'Times New Roman', serif;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+        }
+        
+        .greek-translation {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: var(--color-secondary);
+        }
+        
+        /* Comparison Section */
+        .comparison-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .comparison-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        .comparison-title {
+            color: var(--color-primary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Miracle Section */
+        .miracle-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .miracle-card {
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            color: white;
+        }
+        
+        .miracle-card:nth-child(1) {
+            background: linear-gradient(135deg, #8b4513 0%, #654321 100%);
+        }
+        
+        .miracle-card:nth-child(2) {
+            background: linear-gradient(135deg, #a0522d 0%, #8b4513 100%);
+        }
+        
+        /* Map Section */
+        .map-section {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .map-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .map-title {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .map-image {
+            width: 100%;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border: 1px solid #ddd;
+        }
+        
+        .map-alternative {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .map-alternative i {
+            font-size: 3rem;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+        
+        /* Timeline Section */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--color-primary);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-content {
+            padding: 20px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: var(--shadow);
+        }
+        
+        .timeline-date {
+            font-weight: bold;
+            color: var(--color-primary);
+            margin-bottom: 5px;
+        }
+        
+        /* Location Description */
+        .location-description {
+            background: var(--color-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+        
+        .location-title {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .location-title i {
+            margin-right: 10px;
+            color: var(--color-accent);
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            border: 2px solid var(--color-accent);
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--color-accent);
+        }
+        
+        .copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .title {
+                margin-top: 10px;
+                font-size: 1.3rem;
+            }
+            
+            .word-title {
+                font-size: 1.8rem;
+            }
+            
+            .comparison-section, .miracle-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-links {
+                justify-content: center;
+            }
+        }
+
+        /* Special styles for this page */
+        .corinth-section {
+            text-align: center;
+            padding: 2rem;
+            margin: 2rem 0;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: white;
+            border-radius: 10px;
+        }
+        
+        .corinth-text {
+            font-size: 1.8rem;
+            font-style: italic;
+            margin: 1rem 0;
+            line-height: 1.8;
+        }
+        
+        .highlight {
+            color: #ffd700;
+            font-weight: bold;
+        }
+        
+        .woman-role {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .woman-card {
+            background: var(--color-light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        .woman-title {
+            color: var(--color-primary);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--color-accent);
+            padding-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo" class="header-logo">
+                <h1 class="title">DICCIONARIO BÍBLICO</h1>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html">Inicio</a> >Epístola a los Romanos  Escrita desde Corinto
+        </div>
+        
+        <div class="word-header">
+            <h1 class="word-title">Romanos: Escrita desde Corinto</h1>
+            <p class="word-subtitle">El contexto histórico de la redacción y envío de la epístola a los Romanos</p>
+            
+            <div class="bible-reference">
+                <span class="verse">Romanos 16:1-2 (RVR1562-1602)</span>
+              "ENCOMIÉNDOOS empero a Febe nuestra hermana, la cual es diaconisa de la iglesia que está en Cencreas:"
+                  </div>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-info-circle"></i> Contexto Histórico de la Escritura</h2>
+            <p>La Epístola a los Romanos fue escrita por el apóstol Pablo alrededor del año 57-58 d.C., durante su <strong>tercer viaje misionero</strong>, mientras se encontraba en <strong>Corinto</strong>, Grecia.</p>
+            
+            <div class="greek-section">
+                <div class="greek-word">Κόρινθος</div>
+                <div class="greek-translation">"Korinthos" - Corinto</div>
+                <p>Transliteración del nombre griego de la ciudad donde Pablo escribió Romanos</p>
+            </div>
+            
+            <p>Pablo se hospedaba en casa de <strong>Gayo</strong> (Romanos 16:23) y utilizaba los servicios de <strong>Tercio</strong> como amanuense o escriba (Romanos 16:22). La carta fue enviada a Roma a través de <strong>Febe</strong>, diaconisa de la iglesia en Cencrea, el puerto oriental de Corinto.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-history"></i> Evidencias de que Romanos fue Escrita desde Corinto</h2>
+            
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3 class="card-title">Referencias Geográficas</h3>
+                    </div>
+                    <p>Pablo menciona que ha concluido su trabajo en el oriente y planea viajar a Jerusalén y luego a Roma (Romanos 15:19-25), lo que coincide con su itinerario desde Corinto.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-users"></i>
+                        <h3 class="card-title">Menciones Personales</h3>
+                    </div>
+                    <p>Las referencias a Gayo (anfitrión de Pablo) y Erasto (tesorero de la ciudad) en Romanos 16:23 coinciden con personas conocidas en Corinto (1 Corintios 1:14; 2 Timoteo 4:20).</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-ship"></i>
+                        <h3 class="card-title">Cencrea</h3>
+                    </div>
+                    <p>La mención de Febe de Cencrea, el puerto oriental de Corinto, ubica claramente a Pablo en esta región cuando escribe la carta.</p>
+                </div>
+            </div>
+            
+            <p>La combinación de estas evidencias internas con el registro de Hechos de los Apóstoles (Hechos 20:2-3) confirma que Pablo escribió Romanos durante su estancia de tres meses en Corinto.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-bible"></i> La Importancia de Corinto en el Ministerio de Pablo</h2>
+            <p>Corinto era un lugar estratégico para la composición de una carta tan teológicamente profunda como Romanos:</p>
+            
+            <div class="warning-section">
+                <h3 class="warning-title">Características de Corinto</h3>
+                
+                <ul class="warning-list">
+                    <li><strong>Ciudad cosmopolita:</strong> Centro comercial y cultural importante del Imperio Romano</li>
+                    <li><strong>Ubicación estratégica:</strong> Situada en el istmo que conectaba Grecia continental con el Peloponeso</li>
+                    <li><strong>Experiencia ministerial:</strong> Pablo había pasado 18 meses allí estableciendo una iglesia sólida</li>
+                    <li><strong>Recursos disponibles:</strong> Acceso a materiales de escritura y ayudantes calificados</li>
+                    <li><strong>Conexiones de viaje:</strong> Fácil acceso a rutas marítimas hacia Roma</li>
+                </ul>
+            </div>
+            
+            <p>El tiempo relativamente tranquilo que Pablo experimentó en Corinto (comparado con sus experiencias anteriores allí) le proporcionó el ambiente ideal para reflexionar y redactar esta importante obra teológica.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-gem"></i> Febe: La Portadora de la Carta</h2>
+            <p>Febe era una mujer significativa en la iglesia primitiva, encargada de llevar la importante epístola a Roma:</p>
+            
+            <div class="woman-role">
+                <div class="woman-card">
+                    <h3 class="woman-title">Diaconisa</h3>
+                    <p>El término "diaconisa" (διακονον, diakonon) indica un ministerio oficial de servicio en la iglesia de Cencrea.</p>
+                </div>
+                
+                <div class="woman-card">
+                    <h3 class="woman-title">Patrona</h3>
+                    <p>Febe era "protectora de muchos", incluyendo al mismo Pablo, sugiriendo que tenía recursos y posición social.</p>
+                </div>
+                
+                <div class="woman-card">
+                    <h3 class="woman-title">Mensajera Confiable</h3>
+                    <p>Pablo le confió no solo la carta, sino también la tarea de explicar su contenido y contexto a los romanos.</p>
+                </div>
+                
+                <div class="woman-card">
+                    <h3 class="woman-title">Pionera Femenina</h3>
+                    <p>Su papel desafía estereotipos sobre el lugar de la mujer en el ministerio del primer siglo.</p>
+                </div>
+            </div>
+            
+            <p>La elección de Febe como portadora refleja la confianza que Pablo tenía en ella y la importancia de las mujeres en el liderazgo de la iglesia primitiva.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-balance-scale-right"></i> Propósitos de la Carta a los Romanos</h2>
+            <p>Pablo tenía varios objetivos al escribir desde Corinto a la iglesia en Roma:</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Preparar su Visita</div>
+                        <p><strong>Anticipar su llegada</strong><br>Pablo planeaba visitar Roma y quería preparar el terreno (Romanos 1:10-15; 15:22-29).</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Presentar el Evangelio</div>
+                        <p><strong>Exposición sistemática</strong><br>Romanos contiene la explicación más completa del evangelio paulino.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Unificar la Iglesia</div>
+                        <p><strong>Resolver tensiones</strong><br>Abordar las tensiones entre creyentes judíos y gentiles en Roma.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Base para Misión Occidental</div>
+                        <p><strong>Buscar apoyo</strong><br>Roma sería la base para su proyectada misión a España (Romanos 15:24, 28).</p>
+                    </div>
+                </div>
+            </div>
+            
+            <p>Estos propósitos explican por qué Pablo invirtió tanto esfuerzo en esta carta durante su estancia en Corinto.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-theater-masks"></i> Implicaciones Teológicas del Contexto</h2>
+            <p>El contexto corintio influyó en el contenido y enfoque de Romanos:</p>
+            
+            <div class="comparison-section">
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Experiencia Ministerial</h3>
+                    <p>Las controversias con judaizantes y las cuestiones sobre la ley en Galacia y Corinto prepararon a Pablo para tratar estos temas de manera más madura en Romanos.</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Audiencia Mixta</h3>
+                    <p>La experiencia con iglesias compuestas por judíos y gentiles (como en Corinto) le dio a Pablo perspectiva para abordar la situación similar en Roma.</p>
+                </div>
+            </div>
+            
+            <div class="comparison-section">
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Reflexión Teológica</h3>
+                    <p>El tiempo relativamente tranquilo en Corinto permitió a Pablo desarrollar sistemáticamente su comprensión del evangelio.</p>
+                </div>
+                
+                <div class="comparison-card">
+                    <h3 class="comparison-title">Preparación Misionera</h3>
+                    <p>Al estar en el cruce de caminos entre oriente y occidente, Corinto era el lugar ideal para planificar la expansión hacia el oeste.</p>
+                </div>
+            </div>
+            
+            <p>El contexto histórico y geográfico no es incidental, sino que contribuye significativamente al mensaje y propósito de la epístola.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-map-marked-alt"></i> El Viaje de Febe: de Corinto a Roma</h2>
+            <p>El viaje de Febe llevando la epístola habría involucrado una travesía significativa:</p>
+            
+            <div class="map-section">
+                <div class="map-container">
+                    <h3 class="map-title">La Ruta de la Epístola</h3>
+                    
+                    <div class="map-alternative">
+                        <i class="fas fa-ship"></i>
+                        <h3>Viaje Marítimo</h3>
+                        <p>De Cencrea (puerto de Corinto) a Roma, una travesía de aproximadamente 1-3 semanas dependiendo del clima</p>
+                    </div>
+                    
+                    <div class="location-description">
+                        <h3 class="location-title"><i class="fas fa-anchor"></i> Puerto de Cencrea</h3>
+                        <p>Cencrea era el puerto oriental de Corinto, en el golfo Sarónico, con acceso directo a las rutas marítimas hacia Italia.</p>
+                    </div>
+
+                    <div class="location-description">
+                        <h3 class="location-title"><i class="fas fa-compass"></i> Ruta Comercial</h3>
+                        <p>Febe probablemente viajó en un barco comercial que seguía las rutas establecidas entre Grecia e Italia.</p>
+                    </div>
+                    
+                    <div class="location-description">
+                        <h3 class="location-title"><i class="fas fa-scroll"></i> Carga Preciosa</h3>
+                        <p>Febe llevaba no solo un documento físico, sino el mensaje teológico más importante del cristianismo primitivo.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <p>El viaje de Febe representa un momento crucial en la historia del cristianismo, llevando lo que Luther llamaría "el libro más importante del Nuevo Testamento".</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-user-check"></i> Importancia Histórica</h2>
+            <p>El contexto de redacción de Romanos tiene significance duradero:</p>
+            
+            <div class="warning-section">
+                <h3 class="warning-title">Legado de Romanos</h3>
+                
+                <ul class="warning-list">
+                    <li><strong>Obra maestra teológica:</strong> Considerada la explicación más sistemática del evangelio en el NT</li>
+                    <li><strong>Influencia histórica:</strong> Clave en la Reforma Protestante a través de Agustín, Lutero y Calvino</li>
+                    <li><strong>Modelo misionero:</strong> Establece el patrón de plantar iglesias en centros urbanos estratégicos</li>
+                    <li><strong>Unidad eclesial:</strong> Modelo para resolver tensiones entre diferentes grupos en la iglesia</li>
+                    <li><strong>Testimonio femenino:</strong> Febe como ejemplo del papel vital de la mujer en el ministerio primitivo</li>
+                </ul>
+            </div>
+            
+            <p>El hecho de que esta carta fundamental fuera escrita desde Corinto y enviada por medio de Febe añade dimensiones importantes a nuestra comprensión del cristianismo del primer siglo.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title"><i class="fas fa-cross"></i> Conclusión: Un Momento Crucial</h2>
+            <p>La redacción de Romanos desde Corinto representa un punto crucial en la historia del cristianismo:</p>
+            
+            <div class="corinth-section">
+                <p class="corinth-text">"Porque no me avergüenzo del evangelio, porque es poder de Dios para salvación a todo aquel que cree; al judío primeramente, y también al griego."</p>
+                <p>Romanos 1:16</p>
+            </div>
+            
+            <div class="historical-context">
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-pen-fancy"></i>
+                        <h3 class="card-title">Síntesis Teológica</h3>
+                    </div>
+                    <p>En Corinto, Pablo sintetizó años de experiencia misionera y reflexión teológica en esta epístola magistral.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                        <h3 class="card-title">Expansión Occidental</h3>
+                    </div>
+                    <p>La carta marcó la transición del enfoque misionero de Pablo del oriente mediterráneo al occidente.</p>
+                </div>
+                
+                <div class="context-card">
+                    <div class="card-header">
+                        <i class="fas fa-hands-helping"></i>
+                        <h3 class="card-title">Cooperación Femenina</h3>
+                    </div>
+                    <p>Febe personifica la colaboración esencial de mujeres y hombres en la propagación del evangelio.</p>
+                </div>
+            </div>
+            
+            <p>El contexto corintio de Romanos nos recuerda que la teología más profunda emerge de la experiencia misionera concreta y la colaboración comunitaria en la obra del evangelio.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+                <h3>IN GOD WE TRUST</h3>
+            </div>
+            
+            
+            <div class="copyright">
+                <p>&copy; 2025 IN GOD WE TRUST. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
