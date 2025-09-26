@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indisoluble - Estudio Teológico</title>
+    <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.7;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            border: 1px solid #e0d6cc;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);
+            color: white;
+            padding: 50px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" opacity="0.1"><path d="M50,5 L60,40 L95,40 L65,60 L75,95 L50,75 L25,95 L35,60 L5,40 L40,40 Z" fill="white"/></svg>');
+            background-size: 150px;
+            opacity: 0.1;
+        }
+        
+        h1 {
+            font-size: 3.2rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            font-weight: 700;
+            position: relative;
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            font-style: italic;
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 50px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #eae2d9;
+        }
+        
+        h2 {
+            color: #8B4513;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #D2B48C;
+            font-size: 2.2rem;
+            font-weight: 600;
+        }
+        
+        h3 {
+            color: #A0522D;
+            margin: 25px 0 15px;
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+        
+        .definition-box {
+            background: #f9f5f0;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 6px solid #8B4513;
+            margin: 25px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .bible-verse {
+            background: #f8f3ec;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 5px solid #CD853F;
+            font-style: italic;
+            font-size: 1.1rem;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .verse-ref {
+            display: block;
+            text-align: right;
+            font-weight: bold;
+            margin-top: 15px;
+            color: #8B4513;
+            font-style: normal;
+        }
+        
+        ul, ol {
+            margin: 20px 0 20px 40px;
+        }
+        
+        li {
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+        
+        .theological-principle {
+            background: linear-gradient(135deg, #f9f5f0 0%, #e8ddd0 100%);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 25px 0;
+            border: 2px solid #D2B48C;
+        }
+        
+        .principle-title {
+            font-weight: bold;
+            color: #8B4513;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .comparison-table th {
+            background: #8B4513;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-size: 1.1rem;
+        }
+        
+        .comparison-table td {
+            padding: 15px;
+            border-bottom: 1px solid #eae2d9;
+            font-size: 1.05rem;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background: #f9f5f0;
+        }
+        
+        .highlight {
+            background: #fff9e6;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+            color: #8B4513;
+        }
+        
+        .symbol {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: #8B4513;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .footer-logo {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #D2B48C;
+            box-shadow: 0 0 20px rgba(210, 180, 140, 0.5);
+        }
+        
+        .footer-text {
+            margin-top: 20px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.4rem;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .comparison-table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            ul, ol {
+                margin-left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Indisoluble</h1>
+            <p class="subtitle">Estudio teológico y filosófico sobre la cualidad de lo que no puede ser disuelto o roto</p>
+        </header>
+        
+        <div class="content">
+            <div class="section">
+                <h2>Definición de Indisoluble</h2>
+                
+                <div class="definition-box">
+                    <p><strong>Indisoluble</strong> (del latín <em>indissolubilis</em>) significa "que no se puede disolver, desunir o romper". Se refiere a aquello que permanece unido de manera permanente, inquebrantable y perpetua.</p>
+                    <p>En teología, este término se aplica a realidades sagradas que por su naturaleza divina trascienden la capacidad humana de alterar o terminar.</p>
+                </div>
+                
+                <p>El concepto de indisolubilidad tiene profundas raíces en la filosofía clásica y la teología cristiana, representando la cualidad de permanencia absoluta frente a la temporalidad de las realidades humanas.</p>
+            </div>
+            
+            <div class="section">
+                <h2>Indisolubilidad en el Matrimonio Cristiano</h2>
+                
+                <p>La aplicación más conocida del principio de indisolubilidad en la teología católica y ortodoxa se refiere al sacramento del matrimonio:</p>
+                
+                <div class="bible-verse">
+                    "Por tanto, lo que Dios unió, no lo separe el hombre."
+                    <span class="verse-ref">Mateo 19:6</span>
+                </div>
+                
+                
+            
+            <div class="section">
+                <h2>Indisolubilidad en la Alianza Divina</h2>
+                
+                <p>La Biblia presenta a Dios estableciendo alianzas indisolubles con su pueblo:</p>
+                
+                <div class="bible-verse">
+                    "Porque los montes se moverán, y las colinas temblarán, pero mi misericordia no se apartará de ti, y el pacto de mi paz no será quebrantado, dijo Jehová, el que tiene misericordia de ti."
+                    <span class="verse-ref">Isaías 54:10</span>
+                </div>
+                
+                <div class="bible-verse">
+                    "Si fuéremos infieles, él permanece fiel; Él no puede negarse a sí mismo."
+                    <span class="verse-ref">2 Timoteo 2:13</span>
+                </div>
+                
+                <h3>Características de las alianzas divinas</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Alianza</th>
+                            <th>Partes</th>
+                            <th>Naturaleza indisoluble</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Con Noé</strong></td>
+                            <td>Dios y toda la creación</td>
+                            <td>Promesa de no destruir la tierra con diluvio (Génesis 9:11)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Con Abraham</strong></td>
+                            <td>Dios y el pueblo elegido</td>
+                            <td>Promesa de descendencia y tierra perpetua (Génesis 17:7)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Nueva Alianza</strong></td>
+                            <td>Cristo y la Iglesia</td>
+                            <td>Alianza eterna sellada con la sangre de Cristo (Lucas 22:20)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="section">
+                <h2>Dimensiones Filosóficas de la Indisolubilidad</h2>
+                
+                <p>El concepto de indisolubilidad trasciende lo teológico y tiene importantes implicaciones filosóficas:</p>
+                
+                <h3>Naturaleza vs. Convención</h3>
+                <p>Lo indisoluble se fundamenta en la naturaleza de las cosas, no en acuerdos humanos revocables. Se opone al relativismo que considera todas las uniones como convencionales y disolubles.</p>
+                
+                <h3>Principio de Permanencia</h3>
+                <p>Frente a la caducidad de lo material, lo indisoluble representa la cualidad de permanencia que participa de lo eterno.</p>
+                
+                <div class="theological-principle">
+                    <div class="principle-title">Reflexión Agustiniana:</div>
+                    <p>"Ama al que nunca cambia, al indisoluble, al eterno. Porque donde no hay cambio, no hay sucesión de tiempos; donde no hay sucesión, no hay muerte; donde no hay muerte, hay vida verdadera."</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Aplicaciones Contemporáneas</h2>
+                
+                <p>En el mundo actual, el principio de indisolubilidad ofrece un contrapunto significativo:</p>
+                
+                <ul>
+                    <li><span class="symbol">✓</span><strong>Contra la cultura del descarte:</strong> La indisolubilidad afirma el valor de compromisos permanentes en una sociedad de relaciones desechables</li>
+                    <li><span class="symbol">✓</span><strong>Ecología integral:</strong> La creación como realidad indisoluble que debemos custodiar</li>
+                    <li><span class="symbol">✓</span><strong>Dignidad humana:</strong> La persona como realidad indisoluble que no puede ser instrumentalizada</li>
+                    <li><span class="symbol">✓</span><strong>Ética social:</strong> Instituciones basadas en principios permanentes frente al cambio constante</li>
+                </ul>
+                
+                <div class="bible-verse">
+                    "Jesucristo es el mismo ayer, y hoy, y por los siglos."
+                    <span class="verse-ref">Hebreos 13:8</span>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Indisolubilidad y Esperanza Escatológica</h2>
+                
+                <p>La indisolubilidad encuentra su plenitud en la perspectiva escatológica cristiana:</p>
+                
+                <div class="bible-verse">
+                    "Y ya no habrá muerte, ni habrá más llanto, ni clamor, ni dolor; porque las primeras cosas pasaron."
+                    <span class="verse-ref">Apocalipsis 21:4</span>
+                </div>
+                
+                <p>La promesa de la resurrección y la vida eterna representa la máxima expresión de indisolubilidad: la unión definitiva del ser humano con Dios, libre de toda corrupción y separación.</p>
+            </div>
+        </div>
+        
+        <footer>
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" 
+                 alt="Logo" 
+                 class="footer-logo">
+            <div class="footer-text">
+                
+                <p>Profundizando en los misterios de la fe</p>
+                <p style="margin-top: 15px; font-size: 0.95em; font-style: italic;">"He aquí que yo estoy con vosotros todos los días, hasta el fin del mundo" - Mateo 28:20</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
