@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Significado de Detracciones</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a2a6c 0%, #b21f1f 50%, #fdbb2d 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(to right, #1a2a6c, #b21f1f);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .definition-box {
+            background-color: #f8f9fa;
+            border-left: 5px solid #b21f1f;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        h2 {
+            color: #1a2a6c;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        h3 {
+            color: #b21f1f;
+            margin: 15px 0 10px;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .highlight {
+            background-color: #e9ecef;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        
+        .etimologia {
+            display: flex;
+            align-items: center;
+            margin: 30px 0;
+            background-color: #f0f4ff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        .etimologia-icon {
+            font-size: 3rem;
+            margin-right: 20px;
+            color: #1a2a6c;
+        }
+        
+        .etimologia-text {
+            flex: 1;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #1a2a6c;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card h3 {
+            color: #1a2a6c;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        .card ul {
+            padding-left: 20px;
+        }
+        
+        .card li {
+            margin-bottom: 8px;
+        }
+        
+        .ejemplos {
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        
+        .ejemplos h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .ejemplo-item {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            border-left: 3px solid #b21f1f;
+        }
+        
+        .comparison {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+            gap: 20px;
+        }
+        
+        .comparison-box {
+            flex: 1;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f8f9fa;
+        }
+        
+        .comparison-box h3 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #f1f3f5;
+            color: #6c757d;
+            font-size: 1rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+            border: 3px solid #b21f1f;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .etimologia {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .etimologia-icon {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            
+            .comparison {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Detracciones</h1>
+            <p class="subtitle">(sust.) Acción de detractar; crítica desfavorable, desprestigio</p>
+        </header>
+        
+        <div class="content">
+            <div class="definition-box">
+                <h2>Significado Principal</h2>
+                <p><span class="highlight">Detracciones</span> es el plural de <strong>detracción</strong>, que se refiere a la acción de detractar, es decir, <strong>criticar, desacreditar o menospreciar a alguien o algo</strong>, generalmente con la intención de desprestigiar o disminuir su valor, mérito o reputación.</p>
+            </div>
+            
+            <div class="etimologia">
+                <div class="etimologia-icon">📚</div>
+                <div class="etimologia-text">
+                    <h2>Origen Etimológico</h2>
+                    <p>La palabra proviene del latín <em>detractio, detractionis</em>, que a su vez deriva del verbo <em>detrahere</em>, formado por:</p>
+                    <ul>
+                        <li>El prefijo <strong>de-</strong> (indicando separación o movimiento hacia abajo)</li>
+                        <li>El verbo <strong>trahere</strong> (tirar, arrastrar)</li>
+                    </ul>
+                    <p>Literalmente significa "sacar hacia abajo" o "arrastrar hacia abajo".</p>
+                </div>
+            </div>
+            
+            <h2>Matices y Contextos de Uso</h2>
+            <p>La palabra "detracciones" se utiliza en diferentes contextos, siempre con la connotación de crítica negativa o menosprecio:</p>
+            
+            <div class="grid-container">
+                <div class="card">
+                    <h3>En el Ámbito Personal</h3>
+                    <p>Se refiere a críticas o comentarios negativos dirigidos a una persona con la intención de dañar su reputación o disminuir su valía.</p>
+                    <p><strong>Ejemplo:</strong> "Las detracciones de sus compañeros no lograron desanimarlo."</p>
+                </div>
+                
+                <div class="card">
+                    <h3>En el Ámbito Laboral</h3>
+                    <p>Críticas dirigidas al trabajo, logros o capacidades profesionales de una persona, generalmente con intención de perjudicar su carrera.</p>
+                    <p><strong>Ejemplo:</strong> "A pesar de las detracciones, su proyecto fue un éxito rotundo."</p>
+                </div>
+                
+                <div class="card">
+                    <h3>En el Contexto Social</h3>
+                    <p>Comentarios desfavorables sobre grupos, instituciones o ideas con el propósito de desacreditarlos ante la sociedad.</p>
+                    <p><strong>Ejemplo:</strong> "Las detracciones contra el nuevo movimiento social provenían de intereses creados."</p>
+                </div>
+            </div>
+            
+            <div class="comparison">
+                <div class="comparison-box">
+                    <h3>Sinónimos</h3>
+                    <ul>
+                        <li>Críticas</li>
+                        <li>Desprestigio</li>
+                        <li>Denuestos</li>
+                        <li>Maledicencias</li>
+                        <li>Calumnias</li>
+                        <li>Difamaciones</li>
+                        <li>Menosprecios</li>
+                    </ul>
+                </div>
+                
+                <div class="comparison-box">
+                    <h3>Antónimos</h3>
+                    <ul>
+                        <li>Alabanzas</li>
+                        <li>Elogios</li>
+                        <li>Encomios</li>
+                        <li>Reconocimientos</li>
+                        <li>Valoraciones</li>
+                        <li>Apologías</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="ejemplos">
+                <h2>Ejemplos de Uso en Frases</h2>
+                <div class="ejemplo-item">
+                    <p>"El político soportó numerosas <strong>detracciones</strong> durante su campaña electoral."</p>
+                </div>
+                <div class="ejemplo-item">
+                    <p>"Las <strong>detracciones</strong> de sus colegas no lograron empañar su excelente trabajo."</p>
+                </div>
+                <div class="ejemplo-item">
+                    <p>"Ignoró las <strong>detracciones</strong> y continuó firme en sus convicciones."</p>
+                </div>
+                <div class="ejemplo-item">
+                    <p>"La obra del artista fue objeto de muchas <strong>detracciones</strong> por parte de la crítica especializada."</p>
+                </div>
+            </div>
+            
+            <h2>Uso Específico: Detracciones Tributarias</h2>
+            <div class="card">
+                <p>En el ámbito fiscal y tributario, el término <span class="highlight">detracción</span> tiene un significado específico: se refiere a un <strong>mecanismo de recaudación anticipada</strong> donde el comprador o usuario de un bien o servicio retiene un porcentaje del pago para entregarlo directamente al fisco.</p>
+                
+                <h3>Características de las detracciones tributarias:</h3>
+                <ul>
+                    <li>Son pagos a cuenta del Impuesto General a las Ventas (IGV) u otros tributos</li>
+                    <li>Se aplican a operaciones específicas determinadas por la ley</li>
+                    <li>El agente de retención (comprador) debe entregar el monto retenido a SUNAT</li>
+                    <li>Buscan combatir la evasión fiscal</li>
+                </ul>
+                
+                <p><strong>Ejemplo:</strong> "La empresa debe aplicar la detracción del 10% en la compra de arroz pilado."</p>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 IN GOD WE TRUST</p>
+                <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
