@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sem - Hijo de Noé | Árbol Genealógico Bíblico</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(to right, #8B4513, #A0522D);
+            color: white;
+            padding: 50px 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        header::before {
+            content: "⚙️";
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 3rem;
+            opacity: 0.7;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.4rem;
+            font-weight: 300;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .intro-section {
+            background-color: #f8f9fa;
+            border-left: 5px solid #8B4513;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #8B4513;
+            margin-bottom: 25px;
+            font-size: 2.2rem;
+            border-bottom: 3px solid #D2691E;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #A0522D;
+            margin: 30px 0 20px;
+            font-size: 1.7rem;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .highlight {
+            background-color: #f5e6d3;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #8B4513;
+        }
+        
+        .biblical-box {
+            background-color: #fff8f0;
+            border: 2px solid #D2691E;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+        }
+        
+        .scripture {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #8B4513;
+            margin: 15px 0;
+            padding-left: 20px;
+            border-left: 4px solid #8B4513;
+        }
+        
+        .scripture-ref {
+            font-weight: bold;
+            text-align: right;
+            color: #A0522D;
+            margin-top: 10px;
+        }
+        
+        /* Estilos para el árbol genealógico */
+        .genealogy-container {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            overflow-x: auto;
+        }
+        
+        .tree {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 1000px;
+        }
+        
+        .generation {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            width: 100%;
+        }
+        
+        .person {
+            background: linear-gradient(135deg, #8B4513, #A0522D);
+            color: white;
+            padding: 15px 25px;
+            margin: 0 15px;
+            border-radius: 10px;
+            text-align: center;
+            min-width: 180px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .person:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .person-name {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        
+        .person-desc {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .connector {
+            position: absolute;
+            background: #8B4513;
+        }
+        
+        .vertical-connector {
+            width: 3px;
+            height: 20px;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .horizontal-connector {
+            height: 3px;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .children-container {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+        
+        /* Estilos para la información de pueblos */
+        .peoples-section {
+            background-color: #f5f5f5;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #8B4513;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card h3 {
+            color: #8B4513;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+        
+        .card ul {
+            padding-left: 20px;
+        }
+        
+        .card li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .significance-section {
+            background-color: #e8f4f8;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border-left: 5px solid #17a2b8;
+        }
+        
+        .map-section {
+            background-color: #f0f8ff;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .map-placeholder {
+            background: linear-gradient(135deg, #87CEEB, #98FB98);
+            height: 400px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2F4F4F;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(to right, #8B4513, #A0522D);
+            color: #FFF8DC;
+            font-size: 1.1rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+            border: 3px solid #D2691E;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .person {
+                min-width: 140px;
+                padding: 12px 18px;
+                margin: 0 8px;
+            }
+            
+            .person-name {
+                font-size: 1rem;
+            }
+            
+            .person-desc {
+                font-size: 0.8rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            header {
+                padding: 30px 20px;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .genealogy-container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sem - Hijo de Noé</h1>
+            <p class="subtitle">Árbol Genealógico Bíblico y Descendencia hasta las Naciones</p>
+        </header>
+        
+        <div class="content">
+            <div class="intro-section">
+                <h2>Introducción a Sem</h2>
+                <p><span class="highlight">Sem</span> fue uno de los tres hijos de Noé que sobrevivieron al Diluvio universal. Según el relato bíblico, Sem es considerado el antepasado de los pueblos semitas, incluyendo hebreos, árabes, asirios, arameos y otros pueblos del Medio Oriente.</p>
+                
+                <div class="biblical-box">
+                    <p class="scripture">"Estas son las generaciones de los hijos de Noé: Sem, Cam y Jafet, a quienes nacieron hijos después del diluvio... Los hijos de Sem: Elam, Asur, Arfaxad, Lud y Aram."</p>
+                    <p class="scripture-ref">Génesis 10:1, 22 (Reina-Valera 1960)</p>
+                </div>
+            </div>
+            
+            <h2>Árbol Genealógico de Sem</h2>
+            <p>La descendencia de Sem se extiende a través de sus cinco hijos, dando origen a importantes pueblos y naciones del mundo antiguo:</p>
+            
+            <div class="genealogy-container">
+                <div class="tree">
+                    <!-- Generación 1: Noé -->
+                    <div class="generation">
+                        <div class="person">
+                            <div class="person-name">Noé</div>
+                            <div class="person-desc">Padre de Sem, Cam y Jafet</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Conector vertical -->
+                    <div style="height: 30px; width: 3px; background: #8B4513; margin: 0 auto;"></div>
+                    
+                    <!-- Generación 2: Sem -->
+                    <div class="generation">
+                        <div class="person">
+                            <div class="person-name">Sem</div>
+                            <div class="person-desc">Hijo de Noé<br>Padre de los semitas</div>
+                            <div class="connector vertical-connector"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Conector vertical -->
+                    <div style="height: 30px; width: 3px; background: #8B4513; margin: 0 auto;"></div>
+                    
+                    <!-- Generación 3: Hijos de Sem -->
+                    <div class="generation">
+                        <div class="person">
+                            <div class="person-name">Elam</div>
+                            <div class="person-desc">Antepasado de los elamitas</div>
+                            <div class="connector vertical-connector"></div>
+                        </div>
+                        
+                        <div class="person">
+                            <div class="person-name">Asur</div>
+                            <div class="person-desc">Fundador de Asiria</div>
+                            <div class="connector vertical-connector"></div>
+                        </div>
+                        
+                        <div class="person">
+                            <div class="person-name">Arfaxad</div>
+                            <div class="person-desc">Línea hacia Abraham</div>
+                            <div class="connector vertical-connector"></div>
+                        </div>
+                        
+                        <div class="person">
+                            <div class="person-name">Lud</div>
+                            <div class="person-desc">Antepasado de los lidios</div>
+                            <div class="connector vertical-connector"></div>
+                        </div>
+                        
+                        <div class="person">
+                            <div class="person-name">Aram</div>
+                            <div class="person-desc">Padre de los arameos</div>
+                            <div class="connector vertical-connector"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Conector vertical -->
+                    <div style="height: 30px; width: 3px; background: #8B4513; margin: 0 auto;"></div>
+                    
+                    <!-- Generación 4: Línea de Arfaxad -->
+                    <div class="generation">
+                        <div class="person">
+                            <div class="person-name">Sala</div>
+                            <div class="person-desc">Hijo de Arfaxad</div>
+                            <div class="connector vertical-connector"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Generación 5: Línea de Sala -->
+                    <div class="generation">
+                        <div class="person">
+                            <div class="person-name">Heber</div>
+                            <div class="person-desc">Antepasado de los hebreos</div>
+                            <div class="connector vertical-connector"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Generación 6: Línea de Heber -->
+                    <div class="generation">
+                        <div class="person">
+                            <div class="person-name">Peleg</div>
+                            <div class="person-desc">En su tiempo se dividió la tierra</div>
+                            <div class="connector vertical-connector"></div>
+                        </div>
+                        
+                        <div class="person">
+                            <div class="person-name">Joctán</div>
+                            <div class="person-desc">13 hijos, pueblos árabes</div>
+                            <div class="connector vertical-connector"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Generación 7: Línea de Peleg -->
+                    <div class="generation">
+                        <div class="person">
+                            <div class="person-name">Reu</div>
+                            <div class="person-desc">Hijo de Peleg</div>
+                            <div class="connector vertical-connector"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Generación 8: Línea de Reu -->
+                    <div class="generation">
+                        <div class="person">
+                            <div class="person-name">Serug</div>
+                            <div class="person-desc">Hijo de Reu</div>
+                            <div class="connector vertical-connector"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Generación 9: Línea de Serug -->
+                    <div class="generation">
+                        <div class="person">
+                            <div class="person-name">Nacor</div>
+                            <div class="person-desc">Hijo de Serug</div>
+                            <div class="connector vertical-connector"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Generación 10: Línea de Nacor -->
+                    <div class="generation">
+                        <div class="person">
+                            <div class="person-name">Taré</div>
+                            <div class="person-desc">Padre de Abraham</div>
+                            <div class="connector vertical-connector"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Generación 11: Línea de Taré -->
+                    <div class="generation">
+                        <div class="person">
+                            <div class="person-name">Abraham</div>
+                            <div class="person-desc">Padre del pueblo hebreo</div>
+                            <div class="connector vertical-connector"></div>
+                        </div>
+                        
+                        <div class="person">
+                            <div class="person-name">Nacor</div>
+                            <div class="person-desc">Abuelo de Rebeca</div>
+                            <div class="connector vertical-connector"></div>
+                        </div>
+                        
+                        <div class="person">
+                            <div class="person-name">Harán</div>
+                            <div class="person-desc">Padre de Lot</div>
+                            <div class="connector vertical-connector"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="peoples-section">
+                <h2>Pueblos Descendientes de Sem</h2>
+                <p>La descendencia de Sem dio origen a importantes pueblos y civilizaciones del mundo antiguo:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>De Elam</h3>
+                        <ul>
+                            <li><strong>Elamitas</strong> - Pueblo del suroeste de Irán</li>
+                            <li>Capital: Susa</li>
+                            <li>Civilización con escritura propia</li>
+                            <li>Mencionados en Daniel 8:2</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>De Asur</h3>
+                        <ul>
+                            <li><strong>Asirios</strong> - Imperio mesopotámico</li>
+                            <li>Capital: Nínive</li>
+                            <li>Grandes conquistadores</li>
+                            <li>Destruyeron el reino del norte de Israel</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>De Arfaxad</h3>
+                        <ul>
+                            <li><strong>Hebreos/Israelitas</strong> - Pueblo escogido</li>
+                            <li><strong>Caldeos</strong> - Babilonios</li>
+                            <li>Línea del Mesías</li>
+                            <li>Pueblos arameos</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>De Lud</h3>
+                        <ul>
+                            <li><strong>Lidios</strong> - Asia Menor</li>
+                            <li>Capital: Sardis</li>
+                            <li>Conocidos por su riqueza</li>
+                            <li>Inventores de la moneda</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>De Aram</h3>
+                        <ul>
+                            <li><strong>Arameos</strong> - Siria antigua</li>
+                            <li>Idioma: arameo</li>
+                            <li>Comerciantes importantes</li>
+                            <li>Idioma de Jesús</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>De Joctán</h3>
+                        <ul>
+                            <li><strong>Pueblos árabes</strong> - Península arábiga</li>
+                            <li>13 tribus diferentes</li>
+                            <li>Antepasados de beduinos</li>
+                            <li>Comerciantes de especias</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="map-section">
+                <h3>Distribución Geográfica de los Pueblos Semitas</h3>
+                <p>Los descendientes de Sem se establecieron principalmente en el Medio Oriente y áreas circundantes:</p>
+                
+                <div class="map-placeholder">
+                    Mapa del Mundo Antiguo<br>
+                    Distribución de los Pueblos Semitas<br>
+                    (Medio Oriente, Mesopotamia, Península Arábiga)
+                </div>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Mesopotamia</h3>
+                        <ul>
+                            <li>Asirios (norte)</li>
+                            <li>Babilonios/Caldeos (sur)</li>
+                            <li>Elamitas (este)</li>
+                            <li>Arameos (oeste)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Levante</h3>
+                        <ul>
+                            <li>Hebreos/Israelitas (Canaán)</li>
+                            <li>Fenicios ( costa)</li>
+                            <li>Arameos (Siria)</li>
+                            <li>Ammonitas, Moabitas, Edomitas</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Península Arábiga</h3>
+                        <ul>
+                            <li>Pueblos árabes (descendientes de Joctán)</li>
+                            <li>Beduinos nómadas</li>
+                            <li>Comerciantes caravaneros</li>
+                            <li>Antepasados de los árabes modernos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="significance-section">
+                <h2>Significado Teológico de Sem</h2>
+                <p>La elección de la línea de Sem tiene profundo significado en el plan redentor de Dios:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Bendición Profética</h3>
+                        <p>Noé profetizó: "Bendito por Jehová mi Dios sea Sem" (Génesis 9:26), indicando el papel especial de su descendencia.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Línea del Mesías</h3>
+                        <p>Por la línea de Sem vendría Abraham, David y finalmente Jesucristo, el Salvador del mundo.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Pueblo Escogido</h3>
+                        <p>Los hebreos, descendientes de Sem a través de Arfaxad y Heber, serían el pueblo mediante el cual Dios se revelaría al mundo.</p>
+                    </div>
+                </div>
+                
+                <div class="biblical-box">
+                    <p class="scripture">"Bendito por Jehová mi Dios sea Sem, y sea Canaán su siervo. Engrandezca Dios a Jafet, y habite en las tiendas de Sem, y sea Canaán su siervo."</p>
+                    <p class="scripture-ref">Génesis 9:26-27</p>
+                </div>
+            </div>
+            
+            <h2>Legado de Sem</h2>
+            <p>El legado de Sem perdura hasta hoy a través de:</p>
+            
+            <div class="grid-container">
+                <div class="card">
+                    <h3>Lenguas Semíticas</h3>
+                    <ul>
+                        <li>Hebreo - Idioma del Antiguo Testamento</li>
+                        <li>Arameo - Idioma de partes del Antiguo Testamento y de Jesús</li>
+                        <li>Árabe - Idioma del Corán y millones de personas</li>
+                        <li>Amárico, Tigriña y otras lenguas etiópicas</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Religiones Abrahámicas</h3>
+                    <ul>
+                        <li>Judaísmo - De los hebreos descendientes de Sem</li>
+                        <li>Cristianismo - Que surge del judaísmo</li>
+                        <li>Islam - Que reclama descendencia de Abraham a través de Ismael</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Contribuciones Culturales</h3>
+                    <ul>
+                        <li>Desarrollo de la escritura alfabética</li>
+                        <li>Avances en matemáticas y astronomía</li>
+                        <li>Desarrollo del monoteísmo</li>
+                        <li>Sistemas legales y de justicia</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 IN GOD WE TRUST</p>
+                <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
