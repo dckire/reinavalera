@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pherezeo - Pueblo Campesino de Canaán</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #228B22 0%, #32CD32 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(to right, #228B22, #32CD32);
+            color: white;
+            padding: 50px 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        header::before {
+            content: "🌾";
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 3rem;
+            opacity: 0.7;
+        }
+        
+        h1 {
+            font-size: 3.8rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.4rem;
+            font-weight: 300;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .definition-box {
+            background-color: #f8f9fa;
+            border-left: 5px solid #228B22;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #228B22;
+            margin-bottom: 25px;
+            font-size: 2.2rem;
+            border-bottom: 3px solid #32CD32;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #2E8B57;
+            margin: 30px 0 20px;
+            font-size: 1.7rem;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .highlight {
+            background-color: #f0fff0;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #228B22;
+        }
+        
+        .biblical-box {
+            background-color: #f5fff5;
+            border: 2px solid #90EE90;
+            padding: 30px;
+            margin: 35px 0;
+            border-radius: 15px;
+        }
+        
+        .scripture {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #228B22;
+            margin: 20px 0;
+            padding-left: 20px;
+            border-left: 4px solid #228B22;
+        }
+        
+        .scripture-ref {
+            font-weight: bold;
+            text-align: right;
+            color: #2E8B57;
+            margin-top: 10px;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 5px solid #228B22;
+        }
+        
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card h3 {
+            color: #228B22;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        
+        .card ul {
+            padding-left: 20px;
+        }
+        
+        .card li {
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+        
+        .historical-section {
+            background-color: #f5f5f5;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .lifestyle-section {
+            background-color: #e8f4e8;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border-left: 5px solid #3CB371;
+        }
+        
+        .distribution-section {
+            background-color: #f0fff0;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .map-container {
+            background-color: #f0f8ff;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .map-placeholder {
+            background: linear-gradient(135deg, #98FB98, #87CEEB);
+            height: 300px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2F4F4F;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .timeline {
+            background-color: #fafafa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .timeline-item {
+            margin-bottom: 25px;
+            padding-left: 20px;
+            border-left: 4px solid #228B22;
+        }
+        
+        .timeline-date {
+            font-weight: bold;
+            color: #228B22;
+            margin-bottom: 5px;
+        }
+        
+        .comparison-section {
+            background-color: #fff8f0;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .etymology-section {
+            background-color: #e8f4f8;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(to right, #228B22, #32CD32);
+            color: #FFF8DC;
+            font-size: 1.1rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+            border: 3px solid #90EE90;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            header::before {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            header {
+                padding: 30px 20px;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pherezeo</h1>
+            <p class="subtitle">Los campesinos de las llanuras - Pueblo cananeo de la Biblia</p>
+        </header>
+        
+        <div class="content">
+            <div class="definition-box">
+                <h2>¿Quiénes eran los Pherezeos?</h2>
+                <p>Los <span class="highlight">pherezeos</span> (también llamados ferezeos o perizitas) fueron uno de los pueblos cananeos que habitaban la tierra de Canaán antes de la conquista israelita. Se caracterizaban por ser <strong>habitantes de las llanuras y zonas rurales</strong>, dedicados principalmente a la agricultura y vida campesina.</p>
+            </div>
+            
+            <div class="biblical-box">
+                <h3>Referencias Bíblicas Principales</h3>
+                <p class="scripture">"Y habitó desde Havila hasta Shur, que está enfrente de Egipto viniendo a Asiria; y delante de todos sus hermanos habitó. Y los hijos de Cam: Cus, Mizraim, Fut y Canaán... Y Canaán engendró a Sidón su primogénito, a Het, al jebuseo, al amorreo, al gergeseo, al heveo, al araceo, al sineo, al arvadeo, al zemareo y al hamateo."</p>
+                <p class="scripture-ref">Génesis 10:18 (Reina-Valera 1960)</p>
+                
+                <p class="scripture">"Y dijo Jehová a Abram:... la tierra que ves, la daré a ti y a tu descendencia para siempre... y el cananeo y el ferezeo habitaban entonces en la tierra."</p>
+                <p class="scripture-ref">Génesis 13:14-15, 17</p>
+            </div>
+
+            <div class="etymology-section">
+                <h2>Origen del Nombre</h2>
+                <p>El término <span class="highlight">"Pherezeo"</span> proviene del hebreo <em>perizi</em> (פְּרִזִּי), que significa <strong>"habitante de campo abierto"</strong> o <strong>"morador de aldeas no fortificadas"</strong>. La raíz hebrea <em>pāraz</em> significa "campo abierto" o "aldea", lo que refleja su estilo de vida rural.</p>
+            </div>
+            
+            <div class="historical-section">
+                <h3>Contexto Histórico y Características</h3>
+                <p>Los pherezeos fueron un pueblo cananeo que se distinguió por su estilo de vida rural y agrícola, a diferencia de otros pueblos cananeos que habitaban ciudades fortificadas.</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Orígenes Étnicos</h3>
+                        <ul>
+                            <li>Pueblo cananeo semítico</li>
+                            <li>Descendientes de Canaán (Génesis 10:15-17)</li>
+                            <li>Relacionados con otros pueblos cananeos</li>
+                            <li>Habitantes pre-israelitas de Canaán</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Estilo de Vida</h3>
+                        <ul>
+                            <li>Vida rural y agrícola</li>
+                            <li>Habitantes de aldeas no fortificadas</li>
+                            <li>Dedicados al cultivo de la tierra</li>
+                            <li>Menos urbanizados que otros cananeos</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Distribución Geográfica</h3>
+                        <ul>
+                            <li>Regiones montañosas centrales</li>
+                            <li>Áreas rurales de Canaán</li>
+                            <li>Compartían territorio con otros pueblos</li>
+                            <li>No tenían ciudades principales propias</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="map-container">
+                <h3>Territorio Pherezeo</h3>
+                <p>Los pherezeos estaban distribuidos principalmente en las regiones montañosas y rurales de Canaán:</p>
+                
+                <div class="map-placeholder">
+                    Mapa del Antiguo Canaán<br>
+                    Territorio Pherezeo - Regiones Rurales y Montañosas
+                </div>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Ubicaciones Específicas</h3>
+                        <ul>
+                            <li>Región montañosa de Efraín</li>
+                            <li>Áreas rurales de Judea</li>
+                            <li>Territorios entre ciudades cananeas</li>
+                            <li>Zonas no urbanizadas</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Características del Territorio</h3>
+                        <ul>
+                            <li>Tierras agrícolas fértiles</li>
+                            <li>Aldeas dispersas</li>
+                            <li>Sin grandes fortificaciones</li>
+                            <li>Áreas de cultivo y pastoreo</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="lifestyle-section">
+                <h3>Estilo de Vida y Cultura</h3>
+                <p>Los pherezeos desarrollaron una cultura distintiva basada en su vida rural:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Economía</h3>
+                        <ul>
+                            <li>Agricultura de subsistencia</li>
+                            <li>Cultivo de cereales y olivos</li>
+                            <li>Cría de ganado menor</li>
+                            <li>Producción de aceite y vino</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Organización Social</h3>
+                        <ul>
+                            <li>Comunidades aldeanas</li>
+                            <li>Estructuras familiares extendidas</li>
+                            <li>Liderazgo local en lugar de reyes</li>
+                            <li>Menos estratificación social</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Religión y Creencias</h3>
+                        <ul>
+                            <li>Adoración a deidades cananeas</li>
+                            <li>Cultos agrícolas y de fertilidad</li>
+                            <li>Santuarios locales en aldeas</li>
+                            <li>Influencia de religiones vecinas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="timeline">
+                <h3>Cronología Bíblica de los Pherezeos</h3>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">Época de Abraham (~2000 a.C.)</div>
+                    <p>Los pherezeos ya habitaban en Canaán cuando Abraham llegó a la tierra (Génesis 13:7)</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">Época de los Patriarcas</div>
+                    <p>Coexistencia con los patriarcas hebreos en la tierra de Canaán</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">Conquista Israelita (~1400 a.C.)</div>
+                    <p>Los pherezeos son mencionados entre los pueblos a desalojar (Éxodo 3:8, 17)</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">Periodo de los Jueces</div>
+                    <p>Algunos pherezeos permanecen en la tierra y son fuente de conflicto (Jueces 1:4-5)</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">Periodo Monárquico</div>
+                    <p>Integración gradual o desplazamiento de los pherezeos restantes</p>
+                </div>
+            </div>
+            
+            <div class="distribution-section">
+                <h3>Distribución y Relación con Israel</h3>
+                <p>La interacción entre pherezeos e israelitas fue compleja y varió según las regiones:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Región Central</h3>
+                        <ul>
+                            <li>Compartían territorio con Efraín</li>
+                            <li>Mayor resistencia a la conquista</li>
+                            <li>Lenta integración</li>
+                            <li>Conflicto intermitente</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Región Sur</h3>
+                        <ul>
+                            <li>Territorio de Judá y Simeón</li>
+                            <li>Conquista más rápida</li>
+                            <li>Mayor asimilación</li>
+                            <li>Menos menciones bíblicas</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Resultado Final</h3>
+                        <ul>
+                            <li>Algunos se integraron a Israel</li>
+                            <li>Otros mantuvieron identidad separada</li>
+                            <li>Desaparecieron como pueblo distinto</li>
+                            <li>Legado en nombres geográficos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="comparison-section">
+                <h3>Pherezeos vs. Otros Pueblos Cananeos</h3>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Pherezeos</h3>
+                        <ul>
+                            <li>Habitantes rurales</li>
+                            <li>Aldeas no fortificadas</li>
+                            <li>Economía agrícola</li>
+                            <li>Menos organización central</li>
+                            <li>Más difíciles de conquistar completamente</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Jebuseos</h3>
+                        <ul>
+                            <li>Habitantes urbanos</li>
+                            <li>Ciudad fortificada (Jerusalén)</li>
+                            <li>Economía comercial</li>
+                            <li>Gobierno monárquico</li>
+                            <li>Conquista definida (por David)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Amorreos</h3>
+                        <ul>
+                            <li>Mezcla urbano-rural</li>
+                            <li>Reinos organizados</li>
+                            <li>Poder militar significativo</li>
+                            <li>Conquista temprana (por Moisés)</li>
+                            <li>Territorio definido</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <h2>Significado Teológico</h2>
+            <p>La presencia de los pherezeos en la Biblia enseña importantes lecciones espirituales:</p>
+            
+            <div class="grid-container">
+                <div class="card">
+                    <h3>Paciencia Divina</h3>
+                    <p>Dios esperó 400 años hasta que "la iniquidad del amorreo llegue a su colmo" antes de dar la tierra a Israel</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Fidelidad de las Promesas</h3>
+                    <p>Dios cumplió su promesa a Abraham de dar la tierra a su descendencia, a pesar de los habitantes existentes</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Desafío de la Obediencia</h3>
+                    <p>La presencia continua de pueblos cananeos como los pherezeos fue consecuencia de la desobediencia israelita</p>
+                </div>
+            </div>
+            
+            <div class="biblical-box">
+                <h3>Legado y Significado Actual</h3>
+                <p>Aunque los pherezeos desaparecieron como pueblo distinto, su legado permanece en:</p>
+                <ul>
+                    <li>El registro bíblico de la fidelidad de Dios</li>
+                    <li>La enseñanza sobre la obediencia a Dios</li>
+                    <li>El ejemplo de pueblos que se oponen al plan divino</li>
+                    <li>La importancia de la posesión completa de las promesas de Dios</li>
+                </ul>
+                
+                <p class="scripture">"Y dejó a los de Hebrón, y dio a Caleb hijo de Jefone su parte... Mas al jebuseo que habitaba en Jerusalén, no lo arrojaron los hijos de Benjamín, y el jebuseo habitó con los hijos de Benjamín en Jerusalén hasta hoy."</p>
+                <p class="scripture-ref">Jueces 1:20-21</p>
+                
+                <p>La historia de los pherezeos nos recuerda la importancia de poseer completamente lo que Dios nos ha prometido, sin dejar "restos" que puedan convertirse en piedra de tropiezo en el futuro.</p>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 IN GOD WE TRUST</p>
+                <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
