@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cam - Hijo de Noé | Árbol Genealógico Bíblico</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #2F4F4F 0%, #696969 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(to right, #2F4F4F, #696969);
+            color: white;
+            padding: 50px 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        header::before {
+            content: "🌍";
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 3rem;
+            opacity: 0.7;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.4rem;
+            font-weight: 300;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .intro-section {
+            background-color: #f8f9fa;
+            border-left: 5px solid #2F4F4F;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #2F4F4F;
+            margin-bottom: 25px;
+            font-size: 2.2rem;
+            border-bottom: 3px solid #696969;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #2F4F4F;
+            margin: 30px 0 20px;
+            font-size: 1.7rem;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .highlight {
+            background-color: #e6e6e6;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #2F4F4F;
+        }
+        
+        .warning {
+            background-color: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 10px;
+        }
+        
+        .biblical-box {
+            background-color: #f5f5f5;
+            border: 2px solid #696969;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+        }
+        
+        .scripture {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #2F4F4F;
+            margin: 15px 0;
+            padding-left: 20px;
+            border-left: 4px solid #2F4F4F;
+        }
+        
+        .scripture-ref {
+            font-weight: bold;
+            text-align: right;
+            color: #2F4F4F;
+            margin-top: 10px;
+        }
+        
+        /* Estilos para el árbol genealógico */
+        .genealogy-container {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            overflow-x: auto;
+        }
+        
+        .tree {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 1000px;
+        }
+        
+        .generation {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+            width: 100%;
+        }
+        
+        .person {
+            background: linear-gradient(135deg, #2F4F4F, #696969);
+            color: white;
+            padding: 15px 25px;
+            margin: 0 15px;
+            border-radius: 10px;
+            text-align: center;
+            min-width: 180px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .person:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .person-name {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        
+        .person-desc {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .connector {
+            position: absolute;
+            background: #2F4F4F;
+        }
+        
+        .vertical-connector {
+            width: 3px;
+            height: 20px;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .horizontal-connector {
+            height: 3px;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .children-container {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+        
+        /* Estilos para la información de pueblos */
+        .peoples-section {
+            background-color: #f5f5f5;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #2F4F4F;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card h3 {
+            color: #2F4F4F;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+        
+        .card ul {
+            padding-left: 20px;
+        }
+        
+        .card li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .significance-section {
+            background-color: #e8f4f8;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border-left: 5px solid #17a2b8;
+        }
+        
+        .map-section {
+            background-color: #f0f8ff;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .map-placeholder {
+            background: linear-gradient(135deg, #87CEEB, #98FB98);
+            height: 400px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2F4F4F;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .curse-section {
+            background-color: #fff0f0;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border-left: 5px solid #dc3545;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(to right, #2F4F4F, #696969);
+            color: #FFF8DC;
+            font-size: 1.1rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+            border: 3px solid #696969;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .person {
+                min-width: 140px;
+                padding: 12px 18px;
+                margin: 0 8px;
+            }
+            
+            .person-name {
+                font-size: 1rem;
+            }
+            
+            .person-desc {
+                font-size: 0.8rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            header {
+                padding: 30px 20px;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .genealogy-container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cam - Hijo de Noé</h1>
+            <p class="subtitle">Árbol Genealógico Bíblico y Descendencia de los Pueblos Africanos y Asiáticos</p>
+        </header>
+        
+        <div class="content">
+            <div class="intro-section">
+                <h2>Introducción a Cam</h2>
+                <p><span class="highlight">Cam</span> (o Ham) fue uno de los tres hijos de Noé que sobrevivieron al Diluvio universal. Según el relato bíblico, Cam es considerado el antepasado de los pueblos que se establecieron en África, Canaán y partes de Asia.</p>
+                
+                <div class="biblical-box">
+                    <p class="scripture">"Los hijos de Cam: Cus, Mizraim, Fut y Canaán."</p>
+                    <p class="scripture-ref">Génesis 10:6 (Reina-Valera 1960)</p>
+                </div>
+            </div>
+            
+           
+            
+            <h2>Árbol Genealógico de Cam</h2>
+            <p>La descendencia de Cam se extiende a través de sus cuatro hijos, dando origen a importantes pueblos y civilizaciones de África y Asia:</p>
+            
+            <div class="genealogy-container">
+                <div class="tree">
+                    <!-- Generación 1: Noé -->
+                    <div class="generation">
+                        <div class="person">
+                            <div class="person-name">Noé</div>
+                            <div class="person-desc">Padre de Sem, Cam y Jafet</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Conector vertical -->
+                    <div style="height: 30px; width: 3px; background: #2F4F4F; margin: 0 auto;"></div>
+                    
+                    <!-- Generación 2: Cam -->
+                    <div class="generation">
+                        <div class="person">
+                            <div class="person-name">Cam</div>
+                            <div class="person-desc">Hijo de Noé<br>Padre de pueblos africanos</div>
+                            <div class="connector vertical-connector"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Conector vertical -->
+                    <div style="height: 30px; width: 3px; background: #2F4F4F; margin: 0 auto;"></div>
+                    
+                    <!-- Generación 3: Hijos de Cam -->
+                    <div class="generation">
+                        <div class="person">
+                            <div class="person-name">Cus</div>
+                            <div class="person-desc">Etiopía y sur de Arabia</div>
+                            <div class="connector vertical-connector"></div>
+                        </div>
+                        
+                        <div class="person">
+                            <div class="person-name">Mizraim</div>
+                            <div class="person-desc">Egipto y norte de África</div>
+                            <div class="connector vertical-connector"></div>
+                        </div>
+                        
+                        <div class="person">
+                            <div class="person-name">Fut</div>
+                            <div class="person-desc">Norte de África</div>
+                            <div class="connector vertical-connector"></div>
+                        </div>
+                        
+                        <div class="person">
+                            <div class="person-name">Canaán</div>
+                            <div class="person-desc">Tierra de Canaán</div>
+                            <div class="connector vertical-connector"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Conector vertical -->
+                    <div style="height: 30px; width: 3px; background: #2F4F4F; margin: 0 auto;"></div>
+                    
+                    <!-- Generación 4: Hijos de Cus -->
+                    <div class="generation">
+                        <div class="person">
+                            <div class="person-name">Sebá</div>
+                            <div class="person-desc">Arabia del sur</div>
+                        </div>
+                        
+                        <div class="person">
+                            <div class="person-name">Havila</div>
+                            <div class="person-desc">Arabia</div>
+                        </div>
+                        
+                        <div class="person">
+                            <div class="person-name">Sabta</div>
+                            <div class="person-desc">Arabia</div>
+                        </div>
+                        
+                        <div class="person">
+                            <div class="person-name">Raama</div>
+                            <div class="person-desc">Arabia</div>
+                        </div>
+                        
+                        <div class="person">
+                            <div class="person-name">Sabteca</div>
+                            <div class="person-desc">Arabia</div>
+                        </div>
+                        
+                        <div class="person">
+                            <div class="person-name">Nimrod</div>
+                            <div class="person-desc">Fundador de Babilonia</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Generación 4: Hijos de Mizraim -->
+                    <div class="generation">
+                        <div class="person">
+                            <div class="person-name">Ludim</div>
+                            <div class="person-desc">Norte de África</div>
+                        </div>
+                        
+                        <div class="person">
+                            <div class="person-name">Anamim</div>
+                            <div class="person-desc">Egipto</div>
+                        </div>
+                        
+                        <div class="person">
+                            <div class="person-name">Lehabim</div>
+                            <div class="person-desc">Libia</div>
+                        </div>
+                        
+                        <div class="person">
+                            <div class="person-name">Naftuhim</div>
+                            <div class="person-desc">Egipto</div>
+                        </div>
+                        
+                        <div class="person">
+                            <div class="person-name">Patrusim</div>
+                            <div class="person-desc">Alto Egipto</div>
+                        </div>
+                        
+                        <div class="person">
+                            <div class="person-name">Casluhim</div>
+                            <div class="person-desc">De donde salieron los filisteos</div>
+                        </div>
+                        
+                        <div class="person">
+                            <div class="person-name">Caftorim</div>
+                            <div class="person-desc">Creta</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Generación 4: Hijos de Canaán -->
+                    <div class="generation">
+                        <div class="person">
+                            <div class="person-name">Sidón</div>
+                            <div class="person-desc">Fundador de Sidón</div>
+                        </div>
+                        
+                        <div class="person">
+                            <div class="person-name">Het</div>
+                            <div class="person-desc">Hititas</div>
+                        </div>
+                        
+                        <div class="person">
+                            <div class="person-name">Jebuseo</div>
+                            <div class="person-desc">Jebuseos</div>
+                        </div>
+                        
+                        <div class="person">
+                            <div class="person-name">Amorreo</div>
+                            <div class="person-desc">Amorreos</div>
+                        </div>
+                        
+                        <div class="person">
+                            <div class="person-name">Gergeseo</div>
+                            <div class="person-desc">Gergeseos</div>
+                        </div>
+                        
+                        <div class="person">
+                            <div class="person-name">Heveo</div>
+                            <div class="person-desc">Heveos</div>
+                        </div>
+                        
+                        <div class="person">
+                            <div class="person-name">Araceo</div>
+                            <div class="person-desc">Araceos</div>
+                        </div>
+                        
+                        <div class="person">
+                            <div class="person-name">Sineo</div>
+                            <div class="person-desc">Sineos</div>
+                        </div>
+                        
+                        <div class="person">
+                            <div class="person-name">Arvadeo</div>
+                            <div class="person-desc">Arvadeos</div>
+                        </div>
+                        
+                        <div class="person">
+                            <div class="person-name">Zemareo</div>
+                            <div class="person-desc">Zemareos</div>
+                        </div>
+                        
+                        <div class="person">
+                            <div class="person-name">Hamateo</div>
+                            <div class="person-desc">Hamateos</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="curse-section">
+                <h2>La Maldición de Canaán</h2>
+                <p>El incidente que llevó a la maldición de Canaán es uno de los pasajes más discutidos del Antiguo Testamento:</p>
+                
+                <div class="biblical-box">
+                    <p class="scripture">"Despertó Noé de su embriaguez, y supo lo que le había hecho su hijo más joven [Cam], y dijo: Maldito sea Canaán; siervo de siervos será a sus hermanos."</p>
+                    <p class="scripture-ref">Génesis 9:24-25 (Reina-Valera 1960)</p>
+                </div>
+                
+                <h3>Interpretaciones Correctas</h3>
+                <ul>
+                    <li>La maldición fue específicamente sobre <strong>Canaán</strong>, no sobre Cam ni todos sus descendientes</li>
+                    <li>Se cumplió cuando los israelitas conquistaron Canaán y sometieron a sus habitantes</li>
+                    <li>No tiene base bíblica para aplicar esta maldición a ninguna raza o pueblo moderno</li>
+                    <li>El Nuevo Testamento enseña que en Cristo no hay maldición (Gálatas 3:13)</li>
+                </ul>
+            </div>
+            
+            <div class="peoples-section">
+                <h2>Pueblos Descendientes de Cam</h2>
+                <p>La descendencia de Cam dio origen a importantes pueblos y civilizaciones de África y el Medio Oriente:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>De Cus (Etiopía)</h3>
+                        <ul>
+                            <li><strong>Etiopes</strong> - Cuerno de África</li>
+                            <li><strong>Nubios</strong> - Sudán y sur de Egipto</li>
+                            <li><strong>Sabéos</strong> - Yemen antiguo</li>
+                            <li><strong>Asiria temprana</strong> - A través de Nimrod</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>De Mizraim (Egipto)</h3>
+                        <ul>
+                            <li><strong>Egipcios</strong> - Civilización del Nilo</li>
+                            <li><strong>Libios</strong> - Norte de África</li>
+                            <li><strong>Filisteos</strong> - Canaán costero</li>
+                            <li><strong>Cretenses</strong> - Isla de Creta</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>De Fut (Libia)</h3>
+                        <ul>
+                            <li><strong>Pueblos bereberes</strong> - Norte de África</li>
+                            <li><strong>Antiguos libios</strong></li>
+                            <li>Pueblos del Sahara</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>De Canaán</h3>
+                        <ul>
+                            <li><strong>Fenicios</strong> - Comerciantes marítimos</li>
+                            <li><strong>Hititas</strong> - Imperio de Anatolia</li>
+                            <li><strong>Jebuseos</strong> - Habitantes de Jerusalén</li>
+                            <li><strong>Amorreos</strong> - Pueblos de las montañas</li>
+                            <li><strong>Otros pueblos cananeos</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="map-section">
+                <h3>Distribución Geográfica de los Pueblos Camitas</h3>
+                <p>Los descendientes de Cam se establecieron principalmente en África y el Medio Oriente:</p>
+                
+                <div class="map-placeholder">
+                    Mapa del Mundo Antiguo<br>
+                    Distribución de los Pueblos Camitas<br>
+                    (África, Canaán, Península Arábiga)
+                </div>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Norte de África</h3>
+                        <ul>
+                            <li>Egipto (Mizraim)</li>
+                            <li>Libia (Fut)</li>
+                            <li>Pueblos bereberes</li>
+                            <li>Cartago (fenicios)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Cuerno de África</h3>
+                        <ul>
+                            <li>Etiopía (Cus)</li>
+                            <li>Nubia/Sudán</li>
+                            <li>Somalia</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Medio Oriente</h3>
+                        <ul>
+                            <li>Canaán (Fenicia, Israel)</li>
+                            <li>Partes de Arabia</li>
+                            <li>Anatolia (Hititas)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="significance-section">
+                <h2>Aportes Culturales de los Pueblos Camitas</h2>
+                <p>Los descendientes de Cam hicieron contribuciones fundamentales a la civilización humana:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Egipto</h3>
+                        <ul>
+                            <li>Desarrollo de la escritura jeroglífica</li>
+                            <li>Avances en matemáticas y medicina</li>
+                            <li>Arquitectura monumental (pirámides)</li>
+                            <li>Sistema de gobierno organizado</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Fenicia</h3>
+                        <ul>
+                            <li>Invento del alfabeto</li>
+                            <li>Navegación y comercio marítimo</li>
+                            <li>Producción de vidrio y púrpura</li>
+                            <li>Fundación de Cartago</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Etiopía</h3>
+                        <ul>
+                            <li>Reino de Aksum</li>
+                            <li>Desarrollo de escritura etíope</li>
+                            <li>Comercio de especias y marfil</li>
+                            <li>Una de las primeras naciones cristianas</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <h2>Figuras Importantes de la Línea de Cam</h2>
+            
+            <div class="grid-container">
+                <div class="card">
+                    <h3>Nimrod</h3>
+                    <ul>
+                        <li>Hijo de Cus, nieto de Cam</li>
+                        <li>"Poderoso cazador delante de Jehová"</li>
+                        <li>Fundador de Babilonia y Nínive</li>
+                        <li>Líder de la Torre de Babel</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Faraones de Egipto</h3>
+                    <ul>
+                        <li>Descendientes de Mizraim</li>
+                        <li>Gobernantes de una de las primeras grandes civilizaciones</li>
+                        <li>Constructores de las pirámides</li>
+                        <li>Figuras centrales en la historia de José y Moisés</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Reyes de Tiro y Sidón</h3>
+                    <ul>
+                        <li>Descendientes de Canaán</li>
+                        <li>Hiram, aliado de David y Salomón</li>
+                        <li>Jezabel, esposa de Acab</li>
+                        <li>Comerciantes y navegantes expertos</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="biblical-box">
+                <h3>Legado en el Plan Redentor</h3>
+                <p>Aunque la línea de Cam no fue escogida para el pacto abrahámico, varios personajes camitas jugaron roles importantes en el plan de Dios:</p>
+                <ul>
+                    <li>La hija de Faraón que salvó a Moisés</li>
+                    <li>La reina de Saba que visitó a Salomón</li>
+                    <li>El eunuco etíope convertido por Felipe</li>
+                    <li>Simón de Cirene que cargó la cruz de Jesús</li>
+                </ul>
+                <p class="scripture">"Y Felipe, corriendo, le oyó que leía al profeta Isaías, y dijo: Pero ¿entiendes lo que lees? El dijo: ¿Y cómo podré, si alguno no me enseñare? Y rogó a Felipe que subiese y se sentara con él."</p>
+                <p class="scripture-ref">Hechos 8:30-31 (el eunuco etíope)</p>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 IN GOD WE TRUST</p>
+                <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
