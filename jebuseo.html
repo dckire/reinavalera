@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jebuseo - Pueblo de Jerusalén Antigua</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #2F4F4F 0%, #556B2F 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(to right, #2F4F4F, #556B2F);
+            color: white;
+            padding: 50px 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        header::before {
+            content: "🏰";
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 3rem;
+            opacity: 0.7;
+        }
+        
+        h1 {
+            font-size: 3.8rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.4rem;
+            font-weight: 300;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .definition-box {
+            background-color: #f8f9fa;
+            border-left: 5px solid #2F4F4F;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #2F4F4F;
+            margin-bottom: 25px;
+            font-size: 2.2rem;
+            border-bottom: 3px solid #556B2F;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #556B2F;
+            margin: 30px 0 20px;
+            font-size: 1.7rem;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .highlight {
+            background-color: #f0f8ff;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #2F4F4F;
+        }
+        
+        .biblical-box {
+            background-color: #f5f5dc;
+            border: 2px solid #8B7355;
+            padding: 30px;
+            margin: 35px 0;
+            border-radius: 15px;
+        }
+        
+        .scripture {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #2F4F4F;
+            margin: 20px 0;
+            padding-left: 20px;
+            border-left: 4px solid #2F4F4F;
+        }
+        
+        .scripture-ref {
+            font-weight: bold;
+            text-align: right;
+            color: #556B2F;
+            margin-top: 10px;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 5px solid #2F4F4F;
+        }
+        
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card h3 {
+            color: #2F4F4F;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        
+        .card ul {
+            padding-left: 20px;
+        }
+        
+        .card li {
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+        
+        .historical-section {
+            background-color: #f5f5f5;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .conquest-section {
+            background-color: #e8f4f8;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border-left: 5px solid #4682B4;
+        }
+        
+        .legacy-section {
+            background-color: #f0fff0;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .map-container {
+            background-color: #f0f8ff;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .map-placeholder {
+            background: linear-gradient(135deg, #87CEEB, #98FB98);
+            height: 300px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2F4F4F;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .timeline {
+            background-color: #fafafa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .timeline-item {
+            margin-bottom: 25px;
+            padding-left: 20px;
+            border-left: 4px solid #2F4F4F;
+        }
+        
+        .timeline-date {
+            font-weight: bold;
+            color: #2F4F4F;
+            margin-bottom: 5px;
+        }
+        
+        .comparison-section {
+            background-color: #fff8f0;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(to right, #2F4F4F, #556B2F);
+            color: #FFF8DC;
+            font-size: 1.1rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+            border: 3px solid #8B7355;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            header::before {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            header {
+                padding: 30px 20px;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Jebuseo</h1>
+            <p class="subtitle">Los habitantes originales de Jerusalén - Historia bíblica y significado</p>
+        </header>
+        
+        <div class="content">
+            <div class="definition-box">
+                <h2>¿Quiénes eran los Jebuseos?</h2>
+                <p>Los <span class="highlight">jebuseos</span> fueron un pueblo cananeo que habitó la región de Jerusalén y sus alrededores antes de la conquista israelita. Son conocidos principalmente por ser los fundadores y habitantes originales de la ciudad de <strong>Jebús</strong>, que posteriormente se convertiría en Jerusalén.</p>
+            </div>
+            
+            <div class="biblical-box">
+                <h3>Referencias Bíblicas Principales</h3>
+                <p class="scripture">"Pero al jebuseo que habitaba en Jerusalén, no lo arrojaron los hijos de Benjamín, y el jebuseo habitó con los hijos de Benjamín en Jerusalén hasta hoy."</p>
+                <p class="scripture-ref">Jueces 1:21 (Reina-Valera 1960)</p>
+                
+                <p class="scripture">"Mas el rey David tomó la fortaleza de Sion, que es la ciudad de David... Por tanto, David habitó en la fortaleza, y le puso por nombre la Ciudad de David."</p>
+                <p class="scripture-ref">2 Samuel 5:7, 9</p>
+            </div>
+            
+            <h2>Origen del Nombre</h2>
+            <p>El término <span class="highlight">"Jebuseo"</span> proviene del hebreo <em>yebusi</em> (יְבוּסִי), que significa "habitante de Jebús". Jebús era el nombre original de la ciudad que posteriormente se conocería como Jerusalén.</p>
+            
+            <div class="historical-section">
+                <h3>Contexto Histórico y Arqueológico</h3>
+                <p>Los jebuseos fueron uno de los pueblos cananeos que habitaron la región montañosa de Canaán. Su ciudad principal, Jebús (Jerusalén), estaba estratégicamente ubicada en las montañas de Judea y era considerada casi inexpugnable debido a sus fortificaciones naturales.</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Orígenes Étnicos</h3>
+                        <ul>
+                            <li>Pueblo cananeo semítico</li>
+                            <li>Descendientes de Canaán (Génesis 10:16)</li>
+                            <li>Relacionados con los hititas</li>
+                            <li>Habitantes de la región montañosa</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Características</h3>
+                        <ul>
+                            <li>Hábiles constructores de fortalezas</li>
+                            <li>Experimentados en guerra defensiva</li>
+                            <li>Controlaban rutas comerciales importantes</li>
+                            <li>Poseían tecnología avanzada para la época</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Ubicación Estratégica</h3>
+                        <ul>
+                            <li>Ciudad en una colina fácil de defender</li>
+                            <li>Fuente de agua interna (Guihón)</li>
+                            <li>Controlaba el paso norte-sur</li>
+                            <li>Posición central en Canaán</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="map-container">
+                <h3>Territorio Jebuseo</h3>
+                <p>Los jebuseos controlaban principalmente el área alrededor de Jerusalén y algunas ciudades fortificadas en las montañas de Judea:</p>
+                
+                <div class="map-placeholder">
+                    Mapa del Antiguo Canaán<br>
+                    Territorio Jebuseo - Jerusalén y Montañas de Judea
+                </div>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Ciudad Principal</h3>
+                        <ul>
+                            <li><strong>Jebús</strong> - Posteriormente Jerusalén</li>
+                            <li>Fortaleza de Sion</li>
+                            <li>Ciudad de David</li>
+                            <li>Ofel (colina sureste)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Características de Jebús</h3>
+                        <ul>
+                            <li>Ubicada entre los valles de Cedrón y Tiropeón</li>
+                            <li>Fuente de Guihón como suministro de agua</li>
+                            <li>Murallas fortificadas naturales</li>
+                            <li>Acceso difícil para ejércitos invasores</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="conquest-section">
+                <h3>La Conquista de Jebús por David</h3>
+                <p>La captura de Jebús por el rey David marca un momento crucial en la historia bíblica:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Contexto Histórico</h3>
+                        <ul>
+                            <li>David reinaba en Hebrón (7.5 años)</li>
+                            <li>Necesitaba una capital neutral</li>
+                            <li>Jebús era estratégica y central</li>
+                            <li>Los jebuseos se sentían invencibles</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Estrategia de Conquista</h3>
+                        <ul>
+                            <li>Los jebuseos se burlaron de David</li>
+                            <li>David retó a sus hombres</li>
+                            <li>Joab subió por el tsimor (túnel de agua)</li>
+                            <li>Capturaron la ciudad sorpresivamente</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Resultados</h3>
+                        <ul>
+                            <li>Jebús se convirtió en Jerusalén</li>
+                            <li>Capital unificada de Israel</li>
+                            <li>Centro político y religioso</li>
+                            <li>Algunos jebuseos permanecieron</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <p class="scripture">"Y dijo el rey y los que con él estaban: Subid por el canal, y herid al jebuseo... Por tanto, se dijo: Ciego y cojo no entrará en la casa."</p>
+                <p class="scripture-ref">2 Samuel 5:8</p>
+            </div>
+            
+            <div class="timeline">
+                <h3>Cronología Bíblica de los Jebuseos</h3>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">~ 2000 a.C.</div>
+                    <p>Melquisedec, rey de Salem (posiblemente Jebús), bendice a Abraham (Génesis 14)</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">~ 1400 a.C.</div>
+                    <p>Los jebuseos son mencionados entre los pueblos de Canaán durante el tiempo de Josué</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">Periodo de los Jueces</div>
+                    <p>Los jebuseos mantienen control de Jerusalén, coexistiendo con la tribu de Benjamín</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">~ 1000 a.C.</div>
+                    <p>David conquista Jebús y establece su capital allí</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">Periodo del Reino</div>
+                    <p>Algunos jebuseos se integran a la sociedad israelita, incluyendo Arauna que vendió su era a David</p>
+                </div>
+            </div>
+            
+            <div class="comparison-section">
+                <h3>Jebuseos vs. Otros Pueblos Cananeos</h3>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Jebuseos</h3>
+                        <ul>
+                            <li>Habitantes de Jerusalén</li>
+                            <li>Expertos en fortificaciones</li>
+                            <li>Controlaban ciudad estratégica</li>
+                            <li>Conquistados por David</li>
+                            <li>Algunos se integraron a Israel</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Amorreos</h3>
+                        <ul>
+                            <li>Habitantes de región montañosa</li>
+                            <li>Reinos en Hesbón y Basán</li>
+                            <li>Conquistados por Moisés</li>
+                            <li>No se integraron completamente</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Hititas</h3>
+                        <ul>
+                            <li>Procedentes de Anatolia</li>
+                            <li>Mencionados en tratos con Abraham</li>
+                            <li>Influencia en derecho y cultura</li>
+                            <li>Algunos se convirtieron al judaísmo</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="legacy-section">
+                <h3>Legado y Personajes Jebuseos Importantes</h3>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Arauna (Ornán)</h3>
+                        <ul>
+                            <li>Jebuseo dueño de la era</li>
+                            <li>Vendió su tierra a David</li>
+                            <li>Lugar donde se construyó el templo</li>
+                            <li>Ejemplo de integración pacífica</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Urías el Hitita</h3>
+                        <ul>
+                            <li>Posiblemente de origen jebuseo</li>
+                            <li>Uno de los valientes de David</li>
+                            <li>Marido de Betsabé</li>
+                            <li>Ejemplo de lealtad</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <p class="scripture">"Y Arauna dijo a David: Tome y ofrezca mi señor el rey lo que bien le pareciere..."</p>
+                <p class="scripture-ref">2 Samuel 24:22</p>
+            </div>
+            
+            <h2>Significado Teológico</h2>
+            <p>La historia de los jebuseos en la Biblia contiene importantes lecciones espirituales:</p>
+            
+            <div class="grid-container">
+                <div class="card">
+                    <h3>Soberanía de Dios</h3>
+                    <p>Dios eligió la ciudad jebusea como su morada eterna, mostrando que Él puede redimir cualquier lugar para sus propósitos</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Integración y Redención</h3>
+                    <p>La integración pacífica de algunos jebuseos muestra que la salvación está disponible para todos los pueblos</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Victoria contra lo Imposible</h3>
+                    <p>La conquista de Jebús muestra que con Dios, ninguna fortaleza es impenetrable</p>
+                </div>
+            </div>
+            
+            <div class="biblical-box">
+                <h3>Legado Eterno</h3>
+                <p>La ciudad jebusea de Jebús, transformada en Jerusalén, se convirtió en:</p>
+                <ul>
+                    <li>Capital del reino unido de Israel</li>
+                    <li>Lugar del Templo de Salomón</li>
+                    <li>Centro de adoración a Dios</li>
+                    <li>Ciudad de David y de los grandes reyes</li>
+                    <li>Lugar escatológico del reinado mesiánico</li>
+                </ul>
+                
+                <p>Los jebuseos, aunque desaparecieron como pueblo distinto, dejaron un legado permanente a través de la ciudad que fundaron y que se convertiría en el centro del plan redentor de Dios para la humanidad.</p>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 IN GOD WE TRUST</p>
+                <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
