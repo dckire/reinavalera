@@ -1,84 +1,491 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-BYMJS3X12P');
-</script>
-	<meta name="google-site-verification" content="KWZFlVdcT-h9cB1Qnj0LgSLJP-J-NS4bgjhnQG_c140" />
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Amorreos</title>
-	<link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
-<style>
-	/* Parte inferior con margen de línea azul cielo y texto de derechos reservados */
-	.parte-inferior {
-    background-color: hsl(0, 0%, 3%);
-    padding: 10px;
-    text-align: center;
-    clear: both;
-  }
-  
-  .margen-azul {
-    border-top: 1px solid hwb(59 4% 19%);
-    padding-top: 10px;
-  }
-
-  h2 a {
-    color: #FFFFFF;
-  } 
-
-  .header {
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 50px;
-   background-color: #f0f0f0;
-   text-align: center;
-   padding: 0;
-  }
-	  .logo {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-  }
-  p {
-text-decoration: none;
-color: #fff;
-}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amorrheo - Pueblo Bíblico e Histórico</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(to right, #8B4513, #A0522D);
+            color: white;
+            padding: 50px 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        header::before {
+            content: "🏺";
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 3rem;
+            opacity: 0.7;
+        }
+        
+        h1 {
+            font-size: 3.8rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.4rem;
+            font-weight: 300;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .definition-box {
+            background-color: #f8f9fa;
+            border-left: 5px solid #8B4513;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #8B4513;
+            margin-bottom: 25px;
+            font-size: 2.2rem;
+            border-bottom: 3px solid #D2691E;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #A0522D;
+            margin: 30px 0 20px;
+            font-size: 1.7rem;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .highlight {
+            background-color: #f5e6d3;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #8B4513;
+        }
+        
+        .biblical-box {
+            background-color: #fff8f0;
+            border: 2px solid #D2691E;
+            padding: 30px;
+            margin: 35px 0;
+            border-radius: 15px;
+        }
+        
+        .scripture {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #8B4513;
+            margin: 20px 0;
+            padding-left: 20px;
+            border-left: 4px solid #8B4513;
+        }
+        
+        .scripture-ref {
+            font-weight: bold;
+            text-align: right;
+            color: #A0522D;
+            margin-top: 10px;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 5px solid #8B4513;
+        }
+        
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card h3 {
+            color: #8B4513;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        
+        .card ul {
+            padding-left: 20px;
+        }
+        
+        .card li {
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+        
+        .historical-section {
+            background-color: #f5f5f5;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .kings-section {
+            background-color: #e8f4f8;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border-left: 5px solid #17a2b8;
+        }
+        
+        .prophecy-section {
+            background-color: #fff0f5;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .map-container {
+            background-color: #f0f8ff;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .map-placeholder {
+            background: linear-gradient(135deg, #87CEEB, #98FB98);
+            height: 300px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2F4F4F;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .timeline {
+            background-color: #fafafa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .timeline-item {
+            margin-bottom: 25px;
+            padding-left: 20px;
+            border-left: 4px solid #8B4513;
+        }
+        
+        .timeline-date {
+            font-weight: bold;
+            color: #8B4513;
+            margin-bottom: 5px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(to right, #8B4513, #A0522D);
+            color: #FFF8DC;
+            font-size: 1.1rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+            border: 3px solid #D2691E;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            header::before {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            header {
+                padding: 30px 20px;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-	<div class="contenido">
-		<div class="titulo-superior-centralizado">
-			<h1></h1>
-		</div>
-		<div class="texto-columna">
-			<!-- Aquí va el contenido del capítulo -->
-       <p>AMORREOS (Acadio: Del O., Occidenta-les). De manera general se llamaba así a los pueblos semitas que habitaban al O de la Mesopotamia como nómadas en el desierto en el tercer milenio a.C. Otra teoría señala que su nombre proviene del dios que adora-ban, "martu" (en sumerio). Parte de esas tribus se expandieron hacia Mesopotamia, la conquistaron y establecieron una dinastía de la cual Hammurabi fue uno de sus más famosos gobernantes. Algunos piensan que fue en esa época cuando Abraham emigró.</p>
-
-<p>Otra parte fue más al S, y ocupó lo que sería la Tierra Prometida. Las Cartas de el- Amar-na mencionan varias veces pueblos de a. y sus relaciones con los "abiru" (hebreos). El térmi-no a. es usado para señalar, entre los descen-dientes de Canaán, o cananeos, a un grupo particular (Gn. 10:15-18). Pero a veces es también utilizado como equivalente a "cana-neo", pues se dice los "a. en cuya tierra habitáis" (Jos. 24:15; Jue. 6:10; Am. 2:9). Abraham vivió entre los a. e hizo amistad con algunos de ellos (Gn. 14:13). Pero eran pueblo de muy malas costumbres, cuyo pecado iba en au-mento (Gn. 15:16), por lo cual Dios decidió eliminarlos, junto con otros pueblos de Ca-naán (Gn. 15:18-21) y dar su tierra a los israelitas (Éx. 3:8,17; 23:23; 33:2; 34:11).</p>
-
-<p>Jacob luchó contra los a., y les tomó tierras ("con mi espada y con mi arco" [Gn. 48:22]). Los principales reyes a. hicieron resisten-cia y pelearon contra Israel (Nm. 21:21-23), pero fueron vencidos (Nm. 21:24-25). Estos hechos tuvieron amplia resonancia e influye-ron en las subsecuentes victorias contra los otros pueblos, pues Dios haría "con ellos como hizo con Sehón y con Og, reyes de los a., y con su tierra, a quienes destruyó" (Dt. 31:4-5). Josué derrotó a los a. en una famosa batalla en la cual cayeron piedras del cielo, cuando "el sol se detuvo y la luna se paró" (Jos. 10:6-13). Pero los israelitas no los destruyeron total-mente y éstos se quedaron viviendo entre ellos (Jue. 3:4-6) e indujeron al pueblo de Israel a la idolatría, que era una práctica por la cual los a. fueron famosos (1 R. 21:26; 2 R. 21:11). En tiempos de Salomón, a los "que quedaban de los a." se les aplicó trabajo forzado en obras públicas (1 R. 9:17-21).</p>
-
-    </div> 
-<div class="botones">
-	<button onclick="window.history.back()">◀️</button>
-		</div>
-	</div>
+    <div class="container">
+        <header>
+            <h1>Amorrheo</h1>
+            <p class="subtitle">El pueblo cananeo de la Biblia - Historia, significado y relevancia bíblica</p>
+        </header>
+        
+        <div class="content">
+            <div class="definition-box">
+                <h2>¿Quiénes eran los Amorrheos?</h2>
+                <p>Los <span class="highlight">amorrheos</span> (también llamados amorreos o amorritas) fueron un pueblo semítico que habitó en la región de Canaán durante el segundo milenio a.C. Son mencionados frecuentemente en el Antiguo Testamento como uno de los pueblos que ocupaban la Tierra Prometida antes de la conquista israelita.</p>
+            </div>
+            
+            <div class="biblical-box">
+                <h3>Referencias Bíblicas Principales</h3>
+                <p class="scripture">"Y dije a vosotros: Vosotros habéis llegado al monte del amorreo, el cual Jehová nuestro Dios nos da."</p>
+                <p class="scripture-ref">Deuteronomio 1:20 (Reina-Valera 1960)</p>
+                
+                <p class="scripture">"Y habló Jehová a Moisés, diciendo: Envía tú hombres que reconozcan la tierra de Canaán, la cual yo doy a los hijos de Israel... y ve qué tierra es, y el pueblo que la habita, si es fuerte o débil, si poco o numeroso; cómo es la tierra habitada, si es buena o mala..."</p>
+                <p class="scripture-ref">Números 13:1-2, 17-19</p>
+            </div>
+            
+            <h2>Origen del Nombre</h2>
+            <p>El término <span class="highlight">"Amorrheo"</span> proviene del hebreo <em>emori</em> (אֱמֹרִי), que posiblemente significa "los occidentales" o "habitantes del oeste". En las inscripciones mesopotámicas se les conocía como <em>Amurru</em>, que significa "oeste" en acadio.</p>
+            
+            <div class="historical-section">
+                <h3>Contexto Histórico y Arqueológico</h3>
+                <p>Los amorreos fueron un pueblo semítico occidental que originalmente eran nómadas del desierto sirio-arábigo. Aproximadamente alrededor del 2000 a.C., comenzaron a migrar hacia Mesopotamia y la región del Levante mediterráneo.</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Orígenes</h3>
+                        <ul>
+                            <li>Pueblo semítico occidental</li>
+                            <li>Procedentes del desierto sirio-arábigo</li>
+                            <li>Inicialmente nómadas pastoriles</li>
+                            <li>Migración hacia zonas fértiles</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Expansión</h3>
+                        <ul>
+                            <li>Establecieron dinastías en Mesopotamia</li>
+                            <li>Fundaron la primera dinastía de Babilonia</li>
+                            <li>Hammurabi era de origen amorreo</li>
+                            <li>Controlaron importantes ciudades-estado</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>En Canaán</h3>
+                        <ul>
+                            <li>Ocuparon la región montañosa</li>
+                            <li>Establecieron reinos fuertes</li>
+                            <li>Construyeron ciudades fortificadas</li>
+                            <li>Se mezclaron con otros pueblos cananeos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="map-container">
+                <h3>Territorio Amorrheo</h3>
+                <p>Los amorreos se establecieron principalmente en la región montañosa central de Canaán, incluyendo áreas como:</p>
+                
+                <div class="map-placeholder">
+                    Mapa del Antiguo Canaán<br>
+                    Territorio Amorrheo - Región Montañosa Central
+                </div>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Ciudades Principales</h3>
+                        <ul>
+                            <li>Hebrón</li>
+                            <li>Jerusalén (Jebus)</li>
+                            <li>Jebús</li>
+                            <li>Las ciudades de la montaña</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Límites Territoriales</h3>
+                        <ul>
+                            <li>Norte: Montañas de Efraín</li>
+                            <li>Sur: Desierto de Neguev</li>
+                            <li>Este: Valle del Jordán</li>
+                            <li>Oeste: Llanura costera</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="kings-section">
+                <h3>Reyes Amorrheos en la Biblia</h3>
+                <p>Las Escrituras mencionan específicamente a varios reyes amorreos que se opusieron a los israelitas:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Sehón</h3>
+                        <ul>
+                            <li>Rey de Hesbón</li>
+                            <li>Se negó a dejar pasar a Israel</li>
+                            <li>Enfrentó a Israel en batalla</li>
+                            <li>Fue derrotado por los israelitas</li>
+                            <li>Su territorio fue conquistado</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Og</h3>
+                        <ul>
+                            <li>Rey de Basán</li>
+                            <li>Uno de los últimos refaítas</li>
+                            <li>De gran estatura (gigante)</li>
+                            <li>Derrotado en Edrei</li>
+                            <li>Su cama de hierro era famosa</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <p class="scripture">"Porque solo Og rey de Basán había quedado del resto de los gigantes. He aquí su cama, una cama de hierro... la cual está en Rabá de los hijos de Amón."</p>
+                <p class="scripture-ref">Deuteronomio 3:11</p>
+            </div>
+            
+            <div class="timeline">
+                <h3>Cronología Bíblica de los Amorrheos</h3>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">~ 2000 a.C.</div>
+                    <p>Los amorreos se establecen en Canaán y Mesopotamia</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">~ 1800 a.C.</div>
+                    <p>Hammurabi, de origen amorreo, establece el primer imperio babilónico</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">~ 1400 a.C.</div>
+                    <p>Los amorreos son una de las naciones cananeas que habitan la Tierra Prometida</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">~ 1250 a.C.</div>
+                    <p>Los israelitas derrotan a Sehón y Og, reyes amorreos</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">Periodo de los Jueces</div>
+                    <p>Continúan las luchas contra los amorreos y otros pueblos cananeos</p>
+                </div>
+            </div>
+            
+            <div class="prophecy-section">
+                <h3>Profecías sobre los Amorrheos</h3>
+                <p>Dios había anunciado el destino de los amorreos siglos antes de la conquista israelita:</p>
+                
+                <p class="scripture">"Y en la cuarta generación volverán acá; porque aún no ha llegado a su colmo la maldad del amorreo hasta aquí."</p>
+                <p class="scripture-ref">Génesis 15:16</p>
+                
+                <p>Esta profecía indica que Dios permitió que los amorreos permanecieran en la tierra hasta que su maldad alcanzara un punto que justificara el juicio divino.</p>
+                
+                <h3>Prácticas Idólatras</h3>
+                <p>Los amorreos, como otros pueblos cananeos, practicaban:</p>
+                <ul>
+                    <li>Adoración a Baal y Astarté</li>
+                    <li>Sacrificios humanos</li>
+                    <li>Prácticas de adivinación y hechicería</li>
+                    <li>Inmoralidad ritual en sus cultos</li>
+                </ul>
+            </div>
+            
+            <h2>Significado Teológico</h2>
+            <p>La historia de los amorreos en la Biblia enseña importantes lecciones espirituales:</p>
+            
+            <div class="grid-container">
+                <div class="card">
+                    <h3>Paciencia Divina</h3>
+                    <p>Dios esperó 400 años antes de ejecutar juicio, dando tiempo para el arrepentimiento</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Justicia Divina</h3>
+                    <p>El juicio vino cuando la maldad alcanzó su medida completa</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Fidelidad de Dios</h3>
+                    <p>Dios cumplió su promesa de dar la tierra a Abraham y su descendencia</p>
+                </div>
+            </div>
+            
+            <div class="biblical-box">
+                <h3>Legado y Desaparición</h3>
+                <p>Después de la conquista israelita, los amorreos que sobrevivieron fueron gradualmente asimilados por otros pueblos. Algunos se integraron a la sociedad israelita, mientras que otros mantuvieron su identidad en áreas periféricas hasta el exilio babilónico.</p>
+                
+                <p>Su legado permanece en la Biblia como testimonio del juicio divino sobre la maldad y la fidelidad de Dios a sus promesas.</p>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 IN GOD WE TRUST</p>
+                <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+            </div>
+        </footer>
+    </div>
 </body>
-<!-- Parte inferior con margen de linea azul cielo y texto de derechos reservados-->
-<div class="parte-inferior">
-	<div class="margen-azul">
-	  <p>&copy; 2025 IN GOD WE TRUST</p>
-	  <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
-	</div>
-  </div>
 </html>
