@@ -1,124 +1,726 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-BYMJS3X12P');
-</script>
-	<meta name="google-site-verification" content="KWZFlVdcT-h9cB1Qnj0LgSLJP-J-NS4bgjhnQG_c140" />
-<title>Levitico</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body {
-font-family: Arial, sans-serif;
-background-color: #000000;
-margin: 0;
-padding: 0;
-text-align: center;
-}
-
-  title {
-text-decoration: none;
-color: #fff;
-}
-.container {
-max-width: 800px;
-margin: 40px auto;
-padding: 20px;
-background-color: #000000;
-border: 1px solid #ddd;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.contenido {
-  background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20230523/pngtree-bible-gif-hd-wallpaper-image_2683159.jpg');
-padding: 20px;
-margin: 40px auto;
-width: 80%;
-background-color: #000000;
-border: 1px solid #ddd;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-h1 {
-color: #333;
-}
-ul {
-list-style: none;
-padding: 0;
-margin: 0;
-}
-li {
-margin-bottom: 10px;
-}
-a {
-text-decoration: none;
-color: #fff;
-}
-a:hover {
-color: #23527c;
-}
-img {
-max-width: 100%;
-height: auto;
-margin: 20px auto;
-border-radius: 10px;
-}
-   button {
-    background-color: #337ab7;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  button:hover {
-    background-color: #23527c;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Levítico - Tercer Libro de la Biblia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #2E8B57 0%, #3CB371 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(to right, #2E8B57, #3CB371);
+            color: white;
+            padding: 50px 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        header::before {
+            content: "⛪";
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 3rem;
+            opacity: 0.7;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.4rem;
+            font-weight: 300;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .intro-section {
+            background-color: #f8f9fa;
+            border-left: 5px solid #2E8B57;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #2E8B57;
+            margin-bottom: 25px;
+            font-size: 2.2rem;
+            border-bottom: 3px solid #3CB371;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #2E8B57;
+            margin: 30px 0 20px;
+            font-size: 1.7rem;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .highlight {
+            background-color: #e8f5e9;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #2E8B57;
+        }
+        
+        .biblical-box {
+            background-color: #f1f8e9;
+            border: 2px solid #3CB371;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+        }
+        
+        .scripture {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #2E8B57;
+            margin: 15px 0;
+            padding-left: 20px;
+            border-left: 4px solid #2E8B57;
+        }
+        
+        .scripture-ref {
+            font-weight: bold;
+            text-align: right;
+            color: #3CB371;
+            margin-top: 10px;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #2E8B57;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card h3 {
+            color: #2E8B57;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+        
+        .card ul {
+            padding-left: 20px;
+        }
+        
+        .card li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .structure-section {
+            background-color: #f5f5f5;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .sacrifices-section {
+            background-color: #e8f5e9;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border-left: 5px solid #4caf50;
+        }
+        
+        .priesthood-section {
+            background-color: #f3e5f5;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .holiness-section {
+            background-color: #e3f2fd;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .feasts-section {
+            background-color: #fff8e1;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .key-verses {
+            background-color: #e8f4f8;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border: 2px solid #17a2b8;
+        }
+        
+        .application-section {
+            background-color: #fff3e0;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .chapters-list {
+            background-color: #fafafa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .chapter-item {
+            background: linear-gradient(135deg, #2E8B57, #3CB371);
+            color: white;
+            padding: 15px 10px;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: block;
+        }
+        
+        .chapter-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #3CB371, #2E8B57);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(to right, #2E8B57, #3CB371);
+            color: #FFF8DC;
+            font-size: 1.1rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+            border: 3px solid #3CB371;
+        }
+        
+        .navigation-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .nav-button {
+            background: linear-gradient(135deg, #2E8B57, #3CB371);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-button:hover {
+            background: linear-gradient(135deg, #3CB371, #2E8B57);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .sacrifices-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .sacrifice-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #2E8B57;
+        }
+        
+        .sacrifice-name {
+            font-weight: bold;
+            color: #2E8B57;
+            margin-bottom: 5px;
+        }
+        
+        .feasts-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .feast-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #3CB371;
+        }
+        
+        .feast-name {
+            font-weight: bold;
+            color: #2E8B57;
+            margin-bottom: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .chapter-grid {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            }
+            
+            .navigation-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .sacrifices-container,
+            .feasts-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            header {
+                padding: 30px 20px;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-<div class="contenido">
-<h1>Levitico</h1>
-<ul>
-
-  <li><a href="levitico1.html">Capítulo 1</a></li>
-<li><a href="levitico2.html">Capítulo 2</a></li>
-<li><a href="levitico3.html">Capítulo 3</a></li>
-  <li><a href="levitico4.html">Capitulo 4</a></li>
-        <li><a href="levitico5.html">Capítulo 5</a></li>
-<li><a href="levitico6.html">Capítulo 6</a></li>
-<li><a href="levitico7.html">Capítulo 7</a></li>
-  <li><a href="levitico8.html">Capitulo 8</a></li>
-        <li><a href="levitico9.html">Capítulo 9</a></li>
-<li><a href="levitico10.html">Capítulo 10</a></li>
-<li><a href="levitico11.html">Capítulo 11</a></li>
-  <li><a href="levitico12.html">Capitulo 12</a></li>
-        <li><a href="levitico13.html">Capítulo 13</a></li>
-<li><a href="levitico14.html">Capítulo 14</a></li>
-<li><a href="levitico15.html">Capítulo 15</a></li>
-  <li><a href="levitico16.html">Capitulo 16</a></li>
-        <li><a href="levitico17.html">Capítulo 17</a></li>
-<li><a href="levitico18.html">Capítulo 18</a></li>
-<li><a href="levitico19.html">Capítulo 19</a></li>
-  <li><a href="levitico20.html">Capitulo 20</a></li>
-        <li><a href="levitico21.html">Capítulo 21</a></li>
-<li><a href="levitico22.html">Capítulo 22</a></li>
-<li><a href="levitico23.html">Capítulo 23</a></li>
-  <li><a href="levitico24.html">Capitulo 24</a></li>
-        <li><a href="levitico25.html">Capítulo 25</a></li>
-<li><a href="levitico26.html">Capítulo 26</a></li>
-<li><a href="levitico27.html">Capítulo 27</a></li>
-</ul>
-  <button onclick="location.href='index.html'">◀️</button>
-<button onclick="window.history.back()">🏠</button>
-</div>
-</div>
+    <div class="container">
+        <header>
+            <h1>Levítico</h1>
+            <p class="subtitle">El Tercer Libro de la Biblia - Santidad y Adoración</p>
+        </header>
+        
+        <div class="content">
+            <div class="intro-section">
+                <h2>Introducción a Levítico</h2>
+                <p><span class="highlight">Levítico</span> es el tercer libro del Pentateuco y su nombre proviene de la tribu de Leví, de donde procedían los sacerdotes. El tema central es <strong>"Sed santos, porque yo Jehová vuestro Dios soy santo"</strong> (Levítico 19:2). El libro proporciona las instrucciones para el culto y la vida santa del pueblo de Dios.</p>
+                
+                <div class="biblical-box">
+                    <p class="scripture">"Llamó, pues, Jehová a Moisés y habló con él desde el tabernáculo de reunión, diciendo: Habla a los hijos de Israel y diles:..."</p>
+                    <p class="scripture-ref">Levítico 1:1-2 (Reina-Valera 1569-1602)</p>
+                </div>
+            </div>
+            
+            <div class="structure-section">
+                <h2>Estructura del Libro</h2>
+                <p>Levítico está organizado alrededor del concepto de santidad y el acceso a la presencia de Dios:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Leyes sobre Sacrificios (Capítulos 1-7)</h3>
+                        <ul>
+                            <li>Holocausto - Consagración total</li>
+                            <li>Ofrenda de cereal - Servicio y dedicación</li>
+                            <li>Pacífica - Comunión y acción de gracias</li>
+                            <li>Por el pecado - Expiación</li>
+                            <li>Por la culpa - Restitución</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Consagración Sacerdotal (Capítulos 8-10)</h3>
+                        <ul>
+                            <li>Ordenación de Aarón y sus hijos</li>
+                            <li>Inauguración del sacerdocio</li>
+                            <li>Muerte de Nadab y Abiú</li>
+                            <li>Regulaciones para los sacerdotes</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Leyes de Pureza (Capítulos 11-16)</h3>
+                        <ul>
+                            <li>Alimentos limpios e inmundos</li>
+                            <li>Pureza después del parto</li>
+                            <li>Lepra y purificación</li>
+                            <li>Flujos corporales</li>
+                            <li>Día de la Expiación</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Código de Santidad (Capítulos 17-27)</h3>
+                        <ul>
+                            <li>Leyes morales y civiles</li>
+                            <li>Relaciones santas</li>
+                            <li>Fiestas solemnes</li>
+                            <li>Año del Jubileo</li>
+                            <li>Bendiciones y maldiciones</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sacrifices-section">
+                <h2>El Sistema de Sacrificios</h2>
+                <p>Los sacrificios eran el medio establecido por Dios para que el pueblo pecador pudiera acercarse a Él:</p>
+                
+                <div class="sacrifices-container">
+                    <div class="sacrifice-item">
+                        <div class="sacrifice-name">1. Holocausto (Olah)</div>
+                        <div>Ofrenda quemada completa - Consagración total a Dios. Prefigura la entrega total de Cristo.</div>
+                    </div>
+                    <div class="sacrifice-item">
+                        <div class="sacrifice-name">2. Ofrenda de Cereal (Minjah)</div>
+                        <div>Ofrenda vegetal - Reconocimiento de la provisión de Dios. Sin derramamiento de sangre.</div>
+                    </div>
+                    <div class="sacrifice-item">
+                        <div class="sacrifice-name">3. Sacrificio de Paz (Shelamim)</div>
+                        <div>Comunión y acción de gracias - Parte para Dios, parte para sacerdotes, parte para el oferente.</div>
+                    </div>
+                    <div class="sacrifice-item">
+                        <div class="sacrifice-name">4. Sacrificio por el Pecado (Chattat)</div>
+                        <div>Expiación por pecados no intencionales - Purificación del santuario y del pueblo.</div>
+                    </div>
+                    <div class="sacrifice-item">
+                        <div class="sacrifice-name">5. Sacrificio por la Culpa (Asham)</div>
+                        <div>Restitución por ofensas - Incluye compensación más un 20% por daños a otros.</div>
+                    </div>
+                </div>
+                
+                <div class="biblical-box">
+                    <p class="scripture">"Porque la vida de la carne en la sangre está, y yo os la he dado para hacer expiación sobre el altar por vuestras almas; y la misma sangre hará expiación por la persona."</p>
+                    <p class="scripture-ref">Levítico 17:11</p>
+                </div>
+            </div>
+            
+            <div class="priesthood-section">
+                <h2>El Sacerdocio </h2>
+                <p>Dios establece un sacerdocio mediador entre Él y Su pueblo:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Consagración</h3>
+                        <ul>
+                            <li>Lavamiento con agua</li>
+                            <li>Vestiduras especiales</li>
+                            <li>Unción con aceite</li>
+                            <li>Sacrificios de ordenación</li>
+                            <li>Sangre aplicada</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Vestiduras Sagradas</h3>
+                        <ul>
+                            <li>Efod - Túnica con hombreras</li>
+                            <li>Pectoral - 12 piedras por tribus</li>
+                            <li>Urim y Tumim - Para discernimiento</li>
+                            <li>Manto azul - Campanillas y granadas</li>
+                            <li>Mitra - "Santidad a Jehová"</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Responsabilidades</h3>
+                        <ul>
+                            <li>Ofrecer sacrificios</li>
+                            <li>Enseñar la ley</li>
+                            <li>Mantener el santuario</li>
+                            <li>Juzgar casos difíciles</li>
+                            <li>Interceder por el pueblo</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="holiness-section">
+                <h2>El Código de Santidad</h2>
+                <p>Los capítulos 17-27 contienen leyes que distinguen a Israel como pueblo santo de Dios:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Santidad Personal</h3>
+                        <ul>
+                            <li>Prohibición de idolatría</li>
+                            <li>Leyes sexuales morales</li>
+                            <li>Respeto a padres y ancianos</li>
+                            <li>Justicia para pobres y extranjeros</li>
+                            <li>Honestidad en negocios</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Santidad Social</h3>
+                        <ul>
+                            <li>"Amarás a tu prójimo como a ti mismo"</li>
+                            <li>Prohibición de venganza</li>
+                            <li>Trato justo al pobre</li>
+                            <li>Respeto al discapacitado</li>
+                            <li>Pesos y medidas honestos</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Principio de Retribución</h3>
+                        <ul>
+                            <li>"Ojo por ojo, diente por diente"</li>
+                            <li>Principio de proporcionalidad</li>
+                            <li>Límite a la venganza</li>
+                            <li>Justicia restaurativa</li>
+                            <li>Valor de la vida humana</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="biblical-box">
+                    <p class="scripture">"No te vengarás, ni guardarás rencor a los hijos de tu pueblo, sino amarás a tu prójimo como a ti mismo. Yo Jehová."</p>
+                    <p class="scripture-ref">Levítico 19:18</p>
+                </div>
+            </div>
+            
+            <div class="feasts-section">
+                <h2>Las Fiestas Solemnes de Jehová</h2>
+                <p>Dios establece un calendario sagrado para recordar Sus obras y celebrar Su provisión:</p>
+                
+                <div class="feasts-container">
+                    <div class="feast-item">
+                        <div class="feast-name">1. Pascua (Pesaj)</div>
+                        <div>14 de Nisán - Liberación de Egipto. Cordero sin defecto. Cristo nuestra Pascua.</div>
+                    </div>
+                    <div class="feast-item">
+                        <div class="feast-name">2. Panes Sin Levadura (Matzot)</div>
+                        <div>15-21 Nisán - Santificación. Separación del pecado (levadura).</div>
+                    </div>
+                    <div class="feast-item">
+                        <div class="feast-name">3. Primicias (Bikkurim)</div>
+                        <div>16 Nisán - Primeros frutos. Resurrección de Cristo como primicia.</div>
+                    </div>
+                    <div class="feast-item">
+                        <div class="feast-name">4. Pentecostés (Shavuot)</div>
+                        <div>50 días después - Ley en Sinaí. Espíritu Santo en Hechos 2.</div>
+                    </div>
+                    <div class="feast-item">
+                        <div class="feast-name">5. Trompetas (Rosh Hashanah)</div>
+                        <div>1 Tishri - Año nuevo civil. Llamado al arrepentimiento.</div>
+                    </div>
+                    <div class="feast-item">
+                        <div class="feast-name">6. Expiación (Yom Kippur)</div>
+                        <div>10 Tishri - Día más sagrado. Expiación nacional. Ayuno completo.</div>
+                    </div>
+                    <div class="feast-item">
+                        <div class="feast-name">7. Tabernáculos (Sukkot)</div>
+                        <div>15-21 Tishri - Peregrinación en desierto. Gozo y acción de gracias.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="key-verses">
+                <h2>Versículos Clave de Levítico</h2>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Llamado a la Santidad</h3>
+                        <p class="scripture">"Habla a toda la congregación de los hijos de Israel, y diles: Santos seréis, porque santo soy yo Jehová vuestro Dios."</p>
+                        <p class="scripture-ref">Levítico 19:2</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Gran Mandamiento</h3>
+                        <p class="scripture">"Amarás a tu prójimo como a ti mismo. Yo Jehová."</p>
+                        <p class="scripture-ref">Levítico 19:18</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Principio de Expiación</h3>
+                        <p class="scripture">"Porque la vida de la carne en la sangre está, y yo os la he dado para hacer expiación sobre el altar por vuestras almas; y la misma sangre hará expiación de la persona."</p>
+                        <p class="scripture-ref">Levítico 17:11</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Año del Jubileo</h3>
+                        <p class="scripture">"Y santificaréis el año cincuenta, y pregonaréis libertad en la tierra a todos sus moradores; ese año os será de jubileo, y volveréis cada uno a su posesión, y cada cual volverá a su familia."</p>
+                        <p class="scripture-ref">Levítico 25:10</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="application-section">
+                <h2>Aplicación para Hoy</h2>
+                <p>Levítico contiene principios eternos relevantes para la vida cristiana:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Cristo el Cumplimiento</h3>
+                        <p>Jesús es el perfecto sacrificio, sumo sacerdote, y cumplimiento de todas las fiestas y símbolos levíticos.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Santidad Práctica</h3>
+                        <p>El llamado a la santidad sigue vigente: "Sed santos porque yo soy santo" (1 Pedro 1:16).</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Adoración en Verdad</h3>
+                        <p>Los principios de acercamiento a Dios enseñan reverencia, preparación y adoración aceptable.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Amor al Prójimo</h3>
+                        <p>El mandamiento de amar al prójimo (19:18) es citado por Jesús como segundo gran mandamiento.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chapters-list">
+                <h2>Capítulos de Levítico</h2>
+                <p>Selecciona un capítulo para estudiar:</p>
+                
+                <div class="chapter-grid">
+                    <a href="levitico1.html" class="chapter-item">Capítulo 1</a>
+                    <a href="levitico2.html" class="chapter-item">Capítulo 2</a>
+                    <a href="levitico3.html" class="chapter-item">Capítulo 3</a>
+                    <a href="levitico4.html" class="chapter-item">Capítulo 4</a>
+                    <a href="levitico5.html" class="chapter-item">Capítulo 5</a>
+                    <a href="levitico6.html" class="chapter-item">Capítulo 6</a>
+                    <a href="levitico7.html" class="chapter-item">Capítulo 7</a>
+                    <a href="levitico8.html" class="chapter-item">Capítulo 8</a>
+                    <a href="levitico9.html" class="chapter-item">Capítulo 9</a>
+                    <a href="levitico10.html" class="chapter-item">Capítulo 10</a>
+                    <a href="levitico11.html" class="chapter-item">Capítulo 11</a>
+                    <a href="levitico12.html" class="chapter-item">Capítulo 12</a>
+                    <a href="levitico13.html" class="chapter-item">Capítulo 13</a>
+                    <a href="levitico14.html" class="chapter-item">Capítulo 14</a>
+                    <a href="levitico15.html" class="chapter-item">Capítulo 15</a>
+                    <a href="levitico16.html" class="chapter-item">Capítulo 16</a>
+                    <a href="levitico17.html" class="chapter-item">Capítulo 17</a>
+                    <a href="levitico18.html" class="chapter-item">Capítulo 18</a>
+                    <a href="levitico19.html" class="chapter-item">Capítulo 19</a>
+                    <a href="levitico20.html" class="chapter-item">Capítulo 20</a>
+                    <a href="levitico21.html" class="chapter-item">Capítulo 21</a>
+                    <a href="levitico22.html" class="chapter-item">Capítulo 22</a>
+                    <a href="levitico23.html" class="chapter-item">Capítulo 23</a>
+                    <a href="levitico24.html" class="chapter-item">Capítulo 24</a>
+                    <a href="levitico25.html" class="chapter-item">Capítulo 25</a>
+                    <a href="levitico26.html" class="chapter-item">Capítulo 26</a>
+                    <a href="levitico27.html" class="chapter-item">Capítulo 27</a>
+                </div>
+            </div>
+            
+            <div class="navigation-buttons">
+                <a href="exodo.html" class="nav-button">← Éxodo</a>
+                <a href="index.html" class="nav-button">🏠 Inicio</a>
+                <a href="numeros.html" class="nav-button">Números →</a>
+            </div>
+            
+            <div class="biblical-box">
+                <h3>Legado de Levítico</h3>
+                <p>Levítico establece principios fundamentales que encuentran su cumplimiento en Cristo:</p>
+                <ul>
+                    <li><strong>Sacrificio</strong> - Cristo es el Cordero perfecto que quita el pecado del mundo</li>
+                    <li><strong>Sacerdocio</strong> - Jesús es nuestro Sumo Sacerdote según el orden de Melquisedec</li>
+                    <li><strong>Santidad</strong> - Los creyentes son llamados a vivir en santidad práctica</li>
+                    <li><strong>Expiación</strong> - La sangre de Cristo nos limpia de todo pecado</li>
+                    <li><strong>Comunión</strong> - Por Cristo tenemos acceso directo al Padre</li>
+                </ul>
+                
+                <p class="scripture">"Porque no entró Cristo en el santuario hecho de mano, figura del verdadero, sino en el cielo mismo para presentarse ahora por nosotros ante Dios; y no para ofrecerse muchas veces... pero ahora, en la consumación de los siglos, se presentó una vez para siempre por el sacrificio de sí mismo para quitar de en medio el pecado."</p>
+                <p class="scripture-ref">Hebreos 9:24-26</p>
+                
+                <p>El libro de Levítico nos muestra la santidad de Dios, la seriedad del pecado, y la provisión divina para la redención, todo lo cual apunta hacia la obra consumada de Jesucristo.</p>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 IN GOD WE TRUST</p>
+                <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
