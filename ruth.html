@@ -1,93 +1,729 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-BYMJS3X12P');
-</script>
-	<meta name="google-site-verification" content="KWZFlVdcT-h9cB1Qnj0LgSLJP-J-NS4bgjhnQG_c140" />
-<title>Ruth</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body {
-font-family: Arial, sans-serif;
-background-color: #f0f0f0;
-margin: 0;
-padding: 0;
-text-align: center;
-}
-.container {
-max-width: 800px;
-margin: 40px auto;
-padding: 20px;
-background-color: #fff;
-border: 1px solid #ddd;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.contenido {
-  background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20230523/pngtree-bible-gif-hd-wallpaper-image_2683159.jpg');
-padding: 20px;
-margin: 40px auto;
-width: 80%;
-background-color: #fff;
-border: 1px solid #ddd;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-h1 {
-color: #333;
-}
-ul {
-list-style: none;
-padding: 0;
-margin: 0;
-}
-li {
-margin-bottom: 10px;
-}
-a {
-text-decoration: none;
-color: #fff;
-}
-a:hover {
-color: #23527c;
-}
-img {
-max-width: 100%;
-height: auto;
-margin: 20px auto;
-border-radius: 10px;
-}
-   button {
-    background-color: #337ab7;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  button:hover {
-    background-color: #23527c;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rut - Octavo Libro de la Biblia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: white;
+            padding: 50px 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        header::before {
+            content: "🇮🇱";
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 3rem;
+            opacity: 0.7;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.4rem;
+            font-weight: 300;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .intro-section {
+            background-color: #f8f9fa;
+            border-left: 5px solid #1e3c72;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #1e3c72;
+            margin-bottom: 25px;
+            font-size: 2.2rem;
+            border-bottom: 3px solid #2a5298;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #1e3c72;
+            margin: 30px 0 20px;
+            font-size: 1.7rem;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .highlight {
+            background-color: #e3f2fd;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #1e3c72;
+        }
+        
+        .biblical-box {
+            background-color: #e8eaf6;
+            border: 2px solid #1e3c72;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+        }
+        
+        .scripture {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #1e3c72;
+            margin: 15px 0;
+            padding-left: 20px;
+            border-left: 4px solid #1e3c72;
+        }
+        
+        .scripture-ref {
+            font-weight: bold;
+            text-align: right;
+            color: #2a5298;
+            margin-top: 10px;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #1e3c72;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card h3 {
+            color: #1e3c72;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+        
+        .card ul {
+            padding-left: 20px;
+        }
+        
+        .card li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .structure-section {
+            background-color: #f5f5f5;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .story-section {
+            background-color: #e3f2fd;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border-left: 5px solid #1976d2;
+        }
+        
+        .characters-section {
+            background-color: #e8f5e9;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .themes-section {
+            background-color: #fff8e1;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .key-verses {
+            background-color: #f3e5f5;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border: 2px solid #7b1fa2;
+        }
+        
+        .application-section {
+            background-color: #fff3e0;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .chapters-list {
+            background-color: #fafafa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .chapter-item {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 15px 10px;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: block;
+        }
+        
+        .chapter-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #2a5298, #1e3c72);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: #FFF8DC;
+            font-size: 1.1rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+            border: 3px solid #2a5298;
+        }
+        
+        .navigation-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .nav-button {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-button:hover {
+            background: linear-gradient(135deg, #2a5298, #1e3c72);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .story-timeline {
+            background: linear-gradient(135deg, #87CEEB, #98FB98);
+            height: 300px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2F4F4F;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .characters-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .character-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #1e3c72;
+        }
+        
+        .character-name {
+            font-weight: bold;
+            color: #1e3c72;
+            margin-bottom: 5px;
+        }
+        
+        .genealogy-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .genealogy-item {
+            background: #e3f2fd;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .chapter-grid {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            }
+            
+            .navigation-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .characters-container,
+            .genealogy-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            header {
+                padding: 30px 20px;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-<div class="contenido">
-<h1>Ruth</h1>
-<ul>
-<li><a href="ruth1.html">Capítulo 1</a></li>
-<li><a href="ruth2.html">Capítulo 2</a></li>
-<li><a href="ruth3.html">Capítulo 3</a></li>
-  <li><a href="ruth4.html">Capítulo 4</a></li>
-<button onclick="window.history.back()">Volver</button>
-</div>
-</div>
+    <div class="container">
+        <header>
+            <h1>Rut</h1>
+            <p class="subtitle">El Octavo Libro de la Biblia - Historia de Lealtad y Redención</p>
+        </header>
+        
+        <div class="content">
+            <div class="intro-section">
+                <h2>Introducción a Rut</h2>
+                <p><span class="highlight">Rut</span> es el octavo libro de la Biblia y una de las dos narraciones bíblicas que lleva el nombre de una mujer (la otra es Ester). Este breve pero poderoso libro cuenta la historia de una mujer moabita que, a través de su lealtad y fe, se convierte en antepasada del rey David y, finalmente, de Jesucristo.</p>
+                
+                <div class="biblical-box">
+                    <p class="scripture">"No me ruegues que te deje, y me aparte de ti; porque a dondequiera que tú fueres, iré yo, y dondequiera que vivieres, viviré. Tu pueblo será mi pueblo, y tu Dios mi Dios."</p>
+                    <p class="scripture-ref">Rut 1:16 (Reina-Valera 1569-1602)</p>
+                </div>
+            </div>
+            
+            <div class="structure-section">
+                <h2>Estructura del Libro</h2>
+                <p>Rut está organizado en cuatro capítulos que narran una historia completa de tragedia, lealtad y redención:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Capítulo 1: Tragedia y Decisión</h3>
+                        <ul>
+                            <li>Hambre en Belén y migración a Moab</li>
+                            <li>Muerte de Elimelec y sus hijos</li>
+                            <li>Regreso de Noemí a Belén</li>
+                            <li>Decisión de Rut de seguir a Noemí</li>
+                            <li>Llegada a Belén en tiempo de cosecha</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Capítulo 2: Rut en el Campo de Booz</h3>
+                        <ul>
+                            <li>Rut espigando en el campo de Booz</li>
+                            <li>Encuentro y bondad de Booz</li>
+                            <li>Protección y provisión para Rut</li>
+                            <li>Conversación con Noemí</li>
+                            <li>Reconocimiento de Booz como pariente</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Capítulo 3: Petición de Redención</h3>
+                        <ul>
+                            <li>Plan de Noemí para Rut</li>
+                            <li>Rut a los pies de Booz en la era</li>
+                            <li>Petición de redención</li>
+                            <li>Promesa de Booz</li>
+                            <li>Regreso a casa de Noemí</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Capítulo 4: Redención y Legado</h3>
+                        <ul>
+                            <li>Booz en la puerta de la ciudad</li>
+                            <li>Negociación con el pariente más cercano</li>
+                            <li>Booz redime la heredad y toma a Rut por esposa</li>
+                            <li>Nacimiento de Obed</li>
+                            <li>Genealogía que conecta con David</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="story-section">
+                <h2>La Historia de Rut</h2>
+                <p>Esta conmovedora historia se desarrolla durante el período de los Jueces y presenta un contraste con la violencia y apostasía de esa época:</p>
+                
+                <div class="story-timeline">
+                    Línea de Tiempo de Rut<br>
+                    Hambre → Moab → Regreso → Espigar → Redención → Legado
+                </div>
+                
+                <h3>Elementos Clave de la Historia</h3>
+                <div class="characters-container">
+                    <div class="character-item">
+                        <div class="character-name">1. Contexto Histórico</div>
+                        <div>Período de los Jueces, tiempo de crisis espiritual y moral.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-name">2. Crisis Familiar</div>
+                        <div>Una familia judía huye del hambre y sufre tragedia en tierra extranjera.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-name">3. Lealtad Transformadora</div>
+                        <div>Rut elige seguir a Noemí y adoptar su pueblo y su Dios.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-name">4. Providencia Divina</div>
+                        <div>Dios guía los eventos hacia la redención y restauración.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-name">5. Redención Matrimonial</div>
+                        <div>Booz actúa como pariente-redentor según la ley mosaica.</div>
+                    </div>
+                    <div class="character-item">
+                        <div class="character-name">6. Legado Eterno</div>
+                        <div>El hijo de Rut y Booz se convierte en abuelo del rey David.</div>
+                    </div>
+                </div>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Leyes Aplicadas</h3>
+                        <ul>
+                            <li>Ley del pariente-redentor (Levítico 25:25)</li>
+                            <li>Ley del levirato (Deuteronomio 25:5-10)</li>
+                            <li>Ley de espigar (Levítico 19:9-10)</li>
+                            <li>Derecho de los pobres y extranjeros</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Valores Destacados</h3>
+                        <ul>
+                            <li>Lealtad familiar</li>
+                            <li>Fe en medio de la adversidad</li>
+                            <li>Integridad en las relaciones</li>
+                            <li>Responsabilidad comunitaria</li>
+                            <li>Providencia divina</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="characters-section">
+                <h2>Personajes Principales</h2>
+                <p>La historia de Rut presenta personajes memorables que muestran diferentes aspectos de la fe y la lealtad:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Rut la Moabita</h3>
+                        <ul>
+                            <li>Mujer moabita, viuda sin hijos</li>
+                            <li>Ejemplo de lealtad y fe</li>
+                            <li>Se convierte al Dios de Israel</li>
+                            <li>Antepasada del rey David y de Jesús</li>
+                            <li>Modelo de virtud y diligencia</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Noemí</h3>
+                        <ul>
+                            <li>Mujer israelita de Belén</li>
+                            <li>Experimenta profunda pérdida</li>
+                            <li>Guía espiritual para Rut</li>
+                            <li>Testimonio de la soberanía de Dios</li>
+                            <li>Restauración de su alegría</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Booz</h3>
+                        <ul>
+                            <li>Pariente de Elimelec</li>
+                            <li>Hombre honorable y piadoso</li>
+                            <li>Ejemplo del pariente-redentor</li>
+                            <li>Hombre de integridad y compasión</li>
+                            <li>Antepasado del rey David</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Personajes Secundarios</h3>
+                        <ul>
+                            <li><strong>Elimelec</strong> - Esposo de Noemí</li>
+                            <li><strong>Mahlón y Quelión</strong> - Hijos de Noemí</li>
+                            <li><strong>Orfa</strong> - Otra nuera de Noemí</li>
+                            <li><strong>Pariente anónimo</strong> - Pariente más cercano</li>
+                            <li><strong>Obed</strong> - Hijo de Rut y Booz</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>Significado de los Nombres</h3>
+                <div class="genealogy-container">
+                    <div class="genealogy-item">Noemí - "Mi dulzura"</div>
+                    <div class="genealogy-item">Mara - "Amarga" (nombre que se da)</div>
+                    <div class="genealogy-item">Rut - "Amistad" o "Compañera"</div>
+                    <div class="genealogy-item">Booz - "En él hay fuerza"</div>
+                    <div class="genealogy-item">Obed - "Siervo" o "Adorador"</div>
+                </div>
+            </div>
+            
+            <div class="themes-section">
+                <h2>Temas Principales de Rut</h2>
+                <p>El libro de Rut desarrolla varios temas teológicos importantes en una narrativa personal:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Lealtad y Fidelidad</h3>
+                        <ul>
+                            <li>Lealtad de Rut hacia Noemí</li>
+                            <li>Fidelidad de Booz a la ley</li>
+                            <li>Lealtad de Dios a su pueblo</li>
+                            <li>Jesed - amor leal y misericordioso</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Redención</h3>
+                        <ul>
+                            <li>Booz como tipo de Cristo</li>
+                            <li>Redención de tierra y linaje</li>
+                            <li>Restauración de Noemí</li>
+                            <li>Inclusión de los gentiles</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Providencia Divina</h3>
+                        <ul>
+                            <li>Dios obra detrás de escena</li>
+                            <li>Coincidencias divinamente ordenadas</li>
+                            <li>Bendición en medio del dolor</li>
+                            <li>Propósitos eternos en eventos cotidianos</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="biblical-box">
+                    <p class="scripture">"Bendito seas de Jehová, hija mía; has hecho mejor tu postrera bondad que la primera, no yendo tras los jóvenes, sean pobres o ricos."</p>
+                    <p class="scripture-ref">Rut 3:10</p>
+                </div>
+            </div>
+            
+            <div class="key-verses">
+                <h2>Versículos Clave de Rut</h2>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Declaración de Lealtad</h3>
+                        <p class="scripture">"No me ruegues que te deje, y me aparte de ti; porque a dondequiera que tú fueres, iré yo, y dondequiera que vivieres, viviré. Tu pueblo será mi pueblo, y tu Dios mi Dios."</p>
+                        <p class="scripture-ref">Rut 1:16</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Bendición de Booz</h3>
+                        <p class="scripture">"Bendita seas tú de Jehová, hija mía; has hecho mejor tu postrera bondad que la primera, no yendo tras los jóvenes, sean pobres o ricos."</p>
+                        <p class="scripture-ref">Rut 3:10</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Reconocimiento del Pueblo</h3>
+                        <p class="scripture">"Y dijeron todas las personas que estaban a la puerta con los ancianos: Testigos somos. Jehová haga a la mujer que entra en tu casa como a Raquel y a Lea, las cuales edificaron la casa de Israel..."</p>
+                        <p class="scripture-ref">Rut 4:11</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Legado Eterno</h3>
+                        <p class="scripture">"Y Obed engendró a Isaí, e Isaí engendró a David."</p>
+                        <p class="scripture-ref">Rut 4:22</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="application-section">
+                <h2>Aplicación para el Cristiano Hoy</h2>
+                <p>Rut contiene lecciones espirituales profundamente relevantes para la vida cristiana:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Lealtad en Relaciones</h3>
+                        <p>El compromiso de Rut con Noemí nos desafía a ser leales en nuestras relaciones familiares y espirituales.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Fe en la Providencia</h3>
+                        <p>La historia muestra cómo Dios obra detrás de escena, incluso cuando no podemos ver su mano.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Redención en Cristo</h3>
+                        <p>Booz como pariente-redentor prefigura a Cristo, nuestro Redentor que nos rescata y nos da nueva vida.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Inclusión en el Pueblo de Dios</h3>
+                        <p>Rut, la extranjera, es incluida en el pueblo de Dios, mostrando que la gracia es para todos.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chapters-list">
+                <h2>Capítulos de Rut</h2>
+                <p>Selecciona un capítulo para estudiar:</p>
+                
+                <div class="chapter-grid">
+                    <a href="rut1.html" class="chapter-item">Capítulo 1</a>
+                    <a href="rut2.html" class="chapter-item">Capítulo 2</a>
+                    <a href="rut3.html" class="chapter-item">Capítulo 3</a>
+                    <a href="rut4.html" class="chapter-item">Capítulo 4</a>
+                </div>
+            </div>
+            
+            <div class="navigation-buttons">
+                <a href="jueces.html" class="nav-button">← Jueces</a>
+                <a href="index.html" class="nav-button">🏠 Inicio</a>
+                <a href="1samuel.html" class="nav-button">1 Samuel →</a>
+            </div>
+            
+            <div class="biblical-box">
+                <h3>Legado de Rut</h3>
+                <p>El libro de Rut establece patrones importantes para entender el plan redentor de Dios:</p>
+                <ul>
+                    <li><strong>Inclusión de los Gentiles</strong> - Rut, una moabita, es incorporada al pueblo de Dios</li>
+                    <li><strong>Providencia Divina</strong> - Dios obra a través de circunstancias ordinarias</li>
+                    <li><strong>Tipología de Cristo</strong> - Booz como figura del Redentor venidero</li>
+                    <li><strong>Importancia de la Lealtad</strong> - El jesed (amor leal) como valor central</li>
+                    <li><strong>Genealogía Mesiánica</strong> - Rut en la línea ancestral de David y Jesús</li>
+                </ul>
+                
+                <p class="scripture">"Y las mujeres decían a Noemí: Alabado sea Jehová, que hizo que no te faltase hoy pariente, cuyo nombre será celebrado en Israel."</p>
+                <p class="scripture-ref">Rut 4:14</p>
+                
+                <p>El libro de Rut nos muestra que Dios está obrando en las historias ordinarias de personas comunes para cumplir sus propósitos eternos. En medio del período turbulento de los Jueces, esta historia brilla como un rayo de esperanza y gracia.</p>
+                
+                <h3>Genealogía Significativa</h3>
+                <div class="genealogy-container">
+                    <div class="genealogy-item">Fares (hijo de Judá)</div>
+                    <div class="genealogy-item">Esrom</div>
+                    <div class="genealogy-item">Aram</div>
+                    <div class="genealogy-item">Aminadab</div>
+                    <div class="genealogy-item">Naasón</div>
+                    <div class="genealogy-item">Salmon</div>
+                    <div class="genealogy-item">Booz + Rut</div>
+                    <div class="genealogy-item">Obed</div>
+                    <div class="genealogy-item">Isaí</div>
+                    <div class="genealogy-item">David</div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 IN GOD WE TRUST</p>
+                <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
