@@ -1,129 +1,759 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
- <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-BYMJS3X12P');
-</script>
-	<meta name="google-site-verification" content="KWZFlVdcT-h9cB1Qnj0LgSLJP-J-NS4bgjhnQG_c140" />
-<title>Numeros</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body {
-font-family: Arial, sans-serif;
-background-color: #f0f0f0;
-margin: 0;
-padding: 0;
-text-align: center;
-}
-.container {
-max-width: 800px;
-margin: 40px auto;
-padding: 20px;
-background-color: #fff;
-border: 1px solid #ddd;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.contenido {
- padding: 20px;
-   background-image: url('https://images.ctfassets.net/lzny33ho1g45/66zDmwVz2N4aN4k589RRjB/36f5339cd45ed61b6560292a696e91d5/notes?w=1400');
-
-margin: 40px auto;
-width: 80%;
-background-color: #fff;
-border: 1px solid #ddd;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-h1 {
-color: #333;
-}
-ul {
-list-style: none;
-padding: 0;
-margin: 0;
-}
-li {
-margin-bottom: 10px;
-}
-a {
-text-decoration: none;
-color: #fff;
-}
-a:hover {
-color: #23527c;
-}
-img {
-max-width: 100%;
-height: auto;
-margin: 20px auto;
-border-radius: 10px;
-}
-
-  button {
-    background-color: #337ab7;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  button:hover {
-    background-color: #23527c;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números - Cuarto Libro de la Biblia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #8B4513 0%, #CD853F 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(to right, #8B4513, #CD853F);
+            color: white;
+            padding: 50px 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        header::before {
+            content: "🔢";
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 3rem;
+            opacity: 0.7;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.4rem;
+            font-weight: 300;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .intro-section {
+            background-color: #f8f9fa;
+            border-left: 5px solid #8B4513;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #8B4513;
+            margin-bottom: 25px;
+            font-size: 2.2rem;
+            border-bottom: 3px solid #CD853F;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #8B4513;
+            margin: 30px 0 20px;
+            font-size: 1.7rem;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .highlight {
+            background-color: #f5e6d3;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #8B4513;
+        }
+        
+        .biblical-box {
+            background-color: #fff8f0;
+            border: 2px solid #CD853F;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+        }
+        
+        .scripture {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #8B4513;
+            margin: 15px 0;
+            padding-left: 20px;
+            border-left: 4px solid #8B4513;
+        }
+        
+        .scripture-ref {
+            font-weight: bold;
+            text-align: right;
+            color: #CD853F;
+            margin-top: 10px;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #8B4513;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card h3 {
+            color: #8B4513;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+        
+        .card ul {
+            padding-left: 20px;
+        }
+        
+        .card li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .structure-section {
+            background-color: #f5f5f5;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .census-section {
+            background-color: #e8f4f8;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border-left: 5px solid #17a2b8;
+        }
+        
+        .journey-section {
+            background-color: #f0fff0;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .rebellion-section {
+            background-color: #fff0f5;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .preparation-section {
+            background-color: #fff8e1;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .key-verses {
+            background-color: #e6f7ff;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border: 2px solid #1890ff;
+        }
+        
+        .application-section {
+            background-color: #fff3e0;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .chapters-list {
+            background-color: #fafafa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .chapter-item {
+            background: linear-gradient(135deg, #8B4513, #CD853F);
+            color: white;
+            padding: 15px 10px;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: block;
+        }
+        
+        .chapter-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #CD853F, #8B4513);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(to right, #8B4513, #CD853F);
+            color: #FFF8DC;
+            font-size: 1.1rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+            border: 3px solid #CD853F;
+        }
+        
+        .navigation-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .nav-button {
+            background: linear-gradient(135deg, #8B4513, #CD853F);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-button:hover {
+            background: linear-gradient(135deg, #CD853F, #8B4513);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .census-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .census-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #8B4513;
+        }
+        
+        .census-tribe {
+            font-weight: bold;
+            color: #8B4513;
+            margin-bottom: 5px;
+        }
+        
+        .journey-map {
+            background: linear-gradient(135deg, #87CEEB, #98FB98);
+            height: 400px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2F4F4F;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .chapter-grid {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            }
+            
+            .navigation-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .census-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            header {
+                padding: 30px 20px;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-<div class="contenido">
-<h1>Numeros</h1>
-<ul>
-
-  <li><a href="numeros1.html">Capítulo 1</a></li>
-<li><a href="numeros2.html">Capítulo 2</a></li>
-<li><a href="numeros3.html">Capítulo 3</a></li>
-  <li><a href="numeros4.html">Capitulo 4</a></li>
-        <li><a href="numeros5.html">Capítulo 5</a></li>
-<li><a href="numeros6.html">Capítulo 6</a></li>
-<li><a href="numeros7.html">Capítulo 7</a></li>
-  <li><a href="numeros8.html">Capitulo 8</a></li>
-        <li><a href="numeros9.html">Capítulo 9</a></li>
-<li><a href="numeros10.html">Capítulo 10</a></li>
-<li><a href="numeros11.html">Capítulo 11</a></li>
-  <li><a href="numeros12.html">Capitulo 12</a></li>
-        <li><a href="numeros13.html">Capítulo 13</a></li>
-<li><a href="numeros14.html">Capítulo 14</a></li>
-<li><a href="numeros15.html">Capítulo 15</a></li>
-  <li><a href="numeros16.html">Capitulo 16</a></li>
-        <li><a href="numeros17.html">Capítulo 17</a></li>
-<li><a href="numeros18.html">Capítulo 18</a></li>
-<li><a href="numeros19.html">Capítulo 19</a></li>
-  <li><a href="numeros20.html">Capitulo 20</a></li>
-        <li><a href="numeros21.html">Capítulo 21</a></li>
-<li><a href="numeros22.html">Capítulo 22</a></li>
-<li><a href="numeros23.html">Capítulo 23</a></li>
-  <li><a href="numeros24.html">Capitulo 24</a></li>
-        <li><a href="numeros25.html">Capítulo 25</a></li>
-<li><a href="numeros26.html">Capítulo 26</a></li>
-<li><a href="numeros27.html">Capítulo 27</a></li>
-  <li><a href="numeros28.html">Capitulo 28</a></li>
-  <li><a href="numeros29.html">Capitulo 29</a></li>
-  <li><a href="numeros30.html">Capitulo 30</a></li>
-  <li><a href="numeros31.html">Capitulo 31</a></li>
-  <li><a href="numeros32.html">Capitulo 32</a></li>
-  <li><a href="numeros33.html">Capitulo 33</a></li>
-  <li><a href="numeros34.html">Capitulo 34</a></li>
-  <li><a href="numeros35.html">Capitulo 35</a></li>
-  <li><a href="numeros36.html">Capitulo 36</a></li>
-</ul>
-  <button onclick="window.history.back()">Volver</button>
-</div>
-</div>
+    <div class="container">
+        <header>
+            <h1>Números</h1>
+            <p class="subtitle">El Cuarto Libro de la Biblia - Peregrinación y Preparación</p>
+        </header>
+        
+        <div class="content">
+            <div class="intro-section">
+                <h2>Introducción a Números</h2>
+                <p><span class="highlight">Números</span> es el cuarto libro del Pentateuco y su nombre proviene de los dos censos que contiene. En hebreo se llama <em>Bemidbar</em> ("En el desierto"), que refleja mejor su contenido principal: la peregrinación de Israel por el desierto durante 40 años.</p>
+                
+                <div class="biblical-box">
+                    <p class="scripture">"Y Jehová habló a Moisés en el desierto de Sinaí, en el tabernáculo de reunión, el primer día del segundo mes, en el segundo año de su salida de la tierra de Egipto, diciendo: Tomad el censo de toda la congregación de los hijos de Israel..."</p>
+                    <p class="scripture-ref">Números 1:1-2 (Reina-Valera 1569-1602)</p>
+                </div>
+            </div>
+            
+            <div class="structure-section">
+                <h2>Estructura del Libro</h2>
+                <p>Números está organizado alrededor de la jornada de Israel desde el Sinaí hasta las planicies de Moab:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Preparación en Sinaí (Capítulos 1-10)</h3>
+                        <ul>
+                            <li>Primer censo militar</li>
+                            <li>Organización del campamento</li>
+                            <li>Consagración de los levitas</li>
+                            <li>Leyes adicionales</li>
+                            <li>Partida del Sinaí</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Rebelión en el Desierto (Capítulos 11-21)</h3>
+                        <ul>
+                            <li>Quejas y rebeliones</li>
+                            <li>Espías en Canaán</li>
+                            <li>40 años de peregrinación</li>
+                            <li>Rebelión de Coré</li>
+                            <li>Serpientes ardientes</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Preparación en Moab (Capítulos 22-36)</h3>
+                        <ul>
+                            <li>Historia de Balaam</li>
+                            <li>Segundo censo</li>
+                            <li>Preparativos para la conquista</li>
+                            <li>Asignación de la tierra</li>
+                            <li>Designación de Josué</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="census-section">
+                <h2>Los Dos Censos de Israel</h2>
+                <p>El libro contiene dos censos que marcan el comienzo y el final de la peregrinación:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Primer Censo (Capítulo 1)</h3>
+                        <ul>
+                            <li>Realizado en el Sinaí</li>
+                            <li>Año 2 después del Éxodo</li>
+                            <li>Hombres mayores de 20 años</li>
+                            <li>Propósito militar</li>
+                            <li>Total: 603,550 hombres</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Segundo Censo (Capítulo 26)</h3>
+                        <ul>
+                            <li>Realizado en Moab</li>
+                            <li>Año 40 después del Éxodo</li>
+                            <li>Nueva generación</li>
+                            <li>Preparación para la conquista</li>
+                            <li>Total: 601,730 hombres</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>Organización por Tribus</h3>
+                <div class="census-container">
+                    <div class="census-item">
+                        <div class="census-tribe">Judá</div>
+                        <div>74,600 (1er) - 76,500 (2do)</div>
+                    </div>
+                    <div class="census-item">
+                        <div class="census-tribe">Dan</div>
+                        <div>62,700 (1er) - 64,400 (2do)</div>
+                    </div>
+                    <div class="census-item">
+                        <div class="census-tribe">Simeón</div>
+                        <div>59,300 (1er) - 22,200 (2do)</div>
+                    </div>
+                    <div class="census-item">
+                        <div class="census-tribe">Zabulón</div>
+                        <div>57,400 (1er) - 60,500 (2do)</div>
+                    </div>
+                    <div class="census-item">
+                        <div class="census-tribe">Isacar</div>
+                        <div>54,400 (1er) - 64,300 (2do)</div>
+                    </div>
+                    <div class="census-item">
+                        <div class="census-tribe">Neftalí</div>
+                        <div>53,400 (1er) - 45,400 (2do)</div>
+                    </div>
+                    <div class="census-item">
+                        <div class="census-tribe">Rubén</div>
+                        <div>46,500 (1er) - 43,730 (2do)</div>
+                    </div>
+                    <div class="census-item">
+                        <div class="census-tribe">Gad</div>
+                        <div>45,650 (1er) - 40,500 (2do)</div>
+                    </div>
+                    <div class="census-item">
+                        <div class="census-tribe">Aser</div>
+                        <div>41,500 (1er) - 53,400 (2do)</div>
+                    </div>
+                    <div class="census-item">
+                        <div class="census-tribe">Efraín</div>
+                        <div>40,500 (1er) - 32,500 (2do)</div>
+                    </div>
+                    <div class="census-item">
+                        <div class="census-tribe">Benjamín</div>
+                        <div>35,400 (1er) - 45,600 (2do)</div>
+                    </div>
+                    <div class="census-item">
+                        <div class="census-tribe">Manasés</div>
+                        <div>32,200 (1er) - 52,700 (2do)</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="journey-section">
+                <h2>La Jornada por el Desierto</h2>
+                <p>La ruta de Israel desde el Sinaí hasta las planicies de Moab:</p>
+                
+                <div class="journey-map">
+                    Mapa de la Peregrinación en el Desierto<br>
+                    Sinaí → Cades-barnea → 38 años → Moab<br>
+                    Ruta de los 40 años
+                </div>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Etapas Principales</h3>
+                        <ul>
+                            <li><strong>Sinaí</strong> - Recepción de la ley</li>
+                            <li><strong>Cades-barnea</strong> - Envío de espías</li>
+                            <li><strong>38 años</strong> - Peregrinación circular</li>
+                            <li><strong>Moab</strong> - Preparación final</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Eventos Significativos</h3>
+                        <ul>
+                            <li>La nube que guiaba</li>
+                            <li>Quejas por comida y agua</li>
+                            <li>Rebelión de María y Aarón</li>
+                            <li>Vara de Aarón que florece</li>
+                            <li>Agua de la roca</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="rebellion-section">
+                <h2>Rebeliones y Juicios</h2>
+                <p>El libro registra varias rebeliones significativas contra el liderazgo de Moisés y Aarón:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Rebelión del Pueblo</h3>
+                        <ul>
+                            <li>Quejas por comida (Cap. 11)</li>
+                            <li>Miedo a entrar en Canaán (Cap. 13-14)</li>
+                            <li>Juicio: 40 años en el desierto</li>
+                            <li>Muerte de la generación incrédula</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Rebelión de Coré</h3>
+                        <ul>
+                            <li>Desafío al sacerdocio (Cap. 16)</li>
+                            <li>250 líderes se unen</li>
+                            <li>Juicio: Tierra los traga</li>
+                            <li>Fuego consume a los 250</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Rebelión de María y Aarón</h3>
+                        <ul>
+                            <li>Crítica a Moisés (Cap. 12)</li>
+                            <li>Motivada por celos</li>
+                            <li>Juicio: María con lepra</li>
+                            <li>Intercesión de Moisés</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="biblical-box">
+                    <p class="scripture">"Y Jehová dijo a Moisés: ¿Hasta cuándo me ha de irritar este pueblo? ¿Hasta cuándo no me creerán, con todas las señales que he hecho en medio de ellos?"</p>
+                    <p class="scripture-ref">Números 14:11</p>
+                </div>
+            </div>
+            
+            <div class="preparation-section">
+                <h2>Preparación para la Tierra Prometida</h2>
+                <p>Los últimos capítulos preparan a la nueva generación para la conquista:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Historia de Balaam</h3>
+                        <ul>
+                            <li>Rey Balac contrata a Balaam</li>
+                            <li>La asna que habla</li>
+                            <li>Bendiciones en lugar de maldiciones</li>
+                            <li>Profecías mesiánicas</li>
+                            <li>Estrella de Jacob</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Nuevo Liderazgo</h3>
+                        <ul>
+                            <li>Elección de Josué</li>
+                            <li>Muerte de la generación anterior</li>
+                            <li>Preparación militar</li>
+                            <li>Instrucciones para la conquista</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Leyes de Herencia</h3>
+                        <ul>
+                            <li>Hijas de Zelofehad</li>
+                            <li>Derechos de herencia femenina</li>
+                            <li>Preservación de las tribus</li>
+                            <li>Ciudades de refugio</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="key-verses">
+                <h2>Versículos Clave de Números</h2>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Bendición Sacerdotal</h3>
+                        <p class="scripture">"Jehová te bendiga, y te guarde; Jehová haga resplandecer su rostro sobre ti, y tenga de ti misericordia; Jehová alce sobre ti su rostro, y ponga en ti paz."</p>
+                        <p class="scripture-ref">Números 6:24-26</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Fe versus Temor</h3>
+                        <p class="scripture">"Y Jehová nos dijo: No subáis, ni peleéis, porque no estoy en medio de vosotros; para que no seáis derrotados por vuestros enemigos."</p>
+                        <p class="scripture-ref">Números 14:42</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Profecía de Balaam</h3>
+                        <p class="scripture">"Lo veré, mas no ahora; lo miraré, mas no de cerca; saldrá ESTRELLA de Jacob, y se levantará CETRO de Israel, y herirá las sienes de Moab, y destruirá a todos los hijos de Set."</p>
+                        <p class="scripture-ref">Números 24:17</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Deseo de Moisés</h3>
+                        <p class="scripture">"Y yo oré a Jehová, diciendo: Oh Jehová Dios, no destruyas a tu pueblo y a tu heredad que has redimido con tu grandeza, que sacaste de Egipto con mano poderosa."</p>
+                        <p class="scripture-ref">Números 9:29</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="application-section">
+                <h2>Aplicación para Hoy</h2>
+                <p>Números contiene lecciones espirituales relevantes para la vida cristiana:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Peregrinación Espiritual</h3>
+                        <p>La vida cristiana es un viaje hacia la "tierra prometida" celestial, con pruebas y crecimiento en el camino.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Consecuencias de la Incredulidad</h3>
+                        <p>La incredulidad impide entrar en el reposo de Dios, como Israel no pudo entrar en Canaán.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Liderazgo y Sumisión</h3>
+                        <p>La rebelión contra el liderazgo designado por Dios tiene graves consecuencias.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Providencia Divina</h3>
+                        <p>Dios provee y guía a Su pueblo, incluso en las circunstancias más difíciles.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chapters-list">
+                <h2>Capítulos de Números</h2>
+                <p>Selecciona un capítulo para estudiar:</p>
+                
+                <div class="chapter-grid">
+                    <a href="numeros1.html" class="chapter-item">Capítulo 1</a>
+                    <a href="numeros2.html" class="chapter-item">Capítulo 2</a>
+                    <a href="numeros3.html" class="chapter-item">Capítulo 3</a>
+                    <a href="numeros4.html" class="chapter-item">Capítulo 4</a>
+                    <a href="numeros5.html" class="chapter-item">Capítulo 5</a>
+                    <a href="numeros6.html" class="chapter-item">Capítulo 6</a>
+                    <a href="numeros7.html" class="chapter-item">Capítulo 7</a>
+                    <a href="numeros8.html" class="chapter-item">Capítulo 8</a>
+                    <a href="numeros9.html" class="chapter-item">Capítulo 9</a>
+                    <a href="numeros10.html" class="chapter-item">Capítulo 10</a>
+                    <a href="numeros11.html" class="chapter-item">Capítulo 11</a>
+                    <a href="numeros12.html" class="chapter-item">Capítulo 12</a>
+                    <a href="numeros13.html" class="chapter-item">Capítulo 13</a>
+                    <a href="numeros14.html" class="chapter-item">Capítulo 14</a>
+                    <a href="numeros15.html" class="chapter-item">Capítulo 15</a>
+                    <a href="numeros16.html" class="chapter-item">Capítulo 16</a>
+                    <a href="numeros17.html" class="chapter-item">Capítulo 17</a>
+                    <a href="numeros18.html" class="chapter-item">Capítulo 18</a>
+                    <a href="numeros19.html" class="chapter-item">Capítulo 19</a>
+                    <a href="numeros20.html" class="chapter-item">Capítulo 20</a>
+                    <a href="numeros21.html" class="chapter-item">Capítulo 21</a>
+                    <a href="numeros22.html" class="chapter-item">Capítulo 22</a>
+                    <a href="numeros23.html" class="chapter-item">Capítulo 23</a>
+                    <a href="numeros24.html" class="chapter-item">Capítulo 24</a>
+                    <a href="numeros25.html" class="chapter-item">Capítulo 25</a>
+                    <a href="numeros26.html" class="chapter-item">Capítulo 26</a>
+                    <a href="numeros27.html" class="chapter-item">Capítulo 27</a>
+                    <a href="numeros28.html" class="chapter-item">Capítulo 28</a>
+                    <a href="numeros29.html" class="chapter-item">Capítulo 29</a>
+                    <a href="numeros30.html" class="chapter-item">Capítulo 30</a>
+                    <a href="numeros31.html" class="chapter-item">Capítulo 31</a>
+                    <a href="numeros32.html" class="chapter-item">Capítulo 32</a>
+                    <a href="numeros33.html" class="chapter-item">Capítulo 33</a>
+                    <a href="numeros34.html" class="chapter-item">Capítulo 34</a>
+                    <a href="numeros35.html" class="chapter-item">Capítulo 35</a>
+                    <a href="numeros36.html" class="chapter-item">Capítulo 36</a>
+                </div>
+            </div>
+            
+            <div class="navigation-buttons">
+                <a href="levitico.html" class="nav-button">← Levítico</a>
+                <a href="index.html" class="nav-button">🏠 Inicio</a>
+                <a href="deuteronomio.html" class="nav-button">Deuteronomio →</a>
+            </div>
+            
+            <div class="biblical-box">
+                <h3>Legado de Números</h3>
+                <p>Números establece patrones importantes para entender la relación de Dios con Su pueblo:</p>
+                <ul>
+                    <li><strong>Santidad de Dios</strong> - No tolera el pecado ni la rebelión</li>
+                    <li><strong>Paciencia Divina</strong> - A pesar de la incredulidad, mantiene Su pacto</li>
+                    <li><strong>Consecuencias</strong> - Las decisiones tienen resultados duraderos</li>
+                    <li><strong>Preparación</strong> - Dios prepara a Su pueblo para Sus propósitos</li>
+                    <li><strong>Esperanza Mesiánica</strong> - Las profecías apuntan al Redentor venidero</li>
+                </ul>
+                
+                <p class="scripture">"Fueron contados estos de los hijos de Israel, seiscientos un mil setecientos treinta. Y Jehová habló a Moisés, diciendo: A estos se repartirá la tierra en heredad, por la cuenta de los nombres."</p>
+                <p class="scripture-ref">Números 26:51-53</p>
+                
+                <p>El libro de Números nos enseña que la incredulidad nos impide disfrutar las bendiciones de Dios, pero Su fidelidad asegura que finalmente cumplirá Sus promesas con aquellos que confían en Él.</p>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 IN GOD WE TRUST</p>
+                <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
