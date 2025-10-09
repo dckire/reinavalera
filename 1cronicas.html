@@ -1,119 +1,839 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-BYMJS3X12P');
-</script>
-	<meta name="google-site-verification" content="KWZFlVdcT-h9cB1Qnj0LgSLJP-J-NS4bgjhnQG_c140" />
-<title>1 Cronicas</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body {
-font-family: Arial, sans-serif;
-background-color: #f0f0f0;
-margin: 0;
-padding: 0;
-text-align: center;
-}
-.container {
-max-width: 800px;
-margin: 40px auto;
-padding: 20px;
-background-color: #fff;
-border: 1px solid #ddd;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.contenido {
-  background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20230523/pngtree-bible-gif-hd-wallpaper-image_2683159.jpg');
-padding: 20px;
-margin: 40px auto;
-width: 80%;
-background-color: #fff;
-border: 1px solid #ddd;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-h1 {
-color: #333;
-}
-ul {
-list-style: none;
-padding: 0;
-margin: 0;
-}
-li {
-margin-bottom: 10px;
-}
-a {
-text-decoration: none;
-color: #fff;
-}
-a:hover {
-color: #23527c;
-}
-img {
-max-width: 100%;
-height: auto;
-margin: 20px auto;
-border-radius: 10px;
-}
-   button {
-    background-color: #337ab7;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  button:hover {
-    background-color: #23527c;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 Crónicas - Decimotercer Libro de la Biblia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: white;
+            padding: 50px 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        header::before {
+            content: "📜";
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 3rem;
+            opacity: 0.7;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.4rem;
+            font-weight: 300;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .intro-section {
+            background-color: #f8f9fa;
+            border-left: 5px solid #1e3c72;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #1e3c72;
+            margin-bottom: 25px;
+            font-size: 2.2rem;
+            border-bottom: 3px solid #2a5298;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #1e3c72;
+            margin: 30px 0 20px;
+            font-size: 1.7rem;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .highlight {
+            background-color: #e3f2fd;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #1e3c72;
+        }
+        
+        .biblical-box {
+            background-color: #e8eaf6;
+            border: 2px solid #1e3c72;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+        }
+        
+        .scripture {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #1e3c72;
+            margin: 15px 0;
+            padding-left: 20px;
+            border-left: 4px solid #1e3c72;
+        }
+        
+        .scripture-ref {
+            font-weight: bold;
+            text-align: right;
+            color: #2a5298;
+            margin-top: 10px;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #1e3c72;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card h3 {
+            color: #1e3c72;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+        
+        .card ul {
+            padding-left: 20px;
+        }
+        
+        .card li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .structure-section {
+            background-color: #f5f5f5;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .genealogies-section {
+            background-color: #e3f2fd;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border-left: 5px solid #1976d2;
+        }
+        
+        .david-section {
+            background-color: #e8f5e9;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .temple-section {
+            background-color: #fff3e0;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .worship-section {
+            background-color: #f3e5f5;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .key-verses {
+            background-color: #f3e5f5;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border: 2px solid #7b1fa2;
+        }
+        
+        .application-section {
+            background-color: #fff3e0;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .chapters-list {
+            background-color: #fafafa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .chapter-item {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 15px 10px;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: block;
+        }
+        
+        .chapter-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #2a5298, #1e3c72);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: #FFF8DC;
+            font-size: 1.1rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+            border: 3px solid #2a5298;
+        }
+        
+        .navigation-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .nav-button {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-button:hover {
+            background: linear-gradient(135deg, #2a5298, #1e3c72);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .timeline-chart {
+            background: linear-gradient(135deg, #87CEEB, #98FB98);
+            height: 300px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2F4F4F;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .genealogy-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .genealogy-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #1e3c72;
+        }
+        
+        .genealogy-name {
+            font-weight: bold;
+            color: #1e3c72;
+            margin-bottom: 5px;
+        }
+        
+        .tribe-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .tribe-item {
+            background: #e3f2fd;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        .worship-box {
+            background: linear-gradient(135deg, #fff9c4, #fff59d);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 2px solid #fbc02d;
+        }
+        
+        .emphasis-box {
+            background: linear-gradient(135deg, #c8e6c9, #a5d6a7);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 2px solid #388e3c;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .chapter-grid {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            }
+            
+            .navigation-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .genealogy-container,
+            .tribe-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            header {
+                padding: 30px 20px;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-<div class="contenido">
-<h1>1 Cronicas</h1>
-<ul>
-<li><a href="1cronicas1.html">Capítulo 1</a></li>
-<li><a href="1cronicasl2.html">Capítulo 2</a></li>
-<li><a href="1cronicas3.html">Capítulo 3</a></li>
-  <li><a href="1cronicasl4.html">Capítulo 4</a></li>
-<li><a href="1cronicas5.html">Capítulo 5</a></li>
-<li><a href="1cronicas6.html">Capítulo 6</a></li>
-  <li><a href="1cronicas7.html">Capítulo 7</a></li>
-<li><a href="1cronicas8.html">Capítulo 8</a></li>
-<li><a href="1cronicas9.html">Capítulo 9</a></li>
-<li><a href="1cronicas10.html">Capítulo 10</a></li>
-<li><a href="1cronicas11.html">Capítulo 11</a></li>
-<li><a href="1cronicas12.html">Capítulo 12</a></li>
-  <li><a href="1cronicas13.html">Capítulo 13</a></li>
-<li><a href="1cronicas14.html">Capítulo 14</a></li>
-<li><a href="1cronicas15.html">Capítulo 15</a></li>
-  <li><a href="1cronicas16.html">Capítulo 16</a></li>
-<li><a href="1cronicas17.html">Capítulo 17</a></li>
-<li><a href="1cronicas18.html">Capítulo 18</a></li>
-  <li><a href="1cronicas19.html">Capítulo 19</a></li>
-<li><a href="1cronicas20.html">Capítulo 20</a></li>
-<li><a href="1cronicas21.html">Capítulo 21</a></li>
-  <li><a href="1cronicas22.html">Capítulo 22</a></li>
-<li><a href="1cronicas23.html">Capítulo 23</a></li>
-<li><a href="1cronicas24.html">Capítulo 24</a></li>
-  <li><a href="1cronicas25.html">Capitulo 25</a></li>
-  <li><a href="1cronicas26.html">Capitulo 26</a></li>
-  <li><a href="1cronicas27.html">Capitulo 27</a></li>
-  <li><a href="1cronicas28.html">Capitulo 28</a></li>
-  <li><a href="1cronicas29.html">Capitulo 29</a></li>
-</ul>
-<button onclick="window.history.back()">Volver</button>
-</div>
-</div>
+    <div class="container">
+        <header>
+            <h1>1 Crónicas</h1>
+            <p class="subtitle">El Decimotercer Libro de la Biblia - Perspectiva Sacerdotal de la Historia</p>
+        </header>
+        
+        <div class="content">
+            <div class="intro-section">
+                <h2>Introducción a 1 Crónicas</h2>
+                <p><span class="highlight">1 Crónicas</span> es el decimotercer libro de la Biblia y forma parte de los libros históricos escritos después del exilio babilónico. A diferencia de Samuel y Reyes, Crónicas presenta una perspectiva sacerdotal y teológica de la historia de Israel, enfocándose en el reino de Judá, el templo, y la adoración, con especial énfasis en el rey David como el líder ideal según el corazón de Dios.</p>
+                
+                <div class="biblical-box">
+                    <p class="scripture">"Y David comprendió que Jehová lo había confirmado como rey sobre Israel, y que había exaltado su reino por amor de su pueblo Israel."</p>
+                    <p class="scripture-ref">1 Crónicas 14:2 (Reina-Valera 1569-1602)</p>
+                </div>
+            </div>
+            
+            <div class="structure-section">
+                <h2>Estructura del Libro</h2>
+                <p>1 Crónicas está organizado en dos secciones principales que presentan una visión teológica de la historia:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Genealogías (Capítulos 1-9)</h3>
+                        <ul>
+                            <li>Desde Adán hasta David</li>
+                            <li>Las doce tribus de Israel</li>
+                            <li>Énfasis en Judá y Leví</li>
+                            <li>Listas de habitantes de Jerusalén</li>
+                            <li>Prepara el escenario histórico</li>
+                            <li>Establece continuidad del pacto</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Reinado de David (Capítulos 10-29)</h3>
+                        <ul>
+                            <li>Muerte de Saúl y establecimiento de David</li>
+                            <li>Traslado del arca a Jerusalén</li>
+                            <li>Pacto davídico</li>
+                            <li>Preparativos para el templo</li>
+                            <li>Organización del culto y los levitas</li>
+                            <li>Últimos días y muerte de David</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="genealogies-section">
+                <h2>Las Genealogías: Raíces del Pueblo</h2>
+                <p>Los primeros nueve capítulos establecen los fundamentos históricos y genealógicos:</p>
+                
+                <div class="timeline-chart">
+                    Línea Genealógica<br>
+                    Adán → Noé → Abraham → Judá → David
+                </div>
+                
+                <h3>Propósito de las Genealogías</h3>
+                <div class="genealogy-container">
+                    <div class="genealogy-item">
+                        <div class="genealogy-name">1. Establecer Identidad</div>
+                        <div>Después del exilio, el pueblo necesitaba reconectar con sus raíces y identidad como pueblo del pacto.</div>
+                    </div>
+                    <div class="genealogy-item">
+                        <div class="genealogy-name">2. Validar el Pacto</div>
+                        <div>Muestra la continuidad del plan de Dios desde Adán hasta la restauración post-exílica.</div>
+                    </div>
+                    <div class="genealogy-item">
+                        <div class="genealogy-name">3. Enfatizar Judá y Leví</div>
+                        <div>Da prominencia a la tribu real (Judá) y sacerdotal (Leví) como centrales en el plan divino.</div>
+                    </div>
+                    <div class="genealogy-item">
+                        <div class="genealogy-name">4. Preparar para el Templo</div>
+                        <div>Establece las líneas sacerdotales y levíticas esenciales para el culto restaurado.</div>
+                    </div>
+                </div>
+                
+                <h3>Tribus de Israel en las Genealogías</h3>
+                <div class="tribe-container">
+                    <div class="tribe-item">Judá (énfasis)</div>
+                    <div class="tribe-item">Leví (énfasis)</div>
+                    <div class="tribe-item">Benjamín</div>
+                    <div class="tribe-item">Efraín</div>
+                    <div class="tribe-item">Manasés</div>
+                    <div class="tribe-item">Isacar</div>
+                    <div class="tribe-item">Zabulón</div>
+                    <div class="tribe-item">Aser</div>
+                    <div class="tribe-item">Neftalí</div>
+                    <div class="tribe-item">Dan</div>
+                    <div class="tribe-item">Rubén</div>
+                    <div class="tribe-item">Gad</div>
+                </div>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Genealogías Clave</h3>
+                        <ul>
+                            <li><strong>Capítulos 1-3</strong>: Adán a David</li>
+                            <li><strong>Capítulo 4</strong>: Tribu de Judá</li>
+                            <li><strong>Capítulo 5</strong>: Tribus transjordánicas</li>
+                            <li><strong>Capítulo 6</strong>: Tribu de Leví</li>
+                            <li><strong>Capítulo 7</strong>: Tribas del norte</li>
+                            <li><strong>Capítulo 8</strong>: Tribu de Benjamín</li>
+                            <li><strong>Capítulo 9</strong>: Habitantes de Jerusalén</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Personajes Destacados</h3>
+                        <ul>
+                            <li>Adán, Noé, Abraham</li>
+                            <li>Judá y su línea real</li>
+                            <li>Los hijos de Jacob</li>
+                            <li>Los levitas y sacerdotes</li>
+                            <li>Saúl y su genealogía</li>
+                            <li>David y su familia</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="david-section">
+                <h2>El Reinado de David: Un Líder Ideal</h2>
+                <p>1 Crónicas presenta a David desde una perspectiva positiva, enfocándose en sus logros espirituales:</p>
+                
+                <div class="emphasis-box">
+                    <h3>Enfoque de 1 Crónicas vs. Samuel</h3>
+                    <p>Mientras Samuel muestra a David con sus fallas, Crónicas enfatiza sus virtudes como modelo de liderazgo piadoso</p>
+                </div>
+                
+                <h3>Aspectos Positivos del Reinado de David</h3>
+                <div class="genealogy-container">
+                    <div class="genealogy-item">
+                        <div class="genealogy-name">1. Unificación del Reino</div>
+                        <div>Todas las tribus se unen voluntariamente bajo el liderazgo de David.</div>
+                    </div>
+                    <div class="genealogy-item">
+                        <div class="genealogy-name">2. Conquista de Jerusalén</div>
+                        <div>Establece la capital eterna y la fortalece como centro religioso y político.</div>
+                    </div>
+                    <div class="genealogy-item">
+                        <div class="genealogy-name">3. Victoria sobre Filisteos</div>
+                        <div>Dios le da victoria sobre los enemigos tradicionales de Israel.</div>
+                    </div>
+                    <div class="genealogy-item">
+                        <div class="genealogy-name">4. Traslado del Arca</div>
+                        <div>Restaura la adoración genuina trayendo el arca a Jerusalén.</div>
+                    </div>
+                    <div class="genealogy-item">
+                        <div class="genealogy-name">5. Deseo de Construir el Templo</div>
+                        <div>Manifiesta su corazón para Dios al querer construirle una casa.</div>
+                    </div>
+                    <div class="genealogy-item">
+                        <div class="genealogy-name">6. Pacto Davídico</div>
+                        <div>Dios establece pacto eterno con su descendencia.</div>
+                    </div>
+                </div>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Eventos Omitidos en Crónicas</h3>
+                        <ul>
+                            <li>Pecado con Betsabé</li>
+                            <li>Rebelión de Absalón</li>
+                            <li>Problemas familiares</li>
+                            <li>Censo pecaminoso</li>
+                            <li>Conflicto con Saúl</li>
+                            <li>Años de huida</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Eventos Enfatizados</h3>
+                        <ul>
+                            <li>Unción como rey</li>
+                            <li>Victoria sobre Goliat</li>
+                            <li>Bendición de Dios</li>
+                            <li>Preparativos del templo</li>
+                            <li>Organización del culto</li>
+                            <li>Transferencia a Salomón</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="temple-section">
+                <h2>Preparativos para el Templo</h2>
+                <p>Un tema central en 1 Crónicas es la preparación para la construcción del templo:</p>
+                
+                <div class="biblical-box">
+                    <p class="scripture">"Y David dijo a Salomón: Hijo mío, en mi corazón tuve el edificar casa al nombre de Jehová mi Dios. Mas vino a mí palabra de Jehová, diciendo: Tú has derramado mucha sangre, y has hecho grandes guerras; no edificarás casa a mi nombre..."</p>
+                    <p class="scripture-ref">1 Crónicas 22:7-8</p>
+                </div>
+                
+                <h3>Preparativos de David para el Templo</h3>
+                <div class="genealogy-container">
+                    <div class="genealogy-item">
+                        <div class="genealogy-name">1. Materiales de Construcción</div>
+                        <div>David acumula oro, plata, bronce, hierro, madera y piedras preciosas en abundancia.</div>
+                    </div>
+                    <div class="genealogy-item">
+                        <div class="genealogy-name">2. Planes Arquitectónicos</div>
+                        <div>Recibe los planos del templo por inspiración divina y los entrega a Salomón.</div>
+                    </div>
+                    <div class="genealogy-item">
+                        <div class="genealogy-name">3. Organización de Trabajadores</div>
+                        <div>Prepara obreros, artesanos y supervisores para la construcción.</div>
+                    </div>
+                    <div class="genealogy-item">
+                        <div class="genealogy-name">4. Instrucciones a Salomón</div>
+                        <div>Exhorta a su hijo a ser fuerte y cumplir la tarea de construir el templo.</div>
+                    </div>
+                    <div class="genealogy-item">
+                        <div class="genealogy-name">5. Contribución Personal</div>
+                        <div>David da de su patrimonio personal para el proyecto.</div>
+                    </div>
+                    <div class="genealogy-item">
+                        <div class="genealogy-name">6. Motivación del Pueblo</div>
+                        <div>El pueblo se inspira y también contribuye generosamente.</div>
+                    </div>
+                </div>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Materiales Acumulados</h3>
+                        <ul>
+                            <li>100,000 talentos de oro</li>
+                            <li>1,000,000 talentos de plata</li>
+                            <li>Bronce y hierro sin medida</li>
+                            <li>Madera de cedro abundante</li>
+                            <li>Piedras preciosas y mármol</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Razón Teológica</h3>
+                        <ul>
+                            <li>David como precursor del Mesías</li>
+                            <li>El templo como lugar de encuentro con Dios</li>
+                            <li>Preparación para la adoración restaurada</li>
+                            <li>Continuidad del culto legítimo</li>
+                            <li>Base para el segundo templo</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="worship-section">
+                <h2>Organización del Culto y la Adoración</h2>
+                <p>David establece un sistema organizado para la adoración en Israel:</p>
+                
+                <div class="worship-box">
+                    <h3>La Adoración como Centro</h3>
+                    <p>1 Crónicas enfatiza que la verdadera grandeza de Israel está en su adoración a Jehová, no en su poder militar o político</p>
+                </div>
+                
+                <h3>Organización del Servicio Levítico</h3>
+                <div class="genealogy-container">
+                    <div class="genealogy-item">
+                        <div class="genealogy-name">1. Sacerdotes</div>
+                        <div>Descendientes de Aarón, responsables de los sacrificios y el servicio en el santuario.</div>
+                    </div>
+                    <div class="genealogy-item">
+                        <div class="genealogy-name">2. Levitas</div>
+                        <div>Asistentes de los sacerdotes, responsables del mantenimiento, música y servicio.</div>
+                    </div>
+                    <div class="genealogy-item">
+                        <div class="genealogy-name">3. Cantores</div>
+                        <div>Levitas designados específicamente para la alabanza musical en el templo.</div>
+                    </div>
+                    <div class="genealogy-item">
+                        <div class="genealogy-name">4. Porteros</div>
+                        <div>Guardianes de las entradas del templo y responsables de la seguridad.</div>
+                    </div>
+                    <div class="genealogy-item">
+                        <div class="genealogy-name">5. Tesoreros</div>
+                        <div>Administradores de los tesoros y ofrendas del templo.</div>
+                    </div>
+                    <div class="genealogy-item">
+                        <div class="genealogy-name">6. Jueces y Oficiales</div>
+                        <div>Responsables de asuntos civiles y administrativos.</div>
+                    </div>
+                </div>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Grupos de Cantores</h3>
+                        <ul>
+                            <li><strong>Asaf</strong>: Director principal</li>
+                            <li><strong>Hemán</strong>: Director segundo</li>
+                            <li><strong>Jedutún</strong>: Director tercero</li>
+                            <li><strong>288 músicos totales</strong></li>
+                            <li>Servicio por turnos</li>
+                            <li>Instrumentos diversos</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Divisiones Sacerdotales</h3>
+                        <ul>
+                            <li>24 divisiones de sacerdotes</li>
+                            <li>Servicio por turnos semanales</li>
+                            <li>Eleazar e Itamar como líneas</li>
+                            <li>Asignaciones por suertes</li>
+                            <li>Responsabilidades definidas</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Propósito de la Organización</h3>
+                        <ul>
+                            <li>Orden en la adoración</li>
+                            <li>Participación de todos</li>
+                            <li>Excelencia en el servicio</li>
+                            <li>Continuidad del culto</li>
+                            <li>Gloria a Dios</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="key-verses">
+                <h2>Versículos Clave de 1 Crónicas</h2>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Alabanza de David</h3>
+                        <p class="scripture">"Tuya es, oh Jehová, la magnificencia y el poder, la gloria, la victoria y el honor; porque todas las cosas que están en los cielos y en la tierra son tuyas."</p>
+                        <p class="scripture-ref">1 Crónicas 29:11</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Pacto Davídico</h3>
+                        <p class="scripture">"Yo afirmaré para siempre el trono de su reino... y tu trono será estable eternamente."</p>
+                        <p class="scripture-ref">1 Crónicas 17:12, 14</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Búsqueda de Dios</h3>
+                        <p class="scripture">"Y si lo buscáis, lo hallaréis; mas si lo dejáis, él os desamparará para siempre."</p>
+                        <p class="scripture-ref">1 Crónicas 28:9</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Ofrenda Voluntaria</h3>
+                        <p class="scripture">"Porque ¿quién soy yo, y quién es mi pueblo, para que pudiésemos ofrecer voluntariamente cosas semejantes?"</p>
+                        <p class="scripture-ref">1 Crónicas 29:14</p>
+                    </div>
+                </div>
+            </div>
+            
+           
+                </div>
+            </div>
+            
+            <div class="chapters-list">
+                <h2>Capítulos de 1 Crónicas</h2>
+                <p>Selecciona un capítulo para estudiar:</p>
+                
+                <div class="chapter-grid">
+                    <a href="1cronicas1.html" class="chapter-item">Capítulo 1</a>
+                    <a href="1cronicas2.html" class="chapter-item">Capítulo 2</a>
+                    <a href="1cronicas3.html" class="chapter-item">Capítulo 3</a>
+                    <a href="1cronicas4.html" class="chapter-item">Capítulo 4</a>
+                    <a href="1cronicas5.html" class="chapter-item">Capítulo 5</a>
+                    <a href="1cronicas6.html" class="chapter-item">Capítulo 6</a>
+                    <a href="1cronicas7.html" class="chapter-item">Capítulo 7</a>
+                    <a href="1cronicas8.html" class="chapter-item">Capítulo 8</a>
+                    <a href="1cronicas9.html" class="chapter-item">Capítulo 9</a>
+                    <a href="1cronicas10.html" class="chapter-item">Capítulo 10</a>
+                    <a href="1cronicas11.html" class="chapter-item">Capítulo 11</a>
+                    <a href="1cronicas12.html" class="chapter-item">Capítulo 12</a>
+                    <a href="1cronicas13.html" class="chapter-item">Capítulo 13</a>
+                    <a href="1cronicas14.html" class="chapter-item">Capítulo 14</a>
+                    <a href="1cronicas15.html" class="chapter-item">Capítulo 15</a>
+                    <a href="1cronicas16.html" class="chapter-item">Capítulo 16</a>
+                    <a href="1cronicas17.html" class="chapter-item">Capítulo 17</a>
+                    <a href="1cronicas18.html" class="chapter-item">Capítulo 18</a>
+                    <a href="1cronicas19.html" class="chapter-item">Capítulo 19</a>
+                    <a href="1cronicas20.html" class="chapter-item">Capítulo 20</a>
+                    <a href="1cronicas21.html" class="chapter-item">Capítulo 21</a>
+                    <a href="1cronicas22.html" class="chapter-item">Capítulo 22</a>
+                    <a href="1cronicas23.html" class="chapter-item">Capítulo 23</a>
+                    <a href="1cronicas24.html" class="chapter-item">Capítulo 24</a>
+                    <a href="1cronicas25.html" class="chapter-item">Capítulo 25</a>
+                    <a href="1cronicas26.html" class="chapter-item">Capítulo 26</a>
+                    <a href="1cronicas27.html" class="chapter-item">Capítulo 27</a>
+                    <a href="1cronicas28.html" class="chapter-item">Capítulo 28</a>
+                    <a href="1cronicas29.html" class="chapter-item">Capítulo 29</a>
+                </div>
+            </div>
+            
+            <div class="navigation-buttons">
+                <a href="2reyes.html" class="nav-button">← 2 Reyes</a>
+                <a href="index.html" class="nav-button">🏠 Inicio</a>
+                <a href="2cronicas.html" class="nav-button">2 Crónicas →</a>
+            </div>
+            
+            <div class="biblical-box">
+                <h3>Legado de 1 Crónicas</h3>
+                <p>El libro de 1 Crónicas establece principios fundamentales para la comunidad post-exílica y para nosotros hoy:</p>
+                <ul>
+                    <li><strong>Identidad en el Pacto</strong> - Nuestra verdadera identidad se encuentra en nuestra relación con Dios</li>
+                    <li><strong>Centralidad de la Adoración</strong> - La adoración debe ser el corazón de la vida comunitaria</li>
+                    <li><strong>Liderazgo Según Dios</strong> - El liderazgo efectivo fluye de un corazón comprometido con Dios</li>
+                    <li><strong>Preparación Metódica</strong> - La obra de Dios merece nuestra mejor planificación y preparación</li>
+                    <li><strong>Generosidad Sacrificial</strong> - Dar generosamente para la obra de Dios es un privilegio y bendición</li>
+                </ul>
+                
+                <p class="scripture">"Y bendijo todo el congregation a Jehová Dios de sus padres; e inclinándose adoraron delante de Jehová y del rey."</p>
+                <p class="scripture-ref">1 Crónicas 29:20</p>
+                
+                <p>1 Crónicas termina con la muerte de David y la entronización de Salomón, pero deja establecido el patrón para el verdadero éxito: dependencia de Dios, adoración genuina, y liderazgo piadoso. Para la comunidad post-exílica - y para nosotros hoy - este mensaje es vital: la verdadera restauración comienza con el retorno a la adoración fiel y la obediencia al pacto de Dios.</p>
+                
+                <h3>Temas Teológicos Principales</h3>
+                <div class="tribe-container">
+                    <div class="tribe-item">Pacto Davídico</div>
+                    <div class="tribe-item">Adoración Central</div>
+                    <div class="tribe-item">Retribución Divina</div>
+                    <div class="tribe-item">Unidad del Pueblo</div>
+                    <div class="tribe-item">Esperanza Mesiánica</div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 IN GOD WE TRUST</p>
+                <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
