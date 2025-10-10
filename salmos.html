@@ -1,242 +1,838 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-BYMJS3X12P');
-</script>
-	<meta name="google-site-verification" content="KWZFlVdcT-h9cB1Qnj0LgSLJP-J-NS4bgjhnQG_c140" />
-<title>Salmos</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body {
-font-family: Arial, sans-serif;
-background-color: #f0f0f0;
-margin: 0;
-padding: 0;
-text-align: center;
-}
-.container {
-max-width: 800px;
-margin: 40px auto;
-padding: 20px;
-background-color: #fff;
-border: 1px solid #ddd;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.contenido {
-  background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20230523/pngtree-bible-gif-hd-wallpaper-image_2683159.jpg');
-padding: 20px;
-margin: 40px auto;
-width: 80%;
-background-color: #fff;
-border: 1px solid #ddd;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-h1 {
-color: #333;
-}
-ul {
-list-style: none;
-padding: 0;
-margin: 0;
-}
-li {
-margin-bottom: 10px;
-}
-a {
-text-decoration: none;
-color: #fff;
-}
-a:hover {
-color: #23527c;
-}
-img {
-max-width: 100%;
-height: auto;
-margin: 20px auto;
-border-radius: 10px;
-}
-   button {
-    background-color: #337ab7;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  button:hover {
-    background-color: #23527c;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salmos - Libro de Alabanzas y Oraciones</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(to right, #8B4513, #D2691E);
+            color: white;
+            padding: 50px 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        header::before {
+            content: "🎵";
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 3rem;
+            opacity: 0.7;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.4rem;
+            font-weight: 300;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .intro-section {
+            background-color: #f8f9fa;
+            border-left: 5px solid #8B4513;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #8B4513;
+            margin-bottom: 25px;
+            font-size: 2.2rem;
+            border-bottom: 3px solid #D2691E;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #8B4513;
+            margin: 30px 0 20px;
+            font-size: 1.7rem;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .highlight {
+            background-color: #f5e8d0;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #8B4513;
+        }
+        
+        .biblical-box {
+            background-color: #f5e8d0;
+            border: 2px solid #8B4513;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+        }
+        
+        .scripture {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #8B4513;
+            margin: 15px 0;
+            padding-left: 20px;
+            border-left: 4px solid #8B4513;
+        }
+        
+        .scripture-ref {
+            font-weight: bold;
+            text-align: right;
+            color: #D2691E;
+            margin-top: 10px;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #8B4513;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card h3 {
+            color: #8B4513;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+        
+        .card ul {
+            padding-left: 20px;
+        }
+        
+        .card li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .structure-section {
+            background-color: #f5f5f5;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .authors-section {
+            background-color: #e3f2fd;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border-left: 5px solid #1976d2;
+        }
+        
+        .types-section {
+            background-color: #e8f5e9;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .famous-section {
+            background-color: #fff8e1;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .key-verses {
+            background-color: #f3e5f5;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border: 2px solid #7b1fa2;
+        }
+        
+        .application-section {
+            background-color: #fff3e0;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .chapters-list {
+            background-color: #fafafa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .chapter-item {
+            background: linear-gradient(135deg, #8B4513, #D2691E);
+            color: white;
+            padding: 15px 10px;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: block;
+        }
+        
+        .chapter-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #D2691E, #8B4513);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(to right, #8B4513, #D2691E);
+            color: #FFF8DC;
+            font-size: 1.1rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+            border: 3px solid #D2691E;
+        }
+        
+        .navigation-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .nav-button {
+            background: linear-gradient(135deg, #8B4513, #D2691E);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-button:hover {
+            background: linear-gradient(135deg, #D2691E, #8B4513);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .psalm-types-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .psalm-type-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #8B4513;
+        }
+        
+        .psalm-type-name {
+            font-weight: bold;
+            color: #8B4513;
+            margin-bottom: 5px;
+        }
+        
+        .authors-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .author-item {
+            background: #f5e8d0;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        .famous-psalms-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .psalm-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+            border-top: 4px solid #8B4513;
+        }
+        
+        .psalm-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .psalm-title {
+            font-weight: bold;
+            color: #8B4513;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .chapter-grid {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            }
+            
+            .navigation-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .psalm-types-container,
+            .authors-container,
+            .famous-psalms-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            header {
+                padding: 30px 20px;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-<div class="contenido">
-<h1>Salmos</h1>
-<ul>
-
-  <li><a href="salmos1.html">Capítulo 1</a></li>
-<li><a href="salmos2.html">Capítulo 2</a></li>
-<li><a href="salmos3.html">Capítulo 3</a></li>
-  <li><a href="salmos4.html">Capítulo 4</a></li>
-<li><a href="salmos5.html">Capítulo 5</a></li>
-<li><a href="salmos6.html">Capítulo 6</a></li>
-  <li><a href="salmos7.html">Capítulo 7</a></li>
-<li><a href="salmos8.html">Capítulo 8</a></li>
-<li><a href="salmos9.html">Capítulo 9</a></li>
-<li><a href="salmos10.html">Capítulo 10</a></li>
-<li><a href="salmos11.html">Capítulo 11</a></li>
-<li><a href="salmos12.html">Capítulo 12</a></li>
-  <li><a href="salmos13.html">Capítulo 13</a></li>
-<li><a href="salmos14.html">Capítulo 14</a></li>
-<li><a href="salmos15.html">Capítulo 15</a></li>
-  <li><a href="salmos16.html">Capítulo 16</a></li>
-<li><a href="salmos17.html">Capítulo 17</a></li>
-<li><a href="salmos18.html">Capítulo 18</a></li>
-  <li><a href="salmos19.html">Capítulo 19</a></li>
-<li><a href="salmos20.html">Capítulo 20</a></li>
-<li><a href="salmos21.html">Capítulo 21</a></li>
-  <li><a href="salmos22.html">Capítulo 22</a></li>
-<li><a href="salmos23.html">Capítulo 23</a></li>
-<li><a href="salmos24.html">Capítulo 24</a></li>
-<li><a href="salmos25.html">Capítulo 25</a></li>
-  <li><a href="salmos26.html">Capítulo 26</a></li>
-<li><a href="salmos27.html">Capítulo 27</a></li>
-<li><a href="salmos28.html">Capítulo 28</a></li>
-  <li><a href="salmos29.html">Capítulo 29</a></li>
-<li><a href="salmos30.html">Capítulo 30</a></li>
-<li><a href="salmos31.html">Capítulo 31</a></li>
-  <li><a href="salmos32.html">Capítulo 32</a></li>
-<li><a href="salmos33.html">Capítulo 33</a></li>
-<li><a href="salmos34.html">Capítulo 34</a></li>
-  <li><a href="salmos35.html">Capítulo 35</a></li>
-<li><a href="salmos36.html">Capítulo 36</a></li>
-<li><a href="salmos37.html">Capítulo 37</a></li>
-  <li><a href="salmos38.html">Capítulo 38</a></li>
-<li><a href="salmos39.html">Capítulo 39</a></li>
-<li><a href="salmos40.html">Capítulo 40</a></li>
-  <li><a href="salmos41.html">Capítulo 41</a></li>
-<li><a href="salmos42.html">Capítulo 42</a></li>
-<li><a href="salmos43.html">Capítulo 43</a></li>
-  <li><a href="salmos44.html">Capítulo 44</a></li>
-<li><a href="salmos45.html">Capítulo 45</a></li>
-<li><a href="salmos46.html">Capítulo 46</a></li>
-  <li><a href="salmos47.html">Capítulo 47</a></li>
-<li><a href="salmos48.html">Capítulo 48</a></li>
-<li><a href="salmos49.html">Capítulo 49</a></li>
-  <li><a href="salmos50.html">Capitulo 50</a></li>
-  <li><a href="salmos51.html">Capítulo 51</a></li>
-<li><a href="salmos52.html">Capítulo 52</a></li>
-<li><a href="salmos53.html">Capítulo 53</a></li>
-  <li><a href="salmos54.html">Capítulo 54</a></li>
-<li><a href="salmos55.html">Capítulo 55</a></li>
-<li><a href="salmos56.html">Capítulo 56</a></li>
-  <li><a href="salmos57.html">Capítulo 57</a></li>
-<li><a href="salmos58.html">Capítulo 58</a></li>
-<li><a href="salmos59.html">Capítulo 59</a></li>
-<li><a href="salmos60.html">Capítulo 60</a></li>
-<li><a href="salmos61.html">Capítulo 61</a></li>
-<li><a href="salmos62.html">Capítulo 62</a></li>
-  <li><a href="salmos63.html">Capítulo 63</a></li>
-<li><a href="salmos64.html">Capítulo 64</a></li>
-<li><a href="salmos65.html">Capítulo 65</a></li>
-  <li><a href="salmos66.html">Capítulo 66</a></li>
-<li><a href="salmos67.html">Capítulo 67</a></li>
-<li><a href="salmos68.html">Capítulo 68</a></li>
-  <li><a href="salmos69.html">Capítulo 69</a></li>
-<li><a href="salmos70.html">Capítulo 70</a></li>
-<li><a href="salmos71.html">Capítulo 71</a></li>
-  <li><a href="salmos72.html">Capítulo 72</a></li>
-<li><a href="salmos73.html">Capítulo 73</a></li>
-<li><a href="salmos74.html">Capítulo 74</a></li>
-<li><a href="salmos75.html">Capítulo 75</a></li>
-  <li><a href="salmos76.html">Capítulo 76</a></li>
-<li><a href="salmos77.html">Capítulo 77</a></li>
-<li><a href="salmos78.html">Capítulo 78</a></li>
-  <li><a href="salmos79.html">Capítulo 79</a></li>
-<li><a href="salmos80.html">Capítulo 80</a></li>
-<li><a href="salmos81.html">Capítulo 81</a></li>
-  <li><a href="salmos82.html">Capítulo 82</a></li>
-<li><a href="salmos83.html">Capítulo 83</a></li>
-<li><a href="salmos84.html">Capítulo 84</a></li>
-  <li><a href="salmos85.html">Capítulo 85</a></li>
-<li><a href="salmos86.html">Capítulo 86</a></li>
-<li><a href="salmos87.html">Capítulo 87</a></li>
-  <li><a href="salmos88.html">Capítulo 88</a></li>
-<li><a href="salmos89.html">Capítulo 89</a></li>
-<li><a href="salmos90.html">Capítulo 90</a></li>
-  <li><a href="salmos91.html">Capítulo 91</a></li>
-<li><a href="salmos92.html">Capítulo 92</a></li>
-<li><a href="salmos93.html">Capítulo 93</a></li>
-  <li><a href="salmos94.html">Capítulo 94</a></li>
-<li><a href="salmos95.html">Capítulo 95</a></li>
-<li><a href="salmos96.html">Capítulo 96</a></li>
-  <li><a href="salmos97.html">Capítulo 97</a></li>
-<li><a href="salmos98.html">Capítulo 98</a></li>
-<li><a href="salmos99.html">Capítulo 99</a></li>
-  <li><a href="salmos100.html">Capitulo 100</a></li>
-  <li><a href="salmos101.html">Capítulo 101</a></li>
-<li><a href="salmos102.html">Capítulo 102</a></li>
-<li><a href="salmos103.html">Capítulo 103</a></li>
-  <li><a href="salmos104.html">Capítulo 104</a></li>
-<li><a href="salmos105.html">Capítulo 105</a></li>
-<li><a href="salmos106.html">Capítulo 106</a></li>
-  <li><a href="salmos107.html">Capítulo 107</a></li>
-<li><a href="salmos108.html">Capítulo 108</a></li>
-<li><a href="salmos109.html">Capítulo 109</a></li>
-<li><a href="salmos110.html">Capítulo 110</a></li>
-<li><a href="salmos111.html">Capítulo 111</a></li>
-<li><a href="salmos112.html">Capítulo 112</a></li>
-  <li><a href="salmos113.html">Capítulo 113</a></li>
-<li><a href="salmos114.html">Capítulo 114</a></li>
-<li><a href="salmos115.html">Capítulo 115</a></li>
-  <li><a href="salmos116.html">Capítulo 116</a></li>
-<li><a href="salmos117.html">Capítulo 117</a></li>
-<li><a href="salmos118.html">Capítulo 118</a></li>
-  <li><a href="salmos119.html">Capítulo 119</a></li>
-<li><a href="salmos120.html">Capítulo 120</a></li>
-<li><a href="salmos121.html">Capítulo 121</a></li>
-  <li><a href="salmos122.html">Capítulo 122</a></li>
-<li><a href="salmos123.html">Capítulo 123</a></li>
-<li><a href="salmos124.html">Capítulo 124</a></li>
-<li><a href="salmos125.html">Capítulo 125</a></li>
-  <li><a href="salmos126.html">Capítulo 126</a></li>
-<li><a href="salmos127.html">Capítulo 127</a></li>
-<li><a href="salmos128.html">Capítulo 128</a></li>
-  <li><a href="salmos129.html">Capítulo 129</a></li>
-<li><a href="salmos130.html">Capítulo 130</a></li>
-<li><a href="salmos131.html">Capítulo 131</a></li>
-  <li><a href="salmos312.html">Capítulo 132</a></li>
-<li><a href="salmos133.html">Capítulo 133</a></li>
-<li><a href="salmos134.html">Capítulo 134</a></li>
-  <li><a href="salmos135.html">Capítulo 135</a></li>
-<li><a href="salmos136.html">Capítulo 136</a></li>
-<li><a href="salmos137.html">Capítulo 137</a></li>
-  <li><a href="salmos138.html">Capítulo 138</a></li>
-<li><a href="salmos139.html">Capítulo 139</a></li>
-<li><a href="salmos140.html">Capítulo 140</a></li>
-  <li><a href="salmos141.html">Capítulo 141</a></li>
-<li><a href="salmos142.html">Capítulo 142</a></li>
-<li><a href="salmos143.html">Capítulo 143</a></li>
-  <li><a href="salmos144.html">Capítulo 144</a></li>
-<li><a href="salmos145.html">Capítulo 145</a></li>
-<li><a href="salmos146.html">Capítulo 146</a></li>
-  <li><a href="salmos147.html">Capítulo 147</a></li>
-<li><a href="salmos148.html">Capítulo 148</a></li>
-<li><a href="salmos149.html">Capítulo 149</a></li>
-  <li><a href="salmos150.html">Capitulo 150</a></li>
-</ul>
-
-  <button onclick="location.href='index.html'">◀️</button>
-</div>
-</div>
+    <div class="container">
+        <header>
+            <h1>Salmos</h1>
+            <p class="subtitle"></p>
+        </header>
+        
+        <div class="content">
+            <div class="intro-section">
+                <h2>Introducción a los Salmos</h2>
+                <p>El libro de <span class="highlight">Salmos</span> (en hebreo: Tehillim, "Alabanzas") es una colección de 150 poemas y canciones sagradas que expresan toda la gama de emociones humanas ante Dios. Es el libro más largo de la Biblia y ha sido llamado "el corazón de las Escrituras" por su profunda expresión de fe, duda, alegría, dolor y adoración.</p>
+                
+                <div class="biblical-box">
+                    <p class="scripture">"Bienaventurado el varón que no anduvo en consejo de malos, Ni estuvo en camino de pecadores, Ni en silla de escarnecedores se ha sentado; Sino que en la ley de Jehová está su delicia, Y en su ley medita de día y de noche."</p>
+                    <p class="scripture-ref">Salmos 1:1-2 (Reina-Valera 1569-1602)</p>
+                </div>
+            </div>
+            
+            <div class="structure-section">
+                <h2>Estructura del Libro</h2>
+                <p>Los Salmos están organizados en cinco libros, posiblemente reflejando la estructura del Pentateuco:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Libro I (Salmos 1-41)</h3>
+                        <ul>
+                            <li>Principalmente salmos de David</li>
+                            <li>Enfocado en la relación personal con Dios</li>
+                            <li>Temas: confianza, liberación, alabanza</li>
+                            <li>Finaliza con una doxología</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Libro II (Salmos 42-72)</h3>
+                        <ul>
+                            <li>Salmos de los hijos de Coré y de David</li>
+                            <li>Enfocado en la redención de Israel</li>
+                            <li>Temas: anhelo de Dios, sufrimiento nacional</li>
+                            <li>Incluye el Salmo 51 (arrepentimiento)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Libro III (Salmos 73-89)</h3>
+                        <ul>
+                            <li>Principalmente de Asaf</li>
+                            <li>Enfocado en el santuario y la adoración</li>
+                            <li>Temas: justicia de Dios, problemas nacionales</li>
+                            <li>Reflexiona sobre el pacto davídico</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Libro IV (Salmos 90-106)</h3>
+                        <ul>
+                            <li>Principalmente anónimos</li>
+                            <li>Enfocado en el señorío de Dios</li>
+                            <li>Temas: eternidad de Dios, alabanza universal</li>
+                            <li>Incluye el Salmo 91 (protección divina)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Libro V (Salmos 107-150)</h3>
+                        <ul>
+                            <li>Variedad de autores</li>
+                            <li>Enfocado en la palabra de Dios y la alabanza</li>
+                            <li>Temas: gratitud, peregrinación, alabanza final</li>
+                            <li>Concluye con los Salmos de Hallel</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="authors-section">
+                <h2>Autores de los Salmos</h2>
+                <p>Los Salmos fueron escritos por varios autores a lo largo de siglos, reflejando diferentes épocas y experiencias:</p>
+                
+                <div class="authors-container">
+                    <div class="author-item">David (73 salmos)</div>
+                    <div class="author-item">Asaf (12 salmos)</div>
+                    <div class="author-item">Hijos de Coré (11 salmos)</div>
+                    <div class="author-item">Salomón (2 salmos)</div>
+                    <div class="author-item">Moisés (1 salmo)</div>
+                    <div class="author-item">Hemán (1 salmo)</div>
+                    <div class="author-item">Etán (1 salmo)</div>
+                    <div class="author-item">Anónimos (49 salmos)</div>
+                </div>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>David - El Dulce Cantor</h3>
+                        <ul>
+                            <li>Pastor, guerrero y rey</li>
+                            <li>Experiencias variadas: persecución, pecado, arrepentimiento, victoria</li>
+                            <li>Expresión auténtica de emociones humanas</li>
+                            <li>Profecías mesiánicas</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Asaf - El Músico</h3>
+                        <ul>
+                            <li>Director de coro en el tiempo de David</li>
+                            <li>Enfoque en la justicia y soberanía de Dios</li>
+                            <li>Perspectiva nacional e histórica</li>
+                            <li>Cuestionamientos profundos sobre el sufrimiento</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Hijos de Coré - Los Levitas</h3>
+                        <ul>
+                            <li>Guardianes del templo</li>
+                            <li>Enfoque en la adoración y el santuario</li>
+                            <li>Anhelo por la presencia de Dios</li>
+                            <li>Peregrinación espiritual</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="types-section">
+                <h2>Tipos de Salmos</h2>
+                <p>Los Salmos pueden clasificarse en diferentes categorías según su contenido y propósito:</p>
+                
+                <div class="psalm-types-container">
+                    <div class="psalm-type-item">
+                        <div class="psalm-type-name">1. Himnos de Alabanza</div>
+                        <div>Celebran la grandeza, poder y bondad de Dios (Ej: Salmos 8, 19, 29, 33, 100, 103, 113, 117, 135, 145-150)</div>
+                    </div>
+                    <div class="psalm-type-item">
+                        <div class="psalm-type-name">2. Lamentaciones</div>
+                        <div>Expresan dolor, queja y petición en medio del sufrimiento (Ej: Salmos 3-7, 12, 13, 22, 25, 31, 38, 39, 42-44, 51, 54-57, 59-61, 63, 64, 69-71, 74, 79, 80, 83, 85, 86, 88, 90, 102, 109, 120, 123, 126, 130, 137, 140-143)</div>
+                    </div>
+                    <div class="psalm-type-item">
+                        <div class="psalm-type-name">3. Salmos de Acción de Gracias</div>
+                        <div>Expresan gratitud por la liberación y bendiciones recibidas (Ej: Salmos 18, 30, 32, 34, 40, 66, 92, 116, 118, 124, 129, 136, 138)</div>
+                    </div>
+                    <div class="psalm-type-item">
+                        <div class="psalm-type-name">4. Salmos de Confianza</div>
+                        <div>Declaran fe y confianza en Dios en medio de las dificultades (Ej: Salmos 4, 11, 16, 23, 27, 31, 62, 63, 91, 121, 125, 131)</div>
+                    </div>
+                    <div class="psalm-type-item">
+                        <div class="psalm-type-name">5. Salmos de Sabiduría</div>
+                        <div>Ofrecen instrucción sobre la vida piadosa (Ej: Salmos 1, 37, 49, 73, 112, 119, 127, 128, 133)</div>
+                    </div>
+                    <div class="psalm-type-item">
+                        <div class="psalm-type-name">6. Salmos Reales/Mesiánicos</div>
+                        <div>Enfocados en el reinado de Dios y del Mesías (Ej: Salmos 2, 18, 20, 21, 45, 72, 89, 101, 110, 132, 144)</div>
+                    </div>
+                    <div class="psalm-type-item">
+                        <div class="psalm-type-name">7. Salmos de Peregrinación</div>
+                        <div>Cantados durante las peregrinaciones a Jerusalén (Ej: Salmos 120-134)</div>
+                    </div>
+                    <div class="psalm-type-item">
+                        <div class="psalm-type-name">8. Salmos Litúrgicos</div>
+                        <div>Usados en adoración corporativa (Ej: Salmos 15, 24, 68, 82, 95, 115, 118, 136)</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="famous-section">
+                <h2>Salmos Más Conocidos</h2>
+                <p>Algunos salmos han sido especialmente significativos a lo largo de la historia:</p>
+                
+                <div class="famous-psalms-container">
+                    <div class="psalm-card">
+                        <div class="psalm-title">Salmo 23 - El Buen Pastor</div>
+                        <p>"Jehová es mi pastor; nada me faltará..." - Una de las declaraciones más reconfortantes de confianza en el cuidado divino.</p>
+                    </div>
+                    <div class="psalm-card">
+                        <div class="psalm-title">Salmo 51 - Arrepentimiento</div>
+                        <p>"Ten piedad de mí, oh Dios, conforme a tu misericordia..." - La oración de David después de su pecado con Betsabé.</p>
+                    </div>
+                    <div class="psalm-card">
+                        <div class="psalm-title">Salmo 91 - Protección Divina</div>
+                        <p>"El que habita al abrigo del Altísimo..." - Promesa de protección para quienes confían en Dios.</p>
+                    </div>
+                    <div class="psalm-card">
+                        <div class="psalm-title">Salmo 119 - La Palabra de Dios</div>
+                        <p>El capítulo más largo de la Biblia, un acróstico que exalta las Escrituras.</p>
+                    </div>
+                    <div class="psalm-card">
+                        <div class="psalm-title">Salmo 139 - Omnipresencia de Dios</div>
+                        <p>"Oh Jehová, tú me has examinado y conocido..." - Reflexión sobre el conocimiento completo de Dios.</p>
+                    </div>
+                    <div class="psalm-card">
+                        <div class="psalm-title">Salmo 150 - Alabanza Final</div>
+                        <p>"Alabad a Dios en su santuario..." - Conclusión exuberante del libro de Salmos.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="key-verses">
+                <h2>Versículos Clave de los Salmos</h2>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Confianza en Dios</h3>
+                        <p class="scripture">"En paz me acostaré, y asimismo dormiré; Porque solo tú, Jehová, me haces vivir confiado."</p>
+                        <p class="scripture-ref">Salmos 4:8</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Guía y Dirección</h3>
+                        <p class="scripture">"Encamina mis pasos con tu palabra, Y no se enseñoree de mí pecado alguno."</p>
+                        <p class="scripture-ref">Salmos 119:133</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Búsqueda de Dios</h3>
+                        <p class="scripture">"Como el ciervo brama por las corrientes de las aguas, Así clama por ti, oh Dios, el alma mía."</p>
+                        <p class="scripture-ref">Salmos 42:1</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Alabanza Perpetua</h3>
+                        <p class="scripture">"Bendice, alma mía, a Jehová, Y bendiga todo mi ser su santo nombre."</p>
+                        <p class="scripture-ref">Salmos 103:1</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="application-section">
+                <h2>Aplicación para la Vida Cristiana</h2>
+                <p>Los Salmos ofrecen recursos espirituales invaluables para los creyentes:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Oración Auténtica</h3>
+                        <p>Los Salmos nos enseñan a orar con honestidad, expresando todas nuestras emociones ante Dios - alegría, dolor, enojo, duda y esperanza.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Adoración Profunda</h3>
+                        <p>Nos guían en una adoración que va más allá de las formas externas, tocando el corazón mismo de la relación con Dios.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Consuelo en el Sufrimiento</h3>
+                        <p>Proveen palabras para el dolor cuando nos faltan las nuestras, mostrando que el sufrimiento puede ser un camino hacia Dios.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Formación Espiritual</h3>
+                        <p>Meditar en los Salmos moldea nuestro carácter, pensamientos y emociones según el corazón de Dios.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chapters-list">
+                <h2>Los 150 Salmos</h2>
+                <p>Selecciona un salmo para estudiar:</p>
+                
+                <div class="chapter-grid">
+                    <a href="salmo1.html" class="chapter-item">Salmo 1</a>
+                    <a href="salmo2.html" class="chapter-item">Salmo 2</a>
+                    <a href="salmo3.html" class="chapter-item">Salmo 3</a>
+                    <a href="salmo4.html" class="chapter-item">Salmo 4</a>
+                    <a href="salmo5.html" class="chapter-item">Salmo 5</a>
+                    <a href="salmo6.html" class="chapter-item">Salmo 6</a>
+                    <a href="salmo7.html" class="chapter-item">Salmo 7</a>
+                    <a href="salmo8.html" class="chapter-item">Salmo 8</a>
+                    <a href="salmo9.html" class="chapter-item">Salmo 9</a>
+                    <a href="salmo10.html" class="chapter-item">Salmo 10</a>
+                    <a href="salmo11.html" class="chapter-item">Salmo 11</a>
+                    <a href="salmo12.html" class="chapter-item">Salmo 12</a>
+                    <a href="salmo13.html" class="chapter-item">Salmo 13</a>
+                    <a href="salmo14.html" class="chapter-item">Salmo 14</a>
+                    <a href="salmo15.html" class="chapter-item">Salmo 15</a>
+                    <a href="salmo16.html" class="chapter-item">Salmo 16</a>
+                    <a href="salmo17.html" class="chapter-item">Salmo 17</a>
+                    <a href="salmo18.html" class="chapter-item">Salmo 18</a>
+                    <a href="salmo19.html" class="chapter-item">Salmo 19</a>
+                    <a href="salmo20.html" class="chapter-item">Salmo 20</a>
+                    <a href="salmo21.html" class="chapter-item">Salmo 21</a>
+                    <a href="salmo22.html" class="chapter-item">Salmo 22</a>
+                    <a href="salmo23.html" class="chapter-item">Salmo 23</a>
+                    <a href="salmo24.html" class="chapter-item">Salmo 24</a>
+                    <a href="salmo25.html" class="chapter-item">Salmo 25</a>
+                    <a href="salmo26.html" class="chapter-item">Salmo 26</a>
+                    <a href="salmo27.html" class="chapter-item">Salmo 27</a>
+                    <a href="salmo28.html" class="chapter-item">Salmo 28</a>
+                    <a href="salmo29.html" class="chapter-item">Salmo 29</a>
+                    <a href="salmo30.html" class="chapter-item">Salmo 30</a>
+                    <a href="salmo31.html" class="chapter-item">Salmo 31</a>
+                    <a href="salmo32.html" class="chapter-item">Salmo 32</a>
+                    <a href="salmo33.html" class="chapter-item">Salmo 33</a>
+                    <a href="salmo34.html" class="chapter-item">Salmo 34</a>
+                    <a href="salmo35.html" class="chapter-item">Salmo 35</a>
+                    <a href="salmo36.html" class="chapter-item">Salmo 36</a>
+                    <a href="salmo37.html" class="chapter-item">Salmo 37</a>
+                    <a href="salmo38.html" class="chapter-item">Salmo 38</a>
+                    <a href="salmo39.html" class="chapter-item">Salmo 39</a>
+                    <a href="salmo40.html" class="chapter-item">Salmo 40</a>
+                    <a href="salmo41.html" class="chapter-item">Salmo 41</a>
+                    <a href="salmo42.html" class="chapter-item">Salmo 42</a>
+                    <a href="salmo43.html" class="chapter-item">Salmo 43</a>
+                    <a href="salmo44.html" class="chapter-item">Salmo 44</a>
+                    <a href="salmo45.html" class="chapter-item">Salmo 45</a>
+                    <a href="salmo46.html" class="chapter-item">Salmo 46</a>
+                    <a href="salmo47.html" class="chapter-item">Salmo 47</a>
+                    <a href="salmo48.html" class="chapter-item">Salmo 48</a>
+                    <a href="salmo49.html" class="chapter-item">Salmo 49</a>
+                    <a href="salmo50.html" class="chapter-item">Salmo 50</a>
+                    <a href="salmo51.html" class="chapter-item">Salmo 51</a>
+                    <a href="salmo52.html" class="chapter-item">Salmo 52</a>
+                    <a href="salmo53.html" class="chapter-item">Salmo 53</a>
+                    <a href="salmo54.html" class="chapter-item">Salmo 54</a>
+                    <a href="salmo55.html" class="chapter-item">Salmo 55</a>
+                    <a href="salmo56.html" class="chapter-item">Salmo 56</a>
+                    <a href="salmo57.html" class="chapter-item">Salmo 57</a>
+                    <a href="salmo58.html" class="chapter-item">Salmo 58</a>
+                    <a href="salmo59.html" class="chapter-item">Salmo 59</a>
+                    <a href="salmo60.html" class="chapter-item">Salmo 60</a>
+                    <a href="salmo61.html" class="chapter-item">Salmo 61</a>
+                    <a href="salmo62.html" class="chapter-item">Salmo 62</a>
+                    <a href="salmo63.html" class="chapter-item">Salmo 63</a>
+                    <a href="salmo64.html" class="chapter-item">Salmo 64</a>
+                    <a href="salmo65.html" class="chapter-item">Salmo 65</a>
+                    <a href="salmo66.html" class="chapter-item">Salmo 66</a>
+                    <a href="salmo67.html" class="chapter-item">Salmo 67</a>
+                    <a href="salmo68.html" class="chapter-item">Salmo 68</a>
+                    <a href="salmo69.html" class="chapter-item">Salmo 69</a>
+                    <a href="salmo70.html" class="chapter-item">Salmo 70</a>
+                    <a href="salmo71.html" class="chapter-item">Salmo 71</a>
+                    <a href="salmo72.html" class="chapter-item">Salmo 72</a>
+                    <a href="salmo73.html" class="chapter-item">Salmo 73</a>
+                    <a href="salmo74.html" class="chapter-item">Salmo 74</a>
+                    <a href="salmo75.html" class="chapter-item">Salmo 75</a>
+                    <a href="salmo76.html" class="chapter-item">Salmo 76</a>
+                    <a href="salmo77.html" class="chapter-item">Salmo 77</a>
+                    <a href="salmo78.html" class="chapter-item">Salmo 78</a>
+                    <a href="salmo79.html" class="chapter-item">Salmo 79</a>
+                    <a href="salmo80.html" class="chapter-item">Salmo 80</a>
+                    <a href="salmo81.html" class="chapter-item">Salmo 81</a>
+                    <a href="salmo82.html" class="chapter-item">Salmo 82</a>
+                    <a href="salmo83.html" class="chapter-item">Salmo 83</a>
+                    <a href="salmo84.html" class="chapter-item">Salmo 84</a>
+                    <a href="salmo85.html" class="chapter-item">Salmo 85</a>
+                    <a href="salmo86.html" class="chapter-item">Salmo 86</a>
+                    <a href="salmo87.html" class="chapter-item">Salmo 87</a>
+                    <a href="salmo88.html" class="chapter-item">Salmo 88</a>
+                    <a href="salmo89.html" class="chapter-item">Salmo 89</a>
+                    <a href="salmo90.html" class="chapter-item">Salmo 90</a>
+                    <a href="salmo91.html" class="chapter-item">Salmo 91</a>
+                    <a href="salmo92.html" class="chapter-item">Salmo 92</a>
+                    <a href="salmo93.html" class="chapter-item">Salmo 93</a>
+                    <a href="salmo94.html" class="chapter-item">Salmo 94</a>
+                    <a href="salmo95.html" class="chapter-item">Salmo 95</a>
+                    <a href="salmo96.html" class="chapter-item">Salmo 96</a>
+                    <a href="salmo97.html" class="chapter-item">Salmo 97</a>
+                    <a href="salmo98.html" class="chapter-item">Salmo 98</a>
+                    <a href="salmo99.html" class="chapter-item">Salmo 99</a>
+                    <a href="salmo100.html" class="chapter-item">Salmo 100</a>
+                    <a href="salmo101.html" class="chapter-item">Salmo 101</a>
+                    <a href="salmo102.html" class="chapter-item">Salmo 102</a>
+                    <a href="salmo103.html" class="chapter-item">Salmo 103</a>
+                    <a href="salmo104.html" class="chapter-item">Salmo 104</a>
+                    <a href="salmo105.html" class="chapter-item">Salmo 105</a>
+                    <a href="salmo106.html" class="chapter-item">Salmo 106</a>
+                    <a href="salmo107.html" class="chapter-item">Salmo 107</a>
+                    <a href="salmo108.html" class="chapter-item">Salmo 108</a>
+                    <a href="salmo109.html" class="chapter-item">Salmo 109</a>
+                    <a href="salmo110.html" class="chapter-item">Salmo 110</a>
+                    <a href="salmo111.html" class="chapter-item">Salmo 111</a>
+                    <a href="salmo112.html" class="chapter-item">Salmo 112</a>
+                    <a href="salmo113.html" class="chapter-item">Salmo 113</a>
+                    <a href="salmo114.html" class="chapter-item">Salmo 114</a>
+                    <a href="salmo115.html" class="chapter-item">Salmo 115</a>
+                    <a href="salmo116.html" class="chapter-item">Salmo 116</a>
+                    <a href="salmo117.html" class="chapter-item">Salmo 117</a>
+                    <a href="salmo118.html" class="chapter-item">Salmo 118</a>
+                    <a href="salmo119.html" class="chapter-item">Salmo 119</a>
+                    <a href="salmo120.html" class="chapter-item">Salmo 120</a>
+                    <a href="salmo121.html" class="chapter-item">Salmo 121</a>
+                    <a href="salmo122.html" class="chapter-item">Salmo 122</a>
+                    <a href="salmo123.html" class="chapter-item">Salmo 123</a>
+                    <a href="salmo124.html" class="chapter-item">Salmo 124</a>
+                    <a href="salmo125.html" class="chapter-item">Salmo 125</a>
+                    <a href="salmo126.html" class="chapter-item">Salmo 126</a>
+                    <a href="salmo127.html" class="chapter-item">Salmo 127</a>
+                    <a href="salmo128.html" class="chapter-item">Salmo 128</a>
+                    <a href="salmo129.html" class="chapter-item">Salmo 129</a>
+                    <a href="salmo130.html" class="chapter-item">Salmo 130</a>
+                    <a href="salmo131.html" class="chapter-item">Salmo 131</a>
+                    <a href="salmo132.html" class="chapter-item">Salmo 132</a>
+                    <a href="salmo133.html" class="chapter-item">Salmo 133</a>
+                    <a href="salmo134.html" class="chapter-item">Salmo 134</a>
+                    <a href="salmo135.html" class="chapter-item">Salmo 135</a>
+                    <a href="salmo136.html" class="chapter-item">Salmo 136</a>
+                    <a href="salmo137.html" class="chapter-item">Salmo 137</a>
+                    <a href="salmo138.html" class="chapter-item">Salmo 138</a>
+                    <a href="salmo139.html" class="chapter-item">Salmo 139</a>
+                    <a href="salmo140.html" class="chapter-item">Salmo 140</a>
+                    <a href="salmo141.html" class="chapter-item">Salmo 141</a>
+                    <a href="salmo142.html" class="chapter-item">Salmo 142</a>
+                    <a href="salmo143.html" class="chapter-item">Salmo 143</a>
+                    <a href="salmo144.html" class="chapter-item">Salmo 144</a>
+                    <a href="salmo145.html" class="chapter-item">Salmo 145</a>
+                    <a href="salmo146.html" class="chapter-item">Salmo 146</a>
+                    <a href="salmo147.html" class="chapter-item">Salmo 147</a>
+                    <a href="salmo148.html" class="chapter-item">Salmo 148</a>
+                    <a href="salmo149.html" class="chapter-item">Salmo 149</a>
+                    <a href="salmo150.html" class="chapter-item">Salmo 150</a>
+                </div>
+            </div>
+            
+            <div class="navigation-buttons">
+                <a href="job.html" class="nav-button">← Job</a>
+                <a href="index.html" class="nav-button">🏠 Inicio</a>
+                <a href="proverbios.html" class="nav-button">Proverbios →</a>
+            </div>
+            
+            <div class="biblical-box">
+                <h3>Legado de los Salmos</h3>
+                <p>Los Salmos han sido fundamentales en la vida espiritual del pueblo de Dios a través de los siglos:</p>
+                <ul>
+                    <li><strong>Adoración Continua</strong> - Han sido el himnario de Israel y la Iglesia por milenios</li>
+                    <li><strong>Expresión Completa</strong> - Abarcan toda la gama de experiencias humanas ante Dios</li>
+                    <li><strong>Profecía Mesiánica</strong> - Contienen importantes referencias al Mesías venidero</li>
+                    <li><strong>Recurso Pastoral</strong> - Proveen lenguaje para el consuelo, la enseñanza y la guía</li>
+                    <li><strong>Puente Cultural</strong> - Conectan a creyentes de diferentes épocas y tradiciones</li>
+                </ul>
+                
+                <p class="scripture">"La palabra de Cristo more en abundancia en vosotros, enseñándoos y exhortándoos unos a otros en toda sabiduría, cantando con gracia en vuestros corazones al Señor con salmos e himnos y cánticos espirituales."</p>
+                <p class="scripture-ref">Colosenses 3:16</p>
+                
+                <p>Los Salmos nos invitan a una relación auténtica con Dios, donde podemos llevar toda nuestra humanidad - alegrías, tristezas, dudas y certezas - a la presencia del Creador que nos conoce y nos ama.</p>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 IN GOD WE TRUST</p>
+                <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
