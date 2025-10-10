@@ -1,100 +1,788 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-BYMJS3X12P');
-</script>
-	<meta name="google-site-verification" content="KWZFlVdcT-h9cB1Qnj0LgSLJP-J-NS4bgjhnQG_c140" />
-<title>Esdras</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body {
-font-family: Arial, sans-serif;
-background-color: #f0f0f0;
-margin: 0;
-padding: 0;
-text-align: center;
-}
-.container {
-max-width: 800px;
-margin: 40px auto;
-padding: 20px;
-background-color: #fff;
-border: 1px solid #ddd;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.contenido {
-  background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20230523/pngtree-bible-gif-hd-wallpaper-image_2683159.jpg');
-padding: 20px;
-margin: 40px auto;
-width: 80%;
-background-color: #fff;
-border: 1px solid #ddd;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-h1 {
-color: #333;
-}
-ul {
-list-style: none;
-padding: 0;
-margin: 0;
-}
-li {
-margin-bottom: 10px;
-}
-a {
-text-decoration: none;
-color: #fff;
-}
-a:hover {
-color: #23527c;
-}
-img {
-max-width: 100%;
-height: auto;
-margin: 20px auto;
-border-radius: 10px;
-}
-   button {
-    background-color: #337ab7;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  button:hover {
-    background-color: #23527c;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esdras - Decimoquinto Libro de la Biblia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: white;
+            padding: 50px 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        header::before {
+            content: "📖";
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 3rem;
+            opacity: 0.7;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.4rem;
+            font-weight: 300;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .intro-section {
+            background-color: #f8f9fa;
+            border-left: 5px solid #1e3c72;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #1e3c72;
+            margin-bottom: 25px;
+            font-size: 2.2rem;
+            border-bottom: 3px solid #2a5298;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #1e3c72;
+            margin: 30px 0 20px;
+            font-size: 1.7rem;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .highlight {
+            background-color: #e3f2fd;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #1e3c72;
+        }
+        
+        .biblical-box {
+            background-color: #e8eaf6;
+            border: 2px solid #1e3c72;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+        }
+        
+        .scripture {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #1e3c72;
+            margin: 15px 0;
+            padding-left: 20px;
+            border-left: 4px solid #1e3c72;
+        }
+        
+        .scripture-ref {
+            font-weight: bold;
+            text-align: right;
+            color: #2a5298;
+            margin-top: 10px;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #1e3c72;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card h3 {
+            color: #1e3c72;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+        
+        .card ul {
+            padding-left: 20px;
+        }
+        
+        .card li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .structure-section {
+            background-color: #f5f5f5;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .return-section {
+            background-color: #e3f2fd;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border-left: 5px solid #1976d2;
+        }
+        
+        .temple-section {
+            background-color: #e8f5e9;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .ezra-section {
+            background-color: #fff3e0;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .reform-section {
+            background-color: #f3e5f5;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .key-verses {
+            background-color: #f3e5f5;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border: 2px solid #7b1fa2;
+        }
+        
+        .application-section {
+            background-color: #fff3e0;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .chapters-list {
+            background-color: #fafafa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .chapter-item {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 15px 10px;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: block;
+        }
+        
+        .chapter-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #2a5298, #1e3c72);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: #FFF8DC;
+            font-size: 1.1rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+            border: 3px solid #2a5298;
+        }
+        
+        .navigation-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .nav-button {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-button:hover {
+            background: linear-gradient(135deg, #2a5298, #1e3c72);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .timeline-chart {
+            background: linear-gradient(135deg, #87CEEB, #98FB98);
+            height: 300px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2F4F4F;
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .events-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .event-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #1e3c72;
+        }
+        
+        .event-name {
+            font-weight: bold;
+            color: #1e3c72;
+            margin-bottom: 5px;
+        }
+        
+        .return-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .return-item {
+            background: #e3f2fd;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        .restoration-box {
+            background: linear-gradient(135deg, #fff9c4, #fff59d);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 2px solid #fbc02d;
+        }
+        
+        .challenge-box {
+            background: linear-gradient(135deg, #ffcdd2, #f8bbd0);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 2px solid #c2185b;
+        }
+        
+        .reform-box {
+            background: linear-gradient(135deg, #c8e6c9, #a5d6a7);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 2px solid #388e3c;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .chapter-grid {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            }
+            
+            .navigation-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .events-container,
+            .return-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            header {
+                padding: 30px 20px;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-<div class="contenido">
-<h1>Esdras</h1>
-<ul>
-<li><a href="esdras1.html">Capítulo 1</a></li>
-<li><a href="esdras2.html">Capítulo 2</a></li>
-<li><a href="esdras3.html">Capítulo 3</a></li>
-  <li><a href="esdras4.html">Capítulo 4</a></li>
-<li><a href="esdras5.html">Capítulo 5</a></li>
-<li><a href="esdras6.html">Capítulo 6</a></li>
-  <li><a href="esdras7.html">Capítulo 7</a></li>
-<li><a href="esdras8.html">Capítulo 8</a></li>
-<li><a href="esdras9.html">Capítulo 9</a></li>
-<li><a href="esdras10.html">Capítulo 10</a></li>
-</ul>
-<button onclick="location.href='nuevo-testamento.html'">🏠</button>
-</div>
-</div>
+    <div class="container">
+        <header>
+            <h1>Esdras</h1>
+            <p class="subtitle">El Decimoquinto Libro de la Biblia - Restauración y Reforma Post-Exílica</p>
+        </header>
+        
+        <div class="content">
+            <div class="intro-section">
+                <h2>Introducción a Esdras</h2>
+                <p><span class="highlight">Esdras</span> es el decimoquinto libro de la Biblia y el primero de los libros post-exílicos. Narra el regreso del pueblo judío del cautiverio babilónico y los esfuerzos por restaurar la adoración y la vida comunitaria en Jerusalén. El libro lleva el nombre de su protagonista principal, Esdras el escriba, quien lidera una reforma espiritual basada en la obediencia a la Ley de Moisés.</p>
+                
+                <div class="biblical-box">
+                    <p class="scripture">"Porque Esdras había preparado su corazón para inquirir la ley de Jehová y para cumplirla, y para enseñar en Israel sus estatutos y decretos."</p>
+                    <p class="scripture-ref">Esdras 7:10 (Reina-Valera 1569-1602)</p>
+                </div>
+            </div>
+            
+            <div class="structure-section">
+                <h2>Estructura del Libro</h2>
+                <p>Esdras está organizado en dos secciones principales que describen el proceso de restauración:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Primer Retorno y Reconstrucción (Capítulos 1-6)</h3>
+                        <ul>
+                            <li>Decreto de Ciro el Persa</li>
+                            <li>Primer retorno bajo Zorobabel</li>
+                            <li>Reconstrucción del altar</li>
+                            <li>Fundación del segundo templo</li>
+                            <li>Oposición y paralización</li>
+                            <li>Reanudación bajo Darío</li>
+                            <li>Dedicación del templo</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Segundo Retorno y Reforma (Capítulos 7-10)</h3>
+                        <ul>
+                            <li>Esdras el escriba y sacerdote</li>
+                            <li>Segundo retorno bajo Artajerjes</li>
+                            <li>Viaje a Jerusalén</li>
+                            <li>Problema de matrimonios mixtos</li>
+                            <li>Confesión y arrepentimiento nacional</li>
+                            <li>Renovación del pacto</li>
+                            <li>Separación de esposas extranjeras</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="return-section">
+                <h2>El Primer Retorno: Restauración del Templo</h2>
+                <p>La primera parte del libro narra el regreso inicial y los esfuerzos por reconstruir el templo:</p>
+                
+                <div class="timeline-chart">
+                    Primer Retorno (538 a.C.)<br>
+                    Decreto → Retorno → Altar → Templo → Oposición → Finalización
+                </div>
+                
+                <h3>Eventos del Primer Retorno</h3>
+                <div class="events-container">
+                    <div class="event-item">
+                        <div class="event-name">1. Decreto de Ciro (538 a.C.)</div>
+                        <div>El rey persa permite el retorno y ordena reconstruir el templo, cumpliendo la profecía de Jeremías.</div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-name">2. Preparación del Retorno</div>
+                        <div>Zorobabel y Jesúa lideran aproximadamente 50,000 judíos de regreso a Jerusalén.</div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-name">3. Restauración del Altar</div>
+                        <div>Primera acción: reconstruir el altar para restaurar los sacrificios según la Ley.</div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-name">4. Fundación del Templo</div>
+                        <div>Se colocan los cimientos del segundo templo con emociones encontradas.</div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-name">5. Oposición Samaritana</div>
+                        <div>Los enemigos detienen la obra mediante acusaciones y decretos reales.</div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-name">6. Reanudación bajo Darío</div>
+                        <div>Profetas Hageo y Zacarías animan al pueblo; Darío confirma el decreto de Ciro.</div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-name">7. Dedicación del Templo</div>
+                        <div>Completación y dedicación del segundo templo en 515 a.C., 70 años después de su destrucción.</div>
+                    </div>
+                </div>
+                
+                <div class="restoration-box">
+                    <h3>Significado del Segundo Templo</h3>
+                    <p>Aunque menos glorioso que el primero, el segundo templo representa la fidelidad de Dios:</p>
+                    <ul>
+                        <li><strong>Cumplimiento Profético</strong>: 70 años de exilio como Jeremías profetizó</li>
+                        <strong>Continuidad del Culto</strong>: Restauración de sacrificios y fiestas</li>
+                        <li><strong>Base para el Judaísmo</strong>: Fundación del judaísmo post-exílico</li>
+                        <li><strong>Esperanza Mesiánica</strong>: Lugar donde Jesús enseñaría siglos después</li>
+                        <li><strong>Testimonio de Perseverancia</strong>: Victoria sobre la oposición</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="temple-section">
+                <h2>Líderes del Primer Retorno</h2>
+                <p>Dios levanta líderes clave para la restauración:</p>
+                
+                <h3>Personajes Clave</h3>
+                <div class="return-container">
+                    <div class="return-item">Zorobabel</div>
+                    <div class="return-item">Jesúa</div>
+                    <div class="return-item">Hageo</div>
+                    <div class="return-item">Zacarías</div>
+                    <div class="return-item">Darío</div>
+                </div>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Zorobabel</h3>
+                        <ul>
+                            <li>Descendiente de David</li>
+                            <li>Gobernador de Judá</li>
+                            <li>Líder civil del retorno</li>
+                            <li>Supervisa construcción del templo</li>
+                            <li>Mencionado en genealogías de Jesús</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Jesúa</h3>
+                        <ul>
+                            <li>Sumo sacerdote</li>
+                            <li>Líder religioso del retorno</li>
+                            <li>Colabora con Zorobabel</li>
+                            <li>Restaura el sacerdocio</li>
+                            <li>Enfrenta oposición con fe</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Profetas</h3>
+                        <ul>
+                            <li><strong>Hageo</strong>: Anima a priorizar el templo</li>
+                            <li><strong>Zacarías</strong>: Visiones de esperanza futura</li>
+                            <li>Profetizan durante reinado de Darío</li>
+                            <li>Motivan a completar la obra</li>
+                            <li>Conectan con esperanza mesiánica</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="challenge-box">
+                    <h3>Desafíos y Oposición</h3>
+                    <p>La reconstrucción enfrenta múltiples obstáculos:</p>
+                    <ul>
+                        <li><strong>Oposición Externa</strong>: Samaritanos acusan a los judíos de rebelión</li>
+                        <li><strong>Desánimo Interno</strong>: Los ancianos que vieron el primer templo lloran</li>
+                        <li><strong>Paralización</strong>: La obra se detiene por 15 años</li>
+                        <li><strong>Prioridades Equivocadas</strong>: El pueblo construye sus casas antes que el templo</li>
+                        <li><strong>Pobreza</strong>: Falta de recursos después del exilio</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="ezra-section">
+                <h2>Esdras: El Escriba Para Inquirir La Ley</h2>
+                <p>La segunda parte del libro introduce a Esdras y su ministerio:</p>
+                
+                <div class="biblical-box">
+                    <p class="scripture">"Porque Esdras había preparado su corazón para inquirir la ley de Jehová y para cumplirla, y para enseñar en Israel sus estatutos y decretos."</p>
+                    <p class="scripture-ref">Esdras 7:10</p>
+                </div>
+                
+                <h3>Carácter y Ministerio de Esdras</h3>
+                <div class="events-container">
+                    <div class="event-item">
+                        <div class="event-name">1. Preparación Espiritual</div>
+                        <div>Esdras prepara su corazón para estudiar, practicar y enseñar la Ley.</div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-name">2. Autorización Real</div>
+                        <div>Artajerjes le da plena autoridad y recursos para la misión.</div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-name">3. Segundo Retorno (458 a.C.)</div>
+                        <div>Lidera un grupo más pequeño de retornados 80 años después del primer grupo.</div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-name">4. Viaje con Protección Divina</div>
+                        <div>Rechaza escolta militar, confiando en la protección de Dios.</div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-name">5. Entrega de Ofrendas</div>
+                        <div>Lleva tesoros para el templo y ofrece sacrificios de agradecimiento.</div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-name">6. Enseñanza de la Ley</div>
+                        <div>Comienza a enseñar públicamente la Ley al pueblo.</div>
+                    </div>
+                </div>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Cualidades de Esdras</h3>
+                        <ul>
+                            <li>Escriba diligente en la Ley</li>
+                            <li>Sacerdote de línea Aarónica</li>
+                            <li>Hombre de oración y fe</li>
+                            <li>Líder con integridad</li>
+                            <li>Maestro comprometido</li>
+                            <li>Reformador valiente</li>
+                        </ul>
+                    </div>
+                    
+                  
+                </div>
+            </div>
+            
+            <div class="reform-section">
+                <h2>La Reforma de los Matrimonios Mixtos</h2>
+                <p>Esdras enfrenta el problema más urgente: la asimilación mediante matrimonios prohibidos:</p>
+                
+                <div class="reform-box">
+                    <h3>Crisis Espiritual</h3>
+                    <p>Los líderes y pueblo habían desobedecido la Ley al casarse con mujeres extranjeras de naciones paganas, poniendo en peligro la identidad y pureza religiosa de la comunidad.</p>
+                </div>
+                
+                <h3>Proceso de Reforma</h3>
+                <div class="events-container">
+                    <div class="event-item">
+                        <div class="event-name">1. Descubrimiento del Problema</div>
+                        <div>Los príncipes informan a Esdras sobre los matrimonios mixtos generalizados.</div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-name">2. Reacción de Esdras</div>
+                        <div>Rasga sus vestiduras, se sienta atónito, ora y confiesa el pecado nacional.</div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-name">3. Convoción Pública</div>
+                        <div>Toda la comunidad se reúne temblando, reconociendo la gravedad del pecado.</div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-name">4. Propuesta de Reforma</div>
+                        <div>Esdras llama a separarse de las esposas extranjeras y hacer pacto con Dios.</div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-name">5. Implementación</div>
+                        <div>Se establece un proceso ordenado para resolver el problema.</div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-name">6. Lista de Transgresores</div>
+                        <div>Se documentan los nombres de quienes habían tomado esposas extranjeras.</div>
+                    </div>
+                </div>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Significado de la Reforma</h3>
+                        <ul>
+                            <li>Preservación de identidad judía</li>
+                            <li>Obediencia a la Ley mosaica</li>
+                            <li>Separación de influencias paganas</li>
+                            <li>Renovación del pacto nacional</li>
+                            <li>Preparación para el Mesías</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Enseñanzas Espirituales</h3>
+                        <ul>
+                            <li>El pecado afecta a toda la comunidad</li>
+                            <li>Los líderes deben dar el ejemplo</li>
+                            <li>El arrepentimiento requiere acción</li>
+                            <li>La Palabra de Dios es la guía</li>
+                            <li>La reforma comienza con confesión</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="key-verses">
+                <h2>Versículos Clave de Esdras</h2>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Decreto de Ciro</h3>
+                        <p class="scripture">"Jehová el Dios de los cielos me ha dado todos los reinos de la tierra, y me ha mandado que le edifique casa en Jerusalén, que está en Judá."</p>
+                        <p class="scripture-ref">Esdras 1:2</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Propósito de Esdras</h3>
+                        <p class="scripture">"Porque Esdras había preparado su corazón para inquirir la ley de Jehová y para cumplirla, y para enseñar en Israel sus estatutos y decretos."</p>
+                        <p class="scripture-ref">Esdras 7:10</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Confesión de Esdras</h3>
+                        <p class="scripture">"Dios mío, estoy avergonzado y confuso para levantar mi rostro a ti, Dios mío; porque nuestras iniquidades se han multiplicado sobre nuestra cabeza."</p>
+                        <p class="scripture-ref">Esdras 9:6</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Llamado al Arrepentimiento</h3>
+                        <p class="scripture">"Levantaos, porque esta obra es vuestra; y nosotros estamos con vosotros. Esforzaos, y poned mano a la obra."</p>
+                        <p class="scripture-ref">Esdras 10:4</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+                </div>
+            </div>
+            
+            <div class="chapters-list">
+                <h2>Capítulos de Esdras</h2>
+                <p>Selecciona un capítulo para estudiar:</p>
+                
+                <div class="chapter-grid">
+                    <a href="esdras1.html" class="chapter-item">Capítulo 1</a>
+                    <a href="esdras2.html" class="chapter-item">Capítulo 2</a>
+                    <a href="esdras3.html" class="chapter-item">Capítulo 3</a>
+                    <a href="esdras4.html" class="chapter-item">Capítulo 4</a>
+                    <a href="esdras5.html" class="chapter-item">Capítulo 5</a>
+                    <a href="esdras6.html" class="chapter-item">Capítulo 6</a>
+                    <a href="esdras7.html" class="chapter-item">Capítulo 7</a>
+                    <a href="esdras8.html" class="chapter-item">Capítulo 8</a>
+                    <a href="esdras9.html" class="chapter-item">Capítulo 9</a>
+                    <a href="esdras10.html" class="chapter-item">Capítulo 10</a>
+                </div>
+            </div>
+            
+            <div class="navigation-buttons">
+                <a href="2cronicas.html" class="nav-button">← 2 Crónicas</a>
+                <a href="index.html" class="nav-button">🏠 Inicio</a>
+                <a href="nehemias.html" class="nav-button">Nehemías →</a>
+            </div>
+            
+            <div class="biblical-box">
+                <h3>Legado de Esdras</h3>
+                <p>El libro de Esdras establece principios fundamentales para la restauración espiritual:</p>
+                <ul>
+                    <li><strong>Soberanía Divina</strong> - Dios cumple sus promesas y controla la historia, usando hasta reyes paganos</li>
+                    <li><strong>Centralidad de la Palabra</strong> - La restauración genuina comienza con el retorno a las Escrituras</li>
+                    <li><strong>Importancia del Liderazgo</strong> - Líderes piadosos como Esdras son esenciales para la reforma</li>
+                    <li><strong>Arrepentimiento Activo</strong> - La verdadera confesión lleva a cambios concretos de conducta</li>
+                    <li><strong>Comunidad del Pacto</strong> - La identidad del pueblo de Dios se mantiene mediante la obediencia</li>
+                </ul>
+                
+                <p class="scripture">"Y se reunieron conmigo todos los que temían las palabras del Dios de Israel, a causa de la prevaricación de los del cautiverio; y yo estuve muy angustiado hasta la hora del sacrificio de la tarde."</p>
+                <p class="scripture-ref">Esdras 9:4</p>
+                
+                <p>Esdras termina con la comunidad enfrentando las consecuencias de su desobediencia pero tomando medidas para corregirla. Este final abierto prepara el escenario para el ministerio de Nehemías y muestra que la obra de restauración espiritual es continua, requiriendo vigilancia constante y compromiso con la Palabra de Dios.</p>
+                
+                <h3>Contribuciones Duraderas de Esdras</h3>
+                <div class="return-container">
+                    <div class="return-item">Canonización Escrituras</div>
+                    <div class="return-item">Establecimiento Sinagogas</div>
+                    <div class="return-item">Preservación Identidad Judía</div>
+                    <div class="return-item">Modelo Escriba Piadoso</div>
+                    <div class="return-item">Preparación Venida Mesías</div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 IN GOD WE TRUST</p>
+                <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
