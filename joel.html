@@ -1,95 +1,926 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-BYMJS3X12P');
-</script>
-	<meta name="google-site-verification" content="KWZFlVdcT-h9cB1Qnj0LgSLJP-J-NS4bgjhnQG_c140" />
-<title>Jole</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body {
-	background-color: #000000;
-	background-size: cover;
-	background-position: center;
-	font-family: Arial, sans-serif;
-	text-align: center;
-}
-
-.contenido {
-	color: #fff;
-	background-image: url('https://play-lh.googleusercontent.com/Svb-oRYbki_MRCFqPw3zAf8_7F5AbY98JY7-ZGsBFH64r-XzYaGNzmoSULDoLwJMXQ=w526-h296-rw');
-	width: 80%;
-	margin: 40px auto;
-	padding: 20px;
-	background-color: #fff;
-	border: 1px solid #ddd;
-	border-radius: 10px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.contenido {
-padding: 20px;
-margin: 40px auto;
-width: 80%;
-background-color: #000000;
-border: 1px solid #ddd;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-h1 {
-color: #fff;
-}
-ul {
-list-style: none;
-padding: 0;
-margin: 0;
-}
-li {
-margin-bottom: 10px;
-}
-a {
-text-decoration: none;
-color: #fff;
-}
-a:hover {
-color: #23527c;
-}
-img {
-max-width: 100%;
-height: auto;
-margin: 20px auto;
-border-radius: 10px;
-}
-   button {
-    background-color: #337ab7;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  button:hover {
-    background-color: #23527c;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joel - El Profeta del Día de Jehová</title>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BYMJS3X12P');
+    </script>
+    <meta name="google-site-verification" content="KWZFlVdcT-h9cB1Qnj0LgSLJP-J-NS4bgjhnQG_c140" />
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #8B0000 0%, #DC143C 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(to right, #8B0000, #DC143C);
+            color: white;
+            padding: 50px 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        header::before {
+            content: "🔥";
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 3rem;
+            opacity: 0.7;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.4rem;
+            font-weight: 300;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .intro-section {
+            background-color: #f8f9fa;
+            border-left: 5px solid #8B0000;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #8B0000;
+            margin-bottom: 25px;
+            font-size: 2.2rem;
+            border-bottom: 3px solid #DC143C;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #8B0000;
+            margin: 30px 0 20px;
+            font-size: 1.7rem;
+        }
+        
+        h4 {
+            color: #8B0000;
+            margin: 20px 0 15px;
+            font-size: 1.3rem;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .highlight {
+            background-color: #ffe6e6;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #8B0000;
+        }
+        
+        .biblical-box {
+            background-color: #ffe6e6;
+            border: 2px solid #8B0000;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+        }
+        
+        .scripture {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #8B0000;
+            margin: 15px 0;
+            padding-left: 20px;
+            border-left: 4px solid #8B0000;
+        }
+        
+        .scripture-ref {
+            font-weight: bold;
+            text-align: right;
+            color: #DC143C;
+            margin-top: 10px;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #8B0000;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card h3 {
+            color: #8B0000;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+        
+        .card ul {
+            padding-left: 20px;
+        }
+        
+        .card li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .structure-section {
+            background-color: #f5f5f5;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .historical-section {
+            background-color: #e3f2fd;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border-left: 5px solid #1976d2;
+        }
+        
+        .themes-section {
+            background-color: #e8f5e9;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .prophecy-section {
+            background-color: #fff8e1;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .key-verses {
+            background-color: #f3e5f5;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border: 2px solid #7b1fa2;
+        }
+        
+        .application-section {
+            background-color: #fff3e0;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .chapters-list {
+            background-color: #fafafa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .chapter-item {
+            background: linear-gradient(135deg, #8B0000, #DC143C);
+            color: white;
+            padding: 15px 10px;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: block;
+        }
+        
+        .chapter-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #DC143C, #8B0000);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(to right, #8B0000, #DC143C);
+            color: #FFF8DC;
+            font-size: 1.1rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+            border: 3px solid #DC143C;
+        }
+        
+        .navigation-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .nav-button {
+            background: linear-gradient(135deg, #8B0000, #DC143C);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-button:hover {
+            background: linear-gradient(135deg, #DC143C, #8B0000);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .theme-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .theme-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #8B0000;
+        }
+        
+        .theme-name {
+            font-weight: bold;
+            color: #8B0000;
+            margin-bottom: 5px;
+        }
+        
+        .timeline-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .timeline-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+            border-top: 4px solid #8B0000;
+        }
+        
+        .timeline-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .timeline-title {
+            font-weight: bold;
+            color: #8B0000;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .timeline-date {
+            font-weight: bold;
+            color: #DC143C;
+            margin-bottom: 5px;
+        }
+        
+        .definition-box {
+            background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border-left: 5px solid #8B0000;
+        }
+        
+        .definition-term {
+            font-weight: bold;
+            color: #8B0000;
+            margin-bottom: 5px;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .comparison-table th, .comparison-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .comparison-table th {
+            background-color: #8B0000;
+            color: white;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .comparison-table tr:hover {
+            background-color: #ffe6e6;
+        }
+        
+        .historical-periods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .period-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid #8B0000;
+        }
+        
+        .period-title {
+            font-weight: bold;
+            color: #8B0000;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .period-dates {
+            font-weight: bold;
+            color: #DC143C;
+            margin-bottom: 10px;
+        }
+        
+        .plague-box {
+            background: linear-gradient(135deg, #fff0f0, #ffe0e0);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+            border-left: 5px solid #8B0000;
+        }
+        
+        .locust-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .locust-item {
+            background: #ffe6e6;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        .day-of-lord-box {
+            background: linear-gradient(135deg, #e8f4f8, #d4e7f0);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+            border-left: 5px solid #8B0000;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .chapter-grid {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            }
+            
+            .navigation-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .theme-container,
+            .locust-container,
+            .timeline-container,
+            .historical-periods {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            header {
+                padding: 30px 20px;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-<div class="contenido">
-<h1>Joel</h1>
-<ul>
-<li><a href="joel1.html">Capítulo 1</a></li>
-<li><a href="joel2.html">Capítulo 2</a></li>
-<li><a href="joel3.html">Capítulo 3</a></li>
-</ul>
-<button onclick="location.href='index.html'">◀️</button>
-</div>
-</div>
+    <div class="container">
+        <header>
+            <h1>Joel</h1>
+            <p class="subtitle">El Profeta del Día de Jehová - Plaga, Arrepentimiento y Derramamiento del Espíritu</p>
+        </header>
+        
+        <div class="content">
+            <div class="intro-section">
+                <h2>Introducción al Libro de Joel</h2>
+                <p>El libro de <span class="highlight">Joel</span> (en hebreo: Yoel, "Jehová es Dios") es el segundo de los Doce Profetas Menores y presenta un mensaje que comienza con una devastadora plaga de langostas para luego expandirse hacia el gran "Día de Jehová". Joel conecta el juicio histórico con el juicio escatológico, culminando con la promesa del derramamiento del Espíritu Santo.</p>
+                
+                <div class="biblical-box">
+                    <p class="scripture">"Y después de esto derramaré mi Espíritu sobre toda carne, y profetizarán vuestros hijos y vuestras hijas; vuestros ancianos soñarán sueños, y vuestros jóvenes verán visiones."</p>
+                    <p class="scripture-ref">Joel 2:28 (Reina-Valera 1569-1602)</p>
+                </div>
+                
+                <div class="definition-box">
+                    <div class="definition-term">Contexto Histórico de Joel</div>
+                    <p><strong>Fechas:</strong> Fecha incierta, posiblemente siglo IX a.C. (temprano) o siglo VI-V a.C. (tardío). La ausencia de referencias a reyes sugiere un período de regencia sacerdotal.</p>
+                    <p><strong>Ubicación:</strong> Reino de Judá, probablemente Jerusalén, con énfasis en el culto del templo y la vida agrícola.</p>
+                    <p><strong>Evento detonante:</strong> Una plaga catastrófica de langostas que sirve como punto de partida para el mensaje profético.</p>
+                </div>
+            </div>
+            
+            <div class="historical-section">
+                <h2>Contexto Histórico y Fecha</h2>
+                <p>La datación de Joel es uno de los debates más significativos entre los estudiosos:</p>
+                
+                <div class="historical-periods">
+                    <div class="period-card">
+                        <div class="period-title">Posición Temprana</div>
+                        <div class="period-dates">Siglo IX a.C. (830-800 a.C.)</div>
+                        <ul>
+                            <li>Mención de fenicios y filisteos como enemigos (3:4)</li>
+                            <li>Ausencia de referencia a Asiria o Babilonia</li>
+                            <li>Estilo similar a Amós y Oseas</li>
+                            <li>Posible reinado de Joás bajo tutela de Joiada</li>
+                            <li>Enemigos: Tiro, Sidón, Filistea (no grandes imperios)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="period-card">
+                        <div class="period-title">Posición Tardía</div>
+                        <div class="period-dates">Siglo VI-V a.C. (500-400 a.C.)</div>
+                        <ul>
+                            <li>Referencias al exilio (3:1-2) sugieren evento pasado</li>
+                            <li>Énfasis en el culto del Segundo Templo</li>
+                            <li>Griegos mencionados como comerciantes (3:6)</li>
+                            <li>Similitudes con Ageo, Zacarías y Malaquías</li>
+                            <li>Período persa post-exílico</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="period-card">
+                        <div class="period-title">Evidencias Contextuales</div>
+                        <div class="period-dates">Indicadores del Libro</div>
+                        <ul>
+                            <li>No se mencionan reyes - posible regencia sacerdotal</li>
+                            <li>Ancianos y sacerdotes como líderes (1:2, 13; 2:16)</li>
+                            <li>Énfasis en el culto del templo y sacrificios</li>
+                            <li>Referencia a muros de Jerusalén (2:7, 9)</li>
+                            <li>Judá como entidad política estable</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>La Plaga de Langostas en Joel</h3>
+                <div class="locust-container">
+                    <div class="locust-item">Oruga (Gazam) - Cortador</div>
+                    <div class="locust-item">Langosta (Arbeh) - Multiplicador</div>
+                    <div class="locust-item">Revoltón (Yeleq) - Saltador</div>
+                    <div class="locust-item">Saltón (Jasil) - Devorador</div>
+                    <div class="locust-item">Ejército devastador</div>
+                    <div class="locust-item">Fuego consumidor</div>
+                </div>
+                
+                <div class="definition-box">
+                    <div class="definition-term">El Ciclo de las Langostas</div>
+                    <p>Las cuatro palabras hebreas para langostas en Joel 1:4 posiblemente describen diferentes etapas del desarrollo de la langosta: gazam (etapa larval), arbeh (langosta madura), yeleq (etapa saltadora), y jasil (etapa devoradora). Esta progresión enfatiza la completitud y severidad de la devastación, dejando nada para sobrevivir.</p>
+                </div>
+            </div>
+            
+            <div class="structure-section">
+                <h2>Estructura del Libro</h2>
+                <p>Joel presenta una estructura cuidadosamente elaborada en dos partes principales:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>I. La Plaga Histórica y Llamado al Arrepentimiento (1:1-2:17)</h3>
+                        <ul>
+                            <li><strong>Enfoque:</strong> Juicio inminente y oportunidad de gracia</li>
+                            <li>Descripción de la plaga devastadora</li>
+                            <li>Llamado a lamentación y ayuno</li>
+                            <li>El Día de Jehová como ejército destructor</li>
+                            <li>Oportunidad para el arrepentimiento</li>
+                            <li>Intercesión sacerdotal</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>II. Respuesta Divina y Promesas Escatológicas (2:18-3:21)</h3>
+                        <ul>
+                            <li><strong>Enfoque:</strong> Restauración y juicio final</li>
+                            <li>Respuesta misericordiosa de Dios</li>
+                            <li>Restauración material y espiritual</li>
+                            <li>Derramamiento del Espíritu Santo</li>
+                            <li>Juicio de las naciones en el Valle de Josafat</li>
+                            <li>Bendición eterna para Sion</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>Desarrollo Temático de Joel</h3>
+                <div class="plague-box">
+                    <div class="grid-container">
+                        <div class="card">
+                            <h4>Crisis Inmediata (Cap. 1)</h4>
+                            <p><strong>Plaga literal</strong> - Descripción vívida de la devastación agrícola y económica causada por las langostas.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Crisis Inminente (2:1-11)</h4>
+                            <p><strong>Ejército simbólico</strong> - Las langostas se convierten en metáfora de un ejército invasor y el Día de Jehová.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Oportunidad de Gracia (2:12-17)</h4>
+                            <p><strong>Llamado al arrepentimiento</strong> - Dios ofrece escape del juicio mediante el genuino arrepentimiento.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Respuesta Divina (2:18-27)</h4>
+                            <p><strong>Restauración material</strong> - Dios promete restaurar lo que las langostas devoraron.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Promesa Escatológica (2:28-32)</h4>
+                            <p><strong>Derramamiento del Espíritu</strong> - Promesa del Espíritu Santo y salvación para los que invoquen a Dios.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Juicio Final (Cap. 3)</h4>
+                            <p><strong>Valle de Josafat</strong> - Juicio de las naciones y vindicación final de Judá y Jerusalén.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="prophecy-section">
+                <h2>Profecías Principales de Joel</h2>
+                <p>Joel contiene algunas de las profecías más significativas del Antiguo Testamento:</p>
+                
+                <div class="timeline-container">
+                    <div class="timeline-card">
+                        <div class="timeline-title">El Día de Jehová</div>
+                        <div class="timeline-date">Joel 1:15; 2:1-2, 11, 31; 3:14</div>
+                        <p>Concepto central que aparece 5 veces. Comienza como juicio inminente por la plaga, se expande a juicio contra Judá, y culmina como juicio escatológico contra todas las naciones. Es tanto cercano como lejano, histórico y escatológico.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-title">Derramamiento del Espíritu</div>
+                        <div class="timeline-date">Joel 2:28-29</div>
+                        <p>Profecía revolucionaria de que Dios derramaría su Espíritu sobre "toda carne" - sin distinción de edad, género o estatus social. Cumplida en Pentecostés (Hechos 2:16-21).</p>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-title">Señales Celestiales</div>
+                        <div class="timeline-date">Joel 2:30-31</div>
+                        <p>Profecía de prodigios en el cielo y la tierra: sangre, fuego, columnas de humo, el sol convertido en tinieblas y la luna en sangre, antes del Día de Jehová.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-title">Valle de Josafat</div>
+                        <div class="timeline-date">Joel 3:2, 12, 14</div>
+                        <p>El lugar donde Dios juzgará a todas las naciones. "Josafat" significa "Jehová juzga". Representa el juicio final de Dios sobre los enemigos de su pueblo.</p>
+                    </div>
+                </div>
+                
+                <h3>El Día de Jehová en Joel</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Referencia</th>
+                            <th>Contexto</th>
+                            <th>Características</th>
+                            <th>Alcance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1:15</td>
+                            <td>Plaga de langostas</td>
+                            <td>Destrucción como juicio divino</td>
+                            <td>Judá (local)</td>
+                        </tr>
+                        <tr>
+                            <td>2:1-2</td>
+                            <td>Ejército invasor</td>
+                            <td>Día de tinieblas y oscuridad</td>
+                            <td>Judá (nacional)</td>
+                        </tr>
+                        <tr>
+                            <td>2:11</td>
+                            <td>Grande y terrible</td>
+                            <td>Quién lo podrá soportar?</td>
+                            <td>Juicio inminente</td>
+                        </tr>
+                        <tr>
+                            <td>2:31</td>
+                            <td>Señales celestiales</td>
+                            <td>Sol y luna transformados</td>
+                            <td>Universal (escritural)</td>
+                        </tr>
+                        <tr>
+                            <td>3:14</td>
+                            <td>Valle de Josafat</td>
+                            <td>Multitudes, juicio de naciones</td>
+                            <td>Global (escritural)</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="day-of-lord-box">
+                    <h3>Características del Día de Jehová</h3>
+                    <p>Joel desarrolla el concepto del "Día de Jehová" de manera única:</p>
+                    <div class="grid-container">
+                        <div class="card">
+                            <h4>Inevitable y Cercano</h4>
+                            <p>El Día de Jehová está "cercano" (1:15; 2:1; 3:14) y viene como destrucción del Todopoderoso (1:15).</p>
+                        </div>
+                        <div class="card">
+                            <h4>Día de Juicio</h4>
+                            <p>Es fundamentalmente un día de juicio divino sobre el pecado, tanto de Judá como de las naciones.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Oscuridad y Tinieblas</h4>
+                            <p>Se caracteriza por tinieblas (2:2), oscuridad (2:31), nubes y densas tinieblas (2:2).</p>
+                        </div>
+                        <div class="card">
+                            <h4>Oportunidad de Escape</h4>
+                            <p>Aunque es día de juicio, hay oportunidad de escape mediante el arrepentimiento (2:12-14).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="themes-section">
+                <h2>Temas Teológicos Principales</h2>
+                <p>Joel desarrolla temas teológicos cruciales que conectan el Antiguo y Nuevo Testamento:</p>
+                
+                <div class="theme-container">
+                    <div class="theme-item">
+                        <div class="theme-name">1. El Día de Jehová</div>
+                        <div>Concepto central que une juicio histórico y escatológico, mostrando a Dios como Juez soberano.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">2. Arrepentimiento Genuino</div>
+                        <div>Llamado a un arrepentimiento que involucra todo el corazón, no solo ritual externo (2:12-13).</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">3. Carácter de Dios</div>
+                        <div>Revelación de Dios como clemente, misericordioso, tardo para la ira y grande en misericordia (2:13).</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">4. Universalidad de la Salvación</div>
+                        <div>El derramamiento del Espíritu sobre "toda carne" anticipa la inclusión de todos los pueblos.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">5. Juicio y Restauración</div>
+                        <div>Patrón divino: el juicio no es el final; sigue la restauración para los que se arrepienten.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">6. Espíritu Santo</div>
+                        <div>Profecía crucial sobre la obra del Espíritu en la era mesiánica.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">7. Escatología Realizada</div>
+                        <div>Las crisis históricas prefiguran y apuntan hacia el juicio escatológico final.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">8. Esperanza Escatológica</div>
+                        <div>Promesa de que Judá habitará para siempre y Jerusalén será santa (3:17-21).</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="key-verses">
+                <h2>Versículos Clave de Joel</h2>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Llamado al Arrepentimiento</h3>
+                        <p class="scripture">"Rasgad vuestro corazón, y no vuestros vestidos, y convertíos a Jehová vuestro Dios; porque misericordioso es y clemente, tardo para la ira y grande en misericordia, y que se duele del castigo."</p>
+                        <p class="scripture-ref">Joel 2:13</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Promesa del Espíritu</h3>
+                        <p class="scripture">"Y después de esto derramaré mi Espíritu sobre toda carne, y profetizarán vuestros hijos y vuestras hijas; vuestros ancianos soñarán sueños, y vuestros jóvenes verán visiones."</p>
+                        <p class="scripture-ref">Joel 2:28</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Salvación por Invocación</h3>
+                        <p class="scripture">"Y todo aquel que invocare el nombre de Jehová será salvo; porque en el monte de Sion y en Jerusalén habrá salvación, como ha dicho Jehová, y entre el remanente al cual él habrá llamado."</p>
+                        <p class="scripture-ref">Joel 2:32</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Juicio de las Naciones</h3>
+                        <p class="scripture">"Juntense todas las naciones, y reúnanse en el valle de Josafat; porque allí me sentaré para juzgar a todas las naciones de alrededor."</p>
+                        <p class="scripture-ref">Joel 3:12</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="application-section">
+                <h2>Aplicación Contemporánea</h2>
+                <p>El mensaje de Joel tiene profunda relevancia para la iglesia hoy:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Arrepentimiento Auténtico</h3>
+                        <p>El llamado a "rasgar el corazón y no los vestidos" desafía el ritualismo vacío y llama a una transformación interna genuina.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Vivir en el Espíritu</h3>
+                        <p>La promesa cumplida del derramamiento del Espíritu urge a vivir en el poder y los dones del Espíritu Santo.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Preparación Escatológica</h3>
+                        <p>La enseñanza sobre el Día de Jehová llama a vivir en expectativa del regreso de Cristo y el juicio final.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Evangelismo Universal</h3>
+                        <p>La promesa de salvación para "todo aquel que invocare" fundamenta el llamado a la evangelización mundial.</p>
+                    </div>
+                </div>
+                
+                <h3>Joel en el Nuevo Testamento</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Referencia en Joel</th>
+                            <th>Tema</th>
+                            <th>Cumplimiento en NT</th>
+                            <th>Referencia NT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2:28-32</td>
+                            <td>Derramamiento del Espíritu</td>
+                            <td>Pentecostés</td>
+                            <td>Hechos 2:16-21</td>
+                        </tr>
+                        <tr>
+                            <td>2:32</td>
+                            <td>Invocación para salvación</td>
+                            <td>Justificación por fe</td>
+                            <td>Romanos 10:13</td>
+                        </tr>
+                        <tr>
+                            <td>2:28-29</td>
+                            <td>Espíritu sobre toda carne</td>
+                            <td>Don del Espíritu a gentiles</td>
+                            <td>Hechos 10:45</td>
+                        </tr>
+                        <tr>
+                            <td>2:30-31</td>
+                            <td>Señales celestiales</td>
+                            <td>Señales antes del regreso de Cristo</td>
+                            <td>Mateo 24:29; Apocalipsis 6:12</td>
+                        </tr>
+                        <tr>
+                            <td>3:13</td>
+                            <td>Madurez para la siega</td>
+                            <td>Juicio en la siega final</td>
+                            <td>Apocalipsis 14:15-19</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="chapters-list">
+                <h2>Los 3 Capítulos de Joel</h2>
+                <p>Selecciona un capítulo para estudiar:</p>
+                
+                <div class="chapter-grid">
+                    <a href="joel1.html" class="chapter-item">Capítulo 1</a>
+                    <a href="joel2.html" class="chapter-item">Capítulo 2</a>
+                    <a href="joel3.html" class="chapter-item">Capítulo 3</a>
+                </div>
+            </div>
+            
+            <div class="navigation-buttons">
+                <a href="oseas.html" class="nav-button">← Oseas</a>
+                <a href="index.html" class="nav-button">🏠 Inicio</a>
+                <a href="amos.html" class="nav-button">Amós →</a>
+            </div>
+            
+            <div class="biblical-box">
+                <h3>Legado de Joel</h3>
+                <p>Joel ha dejado un impacto profundo en la teología y escatología bíblica:</p>
+                <ul>
+                    <li><strong>Profeta del Espíritu Santo</strong> - Su profecía del derramamiento del Espíritu es fundamental para entender Pentecostés y la era de la iglesia</li>
+                    <li><strong>Desarrollador del Día de Jehová</strong> - Expande el concepto de juicio divino conectando crisis históricas con el juicio escatológico final</li>
+                    <li><strong>Teólogo del Arrepentimiento</strong> - Define el arrepentimiento genuino como asunto del corazón, no solo ritual externo</li>
+                    <li><strong>Puente Profético</strong> - Conecta el mensaje de los profetas clásicos con la escatología del Nuevo Testamento</li>
+                    <li><strong>Visionario de la Salvación Universal</strong> - Anticipa la inclusión de todos los pueblos en la bendición divina mediante el Espíritu</li>
+                </ul>
+                
+                <p class="scripture">"Y Jehová rugirá desde Sion, y dará su voz desde Jerusalén, y temblarán los cielos y la tierra; pero Jehová será la esperanza de su pueblo, y la fortaleza de los hijos de Israel."</p>
+                <p class="scripture-ref">Joel 3:16</p>
+                
+                <p>El libro de Joel nos confronta con la realidad del juicio divino mientras nos consuela con la profundidad de la misericordia de Dios. Su mensaje permanece como testimonio eterno de que el mismo Dios que juzga el pecado es el Dios que derrama su Espíritu, que ofrece salvación a todos los que invocan su nombre, y que transforma el juicio en restauración para aquellos que se vuelven a Él con corazón sincero. Joel nos asegura que el Día de Jehová, aunque terrible para los rebeldes, trae esperanza y salvación para el pueblo de Dios.</p>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 IN GOD WE TRUST</p>
+                <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
