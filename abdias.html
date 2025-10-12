@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdías - El Profeta de la Venganza de Jehová</title>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BYMJS3X12P');
+    </script>
+    <meta name="google-site-verification" content="KWZFlVdcT-h9cB1Qnj0LgSLJP-J-NS4bgjhnQG_c140" />
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #5d4037 0%, #8d6e63 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(to right, #5d4037, #8d6e63);
+            color: white;
+            padding: 50px 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        header::before {
+            content: "⛰️";
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 3rem;
+            opacity: 0.7;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.4rem;
+            font-weight: 300;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .intro-section {
+            background-color: #f8f9fa;
+            border-left: 5px solid #5d4037;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #5d4037;
+            margin-bottom: 25px;
+            font-size: 2.2rem;
+            border-bottom: 3px solid #8d6e63;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #5d4037;
+            margin: 30px 0 20px;
+            font-size: 1.7rem;
+        }
+        
+        h4 {
+            color: #5d4037;
+            margin: 20px 0 15px;
+            font-size: 1.3rem;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .highlight {
+            background-color: #efebe9;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #5d4037;
+        }
+        
+        .biblical-box {
+            background-color: #efebe9;
+            border: 2px solid #5d4037;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+        }
+        
+        .scripture {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #5d4037;
+            margin: 15px 0;
+            padding-left: 20px;
+            border-left: 4px solid #5d4037;
+        }
+        
+        .scripture-ref {
+            font-weight: bold;
+            text-align: right;
+            color: #8d6e63;
+            margin-top: 10px;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #5d4037;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card h3 {
+            color: #5d4037;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+        
+        .card ul {
+            padding-left: 20px;
+        }
+        
+        .card li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .structure-section {
+            background-color: #f5f5f5;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .historical-section {
+            background-color: #e3f2fd;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border-left: 5px solid #1976d2;
+        }
+        
+        .themes-section {
+            background-color: #e8f5e9;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .prophecy-section {
+            background-color: #fff8e1;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .key-verses {
+            background-color: #f3e5f5;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border: 2px solid #7b1fa2;
+        }
+        
+        .application-section {
+            background-color: #fff3e0;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .chapters-list {
+            background-color: #fafafa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .chapter-item {
+            background: linear-gradient(135deg, #5d4037, #8d6e63);
+            color: white;
+            padding: 15px 10px;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: block;
+        }
+        
+        .chapter-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #8d6e63, #5d4037);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(to right, #5d4037, #8d6e63);
+            color: #FFF8DC;
+            font-size: 1.1rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+            border: 3px solid #8d6e63;
+        }
+        
+        .navigation-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .nav-button {
+            background: linear-gradient(135deg, #5d4037, #8d6e63);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-button:hover {
+            background: linear-gradient(135deg, #8d6e63, #5d4037);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .theme-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .theme-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #5d4037;
+        }
+        
+        .theme-name {
+            font-weight: bold;
+            color: #5d4037;
+            margin-bottom: 5px;
+        }
+        
+        .timeline-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .timeline-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+            border-top: 4px solid #5d4037;
+        }
+        
+        .timeline-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .timeline-title {
+            font-weight: bold;
+            color: #5d4037;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .timeline-date {
+            font-weight: bold;
+            color: #8d6e63;
+            margin-bottom: 5px;
+        }
+        
+        .definition-box {
+            background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border-left: 5px solid #5d4037;
+        }
+        
+        .definition-term {
+            font-weight: bold;
+            color: #5d4037;
+            margin-bottom: 5px;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .comparison-table th, .comparison-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .comparison-table th {
+            background-color: #5d4037;
+            color: white;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .comparison-table tr:hover {
+            background-color: #efebe9;
+        }
+        
+        .historical-periods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .period-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid #5d4037;
+        }
+        
+        .period-title {
+            font-weight: bold;
+            color: #5d4037;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .period-dates {
+            font-weight: bold;
+            color: #8d6e63;
+            margin-bottom: 10px;
+        }
+        
+        .judgment-box {
+            background: linear-gradient(135deg, #efebe9, #d7ccc8);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+            border-left: 5px solid #5d4037;
+        }
+        
+        .edom-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .edom-item {
+            background: #efebe9;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        .restoration-box {
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+            border-left: 5px solid #5d4037;
+        }
+        
+        .relationship-section {
+            background-color: #fff3e0;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .chapter-grid {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            }
+            
+            .navigation-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .theme-container,
+            .edom-container,
+            .timeline-container,
+            .historical-periods {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            header {
+                padding: 30px 20px;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Abdías</h1>
+            <p class="subtitle">El Profeta de la Venganza de Jehová - Juicio contra Edom y Restauración de Israel</p>
+        </header>
+        
+        <div class="content">
+            <div class="intro-section">
+                <h2>Introducción al Libro de Abdías</h2>
+                <p>El libro de <span class="highlight">Abdías</span> (en hebreo: "siervo de Jehová") es el cuarto de los Doce Profetas Menores y el libro más corto del Antiguo Testamento. Su mensaje se centra en el juicio divino contra Edom por su violencia contra Judá, y la posterior restauración del pueblo de Dios.</p>
+                
+                <div class="biblical-box">
+                    <p class="scripture">"Por la violencia contra tu hermano Jacob te cubrirá vergüenza, y serás cortado para siempre."</p>
+                    <p class="scripture-ref">Abdías 1:10 (Reina-Valera 1569-1602)</p>
+                </div>
+                
+                <div class="definition-box">
+                    <div class="definition-term">Características Únicas de Abdías</div>
+                    <p><strong>Extensión:</strong> Solo 21 versículos, el libro más corto del Antiguo Testamento.</p>
+                    <p><strong>Enfoque:</strong> Exclusivamente en el juicio contra Edom y la restauración de Israel.</p>
+                    <p><strong>Estilo:</strong> Poético y apasionado, con fuerte tono de denuncia.</p>
+                </div>
+            </div>
+            
+            <div class="historical-section">
+                <h2>Contexto Histórico y Fecha</h2>
+                <p>La datación de Abdías es objeto de debate entre los estudiosos, con dos posiciones principales:</p>
+                
+                <div class="historical-periods">
+                    <div class="period-card">
+                        <div class="period-title">Posición Temprana</div>
+                        <div class="period-dates">Siglo IX a.C. (845 a.C.)</div>
+                        <ul>
+                            <li>Durante el reinado de Joram en Judá (2 Reyes 8:20-22)</li>
+                            <li>Invitación de Edom para rebelarse contra Judá</li>
+                            <li>Invasión conjunta de filisteos y árabes</li>
+                            <li>Edom aprovecha para atacar a Judá</li>
+                            <li>Contexto de 2 Crónicas 21:8-10, 16-17</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="period-card">
+                        <div class="period-title">Posición Tardía</div>
+                        <div class="period-dates">Siglo VI a.C. (586 a.C.)</div>
+                        <ul>
+                            <li>Durante la destrucción de Jerusalén por Babilonia</li>
+                            <li>Referencia al "día de angustia" de Judá (v. 12-14)</li>
+                            <li>Edom se alegra y participa en el saqueo</li>
+                            <li>Captura de fugitivos y entrega a babilonios</li>
+                            <li>Contexto de Salmo 137:7 y Lamentaciones 4:21-22</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="period-card">
+                        <div class="period-title">Evidencias Contextuales</div>
+                        <div class="period-dates">Indicadores del Libro</div>
+                        <ul>
+                            <li>No menciona reyes específicos</li>
+                            <li>Presupone una Jerusalén habitada y activa</li>
+                            <li>Edom como nación independiente y poderosa</li>
+                            <li>No menciona templo destruido o exilio</li>
+                            <li>Similitudes con Jeremías 49:7-22</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>Edom: El Hermano Enemigo</h3>
+                <div class="edom-container">
+                    <div class="edom-item">Descendientes de Esaú</div>
+                    <div class="edom-item">Hermanos de Israel</div>
+                    <div class="edom-item">Tierras montañosas</div>
+                    <div class="edom-item">Capital: Petra</div>
+                    <div class="edom-item">Sabiduría proverbial</div>
+                    <div class="edom-item">Enemistad histórica</div>
+                </div>
+                
+                <div class="definition-box">
+                    <div class="definition-term">La Relación Edom-Israel</div>
+                    <p>Edom desciende de Esaú, hermano de Jacob (Israel). A pesar de su parentesco, existió una enemistad constante entre ambos pueblos. La traición de Edom contra Judá en su momento de crisis representa la culminación de esta hostilidad fraternal, haciendo su pecado particularmente grave a los ojos de Dios.</p>
+                </div>
+            </div>
+            
+            <div class="structure-section">
+                <h2>Estructura del Libro</h2>
+                <p>Abdías presenta una estructura concisa pero poderosa en dos partes principales:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>I. Juicio contra Edom (v. 1-14)</h3>
+                        <ul>
+                            <li><strong>Anuncio del juicio</strong> (v. 1)</li>
+                            <li><strong>Humillación de Edom</strong> (v. 2-4)</li>
+                            <li><strong>Completitud de la destrucción</strong> (v. 5-9)</li>
+                            <li><strong>Causas del juicio</strong> (v. 10-14)</li>
+                            <li>Violencia contra Jacob</li>
+                            <li>Alegría ante la desgracia ajena</li>
+                            <li>Participación en el saqueo</li>
+                            <li>Captura de fugitivos</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>II. El Día de Jehová y Restauración (v. 15-21)</h3>
+                        <ul>
+                            <li><strong>El Día de Jehová</strong> (v. 15)</li>
+                            <li><strong>Retribución divina</strong> (v. 15)</li>
+                            <li><strong>Profanación del monte santo</strong> (v. 16)</li>
+                            <li><strong>Restauración de la casa de Jacob</strong> (v. 17-18)</li>
+                            <li><strong>Posesión de territorios</strong> (v. 19-20)</li>
+                            <li><strong>Establecimiento del reino</strong> (v. 21)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>Desarrollo Temático de Abdías</h3>
+                <div class="judgment-box">
+                    <div class="grid-container">
+                        <div class="card">
+                            <h4>Orgullo de Edom (v. 2-4)</h4>
+                            <p><strong>Seguridad en las alturas</strong> - Confianza en sus fortalezas montañosas y sabiduría, que resultarán inútiles ante el juicio divino.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Completitud de la Destrucción (v. 5-9)</h4>
+                            <p><strong>Saqueo total</strong> - A diferencia del saqueo parcial que Edom hizo a Judá, su destrucción será completa y sin rescate posible.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Violencia Fraternal (v. 10-14)</h4>
+                            <p><strong>Traición al hermano</strong> - El pecado de Edom es agravado por su relación familiar con Judá, haciendo su violencia particularmente condenable.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Retribución Divina (v. 15)</h4>
+                            <p><strong>Ley del talión</strong> - El principio de que como hicieron, se les hará, estableciendo la justicia retributiva de Dios.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Restauración Escatológica (v. 17-21)</h4>
+                            <p><strong>Reivindicación final</strong> - La victoria final será del pueblo de Dios, que poseerá lo que legítimamente le corresponde.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Reino de Jehová (v. 21)</h4>
+                            <p><strong>Gobierno divino</strong> - El libro culmina con el establecimiento del reino de Dios, prefigurando el reinado mesiánico.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="relationship-section">
+                <h2>La Relación entre Edom e Israel</h2>
+                <p>El conflicto entre Edom e Israel tiene raíces profundas en la historia bíblica:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Orígenes Familiares</h3>
+                        <p>Edom desciende de Esaú, el hermano mayor de Jacob. Aunque eran gemelos, su relación estuvo marcada por la rivalidad desde el nacimiento (Génesis 25:19-26).</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Bendición y Derecho de Primogenitura</h3>
+                        <p>Jacob obtuvo tanto la primogenitura como la bendición de Isaac que correspondían a Esaú, creando un resentimiento que se transmitió a sus descendientes.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Encuentro en el Éxodo</h3>
+                        <p>Cuando Israel salió de Egipto, Edom les negó el paso por su territorio (Números 20:14-21), estableciendo un patrón de hostilidad.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Profecías sobre Edom</h3>
+                        <p>Varios profetas anunciaron juicio contra Edom (Isaías 34, Jeremías 49, Ezequiel 25, 35), pero Abdías es el único que se dedica exclusivamente a este tema.</p>
+                    </div>
+                </div>
+                
+                <div class="biblical-box">
+                    <p class="scripture">"No aborrecerás al edomita, porque es tu hermano; no aborrecerás al egipcio, porque forastero fuiste en su tierra."</p>
+                    <p class="scripture-ref">Deuteronomio 23:7</p>
+                </div>
+            </div>
+            
+            <div class="prophecy-section">
+                <h2>Profecías Principales de Abdías</h2>
+                <p>Aunque breve, Abdías contiene profecías significativas:</p>
+                
+                <div class="timeline-container">
+                    <div class="timeline-card">
+                        <div class="timeline-title">Destrucción de Edom</div>
+                        <div class="timeline-date">Abdías 1:1-9</div>
+                        <p>Profecía del completo aniquilamiento de Edom como nación. Se cumplió históricamente con la conquista nabatea y la desaparición de Edom como entidad política.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-title">El Día de Jehová</div>
+                        <div class="timeline-date">Abdías 1:15</div>
+                        <p>Concepto clave que conecta el juicio específico contra Edom con el juicio universal contra todas las naciones en el día final.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-title">Restauración de Israel</div>
+                        <div class="timeline-date">Abdías 1:17-21</div>
+                        <p>Promesa de que en el monte de Sion habrá salvación y santidad, y la casa de Jacob poseerá sus posesiones, incluyendo el territorio de Edom.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-title">Reino de Jehová</div>
+                        <div class="timeline-date">Abdías 1:21</div>
+                        <p>Profecía escatológica sobre salvadores que gobernarán en el monte de Sion para juzgar a Edom, y el reino será de Jehová.</p>
+                    </div>
+                </div>
+                
+                <h3>El Pecado de Edom en Detalle</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Referencia</th>
+                            <th>Acción de Edom</th>
+                            <th>Naturaleza del Pecado</th>
+                            <th>Juicio Correspondiente</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>v. 10</td>
+                            <td>Violencia contra su hermano Jacob</td>
+                            <td>Traición fraternal</td>
+                            <td>Vergüenza y exterminio</td>
+                        </tr>
+                        <tr>
+                            <td>v. 11</td>
+                            <td>Permanecer indiferente</td>
+                            <td>Falta de solidaridad</td>
+                            <td>Destrucción completa</td>
+                        </tr>
+                        <tr>
+                            <td>v. 12</td>
+                            <td>Alegrarse de la desgracia de Judá</td>
+                            <td>Gozo malicioso</td>
+                            <td>Beberá la misma copa</td>
+                        </tr>
+                        <tr>
+                            <td>v. 13</td>
+                            <td>Saquear sus riquezas</td>
+                            <td>Codicia y robo</td>
+                            <td>Será saqueado totalmente</td>
+                        </tr>
+                        <tr>
+                            <td>v. 14</td>
+                            <td>Matar a los fugitivos</td>
+                            <td>Crueldad extrema</td>
+                            <td>No quedará remanente</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="restoration-box">
+                    <h3>La Restauración en Abdías</h3>
+                    <p>El mensaje de juicio se equilibra con la promesa de restauración para Israel:</p>
+                    <div class="grid-container">
+                        <div class="card">
+                            <h4>Monte de Sion</h4>
+                            <p>Lugar de liberación y santidad, en contraste con el monte de Esaú que será desolado.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Casa de Jacob</h4>
+                            <p>Será fuego que consumirá a la casa de Esaú como rastrojo, invirtiendo los roles de poder.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Posesión de Territorios</h4>
+                            <p>Israel poseerá no solo su tierra sino también los territorios de las naciones circundantes.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Salvadores en Sion</h4>
+                            <p>Líderes designados por Dios gobernarán y administrarán justicia desde Jerusalén.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="themes-section">
+                <h2>Temas Principales</h2>
+                <p>Abdías desarrolla temas cruciales en su breve mensaje:</p>
+                
+                <div class="theme-container">
+                    <div class="theme-item">
+                        <div class="theme-name">1. Soberanía de Dios sobre las Naciones</div>
+                        <div>Dios controla el destino de todos los pueblos, no solo de Israel, y juzga según sus standards de justicia.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">2. Juicio contra la Arrogancia</div>
+                        <div>El orgullo humano y la confianza en recursos propios son abominación ante Dios y serán humillados.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">3. Santidad de las Relaciones Familiares</div>
+                        <div>Dios valora especialmente los lazos familiares y juzga severamente su violación.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">4. El Día de Jehová</div>
+                        <div>Concepto escatológico de juicio universal donde Dios interviene decisivamente en la historia.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">5. Retribución Divina</div>
+                        <div>Principio de que cada uno recibirá según sus obras, especialmente en el trato a otros.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">6. Esperanza de Restauración</div>
+                        <div>El juicio no es la última palabra; Dios preserva y restaura a su pueblo.</div>
+                    </div>
+                   
+                    <div class="theme-item">
+                        <div class="theme-name">8. Vindicación del Pueblo de Dios</div>
+                        <div>Los que oprimen al pueblo de Dios eventualmente serán juzgados y los fieles vindicados.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="key-verses">
+                <h2>Versículos Clave de Abdías</h2>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Juicio contra el Orgullo</h3>
+                        <p class="scripture">"La soberbia de tu corazón te ha engañado, tú que moras en las hendiduras de las peñas, en tu altiva morada, que dices en tu corazón: ¿Quién me derribará a tierra?"</p>
+                        <p class="scripture-ref">Abdías 1:3</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>El Día de Jehová</h3>
+                        <p class="scripture">"Porque cercano está el día de Jehová sobre todas las naciones; como tú hiciste se hará contigo; tu recompensa volverá sobre tu cabeza."</p>
+                        <p class="scripture-ref">Abdías 1:15</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Restauración de Sion</h3>
+                        <p class="scripture">"Mas en el monte de Sion habrá un remanente que se salve; y será santo, y la casa de Jacob recuperará sus posesiones."</p>
+                        <p class="scripture-ref">Abdías 1:17</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Reino de Jehová</h3>
+                        <p class="scripture">"Y subirán salvadores al monte de Sion para juzgar al monte de Esaú; y el reino será de Jehová."</p>
+                        <p class="scripture-ref">Abdías 1:21</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="application-section">
+                <h2>Aplicación Contemporánea</h2>
+                <p>El mensaje de Abdías tiene relevancia para la iglesia hoy:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Peligro del Orgullo</h3>
+                        <p>La advertencia contra la arrogancia y la autosuficiencia aplica tanto a individuos como a naciones que confían en sus recursos en lugar de en Dios.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Responsabilidad Fraternal</h3>
+                        <p>El llamado a la lealtad y solidaridad, especialmente con aquellos con quienes tenemos relaciones cercanas, refleja el corazón de Dios.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Justicia Retributiva</h3>
+                        <p>El principio de que cada uno cosecha lo que siembra sirve como advertencia contra el maltrato a otros, especialmente a los vulnerables.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Esperanza Escatológica</h3>
+                        <p>La promesa de restauración final da esperanza en medio del sufrimiento, asegurando que la justicia divina prevalecerá.</p>
+                    </div>
+                </div>
+                
+                <h3>Cumplimiento Histórico y Escatológico</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Profecía</th>
+                            <th>Cumplimiento Histórico</th>
+                            <th>Cumplimiento Escatológico</th>
+                            <th>Referencias Relacionadas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Destrucción de Edom</td>
+                            <td>Conquista nabatea (siglo IV a.C.)</td>
+                            <td>Juicio final contra enemigos de Dios</td>
+                            <td>Malaquías 1:2-4</td>
+                        </tr>
+                        <tr>
+                            <td>Restauración de Israel</td>
+                            <td>Retorno del exilio (536 a.C.)</td>
+                            <td>Restauración escatológica del pueblo de Dios</td>
+                            <td>Romanos 11:25-27</td>
+                        </tr>
+                        <tr>
+                            <td>Posesión de territorios</td>
+                            <td>Expansión hasmonea (siglo II a.C.)</td>
+                            <td>Nueva tierra en la consumación</td>
+                            <td>Apocalipsis 21:1-4</td>
+                        </tr>
+                        <tr>
+                            <td>Reino de Jehová</td>
+                            <td>Período hasmoneo/mesiánico</td>
+                            <td>Reino eterno de Cristo</td>
+                            <td>Apocalipsis 11:15</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="chapters-list">
+                <h2>El Único Capítulo de Abdías</h2>
+                <p>Selecciona para estudiar el capítulo completo:</p>
+                
+                <div class="chapter-grid">
+                    <a href="abdias1.html" class="chapter-item">Capítulo 1</a>
+                </div>
+            </div>
+            
+            <div class="navigation-buttons">
+                <a href="amos.html" class="nav-button">← Amós</a>
+                <a href="index.html" class="nav-button">🏠 Inicio</a>
+                <a href="jonas.html" class="nav-button">Jonás →</a>
+            </div>
+            
+            <div class="biblical-box">
+                <h3>Legado de Abdías</h3>
+                <p>Abdías, aunque breve, ha dejado un impacto significativo en la teología bíblica:</p>
+                <ul>
+                    <li><strong>Profeta de la Justicia Retributiva</strong> - Establece claramente el principio de que Dios juzga a las naciones según sus obras, especialmente en su trato con su pueblo</li>
+                    <li><strong>Teólogo del Día de Jehová</strong> - Conecta el juicio específico contra una nación con el concepto escatológico del día del Señor sobre todas las naciones</li>
+                    <li><strong>Defensor de los Lazos Familiares</strong> - Enfatiza la gravedad especial de traicionar relaciones de parentesco y confianza</li>
+                    <li><strong>Profeta de la Esperanza</strong> - Aunque su mensaje es principalmente de juicio, culmina con la promesa de restauración y el establecimiento del reino de Dios</li>
+                    <li><strong>Maestro de la Economía Profética</strong> - Demuestra que un mensaje poderoso no requiere muchas palabras cuando viene con la autoridad divina</li>
+                </ul>
+                
+                <p class="scripture">"Y subirán salvadores al monte de Sion para juzgar al monte de Esaú; y el reino será de Jehová."</p>
+                <p class="scripture-ref">Abdías 1:21</p>
+                
+                <p>El libro de Abdías nos confronta con la realidad del juicio divino contra la arrogancia humana y la traición fraternal, mientras nos consuela con la promesa de que Dios finalmente vindicará a su pueblo y establecerá su reino eterno. Su mensaje permanece como testimonio eterno de que la soberbia precede a la caída, que la traición será retribuida, y que el reino de este mundo eventualmente llegará a ser el reino de nuestro Señor y de su Cristo. Abdías nos asegura que, aunque los impíos parezcan prosperar temporalmente, su destino está sellado, mientras que el pueblo de Dios, aunque sufra temporalmente, heredará la victoria final.</p>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 IN GOD WE TRUST</p>
+                <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
