@@ -1,101 +1,962 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-	<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-BYMJS3X12P');
-</script>
-	<meta name="google-site-verification" content="KWZFlVdcT-h9cB1Qnj0LgSLJP-J-NS4bgjhnQG_c140" />
-<title>Amos</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body {
-	background-color: #000000;
-	background-size: cover;
-	background-position: center;
-	font-family: Arial, sans-serif;
-	text-align: center;
-}
-
-.contenido {
-	color: #fff;
-	background-image: url('https://play-lh.googleusercontent.com/Svb-oRYbki_MRCFqPw3zAf8_7F5AbY98JY7-ZGsBFH64r-XzYaGNzmoSULDoLwJMXQ=w526-h296-rw');
-	width: 80%;
-	margin: 40px auto;
-	padding: 20px;
-	background-color: #fff;
-	border: 1px solid #ddd;
-	border-radius: 10px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.contenido {
-padding: 20px;
-margin: 40px auto;
-width: 80%;
-background-color: #000000;
-border: 1px solid #ddd;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-h1 {
-color: #fff;
-}
-ul {
-list-style: none;
-padding: 0;
-margin: 0;
-}
-li {
-margin-bottom: 10px;
-}
-a {
-text-decoration: none;
-color: #fff;
-}
-a:hover {
-color: #23527c;
-}
-img {
-max-width: 100%;
-height: auto;
-margin: 20px auto;
-border-radius: 10px;
-}
-   button {
-    background-color: #337ab7;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  button:hover {
-    background-color: #23527c;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amos - El Profeta de la Justicia Social</title>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BYMJS3X12P');
+    </script>
+    <meta name="google-site-verification" content="KWZFlVdcT-h9cB1Qnj0LgSLJP-J-NS4bgjhnQG_c140" />
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a5276 0%, #2874a6 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(to right, #1a5276, #2874a6);
+            color: white;
+            padding: 50px 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        header::before {
+            content: "⚖️";
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 3rem;
+            opacity: 0.7;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.4rem;
+            font-weight: 300;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .intro-section {
+            background-color: #f8f9fa;
+            border-left: 5px solid #1a5276;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #1a5276;
+            margin-bottom: 25px;
+            font-size: 2.2rem;
+            border-bottom: 3px solid #2874a6;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #1a5276;
+            margin: 30px 0 20px;
+            font-size: 1.7rem;
+        }
+        
+        h4 {
+            color: #1a5276;
+            margin: 20px 0 15px;
+            font-size: 1.3rem;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .highlight {
+            background-color: #e6f2ff;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #1a5276;
+        }
+        
+        .biblical-box {
+            background-color: #e6f2ff;
+            border: 2px solid #1a5276;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+        }
+        
+        .scripture {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #1a5276;
+            margin: 15px 0;
+            padding-left: 20px;
+            border-left: 4px solid #1a5276;
+        }
+        
+        .scripture-ref {
+            font-weight: bold;
+            text-align: right;
+            color: #2874a6;
+            margin-top: 10px;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #1a5276;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card h3 {
+            color: #1a5276;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+        
+        .card ul {
+            padding-left: 20px;
+        }
+        
+        .card li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .structure-section {
+            background-color: #f5f5f5;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .historical-section {
+            background-color: #e3f2fd;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border-left: 5px solid #1976d2;
+        }
+        
+        .themes-section {
+            background-color: #e8f5e9;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .prophecy-section {
+            background-color: #fff8e1;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .key-verses {
+            background-color: #f3e5f5;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border: 2px solid #7b1fa2;
+        }
+        
+        .application-section {
+            background-color: #fff3e0;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .chapters-list {
+            background-color: #fafafa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .chapter-item {
+            background: linear-gradient(135deg, #1a5276, #2874a6);
+            color: white;
+            padding: 15px 10px;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: block;
+        }
+        
+        .chapter-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #2874a6, #1a5276);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(to right, #1a5276, #2874a6);
+            color: #FFF8DC;
+            font-size: 1.1rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+            border: 3px solid #2874a6;
+        }
+        
+        .navigation-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .nav-button {
+            background: linear-gradient(135deg, #1a5276, #2874a6);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-button:hover {
+            background: linear-gradient(135deg, #2874a6, #1a5276);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .theme-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .theme-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #1a5276;
+        }
+        
+        .theme-name {
+            font-weight: bold;
+            color: #1a5276;
+            margin-bottom: 5px;
+        }
+        
+        .timeline-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .timeline-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+            border-top: 4px solid #1a5276;
+        }
+        
+        .timeline-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .timeline-title {
+            font-weight: bold;
+            color: #1a5276;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .timeline-date {
+            font-weight: bold;
+            color: #2874a6;
+            margin-bottom: 5px;
+        }
+        
+        .definition-box {
+            background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border-left: 5px solid #1a5276;
+        }
+        
+        .definition-term {
+            font-weight: bold;
+            color: #1a5276;
+            margin-bottom: 5px;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .comparison-table th, .comparison-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .comparison-table th {
+            background-color: #1a5276;
+            color: white;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .comparison-table tr:hover {
+            background-color: #e6f2ff;
+        }
+        
+        .historical-periods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .period-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid #1a5276;
+        }
+        
+        .period-title {
+            font-weight: bold;
+            color: #1a5276;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .period-dates {
+            font-weight: bold;
+            color: #2874a6;
+            margin-bottom: 10px;
+        }
+        
+        .judgment-box {
+            background: linear-gradient(135deg, #e6f2ff, #cce5ff);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+            border-left: 5px solid #1a5276;
+        }
+        
+        .nations-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .nation-item {
+            background: #e6f2ff;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        .social-justice-box {
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+            border-left: 5px solid #1a5276;
+        }
+        
+        .profession-section {
+            background-color: #fff3e0;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .chapter-grid {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            }
+            
+            .navigation-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .theme-container,
+            .nations-container,
+            .timeline-container,
+            .historical-periods {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            header {
+                padding: 30px 20px;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-<div class="contenido">
-<h1>Amos</h1>
-<ul>
-<li><a href="amos1.html">Capítulo 1</a></li>
-<li><a href="amos2.html">Capítulo 2</a></li>
-<li><a href="amos3.html">Capítulo 3</a></li>
-  <li><a href="amos4.html">Capítulo 4</a></li>
-<li><a href="amos5.html">Capítulo 5</a></li>
-<li><a href="amos6.html">Capítulo 6</a></li>
-  <li><a href="amos7.html">Capítulo 7</a></li>
-<li><a href="amos8.html">Capítulo 8</a></li>
-  <li><a href="amos9.html">Capitulo 9</a></li>
-</ul>
-<button onclick="location.href='index.html'">◀️</button>
-</div>
-</div>
+    <div class="container">
+        <header>
+            <h1>Amos</h1>
+            <p class="subtitle">El Profeta de la Justicia Social - Juicio y Restauración</p>
+        </header>
+        
+        <div class="content">
+            <div class="intro-section">
+                <h2>Introducción al Libro de Amos</h2>
+                <p>El libro de <span class="highlight">Amos</span> (en hebreo: "carga" o "portador de carga") es el tercero de los Doce Profetas Menores y presenta un mensaje contundente sobre la justicia social y el juicio divino. Amos, un pastor y cultivador de higos de Tecoa, fue llamado por Dios para profetizar contra el Reino del Norte (Israel) durante un período de prosperidad y corrupción.</p>
+                
+                <div class="biblical-box">
+                    <p class="scripture">"Oíd esta palabra que ha hablado Jehová contra vosotros, hijos de Israel, contra toda la familia que hice subir de la tierra de Egipto. Dice así: A vosotros solamente he conocido de todas las familias de la tierra; por tanto, os castigaré por todas vuestras maldades."</p>
+                    <p class="scripture-ref">Amos 3:1-2 (Reina-Valera 1960)</p>
+                </div>
+                
+                <div class="definition-box">
+                    <div class="definition-term">Contexto Histórico de Amos</div>
+                    <p><strong>Fechas:</strong> Aproximadamente 760-750 a.C., durante el reinado de Jeroboam II en Israel y Uzías en Judá.</p>
+                    <p><strong>Ubicación:</strong> Profetizó principalmente en el Reino del Norte (Israel) aunque era del Reino del Sur (Judá).</p>
+                    <p><strong>Contexto social:</strong> Período de gran prosperidad económica pero también de corrupción, opresión a los pobres y decadencia religiosa.</p>
+                </div>
+            </div>
+            
+            <div class="historical-section">
+                <h2>Contexto Histórico y Fecha</h2>
+                <p>Amos profetizó durante uno de los períodos más prósperos pero también más corruptos de la historia de Israel:</p>
+                
+                <div class="historical-periods">
+                    <div class="period-card">
+                        <div class="period-title">Situación Política</div>
+                        <div class="period-dates">Reinado de Jeroboam II (793-753 a.C.)</div>
+                        <ul>
+                            <li>Período de expansión territorial y estabilidad política</li>
+                            <li>Debilitamiento temporal de Asiria y Siria</li>
+                            <li>Israel alcanzó su máxima extensión desde Salomón</li>
+                            <li>Falsa sensación de seguridad nacional</li>
+                            <li>Prosperidad económica basada en comercio internacional</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="period-card">
+                        <div class="period-title">Situación </div>
+                        <div class="period-dates">Desigualdad y Corrupción</div>
+                        <ul>
+                            <li>Gran brecha entre ricos y pobres</li>
+                            <li>Opresión sistemática de los necesitados</li>
+                            <li>Corrupción judicial: "trueque del justo por dinero"</li>
+                            <li>Lujo extravagante de las clases altas</li>
+                            <li>Explotación de los campesinos y trabajadores</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="period-card">
+                        <div class="period-title">Situación Religiosa</div>
+                        <div class="period-dates">Apostasía Formalista</div>
+                        <ul>
+                            <li>Culto sincrético en Betel y Dan</li>
+                            <li>Religión reducida a ritual vacío</li>
+                            <li>Separación entre adoración y ética</li>
+                            <li>Falsa confianza en la elección divina</li>
+                            <li>Profetas y sacerdotes al servicio del poder</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>El Llamado Profético de Amos</h3>
+                <div class="nations-container">
+                    <div class="nation-item">Judá</div>
+                    <div class="nation-item">Israel</div>
+                    <div class="nation-item">Siria</div>
+                    <div class="nation-item">Filistea</div>
+                    <div class="nation-item">Fenicia</div>
+                    <div class="nation-item">Edom</div>
+                    <div class="nation-item">Amón</div>
+                    <div class="nation-item">Moab</div>
+                </div>
+                
+                <div class="definition-box">
+                    <div class="definition-term">Amos: El Pastor Profeta</div>
+                    <p>Amos no era un profeta profesional ni pertenecía a ninguna escuela profética. Era un "boyero y cultivador de higos" (7:14) llamado directamente por Dios. Su origen humilde y su profesión le daban una perspectiva única sobre la injusticia social y la opresión de los pobres.</p>
+                </div>
+            </div>
+            
+            <div class="structure-section">
+                <h2>Estructura del Libro</h2>
+                <p>Amos presenta una estructura cuidadosamente elaborada que progresa desde juicios generales hasta específicos:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>I. Oráculos contra las Naciones (1:1-2:16)</h3>
+                        <ul>
+                            <li><strong>Enfoque:</strong> Juicio universal sobre el pecado</li>
+                            <li>Ocho oráculos contra naciones vecinas</li>
+                            <li>Progresión desde lo lejano a lo cercano</li>
+                            <li>Clímax: Juicio contra Judá e Israel</li>
+                            <li>Base: Violación de principios morales universales</li>
+                            <li>Establece la justicia de Dios</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>II. Tres Sermones contra Israel (3:1-6:14)</h3>
+                        <ul>
+                            <li><strong>Enfoque:</strong> Juicio específico sobre Israel</li>
+                            <li>"Oíd esta palabra" (3:1; 4:1; 5:1)</li>
+                            <li>Denuncia de injusticia social y religiosa</li>
+                            <li>Ilustraciones y llamados al arrepentimiento</li>
+                            <li>Anuncio del inevitable juicio</li>
+                            <li>Crítica al culto vacío y opresión</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>III. Cinco Visiones (7:1-9:10)</h3>
+                        <ul>
+                            <li><strong>Enfoque:</strong> Certeza y naturaleza del juicio</li>
+                            <li>Langostas, fuego, plomada, canasta de frutos</li>
+                            <li>Dios junto al altar</li>
+                            <li>Intercesión de Amos en las primeras visiones</li>
+                            <li>Juicio irreversible en las últimas visiones</li>
+                            <li>Amplitud del juicio: "ni uno solo escapará"</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>IV. Promesa de Restauración (9:11-15)</h3>
+                        <ul>
+                            <li><strong>Enfoque:</strong> Esperanza más allá del juicio</li>
+                            <li>Reedificación del tabernáculo de David</li>
+                            <li>Restauración de la posesión de Edom</li>
+                            <li>Bendición agrícola renovada</li>
+                            <li>Establecimiento perpetuo del pueblo</li>
+                            <li>Nota final de esperanza mesiánica</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>Desarrollo Temático de Amos</h3>
+                <div class="judgment-box">
+                    <div class="grid-container">
+                        <div class="card">
+                            <h4>Juicio Universal (Cap. 1-2)</h4>
+                            <p><strong>Naciones vecinas</strong> - Dios juzga a todos los pueblos por violaciones a la ley moral universal, estableciendo su justicia imparcial.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Responsabilidad de Israel (Cap. 3)</h4>
+                            <p><strong>Conocimiento implica responsabilidad</strong> - A mayor revelación, mayor responsabilidad. Israel es juzgado más severamente por su pacto con Dios.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Opresión Social (Cap. 4)</h4>
+                            <p><strong>Mujeres opresoras</strong> - Denuncia específica a las mujeres ricas que oprimen a los pobres y exigen más lujo para mantener su estilo de vida.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Llamado al Arrepentimiento (Cap. 5)</h4>
+                            <p><strong>Búsqueda del bien</strong> - Última oportunidad para escapar del juicio mediante la práctica de la justicia y la rectitud.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Autojusticia Engañosa (Cap. 6)</h4>
+                            <p><strong>Complacencia de los líderes</strong> - Crítica a la autoconfianza y complacencia de los dirigentes que ignoran la inminente calamidad.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Irreversibilidad del Juicio (Cap. 7-9)</h4>
+                            <p><strong>Visiones finales</strong> - Las visiones progresan desde juicios que pueden ser detenidos hasta el juicio final irreversible.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="profession-section">
+                <h2>Amos: El Pastor y Labrador</h2>
+                <p>La profesión de Amos influyó profundamente en su mensaje profético:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Conocimiento del Campo</h3>
+                        <p>Sus referencias a la agricultura (langostas, frutos maduros, sequías) reflejan su experiencia directa con la naturaleza y los ciclos agrícolas.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Perspectiva del Marginado</h3>
+                        <p>Como trabajador rural, entendía la opresión que sufrían los campesinos por parte de las élites urbanas.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Independencia Profética</h3>
+                        <p>Al no pertenecer a las escuelas proféticas, podía hablar con mayor libertad contra el establishment religioso y político.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Lenguaje Sencillo y Directo</h3>
+                        <p>Su mensaje utiliza un lenguaje accesible, con imágenes cotidianas que cualquier persona podía entender.</p>
+                    </div>
+                </div>
+                
+                <div class="biblical-box">
+                    <p class="scripture">"Yo no soy profeta, ni soy hijo de profeta, sino que soy boyero, y recojo higos silvestres. Pero Jehová me tomó de detrás del ganado, y me dijo: Ve y profetiza a mi pueblo Israel."</p>
+                    <p class="scripture-ref">Amos 7:14-15</p>
+                </div>
+            </div>
+            
+            <div class="prophecy-section">
+                <h2>Profecías Principales de Amos</h2>
+                <p>Amos contiene profecías significativas sobre el juicio y la restauración:</p>
+                
+                <div class="timeline-container">
+                    <div class="timeline-card">
+                        <div class="timeline-title">El Día de Jehová</div>
+                        <div class="timeline-date">Amos 5:18-20</div>
+                        <p>Concepto revolucionario: corrige la expectativa popular de que el Día de Jehová sería de victoria, anunciando que será de oscuridad y juicio para Israel por su pecado.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-title">El Hambre de la Palabra</div>
+                        <div class="timeline-date">Amos 8:11-12</div>
+                        <p>Profecía única de un tiempo cuando Dios enviaría hambre "no de pan, ni de agua, sino de oír la palabra de Jehová", anticipando períodos de silencio divino.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-title">Reedificación del Tabernáculo</div>
+                        <div class="timeline-date">Amos 9:11</div>
+                        <p>Profecía mesiánica sobre la restauración del "tabernáculo caído de David", citada en Hechos 15:16-18 en relación con la inclusión de los gentiles.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-title">Restauración Final</div>
+                        <div class="timeline-date">Amos 9:13-15</div>
+                        <p>Visión de una restauración tan abundante que "el que ara alcanzará al segador", simbolizando bendición supernatural y permanencia en la tierra.</p>
+                    </div>
+                </div>
+                
+                <h3>El Día de Jehová en Amos</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Expectativa Popular</th>
+                            <th>Realidad según Amos</th>
+                            <th>Base Teológica</th>
+                            <th>Consecuencias</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Día de victoria sobre enemigos</td>
+                            <td>Día de oscuridad y juicio para Israel</td>
+                            <td>Dios juzga primero a su pueblo</td>
+                            <td>Destrucción del Reino del Norte</td>
+                        </tr>
+                        <tr>
+                            <td>Confirmación de elección</td>
+                            <td>Juicio por infidelidad al pacto</td>
+                            <td>Privilegio implica responsabilidad</td>
+                            <td>Exilio asirio (722 a.C.)</td>
+                        </tr>
+                        <tr>
+                            <td>Prosperidad nacional</td>
+                            <td>Catástrofe nacional</td>
+                            <td>Justicia social como requisito</td>
+                            <td>Fin de la dinastía de Jeroboam</td>
+                        </tr>
+                        <tr>
+                            <td>Intervención divina favorable</td>
+                            <td>Abandono temporal por Dios</td>
+                            <td>Santidad de Dios ofendida</td>
+                            <td>Hambruna de la palabra de Dios</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="social-justice-box">
+                    <h3>La Justicia Social en Amos</h3>
+                    <p>Amos es considerado el profeta de la justicia social por excelencia:</p>
+                    <div class="grid-container">
+                        <div class="card">
+                            <h4>Defensa de los Pobres</h4>
+                            <p>Denuncia la venta "por dinero del pobre y por un par de zapatos del necesitado" (2:6; 8:6).</p>
+                        </div>
+                        <div class="card">
+                            <h4>Crítica a la Opresión</h4>
+                            <p>Condena a quienes "pisotean a los menesterosos y destruyen a los pobres" (4:1; 5:11).</p>
+                        </div>
+                        <div class="card">
+                            <h4>Corrupción Judicial</h4>
+                            <p>Reprueba a quienes "truecan al justo por dinero y al pobre por un par de zapatos" (2:6).</p>
+                        </div>
+                        <div class="card">
+                            <h4>Lujo Insensible</h4>
+                            <p>Critica el lujo de los ricos que se construyen "casas de sillar" mientras descuidan la ruina de José (6:4-6).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="themes-section">
+                <h2>Temas Principales</h2>
+                <p>Amos desarrolla temas cruciales sobre la naturaleza de Dios y su relación con la humanidad:</p>
+                
+                <div class="theme-container">
+                    <div class="theme-item">
+                        <div class="theme-name">1. Soberanía Universal de Dios</div>
+                        <div>Dios no solo gobierna Israel sino todas las naciones, y las juzga según principios morales universales.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">2. Justicia Social</div>
+                        <div>La verdadera religión implica practicar justicia y rectitud, especialmente con los más vulnerables.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">3. Responsabilidad del Pacto</div>
+                        <div>El privilegio de la elección divina conlleva mayor responsabilidad, no inmunidad al juicio.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">4. Juicio Inevitable</div>
+                        <div>El pecado persistente y la impenitencia conducen inevitablemente al juicio divino.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">5. Culto Auténtico</div>
+                        <div>Dios rechaza el culto ritual cuando no va acompañado de obediencia ética y justicia social.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">6. Esperanza Escatológica</div>
+                        <div>El juicio no es la última palabra; hay promesa de restauración futura para un remanente.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">7. El Verdadero Día de Jehová</div>
+                        <div>Corrige conceptos erróneos sobre el día del Señor, presentándolo como juicio antes que victoria.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">8. Llamado al Arrepentimiento</div>
+                        <div>Aunque el juicio es inminente, Dios ofrece oportunidad de arrepentimiento hasta el último momento.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="key-verses">
+                <h2>Versículos Clave de Amos</h2>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Llamado a la Justicia</h3>
+                        <p class="scripture">"Corra el juicio como las aguas, y la justicia como impetuoso arroyo."</p>
+                        <p class="scripture-ref">Amos 5:24</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Preparación para Dios</h3>
+                        <p class="scripture">"Prepara para venir al encuentro de tu Dios, oh Israel."</p>
+                        <p class="scripture-ref">Amos 4:12</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Búsqueda del Bien</h3>
+                        <p class="scripture">"Buscad el bien, y no el mal, para que viváis; porque así Jehová Dios de los ejércitos estará con vosotros, como decís."</p>
+                        <p class="scripture-ref">Amos 5:14</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Responsabilidad Privilegiada</h3>
+                        <p class="scripture">"A vosotros solamente he conocido de todas las familias de la tierra; por tanto, os castigaré por todas vuestras maldades."</p>
+                        <p class="scripture-ref">Amos 3:2</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+                </div>
+                
+                <h3>Amos en el Nuevo Testamento</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Referencia en Amos</th>
+                            <th>Tema</th>
+                            <th>Cumplimiento en NT</th>
+                            <th>Referencia NT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>9:11-12</td>
+                            <td>Reedificación del tabernáculo de David</td>
+                            <td>Inclusión de los gentiles</td>
+                            <td>Hechos 15:16-18</td>
+                        </tr>
+                        <tr>
+                            <td>5:25-27</td>
+                            <td>Adoración en el desierto y exilio</td>
+                            <td>Explicación del rechazo de Israel</td>
+                            <td>Hechos 7:42-43</td>
+                        </tr>
+                        <tr>
+                            <td>8:9</td>
+                            <td>Oscuridad al mediodía</td>
+                            <td>Oscuridad en la crucifixión</td>
+                            <td>Mateo 27:45</td>
+                        </tr>
+                        <tr>
+                            <td>4:11</td>
+                            <td>Brasa arrebatada del incendio</td>
+                            <td>Salvación por gracia</td>
+                            <td>Judas 23</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="chapters-list">
+                <h2>Los 9 Capítulos de Amos</h2>
+                <p>Selecciona un capítulo para estudiar:</p>
+                
+                <div class="chapter-grid">
+                    <a href="amos1.html" class="chapter-item">Capítulo 1</a>
+                    <a href="amos2.html" class="chapter-item">Capítulo 2</a>
+                    <a href="amos3.html" class="chapter-item">Capítulo 3</a>
+                    <a href="amos4.html" class="chapter-item">Capítulo 4</a>
+                    <a href="amos5.html" class="chapter-item">Capítulo 5</a>
+                    <a href="amos6.html" class="chapter-item">Capítulo 6</a>
+                    <a href="amos7.html" class="chapter-item">Capítulo 7</a>
+                    <a href="amos8.html" class="chapter-item">Capítulo 8</a>
+                    <a href="amos9.html" class="chapter-item">Capítulo 9</a>
+                </div>
+            </div>
+            
+            <div class="navigation-buttons">
+                <a href="joel.html" class="nav-button">← Joel</a>
+                <a href="index.html" class="nav-button">🏠 Inicio</a>
+                <a href="abdias.html" class="nav-button">Abdías →</a>
+            </div>
+            
+            <div class="biblical-box">
+                <h3>Legado de Amos</h3>
+                <p>Amos ha dejado un impacto profundo en la teología bíblica y la ética social:</p>
+                <ul>
+                    <li><strong>Profeta de la Justicia Social</strong> - Estableció el vínculo inseparable entre la fe genuina y la práctica de la justicia, especialmente hacia los oprimidos</li>
+                    <li><strong>Teólogo de la Soberanía Universal</strong> - Amplió la comprensión del gobierno de Dios sobre todas las naciones, no solo Israel</li>
+                    <li><strong>Crítico de la Religión Formalista</strong> - Denunció la separación entre ritual religioso y práctica ética</li>
+                    <li><strong>Defensor de los Marginados</strong> - Dio voz a los pobres y oprimidos en un sistema que los explotaba sistemáticamente</li>
+                    <li><strong>Profeta del Juicio Inevitable</strong> - Enseñó que el pecado persistente conduce inevitablemente al juicio divino</li>
+                </ul>
+                
+                <p class="scripture">"He aquí, vienen días, dice Jehová el Señor, en los cuales enviaré hambre a la tierra, no hambre de pan, ni sed de agua, sino de oír la palabra de Jehová."</p>
+                <p class="scripture-ref">Amos 8:11</p>
+                
+                <p>El libro de Amos nos confronta con la exigencia divina de justicia social y nos recuerda que el culto que agrada a Dios es aquel que se expresa en la defensa de los oprimidos y la práctica de la rectitud. Su mensaje permanece como testimonio eterno de que la verdadera religión no puede separarse de la ética, y que el pueblo de Dios está llamado a ser agente de su justicia en el mundo. Amos nos asegura que, aunque el juicio es inevitable para los impenitentes, la misericordia de Dios siempre ofrece esperanza de restauración para aquellos que buscan el bien y practican la justicia.</p>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 IN GOD WE TRUST</p>
+                <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
