@@ -1,96 +1,984 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-	<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-BYMJS3X12P');
-</script>
-	<meta name="google-site-verification" content="KWZFlVdcT-h9cB1Qnj0LgSLJP-J-NS4bgjhnQG_c140" />
-<title>Jonas</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body {
-	background-color: #000000;
-	background-size: cover;
-	background-position: center;
-	font-family: Arial, sans-serif;
-	text-align: center;
-}
-
-.contenido {
-	color: #fff;
-	background-image: url('https://play-lh.googleusercontent.com/Svb-oRYbki_MRCFqPw3zAf8_7F5AbY98JY7-ZGsBFH64r-XzYaGNzmoSULDoLwJMXQ=w526-h296-rw');
-	width: 80%;
-	margin: 40px auto;
-	padding: 20px;
-	background-color: #fff;
-	border: 1px solid #ddd;
-	border-radius: 10px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.contenido {
-padding: 20px;
-margin: 40px auto;
-width: 80%;
-background-color: #000000;
-border: 1px solid #ddd;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-h1 {
-color: #fff;
-}
-ul {
-list-style: none;
-padding: 0;
-margin: 0;
-}
-li {
-margin-bottom: 10px;
-}
-a {
-text-decoration: none;
-color: #fff;
-}
-a:hover {
-color: #23527c;
-}
-img {
-max-width: 100%;
-height: auto;
-margin: 20px auto;
-border-radius: 10px;
-}
-   button {
-    background-color: #337ab7;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  button:hover {
-    background-color: #23527c;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonás - El Profeta Rebelde y la Misericordia Divina</title>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BYMJS3X12P');
+    </script>
+    <meta name="google-site-verification" content="KWZFlVdcT-h9cB1Qnj0LgSLJP-J-NS4bgjhnQG_c140" />
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #006994 0%, #0080a8 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(to right, #006994, #0080a8);
+            color: white;
+            padding: 50px 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        header::before {
+            content: "⛵️�";
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 3rem;
+            opacity: 0.7;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.4rem;
+            font-weight: 300;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .intro-section {
+            background-color: #f8f9fa;
+            border-left: 5px solid #006994;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #006994;
+            margin-bottom: 25px;
+            font-size: 2.2rem;
+            border-bottom: 3px solid #0080a8;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #006994;
+            margin: 30px 0 20px;
+            font-size: 1.7rem;
+        }
+        
+        h4 {
+            color: #006994;
+            margin: 20px 0 15px;
+            font-size: 1.3rem;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .highlight {
+            background-color: #e3f2fd;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #006994;
+        }
+        
+        .biblical-box {
+            background-color: #e3f2fd;
+            border: 2px solid #006994;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+        }
+        
+        .scripture {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #006994;
+            margin: 15px 0;
+            padding-left: 20px;
+            border-left: 4px solid #006994;
+        }
+        
+        .scripture-ref {
+            font-weight: bold;
+            text-align: right;
+            color: #0080a8;
+            margin-top: 10px;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #006994;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card h3 {
+            color: #006994;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+        
+        .card ul {
+            padding-left: 20px;
+        }
+        
+        .card li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .structure-section {
+            background-color: #f5f5f5;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .historical-section {
+            background-color: #e3f2fd;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border-left: 5px solid #1976d2;
+        }
+        
+        .themes-section {
+            background-color: #e8f5e9;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .prophecy-section {
+            background-color: #fff8e1;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .key-verses {
+            background-color: #f3e5f5;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border: 2px solid #7b1fa2;
+        }
+        
+        .application-section {
+            background-color: #fff3e0;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .chapters-list {
+            background-color: #fafafa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .chapter-item {
+            background: linear-gradient(135deg, #006994, #0080a8);
+            color: white;
+            padding: 15px 10px;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: block;
+        }
+        
+        .chapter-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #0080a8, #006994);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(to right, #006994, #0080a8);
+            color: #FFF8DC;
+            font-size: 1.1rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+            border: 3px solid #0080a8;
+        }
+        
+        .navigation-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .nav-button {
+            background: linear-gradient(135deg, #006994, #0080a8);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-button:hover {
+            background: linear-gradient(135deg, #0080a8, #006994);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .theme-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .theme-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #006994;
+        }
+        
+        .theme-name {
+            font-weight: bold;
+            color: #006994;
+            margin-bottom: 5px;
+        }
+        
+        .timeline-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .timeline-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+            border-top: 4px solid #006994;
+        }
+        
+        .timeline-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .timeline-title {
+            font-weight: bold;
+            color: #006994;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .timeline-date {
+            font-weight: bold;
+            color: #0080a8;
+            margin-bottom: 5px;
+        }
+        
+        .definition-box {
+            background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border-left: 5px solid #006994;
+        }
+        
+        .definition-term {
+            font-weight: bold;
+            color: #006994;
+            margin-bottom: 5px;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .comparison-table th, .comparison-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .comparison-table th {
+            background-color: #006994;
+            color: white;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .comparison-table tr:hover {
+            background-color: #e3f2fd;
+        }
+        
+        .historical-periods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .period-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid #006994;
+        }
+        
+        .period-title {
+            font-weight: bold;
+            color: #006994;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .period-dates {
+            font-weight: bold;
+            color: #0080a8;
+            margin-bottom: 10px;
+        }
+        
+        .journey-box {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+            border-left: 5px solid #006994;
+        }
+        
+        .locations-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .location-item {
+            background: #e3f2fd;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        .mercy-box {
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+            border-left: 5px solid #006994;
+        }
+        
+        .character-section {
+            background-color: #fff3e0;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .fish-section {
+            background-color: #fce4ec;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .chapter-grid {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            }
+            
+            .navigation-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .theme-container,
+            .locations-container,
+            .timeline-container,
+            .historical-periods {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            header {
+                padding: 30px 20px;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-<div class="contenido">
-<h1>Jonas</h1>
-<ul>
-<li><a href="jonas1.html">Capítulo 1</a></li>
-<li><a href="jonas2.html">Capítulo 2</a></li>
-<li><a href="jonas3.html">Capítulo 3</a></li>
-  <li><a href="jonas4.html">Capítulo 4</a></li>
-</ul>
-<button onclick="location.href='index.html'">◀️</button>
-</div>
-</div>
+    <div class="container">
+        <header>
+            <h1>Jonás</h1>
+            <p class="subtitle">El Profeta Rebelde - Misericordia para las Naciones y Lección sobre la Compasión Divina</p>
+        </header>
+        
+        <div class="content">
+            <div class="intro-section">
+                <h2>Introducción al Libro de Jonás</h2>
+                <p>El libro de <span class="highlight">Jonás</span> (en hebreo: "paloma") es el quinto de los Doce Profetas Menores y único que se centra principalmente en la narrativa del profeta en lugar de sus oráculos. Esta extraordinaria historia muestra la soberanía de Dios, su misericordia universal y la transformación de un profeta renuente.</p>
+                
+                <div class="biblical-box">
+                    <p class="scripture">"Y los hombres temieron a Jehová con gran temor, y ofrecieron sacrificio a Jehová, y hicieron votos. Pero Jehová dispuso un gran pez que tragase a Jonás; y estuvo Jonás en el vientre del pez tres días y tres noches."</p>
+                    <p class="scripture-ref">Jonás 1:16-17 (Reina-Valera 1569-1602)</p>
+                </div>
+                
+                <div class="definition-box">
+                    <div class="definition-term">Características Únicas de Jonás</div>
+                    <p><strong>Género:</strong> Narrativa profética con elementos didácticos y satíricos.</p>
+                    <p><strong>Enfoque:</strong> Más en el profeta que en su mensaje; énfasis en el carácter de Dios.</p>
+                    <p><strong>Mensaje central:</strong> La misericordia de Dios se extiende a todas las naciones, no solo a Israel.</p>
+                </div>
+            </div>
+            
+            <div class="historical-section">
+                <h2>Contexto Histórico y Fecha</h2>
+                <p>Jonás profetizó durante un período crítico de la historia de Israel:</p>
+                
+                <div class="historical-periods">
+                    <div class="period-card">
+                        <div class="period-title">Contexto Político</div>
+                        <div class="period-dates">Reinado de Jeroboam II (793-753 a.C.)</div>
+                        <ul>
+                            <li>Período de prosperidad y expansión territorial</li>
+                            <li>Mención de Jonás en 2 Reyes 14:25</li>
+                            <li>Profetizó la restauración de fronteras israelitas</li>
+                            <li>Asiria en fase de expansión pero aún no dominante</li>
+                            <li>Nínive como capital del creciente imperio asirio</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="period-card">
+                        <div class="period-title">Nínive - La Gran Ciudad</div>
+                        <div class="period-dates">Capital del Imperio Asirio</div>
+                        <ul>
+                            <li>Ciudad enorme: "de tres días de recorrido"</li>
+                            <li>Centro de crueldad y opresión imperial</li>
+                            <li>Enemigo tradicional y temido de Israel</li>
+                            <li>Población de más de 120,000 personas</li>
+                            <li>Representaba todo lo que Israel odiaba</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="period-card">
+                        <div class="period-title">Significado de la Misión</div>
+                        <div class="period-dates">Relevancia Teológica</div>
+                        <ul>
+                            <li>Primera misión profética a una nación gentil</li>
+                            <li>Desafío al nacionalismo exclusivista israelita</li>
+                            <li>Demostración del interés divino por todos los pueblos</li>
+                            <li>Precursor de la misión universal del Nuevo Testamento</li>
+                            <li>Prepara el terreno para la comprensión de la gracia universal</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>El Viaje de Jonás</h3>
+                <div class="locations-container">
+                    <div class="location-item">Gat-hefer</div>
+                    <div class="location-item">Jope</div>
+                    <div class="location-item">Tarsis</div>
+                    <div class="location-item">Mar Mediterráneo</div>
+                    <div class="location-item">Vientre del pez</div>
+                    <div class="location-item">Nínive</div>
+                </div>
+                
+                <div class="definition-box">
+                    <div class="definition-term">Jonás: El Profeta Patriota</div>
+                    <p>Jonás no era un cobarde sino un patriota profundamente comprometido con Israel. Su negativa a ir a Nínive surgía del deseo de ver juicio sobre el enemigo de su pueblo, no de la falta de valor. Prefería morir antes que ver a los asirios recibir misericordia.</p>
+                </div>
+            </div>
+            
+            <div class="structure-section">
+                <h2>Estructura del Libro</h2>
+                <p>Jonás presenta una estructura quiástica cuidadosamente elaborada:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>I. Desobediencia y Huida (Cap. 1)</h3>
+                        <ul>
+                            <li><strong>Llamado divino y rechazo</strong> (1:1-3)</li>
+                            <li><strong>Tormenta en el mar</strong> (1:4-6)</li>
+                            <li><strong>Confesión de Jonás</strong> (1:7-12)</li>
+                            <li><strong>Sacrificio de los marineros</strong> (1:13-16)</li>
+                            <li><strong>Gran pez designado</strong> (1:17)</li>
+                            <li><strong>Tema: Soberanía de Dios en el juicio</strong></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>II. Oración y Liberación (Cap. 2)</h3>
+                        <ul>
+                            <li><strong>Oración desde el pez</strong> (2:1-9)</li>
+                            <li><strong>Reconocimiento de la salvación divina</strong></li>
+                            <li><strong>Promesa de sacrificio y acción de gracias</strong></li>
+                            <li><strong>Liberación milagrosa</strong> (2:10)</li>
+                            <li><strong>Tema: Soberanía de Dios en la salvación</strong></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>III. Obediencia y Predicación (Cap. 3)</h3>
+                        <ul>
+                            <li><strong>Segundo llamado y obediencia</strong> (3:1-4)</li>
+                            <li><strong>Arrepentimiento de Nínive</strong> (3:5-9)</li>
+                            <li><strong>Misericordia divina</strong> (3:10)</li>
+                            <li><strong>Tema: Soberanía de Dios en el arrepentimiento</strong></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>IV. Queja y Lección (Cap. 4)</h3>
+                        <ul>
+                            <li><strong>Enojo de Jonás</strong> (4:1-4)</li>
+                            <li><strong>Planta de calabacera</strong> (4:5-8)</li>
+                            <li><strong>Lección sobre la compasión</strong> (4:9-11)</li>
+                            <li><strong>Tema: Soberanía de Dios en la misericordia</strong></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>Desarrollo Narrativo de Jonás</h3>
+                <div class="journey-box">
+                    <div class="grid-container">
+                        <div class="card">
+                            <h4>Llamado y Rebelión (1:1-3)</h4>
+                            <p><strong>Huida hacia Tarsis</strong> - Jonás desobedece deliberadamente el mandato divino, iniciando hacia el extremo opuesto del mundo conocido.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Tormenta y Confesión (1:4-16)</h4>
+                            <p><strong>Los marineros gentiles</strong> - Mientras Jonás huye, los marineros paganos muestran más temor de Dios que el profeta hebreo.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Transformación en el Pez (Cap. 2)</h4>
+                            <p><strong>Oración de gratitud</strong> - En lugar de una oración de súplica, Jonás ofrece acción de gracias, mostrando fe en medio de la crisis.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Predicación Exitosa (3:1-10)</h4>
+                            <p><strong>Arrepentimiento masivo</strong> - El mensaje más breve del AT produce el mayor avivamiento registrado en la Escritura.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Enojo del Profeta (4:1-4)</h4>
+                            <p><strong>Prefiere la muerte</strong> - Jonás revela que su huida inicial surgía del conocimiento del carácter misericordioso de Dios.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Lección Final (4:5-11)</h4>
+                            <p><strong>La calabacera y Nínive</strong> - Dios usa un objeto cotidiano para enseñar una profunda lección sobre compasión y valor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="character-section">
+                <h2>Carácter y Transformación de Jonás</h2>
+                <p>Jonás es uno de los personajes más complejos y humanos de la Biblia:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Profeta Patriota</h3>
+                        <p>Su negativa no era por cobardía sino por celo nacionalista. Conocía bien el carácter misericordioso de Dios (4:2) y no quería que se extendiera a los enemigos de Israel.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Hombre de Oración</h3>
+                        <p>A pesar de su desobediencia, mantiene una relación de oración con Dios. Su oración en el capítulo 2 es un salmo de acción de gracias, no de súplica.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Predicador Efectivo</h3>
+                        <p>Su mensaje de solo ocho palabras en hebreo produce el mayor avivamiento registrado en la Escritura, demostrando el poder de Dios, no la elocuencia humana.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Alma Conflictiva</h3>
+                        <p>Experimenta una profunda lucha interna entre su deseo de ver juicio sobre los malvados y el reconocimiento del amor misericordioso de Dios por toda la creación.</p>
+                    </div>
+                </div>
+                
+                <div class="biblical-box">
+                    <p class="scripture">"Y oró Jonás a Jehová su Dios desde el vientre del pez, y dijo: Invoqué en mi angustia a Jehová, y él me oyó; desde el seno del Seol clamé, y mi voz oíste."</p>
+                    <p class="scripture-ref">Jonás 2:1-2</p>
+                </div>
+            </div>
+            
+            <div class="fish-section">
+                <h2>El Gran Pez: Significado y Símbolo</h2>
+                <p>El episodio del gran pez es central en la narrativa de Jonás:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Instrumento de Salvación</h3>
+                        <p>Contrario a la percepción popular, el pez no era castigo sino el medio de salvación designado por Dios para preservar a Jonás de ahogarse.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Símbolo del Seol</h3>
+                        <p>Jonás describe su experiencia en términos que evocan el sheol o abismo (2:2-6), representando un descenso a la muerte y resurrección simbólica.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Precursor de Cristo</h3>
+                        <p>Jesús mismo señaló a Jonás como señal de su muerte y resurrección (Mateo 12:39-41), dando significado cristológico a este evento.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Lugar de Transformación</h3>
+                        <p>El vientre del pez representa un lugar de aislamiento donde Jonás es confrontado consigo mismo y con Dios, emergiendo transformado.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="prophecy-section">
+                <h2>Mensaje Profético y Significado</h2>
+                <p>Jonás contiene profundas verdades teológicas:</p>
+                
+                <div class="timeline-container">
+                    <div class="timeline-card">
+                        <div class="timeline-title">Misericordia Universal</div>
+                        <div class="timeline-date">Jonás 4:11</div>
+                        <p>Dios se preocupa por todas las naciones, no solo por Israel. La compasión divina se extiende incluso a los enemigos tradicionales del pueblo de Dios.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-title">Arrepentimiento Genuino</div>
+                        <div class="timeline-date">Jonás 3:5-10</div>
+                        <p>El arrepentimiento sincero, incluso de gentiles paganos, conmueve el corazón de Dios y detiene el juicio inminente.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-title">Soberanía Divina</div>
+                        <div class="timeline-date">Jonás 1:4, 17; 4:6-8</div>
+                        <p>Dios controla todos los elementos de la creación - vientos, mar, peces, plantas - para cumplir sus propósitos.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-title">Señal de Resurrección</div>
+                        <div class="timeline-date">Mateo 12:39-41</div>
+                        <p>Jesús identifica a Jonás como la señal profética por excelencia de su muerte y resurrección, dándole significado escatológico.</p>
+                    </div>
+                </div>
+                
+                <h3>Contrastes en el Libro de Jonás</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Elemento</th>
+                            <th>Jonás</th>
+                            <th>Los Gentiles</th>
+                            <th>Significado Teológico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Respuesta a Dios</td>
+                            <td>Desobediencia inicial</td>
+                            <td>Obediencia inmediata</td>
+                            <td>Los gentiles muestran mayor sensibilidad espiritual</td>
+                        </tr>
+                        <tr>
+                            <td>Preocupación por otros</td>
+                            <td>Egoísta (prefiere morir)</td>
+                            <td>Compasiva (salvan a Jonás)</td>
+                            <td>Inversión de roles morales esperados</td>
+                        </tr>
+                        <tr>
+                            <td>Conocimiento de Dios</td>
+                            <td>Teológicamente correcto</td>
+                            <td>Experimental y práctico</td>
+                            <td>El conocimiento teórico sin amor es insuficiente</td>
+                        </tr>
+                        <tr>
+                            <td>Compasión</td>
+                            <td>Por una planta</td>
+                            <td>Por 120,000 personas</td>
+                            <td>Dios valora más a las personas que a las cosas</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="mercy-box">
+                    <h3>La Misericordia de Dios en Jonás</h3>
+                    <p>El libro revela las múltiples dimensiones de la misericordia divina:</p>
+                    <div class="grid-container">
+                        <div class="card">
+                            <h4>Misericordia para Jonás</h4>
+                            <p>Dios salva al profeta rebelde del ahogamiento y le da una segunda oportunidad para cumplir su llamado.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Misericordia para los Marineros</h4>
+                            <p>Los marineros paganos experimentan el poder de Dios y se convierten en adoradores del Dios verdadero.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Misericordia para Nínive</h4>
+                            <p>La ciudad malvada recibe perdón completo cuando se arrepiente, a pesar de su historial de crueldad.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Misericordia para los Animales</h4>
+                            <p>Dios expresa preocupación incluso por el ganado de Nínive, mostrando su cuidado por toda la creación.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="themes-section">
+                <h2>Temas Teológicos Principales</h2>
+                <p>Jonás desarrolla temas teológicos cruciales sobre la naturaleza de Dios y la misión:</p>
+                
+                <div class="theme-container">
+                    <div class="theme-item">
+                        <div class="theme-name">1. Soberanía Universal de Dios</div>
+                        <div>Dios gobierna sobre toda la creación - naturaleza, naciones, y el corazón humano - para cumplir sus propósitos.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">2. Misericordia Divina</div>
+                        <div>La compasión de Dios se extiende a todos los pueblos, incluso a los enemigos tradicionales de su pueblo escogido.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">3. Arrepentimiento y Perdón</div>
+                        <div>El arrepentimiento sincero, sin importar cuán tardío o de quién provenga, encuentra respuesta en el corazón de Dios.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">4. Misión Universal</div>
+                        <div>Dios llama a su pueblo a ser luz para las naciones, trascendiendo barreras étnicas y nacionalistas.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">5. Ironía Divina</div>
+                        <div>Dios usa situaciones irónicas para enseñar lecciones profundas y humillar el orgullo humano.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">6. Resurrección y Nueva Vida</div>
+                        <div>El viaje de Jonás prefigura el patrón muerte-resurrección que culmina en Cristo.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">7. Carácter de Dios</div>
+                        <div>Revelación de Dios como clemente, misericordioso, lento para la ira y grande en misericordia.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">8. Responsabilidad Profética</div>
+                        <div>Los profetas son llamados no solo a pronunciar oráculos sino a encarnar el mensaje de Dios.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="key-verses">
+                <h2>Versículos Clave de Jonás</h2>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Confesión de Fe</h3>
+                        <p class="scripture">"Mas yo con voz de alabanza te ofreceré sacrificios; pagaré lo que prometí. La salvación es de Jehová."</p>
+                        <p class="scripture-ref">Jonás 2:9</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Proclamación en Nínive</h3>
+                        <p class="scripture">"Y comenzó Jonás a entrar por la ciudad, camino de un día, y predicaba diciendo: De aquí a cuarenta días Nínive será destruida."</p>
+                        <p class="scripture-ref">Jonás 3:4</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Carácter de Dios</h3>
+                        <p class="scripture">"Porque sé que tú eres Dios clemente y piadoso, tardo en enojarte y de grande misericordia, y que te arrepientes del mal."</p>
+                        <p class="scripture-ref">Jonás 4:2</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Compasión Divina</h3>
+                        <p class="scripture">"¿Y no tendré yo piedad de Nínive, aquella gran ciudad donde hay más de ciento veinte mil personas que no saben discernir entre su mano derecha y su mano izquierda, y muchos animales?"</p>
+                        <p class="scripture-ref">Jonás 4:11</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+                </div>
+                
+                <h3>Jonás en el Nuevo Testamento</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Elemento en Jonás</th>
+                            <th>Significado Original</th>
+                            <th>Cumplimiento en Cristo</th>
+                            <th>Referencia NT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tres días en el pez</td>
+                            <td>Castigo/liberación del profeta</td>
+                            <td>Muerte y resurrección de Jesús</td>
+                            <td>Mateo 12:39-41</td>
+                        </tr>
+                        <tr>
+                            <td>Mensaje a gentiles</td>
+                            <td>Misericordia para Nínive</td>
+                            <td>Salvación para todas las naciones</td>
+                            <td>Hechos 10:34-35</td>
+                        </tr>
+                        <tr>
+                            <td>Arrepentimiento de Nínive</td>
+                            <td>Juicio suspendido por penitencia</td>
+                            <td>Condena para generación incrédula</td>
+                            <td>Lucas 11:32</td>
+                        </tr>
+                        <tr>
+                            <td>Salvación de los marineros</td>
+                            <td>Gentiles que temen a Dios</td>
+                            <td>Inclusión de los gentiles</td>
+                            <td>Efesios 2:11-13</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="chapters-list">
+                <h2>Los 4 Capítulos de Jonás</h2>
+                <p>Selecciona un capítulo para estudiar:</p>
+                
+                <div class="chapter-grid">
+                    <a href="jonas1.html" class="chapter-item">Capítulo 1</a>
+                    <a href="jonas2.html" class="chapter-item">Capítulo 2</a>
+                    <a href="jonas3.html" class="chapter-item">Capítulo 3</a>
+                    <a href="jonas4.html" class="chapter-item">Capítulo 4</a>
+                </div>
+            </div>
+            
+            <div class="navigation-buttons">
+                <a href="abdias.html" class="nav-button">← Abdías</a>
+                <a href="index.html" class="nav-button">🏠 Inicio</a>
+                <a href="miqueas.html" class="nav-button">Miqueas →</a>
+            </div>
+            
+            <div class="biblical-box">
+                <h3>Legado de Jonás</h3>
+                <p>Jonás ha dejado un impacto profundo en la teología bíblica y la comprensión de la misión:</p>
+                <ul>
+                    <li><strong>Profeta de la Misericordia Universal</strong> - Estableció que el amor y la compasión de Dios se extienden a todas las naciones, no solo al pueblo escogido</li>
+                    <li><strong>Símbolo de Resurrección</strong> - Su experiencia en el pez se convirtió en la señal profética por excelencia de la muerte y resurrección de Jesucristo</li>
+                    <li><strong>Precursor de la Misión Global</strong> - Su comisión a Nínive anticipó la gran comisión del Nuevo Testamento de llevar el evangelio a todas las naciones</li>
+                    <li><strong>Maestro de la Soberanía Divina</strong> - Demostró que Dios gobierna sobre toda la creación para cumplir sus propósitos redentores</li>
+                    <li><strong>Ejemplo de Transformación Personal</strong> - Su viaje espiritual de rebelión a obediencia (aunque incompleta) muestra el proceso de transformación divina</li>
+                </ul>
+                
+                <p class="scripture">"Y Jonás se levantó y fue a Nínive conforme a la palabra de Jehová. Era Nínive ciudad grande en extremo, de tres días de camino."</p>
+                <p class="scripture-ref">Jonás 3:3</p>
+                
+                <p>El libro de Jonás nos confronta con la amplitud de la misericordia divina y nos desafía a examinar nuestros propios prejuicios y resistencias a la voluntad de Dios. Su mensaje permanece como testimonio eterno de que el corazón de Dios late por toda la humanidad, que su gracia supera nuestras limitaciones, y que su soberanía puede transformar incluso nuestra desobediencia en oportunidades para su gloria. Jonás nos asegura que Dios nunca abandona a sus siervos, incluso cuando huyen de su llamado, y que su compasión se extiende mucho más allá de los límites que nosotros, en nuestra pequeñez, quisiéramos imponerle.</p>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 IN GOD WE TRUST</p>
+                <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
