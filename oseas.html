@@ -1,105 +1,931 @@
-<html>
-<head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-BYMJS3X12P');
-</script>
-	<meta name="google-site-verification" content="KWZFlVdcT-h9cB1Qnj0LgSLJP-J-NS4bgjhnQG_c140" />
-<title>Oseas</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body {
-font-family: Arial, sans-serif;
-background-color: #f0f0f0;
-margin: 0;
-padding: 0;
-text-align: center;
-}
-.container {
-max-width: 800px;
-margin: 40px auto;
-padding: 20px;
-background-color: #fff;
-border: 1px solid #ddd;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.contenido {
-  background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20230523/pngtree-bible-gif-hd-wallpaper-image_2683159.jpg');
-padding: 20px;
-margin: 40px auto;
-width: 80%;
-background-color: #fff;
-border: 1px solid #ddd;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-h1 {
-color: #333;
-}
-ul {
-list-style: none;
-padding: 0;
-margin: 0;
-}
-li {
-margin-bottom: 10px;
-}
-a {
-text-decoration: none;
-color: #fff;
-}
-a:hover {
-color: #23527c;
-}
-img {
-max-width: 100%;
-height: auto;
-margin: 20px auto;
-border-radius: 10px;
-}
-   button {
-    background-color: #337ab7;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  button:hover {
-    background-color: #23527c;
-  }
-</style>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oseas - El Profeta del Amor Infiel</title>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BYMJS3X12P');
+    </script>
+    <meta name="google-site-verification" content="KWZFlVdcT-h9cB1Qnj0LgSLJP-J-NS4bgjhnQG_c140" />
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #87CEEB 0%, #4682B4 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(to right, #FF69B4, #FF1493);
+            color: white;
+            padding: 50px 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        header::before {
+            content: "🇮🇱";
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 3rem;
+            opacity: 0.7;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.4rem;
+            font-weight: 300;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .intro-section {
+            background-color: #f8f9fa;
+            border-left: 5px solid #FF69B4;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #FF69B4;
+            margin-bottom: 25px;
+            font-size: 2.2rem;
+            border-bottom: 3px solid #FF1493;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #FF69B4;
+            margin: 30px 0 20px;
+            font-size: 1.7rem;
+        }
+        
+        h4 {
+            color: #FF69B4;
+            margin: 20px 0 15px;
+            font-size: 1.3rem;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .highlight {
+            background-color: #ffeef8;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #FF69B4;
+        }
+        
+        .biblical-box {
+            background-color: #ffeef8;
+            border: 2px solid #FF69B4;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+        }
+        
+        .scripture {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #FF69B4;
+            margin: 15px 0;
+            padding-left: 20px;
+            border-left: 4px solid #FF69B4;
+        }
+        
+        .scripture-ref {
+            font-weight: bold;
+            text-align: right;
+            color: #FF1493;
+            margin-top: 10px;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #FF69B4;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card h3 {
+            color: #FF69B4;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+        
+        .card ul {
+            padding-left: 20px;
+        }
+        
+        .card li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .structure-section {
+            background-color: #f5f5f5;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .historical-section {
+            background-color: #e3f2fd;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border-left: 5px solid #1976d2;
+        }
+        
+        .themes-section {
+            background-color: #e8f5e9;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .marriage-section {
+            background-color: #fff8e1;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .key-verses {
+            background-color: #f3e5f5;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border: 2px solid #7b1fa2;
+        }
+        
+        .application-section {
+            background-color: #fff3e0;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .chapters-list {
+            background-color: #fafafa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .chapter-item {
+            background: linear-gradient(135deg, #FF69B4, #FF1493);
+            color: white;
+            padding: 15px 10px;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: block;
+        }
+        
+        .chapter-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #FF1493, #FF69B4);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(to right, #FF69B4, #FF1493);
+            color: #FFF8DC;
+            font-size: 1.1rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+            border: 3px solid #FF1493;
+        }
+        
+        .navigation-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .nav-button {
+            background: linear-gradient(135deg, #FF69B4, #FF1493);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-button:hover {
+            background: linear-gradient(135deg, #FF1493, #FF69B4);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .theme-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .theme-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #FF69B4;
+        }
+        
+        .theme-name {
+            font-weight: bold;
+            color: #FF69B4;
+            margin-bottom: 5px;
+        }
+        
+        .timeline-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .timeline-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+            border-top: 4px solid #FF69B4;
+        }
+        
+        .timeline-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .timeline-title {
+            font-weight: bold;
+            color: #FF69B4;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .timeline-date {
+            font-weight: bold;
+            color: #FF1493;
+            margin-bottom: 5px;
+        }
+        
+        .definition-box {
+            background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border-left: 5px solid #FF69B4;
+        }
+        
+        .definition-term {
+            font-weight: bold;
+            color: #FF69B4;
+            margin-bottom: 5px;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .comparison-table th, .comparison-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .comparison-table th {
+            background-color: #FF69B4;
+            color: white;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .comparison-table tr:hover {
+            background-color: #ffeef8;
+        }
+        
+        .historical-periods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .period-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid #FF69B4;
+        }
+        
+        .period-title {
+            font-weight: bold;
+            color: #FF69B4;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .period-dates {
+            font-weight: bold;
+            color: #FF1493;
+            margin-bottom: 10px;
+        }
+        
+        .marriage-analogy-box {
+            background: linear-gradient(135deg, #fff0f8, #ffe0f0);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+            border-left: 5px solid #FF69B4;
+        }
+        
+        .kings-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .king-item {
+            background: #ffeef8;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        .covenant-box {
+            background: linear-gradient(135deg, #e8f4f8, #d4e7f0);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+            border-left: 5px solid #FF69B4;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .chapter-grid {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            }
+            
+            .navigation-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .theme-container,
+            .kings-container,
+            .timeline-container,
+            .historical-periods {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            header {
+                padding: 30px 20px;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-<div class="contenido">
-<h1>Oseas</h1>
-<ul>
-<li><a href="oseas1.html">Capítulo 1</a></li>
-<li><a href="oseas2.html">Capítulo 2</a></li>
-<li><a href="oseas3.html">Capítulo 3</a></li>
-  <li><a href="oseas4.html">Capítulo 4</a></li>
-<li><a href="oseas5.html">Capítulo 5</a></li>
-<li><a href="oseas6.html">Capítulo 6</a></li>
-  <li><a href="oseas7.html">Capítulo 7</a></li>
-<li><a href="oseas8.html">Capítulo 8</a></li>
-<li><a href="oseas9.html">Capítulo 9</a></li>
-<li><a href="oseas10.html">Capítulo 10</a></li>
-  <li><a href="oseas11.html">Capitulo 11</a></li>
-  <li><a href="oseas12.html">Capitulo 12</a></li>
-  <li><a href="oseas13.html">Capitulo 13</a></li>
-  <li><a href="oseas14.html">Capitulo 14</a></li>
-</ul>
-
-  <button onclick="location.href='index.html'">🏠</button>
-</div>
-</div>
+    <div class="container">
+        <header>
+            <h1>Oseas</h1>
+            <p class="subtitle">El Profeta del Amor Redentor - Juicio y Restauración del Pacto</p>
+        </header>
+        
+        <div class="content">
+            <div class="intro-section">
+                <h2>Introducción al Libro de Oseas</h2>
+                <p>El libro de <span class="highlight">Oseas</span> (en hebreo: Hoshea, "Salvación") es el primero de los Doce Profetas Menores y presenta un mensaje único a través del matrimonio del profeta con una mujer infiel. Esta relación simboliza la infidelidad espiritual de Israel hacia Yahweh y el amor redentor de Dios que persiste a pesar del pecado de su pueblo.</p>
+                
+                <div class="biblical-box">
+                    <p class="scripture">"Y me dijo Jehová: Ve otra vez, ama a una mujer amada de su compañero, aunque adúltera, como el amor de Jehová para con los hijos de Israel, los cuales miran a dioses ajenos, y aman tortas de pasas."</p>
+                    <p class="scripture-ref">Oseas 3:1 (Reina-Valera 1569-1602)</p>
+                </div>
+                
+                <div class="definition-box">
+                    <div class="definition-term">Contexto Histórico de Oseas</div>
+                    <p><strong>Fechas:</strong> Aproximadamente 755-715 a.C., durante los últimos años del Reino del Norte (Israel) antes de su caída en 722 a.C.</p>
+                    <p><strong>Ubicación:</strong> Reino del Norte de Israel, durante un período de prosperidad material pero decadencia espiritual.</p>
+                    <p><strong>Contemporáneos:</strong> Profetizó al mismo tiempo que Isaías y Miqueas en Judá, y justo antes de la caída de Samaria.</p>
+                </div>
+            </div>
+            
+            <div class="historical-section">
+                <h2>Contexto Histórico: El Reino del Norte en Decadencia</h2>
+                <p>Oseas ministró durante el turbulento período final del Reino de Israel:</p>
+                
+                <div class="historical-periods">
+                    <div class="period-card">
+                        <div class="period-title">Prosperidad y Corrupción</div>
+                        <div class="period-dates">793-753 a.C.</div>
+                        <ul>
+                            <li>Reinados de Jeroboam II - período de expansión</li>
+                            <li>Prosperidad económica y estabilidad política</li>
+                            <li>Creciente corrupción social e injusticia</li>
+                            <li>Sincretismo religioso y culto a Baal</li>
+                            <li>Oseas comienza su ministerio (755 a.C.)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="period-card">
+                        <div class="period-title">Caos Político</div>
+                        <div class="period-dates">753-732 a.C.</div>
+                        <ul>
+                            <li>Asesinato de Zacarías, fin de la dinastía de Jehú</li>
+                            <li>Seis reyes en 15 años - cuatro asesinados</li>
+                            <li>Alianzas vacilantes entre Asiria y Egipto</li>
+                            <li>Creciente influencia y amenaza asiria</li>
+                            <li>Pekah se alía con Siria contra Judá</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="period-card">
+                        <div class="period-title">Caída Final</div>
+                        <div class="period-dates">732-722 a.C.</div>
+                        <ul>
+                            <li>Oseas ben Elah como último rey de Israel</li>
+                            <li>Rebelión contra Asiria y sitio de Samaria</li>
+                            <li>Caída de Samaria ante Sargón II (722 a.C.)</li>
+                            <li>Deportación de la población israelita</li>
+                            <li>Fin del Reino del Norte</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>Reyes de Israel Contemporáneos</h3>
+                <div class="kings-container">
+                    <div class="king-item">Jeroboam II (793-753 a.C.)</div>
+                    <div class="king-item">Zacarías (753 a.C.) - 6 meses</div>
+                    <div class="king-item">Salum (752 a.C.) - 1 mes</div>
+                    <div class="king-item">Menahem (752-742 a.C.)</div>
+                    <div class="king-item">Pekaías (742-740 a.C.)</div>
+                    <div class="king-item">Pekah (752-732 a.C.)</div>
+                    <div class="king-item">Oseas (732-722 a.C.)</div>
+                </div>
+                
+                <div class="definition-box">
+                    <div class="definition-term">Culto a Baal en Israel</div>
+                    <p>La religión cananea de Baal, dios de la tormenta y la fertilidad, había sido adoptada masivamente en Israel. Incluía rituales de prostitución sagrada, sacrificios infantiles, y la creencia de que Baal controlaba la lluvia y las cosechas. Este sincretismo religioso representaba la infidelidad espiritual fundamental que Oseas denunciaba.</p>
+                </div>
+            </div>
+            
+            <div class="structure-section">
+                <h2>Estructura del Libro</h2>
+                <p>Oseas está organizado en dos secciones principales que desarrollan la analogía matrimonial:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>I. Matrimonio de Oseas y Gomer (1-3)</h3>
+                        <ul>
+                            <li><strong>Enfoque:</strong> Símbolo del pacto roto</li>
+                            <li>Matrimonio con Gomer la adúltera</li>
+                            <li>Nombres simbólicos de los hijos</li>
+                            <li>Separación y restauración</li>
+                            <li>Amor que redime a pesar de la infidelidad</li>
+                            <li>Base para el mensaje profético</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>II. Mensaje Profético a Israel (4-14)</h3>
+                        <ul>
+                            <li><strong>Enfoque:</strong> Aplicación de la analogía</li>
+                            <li>Denuncia de la infidelidad espiritual</li>
+                            <li>Juicio inminente por el pecado</li>
+                            <li>Llamado al arrepentimiento</li>
+                            <li>Promesa de restauración futura</li>
+                            <li>Amor persistente de Yahweh</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>Desarrollo de la Analogía Matrimonial</h3>
+                <div class="marriage-analogy-box">
+                    <div class="grid-container">
+                        <div class="card">
+                            <h4>Boda (Oseas 1:2-3)</h4>
+                            <p>Yahweh ordena a Oseas casarse con Gomer, una mujer propensa a la infidelidad, simbolizando la relación de pacto entre Dios e Israel.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Infidelidad (Oseas 2:2-5)</h4>
+                            <p>Gomer abandona a Oseas por otros amantes, representando cómo Israel abandonó a Yahweh para seguir a Baal y otros dioses.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Disciplina (Oseas 2:6-13)</h4>
+                            <p>Oseas disciplina a Gomer quitándole provisiones, simbolizando el juicio de Dios sobre Israel para llevarlos al arrepentimiento.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Restauración (Oseas 2:14-23)</h4>
+                            <p>Oseas restaura a Gomer, llevándola al desierto para renovar su relación, prefigurando la restauración futura de Israel.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Redención (Oseas 3:1-5)</h4>
+                            <p>Oseas compra a Gomer de la esclavitud por 15 siclos de plata, simbolizando el precio de la redención que Yahweh pagaría.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="marriage-section">
+                <h2>El Matrimonio como Símbolo del Pacto</h2>
+                <p>La relación de Oseas y Gomer ilustra profundas verdades teológicas:</p>
+                
+                <div class="timeline-container">
+                    <div class="timeline-card">
+                        <div class="timeline-title">Los Nombres de los Hijos</div>
+                        <div class="timeline-date">Oseas 1:3-9</div>
+                        <p>Tres hijos con nombres proféticos: Jezreel (Dios esparce/siembra - juicio), Lo-ruhama (No-compadecida - misericordia retirada), y Lo-ammi (No-mi-pueblo - ruptura del pacto).</p>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-title">El Juicio como Acto de Amor</div>
+                        <div class="timeline-date">Oseas 2:6-13</div>
+                        <p>La disciplina de Oseas hacia Gomer no es vengativa sino redentora, diseñada para llevarla al arrepentimiento, igual que el juicio de Dios sobre Israel.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-title">El Desierto como Lugar de Encuentro</div>
+                        <div class="timeline-date">Oseas 2:14-15</div>
+                        <p>Así como Oseas lleva a Gomer al desierto para renovar su relación, Dios llevaría a Israel al "desierto" del exilio para restaurar su relación con Él.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-title">Precio de la Redención</div>
+                        <div class="timeline-date">Oseas 3:1-2</div>
+                        <p>Oseas paga 15 siclos de plata y un homer y medio de cebada para redimir a Gomer de la esclavitud, prefigurando el precio que Cristo pagaría.</p>
+                    </div>
+                </div>
+                
+                <h3>Contraste entre Pacto Fiel e Infiel</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Aspecto del Pacto</th>
+                            <th>Fidelidad (Yahweh)</th>
+                            <th>Infidelidad (Israel)</th>
+                            <th>Consecuencias</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Relación</td>
+                            <td>Esposo fiel y proveedor</td>
+                            <td>Esposa adúltera e ingrata</td>
+                            <td>Ruptura de la comunión</td>
+                        </tr>
+                        <tr>
+                            <td>Adoración</td>
+                            <td>Exclusiva a Yahweh</td>
+                            <td>Idolatría con Baal y otros dioses</td>
+                            <td>Juicio y disciplina</td>
+                        </tr>
+                        <tr>
+                            <td>Conocimiento</td>
+                            <td>Revelación verdadera de Dios</td>
+                            <td>Falta de conocimiento (4:1, 6)</td>
+                            <td>Destrucción por ignorancia</td>
+                        </tr>
+                        <tr>
+                            <td>Amor</td>
+                            <td>Amor hesed (misericordioso)</td>
+                            <td>Amor como rocío que se desvanece (6:4)</td>
+                            <td>Relación superficial</td>
+                        </tr>
+                        <tr>
+                            <td>Esperanza</td>
+                            <td>Restauración futura</td>
+                            <td>Destrucción inminente</td>
+                            <td>Exilio pero luego renovación</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="covenant-box">
+                    <h3>El Concepto de "Hesed" en Oseas</h3>
+                    <p>La palabra hebrea <em>hesed</em> (amor misericordioso, bondad, fidelidad) es central en Oseas:</p>
+                    <div class="grid-container">
+                        <div class="card">
+                            <h4>Amor de Pacto</h4>
+                            <p><strong>Hesed</strong> no es emoción sino compromiso fiel basado en una relación de pacto. Yahweh mantiene su <em>hesed</em> a pesar de la infidelidad de Israel.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Persistente y Fiel</h4>
+                            <p>El <strong>hesed</strong> de Dios es inquebrantable. Aunque Israel rompe el pacto repetidamente, el amor de Yahweh persiste buscando su restauración.</p>
+                        </div>
+                        <div class="card">
+                            <h4>Transformador</h4>
+                            <p>El <strong>hesed</strong> divino tiene poder para transformar. Oseas 2:19-20 promete que Yahweh desposará a Israel "en justicia, juicio, clemencia y misericordias (<em>hesed</em>)".</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="themes-section">
+                <h2>Temas Teológicos Principales</h2>
+                <p>Oseas desarrolla temas teológicos profundos a través de su mensaje único:</p>
+                
+                <div class="theme-container">
+                    <div class="theme-item">
+                        <div class="theme-name">1. El Amor Redentor de Dios</div>
+                        <div>Yahweh como esposo fiel que busca restaurar a su pueblo infiel, demostrando un amor que persiste a pesar del rechazo.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">2. Conocimiento de Dios</div>
+                        <div>La raíz del problema de Israel es "falta de conocimiento" (4:1, 6) - no información intelectual sino relación experiencial con Yahweh.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">3. Pecado como Infidelidad</div>
+                        <div>La idolatría y desobediencia no son solo violaciones de ley sino adulterio espiritual contra el Esposo divino.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">4. Juicio como Acto de Amor</div>
+                        <div>La disciplina de Dios no es vengativa sino redentora, diseñada para llevar al arrepentimiento y restauración.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">5. Arrepentimiento Verdadero</div>
+                        <div>Oseas 6:1-3 muestra un arrepentimiento superficial, mientras Dios busca un cambio genuino del corazón (6:6).</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">6. Soberanía y Libertad Humanas</div>
+                        <div>Tensión entre la elección soberana de Dios ("Cuando Israel era niño, yo lo amé" - 11:1) y la responsabilidad humana de responder.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">7. Esperanza en el Juicio</div>
+                        <div>Incluso en medio del anuncio de destrucción, hay promesa de restauración futura y renovación del pacto.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">8. La Naturaleza de Dios</div>
+                        <div>Revelación de Yahweh como Dios santo que juzga el pecado pero cuyo corazón se conmueve por su pueblo (11:8-9).</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="key-verses">
+                <h2>Versículos Clave de Oseas</h2>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Llamado Profético</h3>
+                        <p class="scripture">"El principio de la palabra de Jehová por medio de Oseas. Dijo Jehová a Oseas: Ve, tómate una mujer fornicaria, e hijos de fornicación; porque la tierra fornica apartándose de Jehová."</p>
+                        <p class="scripture-ref">Oseas 1:2</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Amor Redentor</h3>
+                        <p class="scripture">"Por tanto, he aquí, yo la atraeré y la llevaré al desierto, y hablaré a su corazón."</p>
+                        <p class="scripture-ref">Oseas 2:14</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Verdadero Conocimiento</h3>
+                        <p class="scripture">"Mi pueblo fue destruido, porque le faltó conocimiento. Por cuanto desechaste el conocimiento, yo te echaré del sacerdocio; y porque olvidaste la ley de tu Dios, también yo me olvidaré de tus hijos."</p>
+                        <p class="scripture-ref">Oseas 4:6</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Misericordia sobre Sacrificio</h3>
+                        <p class="scripture">"Porque misericordia quiero, y no sacrificio, y conocimiento de Dios más que holocaustos."</p>
+                        <p class="scripture-ref">Oseas 6:6</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="application-section">
+                <h2>Aplicación Contemporánea</h2>
+                <p>El mensaje de Oseas tiene profunda relevancia para la iglesia hoy:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Fidelidad en la Relación con Dios</h3>
+                        <p>Oseas desafía la infidelidad espiritual - buscar satisfacción en cosas creadas en lugar del Creador.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Naturaleza del Amor Divino</h3>
+                        <p>Revela un Dios cuyo amor no es condicional al desempeño humano sino que persiste a pesar de nuestra infidelidad.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Arrepentimiento Auténtico</h3>
+                        <p>Advierte contra el arrepentimiento superficial y llama a una transformación genuina del corazón.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Esperanza en la Restauración</h3>
+                        <p>Ofrece esperanza de que ningún alejamiento es tan grande que el amor redentor de Dios no pueda alcanzar.</p>
+                    </div>
+                </div>
+                
+                <h3>Oseas en el Nuevo Testamento</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Referencia en Oseas</th>
+                            <th>Tema</th>
+                            <th>Cumplimiento en NT</th>
+                            <th>Referencia NT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1:10</td>
+                            <td>"Hijos del Dios viviente"</td>
+                            <td>Inclusión de gentiles en el pueblo de Dios</td>
+                            <td>Romanos 9:25-26</td>
+                        </tr>
+                        <tr>
+                            <td>2:23</td>
+                            <td>"Llamaré Pueblo Mío al que no era mi pueblo"</td>
+                            <td>Elección de gentiles por gracia</td>
+                            <td>1 Pedro 2:10</td>
+                        </tr>
+                        <tr>
+                            <td>6:6</td>
+                            <td>"Misericordia quiero y no sacrificio"</td>
+                            <td>Prioridad de la misericordia sobre ritual</td>
+                            <td>Mateo 9:13; 12:7</td>
+                        </tr>
+                        <tr>
+                            <td>11:1</td>
+                            <td>"De Egipto llamé a mi hijo"</td>
+                            <td>Jesús como el Hijo verdadero</td>
+                            <td>Mateo 2:15</td>
+                        </tr>
+                        <tr>
+                            <td>13:14</td>
+                            <td>"¿Dónde está, oh muerte, tu aguijón?"</td>
+                            <td>Victoria de Cristo sobre la muerte</td>
+                            <td>1 Corintios 15:55</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="chapters-list">
+                <h2>Los 14 Capítulos de Oseas</h2>
+                <p>Selecciona un capítulo para estudiar:</p>
+                
+                <div class="chapter-grid">
+                    <a href="oseas1.html" class="chapter-item">Capítulo 1</a>
+                    <a href="oseas2.html" class="chapter-item">Capítulo 2</a>
+                    <a href="oseas3.html" class="chapter-item">Capítulo 3</a>
+                    <a href="oseas4.html" class="chapter-item">Capítulo 4</a>
+                    <a href="oseas5.html" class="chapter-item">Capítulo 5</a>
+                    <a href="oseas6.html" class="chapter-item">Capítulo 6</a>
+                    <a href="oseas7.html" class="chapter-item">Capítulo 7</a>
+                    <a href="oseas8.html" class="chapter-item">Capítulo 8</a>
+                    <a href="oseas9.html" class="chapter-item">Capítulo 9</a>
+                    <a href="oseas10.html" class="chapter-item">Capítulo 10</a>
+                    <a href="oseas11.html" class="chapter-item">Capítulo 11</a>
+                    <a href="oseas12.html" class="chapter-item">Capítulo 12</a>
+                    <a href="oseas13.html" class="chapter-item">Capítulo 13</a>
+                    <a href="oseas14.html" class="chapter-item">Capítulo 14</a>
+                </div>
+            </div>
+            
+            <div class="navigation-buttons">
+                <a href="daniel.html" class="nav-button">← Daniel</a>
+                <a href="index.html" class="nav-button">🏠 Inicio</a>
+                <a href="joel.html" class="nav-button">Joel →</a>
+            </div>
+            
+            <div class="biblical-box">
+                <h3>Legado de Oseas</h3>
+                <p>Oseas ha dejado una profunda huella en la comprensión de la relación entre Dios y su pueblo:</p>
+                <ul>
+                    <li><strong>Profeta del Amor Divino</strong> - Establece la metáfora del matrimonio como marco para entender el pacto entre Dios e Israel</li>
+                    <li><strong>Revelador del Corazón de Dios</strong> - Muestra la tensión entre la santidad que exige juicio y el amor que busca restauración</li>
+                    <li><strong>Pionero de la Profecía Escritural</strong> - Es el primero de los Profetas Menores que establece patrones para el mensaje profético</li>
+                    <li><strong>Teólogo de la Gracia</strong> - Enfatiza que la iniciativa divina en la salvación precede y posibilita la respuesta humana</li>
+                    <li><strong>Modelo de Ministerio Costoso</strong> - Su vida personal se convierte en mensaje profético, demostrando el costo del ministerio</li>
+                </ul>
+                
+                <p class="scripture">"Yo seré para Israel como rocío; él florecerá como lirio, y extenderá sus raíces como el Líbano."</p>
+                <p class="scripture-ref">Oseas 14:5</p>
+                
+                <p>El libro de Oseas nos confronta con la seriedad de nuestra infidelidad espiritual mientras nos consuela con la profundidad del amor redentor de Dios. Su mensaje permanece como testimonio eterno de que el mismo Dios que juzga nuestro pecado es el Dios cuyo corazón se conmueve por nosotros, que paga el precio de nuestra redención, y que nos restaura cuando volvemos a Él con arrepentimiento genuino. Oseas nos asegura que ningún alejamiento es tan grande que el amor persistente de Dios no pueda alcanzar y sanar.</p>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 IN GOD WE TRUST</p>
+                <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
