@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mandamiento sobre las Carnes Inmundas - Estudio Bíblico</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2C5530;
+            --secondary: #4A7C59;
+            --accent: #8FBC8F;
+            --gold: #D4AF37;
+            --light: #F5F7FA;
+            --dark: #1A2F1A;
+            --text: #2C3E50;
+            --white: #FFFFFF;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: var(--white);
+            padding: 1rem 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            font-size: 2rem;
+            color: var(--gold);
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .logo-subtext {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 0.5rem 0;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--gold);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(44, 85, 48, 0.9), rgba(26, 47, 26, 0.9)), url('https://images.unsplash.com/photo-1542401886-65d6c61db217?ixlib=rb-4.0.3') center/cover;
+            color: var(--white);
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        /* Section Title */
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent);
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Bible Verse Section */
+        .bible-verse-section {
+            padding: 5rem 0;
+            background-color: var(--white);
+        }
+
+        .bible-verse {
+            background-color: var(--light);
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--accent);
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        .verse-text {
+            font-size: 1.3rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        .verse-reference {
+            font-weight: bold;
+            color: var(--primary);
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        /* Teaching Section */
+        .teaching {
+            padding: 5rem 0;
+            background-color: var(--light);
+        }
+
+        .teaching-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .teaching-point {
+            margin-bottom: 3rem;
+        }
+
+        .teaching-point h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .teaching-point h3 i {
+            color: var(--accent);
+        }
+
+        .teaching-point p {
+            margin-bottom: 1.5rem;
+        }
+
+        .teaching-details {
+            text-align: left;
+            margin-top: 1.5rem;
+        }
+
+        .teaching-details h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .teaching-details ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .teaching-details li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .teaching-details li:before {
+            content: "•";
+            color: var(--accent);
+            position: absolute;
+            left: 0;
+        }
+
+        /* Interpretation Section */
+        .interpretation {
+            padding: 5rem 0;
+            background-color: var(--white);
+        }
+
+        .interpretation-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .interpretation-card {
+            background-color: var(--light);
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+            border-top: 4px solid var(--accent);
+        }
+
+        .interpretation-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .interpretation-icon {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+
+        .interpretation-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .interpretation-card p {
+            margin-bottom: 1.5rem;
+        }
+
+        .interpretation-verse {
+            font-style: italic;
+            color: var(--secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Conclusion Section */
+        .conclusion {
+            padding: 5rem 0;
+            background-color: var(--light);
+            text-align: center;
+        }
+
+        .conclusion-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .conclusion-icon {
+            font-size: 4rem;
+            color: var(--accent);
+            margin-bottom: 2rem;
+        }
+
+        /* Warning Section */
+        .warning {
+            padding: 5rem 0;
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            margin: 2rem auto;
+            max-width: 800px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .warning h3 {
+            color: #856404;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .warning p {
+            color: #856404;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 3rem 0 1.5rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--gold);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+
+        .footer-column p {
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--gold);
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.7;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .interpretation-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-bible"></i>
+                    <div>
+                        <div class="logo-text">Estudio Bíblico</div>
+                        <div class="logo-subtext">Mandamiento sobre las Carnes Inmundas</div>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#fundamento">Fundamento Bíblico</a></li>
+                        <li><a href="#enseñanza">Enseñanza</a></li>
+                        <li><a href="#interpretacion">Interpretación</a></li>
+                        <li><a href="#conclusion">Conclusión</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-title">MANDAMIENTO SOBRE LAS CARNES INMUNDAS</div>
+            <h1>Estudio Bíblico</h1>
+            <p>Dios puso mandamiento de lo que el hombre debe y no debe comer</p>
+        </div>
+    </section>
+
+    <!-- Bible Verse Section -->
+    <section id="fundamento" class="bible-verse-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Fundamento Bíblico</h2>
+                <p>La base escritural del mandamiento sobre las carnes inmundas</p>
+            </div>
+
+            <div class="bible-verse">
+                <div class="verse-text">"De todo animal limpio te tomarás de siete en siete, macho y su hembra; mas de los animales que no son limpios, dos, macho y su hembra."</div>
+                <div class="verse-reference">Génesis 7:2</div>
+            </div>
+
+            <div class="bible-verse">
+                <div class="verse-text">"Los que se santifican y los que se purifican en los huertos, unos tras otros, los que comen carne de puerco, y abominación, y ratón; juntamente serán talados dice Jehová."</div>
+                <div class="verse-reference">Isaías 66:17</div>
+            </div>
+
+            <div class="bible-verse">
+                <div class="verse-text">"Porque yo soy Jehová vuestro Dios; vosotros por tanto os santificaréis, y seréis santos, porque yo soy santo..."</div>
+                <div class="verse-reference">Levítico 11:44</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teaching Section -->
+    <section id="enseñanza" class="teaching">
+        <div class="container">
+            <div class="section-title">
+                <h2>Enseñanza Bíblica</h2>
+                <p>Lo que las Escrituras enseñan sobre las carnes inmundas</p>
+            </div>
+
+            <div class="teaching-content">
+                <div class="teaching-point">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Advertencia sobre las carnes inmundas</h3>
+                    
+                    <p>La Biblia es clara en señalar que los que comen carnes inmundas serán talados:</p>
+                    
+                    <div class="bible-verse">
+                        <div class="verse-text">"Los que comen carne de puerco, y abominación, y ratón; juntamente serán talados dice Jehová."</div>
+                        <div class="verse-reference">Isaías 66:17</div>
+                    </div>
+
+                    <div class="teaching-details">
+                        <h4>Sacrificio en vano:</h4>
+                        <ul>
+                            <li>Los que no conocen este mandamiento hacen sacrificio a Dios en vano</li>
+                            <li>Isaías 65:3-5 muestra el rechazo de Dios a quienes comen lo inmundo</li>
+                            <li>La santidad requiere obediencia en todas las áreas de la vida</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="teaching-point">
+                    <h3>📖</i> La oración y la Palabra de Dios</h3>
+                    
+                    <p>La oración santifica lo que Dios autoriza por Su Palabra:</p>
+                    
+                    <div class="bible-verse">
+                        <div class="verse-text">"Porque todo lo que Dios crió es bueno, y nada hay que desechar, tomándose con hacimiento de gracias: Porque por la palabra de Dios y por la oración es santificado."</div>
+                        <div class="verse-reference">1 Timoteo 4:4-5</div>
+                    </div>
+
+                    <div class="teaching-details">
+                        <h4>Principio importante:</h4>
+                        <ul>
+                            <li>Primero es la Palabra de Dios que nos ordena lo que podemos comer</li>
+                            <li>Después es la oración que santifica lo autorizado</li>
+                            <li>La oración no puede hacer limpio lo que Dios declaró inmundo</li>
+                            <li>Job 14:4: "¿Quién hará limpio de inmundo? Nadie."</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="teaching-point">
+                    <h3><i class="fas fa-cross"></i> El propósito de Cristo</h3>
+                    
+                    <p>Cristo vino a limpiar al hombre de sus pecados, no a los animales:</p>
+                    
+                    <div class="bible-verse">
+                        <div class="verse-text">"He aquí el Cordero de Dios, que quita el pecado del mundo."</div>
+                        <div class="verse-reference">Juan 1:29</div>
+                    </div>
+
+                    <div class="teaching-details">
+                        <h4>Separación de lo inmundo:</h4>
+                        <ul>
+                            <li>Dios prohíbe tener contacto con lo inmundo (2 Corintios 6:17)</li>
+                            <li>La santificación incluye separarse de lo que Dios declara inmundo</li>
+                            <li>La obediencia en lo físico refleja obediencia en lo espiritual</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Warning Section -->
+    <div class="container">
+        <div class="warning">
+            <h3><i class="fas fa-bible"></i> Importante</h3>
+            <p>La oración no puede hacer lo que Dios hizo inmundo, limpio. Job 14:4: "¿Quién hará limpio de inmundo? Nadie."</p>
+            <p>Cristo vino a limpiar al hombre de sus pecados, no a los animales (Juan 1:29).</p>
+        </div>
+    </div>
+
+    <!-- Interpretation Section -->
+    <section id="interpretacion" class="interpretation">
+        <div class="container">
+            <div class="section-title">
+                <h2>Interpretación Correcta</h2>
+                <p>Entendiendo los pasajes comúnmente malinterpretados</p>
+            </div>
+
+            <div class="interpretation-content">
+                <div class="interpretation-card">
+                    <div class="interpretation-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3>1 Corintios 10:25</h3>
+                    <p>"De todo lo que se vende en la carnicería, comed, sin preguntar nada por causa de la conciencia."</p>
+                    
+                    <div class="teaching-details">
+                        <h4>Contexto correcto:</h4>
+                        <ul>
+                            <li>Se refiere a carnicerías judías que solo vendían carnes limpias</li>
+                            <li>El contexto inmediato habla de Israel (1 Corintios 10:18)</li>
+                            <li>También habla de comida sacrificada a ídolos (1 Corintios 10:19-21)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="interpretation-card">
+                    <div class="interpretation-icon">
+                        🚰</i>
+                    </div>
+                    <h3>Marcos 7</h3>
+                    <p>Jesús y la tradición de lavarse las manos</p>
+                    
+                    <div class="teaching-details">
+                        <h4>Enseñanza correcta:</h4>
+                        <ul>
+                            <li>Los fariseos cuestionaban por comer sin lavarse las manos</li>
+                            <li>Era una tradición humana, no mandamiento de Dios</li>
+                            <li>Los fariseos eran judíos y no comían animales inmundos</li>
+                            <li>Jesús no se refería a carnes inmundas sino a tradiciones humanas</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="interpretation-card">
+                    <div class="interpretation-icon">
+                        <i class="fas fa-vision"></i>
+                    </div>
+                    <h3>Hechos 10</h3>
+                    <p>La visión de Pedro y Cornelio</p>
+                    
+                    <div class="teaching-details">
+                        <h4>Interpretación correcta:</h4>
+                        <ul>
+                            <li>Pedro no interpretó que los animales eran limpios</li>
+                            <li>Se quedó pensando qué sería la visión (Hechos 10:17)</li>
+                            <li>Dios le mostró que a ningún hombre llame común o inmundo</li>
+                            <li>La visión era sobre los gentiles, no sobre los animales</li>
+                            <li>Pedro abrió las puertas a los gentiles (Hechos 10:28)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; text-align: center;">
+                <div class="bible-verse">
+                    <div class="verse-text">"Y estando Pedro dudando dentro de sí qué sería la visión que había visto..."</div>
+                    <div class="verse-reference">Hechos 10:17</div>
+                </div>
+
+                <div class="bible-verse">
+                    <div class="verse-text">"Y les dijo: Vosotros sabéis que es abominable varón judío juntarse o allegarse a extranjero; mas me ha mostrado Dios que a ningún hombre llame común o inmundo."</div>
+                    <div class="verse-reference">Hechos 10:28</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusion Section -->
+    <section id="conclusion" class="conclusion">
+        <div class="container">
+            <div class="conclusion-content">
+                <div class="conclusion-icon">
+                    📎</i>
+                </div>
+                <h2>Conclusión</h2>
+                <p>La Biblia es clara en mantener la distinción entre animales limpios e inmundos:</p>
+                
+                <div style="text-align: left; max-width: 600px; margin: 2rem auto;">
+                    <ul style="list-style-type: none;">
+                        <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                            <i class="fas fa-check" style="position: absolute; left: 0; color: var(--accent);"></i>
+                            <strong>Dios estableció mandamientos claros</strong> sobre lo que debemos comer
+                        </li>
+                        <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                            <i class="fas fa-check" style="position: absolute; left: 0; color: var(--accent);"></i>
+                            <strong>La santificación</strong> incluye obedecer en el área alimenticia
+                        </li>
+                        <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                            <i class="fas fa-check" style="position: absolute; left: 0; color: var(--accent);"></i>
+                            <strong>Los pasajes malinterpretados</strong> tienen explicación contextual correcta
+                        </li>
+                        <li style="margin-bottom: 1rem; padding-left: 1.5rem; position: relative;">
+                            <i class="fas fa-check" style="position: absolute; left: 0; color: var(--accent);"></i>
+                            <strong>La visión de Pedro</strong> era sobre aceptar a los gentiles, no sobre cambiar las leyes alimentarias
+                        </li>
+                    </ul>
+                </div>
+
+                <p>Como pueblo de Dios, debemos mantener la santidad en todas las áreas de nuestra vida, incluyendo nuestra alimentación, obedeciendo los mandamientos que Dios estableció para nuestro bien.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Estudio Bíblico</h3>
+                    <p>Mandamiento sobre las Carnes Inmundas. Un análisis de las enseñanzas bíblicas sobre alimentación y santidad.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#fundamento">Fundamento Bíblico</a></li>
+                        <li><a href="#enseñanza">Enseñanza</a></li>
+                        <li><a href="#interpretacion">Interpretación</a></li>
+                        <li><a href="#conclusion">Conclusión</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Información</h3>
+                    
+                    <p><i class="fas fa-bible"></i> Estudio basado en las Escrituras</p>
+                    <p><i class="fas fa-dove"></i> Enseñanzas para la santificación</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 IN GOD WE TRUST. Todos los derechos reservados. | Estudio Bíblico</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId.startsWith('#')) {
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe content elements
+        document.querySelectorAll('.bible-verse, .teaching-point, .interpretation-card').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(item);
+        });
+    </script>
+</body>
+</html>
