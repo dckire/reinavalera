@@ -1,93 +1,906 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-BYMJS3X12P');
-</script>
-	<meta name="google-site-verification" content="KWZFlVdcT-h9cB1Qnj0LgSLJP-J-NS4bgjhnQG_c140" />
-<title>Sofonias</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body {
-font-family: Arial, sans-serif;
-background-color: #f0f0f0;
-margin: 0;
-padding: 0;
-text-align: center;
-}
-.container {
-max-width: 800px;
-margin: 40px auto;
-padding: 20px;
-background-color: #fff;
-border: 1px solid #ddd;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.contenido {
-  background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20230523/pngtree-bible-gif-hd-wallpaper-image_2683159.jpg');
-padding: 20px;
-margin: 40px auto;
-width: 80%;
-background-color: #fff;
-border: 1px solid #ddd;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-h1 {
-color: #333;
-}
-ul {
-list-style: none;
-padding: 0;
-margin: 0;
-}
-li {
-margin-bottom: 10px;
-}
-a {
-text-decoration: none;
-color: #fff;
-}
-a:hover {
-color: #23527c;
-}
-img {
-max-width: 100%;
-height: auto;
-margin: 20px auto;
-border-radius: 10px;
-}
-   button {
-    background-color: #337ab7;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  button:hover {
-    background-color: #23527c;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofonías - Profeta del Día de Jehová</title>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BYMJS3X12P');
+    </script>
+    <meta name="google-site-verification" content="KWZFlVdcT-h9cB1Qnj0LgSLJP-J-NS4bgjhnQG_c140" />
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #4B0082 0%, #8A2BE2 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(to right, #4B0082, #8A2BE2);
+            color: white;
+            padding: 50px 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        header::before {
+            content: "⚡";
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 3rem;
+            opacity: 0.7;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.4rem;
+            font-weight: 300;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .intro-section {
+            background-color: #f8f9fa;
+            border-left: 5px solid #4B0082;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #4B0082;
+            margin-bottom: 25px;
+            font-size: 2.2rem;
+            border-bottom: 3px solid #8A2BE2;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #4B0082;
+            margin: 30px 0 20px;
+            font-size: 1.7rem;
+        }
+        
+        h4 {
+            color: #4B0082;
+            margin: 20px 0 15px;
+            font-size: 1.3rem;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .highlight {
+            background-color: #f3e5f5;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #4B0082;
+        }
+        
+        .biblical-box {
+            background-color: #f3e5f5;
+            border: 2px solid #4B0082;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+        }
+        
+        .scripture {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #4B0082;
+            margin: 15px 0;
+            padding-left: 20px;
+            border-left: 4px solid #4B0082;
+        }
+        
+        .scripture-ref {
+            font-weight: bold;
+            text-align: right;
+            color: #8A2BE2;
+            margin-top: 10px;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #4B0082;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card h3 {
+            color: #4B0082;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+        
+        .card ul {
+            padding-left: 20px;
+        }
+        
+        .card li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .structure-section {
+            background-color: #f5f5f5;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .historical-section {
+            background-color: #e3f2fd;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border-left: 5px solid #1976d2;
+        }
+        
+        .themes-section {
+            background-color: #e8f5e9;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .prophecies-section {
+            background-color: #fff8e1;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .key-verses {
+            background-color: #f3e5f5;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border: 2px solid #7b1fa2;
+        }
+        
+        .application-section {
+            background-color: #fff3e0;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .chapters-list {
+            background-color: #fafafa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .chapter-item {
+            background: linear-gradient(135deg, #4B0082, #8A2BE2);
+            color: white;
+            padding: 15px 10px;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: block;
+        }
+        
+        .chapter-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #8A2BE2, #4B0082);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(to right, #4B0082, #8A2BE2);
+            color: #FFF8DC;
+            font-size: 1.1rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+            border: 3px solid #8A2BE2;
+        }
+        
+        .navigation-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .nav-button {
+            background: linear-gradient(135deg, #4B0082, #8A2BE2);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-button:hover {
+            background: linear-gradient(135deg, #8A2BE2, #4B0082);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .theme-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .theme-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #4B0082;
+        }
+        
+        .theme-name {
+            font-weight: bold;
+            color: #4B0082;
+            margin-bottom: 5px;
+        }
+        
+        .timeline-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .timeline-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+            border-top: 4px solid #4B0082;
+        }
+        
+        .timeline-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .timeline-title {
+            font-weight: bold;
+            color: #4B0082;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .timeline-date {
+            font-weight: bold;
+            color: #8A2BE2;
+            margin-bottom: 5px;
+        }
+        
+        .definition-box {
+            background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border-left: 5px solid #4B0082;
+        }
+        
+        .definition-term {
+            font-weight: bold;
+            color: #4B0082;
+            margin-bottom: 5px;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .comparison-table th, .comparison-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .comparison-table th {
+            background-color: #4B0082;
+            color: white;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .comparison-table tr:hover {
+            background-color: #f3e5f5;
+        }
+        
+        .historical-periods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .period-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid #4B0082;
+        }
+        
+        .period-title {
+            font-weight: bold;
+            color: #4B0082;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .period-dates {
+            font-weight: bold;
+            color: #8A2BE2;
+            margin-bottom: 10px;
+        }
+        
+        .visions-box {
+            background: linear-gradient(135deg, #f0f0f0, #e8e8e8);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+            border-left: 5px solid #4B0082;
+        }
+        
+        .empires-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .empire-item {
+            background: #f3e5f5;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        .apocalyptic-box {
+            background: linear-gradient(135deg, #e8f4f8, #d4e7f0);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+            border-left: 5px solid #4B0082;
+        }
+        
+        .judgment-container {
+            background: linear-gradient(135deg, #fff0f5, #ffe4e1);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+            border-left: 5px solid #4B0082;
+        }
+        
+        .judgment-item {
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 8px;
+            background: white;
+        }
+        
+        .judgment-target {
+            font-weight: bold;
+            color: #4B0082;
+            margin-bottom: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .chapter-grid {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            }
+            
+            .navigation-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .theme-container,
+            .empires-container,
+            .timeline-container,
+            .historical-periods {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            header {
+                padding: 30px 20px;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-<div class="contenido">
-<h1>Sofonias</h1>
-<ul>
-<li><a href="sofonias1.html">Capítulo 1</a></li>
-<li><a href="sofonias2.html">Capítulo 2</a></li>
-<li><a href="sofonias3.html">Capítulo 3</a></li>
-</ul>
-<button onclick="window.history.back()">Volver</button>
-</div>
-</div>
+    <div class="container">
+        <header>
+            <h1>Sofonías</h1>
+            <p class="subtitle">Profeta del Día de Jehová y la Restauración Final</p>
+        </header>
+        
+        <div class="content">
+            <div class="intro-section">
+                <h2>Introducción al Libro de Sofonías</h2>
+                <p>El libro de <span class="highlight">Sofonías</span> (en hebreo: "Jehová ha escondido" o "Jehová protege") es un texto profético que anuncia el juicio universal del "Día de Jehová". Con un lenguaje vívido y dramático, Sofonías proclama el juicio divino sobre Judá, las naciones vecinas, y finalmente sobre todo el mundo, culminando con la promesa de restauración para un remanente fiel.</p>
+                
+                <div class="biblical-box">
+                    <p class="scripture">"El gran día de Jehová está cerca, cerca y muy próximo; es amarga la voz del día de Jehová; gritará allí el valiente."</p>
+                    <p class="scripture-ref">Sofonías 1:14 (Reina-Valera 1569-1602)</p>
+                </div>
+                
+                <div class="definition-box">
+                    <div class="definition-term">Contexto Histórico de Sofonías</div>
+                    <p><strong>Fechas:</strong> Aproximadamente 640-609 a.C., durante el reinado de Josías (640-609 a.C.).</p>
+                    <p><strong>Autor:</strong> Sofonías, bisnieto del rey Ezequías, de sangre real.</p>
+                    <p><strong>Ubicación:</strong> Jerusalén, Judá, en los años previos a la reforma religiosa de Josías.</p>
+                </div>
+            </div>
+            
+            <div class="historical-section">
+                <h2>Contexto Histórico: El Reinado de Josías</h2>
+                <p>Sofonías profetizó durante un período crucial de reforma espiritual en Judá:</p>
+                
+                <div class="historical-periods">
+                    <div class="period-card">
+                        <div class="period-title">Contexto Político</div>
+                        <div class="period-dates">640-609 a.C.</div>
+                        <ul>
+                            <li>Declive del imperio asirio después de Asurbanipal</li>
+                            <li>Oportunidad para reformas independientes en Judá</li>
+                            <li>Ascenso de Babilonia como nueva amenaza</li>
+                            <li>Egipto recupera influencia en la región</li>
+                            <li>Judá disfruta de independencia relativa</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="period-card">
+                        <div class="period-title">Contexto Religioso</div>
+                        <div class="period-dates">Reinado de Josías</div>
+                        <ul>
+                            <li>Gran apostasía bajo Manasés y Amón</li>
+                            <li>Idolatría generalizada y sincretismo religioso</li>
+                            <li>Influencia de cultos asirios (ejército del cielo)</li>
+                            <li>Sacrificios humanos en el valle de Hinom</li>
+                            <li>Corrupción del sacerdocio y profetas falsos</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="period-card">
+                        <div class="period-title">Reforma de Josías</div>
+                        <div class="period-dates">628-609 a.C.</div>
+                        <ul>
+                            <li>Hallazgo del libro de la ley (622 a.C.)</li>
+                            <li>Destrucción de lugares de idolatría</li>
+                            <li>Celebración de la Pascua</li>
+                            <li>Renovación del pacto</li>
+                            <li>Profetas contemporáneos: Jeremías, Nahum, Sofonías</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>El "Día de Jehová" en Sofonías</h3>
+                <div class="empires-container">
+                    <div class="empire-item">Juicio Universal</div>
+                    <div class="empire-item">Día de Ira y Angustia</div>
+                    <div class="empire-item">Día de Tinieblas y Oscuridad</div>
+                    <div class="empire-item">Día de Trompeta y Grito de Guerra</div>
+                    <div class="empire-item">Día de Cólera y Destrucción</div>
+                    <div class="empire-item">Día de Esperanza y Restauración</div>
+                </div>
+                
+                <div class="definition-box">
+                    <div class="definition-term">La Genealogía Real de Sofonías</div>
+                    <p>Sofonías es único entre los profetas menores por incluir una genealogía de cuatro generaciones, remontándose hasta Ezequías, probablemente el rey de Judá. Esta conexión real le daba autoridad especial para confrontar la corrupción en la corte y el templo, y puede explicar su acceso a los círculos de poder durante las reformas de Josías.</p>
+                </div>
+            </div>
+            
+            <div class="structure-section">
+                <h2>Estructura del Libro</h2>
+                <p>Sofonías presenta una estructura clásica de juicio y restauración con alcance universal:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>I. Juicio sobre Judá (1:1-2:3)</h3>
+                        <ul>
+                            <li><strong>Enfoque:</strong> Juicio inminente sobre Jerusalén</li>
+                            <li>Anuncio del juicio universal</li>
+                            <li>Idolatría específica en Judá</li>
+                            <li>Descripción del Día de Jehová</li>
+                            <li>Llamado al arrepentimiento</li>
+                            <li>Posibilidad de ser escondidos en el día de la ira</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>II. Juicio sobre las Naciones (2:4-15)</h3>
+                        <ul>
+                            <li><strong>Enfoque:</strong> Oráculos contra pueblos vecinos</li>
+                            <li>Filistea (v.4-7)</li>
+                            <li>Moab y Amón (v.8-11)</li>
+                            <li>Etiopía (v.12)</li>
+                            <li>Asiria/Nínive (v.13-15)</li>
+                            <li>Patrón geográfico: oeste, este, sur, norte</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>III. Juicio y Restauración de Jerusalén (3:1-20)</h3>
+                        <ul>
+                            <li><strong>Enfoque:</strong> Esperanza después del juicio</li>
+                            <li>Acusación contra Jerusalén</li>
+                            <li>Juicio purificador</li>
+                            <li>Conversión de las naciones</li>
+                            <li>Restauración del remanente</li>
+                            <li>Promesa de gozo y restauración final</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>Juicios Específicos en Sofonías</h3>
+                <div class="judgment-container">
+                    <div class="judgment-item">
+                        <div class="judgment-target">Idólatras en Jerusalén (1:4-6)</div>
+                        <p>Destrucción de los restos de Baal, sacerdotes idólatras, y los que adoran al ejército del cielo</p>
+                    </div>
+                    
+                    <div class="judgment-item">
+                        <div class="judgment-target">Príncipes y Hijos del Rey (1:8)</div>
+                        <p>Juicio sobre la familia real y oficiales que visten vestidos extranjeros (símbolo de alianzas paganas)</p>
+                    </div>
+                    
+                    <div class="judgment-item">
+                        <div class="judgment-target">Comerciantes y Acumuladores (1:10-13)</div>
+                        <p>Juicio sobre la clase mercantil que confía en sus riquezas y piensa que Dios no actúa</p>
+                    </div>
+                    
+                    <div class="judgment-item">
+                        <div class="judgment-target">Naciones Vecinas (2:4-15)</div>
+                        <p>Filistea, Moab, Amón, Etiopía y Asiria - juicio por su arrogancia y maltrato al pueblo de Dios</p>
+                    </div>
+                    
+                    <div class="judgment-item">
+                        <div class="judgment-target">Líderes Corruptos de Jerusalén (3:1-4)</div>
+                        <p>Príncipes, jueces, profetas y sacerdotes - corruptos, violentos y profanadores del santuario</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="prophecies-section">
+                <h2>Profecías y Enseñanzas Principales</h2>
+                <p>Sofonías contiene algunas de las descripciones más vívidas del Día de Jehová en el Antiguo Testamento:</p>
+                
+                <div class="timeline-container">
+                    <div class="timeline-card">
+                        <div class="timeline-title">El Día de Jehová</div>
+                        <div class="timeline-date">1:7-18</div>
+                        <p>Descripción detallada del día del juicio divino como día de ira, angustia, destrucción, tinieblas y oscuridad, trompeta y alarma. Sofonías usa lenguaje cósmico para describir la intervención final de Dios.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-title">Búsqueda de Justicia</div>
+                        <div class="timeline-date">2:3</div>
+                        <p>"Buscad a Jehová todos los humildes de la tierra, los que pusisteis por obra su juicio; buscad justicia, buscad mansedumbre; quizás seréis guardados en el día del enojo de Jehová." Llamado al arrepentimiento genuino.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-title">Conversión de las Naciones</div>
+                        <div class="timeline-date">3:9</div>
+                        <p>"En aquel tiempo devolveré yo a los pueblos pureza de labios, para que todos invoquen el nombre de Jehová, para que le sirvan de común consentimiento." Profecía de la conversión universal al culto verdadero.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-title">Restauración del Remanente</div>
+                        <div class="timeline-date">3:11-13</div>
+                        <p>Dios dejará en medio de Jerusalén un pueblo humilde y pobre que confía en Jehová, no hará iniquidad ni dirá mentira, y descansará sin que nadie lo espante.</p>
+                    </div>
+                </div>
+                
+                <h3>El Día de Jehová: Características</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th>Referencia</th>
+                            <th>Descripción</th>
+                            <th>Aplicación</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Día de Juicio</td>
+                            <td>1:7-8</td>
+                            <td>Sacrificio preparado, visitación a príncipes</td>
+                            <td>Juicio sobre liderazgo corrupto</td>
+                        </tr>
+                        <tr>
+                            <td>Día de Ira</td>
+                            <td>1:15,18</td>
+                            <td>Ira, angustia, quebrantamiento, oscuridad</td>
+                            <td>Respuesta divina al pecado persistente</td>
+                        </tr>
+                        <tr>
+                            <td>Día de Destrucción</td>
+                            <td>1:2-3</td>
+                            <td>Consumirá todas las cosas de la tierra</td>
+                            <td>Juicio universal y completo</td>
+                        </tr>
+                        <tr>
+                            <td>Día de Alarma</td>
+                            <td>1:16</td>
+                            <td>Día de trompeta y grito de guerra</td>
+                            <td>Llamado de atención final de Dios</td>
+                        </tr>
+                        <tr>
+                            <td>Día de Angustia</td>
+                            <td>1:17</td>
+                            <td>Angustia sobre los pecadores</td>
+                            <td>Consecuencia inevitable del pecado</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                
+                    </div>
+                </div>
+            </div>
+            
+            <div class="themes-section">
+                <h2>Temas Principales</h2>
+                <p>Sofonías desarrolla temas cruciales sobre el juicio y la misericordia divina:</p>
+                
+                <div class="theme-container">
+                    <div class="theme-item">
+                        <div class="theme-name">1. El Día de Jehová</div>
+                        <div>Concepto central que representa la intervención final de Dios en juicio y salvación.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">2. Juicio Universal</div>
+                        <div>Dios juzga a todas las naciones, no solo a Israel, por su pecado y arrogancia.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">3. El Remanente Fiel</div>
+                        <div>Dios siempre preserva un grupo fiel que busca justicia y humildad.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">4. Restauración Escatológica</div>
+                        <div>Después del juicio viene la restauración completa del pueblo de Dios.</div>
+                    </div>
+                    
+                    <div class="theme-item">
+                        <div class="theme-name">6. Arrepentimiento y Humildad</div>
+                        <div>La respuesta apropiada al anuncio del juicio es buscar a Dios con humildad.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">7. Alegría en la Salvación</div>
+                        <div>Dios se regocija sobre su pueblo y restaura su fortuna con gozo.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">8. Conversión de las Naciones</div>
+                        <div>Las naciones vendrán a adorar al Dios verdadero después del juicio.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="key-verses">
+                <h2>Versículos Clave de Sofonías</h2>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Anuncio del Juicio </h3>
+                        <p class="scripture">"Destruiré por completo todas las cosas sobre la faz de la tierra, dice Jehová. Destruiré los hombres y las bestias; destruiré las aves del cielo y los peces del mar, y haré cortar a los impíos; y raeré a los hombres de sobre la faz de la tierra, dice Jehová."</p>
+                        <p class="scripture-ref">Sofonías 1:2-3</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Llamado al Arrepentimiento</h3>
+                        <p class="scripture">"Buscad a Jehová todos los humildes de la tierra, los que pusisteis por obra su juicio; buscad justicia, buscad mansedumbre; quizás seréis guardados en el día del enojo de Jehová."</p>
+                        <p class="scripture-ref">Sofonías 2:3</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Promesa de Restauración</h3>
+                        <p class="scripture">"En aquel tiempo yo os traeré, en aquel tiempo os reuniré yo; pues os pondré para nombre y para alabanza entre todos los pueblos de la tierra, cuando levante vuestro cautiverio delante de vuestros ojos, dice Jehová."</p>
+                        <p class="scripture-ref">Sofonías 3:20</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Gozo en la Salvación</h3>
+                        <p class="scripture">"Jehová está en medio de ti, poderoso, él salvará; se gozará sobre ti con alegría, callará de amor, se regocijará sobre ti con cánticos."</p>
+                        <p class="scripture-ref">Sofonías 3:17</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+                </div>
+                
+                <h3>Sofonías en el Nuevo Testamento</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Referencia en Sofonías</th>
+                            <th>Tema</th>
+                            <th>Desarrollo en NT</th>
+                            <th>Significado Escatológico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1:14-18</td>
+                            <td>El Día de Jehová</td>
+                            <td>El día del Señor (1 Tes. 5:2; 2 Ped. 3:10)</td>
+                            <td>Juicio final y segunda venida de Cristo</td>
+                        </tr>
+                        <tr>
+                            <td>3:9</td>
+                            <td>Pureza de labios</td>
+                            <td>Lenguas en Pentecostés (Hech. 2)</td>
+                            <td>Reversión de Babel y adoración universal</td>
+                        </tr>
+                        <tr>
+                            <td>3:12-13</td>
+                            <td>Remanente humilde</td>
+                            <td>Bienaventuranzas (Mat. 5:3-12)</td>
+                            <td>Características del pueblo del reino</td>
+                        </tr>
+                        <tr>
+                            <td>3:17</td>
+                            <td>Gozo de Dios sobre su pueblo</td>
+                            <td>Parábola del hijo pródigo (Luc. 15)</td>
+                            <td>Gozo divino por la restauración de pecadores</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="chapters-list">
+                <h2>Los 3 Capítulos de Sofonías</h2>
+                <p>Selecciona un capítulo para estudiar:</p>
+                
+                <div class="chapter-grid">
+                    <a href="sofonias1.html" class="chapter-item">Capítulo 1</a>
+                    <a href="sofonias2.html" class="chapter-item">Capítulo 2</a>
+                    <a href="sofonias3.html" class="chapter-item">Capítulo 3</a>
+                </div>
+            </div>
+            
+            <div class="navigation-buttons">
+                <a href="habacuc.html" class="nav-button">← Habacuc</a>
+                <a href="index.html" class="nav-button">🏠 Inicio</a>
+                <a href="hageo.html" class="nav-button">Hageo →</a>
+            </div>
+            
+            <div class="biblical-box">
+                <h3>Legado de Sofonías</h3>
+                <p>Sofonías ha dejado un impacto significativo en la escatología bíblica y la comprensión del juicio divino:</p>
+                <ul>
+                    <li><strong>Profeta del Día de Jehová</strong> - Proporciona la descripción más completa y vívida del día del juicio en los profetas menores</li>
+                    <li><strong>Teólogo de la Universalidad</strong> - Desarrolla la doctrina del juico universal que incluye a todas las naciones</li>
+                    <li><strong>Profeta de la Esperanza</strong> - Equilibra el anuncio de juicio con promesas gloriosas de restauración</li>
+                    <li><strong>Pionero del Universalismo Escatológico</strong> - Anuncia la conversión final de todas las naciones al culto verdadero</li>
+                    <li><strong>Voz de la Humildad</strong> - Enfatiza la humildad y búsqueda de justicia como respuesta apropiada a Dios</li>
+                </ul>
+                
+                <p class="scripture">"Canta, hija de Sion; da voces de júbilo, Israel; gózate y regocíjate de todo corazón, hija de Jerusalén."</p>
+                <p class="scripture-ref">Sofonías 3:14</p>
+                
+                <p>El libro de Sofonías nos enseña que el Dios santo debe juzgar el pecado, pero su juicio siempre está equilibrado con su misericordia. A través del anuncio del Día de Jehová, Sofonías nos llama al arrepentimiento urgente mientras ofrece la esperanza segura de que Dios preservará a los humildes y restaurará la fortuna de su pueblo. Su mensaje final es de gozo y celebración por la salvación que Dios provee.</p>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 IN GOD WE TRUST</p>
+                <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
