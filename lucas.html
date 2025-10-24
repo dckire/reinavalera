@@ -1,104 +1,952 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-<title>Lucas</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body {
-font-family: Arial, sans-serif;
-background-color: #f0f0f0;
-margin: 0;
-padding: 0;
-text-align: center;
-}
-.container {
-max-width: 800px;
-margin: 40px auto;
-padding: 20px;
-background-color: #fff;
-border: 1px solid #ddd;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.contenido {
-  background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20230523/pngtree-bible-gif-hd-wallpaper-image_2683159.jpg');
-padding: 20px;
-margin: 40px auto;
-width: 80%;
-background-color: #fff;
-border: 1px solid #ddd;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-h1 {
-color: #333;
-}
-ul {
-list-style: none;
-padding: 0;
-margin: 0;
-}
-li {
-margin-bottom: 10px;
-}
-a {
-text-decoration: none;
-color: #fff;
-}
-a:hover {
-color: #23527c;
-}
-img {
-max-width: 100%;
-height: auto;
-margin: 20px auto;
-border-radius: 10px;
-}
-   button {
-    background-color: #337ab7;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  button:hover {
-    background-color: #23527c;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas - El Evangelio del Salvador Universal</title>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BYMJS3X12P');
+    </script>
+    <meta name="google-site-verification" content="KWZFlVdcT-h9cB1Qnj0LgSLJP-J-NS4bgjhnQG_c140" />
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #4B0082 0%, #8A2BE2 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(to right, #4B0082, #8A2BE2);
+            color: white;
+            padding: 50px 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        header::before {
+            content: "🌍";
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 3rem;
+            opacity: 0.7;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.4rem;
+            font-weight: 300;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .intro-section {
+            background-color: #f8f9fa;
+            border-left: 5px solid #4B0082;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #4B0082;
+            margin-bottom: 25px;
+            font-size: 2.2rem;
+            border-bottom: 3px solid #8A2BE2;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #4B0082;
+            margin: 30px 0 20px;
+            font-size: 1.7rem;
+        }
+        
+        h4 {
+            color: #4B0082;
+            margin: 20px 0 15px;
+            font-size: 1.3rem;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .highlight {
+            background-color: #f3e5f5;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #4B0082;
+        }
+        
+        .biblical-box {
+            background-color: #f3e5f5;
+            border: 2px solid #4B0082;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+        }
+        
+        .scripture {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #4B0082;
+            margin: 15px 0;
+            padding-left: 20px;
+            border-left: 4px solid #4B0082;
+        }
+        
+        .scripture-ref {
+            font-weight: bold;
+            text-align: right;
+            color: #8A2BE2;
+            margin-top: 10px;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #4B0082;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card h3 {
+            color: #4B0082;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+        
+        .card ul {
+            padding-left: 20px;
+        }
+        
+        .card li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .structure-section {
+            background-color: #f5f5f5;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .historical-section {
+            background-color: #f3e5f5;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border-left: 5px solid #4B0082;
+        }
+        
+        .themes-section {
+            background-color: #e8f5e9;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .prophecies-section {
+            background-color: #fff8e1;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .key-verses {
+            background-color: #f3e5f5;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border: 2px solid #4B0082;
+        }
+        
+        .universal-section {
+            background: linear-gradient(135deg, #f9f9f9, #f0f0f0);
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border: 2px solid #4B0082;
+        }
+        
+        .chapters-list {
+            background-color: #fafafa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .chapter-item {
+            background: linear-gradient(135deg, #4B0082, #8A2BE2);
+            color: white;
+            padding: 15px 10px;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: block;
+        }
+        
+        .chapter-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #8A2BE2, #4B0082);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(to right, #4B0082, #8A2BE2);
+            color: #FFF8DC;
+            font-size: 1.1rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+            border: 3px solid #8A2BE2;
+        }
+        
+        .navigation-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .nav-button {
+            background: linear-gradient(135deg, #4B0082, #8A2BE2);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-button:hover {
+            background: linear-gradient(135deg, #8A2BE2, #4B0082);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .theme-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .theme-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #4B0082;
+        }
+        
+        .theme-name {
+            font-weight: bold;
+            color: #4B0082;
+            margin-bottom: 5px;
+        }
+        
+        .timeline-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .timeline-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+            border-top: 4px solid #4B0082;
+        }
+        
+        .timeline-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .timeline-title {
+            font-weight: bold;
+            color: #4B0082;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .timeline-date {
+            font-weight: bold;
+            color: #8A2BE2;
+            margin-bottom: 5px;
+        }
+        
+        .definition-box {
+            background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border-left: 5px solid #4B0082;
+        }
+        
+        .definition-term {
+            font-weight: bold;
+            color: #4B0082;
+            margin-bottom: 5px;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .comparison-table th, .comparison-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .comparison-table th {
+            background-color: #4B0082;
+            color: white;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .comparison-table tr:hover {
+            background-color: #f3e5f5;
+        }
+        
+        .historical-periods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .period-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid #4B0082;
+        }
+        
+        .period-title {
+            font-weight: bold;
+            color: #4B0082;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .period-dates {
+            font-weight: bold;
+            color: #8A2BE2;
+            margin-bottom: 10px;
+        }
+        
+        .empires-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .empire-item {
+            background: #f3e5f5;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        .universal-groups-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .group-item {
+            background: linear-gradient(135deg, #4B0082, #8A2BE2);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+        }
+        
+        .parables-container {
+            background: linear-gradient(135deg, #fff0f5, #ffe4e1);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+            border-left: 5px solid #4B0082;
+        }
+        
+        .parable-item {
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 8px;
+            background: white;
+            border-left: 4px solid #8A2BE2;
+        }
+        
+        .parable-title {
+            font-weight: bold;
+            color: #4B0082;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .chapter-grid {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            }
+            
+            .navigation-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .theme-container,
+            .empires-container,
+            .timeline-container,
+            .historical-periods,
+            .universal-groups-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            header {
+                padding: 30px 20px;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-<div class="contenido">
-<h1>Lucas</h1>
-<ul>
-<li><a href="lucas1.html">Capítulo 1</a></li>
-<li><a href="lucas2.html">Capítulo 2</a></li>
-<li><a href="lucas3.html">Capítulo 3</a></li>
-  <li><a href="lucas4.html">Capítulo 4</a></li>
-<li><a href="lucas5.html">Capítulo 5</a></li>
-<li><a href="lucas6.html">Capítulo 6</a></li>
-  <li><a href="lucas7.html">Capítulo 7</a></li>
-<li><a href="lucas8.html">Capítulo 8</a></li>
-<li><a href="lucas9.html">Capítulo 9</a></li>
-<li><a href="lucas10.html">Capítulo 10</a></li>
-<li><a href="lucas11.html">Capítulo 11</a></li>
-<li><a href="lucas12.html">Capítulo 12</a></li>
-  <li><a href="lucas13.html">Capítulo 13</a></li>
-<li><a href="lucas14.html">Capítulo 14</a></li>
-<li><a href="lucas15.html">Capítulo 15</a></li>
-  <li><a href="lucas16.html">Capítulo 16</a></li>
-<li><a href="lucas17.html">Capítulo 17</a></li>
-<li><a href="lucas18.html">Capítulo 18</a></li>
-  <li><a href="lucas19.html">Capítulo 19</a></li>
-<li><a href="lucas20.html">Capítulo 20</a></li>
-<li><a href="lucas21.html">Capítulo 21</a></li>
-  <li><a href="lucas22.html">Capítulo 22</a></li>
-<li><a href="lucas23.html">Capítulo 23</a></li>
-<li><a href="lucas24.html">Capítulo 24</a></li>
-</ul>
-<button onclick="window.history.back()">Volver</button>
-</div>
-</div>
+    <div class="container">
+        <header>
+            <h1>Lucas</h1>
+            <p class="subtitle">El Evangelio del Salvador Universal y Compasivo</p>
+        </header>
+        
+        <div class="content">
+            <div class="intro-section">
+                <h2>Introducción al Evangelio de Lucas</h2>
+                <p>El Evangelio de <span class="highlight">Lucas</span> es el más largo y literario de los cuatro evangelios, caracterizado por su énfasis en la universalidad de la salvación, la compasión de Jesús y la atención a los marginados. Escrito por Lucas, el médico gentil compañero de Pablo, este evangelio presenta a Jesús como el Salvador de toda la humanidad, con especial atención a mujeres, pobres, samaritanos y pecadores.</p>
+                
+                <div class="biblical-box">
+                    <p class="scripture">"Porque el Hijo del Hombre vino a buscar y a salvar lo que se había perdido."</p>
+                    <p class="scripture-ref">Lucas 19:10 (Reina-Valera 1569-1602)</p>
+                </div>
+                
+                <div class="definition-box">
+                    <div class="definition-term">Contexto Histórico del Evangelio de Lucas</div>
+                    <p><strong>Fechas:</strong> Aproximadamente 60-85 d.C., posiblemente después de Marcos.</p>
+                    <p><strong>Autor:</strong> Lucas, médico gentil, historiador cuidadoso y compañero de Pablo.</p>
+                    <p><strong>Destinatarios:</strong> Teófilo y comunidad gentil, enfatizando salvación universal.</p>
+                </div>
+            </div>
+            
+            <div class="historical-section">
+                <h2>Contexto Histórico: Mundo Greco-Romano</h2>
+                <p>Lucas escribe como historiador cuidadoso para una audiencia gentil en el mundo greco-romano:</p>
+                
+                <div class="historical-periods">
+                    <div class="period-card">
+                        <div class="period-title">Contexto Cultural</div>
+                        <div class="period-dates">Siglo I d.C.</div>
+                        <ul>
+                            <li>Mundo helenístico con diversidad cultural</li>
+                            <li>Educación griega y valores romanos</li>
+                            <li>Preocupación por orden histórico</li>
+                            <li>Interés por biografías ejemplares</li>
+                            <li>Audiencia educada y cosmopolita</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="period-card">
+                        <div class="period-title">Contexto Religioso</div>
+                        <div class="period-dates">Expansión cristiana</div>
+                        <ul>
+                            <li>Cristianismo expandiéndose a gentiles</li>
+                            <li>Debates sobre inclusión de no judíos</li>
+                            <li>Necesidad de legitimidad histórica</li>
+                            <li>Diálogo con filosofías griegas</li>
+                            <li>Universalización del mensaje</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="period-card">
+                        <div class="period-title">Contexto Literario</div>
+                        <div class="period-dates">Estilo histórico</div>
+                        <ul>
+                            <li>Prólogo formal al estilo griego</li>
+                            <li>Investigación cuidadosa de fuentes</li>
+                            <li>Orden cronológico y temático</li>
+                            <li>Lenguaje culto y elaborado</li>
+                            <li>Secuencia con Hechos de los Apóstoles</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>Características Únicas de Lucas</h3>
+                <div class="empires-container">
+                    <div class="empire-item">Universalidad</div>
+                    <div class="empire-item">Compasión</div>
+                    <div class="empire-item">Atención a Mujeres</div>
+                    <div class="empire-item">Oración</div>
+                    <div class="empire-item">Espíritu Santo</div>
+                    <div class="empire-item">Alegría</div>
+                </div>
+                
+                <div class="definition-box">
+                    <div class="definition-term">Propósito Teológico de Lucas</div>
+                    <p>Lucas presenta a Jesús como el Salvador universal cuyo mensaje de salvación se extiende a todos los pueblos -judíos, samaritanos y gentiles- con especial atención a los marginados sociales. Como historiador cuidadoso, establece la historicidad de los eventos salvíficos, mientras como teólogo destaca el gozo de la salvación, la obra del Espíritu Santo y la oración como elementos centrales de la vida cristiana.</p>
+                </div>
+            </div>
+            
+            <div class="universal-section">
+                <h2>El Evangelio Universal: Inclusividad en Lucas</h2>
+                <p>Lucas destaca por su enfoque inclusivo, mostrando cómo la salvación alcanza a todos los grupos sociales:</p>
+                
+                <h3>Grupos Incluidos en el Evangelio de Lucas</h3>
+                <div class="universal-groups-container">
+                    <div class="group-item">Mujeres</div>
+                    <div class="group-item">Pobres</div>
+                    <div class="group-item">Samaritanos</div>
+                    <div class="group-item">Recaudadores</div>
+                    <div class="group-item">Enfermos</div>
+                    <div class="group-item">Pecadores</div>
+                    <div class="group-item">Gentiles</div>
+                    <div class="group-item">Marginados</div>
+                </div>
+                
+                <div class="biblical-box">
+                    <h4>Mujeres en el Evangelio de Lucas</h4>
+                    <p>Lucas da especial atención a las mujeres, presentándolas como discípulas activas:</p>
+                    <ul>
+                        <li><strong>Elizabet y María</strong> - Protagonistas del nacimiento de Juan y Jesús</li>
+                        <li><strong>Ana la profetisa</strong> - Reconociendo al Mesías en el templo</li>
+                        <li><strong>Viuda de Naín</strong> - Objeto de la compasión de Jesús</li>
+                        <li><strong>Mujer pecadora</strong> - Ejemplo de amor y perdón</li>
+                        <li><strong>Marta y María</strong> - Modelos de servicio y devoción</li>
+                        <li><strong>Mujeres que siguen a Jesús</strong> - Apoyando su ministerio</li>
+                    </ul>
+                </div>
+                
+                <div class="parables-container">
+                    <h4>Parábolas Exclusivas de Lucas</h4>
+                    <p>Lucas incluye parábolas únicas que destacan la misericordia y la salvación universal:</p>
+                    
+                    <div class="parable-item">
+                        <div class="parable-title">El Buen Samaritano (10:25-37)</div>
+                        <p>Un samaritano, despreciado por los judíos, muestra la verdadera compasión que define al prójimo.</p>
+                    </div>
+                    
+                    <div class="parable-item">
+                        <div class="parable-title">El Hijo Pródigo (15:11-32)</div>
+                        <p>El amor del padre que recibe al hijo pecador ilustra el gozo celestial por un pecador que se arrepiente.</p>
+                    </div>
+                    
+                    <div class="parable-item">
+                        <div class="parable-title">El Rico y Lázaro (16:19-31)</div>
+                        <p>Contraste entre el rico indiferente y el pobre piadoso, con advertencia sobre el juicio eterno.</p>
+                    </div>
+                    
+                    <div class="parable-item">
+                        <div class="parable-title">El Fariseo y el Publicano (18:9-14)</div>
+                        <p>La humildad del recaudador es justificada, no la autosuficiencia del fariseo.</p>
+                    </div>
+                    
+                    <div class="parable-item">
+                        <div class="parable-title">El Mayordomo Infiel (16:1-13)</div>
+                        <p>Usar los recursos terrenales con vista a la eternidad.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="structure-section">
+                <h2>Estructura del Evangelio</h2>
+                <p>Lucas organiza su evangelio geográficamente, siguiendo el viaje de Jesús desde Galilea hasta Jerusalén:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>I. Prólogo e Infancia (1:1-2:52)</h3>
+                        <ul>
+                            <li>Prólogo histórico</li>
+                            <li>Anuncios de nacimientos</li>
+                            <li>Nacimiento de Juan y Jesús</li>
+                            <li>Presentación en el templo</li>
+                            <li>Jesús en el templo a los 12 años</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>II. Preparación (3:1-4:13)</h3>
+                        <ul>
+                            <li>Ministerio de Juan Bautista</li>
+                            <li>Genealogía de Jesús</li>
+                            <li>Bautismo y tentación</li>
+                            <li>Comienzo del ministerio</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>III. Ministerio en Galilea (4:14-9:50)</h3>
+                        <ul>
+                            <li>Rechazo en Nazaret</li>
+                            <li>Milagros y enseñanzas</li>
+                            <li>Llamamiento de discípulos</li>
+                            <li>Sermón del Llano</li>
+                            <li>Transfiguración</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>IV. Viaje a Jerusalén (9:51-19:27)</h3>
+                        <ul>
+                            <li>Gran sección del viaje</li>
+                            <li>Enseñanzas sobre el discipulado</li>
+                            <li>Parábolas del Reino</li>
+                            <li>Encuentros con marginados</li>
+                            <li>Instrucciones a discípulos</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>V. Ministerio en Jerusalén (19:28-21:38)</h3>
+                        <ul>
+                            <li>Entrada triunfal</li>
+                            <li>Purificación del templo</li>
+                            <li>Enseñanza en el templo</li>
+                            <li>Conflictos con líderes</li>
+                            <li>Discurso escatológico</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>VI. Pasión y Resurrección (22:1-24:53)</h3>
+                        <ul>
+                            <li>Última Cena</li>
+                            <li>Oración en Getsemaní</li>
+                            <li>Arresto y juicios</li>
+                            <li>Crucifixión y muerte</li>
+                            <li>Resurrección y apariciones</li>
+                            <li>Ascensión</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="prophecies-section">
+                <h2>Encuentros Transformadores en Lucas</h2>
+                <p>Lucas registra encuentros únicos que muestran la compasión y poder transformador de Jesús:</p>
+                
+                <div class="timeline-container">
+                    <div class="timeline-card">
+                        <div class="timeline-title">Zaqueo el Recaudador</div>
+                        <div class="timeline-date">19:1-10</div>
+                        <p>Jesús busca a Zaqueo, un recaudador rico y despreciado, llevándolo al arrepentimiento y restitución.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-title">La Mujer Pecadora</div>
+                        <div class="timeline-date">7:36-50</div>
+                        <p>Una mujer conocida como pecadora unge los pies de Jesús, mostrando amor como respuesta al perdón.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-title">El Ladrón</div>
+                        <div class="timeline-date">23:39-43</div>
+                        <p>En la cruz, Jesús promete el paraíso a un ladron arrepentido, mostrando salvación hasta el último momento.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-title">Los Discípulos de Emaús</div>
+                        <div class="timeline-date">24:13-35</div>
+                        <p>Jesús resucitado se revela a dos discípulos desanimados, explicando las Escrituras y partiendo el pan.</p>
+                    </div>
+                </div>
+                
+                <h3>Milagros de Sanidad en Lucas</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Milagro</th>
+                            <th>Persona</th>
+                            <th>Referencia</th>
+                            <th>Significado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sanidad de la Suegra</td>
+                            <td>Suegra de Pedro</td>
+                            <td>4:38-39</td>
+                            <td>Compasión hacia mujeres</td>
+                        </tr>
+                        <tr>
+                            <td>Pesca Milagrosa</td>
+                            <td>Pedro y socios</td>
+                            <td>5:1-11</td>
+                            <td>Llamamiento al discipulado</td>
+                        </tr>
+                        <tr>
+                            <td>Resurrección del Joven</td>
+                            <td>Hijo de la viuda</td>
+                            <td>7:11-17</td>
+                            <td>Compasión por viudas</td>
+                        </tr>
+                        <tr>
+                            <td>Mujer Encorvada</td>
+                            <td>Mujer en sinagoga</td>
+                            <td>13:10-17</td>
+                            <td>Liberación en día de reposo</td>
+                        </tr>
+                        <tr>
+                            <td>Diez Leprosos</td>
+                            <td>Leprosos samaritanos</td>
+                            <td>17:11-19</td>
+                            <td>Gratitud y fe del extranjero</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="themes-section">
+                <h2>Temas Principales</h2>
+                <p>Lucas desarrolla temas únicos sobre la salvación universal y la vida del discipulado:</p>
+                
+                <div class="theme-container">
+                    <div class="theme-item">
+                        <div class="theme-name">1. Salvación Universal</div>
+                        <div>Jesús viene a salvar a todos los pueblos sin distinción.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">2. Gozo y Alegría</div>
+                        <div>La salvación produce gozo que permea todo el evangelio.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">3. El Espíritu Santo</div>
+                        <div>Enfatiza la obra del Espíritu en la vida de Jesús y la iglesia.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">4. Oración</div>
+                        <div>Jesús como modelo de vida de oración constante.</div>
+                    </div>
+                    
+                    <div class="theme-item">
+                        <div class="theme-name">5. Compasión por Marginados</div>
+                        <div>Atención especial a pobres, enfermos, mujeres y pecadores.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">6. Discipulado Radical</div>
+                        <div>Llamado a renuncia total y seguimiento incondicional.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">7. Historia de la Salvación</div>
+                        <div>Conecta el ministerio de Jesús con el plan salvífico de Dios.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">8. Alabanza y Adoración</div>
+                        <div>Numerosos himnos y expresiones de alabanza a Dios.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="key-verses">
+                <h2>Versículos Clave de Lucas</h2>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Misión del Mesías</h3>
+                        <p class="scripture">"El Espíritu del Señor está sobre mí, por cuanto me ha ungido para dar buenas nuevas a los pobres; me ha enviado a sanar a los quebrantados de corazón; a pregonar libertad a los cautivos, y vista a los ciegos; a poner en libertad a los oprimidos."</p>
+                        <p class="scripture-ref">Lucas 4:18</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Propósito de la Venida</h3>
+                        <p class="scripture">"Porque el Hijo del Hombre vino a buscar y a salvar lo que se había perdido."</p>
+                        <p class="scripture-ref">Lucas 19:10</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Gozo en el Cielo</h3>
+                        <p class="scripture">"Os digo que así habrá más gozo en el cielo por un pecador que se arrepiente, que por noventa y nueve justos que no necesitan de arrepentimiento."</p>
+                        <p class="scripture-ref">Lucas 15:7</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Gran Mandamiento</h3>
+                        <p class="scripture">"Amarás al Señor tu Dios con todo tu corazón, y con toda tu alma, y con todas tus fuerzas, y con toda tu mente; y a tu prójimo como a ti mismo."</p>
+                        <p class="scripture-ref">Lucas 10:27</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chapters-list">
+                <h2>Los 24 Capítulos de Lucas</h2>
+                <p>Selecciona un capítulo para estudiar:</p>
+                
+                <div class="chapter-grid">
+                    <a href="lucas1.html" class="chapter-item">Capítulo 1</a>
+                    <a href="lucas2.html" class="chapter-item">Capítulo 2</a>
+                    <a href="lucas3.html" class="chapter-item">Capítulo 3</a>
+                    <a href="lucas4.html" class="chapter-item">Capítulo 4</a>
+                    <a href="lucas5.html" class="chapter-item">Capítulo 5</a>
+                    <a href="lucas6.html" class="chapter-item">Capítulo 6</a>
+                    <a href="lucas7.html" class="chapter-item">Capítulo 7</a>
+                    <a href="lucas8.html" class="chapter-item">Capítulo 8</a>
+                    <a href="lucas9.html" class="chapter-item">Capítulo 9</a>
+                    <a href="lucas10.html" class="chapter-item">Capítulo 10</a>
+                    <a href="lucas11.html" class="chapter-item">Capítulo 11</a>
+                    <a href="lucas12.html" class="chapter-item">Capítulo 12</a>
+                    <a href="lucas13.html" class="chapter-item">Capítulo 13</a>
+                    <a href="lucas14.html" class="chapter-item">Capítulo 14</a>
+                    <a href="lucas15.html" class="chapter-item">Capítulo 15</a>
+                    <a href="lucas16.html" class="chapter-item">Capítulo 16</a>
+                    <a href="lucas17.html" class="chapter-item">Capítulo 17</a>
+                    <a href="lucas18.html" class="chapter-item">Capítulo 18</a>
+                    <a href="lucas19.html" class="chapter-item">Capítulo 19</a>
+                    <a href="lucas20.html" class="chapter-item">Capítulo 20</a>
+                    <a href="lucas21.html" class="chapter-item">Capítulo 21</a>
+                    <a href="lucas22.html" class="chapter-item">Capítulo 22</a>
+                    <a href="lucas23.html" class="chapter-item">Capítulo 23</a>
+                    <a href="lucas24.html" class="chapter-item">Capítulo 24</a>
+                </div>
+            </div>
+            
+            <div class="navigation-buttons">
+                <a href="marcos.html" class="nav-button">← Marcos</a>
+                <a href="index.html" class="nav-button">🏠 Inicio</a>
+                <a href="juan.html" class="nav-button">Juan →</a>
+            </div>
+            
+            <div class="biblical-box">
+                <h3>Legado del Evangelio de Lucas</h3>
+                <p>Lucas ha dejado un impacto profundo en la comprensión de Jesús como Salvador universal:</p>
+                <ul>
+                    <li><strong>Evangelio de la Universalidad</strong> - Demuestra que la salvación es para todos sin distinción</li>
+                    <strong>Evangelio de la Compasión</strong> - Presenta a Jesús con profunda sensibilidad hacia el sufrimiento humano</li>
+                    <li><strong>Evangelio Histórico</strong> - Proporciona marco histórico confiable para los eventos salvíficos</li>
+                    <li><strong>Evangelio del Espíritu Santo</strong> - Destaca la obra del Espíritu en la vida y ministerio de Jesús</li>
+                    <li><strong>Evangelio de la Oración</strong> - Muestra a Jesús como modelo de dependencia en la oración</li>
+                </ul>
+                
+                <p class="scripture">"Pero éstas se han escrito para que creáis que Jesús es el Cristo, el Hijo de Dios, y para que creyendo, tengáis vida en su nombre."</p>
+                <p class="scripture-ref">Juan 20:31</p>
+                
+                <p>El Evangelio de Lucas nos presenta a Jesús como el Salvador compasivo que busca a los perdidos, se identifica con los marginados y ofrece salvación a toda la humanidad. Su atención cuidadosa a los detalles históricos, su énfasis en la obra del Espíritu Santo, y su sensibilidad hacia los excluidos hacen de este evangelio un testimonio único del amor universal de Dios manifestado en Jesucristo.</p>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 IN GOD WE TRUST</p>
+                <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
