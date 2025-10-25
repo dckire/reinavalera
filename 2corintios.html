@@ -1,93 +1,965 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-<title>2 Corintios</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body {
-font-family: Arial, sans-serif;
-background-color: #f0f0f0;
-margin: 0;
-padding: 0;
-text-align: center;
-}
-.container {
-max-width: 800px;
-margin: 40px auto;
-padding: 20px;
-background-color: #fff;
-border: 1px solid #ddd;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.contenido {
-  background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20230523/pngtree-bible-gif-hd-wallpaper-image_2683159.jpg');
-padding: 20px;
-margin: 40px auto;
-width: 80%;
-background-color: #fff;
-border: 1px solid #ddd;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-h1 {
-color: #333;
-}
-ul {
-list-style: none;
-padding: 0;
-margin: 0;
-}
-li {
-margin-bottom: 10px;
-}
-a {
-text-decoration: none;
-color: #fff;
-}
-a:hover {
-color: #23527c;
-}
-img {
-max-width: 100%;
-height: auto;
-margin: 20px auto;
-border-radius: 10px;
-}
-   button {
-    background-color: #337ab7;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  button:hover {
-    background-color: #23527c;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 Corintios - La Epístola del Consuelo y Ministerio Apostólico</title>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BYMJS3X12P');
+    </script>
+    <meta name="google-site-verification" content="KWZFlVdcT-h9cB1Qnj0LgSLJP-J-NS4bgjhnQG_c140" />
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #2F4F4F 0%, #708090 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(to right, #2F4F4F, #708090);
+            color: white;
+            padding: 50px 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        header::before {
+            content: "🇮🇱";
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 3rem;
+            opacity: 0.7;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.4rem;
+            font-weight: 300;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .intro-section {
+            background-color: #f8f9fa;
+            border-left: 5px solid #2F4F4F;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #2F4F4F;
+            margin-bottom: 25px;
+            font-size: 2.2rem;
+            border-bottom: 3px solid #708090;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #2F4F4F;
+            margin: 30px 0 20px;
+            font-size: 1.7rem;
+        }
+        
+        h4 {
+            color: #2F4F4F;
+            margin: 20px 0 15px;
+            font-size: 1.3rem;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .highlight {
+            background-color: #e6e6e6;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #2F4F4F;
+        }
+        
+        .biblical-box {
+            background-color: #e6e6e6;
+            border: 2px solid #2F4F4F;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+        }
+        
+        .scripture {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #2F4F4F;
+            margin: 15px 0;
+            padding-left: 20px;
+            border-left: 4px solid #2F4F4F;
+        }
+        
+        .scripture-ref {
+            font-weight: bold;
+            text-align: right;
+            color: #708090;
+            margin-top: 10px;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #2F4F4F;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card h3 {
+            color: #2F4F4F;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+        
+        .card ul {
+            padding-left: 20px;
+        }
+        
+        .card li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .structure-section {
+            background-color: #f5f5f5;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .historical-section {
+            background-color: #e6e6e6;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border-left: 5px solid #2F4F4F;
+        }
+        
+        .themes-section {
+            background-color: #e8f5e9;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .prophecies-section {
+            background-color: #fff8e1;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .key-verses {
+            background-color: #e6e6e6;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border: 2px solid #2F4F4F;
+        }
+        
+        .problems-section {
+            background: linear-gradient(135deg, #f9f9f9, #f0f0f0);
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border: 2px solid #2F4F4F;
+        }
+        
+        .chapters-list {
+            background-color: #fafafa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .chapter-item {
+            background: linear-gradient(135deg, #2F4F4F, #708090);
+            color: white;
+            padding: 15px 10px;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: block;
+        }
+        
+        .chapter-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #708090, #2F4F4F);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(to right, #2F4F4F, #708090);
+            color: #FFF8DC;
+            font-size: 1.1rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+            border: 3px solid #708090;
+        }
+        
+        .navigation-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .nav-button {
+            background: linear-gradient(135deg, #2F4F4F, #708090);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-button:hover {
+            background: linear-gradient(135deg, #708090, #2F4F4F);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .theme-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .theme-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #2F4F4F;
+        }
+        
+        .theme-name {
+            font-weight: bold;
+            color: #2F4F4F;
+            margin-bottom: 5px;
+        }
+        
+        .timeline-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .timeline-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+            border-top: 4px solid #2F4F4F;
+        }
+        
+        .timeline-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .timeline-title {
+            font-weight: bold;
+            color: #2F4F4F;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .timeline-date {
+            font-weight: bold;
+            color: #708090;
+            margin-bottom: 5px;
+        }
+        
+        .definition-box {
+            background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border-left: 5px solid #2F4F4F;
+        }
+        
+        .definition-term {
+            font-weight: bold;
+            color: #2F4F4F;
+            margin-bottom: 5px;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .comparison-table th, .comparison-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .comparison-table th {
+            background-color: #2F4F4F;
+            color: white;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .comparison-table tr:hover {
+            background-color: #e6e6e6;
+        }
+        
+        .historical-periods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .period-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid #2F4F4F;
+        }
+        
+        .period-title {
+            font-weight: bold;
+            color: #2F4F4F;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .period-dates {
+            font-weight: bold;
+            color: #708090;
+            margin-bottom: 10px;
+        }
+        
+        .empires-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .empire-item {
+            background: #e6e6e6;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        .problems-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .problem-item {
+            background: linear-gradient(135deg, #2F4F4F, #708090);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+        }
+        
+        .solutions-container {
+            background: linear-gradient(135deg, #fff0f5, #ffe4e1);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+            border-left: 5px solid #2F4F4F;
+        }
+        
+        .solution-item {
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 8px;
+            background: white;
+            border-left: 4px solid #708090;
+        }
+        
+        .solution-title {
+            font-weight: bold;
+            color: #2F4F4F;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        
+        .outline-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            margin: 20px 0;
+        }
+        
+        .outline-section {
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 8px;
+            background: #e6e6e6;
+        }
+        
+        .section-title {
+            font-weight: bold;
+            color: #2F4F4F;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .chapter-grid {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            }
+            
+            .navigation-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .theme-container,
+            .empires-container,
+            .timeline-container,
+            .historical-periods,
+            .problems-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            header {
+                padding: 30px 20px;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-<div class="contenido">
-<h1>2 Corintios</h1>
-<ul>
-<li><a href="2corintios1.html">Capítulo 1</a></li>
-<li><a href="2corintios2.html">Capítulo 2</a></li>
-<li><a href="2corintios3.html">Capítulo 3</a></li>
-  <li><a href="2corintios4.html">Capítulo 4</a></li>
-<li><a href="2corintios5.html">Capítulo 5</a></li>
-<li><a href="2corintios6.html">Capítulo 6</a></li>
-  <li><a href="2corintios7.html">Capítulo 7</a></li>
-<li><a href="2corintios8.html">Capítulo 8</a></li>
-<li><a href="2corintios9.html">Capítulo 9</a></li>
-<li><a href="2corintios10.html">Capítulo 10</a></li>
-<li><a href="2corintios11.html">Capítulo 11</a></li>
-<li><a href="2corintios12.html">Capítulo 12</a></li>
-  <li><a href="2corintios13.html">Capítulo 13</a></li>
-</ul>
-<button onclick="window.history.back()">Volver</button>
-</div>
-</div>
+    <div class="container">
+        <header>
+            <h1>2 Corintios</h1>
+            <p class="subtitle">La Epístola del Consuelo y Ministerio Apostólico</p>
+        </header>
+        
+        <div class="content">
+            <div class="intro-section">
+                <h2>Introducción a 2 Corintios</h2>
+                <p>La Segunda Epístola a los <span class="highlight">Corintios</span> es una carta profundamente personal y emocional donde Pablo defiende su ministerio apostólico y expresa su amor pastoral por la iglesia. Escrita después de una visita dolorosa y una carta severa, esta epístola revela el corazón de un apóstol sufriente que encuentra consuelo en Cristo y llama a la reconciliación.</p>
+                
+                <div class="biblical-box">
+                    <p class="scripture">"Bendito sea el Dios y Padre de nuestro Señor Jesucristo, Padre de misericordias y Dios de toda consolación, el cual nos consuela en todas nuestras tribulaciones, para que podamos también nosotros consolar a los que están en cualquier tribulación, por medio de la consolación con que nosotros somos consolados por Dios."</p>
+                    <p class="scripture-ref">2 Corintios 1:3-4 (Reina-Valera 1569-1602)</p>
+                </div>
+                
+                <div class="definition-box">
+                    <div class="definition-term">Contexto Histórico de 2 Corintios</div>
+                    <p><strong>Fechas:</strong> Aproximadamente 56-57 d.C., escrita desde Macedonia.</p>
+                    <p><strong>Autor:</strong> Pablo, apóstol a los gentiles.</p>
+                    <p><strong>Destinatarios:</strong> Iglesia en Corinto, después de una crisis en su relación con Pablo.</p>
+                </div>
+            </div>
+            
+            <div class="historical-section">
+                <h2>Contexto Histórico: La Situación Después de 1 Corintios</h2>
+                <p>Pablo escribe esta carta después de eventos significativos que afectaron su relación con la iglesia de Corinto:</p>
+                
+                <div class="historical-periods">
+                    <div class="period-card">
+                        <div class="period-title">Cronología de Eventos</div>
+                        <div class="period-dates">Entre 1 y 2 Corintios</div>
+                        <ul>
+                            <li>Pablo escribe 1 Corintios desde Éfeso</li>
+                            <li>Realiza una "visita dolorosa" a Corinto</li>
+                            <li>Escribe una "carta severa" (perdida) con lágrimas</li>
+                            <li>Encuentra a Tito en Macedonia quien trae buenas noticias</li>
+                            <li>Escribe 2 Corintios desde Macedonia</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="period-card">
+                        <div class="period-title">Situación en Corinto</div>
+                        <div class="period-dates">Crisis y Reconciliación</div>
+                        <ul>
+                            <li>Algunos se habían arrepentido después de la carta severa</li>
+                            <li>Falsos apóstoles habían llegado cuestionando a Pablo</li>
+                            <li>Pablo había sufrido una grave persecución en Éfeso</li>
+                            <li>La ofrenda para Jerusalén necesitaba ser completada</li>
+                            <li>La relación entre Pablo y la iglesia estaba en reparación</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="period-card">
+                        <div class="period-title">Propósito de la Carta</div>
+                        <div class="period-dates">Múltiples Objetivos</div>
+                        <ul>
+                            <li>Expresar alegría por el arrepentimiento de la mayoría</li>
+                            <li>Defender su apostolado contra falsos maestros</li>
+                            <li>Exhortar a completar la ofrenda para Jerusalén</li>
+                            <li>Preparar el camino para su tercera visita</li>
+                            <li>Restaurar completamente la relación pastoral</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>Características Únicas de 2 Corintios</h3>
+                <div class="empires-container">
+                    <div class="empire-item">Personal</div>
+                    <div class="empire-item">Defensiva</div>
+                    <div class="empire-item">Consoladora</div>
+                    <div class="empire-item">Pastoral</div>
+                    <div class="empire-item">Apologética</div>
+                    <div class="empire-item">Práctica</div>
+                </div>
+                
+                <div class="definition-box">
+                    <div class="definition-term">Propósito de 2 Corintios</div>
+                    <p>Pablo escribe para expresar su gozo por el arrepentimiento de los corintios, defender su apostolado contra falsos maestros, explicar el propósito del sufrimiento en el ministerio, exhortar a la generosidad en la ofrenda, y preparar su próxima visita. La carta revela la profundidad del corazón pastoral de Pablo y su dependencia total de Cristo en el ministerio.</p>
+                </div>
+            </div>
+            
+            <div class="problems-section">
+                <h2>Defensa del Ministerio Apostólico</h2>
+                <p>2 Corintios contiene la defensa más extensa de Pablo sobre su apostolado y ministerio:</p>
+                
+                <h3>Ataques Contra Pablo en Corinto</h3>
+                <div class="problems-container">
+                    <div class="problem-item">Debilidad Física</div>
+                    <div class="problem-item">Falta de Elocuencia</div>
+                    <div class="problem-item">Cambio de Planes</div>
+                    <div class="problem-item">Falta de Credenciales</div>
+                    <div class="problem-item">Sufrimientos</div>
+                    <div class="problem-item">Autoridad Questionada</div>
+                </div>
+                
+                <div class="biblical-box">
+                    <h4>Respuesta de Pablo a las Acusaciones</h4>
+                    <p>Pablo responde a cada acusación con argumentos teológicos y experiencias personales:</p>
+                    <ul>
+                        <li><strong>Debilidad física</strong> - Muestra el poder de Cristo en la debilidad (12:9-10)</li>
+                        <li><strong>Falta de elocuencia</strong> - Prefiere la sencillez del evangelio (11:6)</li>
+                        <li><strong>Cambio de planes</strong> - Actuó por amor para no venir con tristeza (1:23-2:4)</li>
+                        <li><strong>Falta de credenciales</strong> - Los corintios mismos son su credencial (3:1-3)</li>
+                        <li><strong>Sufrimientos</strong> - Son parte de la identificación con Cristo (4:7-12)</li>
+                        <li><strong>Autoridad cuestionada</strong> - Su autoridad es para edificación, no destrucción (10:8; 13:10)</li>
+                    </ul>
+                </div>
+                
+                <div class="solutions-container">
+                    <h4>Paradojas del Ministerio Según Pablo</h4>
+                    <p>Pablo presenta una teología del ministerio basada en paradojas divinas:</p>
+                    
+                    <div class="solution-item">
+                        <div class="solution-title">Consuelo en el Sufrimiento (1:3-11)</div>
+                        <p>Dios nos consuela en todas nuestras tribulaciones para que podamos consolar a otros.</p>
+                    </div>
+                    
+                    <div class="solution-item">
+                        <div class="solution-title">Tesoro en Vasos de Barro (4:7-18)</div>
+                        <p>El poder extraordinario de Dios se manifiesta en nuestra fragilidad humana.</p>
+                    </div>
+                    
+                    <div class="solution-item">
+                        <div class="solution-title">Fuerza en la Debilidad (12:7-10)</div>
+                        <p>Cuando soy débil, entonces soy fuerte, porque el poder de Cristo se perfecciona en la debilidad.</p>
+                    </div>
+                    
+                    <div class="solution-item">
+                        <div class="solution-title">Riqueza en la Pobreza (8:9)</div>
+                        <p>Cristo, siendo rico, se hizo pobre para enriquecernos con su pobreza.</p>
+                    </div>
+                    
+                    <div class="solution-item">
+                        <div class="solution-title">Vida en la Muerte (4:10-12)</div>
+                        <p>Llevamos en el cuerpo la muerte de Jesús para que la vida de Jesús se manifieste.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="structure-section">
+                <h2>Estructura de la Epístola</h2>
+                <p>2 Corintios alterna entre consuelo pastoral y defensa apostólica:</p>
+                
+                <div class="outline-container">
+                    <h3>Bosquejo de 2 Corintios</h3>
+                    
+                    <div class="outline-section">
+                        <div class="section-title">I. El Consuelo de Dios en el Sufrimiento (1:1-2:13)</div>
+                        <p>Saludo, acción de gracias por el consuelo divino, explicación sobre la visita dolorosa y la carta severa.</p>
+                    </div>
+                    
+                    <div class="outline-section">
+                        <div class="section-title">II. La Gloria del Nuevo Pacto (2:14-7:4)</div>
+                        <p>Naturaleza del ministerio del nuevo pacto, tesoro en vasos de barro, ministerio de reconciliación, exhortación a la santidad.</p>
+                    </div>
+                    
+                    <div class="outline-section">
+                        <div class="section-title">III. La Ofrenda para los Santos (8:1-9:15)</div>
+                        <p>Ejemplo de las iglesias de Macedonia, exhortación a completar la ofrenda, principios de la generosidad cristiana.</p>
+                    </div>
+                    
+                    <div class="outline-section">
+                        <div class="section-title">IV. Defensa del Apostolado de Pablo (10:1-13:10)</div>
+                        <p>Defensa de su autoridad, necedad de gloriarse, visión y aguijón en la carne, preparación para la tercera visita.</p>
+                    </div>
+                    
+                    <div class="outline-section">
+                        <div class="section-title">V. Conclusión (13:11-14)</div>
+                        <p>Exhortaciones finales, saludos y bendición.</p>
+                    </div>
+                </div>
+                
+                <h3>Secciones Doctrinales Importantes</h3>
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Ministerio del Nuevo Pacto (3:1-18)</h3>
+                        <ul>
+                            <li>Cartas de Cristo escritas en corazones</li>
+                            <li>Ministerio del Espíritu vs ministerio de muerte</li>
+                            <li>Vel quitado en Cristo</li>
+                            <li>Transformación de gloria en gloria</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Ministerio de Reconciliación (5:11-21)</h3>
+                        <ul>
+                            <li>Amor de Cristo nos constriñe</li>
+                            <li>Nueva creación en Cristo</li>
+                            <li>Dios nos reconcilió consigo mismo</li>
+                            <li>Embajadores de Cristo</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Principios de Ofrenda (8:1-9:15)</h3>
+                        <ul>
+                            <li>Gracia de la generosidad</li>
+                            <li>Jesucristo se hizo pobre</li>
+                            <li>Dar según lo que se tiene</li>
+                            <li>Dios ama al dador alegre</li>
+                        </ul>
+                    </card>
+                    
+                    <div class="card">
+                        <h3>Visiones y Debilidades (12:1-10)</h3>
+                        <ul>
+                            <li>Visón del tercer cielo</li>
+                            <li>Aguijón en la carne</li>
+                            <li>Gracia suficiente</li>
+                            <li>Poder perfeccionado en debilidad</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="prophecies-section">
+                <h2>Enseñanzas Prácticas y Principios</h2>
+                <p>2 Corintios establece principios eternos para el ministerio y la vida cristiana:</p>
+                
+                <div class="timeline-container">
+                    <div class="timeline-card">
+                        <div class="timeline-title">Consuelo en el Sufrimiento</div>
+                        <div class="timeline-date">1:3-7</div>
+                        <p>Dios nos consuela para que podamos consolar a otros con el mismo consuelo.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-title">Tesoro en Vasos de Barro</div>
+                        <div class="timeline-date">4:7</div>
+                        <p>Tenemos este tesoro en vasos de barro para que la excelencia del poder sea de Dios.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-title">Nueva Creación</div>
+                        <div class="timeline-date">5:17</div>
+                        <p>De modo que si alguno está en Cristo, nueva criatura es; las cosas viejas pasaron.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-title">Gracia de la Generosidad</div>
+                        <div class="timeline-date">8:9</div>
+                        <p>Ya conocéis la gracia de nuestro Señor Jesucristo, que por amor a vosotros se hizo pobre.</p>
+                    </div>
+                </div>
+                
+                <h3>Contrastes Entre el Viejo y Nuevo Pacto</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Aspecto</th>
+                            <th>Viejo Pacto</th>
+                            <th>Nuevo Pacto</th>
+                            <th>Referencia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Naturaleza</td>
+                            <td>Letra que mata</td>
+                            <td>Espíritu que da vida</td>
+                            <td>3:6</td>
+                        </tr>
+                        <tr>
+                            <td>Ministerio</td>
+                            <td>Ministerio de muerte</td>
+                            <td>Ministerio del Espíritu</td>
+                            <td>3:7-8</td>
+                        </tr>
+                        <tr>
+                            <td>Gloria</td>
+                            <td>Gloria pasajera</td>
+                            <td>Gloria permanente</td>
+                            <td>3:11</td>
+                        </tr>
+                        <tr>
+                            <td>Velos</td>
+                            <td>Velos que cubre</td>
+                            <td>Velos quitado en Cristo</td>
+                            <td>3:14-16</td>
+                        </tr>
+                        <tr>
+                            <td>Transformación</td>
+                            <td>Sin transformación</td>
+                            <td>De gloria en gloria</td>
+                            <td>3:18</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="themes-section">
+                <h2>Temas Principales</h2>
+                <p>2 Corintios desarrolla temas cruciales para el ministerio y la vida cristiana:</p>
+                
+                <div class="theme-container">
+                    <div class="theme-item">
+                        <div class="theme-name">1. Consuelo en el Sufrimiento</div>
+                        <div>Dios consuela a los afligidos para que consuelen a otros.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">2. Ministerio del Nuevo Pacto</div>
+                        <div>El ministerio del Espíritu que da vida versus la letra que mata.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">3. Reconciliación</div>
+                        <div>Dios nos reconcilió consigo mismo y nos dio el ministerio de la reconciliación.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">4. Generosidad Cristiana</div>
+                        <div>Principios para la ofrenda voluntaria y alegre.</div>
+                    </div>
+                    
+                    <div class="theme-item">
+                        <div class="theme-name">5. Debilidad y Poder</div>
+                        <div>El poder de Cristo se perfecciona en la debilidad humana.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">6. Autoridad Apostólica</div>
+                        <div>La verdadera autoridad espiritual se ejerce para edificación.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">7. Nueva Creación</div>
+                        <div>En Cristo somos nuevas criaturas con un nuevo propósito.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">8. Examinación Personal</div>
+                        <div>Examinarse a sí mismo para ver si estamos en la fe.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="key-verses">
+                <h2>Versículos Clave de 2 Corintios</h2>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Consuelo Divino</h3>
+                        <p class="scripture">"Bendito sea el Dios y Padre de nuestro Señor Jesucristo, Padre de misericordias y Dios de toda consolación, el cual nos consuela en todas nuestras tribulaciones..."</p>
+                        <p class="scripture-ref">2 Corintios 1:3-4</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Nueva Creación</h3>
+                        <p class="scripture">"De modo que si alguno está en Cristo, nueva criatura es; las cosas viejas pasaron; he aquí todas son hechas nuevas."</p>
+                        <p class="scripture-ref">2 Corintios 5:17</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Ministerio de Reconciliación</h3>
+                        <p class="scripture">"Y todo esto proviene de Dios, quien nos reconcilió consigo mismo por Cristo, y nos dio el ministerio de la reconciliación."</p>
+                        <p class="scripture-ref">2 Corintios 5:18</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Gracia en la Debilidad</h3>
+                        <p class="scripture">"Y me ha dicho: Bástate mi gracia; porque mi poder se perfecciona en la debilidad. Por tanto, de buena gana me gloriaré más bien en mis debilidades, para que repose sobre mí el poder de Cristo."</p>
+                        <p class="scripture-ref">2 Corintios 12:9</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chapters-list">
+                <h2>Los 13 Capítulos de 2 Corintios</h2>
+                <p>Selecciona un capítulo para estudiar:</p>
+                
+                <div class="chapter-grid">
+                    <a href="2corintios1.html" class="chapter-item">Capítulo 1</a>
+                    <a href="2corintios2.html" class="chapter-item">Capítulo 2</a>
+                    <a href="2corintios3.html" class="chapter-item">Capítulo 3</a>
+                    <a href="2corintios4.html" class="chapter-item">Capítulo 4</a>
+                    <a href="2corintios5.html" class="chapter-item">Capítulo 5</a>
+                    <a href="2corintios6.html" class="chapter-item">Capítulo 6</a>
+                    <a href="2corintios7.html" class="chapter-item">Capítulo 7</a>
+                    <a href="2corintios8.html" class="chapter-item">Capítulo 8</a>
+                    <a href="2corintios9.html" class="chapter-item">Capítulo 9</a>
+                    <a href="2corintios10.html" class="chapter-item">Capítulo 10</a>
+                    <a href="2corintios11.html" class="chapter-item">Capítulo 11</a>
+                    <a href="2corintios12.html" class="chapter-item">Capítulo 12</a>
+                    <a href="2corintios13.html" class="chapter-item">Capítulo 13</a>
+                </div>
+            </div>
+            
+            <div class="navigation-buttons">
+                <a href="1corintios.html" class="nav-button">← 1 Corintios</a>
+                <a href="index.html" class="nav-button">🏠 Inicio</a>
+                <a href="galatas.html" class="nav-button">Gálatas →</a>
+            </div>
+            
+            <div class="biblical-box">
+                <h3>Legado de 2 Corintios</h3>
+                <p>2 Corintios ha dejado un impacto duradero en la comprensión del ministerio cristiano:</p>
+                <ul>
+                    <li><strong>Teología del Sufrimiento</strong> - El propósito redentor del sufrimiento en el ministerio</li>
+                    <li><strong>Naturaleza del Ministerio</strong> - El ministerio como servicio y no como dominio</li>
+                    <li><strong>Generosidad Cristiana</strong> - Principios bíblicos para la ofrenda voluntaria</li>
+                    <li><strong>Reconciliación</strong> - Fundamentos teológicos para el ministerio de reconciliación</li>
+                    <li><strong>Verdadera Espiritualidad</strong> - La espiritualidad auténtica manifestada en debilidad y dependencia</li>
+                </ul>
+                
+                <p class="scripture">"La gracia del Señor Jesucristo, el amor de Dios, y la comunión del Espíritu Santo sean con todos vosotros. Amén."</p>
+                <p class="scripture-ref">2 Corintios 13:14</p>
+                
+                <p>La Segunda Epístola a los Corintios permanece como un testimonio poderoso del corazón pastoral de Pablo y una guía invaluable para entender el verdadero ministerio cristiano. Su mensaje de consuelo en el sufrimiento, poder en la debilidad, y la prioridad de las relaciones reconciliadas continúa inspirando a creyentes y ministros en su servicio a Cristo.</p>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 IN GOD WE TRUST</p>
+                <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
