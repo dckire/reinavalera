@@ -1,101 +1,976 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-<title>Juan</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body {
-font-family: Arial, sans-serif;
-background-color: #f0f0f0;
-margin: 0;
-padding: 0;
-text-align: center;
-}
-.container {
-max-width: 800px;
-margin: 40px auto;
-padding: 20px;
-background-color: #fff;
-border: 1px solid #ddd;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.contenido {
-  background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20230523/pngtree-bible-gif-hd-wallpaper-image_2683159.jpg');
-padding: 20px;
-margin: 40px auto;
-width: 80%;
-background-color: #fff;
-border: 1px solid #ddd;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-h1 {
-color: #333;
-}
-ul {
-list-style: none;
-padding: 0;
-margin: 0;
-}
-li {
-margin-bottom: 10px;
-}
-a {
-text-decoration: none;
-color: #fff;
-}
-a:hover {
-color: #23527c;
-}
-img {
-max-width: 100%;
-height: auto;
-margin: 20px auto;
-border-radius: 10px;
-}
-   button {
-    background-color: #337ab7;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  button:hover {
-    background-color: #23527c;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan - El Evangelio del Hijo de Dios</title>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BYMJS3X12P');
+    </script>
+    <meta name="google-site-verification" content="KWZFlVdcT-h9cB1Qnj0LgSLJP-J-NS4bgjhnQG_c140" />
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #000080 0%, #4169E1 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(to right, #000080, #4169E1);
+            color: white;
+            padding: 50px 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        header::before {
+            content: "✝️";
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 3rem;
+            opacity: 0.7;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.4rem;
+            font-weight: 300;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .intro-section {
+            background-color: #f8f9fa;
+            border-left: 5px solid #000080;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #000080;
+            margin-bottom: 25px;
+            font-size: 2.2rem;
+            border-bottom: 3px solid #4169E1;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #000080;
+            margin: 30px 0 20px;
+            font-size: 1.7rem;
+        }
+        
+        h4 {
+            color: #000080;
+            margin: 20px 0 15px;
+            font-size: 1.3rem;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .highlight {
+            background-color: #e6f0ff;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #000080;
+        }
+        
+        .biblical-box {
+            background-color: #e6f0ff;
+            border: 2px solid #000080;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+        }
+        
+        .scripture {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #000080;
+            margin: 15px 0;
+            padding-left: 20px;
+            border-left: 4px solid #000080;
+        }
+        
+        .scripture-ref {
+            font-weight: bold;
+            text-align: right;
+            color: #4169E1;
+            margin-top: 10px;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #000080;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card h3 {
+            color: #000080;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+        
+        .card ul {
+            padding-left: 20px;
+        }
+        
+        .card li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .structure-section {
+            background-color: #f5f5f5;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .historical-section {
+            background-color: #e6f0ff;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border-left: 5px solid #000080;
+        }
+        
+        .themes-section {
+            background-color: #e8f5e9;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .prophecies-section {
+            background-color: #fff8e1;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .key-verses {
+            background-color: #e6f0ff;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border: 2px solid #000080;
+        }
+        
+        .theological-section {
+            background: linear-gradient(135deg, #f9f9f9, #f0f0f0);
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border: 2px solid #000080;
+        }
+        
+        .chapters-list {
+            background-color: #fafafa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .chapter-item {
+            background: linear-gradient(135deg, #000080, #4169E1);
+            color: white;
+            padding: 15px 10px;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: block;
+        }
+        
+        .chapter-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #4169E1, #000080);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(to right, #000080, #4169E1);
+            color: #FFF8DC;
+            font-size: 1.1rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+            border: 3px solid #4169E1;
+        }
+        
+        .navigation-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .nav-button {
+            background: linear-gradient(135deg, #000080, #4169E1);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-button:hover {
+            background: linear-gradient(135deg, #4169E1, #000080);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .theme-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .theme-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #000080;
+        }
+        
+        .theme-name {
+            font-weight: bold;
+            color: #000080;
+            margin-bottom: 5px;
+        }
+        
+        .timeline-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .timeline-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+            border-top: 4px solid #000080;
+        }
+        
+        .timeline-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .timeline-title {
+            font-weight: bold;
+            color: #000080;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .timeline-date {
+            font-weight: bold;
+            color: #4169E1;
+            margin-bottom: 5px;
+        }
+        
+        .definition-box {
+            background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border-left: 5px solid #000080;
+        }
+        
+        .definition-term {
+            font-weight: bold;
+            color: #000080;
+            margin-bottom: 5px;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .comparison-table th, .comparison-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .comparison-table th {
+            background-color: #000080;
+            color: white;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .comparison-table tr:hover {
+            background-color: #e6f0ff;
+        }
+        
+        .historical-periods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .period-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid #000080;
+        }
+        
+        .period-title {
+            font-weight: bold;
+            color: #000080;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .period-dates {
+            font-weight: bold;
+            color: #4169E1;
+            margin-bottom: 10px;
+        }
+        
+        .empires-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .empire-item {
+            background: #e6f0ff;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        .i-am-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .i-am-item {
+            background: linear-gradient(135deg, #000080, #4169E1);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+        }
+        
+        .signs-container {
+            background: linear-gradient(135deg, #fff0f5, #ffe4e1);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+            border-left: 5px solid #000080;
+        }
+        
+        .sign-item {
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 8px;
+            background: white;
+            border-left: 4px solid #4169E1;
+        }
+        
+        .sign-title {
+            font-weight: bold;
+            color: #000080;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .chapter-grid {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            }
+            
+            .navigation-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .theme-container,
+            .empires-container,
+            .timeline-container,
+            .historical-periods,
+            .i-am-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            header {
+                padding: 30px 20px;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-<div class="contenido">
-<h1>Juan</h1>
-<ul>
-<li><a href="juan1.html">Capítulo 1</a></li>
-<li><a href="juan2.html">Capítulo 2</a></li>
-<li><a href="juan3.html">Capítulo 3</a></li>
-  <li><a href="juan4.html">Capítulo 4</a></li>
-<li><a href="juan5.html">Capítulo 5</a></li>
-<li><a href="juan6.html">Capítulo 6</a></li>
-  <li><a href="juan7.html">Capítulo 7</a></li>
-<li><a href="juan8.html">Capítulo 8</a></li>
-<li><a href="juan9.html">Capítulo 9</a></li>
-<li><a href="juan10.html">Capítulo 10</a></li>
-<li><a href="juan11.html">Capítulo 11</a></li>
-<li><a href="juan12.html">Capítulo 12</a></li>
-  <li><a href="juan13.html">Capítulo 13</a></li>
-<li><a href="juan14.html">Capítulo 14</a></li>
-<li><a href="juan15.html">Capítulo 15</a></li>
-  <li><a href="juan16.html">Capítulo 16</a></li>
-<li><a href="juan17.html">Capítulo 17</a></li>
-<li><a href="juan18.html">Capítulo 18</a></li>
-  <li><a href="juan19.html">Capítulo 19</a></li>
-<li><a href="juan20.html">Capítulo 20</a></li>
-<li><a href="juan21.html">Capítulo 21</a></li>
-</ul>
-<button onclick="window.history.back()">Volver</button>
-</div>
-</div>
+    <div class="container">
+        <header>
+            <h1>Juan</h1>
+            <p class="subtitle">El Evangelio del Hijo de Dios y la Vida Eterna</p>
+        </header>
+        
+        <div class="content">
+            <div class="intro-section">
+                <h2>Introducción al Evangelio de Juan</h2>
+                <p>El Evangelio de <span class="highlight">Juan</span> es único entre los cuatro evangelios, presentando una profunda reflexión teológica sobre la identidad divina de Jesús. Escrito desde una perspectiva madura de fe, Juan selecciona cuidadosamente signos y discursos para demostrar que Jesús es el Cristo, el Hijo de Dios, y que creyendo en Él tenemos vida eterna.</p>
+                
+                <div class="biblical-box">
+                    <p class="scripture">"Pero éstas se han escrito para que creáis que Jesús es el Cristo, el Hijo de Dios, y para que creyendo, tengáis vida en su nombre."</p>
+                    <p class="scripture-ref">Juan 20:31 (Reina-Valera 1569-1602)</p>
+                </div>
+                
+                <div class="definition-box">
+                    <div class="definition-term">Contexto Histórico del Evangelio de Juan</div>
+                    <p><strong>Fechas:</strong> Aproximadamente 85-95 d.C., el último de los evangelios.</p>
+                    <p><strong>Autor:</strong> Juan, el discípulo amado, apóstol de Jesús.</p>
+                    <p><strong>Destinatarios:</strong> Cristianos maduros y comunidades enfrentando herejías incipientes.</p>
+                </div>
+            </div>
+            
+            <div class="historical-section">
+                <h2>Contexto Histórico: Cristianismo del Siglo I Tardío</h2>
+                <p>Juan escribe en un contexto de desarrollo teológico y enfrentamiento con primeras herejías:</p>
+                
+                <div class="historical-periods">
+                    <div class="period-card">
+                        <div class="period-title">Contexto Teológico</div>
+                        <div class="period-dates">85-95 d.C.</div>
+                        <ul>
+                            <li>Desarrollo de cristología avanzada</li>
+                            <li>Enfrentamiento con docetismo</li>
+                            <li>Respuesta a gnosticismo incipiente</li>
+                            <li>Profundización en la Trinidad</li>
+                            <li>Enseñanza sobre el Espíritu Santo</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="period-card">
+                        <div class="period-title">Contexto Eclesial</div>
+                        <div class="period-dates">Iglesia madura</div>
+                        <ul>
+                            <li>Comunidades cristianas establecidas</li>
+                            <li>Necesidad de enseñanza profunda</li>
+                            <li>Separación definitiva del judaísmo</li>
+                            <li>Persecución doméstica bajo Domiciano</li>
+                            <li>Desarrollo de vocabulario teológico</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="period-card">
+                        <div class="period-title">Contexto Literario</div>
+                        <div class="period-dates">Estilo único</div>
+                        <ul>
+                            <li>Lenguaje simbólico y teológico</li>
+                            <li>Enfoque en la deidad de Cristo</li>
+                            <li>Selección cuidadosa de material</li>
+                            <li>Estructura temática más que cronológica</li>
+                            <li>Diálogos teológicos profundos</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>Características Únicas de Juan</h3>
+                <div class="empires-container">
+                    <div class="empire-item">Cristología Alta</div>
+                    <div class="empire-item">Yo Soy</div>
+                    <div class="empire-item">Siete Señales</div>
+                    <div class="empire-item">Discurso</div>
+                    <div class="empire-item">Dualismo</div>
+                    <div class="empire-item">Vida Eterna</div>
+                </div>
+                
+                <div class="definition-box">
+                    <div class="definition-term">Propósito del libro de  Juan</div>
+                    <p>Juan presenta a Jesús como el Verbo eterno que se hizo carne, el Hijo unigénito de Dios que revela al Padre. Su evangelio combina la humanidad real de Jesús con su deidad plena, enfatizando la fe como respuesta apropiada a la revelación divina. A través de signos cuidadosamente seleccionados y discursos profundos, Juan guía al lector a un encuentro transformador con el Cristo divino.</p>
+                </div>
+            </div>
+            
+            <div class="theological-section">
+                <h2>El Evangelio: Declaraciones Divinas</h2>
+                <p>Juan estructura su evangelio alrededor de declaraciones teológicas profundas sobre la identidad de Jesús:</p>
+                
+                <h3>Las Siete Declaraciones "Yo Soy"</h3>
+                <div class="i-am-container">
+                    <div class="i-am-item">Yo Soy el Pan de Vida</div>
+                    <div class="i-am-item">Yo Soy la Luz del Mundo</div>
+                    <div class="i-am-item">Yo Soy la Puerta</div>
+                    <div class="i-am-item">Yo Soy el Buen Pastor</div>
+                    <div class="i-am-item">Yo Soy la Resurrección</div>
+                    <div class="i-am-item">Yo Soy el Camino, Verdad y Vida</div>
+                    <div class="i-am-item">Yo Soy la Vid Verdadera</div>
+                </div>
+                
+                <div class="biblical-box">
+                    <h4>El Prólogo  (Juan 1:1-18)</h4>
+                    <p>Juan comienza con una declaración majestuosa sobre la identidad eterna de Jesús:</p>
+                    <ul>
+                        <li><strong>El Verbo eterno</strong> - Existía en el principio con Dios</li>
+                        <strong>El Creador</strong> - Todas las cosas por él fueron hechas</li>
+                        <li><strong>La Vida y Luz</strong> - En él estaba la vida y la luz de los hombres</li>
+                        <li><strong>El Unigénito</strong> - El Hijo único que revela al Padre</li>
+                        <li><strong>El Verbo hecho carne</strong> - Encarnación del Dios eterno</li>
+                    </ul>
+                </div>
+                
+                <div class="signs-container">
+                    <h4>Los Siete Signos (Milagros) en Juan</h4>
+                    <p>Juan selecciona siete milagros como "signos" que revelan la gloria de Jesús:</p>
+                    
+                    <div class="sign-item">
+                        <div class="sign-title">1. Las Bodas de Caná (2:1-11)</div>
+                        <p>Jesús convierte agua en vino, manifestando su gloria y señalando el nuevo orden mesiánico.</p>
+                    </div>
+                    
+                    <div class="sign-item">
+                        <div class="sign-title">2. Sanidad del Hijo del Noble (4:46-54)</div>
+                        <p>Curación a distancia que demuestra la autoridad de Jesús sobre la enfermedad.</p>
+                    </div>
+                    
+                    <div class="sign-item">
+                        <div class="sign-title">3. Sanidad del Paralítico (5:1-15)</div>
+                        <p>Jesús sana en día de reposo, provocando conflicto sobre su autoridad.</p>
+                    </div>
+                    
+                    <div class="sign-item">
+                        <div class="sign-title">4. Alimentación de los 5,000 (6:1-14)</div>
+                        <p>Jesús provee pan milagrosamente, revelándose como el Pan de Vida.</p>
+                    </div>
+                    
+                    <div class="sign-item">
+                        <div class="sign-title">5. Jesús Camina sobre el Mar (6:16-21)</div>
+                        <p>Demuestra su dominio sobre las fuerzas naturales.</p>
+                    </div>
+                    
+                    <div class="sign-item">
+                        <div class="sign-title">6. Sanidad del Ciego de Nacimiento (9:1-41)</div>
+                        <p>Curación que simboliza la iluminación espiritual.</p>
+                    </div>
+                    
+                    <div class="sign-item">
+                        <div class="sign-title">7. Resurrección de Lázaro (11:1-44)</div>
+                        <p>Jesús se revela como la Resurrección y la Vida, teniendo poder sobre la muerte.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="structure-section">
+                <h2>Estructura del Evangelio</h2>
+                <p>Juan organiza su evangelio en dos partes principales, con un prólogo teológico y un epílogo:</p>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>I. Prólogo (1:1-18)</h3>
+                        <ul>
+                            <li>El Verbo eterno con Dios</li>
+                            <li>El Verbo creador</li>
+                            <li>El Verbo luz y vida</li>
+                            <li>El Verbo hecho carne</li>
+                            <li>Gracia y verdad por Jesucristo</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>II. Libro de los Signos (1:19-12:50)</h3>
+                        <ul>
+                            <li>Testimonio de Juan Bautista</li>
+                            <li>Llamamiento de discípulos</li>
+                            <li>Siete signos milagrosos</li>
+                            <li>Siete discursos "Yo Soy"</li>
+                            <li>Crecimiento del conflicto</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>III. Libro de la Gloria (13:1-20:31)</h3>
+                        <ul>
+                            <li>Discurso de despedida</li>
+                            <li>Oración sacerdotal</li>
+                            <li>Pasíon y crucifixión</li>
+                            <li>Resurrección</li>
+                            <li>Apariciones</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>IV. Epílogo (21:1-25)</h3>
+                        <ul>
+                            <li>Aparición en Galilea</li>
+                            <li>Restauración de Pedro</li>
+                            <li>Testimonio del discípulo amado</li>
+                            <li>Conclusión del evangelio</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>Encuentros Personales en Juan</h3>
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Nicodemo (3:1-21)</h3>
+                        <ul>
+                            <li>Líder religioso que viene de noche</li>
+                            <li>Enseñanza sobre el nuevo nacimiento</li>
+                            <li>Juan 3:16 - verso central</li>
+                            <li>Contraste luz-tinieblas</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Mujer Samaritana (4:1-42)</h3>
+                        <ul>
+                            <li>Encuentro transcultural</li>
+                            <li>Jesús revela su identidad</li>
+                            <li>Agua viva y adoración verdadera</li>
+                            <li>Evangelista en Samaria</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Mujer Adúltera (8:1-11)</h3>
+                        <ul>
+                            <li>Misericordia vs. legalismo</li>
+                            <li>Jesús como juez compasivo</li>
+                            <li>Perdón y llamado a santidad</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Tomás (20:24-29)</h3>
+                        <ul>
+                            <li>Duda y fe</li>
+                            <li>Evidencia y creencia</li>
+                            <li>"Señor mío y Dios mío"</li>
+                            <li>Bienaventurados los que creen</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="prophecies-section">
+                <h2>Discursos y Enseñanzas Profundas</h2>
+                <p>Juan registra discursos únicos de Jesús que revelan profundidades teológicas:</p>
+                
+                <div class="timeline-container">
+                    <div class="timeline-card">
+                        <div class="timeline-title">Discurso del Pan de Vida</div>
+                        <div class="timeline-date">6:22-59</div>
+                        <p>Jesús se identifica como el verdadero pan del cielo, provocando que muchos discípulos se aparten.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-title">Discurso del Buen Pastor</div>
+                        <div class="timeline-date">10:1-21</div>
+                        <p>Jesús contrasta su cuidado pastoral con los falsos pastores de Israel.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-title">Discurso de la Vid Verdadera</div>
+                        <div class="timeline-date">15:1-17</div>
+                        <p>La relación vital entre Cristo y sus discípulos ilustrada con la vid y los pámpanos.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-title">Oración Sacerdotal</div>
+                        <div class="timeline-date">17:1-26</div>
+                        <p>Jesús ora por sí mismo, por sus discípulos y por todos los creyentes futuros.</p>
+                    </div>
+                </div>
+                
+                <h3>Conceptos Clave en Juan</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Concepto</th>
+                            <th>Significado</th>
+                            <th>Referencias</th>
+                            <th>Importancia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Verbo (Logos)</td>
+                            <td>Cristo como Palabra eterna de Dios</td>
+                            <td>1:1, 14</td>
+                            <td>Deidad preexistente de Jesús</td>
+                        </tr>
+                        <tr>
+                            <td>Unigénito</td>
+                            <td>Hijo único y amado del Padre</td>
+                            <td>1:14, 18; 3:16</td>
+                            <td>Relación única con el Padre</td>
+                        </tr>
+                        <tr>
+                            <td>Gloria</td>
+                            <td>Manifestación visible de Dios</td>
+                            <td>1:14; 2:11; 17:5</td>
+                            <td>Revelación divina en Jesús</td>
+                        </tr>
+                        <tr>
+                            <td>Vida Eterna</td>
+                            <td>Vida cualitativa en relación con Dios</td>
+                            <td>3:16; 10:10; 17:3</td>
+                            <td>Propósito de la salvación</td>
+                        </tr>
+                        <tr>
+                            <td>Verdad</td>
+                            <td>Realidad última revelada en Cristo</td>
+                            <td>1:17; 8:32; 14:6</td>
+                            <td>Fundamento del conocimiento</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="themes-section">
+                <h2>Temas Principales</h2>
+                <p>Juan desarrolla temas teológicos profundos sobre la identidad de Cristo y la vida espiritual:</p>
+                
+                <div class="theme-container">
+                    <div class="theme-item">
+                        <div class="theme-name">1. La Deidad de Cristo</div>
+                        <div>Jesús como Dios encarnado, igual al Padre en naturaleza divina.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">2. Fe y Vida Eterna</div>
+                        <div>La fe como medio para recibir la vida eterna en Cristo.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">3. El Espíritu Santo</div>
+                        <div>El Consolador que guía, enseña y empodera a los creyentes.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">4. Conocimiento de Dios</div>
+                        <div>Cristo como revelación suprema del Padre.</div>
+                    </div>
+                    
+                    <div class="theme-item">
+                        <div class="theme-name">5. Dualismo Espiritual</div>
+                        <div>Contrastes entre luz-tinieblas, vida-muerte, verdad-mentira.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">6. Amor Divino</div>
+                        <div>El amor de Dios manifestado en la entrega de su Hijo.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">7. Testimonio</div>
+                        <div>Multiple testimonio sobre la identidad de Jesús.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">8. Misión</div>
+                        <div>Jesús enviado por el Padre y enviando a sus discípulos.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="key-verses">
+                <h2>Versículos Clave de Juan</h2>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Declaración Central</h3>
+                        <p class="scripture">"Porque de tal manera amó Dios al mundo, que ha dado a su Hijo unigénito, para que todo aquel que en él cree, no se pierda, mas tenga vida eterna."</p>
+                        <p class="scripture-ref">Juan 3:16</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Propósito del Evangelio</h3>
+                        <p class="scripture">"Pero éstas se han escrito para que creáis que Jesús es el Cristo, el Hijo de Dios, y para que creyendo, tengáis vida en su nombre."</p>
+                        <p class="scripture-ref">Juan 20:31</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Declaración de Deidad</h3>
+                        <p class="scripture">"Jesús le dijo: Yo soy el camino, y la verdad, y la vida; nadie viene al Padre, sino por mí."</p>
+                        <p class="scripture-ref">Juan 14:6</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Encarnación</h3>
+                        <p class="scripture">"Y aquel Verbo fue hecho carne, y habitó entre nosotros (y vimos su gloria, gloria como del unigénito del Padre), lleno de gracia y de verdad."</p>
+                        <p class="scripture-ref">Juan 1:14</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chapters-list">
+                <h2>Los 21 Capítulos de Juan</h2>
+                <p>Selecciona un capítulo para estudiar:</p>
+                
+                <div class="chapter-grid">
+                    <a href="juan1.html" class="chapter-item">Capítulo 1</a>
+                    <a href="juan2.html" class="chapter-item">Capítulo 2</a>
+                    <a href="juan3.html" class="chapter-item">Capítulo 3</a>
+                    <a href="juan4.html" class="chapter-item">Capítulo 4</a>
+                    <a href="juan5.html" class="chapter-item">Capítulo 5</a>
+                    <a href="juan6.html" class="chapter-item">Capítulo 6</a>
+                    <a href="juan7.html" class="chapter-item">Capítulo 7</a>
+                    <a href="juan8.html" class="chapter-item">Capítulo 8</a>
+                    <a href="juan9.html" class="chapter-item">Capítulo 9</a>
+                    <a href="juan10.html" class="chapter-item">Capítulo 10</a>
+                    <a href="juan11.html" class="chapter-item">Capítulo 11</a>
+                    <a href="juan12.html" class="chapter-item">Capítulo 12</a>
+                    <a href="juan13.html" class="chapter-item">Capítulo 13</a>
+                    <a href="juan14.html" class="chapter-item">Capítulo 14</a>
+                    <a href="juan15.html" class="chapter-item">Capítulo 15</a>
+                    <a href="juan16.html" class="chapter-item">Capítulo 16</a>
+                    <a href="juan17.html" class="chapter-item">Capítulo 17</a>
+                    <a href="juan18.html" class="chapter-item">Capítulo 18</a>
+                    <a href="juan19.html" class="chapter-item">Capítulo 19</a>
+                    <a href="juan20.html" class="chapter-item">Capítulo 20</a>
+                    <a href="juan21.html" class="chapter-item">Capítulo 21</a>
+                </div>
+            </div>
+            
+            <div class="navigation-buttons">
+                <a href="lucas.html" class="nav-button">← Lucas</a>
+                <a href="index.html" class="nav-button">🏠 Inicio</a>
+                <a href="hechos.html" class="nav-button">Hechos →</a>
+            </div>
+            
+            <div class="biblical-box">
+                <h3>Legado del Evangelio de Juan</h3>
+                <p>Juan ha dejado un impacto profundo en la teología cristiana y la espiritualidad:</p>
+                <ul>
+                    <li><strong>Evangelio de la Deidad</strong> - Presenta la naturaleza divina de Cristo con claridad única</li>
+                    <li><strong>Evangelio del Amor</strong> - Enfatiza el amor divino como fundamento de la salvación</li>
+                    <li><strong>Evangelio del Espíritu</strong> - Desarrolla la doctrina del Espíritu Santo como Consolador</li>
+                    <li><strong>Evangelio de la Vida</strong> - Proclama la vida eterna como don mediante la fe</li>
+                    <li><strong>Evangelio del Discípulo Amado</strong> - Ofrece una perspectiva íntima de la relación con Jesús</li>
+                </ul>
+                
+                <p class="scripture">"En el principio era el Verbo, y el Verbo era con Dios, y el Verbo era Dios."</p>
+                <p class="scripture-ref">Juan 1:1</p>
+                
+                <p>El Evangelio de Juan nos invita a contemplar la gloria del Hijo unigénito del Padre, lleno de gracia y de verdad. A través de su profunda reflexión teológica, sus signos cuidadosamente seleccionados y sus discursos reveladores, Juan guía al creyente a una fe más profunda en el Cristo divino que vino para darnos vida abundante. Su testimonio perdura como pilar fundamental de la fe cristiana y fuente inagotable de revelación sobre la persona y obra de Jesucristo.</p>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 IN GOD WE TRUST</p>
+                <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
