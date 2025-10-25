@@ -1,108 +1,1004 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-<title>Hechos</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body {
-font-family: Arial, sans-serif;
-background-color: #f0f0f0;
-margin: 0;
-padding: 0;
-text-align: center;
-}
-.container {
-max-width: 800px;
-margin: 40px auto;
-padding: 20px;
-background-color: #fff;
-border: 1px solid #ddd;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.contenido {
-  background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20230523/pngtree-bible-gif-hd-wallpaper-image_2683159.jpg');
-padding: 20px;
-margin: 40px auto;
-width: 80%;
-background-color: #fff;
-border: 1px solid #ddd;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-h1 {
-color: #333;
-}
-ul {
-list-style: none;
-padding: 0;
-margin: 0;
-}
-li {
-margin-bottom: 10px;
-}
-a {
-text-decoration: none;
-color: #fff;
-}
-a:hover {
-color: #23527c;
-}
-img {
-max-width: 100%;
-height: auto;
-margin: 20px auto;
-border-radius: 10px;
-}
-   button {
-    background-color: #337ab7;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  button:hover {
-    background-color: #23527c;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hechos - El Libro del Espíritu Santo y la Iglesia Primitiva</title>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BYMJS3X12P');
+    </script>
+    <meta name="google-site-verification" content="KWZFlVdcT-h9cB1Qnj0LgSLJP-J-NS4bgjhnQG_c140" />
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #8B4513 0%, #D2691E 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(to right, #8B4513, #D2691E);
+            color: white;
+            padding: 50px 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        header::before {
+            content: "🔥";
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 3rem;
+            opacity: 0.7;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.4rem;
+            font-weight: 300;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .intro-section {
+            background-color: #f8f9fa;
+            border-left: 5px solid #8B4513;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #8B4513;
+            margin-bottom: 25px;
+            font-size: 2.2rem;
+            border-bottom: 3px solid #D2691E;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #8B4513;
+            margin: 30px 0 20px;
+            font-size: 1.7rem;
+        }
+        
+        h4 {
+            color: #8B4513;
+            margin: 20px 0 15px;
+            font-size: 1.3rem;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .highlight {
+            background-color: #f5e8d9;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #8B4513;
+        }
+        
+        .biblical-box {
+            background-color: #f5e8d9;
+            border: 2px solid #8B4513;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+        }
+        
+        .scripture {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #8B4513;
+            margin: 15px 0;
+            padding-left: 20px;
+            border-left: 4px solid #8B4513;
+        }
+        
+        .scripture-ref {
+            font-weight: bold;
+            text-align: right;
+            color: #D2691E;
+            margin-top: 10px;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #8B4513;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card h3 {
+            color: #8B4513;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+        
+        .card ul {
+            padding-left: 20px;
+        }
+        
+        .card li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .structure-section {
+            background-color: #f5f5f5;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .historical-section {
+            background-color: #f5e8d9;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border-left: 5px solid #8B4513;
+        }
+        
+        .themes-section {
+            background-color: #e8f5e9;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .prophecies-section {
+            background-color: #fff8e1;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .key-verses {
+            background-color: #f5e8d9;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border: 2px solid #8B4513;
+        }
+        
+        .spirit-section {
+            background: linear-gradient(135deg, #f9f9f9, #f0f0f0);
+            padding: 35px;
+            border-radius: 15px;
+            margin: 40px 0;
+            border: 2px solid #8B4513;
+        }
+        
+        .chapters-list {
+            background-color: #fafafa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .chapter-item {
+            background: linear-gradient(135deg, #8B4513, #D2691E);
+            color: white;
+            padding: 15px 10px;
+            border-radius: 8px;
+            text-align: center;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: block;
+        }
+        
+        .chapter-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #D2691E, #8B4513);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(to right, #8B4513, #D2691E);
+            color: #FFF8DC;
+            font-size: 1.1rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+            border: 3px solid #D2691E;
+        }
+        
+        .navigation-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .nav-button {
+            background: linear-gradient(135deg, #8B4513, #D2691E);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-button:hover {
+            background: linear-gradient(135deg, #D2691E, #8B4513);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .theme-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .theme-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #8B4513;
+        }
+        
+        .theme-name {
+            font-weight: bold;
+            color: #8B4513;
+            margin-bottom: 5px;
+        }
+        
+        .timeline-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .timeline-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+            border-top: 4px solid #8B4513;
+        }
+        
+        .timeline-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .timeline-title {
+            font-weight: bold;
+            color: #8B4513;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .timeline-date {
+            font-weight: bold;
+            color: #D2691E;
+            margin-bottom: 5px;
+        }
+        
+        .definition-box {
+            background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border-left: 5px solid #8B4513;
+        }
+        
+        .definition-term {
+            font-weight: bold;
+            color: #8B4513;
+            margin-bottom: 5px;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .comparison-table th, .comparison-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .comparison-table th {
+            background-color: #8B4513;
+            color: white;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .comparison-table tr:hover {
+            background-color: #f5e8d9;
+        }
+        
+        .historical-periods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .period-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid #8B4513;
+        }
+        
+        .period-title {
+            font-weight: bold;
+            color: #8B4513;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .period-dates {
+            font-weight: bold;
+            color: #D2691E;
+            margin-bottom: 10px;
+        }
+        
+        .empires-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .empire-item {
+            background: #f5e8d9;
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        .missions-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .mission-item {
+            background: linear-gradient(135deg, #8B4513, #D2691E);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+        }
+        
+        .sermons-container {
+            background: linear-gradient(135deg, #fff0f5, #ffe4e1);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+            border-left: 5px solid #8B4513;
+        }
+        
+        .sermon-item {
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 8px;
+            background: white;
+            border-left: 4px solid #D2691E;
+        }
+        
+        .sermon-title {
+            font-weight: bold;
+            color: #8B4513;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        
+        .expansion-map {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .map-stage {
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 8px;
+            background: #f5e8d9;
+        }
+        
+        .stage-title {
+            font-weight: bold;
+            color: #8B4513;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .chapter-grid {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            }
+            
+            .navigation-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .theme-container,
+            .empires-container,
+            .timeline-container,
+            .historical-periods,
+            .missions-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            header {
+                padding: 30px 20px;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-<div class="contenido">
-<h1>Hechos</h1>
-<ul>
-<li><a href="hechos1.html">Capítulo 1</a></li>
-<li><a href="hechos2.html">Capítulo 2</a></li>
-<li><a href="hechos3.html">Capítulo 3</a></li>
-  <li><a href="hechos4.html">Capítulo 4</a></li>
-<li><a href="hechos5.html">Capítulo 5</a></li>
-<li><a href="hechos6.html">Capítulo 6</a></li>
-  <li><a href="hechos7.html">Capítulo 7</a></li>
-<li><a href="hechos8.html">Capítulo 8</a></li>
-<li><a href="hechos9.html">Capítulo 9</a></li>
-<li><a href="hechos10.html">Capítulo 10</a></li>
-<li><a href="hechos11.html">Capítulo 11</a></li>
-<li><a href="hechos12.html">Capítulo 12</a></li>
-  <li><a href="hechos13.html">Capítulo 13</a></li>
-<li><a href="hechos14.html">Capítulo 14</a></li>
-<li><a href="hechos15.html">Capítulo 15</a></li>
-  <li><a href="hechos16.html">Capítulo 16</a></li>
-<li><a href="hechos17.html">Capítulo 17</a></li>
-<li><a href="hechos18.html">Capítulo 18</a></li>
-  <li><a href="hechos19.html">Capítulo 19</a></li>
-<li><a href="hechos20.html">Capítulo 20</a></li>
-<li><a href="hechos21.html">Capítulo 21</a></li>
-  <li><a href="hechos22.html">Capítulo 22</a></li>
-<li><a href="hechos23.html">Capítulo 23</a></li>
-<li><a href="hechos24.html">Capítulo 24</a></li>
-<li><a href="hechos25.html">Capítulo 25</a></li>
-  <li><a href="hechos26.html">Capítulo 26</a></li>
-<li><a href="hechos27.html">Capítulo 27</a></li>
-<li><a href="hechos28.html">Capítulo 28</a></li>
-</ul>
-<button onclick="window.history.back()">Volver</button>
-</div>
-</div>
+    <div class="container">
+        <header>
+            <h1>Hechos</h1>
+            <p class="subtitle">El Libro del Espíritu Santo y la Expansión de la Iglesia Primitiva</p>
+        </header>
+        
+        <div class="content">
+            <div class="intro-section">
+                <h2>Introducción al Libro de Hechos</h2>
+                <p>El Libro de <span class="highlight">Hechos de los Apóstoles</span> es la continuación del Evangelio de Lucas y relata la historia del nacimiento y expansión de la iglesia cristiana primitiva. Con un enfoque especial en la obra del Espíritu Santo, Hechos documenta cómo el mensaje del evangelio se extendió desde Jerusalén hasta Roma, el centro del mundo conocido.</p>
+                
+                <div class="biblical-box">
+                    <p class="scripture">"Pero recibiréis poder, cuando haya venido sobre vosotros el Espíritu Santo, y me seréis testigos en Jerusalén, en toda Judea, en Samaria, y hasta lo último de la tierra."</p>
+                    <p class="scripture-ref">Hechos 1:8 (Reina-Valera 1569-1602)</p>
+                </div>
+                
+                <div class="definition-box">
+                    <div class="definition-term">Contexto Histórico del Libro de Hechos</div>
+                    <p><strong>Fechas:</strong> Aproximadamente 62-70 d.C., escrito como secuela del Evangelio de Lucas.</p>
+                    <p><strong>Autor:</strong> Lucas, el médico e historiador, compañero de Pablo.</p>
+                    <p><strong>Destinatarios:</strong> Teófilo y comunidades cristianas, mostrando el crecimiento divino de la iglesia.</p>
+                </div>
+            </div>
+            
+            <div class="historical-section">
+                <h2>Contexto Histórico: Imperio Romano del Siglo I</h2>
+                <p>Hechos se desarrolla en el contexto del Imperio Romano durante las primeras décadas del cristianismo:</p>
+                
+                <div class="historical-periods">
+                    <div class="period-card">
+                        <div class="period-title">Contexto Político</div>
+                        <div class="period-dates">30-62 d.C.</div>
+                        <ul>
+                            <li>Imperio Romano bajo Tiberio, Calígula, Claudio y Nerón</li>
+                            <li>Pax Romana facilitando viajes y comunicación</li>
+                            <li>Relativa libertad religiosa inicial</li>
+                            <li>Creciente tensión con autoridades judías</li>
+                            <li>Expansión desde Jerusalén hasta Roma</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="period-card">
+                        <div class="period-title">Contexto Religioso</div>
+                        <div class="period-dates">Judaísmo y paganismo</div>
+                        <ul>
+                            <li>Diaspora judía en todo el imperio</li>
+                            <li>Sinagogas como centros de proclamación</li>
+                            <li>Encuentro con filosofías griegas</li>
+                            <li>Religiones mistéricas y culto imperial</li>
+                            <li>Transición del judaísmo al cristianismo gentil</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="period-card">
+                        <div class="period-title">Contexto Eclesial</div>
+                        <div class="period-dates">Iglesia naciente</div>
+                        <ul>
+                            <li>De comunidad judía a movimiento universal</li>
+                            <li>Desarrollo de estructura y liderazgo</li>
+                            <li>Persecuciones y crecimiento</li>
+                            <li>Resolución de conflictos internos</li>
+                            <li>Establecimiento de doctrina y práctica</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>Características Únicas de Hechos</h3>
+                <div class="empires-container">
+                    <div class="empire-item">Espíritu Santo</div>
+                    <div class="empire-item">Expansión Misionera</div>
+                    <div class="empire-item">Testimonio</div>
+                    <div class="empire-item">Milagros</div>
+                    <div class="empire-item">Persecución</div>
+                    <div class="empire-item">Crecimiento</div>
+                </div>
+                
+                <div class="definition-box">
+                    <div class="definition-term">Propósito Teológico de Hechos</div>
+                    <p>Hechos documenta la obra del Espíritu Santo guiando la expansión del evangelio desde su centro judío en Jerusalén hasta el mundo gentil representado por Roma. El libro muestra cómo la iglesia, guiada por el Espíritu, supera barreras étnicas, culturales y geográficas para cumplir la Gran Comisión, estableciendo el patrón para la misión cristiana a través de los siglos.</p>
+                </div>
+            </div>
+            
+            <div class="spirit-section">
+                <h2>El Espíritu Santo en Acción</h2>
+                <p>Hechos podría llamarse con razón "Los Hechos del Espíritu Santo" por su énfasis en la obra del Espíritu:</p>
+                
+                <h3>Manifestaciones del Espíritu Santo en Hechos</h3>
+                <div class="missions-container">
+                    <div class="mission-item">Pentecostés</div>
+                    <div class="mission-item">Llenura del Espíritu</div>
+                    <div class="mission-item">Don de Lenguas</div>
+                    <div class="mission-item">Profecía</div>
+                    <div class="mission-item">Sanidades</div>
+                    <div class="mission-item">Guía Directa</div>
+                </div>
+                
+                <div class="biblical-box">
+                    <h4>Eventos Clave del Espíritu Santo</h4>
+                    <p>Hechos registra momentos cruciales en la obra del Espíritu:</p>
+                    <ul>
+                        <li><strong>Pentecostés (2:1-4)</strong> - El Espíritu desciende con poder sobre los discípulos</li>
+                        <li><strong>Samaria (8:14-17)</strong> - El Espíritu es recibido por los samaritanos</li>
+                        <li><strong>Cornelio (10:44-48)</strong> - El Espíritu cae sobre los gentiles</li>
+                        <li><strong>Discípulos de Juan (19:1-7)</strong> - El Espíritu recibido mediante Pablo</li>
+                        <li><strong>Guía misionera (16:6-10)</strong> - El Espíritu dirige los viajes de Pablo</li>
+                    </ul>
+                </div>
+                
+                <div class="sermons-container">
+                    <h4>Grandes Sermones en Hechos</h4>
+                    <p>Hechos preserva sermones clave que muestran la proclamación del evangelio:</p>
+                    
+                    <div class="sermon-item">
+                        <div class="sermon-title">Pedro en Pentecostés (2:14-40)</div>
+                        <p>Primer sermón cristiano explicando el cumplimiento de Joel y proclamando a Jesús como Mesías.</p>
+                    </div>
+                    
+                    <div class="sermon-item">
+                        <div class="sermon-title">Esteban ante el Sanedrín (7:1-53)</div>
+                        <p>Defensa que repasa la historia de Israel y acusa a los líderes de rechazar al Justo.</p>
+                    </div>
+                    
+                    <div class="sermon-item">
+                        <div class="sermon-title">Pedro a Cornelio (10:34-43)</div>
+                        <p>Primer sermón a gentiles, enfatizando que Dios no hace acepción de personas.</p>
+                    </div>
+                    
+                    <div class="sermon-item">
+                        <div class="sermon-title">Pablo en Antioquía (13:16-41)</div>
+                        <p>Modelo de predicación en sinagoga, mostrando a Jesús como cumplimiento de las Escrituras.</p>
+                    </div>
+                    
+                    <div class="sermon-item">
+                        <div class="sermon-title">Pablo en el Areópago (17:22-31)</div>
+                        <p>Adaptación del mensaje a la audiencia filosófica griega en Atenas.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="structure-section">
+                <h2>Estructura del Libro</h2>
+                <p>Hechos se organiza geográficamente según el plan de expansión dado en 1:8:</p>
+                
+                <div class="expansion-map">
+                    <h3>Expansión del Evangelio en Hechos</h3>
+                    
+                    <div class="map-stage">
+                        <div class="stage-title">I. Jerusalén (1:1-8:3)</div>
+                        <p>Nacimiento de la iglesia y ministerio en la capital judía</p>
+                    </div>
+                    
+                    <div class="map-stage">
+                        <div class="stage-title">II. Judea y Samaria (8:4-12:25)</div>
+                        <p>Expansión a regiones circundantes y a los samaritanos</p>
+                    </div>
+                    
+                    <div class="map-stage">
+                        <div class="stage-title">III. Hasta lo Último de la Tierra (13:1-28:31)</div>
+                        <p>Misiones a Asia Menor, Grecia y finalmente Roma</p>
+                    </div>
+                </div>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>I. Iglesia en Jerusalén (1-7)</h3>
+                        <ul>
+                            <li>Ascensión de Jesús</li>
+                            <li>Pentecostés</li>
+                            <li>Primera comunidad</li>
+                            <li>Sanidades y persecución</li>
+                            <li>Elección de diáconos</li>
+                            <li>Martirio de Esteban</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>II. Expansión en Palestina (8-12)</h3>
+                        <ul>
+                            <li>Felipe en Samaria</li>
+                            <li>Conversión de Saulo</li>
+                            <li>Pedro y Cornelio</li>
+                            <li>Iglesia en Antioquía</li>
+                            <li>Muerte de Santiago</li>
+                            <li>Liberación de Pedro</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>III. Primer Viaje Misionero (13-14)</h3>
+                        <ul>
+                            <li>Envió de Bernabé y Saulo</li>
+                            <li>Chipre y Galacia</li>
+                            <li>Predicación en sinagogas</li>
+                            <li>Persecución y milagros</li>
+                            <li>Establecimiento de iglesias</li>
+                            <li>Regreso a Antioquía</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>IV. Concilio de Jerusalén (15)</h3>
+                        <ul>
+                            <li>Debate sobre circuncisión</li>
+                            <li>Discurso de Pedro</li>
+                            <li>Decisión del concilio</li>
+                            <li>Carta a iglesias gentiles</li>
+                            <li>Resolución del conflicto</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>V. Segundo y Tercer Viaje (16-21)</h3>
+                        <ul>
+                            <li>Macedonia y Grecia</li>
+                            <li>Filipos y Tesalónica</li>
+                            <li>Atenas y Corinto</li>
+                            <li>Éfeso y Mileto</li>
+                            <li>Regreso a Jerusalén</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>VI. Prisión y Viaje a Roma (22-28)</h3>
+                        <ul>
+                            <li>Arresto en Jerusalén</li>
+                            <li>Defensas ante autoridades</li>
+                            <li>Viaje a Roma</li>
+                            <li>Naufragio</li>
+                            <li>Ministerio en Roma</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="prophecies-section">
+                <h2>Personajes Clave en Hechos</h2>
+                <p>Hechos presenta líderes fundamentales en la expansión de la iglesia primitiva:</p>
+                
+                <div class="timeline-container">
+                    <div class="timeline-card">
+                        <div class="timeline-title">Pedro</div>
+                        <div class="timeline-date">Líder apostólico</div>
+                        <p>Predicador en Pentecostés, realiza milagros, abre la puerta a gentiles con Cornelio.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-title">Esteban</div>
+                        <div class="timeline-date">Primer mártir</div>
+                        <p>Diácono lleno de fe, poderoso en milagros, su martirio impulsa la expansión.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-title">Felipe</div>
+                        <div class="timeline-date">Evangelista</div>
+                        <p>Predica en Samaria, convierte al etíope, establece iglesias en la costa.</p>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="timeline-title">Pablo</div>
+                        <div class="timeline-date">Apóstol a gentiles</div>
+                        <p>Perseguidor convertido, misionero incansable, teólogo y plantador de iglesias.</p>
+                    </div>
+                </div>
+                
+                <h3>Conversiones Notables en Hechos</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Persona</th>
+                            <th>Contexto</th>
+                            <th>Referencia</th>
+                            <th>Significado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>3,000 en Pentecostés</td>
+                            <td>Predicación de Pedro</td>
+                            <td>2:41</td>
+                            <td>Nacimiento de la iglesia</td>
+                        </tr>
+                        <tr>
+                            <td>Eunuco Etíope</td>
+                            <td>Camino a Gaza</td>
+                            <td>8:26-39</td>
+                            <td>Primer converso africano</td>
+                        </tr>
+                        <tr>
+                            <td>Saulo/Pablo</td>
+                            <td>Camino a Damasco</td>
+                            <td>9:1-19</td>
+                            <td>Perseguidor convertido</td>
+                        </tr>
+                        <tr>
+                            <td>Cornelio</td>
+                            <td>Cesarea</td>
+                            <td>10:1-48</td>
+                            <td>Primeros gentiles</td>
+                        </tr>
+                        <tr>
+                            <td>Lidia</td>
+                            <td>Filipos</td>
+                            <td>16:11-15</td>
+                            <td>Primer converso en Europa</td>
+                        </tr>
+                        <tr>
+                            <td>Carcelero de Filipos</td>
+                            <td>Terremoto en prisión</td>
+                            <td>16:25-34</td>
+                            <td>Conversión milagrosa</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="themes-section">
+                <h2>Temas Principales</h2>
+                <p>Hechos desarrolla temas cruciales para la identidad y misión de la iglesia:</p>
+                
+                <div class="theme-container">
+                    <div class="theme-item">
+                        <div class="theme-name">1. El Espíritu Santo</div>
+                        <div>Guía, empodera y unge a la iglesia para su misión.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">2. Testimonio y Evangelismo</div>
+                        <div>Los creyentes proclaman a Jesús con poder y convicción.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">3. Crecimiento de la Iglesia</div>
+                        <div>Expansión numérica y geográfica a pesar de la oposición.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">4. Unidad en la Diversidad</div>
+                        <div>Judíos y gentiles unidos en una sola comunidad de fe.</div>
+                    </div>
+                    
+                    <div class="theme-item">
+                        <div class="theme-name">5. Persecución y Sufrimiento</div>
+                        <div>El crecimiento viene a través de pruebas y oposición.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">6. Providencia Divina</div>
+                        <div>Dios obra a través de circunstancias para cumplir sus propósitos.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">7. Oración</div>
+                        <div>La iglesia ora constantemente ante desafíos y decisiones.</div>
+                    </div>
+                    <div class="theme-item">
+                        <div class="theme-name">8. Milagros y Señales</div>
+                        <div>El poder divino autentica el mensaje del evangelio.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="key-verses">
+                <h2>Versículos Clave de Hechos</h2>
+                
+                <div class="grid-container">
+                    <div class="card">
+                        <h3>Gran Comisión Expandida</h3>
+                        <p class="scripture">"Pero recibiréis poder, cuando haya venido sobre vosotros el Espíritu Santo, y me seréis testigos en Jerusalén, en toda Judea, en Samaria, y hasta lo último de la tierra."</p>
+                        <p class="scripture-ref">Hechos 1:8</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Declaración de los Apóstoles</h3>
+                        <p class="scripture">"Porque no podemos dejar de decir lo que hemos visto y oído."</p>
+                        <p class="scripture-ref">Hechos 4:20</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Fundamento de la Salvación</h3>
+                        <p class="scripture">"Y en ningún otro hay salvación; porque no hay otro nombre bajo el cielo, dado a los hombres, en que podamos ser salvos."</p>
+                        <p class="scripture-ref">Hechos 4:12</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Propósito de la Vida</h3>
+                        <p class="scripture">"Pero Dios, dando fe a todos con haberle levantado de los muertos."</p>
+                        <p class="scripture-ref">Hechos 17:30-31</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chapters-list">
+                <h2>Los 28 Capítulos de Hechos</h2>
+                <p>Selecciona un capítulo para estudiar:</p>
+                
+                <div class="chapter-grid">
+                    <a href="hechos1.html" class="chapter-item">Capítulo 1</a>
+                    <a href="hechos2.html" class="chapter-item">Capítulo 2</a>
+                    <a href="hechos3.html" class="chapter-item">Capítulo 3</a>
+                    <a href="hechos4.html" class="chapter-item">Capítulo 4</a>
+                    <a href="hechos5.html" class="chapter-item">Capítulo 5</a>
+                    <a href="hechos6.html" class="chapter-item">Capítulo 6</a>
+                    <a href="hechos7.html" class="chapter-item">Capítulo 7</a>
+                    <a href="hechos8.html" class="chapter-item">Capítulo 8</a>
+                    <a href="hechos9.html" class="chapter-item">Capítulo 9</a>
+                    <a href="hechos10.html" class="chapter-item">Capítulo 10</a>
+                    <a href="hechos11.html" class="chapter-item">Capítulo 11</a>
+                    <a href="hechos12.html" class="chapter-item">Capítulo 12</a>
+                    <a href="hechos13.html" class="chapter-item">Capítulo 13</a>
+                    <a href="hechos14.html" class="chapter-item">Capítulo 14</a>
+                    <a href="hechos15.html" class="chapter-item">Capítulo 15</a>
+                    <a href="hechos16.html" class="chapter-item">Capítulo 16</a>
+                    <a href="hechos17.html" class="chapter-item">Capítulo 17</a>
+                    <a href="hechos18.html" class="chapter-item">Capítulo 18</a>
+                    <a href="hechos19.html" class="chapter-item">Capítulo 19</a>
+                    <a href="hechos20.html" class="chapter-item">Capítulo 20</a>
+                    <a href="hechos21.html" class="chapter-item">Capítulo 21</a>
+                    <a href="hechos22.html" class="chapter-item">Capítulo 22</a>
+                    <a href="hechos23.html" class="chapter-item">Capítulo 23</a>
+                    <a href="hechos24.html" class="chapter-item">Capítulo 24</a>
+                    <a href="hechos25.html" class="chapter-item">Capítulo 25</a>
+                    <a href="hechos26.html" class="chapter-item">Capítulo 26</a>
+                    <a href="hechos27.html" class="chapter-item">Capítulo 27</a>
+                    <a href="hechos28.html" class="chapter-item">Capítulo 28</a>
+                </div>
+            </div>
+            
+            <div class="navigation-buttons">
+                <a href="juan.html" class="nav-button">← Juan</a>
+                <a href="index.html" class="nav-button">🏠 Inicio</a>
+                <a href="romanos.html" class="nav-button">Romanos →</a>
+            </div>
+            
+            <div class="biblical-box">
+                <h3>Legado del Libro de Hechos</h3>
+                <p>Hechos ha dejado un impacto profundo en la comprensión de la misión de la iglesia:</p>
+                <ul>
+                    <li><strong>Modelo Misionero</strong> - Establece el patrón para la expansión del evangelio a todas las naciones</li>
+                    <li><strong>Doctrina del Espíritu Santo</strong> - Desarrolla la comprensión de la persona y obra del Espíritu</li>
+                    <li><strong>Historia de la Iglesia Primitiva</strong> - Proporciona el registro fundacional del movimiento cristiano</li>
+                    <li><strong>Teología de la Misión</strong> - Muestra cómo el evangelio trasciende barreras culturales y étnicas</li>
+                    <li><strong>Inspiración para el Discipulado</strong> - Presenta ejemplos de fe, valor y entrega al evangelio</li>
+                </ul>
+                
+                <p class="scripture">"Y perseveraban en la doctrina de los apóstoles, en la comunión unos con otros, en el partimiento del pan y en las oraciones."</p>
+                <p class="scripture-ref">Hechos 2:42</p>
+                
+                <p>El Libro de Hechos nos muestra el poder transformador del Espíritu Santo obrando a través de personas comunes para cumplir el propósito extraordinario de llevar el evangelio a todo el mundo. Su relato de valor frente a la persecución, fe en medio del peligro, y milagros que autentican el mensaje, continúa inspirando a la iglesia en su misión de ser testigos de Cristo hasta lo último de la tierra.</p>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2025 IN GOD WE TRUST</p>
+                <img class="logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg" alt="Logo">
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
