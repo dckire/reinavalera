@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-BYMJS3X12P');
-  </script>
-  <meta name="google-site-verification" content="KWZFlVdcT-h9cB1Qnj0LgSLJP-J-NS4bgjhnQG_c140" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Santa Biblia Reina-Valera - App Móvil</title>
@@ -58,6 +49,7 @@
       overflow: hidden;
       position: relative;
       padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+      touch-action: manipulation;
     }
 
     body::before {
@@ -93,6 +85,11 @@
       padding: 0 20px;
       font-size: 14px;
       font-weight: 600;
+      transition: var(--transition);
+    }
+
+    .status-bar.hidden {
+      transform: translateY(-100%);
     }
 
     .status-bar .time {
@@ -118,6 +115,11 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      transition: var(--transition);
+    }
+
+    .header.hidden {
+      transform: translateY(-100%);
     }
 
     .header-content {
@@ -456,6 +458,11 @@
       box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
       padding-bottom: env(safe-area-inset-bottom);
       z-index: 1000;
+      transition: var(--transition);
+    }
+
+    .bottom-nav.hidden {
+      transform: translateY(100%);
     }
 
     .nav-item {
@@ -861,8 +868,8 @@
           <span class="nav-text">Inicio</span>
         </a>
         <a href="mapas.html" class="nav-item">
-          <i class="fas fa-book nav-icon"></i>
-          <span class="nav-text">mapas</span>
+          <i class="fas fa-map nav-icon"></i>
+          <span class="nav-text">Mapas</span>
         </a>
         <a href="buscador.html" class="nav-item">
           <i class="fas fa-search nav-icon"></i>
@@ -881,6 +888,11 @@
   </div>
 
   <script>
+    // Variables para controlar la visibilidad de la navegación
+    let navigationVisible = true;
+    let lastTapTime = 0;
+    const tapDelay = 300; // Milisegundos entre toques
+
     // Actualizar hora en tiempo real
     function updateTime() {
       const now = new Date();
@@ -914,6 +926,53 @@
 
     btnAceptar.addEventListener("click", cerrarModal);
     btnCerrar.addEventListener("click", cerrarModal);
+
+    // Función para alternar la visibilidad de la navegación
+    function toggleNavigation() {
+      const bottomNav = document.querySelector('.bottom-nav');
+      const header = document.querySelector('.header');
+      const statusBar = document.querySelector('.status-bar');
+      
+      if (navigationVisible) {
+        // Ocultar navegación
+        bottomNav.classList.add('hidden');
+        header.classList.add('hidden');
+        statusBar.classList.add('hidden');
+        navigationVisible = false;
+      } else {
+        // Mostrar navegación
+        bottomNav.classList.remove('hidden');
+        header.classList.remove('hidden');
+        statusBar.classList.remove('hidden');
+        navigationVisible = true;
+      }
+    }
+
+    // Detectar toques en la pantalla
+    document.addEventListener('touchstart', function(e) {
+      const currentTime = new Date().getTime();
+      const tapLength = currentTime - lastTapTime;
+      
+      // Si es un doble toque, alternar la navegación
+      if (tapLength < tapDelay && tapLength > 0) {
+        e.preventDefault();
+        toggleNavigation();
+      }
+      
+      lastTapTime = currentTime;
+    });
+
+    // También alternar navegación con un solo toque largo (1 segundo)
+    let touchTimer;
+    document.addEventListener('touchstart', function(e) {
+      touchTimer = setTimeout(function() {
+        toggleNavigation();
+      }, 1000);
+    });
+
+    document.addEventListener('touchend', function() {
+      clearTimeout(touchTimer);
+    });
 
     // Efecto de aparición de elementos al hacer scroll
     const fadeElements = document.querySelectorAll('.fade-in');
@@ -973,12 +1032,13 @@
       });
     });
 
-    // Navegación entre pestañas
+    // Navegación entre pestañas - CORREGIDO: Permitir que los enlaces funcionen
     document.querySelectorAll('.nav-item').forEach(item => {
       item.addEventListener('click', function(e) {
-        e.preventDefault();
+        // Solo cambiar la clase activa, no prevenir el comportamiento por defecto
         document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
         this.classList.add('active');
+        // El enlace seguirá funcionando normalmente
       });
     });
 
