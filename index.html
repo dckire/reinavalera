@@ -11,9 +11,9 @@
   </script>
   <meta name="google-site-verification" content="KWZFlVdcT-h9cB1Qnj0LgSLJP-J-NS4bgjhnQG_c140" />
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reina-Valera 1569-1602 - La Santa Biblia</title>
-  <meta name="description" content="ANTIGUA VERSIÓN DE CASIODORO DE REINA (1569), REVISADA POR CIPRIANO DE VALERA (1602) Y COTEJADA POSTERIORMENTE CON DIVERSAS TRADUCCIONES, Y CON LOS TEXTOS HEBREO Y GRIEGO.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Santa Biblia Reina-Valera - App Móvil</title>
+  <meta name="description" content="ANTIGUA VERSIÓN DE CASIODORO DE REINA (1569), REVISADA POR CIPRIANO DE VALERA (1602) - App Móvil">
   <link rel="icon" type="image/jpeg" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMnK9YNHAeUqJMg3Ik0uXISwxlt3eeAc0uIj6Mr4SD-HPdRSNGWGv4wD-Bu9s19ejScpwxcYVX9SJ5ZfX-JbXlrRLvYrR-pqVvZMNIeK6zRaUlJzBbl-1VdJb-yg8bIAymQ9isL-YirKPYAA6FyN_s_1KfeZlNd7i-cj8VkW7_XRiSZuqlPcpd26GcBAs/s200/IMG-20250113-WA0002.jpg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Crimson+Text:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -29,16 +29,24 @@
       --color-dark: #3C2A1E;
       --color-text: #333;
       --color-white: #FFFFFF;
-      --shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-      --shadow-heavy: 0 8px 30px rgba(0, 0, 0, 0.25);
+      --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      --shadow-heavy: 0 4px 15px rgba(0, 0, 0, 0.2);
       --transition: all 0.3s ease;
       --border-radius: 12px;
+      --header-height: 60px;
+      --nav-height: 70px;
     }
 
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      height: 100%;
+      overflow: hidden;
     }
 
     body {
@@ -46,8 +54,10 @@
       background-color: var(--color-light);
       color: var(--color-text);
       line-height: 1.6;
-      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 极 2 2zM12 60c1.105 0 2-.895 2-2s-.895-极-2-2-2 .895-2 2 .895 2 2 2z' fill='%23d2b48c' fill-opacity='0.2' fill-rule='evenodd'/%3E%3C/svg%3E");
+      height: 100vh;
+      overflow: hidden;
       position: relative;
+      padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
     }
 
     body::before {
@@ -63,17 +73,47 @@
       z-index: -1;
     }
 
+    /* App Container */
+    .app-container {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+      overflow: hidden;
+    }
+
+    /* Status Bar Simulation */
+    .status-bar {
+      height: 44px;
+      background: var(--color-primary);
+      color: var(--color-white);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .status-bar .time {
+      font-weight: 700;
+    }
+
+    .status-bar .icons {
+      display: flex;
+      gap: 5px;
+    }
+
+    /* Header */
     .header {
+      height: var(--header-height);
       background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-dark) 100%);
       color: var(--color-white);
-      padding: 1.2rem;
-      text-align: center;
+      padding: 0 15px;
       box-shadow: var(--shadow-heavy);
-      position: fixed;
-      width: 100%;
+      position: sticky;
       top: 0;
       z-index: 1000;
-      transition: var(--transition);
       border-bottom: 3px solid var(--color-gold);
       display: flex;
       justify-content: space-between;
@@ -81,54 +121,62 @@
     }
 
     .header-content {
-      max-width: 1200px;
-      margin: 0 auto;
       display: flex;
       flex-direction: column;
       align-items: center;
-      position: relative;
-      width: 100%;
+      flex: 1;
     }
 
     .title {
       font-family: 'MedievalSharp', cursive;
-      font-size: 2.2rem;
-      margin-bottom: 0.5rem;
-      text-shadow: 2px 2px 4px rgba(0, 0, 极, 0.5);
+      font-size: 1.4rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
       letter-spacing: 1px;
       color: var(--color-gold);
+      text-align: center;
     }
 
     .subtitle {
       font-family: 'Cinzel', serif;
-      font-size: 1rem;
+      font-size: 0.8rem;
       font-weight: 400;
-      margin-bottom: 0.5rem;
       color: var(--color-secondary);
+      margin-top: -2px;
     }
 
-    .date {
-      font-style: italic;
-      font-size: 0.9rem;
-      color: var(--color-secondary);
+    .menu-toggle {
+      background: none;
+      border: none;
+      color: var(--color-white);
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 4px;
+      transition: var(--transition);
     }
 
-    .container {
-      max-width: 1200px;
-      margin: 130px auto 20px;
-      padding: 0 20px;
+    .menu-toggle:active {
+      background-color: rgba(0, 0, 0, 0.2);
+      transform: scale(0.95);
+    }
+
+    /* Main Content */
+    .main-content {
+      flex: 1;
+      overflow-y: auto;
+      padding: 15px;
+      padding-bottom: calc(var(--nav-height) + 15px);
+      -webkit-overflow-scrolling: touch;
     }
 
     .hero-section {
       text-align: center;
-      margin-bottom: 3rem;
-      padding: 3rem 2rem;
-      background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
-                  url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="%238B4513" stroke-width="2" stroke-opacity="0.1" stroke-dasharray="5,5"/></svg>');
+      margin-bottom: 2rem;
+      padding: 2rem 1rem;
+      background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95));
       border-radius: var(--border-radius);
       box-shadow: var(--shadow);
       position: relative;
-      overflow: hidden;
       border: 1px solid rgba(139, 69, 19, 0.2);
     }
 
@@ -138,15 +186,15 @@
       top: 0;
       left: 0;
       right: 0;
-      height: 5px;
+      height: 4px;
       background: linear-gradient(90deg, var(--color-gold), var(--color-primary), var(--color-gold));
     }
 
     .hero-section h1 {
       font-family: 'Playfair Display', serif;
       color: var(--color-primary);
-      margin-bottom: 1.5rem;
-      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
       position: relative;
       display: inline-block;
     }
@@ -154,31 +202,67 @@
     .hero-section h1::after {
       content: "";
       position: absolute;
-      bottom: -10px;
+      bottom: -8px;
       left: 50%;
       transform: translateX(-50%);
-      width: 100px;
-      height: 3px;
+      width: 80px;
+      height: 2px;
       background: var(--color-gold);
     }
 
     .hero-section p {
-      font-size: 1.2rem;
-      max-width: 800px;
-      margin: 0 auto;
-      line-height: 1.8;
+      font-size: 1rem;
+      line-height: 1.6;
     }
 
-    .main-content {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2.5rem;
+    .featured-verses {
+      margin: 2rem 0;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: linear-gradient(to right, var(--color-primary), var(--color-dark));
+      padding: 1.5rem;
+      color: var(--color-white);
     }
 
-    @media (min-width: 992px) {
-      .main-content {
-        grid-template-columns: 2fr 1fr;
-      }
+    .featured-verses h2 {
+      font-family: 'Cinzel', serif;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: var(--color-gold);
+      font-size: 1.5rem;
+    }
+
+    .verses-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .verse-card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1.2rem;
+      border-radius: var(--border-radius);
+      border-left: 4px solid var(--color-gold);
+      transition: var(--transition);
+    }
+
+    .verse-card:active {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .verse-card p {
+      font-style: italic;
+      line-height: 1.6;
+      margin-bottom: 0.8rem;
+    }
+
+    .verse-card .verse-ref {
+      text-align: right;
+      font-weight: bold;
+      color: var(--color-secondary);
+      font-size: 0.9rem;
     }
 
     .card {
@@ -188,19 +272,20 @@
       box-shadow: var(--shadow);
       transition: var(--transition);
       border: 1px solid rgba(139, 69, 19, 0.1);
+      margin-bottom: 1.5rem;
     }
 
-    .card:hover {
-      transform: translateY(-8px);
+    .card:active {
+      transform: translateY(-2px);
       box-shadow: var(--shadow-heavy);
     }
 
     .card-header {
       background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-dark) 100%);
       color: var(--color-white);
-      padding: 1.2rem;
+      padding: 1rem;
       font-family: 'Cinzel', serif;
-      font-size: 1.4rem;
+      font-size: 1.1rem;
       position: relative;
       text-align: center;
     }
@@ -211,38 +296,24 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 3px;
+      height: 2px;
       background: var(--color-gold);
     }
 
     .card-body {
-      padding: 1.8rem;
+      padding: 1.2rem;
     }
 
     .verse-of-day {
-      border-left: 5px solid var(--color-accent);
+      border-left: 4px solid var(--color-accent);
       background: linear-gradient(to right, rgba(210, 180, 140, 0.1) 0%, rgba(255, 255, 255, 0.5) 100%);
-      position: relative;
-    }
-
-    .verse-of-day::before {
-      content: """;
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      font-family: 'Playfair Display', serif;
-      font-size: 5rem;
-      color: rgba(139, 69, 19, 0.1);
-      line-height: 1;
     }
 
     .verse-of-day blockquote {
       font-style: italic;
-      font-size: 1.3rem;
-      line-height: 1.8;
-      margin-bottom: 1.5rem;
-      position: relative;
-      z-index: 1;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
       text-align: center;
     }
 
@@ -251,7 +322,38 @@
       text-align: right;
       font-weight: bold;
       color: var(--color-accent);
+      font-size: 1rem;
+    }
+
+    .bible-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .bible-button {
+      background: linear-gradient(to bottom, var(--color-primary), var(--color-dark));
+      color: var(--color-white);
+      border: none;
+      padding: 1.2rem 1.5rem;
+      border-radius: 50px;
+      font-family: 'Cinzel', serif;
       font-size: 1.1rem;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bible-button:active {
+      transform: scale(0.98);
+      background: linear-gradient(to bottom, var(--color-dark), var(--color-primary));
     }
 
     .reading-plan ul {
@@ -259,8 +361,8 @@
     }
 
     .reading-plan li {
-      margin-bottom: 1rem;
-      padding-left: 1.8rem;
+      margin-bottom: 0.8rem;
+      padding-left: 1.5rem;
       position: relative;
       border-bottom: 1px dashed rgba(139, 69, 19, 0.1);
       padding-bottom: 0.8rem;
@@ -289,18 +391,20 @@
       padding: 0.5rem 1rem;
       border: 1px solid var(--color-primary);
       border-radius: 30px;
+      text-align: center;
+      width: 100%;
     }
 
-    .reading-plan a:hover {
+    .reading-plan a:active {
       color: var(--color-white);
       background-color: var(--color-primary);
     }
 
     .resources-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1.5rem;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1rem;
     }
 
     .resource-item {
@@ -308,318 +412,88 @@
       text-decoration: none;
       color: var(--color-text);
       transition: var(--transition);
+      padding: 0.5rem;
     }
 
-    .resource-item:hover {
-      transform: translateY(-5px);
+    .resource-item:active {
+      transform: translateY(-3px);
     }
 
     .resource-icon {
-      width: 90px;
-      height: 90px;
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
       background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 0.8rem;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      margin: 0 auto 0.5rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
       border: 2px solid var(--color-gold);
       transition: var(--transition);
     }
 
-    .resource-item:hover .resource-icon {
-      background: linear-gradient(135deg, var(--color-primary) 0%,极 var(--color-dark) 100%);
+    .resource-item:active .resource-icon {
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-dark) 100%);
     }
 
     .resource-icon i {
-      font-size: 2.2rem;
+      font-size: 1.5rem;
       color: var(--color-white);
     }
 
-    .bible-buttons {
+    /* Bottom Navigation */
+    .bottom-nav {
+      height: var(--nav-height);
+      background: var(--color-white);
       display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      justify-content: center;
-      margin: 3rem 0;
-    }
-
-    .bible-button {
-      flex: 1;
-      min-width: 280px;
-      background: linear-gradient(to bottom, var(--color-primary), var(--color-dark));
-      color: var(--color-white);
-      border: none;
-      padding: 1.2rem 2.5rem;
-      border-radius: 50px;
-      font-family: 'Cinzel', serif;
-      font-size: 1.3rem;
-      cursor: pointer;
-      transition: var(--transition);
-      box-shadow: var(--shadow);
-      display: flex;
+      justify-content: space-around;
       align-items: center;
-      justify-content: center;
-      gap: 12px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .bible-button::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-      transition: 0.5s;
-    }
-
-    .bible-button:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-    }
-
-    .bible-button:hover::before {
-      left: 100%;
-    }
-
-    .bible-button:active {
-      transform: translateY(0);
-    }
-
-    .featured-verses {
-      margin: 3rem 0;
-      border-radius: var(--border-radius);
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      background: linear-gradient(to right, var(--color-primary), var(--color-dark));
-      padding: 2.5rem;
-      color: var(--color-white);
-    }
-
-    .featured-verses h2 {
-      font-family: 'Cinzel', serif;
-      text-align: center;
-      margin-bottom: 2rem;
-      color: var(--color-gold);
-      font-size: 2rem;
-    }
-
-    .verses-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .verse-card {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 1.5rem;
-      border-radius: var(--border-radius);
-      border-left: 4px solid var(--color-gold);
-      transition: var(--transition);
-    }
-
-    .verse-card:hover {
-      transform: translateY(-5px);
-      background: rgba(255, 255, 255, 0.15);
-    }
-
-    .verse-card p {
-      font-style: italic;
-      line-height: 1.6;
-      margin-bottom: 1rem;
-    }
-
-    .verse-card .verse-ref {
-      text-align: right;
-      font-weight: bold;
-      color: var(--color-secondary);
-    }
-
-    .footer {
-      background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-primary) 100%);
-      color: var(--color-white);
-      padding: 3rem 0 2rem;
-      margin-top: 5rem;
-      position: relative;
-      border-top: 3px solid var(--color-gold);
-    }
-
-    .footer::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 5px;
-      background: linear-gradient(90deg, var(--color-gold), var(--color-secondary), var(--color-gold));
-    }
-
-    .footer-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-      text-align: center;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-      margin: 1.5rem 0;
-    }
-
-    .footer-links a {
-      color: var(--color-white);
-      text-decoration: none;
-      transition: var(--transition);
-      font-size: 1.1rem;
-      position: relative;
-      padding: 0.3rem 0;
-    }
-
-    .footer-links a::after {
-      content: "";
-      position: absolute;
+      position: fixed;
       bottom: 0;
       left: 0;
-      width: 0;
-      height: 2px;
-      background: var(--color-gold);
-      transition: var(--transition);
+      right: 0;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+      padding-bottom: env(safe-area-inset-bottom);
+      z-index: 1000;
     }
 
-    .footer-links a:hover {
-      color: var(--color-secondary);
-    }
-
-    .footer-links a:hover::after {
-      width: 100%;
-    }
-
-    .footer-logo {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      margin: 1.5rem auto;
-      display: block;
-      border: 3px solid var(--color-gold);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-      transition: var(--transition);
-    }
-
-    .footer-logo:hover {
-      transform: rotate(5deg) scale(1.05);
-    }
-
-    .copyright {
-      margin-top: 1.5rem;
-      font-size: 1rem;
-      color: var(--color-secondary);
-    }
-
-    .modal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.85);
-      z-index: 2000;
+    .nav-item {
+      display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      backdrop-filter: blur(5px);
-    }
-
-    .modal-content {
-      background: linear-gradient(to bottom, var(--color-light), var(--color-white));
-      padding: 2.5rem;
-      border-radius: var(--border-radius);
-      max-width: 500px;
-      width: 90%;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 极.4);
-      position: relative;
-      border: 2px solid var(--color-gold);
-    }
-
-    .modal-close {
-      position: absolute;
-      top: 15px;
-      right: 20px;
-      font-size: 1.8rem;
-      cursor: pointer;
-      color: var(--color-accent);
+      gap: 4px;
+      text-decoration: none;
+      color: var(--color-text);
+      flex: 1;
+      padding: 8px 0;
       transition: var(--transition);
     }
 
-    .modal-极:hover {
-      transform: rotate(90deg);
-    }
-
-    .modal h2 {
-      font-family: 'Cinzel', serif;
+    .nav-item.active {
       color: var(--color-primary);
-      margin-bottom: 1.5rem;
-      font-size: 1.8rem;
     }
 
-    .modal p {
+    .nav-icon {
       font-size: 1.2rem;
-      margin-bottom: 2rem;
-      line-height: 1.6;
     }
 
-    #btn-aceptar {
-      min-width: 150px;
+    .nav-text {
+      font-size: 0.7rem;
+      font-weight: 500;
     }
 
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Menú lateral para móviles */
-    .menu-toggle {
-      display: block;
-      background: none;
-      border: none;
-      color: var(--color-white);
-      font-size: 1.8rem;
-      cursor: pointer;
-      z-index: 1001;
-      padding: 0.5rem;
-      border-radius: 4px;
-      background-color: rgba(0, 0, 0, 0.2);
-      transition: var(--transition);
-    }
-
-    .menu-toggle:hover {
-      background-color: rgba(0, 0, 0, 0.4);
-      transform: scale(1.1);
-    }
-
+    /* Side Menu */
     .side-menu {
       position: fixed;
       top: 0;
-      right: -300px;
-      width: 300px;
+      right: -100%;
+      width: 85%;
       height: 100%;
       background: linear-gradient(to bottom, var(--color-dark), var(--color-primary));
-      z-index: 1000;
+      z-index: 2000;
       transition: var(--transition);
-      padding: 2rem;
+      padding: 2rem 1.5rem;
       box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
       overflow-y: auto;
     }
@@ -640,33 +514,35 @@
     .side-menu-title {
       font-family: 'Cinzel', serif;
       color: var(--color-gold);
-      font-size: 1.5rem;
+      font-size: 1.3rem;
     }
 
     .side-menu-close {
       background: none;
       border: none;
       color: var(--color-white);
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       cursor: pointer;
+      padding: 5px;
     }
 
     .side-menu-links {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 0.8rem;
     }
 
     .side-menu-links a {
       color: var(--color-white);
       text-decoration: none;
       padding: 0.8rem 1rem;
-      border-radius: 5px;
+      border-radius: 8px;
       transition: var(--transition);
       border-left: 3px solid transparent;
+      font-size: 1rem;
     }
 
-    .side-menu-links a:hover {
+    .side-menu-links a:active {
       background: rgba(255, 255, 255, 0.1);
       border-left: 3px solid var(--color-gold);
     }
@@ -679,186 +555,256 @@
       width: 100%;
       height: 100%;
       background: rgba(0, 0, 0, 0.7);
-      z-index: 999;
+      z-index: 1999;
     }
 
     .overlay.active {
       display: block;
     }
 
-    /* Media Queries para Responsividad */
-    @media (max-width: 1200px) {
-      .container {
-        margin: 120px auto 20px;
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.85);
+      z-index: 3000;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(5px);
+      padding: 15px;
+    }
+
+    .modal-content {
+      background: linear-gradient(to bottom, var(--color-light), var(--color-white));
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      position: relative;
+      border: 2px solid var(--color-gold);
+      max-width: 400px;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--color-accent);
+      transition: var(--transition);
+    }
+
+    .modal-close:active {
+      transform: rotate(90deg);
+    }
+
+    .modal h2 {
+      font-family: 'Cinzel', serif;
+      color: var(--color-primary);
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .modal p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+
+    #btn-aceptar {
+      min-width: 120px;
+      padding: 0.8rem 1.5rem;
+    }
+
+    /* Footer */
+    .footer {
+      background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-primary) 100%);
+      color: var(--color-white);
+      padding: 2rem 0 1rem;
+      margin-top: 2rem;
+      position: relative;
+      border-top: 3px solid var(--color-gold);
+    }
+
+    .footer-content {
+      text-align: center;
+      padding: 0 15px;
+    }
+
+    .footer-logo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin: 0 auto 1rem;
+      display: block;
+      border: 3px solid var(--color-gold);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .copyright {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: var(--color-secondary);
+    }
+
+    /* Animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* App Frame for Demo */
+    .app-frame {
+      width: 100%;
+      max-width: 414px;
+      height: 100%;
+      margin: 0 auto;
+      background: var(--color-light);
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .notch {
+      width: 180px;
+      height: 30px;
+      background: var(--color-dark);
+      border-radius: 0 0 20px 20px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1001;
+    }
+
+    /* Media Queries */
+    @media (min-width: 415px) {
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 20px;
+      }
+      
+      .app-frame {
+        height: 90vh;
+        border: 12px solid #1a1a1a;
+        border-radius: 40px;
+      }
+      
+      .notch {
+        display: block;
       }
     }
 
-    @media (max-width: 992px) {
+    @media (max-width: 320px) {
       .title {
-        font-size: 1.8rem;
-      }
-
-      .hero-section h1 {
-        font-size: 2.2rem;
-      }
-
-      .verse-of-day blockquote {
-        font-size: 1.1rem;
-      }
-
-      .verses-container {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .header {
-        padding: 1rem;
-      }
-
-      .title {
-        font-size: 1.6rem;
-      }
-
-      .hero-section {
-        padding: 2rem 1rem;
-      }
-
-      .hero-section h1 {
-        font-size: 1.8rem;
-      }
-
-      .hero-section p {
-        font-size: 1rem;
-      }
-
-      .bible-button {
-        min-width: 100%;
-        padding: 1rem 1.5rem;
-        font-size: 1.1rem;
-      }
-
-      .footer-links {
-        flex-direction: column;
-        gap: 1rem;
-      }
-
-      .card-body {
-        padding: 1.5rem;
-      }
-
-      .featured-verses {
-        padding: 1.5rem;
-      }
-    }
-
-    @media (max-width: 576px) {
-      .title {
-        font-size: 1.4rem;
-      }
-
-      .subtitle {
-        font-size: 0.9rem;
-      }
-
-      .hero-section h1 {
-        font-size: 1.6rem;
-      }
-
-      .card-header {
         font-size: 1.2rem;
-        padding: 1rem;
       }
-
-      .resource-icon {
-        width: 70px;
-        height: 70px;
+      
+      .hero-section h1 {
+        font-size: 1.5rem;
       }
-
-      .resource-icon i {
-        font-size: 1.8rem;
-      }
-
-      .footer-logo {
-        width: 80px;
-        height: 80px;
-      }
-
-      .side-menu {
-        width: 250px;
-        right: -250px;
+      
+      .bible-button {
+        padding: 1rem 1.2rem;
+        font-size: 1rem;
       }
     }
   </style>
 </head>
 <body>
-  <header class="header">
-    <button class="menu-toggle" id="menuToggle">
-      <i class="fas fa-bible"></i>
-    </button>
-    <div class="header-content">
-      <h1 class="title">LA SANTA BIBLIA</h1>
-      <p class="subtitle">Reina-Valera 1569-1602</p>
-      <p class="date" id="fecha-actual"></p>
-    </div>
-  </header>
-
-  <!-- Menú lateral -->
-  <div class="overlay" id="overlay"></div>
-  <div class="side-menu" id="sideMenu">
-    <div class="side-menu-header">
-      <h2 class="side-menu-title">Navegación</h2>
-      <button class="side-menu-close" id="sideMenuClose">
-        <i class="fas fa-times"></i>
-      </button>
-    </div>
-    <div class="side-menu-links">
-      <a href="acercade.html">Acerca de</a>
-      
-      <a href="plan-de-lectura.html">Plan de Lectura</a>
-      <a href="contacto.html">Contacto</a>
-      <a href="notas.html">Notas</a>
-      
-      <a href="numerosdeemergencia.html">Números de Emergencia</a>
-      
-    </div>
-  </div>
-
-  <div id="nota-advertencia" class="modal">
-    <div class="modal-content">
-      <span class="modal-close" id="btn-cerrar">&times;</span>
-      <h2>Nota Importante</h2>
-      <p>📖✨ No dejes que la pantalla reemplace la Palabra impresa ✨📖</p>
-      <button id="btn-aceptar" class="bible-button">OK</button>
-    </div>
-  </div>
-
-  <div class="container">
-    <section class="hero-section fade-in">
-      <h1>La Palabra Eterna de Dios</h1>
-      <p>ANTIGUA VERSIÓN DE CASIODORO DE REINA (1569), REVISADA POR CIPRIANO DE VALERA (1602) Y COTEJADA POSTERIORMENTE CON DIVERSAS TRADUCCIONES, Y CON LOS TEXTOS HEBREO Y GRIEGO.</p>
-    </section>
-
-    <section class="featured-verses fade-in">
-      <h2>Versículos Destacados</h2>
-      <div class="verses-container">
-        <div class="verse-card">
-          <p>"Porque de tal manera amó Dios al mundo, que ha dado a su Hijo unigénito, para que todo aquel que en él cree, no se pierda, mas tenga vida eterna."</p>
-          <div class="verse-ref">Juan 3:16</div>
-        </div>
-        <div class="verse-card">
-          <p>"El Señor es mi pastor; nada me faltará. En lugares de delicados pastos me hará yacer: junto a aguas de reposo me pastoreará."</p>
-          <div class="verse-ref">Salmos 23:1-2</div>
-        </div>
-        <div class="verse-card">
-          <p>"Fiel es el que os llama, el cual también lo hará. Estad siempre gozosos. Orad sin cesar. Dad gracias en todo; porque esta es la voluntad de Dios para con vosotros en Cristo Jesús."</p>
-          <div class="verse-ref">1 Tesalonicenses</div>
+  <div class="app-frame">
+    <div class="notch"></div>
+    <div class="app-container">
+      <!-- Status Bar Simulation -->
+      <div class="status-bar">
+        <div class="time" id="current-time">9:41</div>
+        <div class="icons">
+          <i class="fas fa-signal"></i>
+          <i class="fas fa-wifi"></i>
+          <i class="fas fa-battery-three-quarters"></i>
         </div>
       </div>
-    </section>
 
-    <div class="main-content">
-      <div class="left-column">
+      <!-- Header -->
+      <header class="header">
+        <button class="menu-toggle" id="menuToggle">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="header-content">
+          <h1 class="title">LA SANTA BIBLIA</h1>
+          <p class="subtitle">Reina-Valera 1569-1602</p>
+        </div>
+      </header>
+
+      <!-- Menú lateral -->
+      <div class="overlay" id="overlay"></div>
+      <div class="side-menu" id="sideMenu">
+        <div class="side-menu-header">
+          <h2 class="side-menu-title">Navegación</h2>
+          <button class="side-menu-close" id="sideMenuClose">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="side-menu-links">
+          <a href="acercade.html">Acerca de</a>
+          <a href="plan-de-lectura.html">Plan de Lectura</a>
+          <a href="contacto.html">Contacto</a>
+          <a href="notas.html">Notas</a>
+          <a href="numerosdeemergencia.html">Números de Emergencia</a>
+        </div>
+      </div>
+
+      <!-- Modal de advertencia -->
+      <div id="nota-advertencia" class="modal">
+        <div class="modal-content">
+          <span class="modal-close" id="btn-cerrar">&times;</span>
+          <h2>Nota Importante</h2>
+          <p>📖✨ No dejes que la pantalla reemplace la Palabra impresa ✨📖</p>
+          <button id="btn-aceptar" class="bible-button">OK</button>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <main class="main-content" id="main-content">
+        <section class="hero-section fade-in">
+          <h1>La Palabra Eterna de Dios</h1>
+          <p>ANTIGUA VERSIÓN DE CASIODORO DE REINA (1569), REVISADA POR CIPRIANO DE VALERA (1602) Y COTEJADA CON LOS TEXTOS HEBREO Y GRIEGO.</p>
+        </section>
+
+        <section class="featured-verses fade-in">
+          <h2>Versículos Destacados</h2>
+          <div class="verses-container">
+            <div class="verse-card">
+              <p>"Porque de tal manera amó Dios al mundo, que ha dado a su Hijo unigénito, para que todo aquel que en él cree, no se pierda, mas tenga vida eterna."</p>
+              <div class="verse-ref">Juan 3:16</div>
+            </div>
+            <div class="verse-card">
+              <p>"El Señor es mi pastor; nada me faltará. En lugares de delicados pastos me hará yacer: junto a aguas de reposo me pastoreará."</p>
+              <div class="verse-ref">Salmos 23:1-2</div>
+            </div>
+            <div class="verse-card">
+              <p>"Fiel es el que os llama, el cual también lo hará. Estad siempre gozosos. Orad sin cesar. Dad gracias en todo; porque esta es la voluntad de Dios para con vosotros en Cristo Jesús."</p>
+              <div class="verse-ref">1 Tesalonicenses 5:24, 16-18</div>
+            </div>
+          </div>
+        </section>
+
         <section class="card verse-of-day fade-in">
           <div class="card-header">
             <h2>Versículo del Día</h2>
@@ -880,83 +826,75 @@
             <i class="fas fa-book-open"></i> Nuevo Testamento
           </button>
         </div>
-      </div>
 
-      <div class="right-column">
-        <section class="card reading-plan fade-in">
-          <div class="card-header">
-            <h2>Plan de Lectura</h2>
-          </div>
-          <div class="card-body">
-            <h3>Parábolas del Antiguo Testamento</h3>
-            <ul>
-              <li>Los árboles eligen su rey <strong>Jueces 9:7-15</strong></li>
-              <li>El cedro del Líbano <strong>Ezequiel 31</strong></li>
-              <li>La viña estéril <strong>Isaías 5:1-6</strong></li>
-            </ul>
-
-            <h3>Parábolas del Nuevo Testamento</h3>
-            <ul>
-              <li>La parábola del sembrador <strong>Mateo 13:1-23</strong></li>
-              <li>La parábola de la oveja perdida <strong>Lucas 15:1-7</strong></li>
-              <li>La parábola del hijo pródigo <strong>Lucas 15:11-32</strong></li>
-              <li>La parábola de los talentos <strong>Mateo 25:14-30</strong></li>
-            </ul>
-            <a href="parabolas.html">Ver plan completo</a>
-          </div>
-        </section>
-
-        <section class="card resources fade-in">
-          <div class="card-header">
-            <h2>Recursos Destacados</h2>
-          </div>
-          <div class="card-body">
-            <div class="resources-grid">
-              <a href="mapas.html" class="resource-item">
-                <div class="resource-icon">
-                  <i class="fas fa-map"></i>
-                </div>
-                <p>Mapas Bíblicos</p>
-              </a>
-              <a href="buscador.html" class="resource-item">
-                <div class="resource-icon">
-                  <i class="fas fa-search"></i>
-                </div>
-                <p>Buscador</p>
-              </a>
-              <a href="estudios.html" class="resource-item">
-                <div class="resource-icon">
-                  <i class="fas fa-graduation-cap"></i>
-                </div>
-                <p>Estudios</p>
-              </a>
+        <div class="main-grid">
+          <section class="card reading-plan fade-in">
+            <div class="card-header">
+              <h2>Plan de Lectura</h2>
             </div>
-          </div>
-        </section>
-      </div>
+            <div class="card-body">
+              <h3>Parábolas del Antiguo Testamento</h3>
+              <ul>
+                <li>Los árboles eligen su rey <strong>Jueces 9:7-15</strong></li>
+                <li>El cedro del Líbano <strong>Ezequiel 31</strong></li>
+                <li>La viña estéril <strong>Isaías 5:1-6</strong></li>
+              </ul>
+
+              <h3>Parábolas del Nuevo Testamento</h3>
+              <ul>
+                <li>La parábola del sembrador <strong>Mateo 13:1-23</strong></li>
+                <li>La parábola de la oveja perdida <strong>Lucas 15:1-7</strong></li>
+                <li>La parábola del hijo pródigo <strong>Lucas 15:11-32</strong></li>
+              </ul>
+              <a href="parabolas.html">Ver plan completo</a>
+            </div>
+          </section>
+
+         
+        </div>
+      </main>
+
+      <!-- Bottom Navigation -->
+      <nav class="bottom-nav">
+        <a href="index.html" class="nav-item active">
+          <i class="fas fa-home nav-icon"></i>
+          <span class="nav-text">Inicio</span>
+        </a>
+        <a href="mapas.html" class="nav-item">
+          <i class="fas fa-book nav-icon"></i>
+          <span class="nav-text">mapas</span>
+        </a>
+        <a href="buscador.html" class="nav-item">
+          <i class="fas fa-search nav-icon"></i>
+          <span class="nav-text">Buscar</span>
+        </a>
+        <a href="notas.html" class="nav-item">
+          <i class="fas fa-bookmark nav-icon"></i>
+          <span class="nav-text">Guardados</span>
+        </a>
+        <a href="ajustes.html" class="nav-item">
+          <i class="fas fa-cog nav-icon"></i>
+          <span class="nav-text">Ajustes</span>
+        </a>
+      </nav>
     </div>
   </div>
 
-  <footer class="footer">
-    <div class="footer-content">
-      <img class="footer-logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjuMdBfjKdAlJ2ozNJf7RvzRJduxMmx_QReDjKoxy73o_KPylRdkip1p20U4BGkKfZG-0BjuR5UC2s1II7IOqUHW0E8lkhZpDB2iSbr9Cl8bcescbphxQpvYdWpgMNz2ne9qQj7MGoT3-wH2P7cmkEYPuLdl4BpbcEG8fcsUArCAbVsiMaiWnyywzTIcd8/s200/IMG-20250213-WA0020.jpg" alt="Logo Santa Biblia">
-      <div class="footer-links">
-        
-      </div>
-      <p class="copyright">&copy; 2025 IN GOD WE TRUST | La Santa Biblia Reina-Valera</p>
-    </div>
-  </footer>
-
   <script>
-    // Fecha actual
-    const fechaActual = document.getElementById('fecha-actual');
-    const fecha = new Date();
-    const dia = fecha.getDate();
-    const mes = fecha.getMonth() + 1;
-    const año = fecha.getFullYear();
-    const meses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
-    const fechaFormateada = `${dia} de ${meses[mes - 1]} de ${año}`;
-    fechaActual.textContent = fechaFormateada;
+    // Actualizar hora en tiempo real
+    function updateTime() {
+      const now = new Date();
+      const timeString = now.toLocaleTimeString('es-ES', { 
+        hour: '2-digit', 
+        minute: '2-digit',
+        hour12: false 
+      });
+      document.getElementById('current-time').textContent = timeString;
+    }
+
+    // Actualizar cada minuto
+    updateTime();
+    setInterval(updateTime, 60000);
 
     // Nota de advertencia
     const modal = document.getElementById("nota-advertencia");
@@ -994,19 +932,6 @@
     window.addEventListener('scroll', checkFade);
     window.addEventListener('load', checkFade);
 
-    // Cambio de header al hacer scroll
-    const header = document.querySelector('.header');
-
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > 50) {
-        header.style.background = "linear-gradient(135deg, var(--color-dark) 0%, var(--color-primary) 100%)";
-        header.style.padding = "0.8rem 1rem";
-      } else {
-        header.style.background = "linear-gradient(135deg, var(--color-primary) 0%, var(--color-dark) 100%)";
-        header.style.padding = "1.2rem";
-      }
-    });
-
     // Menú lateral para móviles
     const menuToggle = document.getElementById('menuToggle');
     const sideMenu = document.getElementById('sideMenu');
@@ -1036,6 +961,26 @@
     if (overlay) {
       overlay.addEventListener('click', closeSideMenu);
     }
+
+    // Efectos táctiles en botones y tarjetas
+    document.querySelectorAll('.card, .bible-button, .resource-item, .nav-item').forEach(element => {
+      element.addEventListener('touchstart', function() {
+        this.style.opacity = '0.7';
+      });
+      
+      element.addEventListener('touchend', function() {
+        this.style.opacity = '1';
+      });
+    });
+
+    // Navegación entre pestañas
+    document.querySelectorAll('.nav-item').forEach(item => {
+      item.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
 
     // Inicializar checkFade al cargar la página
     document.addEventListener('DOMContentLoaded', function() {
