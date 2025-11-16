@@ -1,18 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BYMJS3X12P"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-BYMJS3X12P');
-    </script>
-    <meta name="google-site-verification" content="KWZFlVdcT-h9cB1Qnj0LgSLJP-J-NS4bgjhnQG_c140" />
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Biblia Reina Valera 1569-1602</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>La Biblia Reina Valera 1569-1602 - Antiguo Testamento</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
@@ -25,12 +16,20 @@
             --color-gold: #d4af37;
             --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             --transition: all 0.3s ease;
+            --header-height: 60px;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html, body {
+            height: 100%;
+            overflow: hidden;
+            touch-action: manipulation;
         }
 
         body {
@@ -38,80 +37,154 @@
             background-color: var(--color-light);
             color: var(--color-dark);
             line-height: 1.6;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238e6c4d' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            position: relative;
+            padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+        /* Fondo de pantalla completa */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1518607692857-5d4f18e57c1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.15;
+            z-index: -1;
+        }
+
+        /* Efecto de desvanecimiento en los bordes */
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, transparent 0%, rgba(248, 245, 240, 0.8) 100%);
+            z-index: -1;
+        }
+
+        /* App Container */
+        .app-container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        /* Status Bar Simulation */
+        .status-bar {
+            height: 44px;
+            background: var(--color-primary);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .status-bar.hidden {
+            transform: translateY(-100%);
+        }
+
+        .status-bar .time {
+            font-weight: 700;
+        }
+
+        .status-bar .icons {
+            display: flex;
+            gap: 5px;
         }
 
         /* Header */
         header {
+            height: var(--header-height);
             background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-dark) 100%);
             color: white;
-            padding: 20px 0;
-            text-align: center;
+            padding: 0 15px;
             box-shadow: var(--shadow);
-            position: relative;
-            overflow: hidden;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid var(--color-gold);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
         }
 
-        header::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
-            z-index: 0;
+        header.hidden {
+            transform: translateY(-100%);
         }
 
         .header-content {
-            position: relative;
-            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
         }
 
         .logo {
             font-family: 'Cinzel', serif;
-            font-size: 2.8rem;
-            margin-bottom: 10px;
+            font-size: 1.4rem;
             color: var(--color-gold);
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            letter-spacing: 2px;
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            margin-bottom: 5px;
-            color: rgba(255, 255, 255, 0.9);
-            font-weight: 500;
-        }
-
-        .dates {
-            font-style: italic;
-            color: var(--color-accent);
-            margin-top: 10px;
-            font-size: 1.1rem;
-        }
-
-        /* Main content */
-        .main-content {
-            padding: 60px 0;
+            letter-spacing: 1px;
             text-align: center;
         }
 
+        .subtitle {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+            margin-top: -2px;
+        }
+
+        .menu-toggle {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+
+        .menu-toggle:active {
+            background-color: rgba(0, 0, 0, 0.2);
+            transform: scale(0.95);
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px 15px;
+            -webkit-overflow-scrolling: touch;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
         .bible-card {
-            background: white;
-            border-radius: 10px;
-            padding: 40px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 30px 25px;
             box-shadow: var(--shadow);
-            max-width: 800px;
-            margin: 0 auto;
             position: relative;
-            border: 1px solid rgba(142, 108, 77, 0.2);
+            border: 1px solid rgba(142, 108, 77, 0.3);
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
         }
 
         .bible-card::before {
@@ -122,16 +195,18 @@
             right: 0;
             height: 5px;
             background: linear-gradient(90deg, var(--color-gold), var(--color-secondary), var(--color-gold));
-            border-radius: 10px 10px 0 0;
+            border-radius: 15px 15px 0 0;
         }
 
         .bible-title {
             font-family: 'Cinzel', serif;
-            font-size: 2.5rem;
+            font-size: 1.8rem;
             color: var(--color-primary);
             margin-bottom: 20px;
             position: relative;
             display: inline-block;
+            text-align: center;
+            width: 100%;
         }
 
         .bible-title::after {
@@ -146,25 +221,27 @@
         }
 
         .description {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: var(--color-secondary);
-            margin-bottom: 30px;
-            line-height: 1.8;
+            margin-bottom: 25px;
+            line-height: 1.7;
+            text-align: center;
+            font-style: italic;
         }
 
         /* Book selector */
         .book-selector {
             position: relative;
-            margin: 30px 0;
+            margin: 25px 0;
         }
 
         .book-selector select {
             width: 100%;
-            padding: 15px 20px;
+            padding: 16px 20px;
             font-size: 1.1rem;
             border: 2px solid var(--color-secondary);
-            border-radius: 8px;
-            background-color: white;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
             color: var(--color-dark);
             cursor: pointer;
             appearance: none;
@@ -192,65 +269,142 @@
         .go-button {
             display: block;
             width: 100%;
-            padding: 15px;
+            padding: 16px;
             background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
             color: white;
             border: none;
-            border-radius: 8px;
-            font-size: 1.1rem;
+            border-radius: 10px;
+            font-size: 1.2rem;
             cursor: pointer;
             transition: var(--transition);
-            margin-top: 15px;
+            margin-top: 20px;
             font-family: 'Cinzel', serif;
             letter-spacing: 1px;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
-        .go-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        .go-button:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
 
-        /* Features */
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 50px;
+        /* Testamento Selector */
+        .testamento-selector {
+            display: flex;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 5px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(142, 108, 77, 0.2);
         }
 
-        .feature {
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
+        .testamento-btn {
+            flex: 1;
+            padding: 12px;
             text-align: center;
-            border-top: 4px solid var(--color-gold);
-        }
-
-        .feature:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature i {
-            font-size: 2.5rem;
-            color: var(--color-secondary);
-            margin-bottom: 15px;
-        }
-
-        .feature h3 {
+            background: transparent;
+            border: none;
+            border-radius: 8px;
             font-family: 'Cinzel', serif;
-            color: var(--color-primary);
-            margin-bottom: 10px;
+            font-size: 1rem;
+            color: var(--color-secondary);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .testamento-btn.active {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Side Menu */
+        .side-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 85%;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--color-dark), var(--color-primary));
+            z-index: 2000;
+            transition: var(--transition);
+            padding: 2rem 1.5rem;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+            overflow-y: auto;
+        }
+
+        .side-menu.active {
+            right: 0;
+        }
+
+        .side-menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--color-gold);
+        }
+
+        .side-menu-title {
+            font-family: 'Cinzel', serif;
+            color: var(--color-gold);
+            font-size: 1.3rem;
+        }
+
+        .side-menu-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.3rem;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .side-menu-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .side-menu-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 1rem;
+            border-radius: 8px;
+            transition: var(--transition);
+            border-left: 3px solid transparent;
+            font-size: 1rem;
+        }
+
+        .side-menu-links a:active {
+            background: rgba(255, 255, 255, 0.1);
+            border-left: 3px solid var(--color-gold);
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1999;
+        }
+
+        .overlay.active {
+            display: block;
         }
 
         /* Footer */
         footer {
             background: var(--color-primary);
             color: white;
-            padding: 30px 0;
+            padding: 15px 0;
             text-align: center;
-            margin-top: 60px;
+            margin-top: 20px;
         }
 
         .footer-content {
@@ -261,15 +415,15 @@
 
         .footer-logo {
             font-family: 'Cinzel', serif;
-            font-size: 1.8rem;
+            font-size: 1.1rem;
             color: var(--color-gold);
-            margin-bottom: 15px;
+            margin-bottom: 8px;
         }
 
         .copyright {
-            margin-top: 15px;
+            margin-top: 8px;
             color: rgba(255, 255, 255, 0.7);
-            font-size: 0.9rem;
+            font-size: 0.8rem;
         }
 
         .copyright a {
@@ -278,126 +432,216 @@
             transition: var(--transition);
         }
 
-        .copyright a:hover {
-            color: var(--color-gold);
-            text-decoration: underline;
+        /* App Frame for Mobile */
+        .app-frame {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .notch {
+            width: 180px;
+            height: 30px;
+            background: var(--color-dark);
+            border-radius: 0 0 20px 20px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1001;
+        }
+
+        /* Touch feedback */
+        .touch-feedback:active {
+            opacity: 0.7;
         }
 
         /* Responsive */
-        @media (max-width: 768px) {
+        @media (max-width: 320px) {
             .logo {
-                font-size: 2.2rem;
+                font-size: 1.2rem;
             }
-
+            
             .bible-title {
-                font-size: 2rem;
+                font-size: 1.5rem;
             }
-
+            
             .description {
-                font-size: 1.1rem;
+                font-size: 1rem;
             }
-
-            .features {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 480px) {
+            
             .bible-card {
                 padding: 25px 20px;
             }
+        }
 
-            .logo {
-                font-size: 1.8rem;
+        @media (min-width: 415px) {
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                padding: 20px;
             }
-
-            .bible-title {
-                font-size: 1.6rem;
+            
+            .app-frame {
+                height: 90vh;
+                max-width: 414px;
+                border: 12px solid #1a1a1a;
+                border-radius: 40px;
+            }
+            
+            .notch {
+                display: block;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container header-content">
-            <div class="logo">LA SANTA BIBLIA</div>
-            <div class="subtitle">Reina-Valera 1569-1602</div>
-            <div class="dates">Antigua Versión de Casiodoro de Reina (1569) | Revisada por Cipriano de Valera (1602)</div>
-        </div>
-    </header>
-
-    <div class="container main-content">
-        <div class="bible-card">
-            <h2 class="bible-title">La Palabra de Dios</h2>
-            <p class="description">
-                "EN el principio crió Dios los cielos y la tierra."<br>
-                <strong>- Genesis 1</strong>
-            </p>
-
-
-        <div class="book-selector">
-            <select id="libros">
-                <option value="">Selecciona un libro</option>
-                <option value="genesis.html">Génesis</option>
-                <option value="exodo.html">Éxodo</option>
-                <option value="levitico.html">Levítico</option>
-                <option value="numeros.html">Números</option>
-                <option value="deuteronomio.html">Deuteronomio</option>
-                <option value="josue.html">Josué</option>
-                <option value="jueces.html">Jueces</option>
-                <option value="ruth.html">Ruth</option>
-                <option value="1samuel.html">1 Samuel</option>
-                <option value="2samuel.html">2 Samuel</option>
-                <option value="1reyes.html">1 Reyes</option>
-                <option value="2reyes.html">2 Reyes</option>
-                <option value="1cronicas.html">1 Crónicas</option>
-                <option value="2cronicas.html">2 Crónicas</option>
-                <option value="esdras.html">Esdras</option>
-                <option value="nehemias.html">Nehemías</option>
-                <option value="esther.html">Esther</option>
-                <option value="job.html">Job</option>
-                <option value="salmos.html">Salmos</option>
-                <option value="proverbios.html">Proverbios</option>
-                <option value="ecclesiastes.html">Ecclesiastés</option>
-                <option value="cantares.html">Cantares</option>
-                <option value="isaias.html">Isaías</option>
-                <option value="jeremias.html">Jeremías</option>
-                <option value="lamentaciones.html">Lamentaciones</option>
-                <option value="ezequiel.html">Ezequiel</option>
-                <option value="daniel.html">Daniel</option>
-                <option value="oseas.html">Oseas</option>
-                <option value="joel.html">Joel</option>
-                <option value="amos.html">Amós</option>
-                <option value="abdias.html">Abdías</option>
-                <option value="jonas.html">Jonás</option>
-                <option value="miqueas.html">Miqueas</option>
-                <option value="nahum.html">Nahúm</option>
-                <option value="habacuc.html">Habacuc</option>
-                <option value="sofonias.html">Sofonías</option>
-                <option value="ageo.html">Ageo</option>
-                <option value="zacarias.html">Zacarías</option>
-                <option value="malaquias.html">Malaquías</option>
-            </select>
-        <button class="go-button" onclick="navigateToBook()">Leer ahora</button>
+    <div class="app-frame">
+        <div class="notch"></div>
+        <div class="app-container">
+            <!-- Status Bar Simulation -->
+            <div class="status-bar">
+                <div class="time" id="current-time">9:41</div>
+                <div class="icons">
+                    <i class="fas fa-signal"></i>
+                    <i class="fas fa-wifi"></i>
+                    <i class="fas fa-battery-three-quarters"></i>
+                </div>
             </div>
-        </div>
 
-        
+            <!-- Header -->
+            <header>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="header-content">
+                    <div class="logo">LA SANTA BIBLIA</div>
+                    <div class="subtitle">Antiguo Testamento</div>
+                </div>
+            </header>
+
+            <!-- Menú lateral -->
+            <div class="overlay" id="overlay"></div>
+            <div class="side-menu" id="sideMenu">
+                <div class="side-menu-header">
+                    <h2 class="side-menu-title">Navegación</h2>
+                    <button class="side-menu-close" id="sideMenuClose">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="side-menu-links">
+                    <a href="acercade.html">Acerca de</a>
+                    <a href="plan-de-lectura.html">Plan de Lectura</a>
+                    <a href="contacto.html">Contacto</a>
+                    <a href="notas.html">Notas</a>
+                    <a href="numerosdeemergencia.html">Números de Emergencia</a>
+                </div>
             </div>
+
+           
+
+                <div class="bible-card">
+                    <h2 class="bible-title">El Antiguo Testamento</h2>
+                    <p class="description">
+                        "Lámpara es a mis pies tu palabra, Y lumbrera a mi camino."<br>
+                        <strong>- Salmos 119:105</strong>
+                    </p>
+
+                    <div class="book-selector">
+                        <select id="libros">
+                            <option value="">Selecciona un libro del Antiguo Testamento</option>
+                            <!-- Pentateuco -->
+                            <option value="genesis.html">Génesis</option>
+                            <option value="exodo.html">Éxodo</option>
+                            <option value="levitico.html">Levítico</option>
+                            <option value="numeros.html">Números</option>
+                            <option value="deuteronomio.html">Deuteronomio</option>
+                            
+                            <!-- Libros Históricos -->
+                            <option value="josue.html">Josué</option>
+                            <option value="jueces.html">Jueces</option>
+                            <option value="rut.html">Rut</option>
+                            <option value="1samuel.html">1 Samuel</option>
+                            <option value="2samuel.html">2 Samuel</option>
+                            <option value="1reyes.html">1 Reyes</option>
+                            <option value="2reyes.html">2 Reyes</option>
+                            <option value="1cronicas.html">1 Crónicas</option>
+                            <option value="2cronicas.html">2 Crónicas</option>
+                            <option value="esdras.html">Esdras</option>
+                            <option value="nehemias.html">Nehemías</option>
+                            <option value="ester.html">Ester</option>
+                            
+                            <!-- Libros Poéticos -->
+                            <option value="job.html">Job</option>
+                            <option value="salmos.html">Salmos</option>
+                            <option value="proverbios.html">Proverbios</option>
+                            <option value="eclesiastes.html">Eclesiastés</option>
+                            <option value="cantares.html">Cantares</option>
+                            
+                            <!-- Profetas Mayores -->
+                            <option value="isaias.html">Isaías</option>
+                            <option value="jeremias.html">Jeremías</option>
+                            <option value="lamentaciones.html">Lamentaciones</option>
+                            <option value="ezequiel.html">Ezequiel</option>
+                            <option value="daniel.html">Daniel</option>
+                            
+                            <!-- Profetas Menores -->
+                            <option value="oseas.html">Oseas</option>
+                            <option value="joel.html">Joel</option>
+                            <option value="amos.html">Amós</option>
+                            <option value="abdias.html">Abdías</option>
+                            <option value="jonas.html">Jonás</option>
+                            <option value="miqueas.html">Miqueas</option>
+                            <option value="nahum.html">Nahum</option>
+                            <option value="habacuc.html">Habacuc</option>
+                            <option value="sofonias.html">Sofonías</option>
+                            <option value="hageo.html">Hageo</option>
+                            <option value="zacarias.html">Zacarías</option>
+                            <option value="malaquias.html">Malaquías</option>
+                        </select>
+                        <button class="go-button touch-feedback" onclick="navigateToBook()">Leer ahora</button>
+                    </div>
+                </div>
+            
+
+            <!-- Footer -->
+            <footer>
+                <div class="footer-content">
+                    <div class="footer-logo">Reina-Valera 1569-1602</div>
+                    <div class="copyright">
+                        &copy; <span id="current-year"></span> | 
+                        <a href="#">Reina Valera</a>
+                    </div>
+                </div>
+            </footer>
         </div>
     </div>
 
-    <footer>
-        <div class="container footer-content">
-            <div class="footer-logo">Reina-Valera 1569-1602</div>
-            <div class="copyright">
-                &copy; <span id="current-year"></span> | 
-                <a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjuMdBfjKdAlJ2ozNJf7RvzRJduxMmx_QReDjKoxy73o_KPylRdkip1p20U4BGkKfZG-0BjuR5UC2s1II7IOqUHW0E8lkhZpDB2iSbr9Cl8bcescbphxQpvYdWpgMNz2ne9qQj7MGoT3-wH2P7cmkEYPuLdl4BpbcEG8fcsUArCAbVsiMaiWnyywzTIcd8/s200/IMG-20250213-WA0020.jpg">Reina Valera</a>
-            </div>
-        </div>
-    </footer>
-
     <script>
+        // Variables para controlar la visibilidad de la navegación
+        let navigationVisible = true;
+        let lastTapTime = 0;
+        const tapDelay = 300; // Milisegundos entre toques
+
+        // Actualizar hora en tiempo real
+        function updateTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('es-ES', { 
+                hour: '2-digit', 
+                minute: '2-digit',
+                hour12: false 
+            });
+            document.getElementById('current-time').textContent = timeString;
+        }
+
+        // Actualizar cada minuto
+        updateTime();
+        setInterval(updateTime, 60000);
+
         // Función para navegar al libro seleccionado
         function navigateToBook() {
             const select = document.getElementById('libros');
@@ -410,6 +654,29 @@
             }
         }
 
+        // Función para mostrar Antiguo Testamento
+        function showAntiguoTestamento() {
+            document.querySelectorAll('.testamento-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector('.testamento-btn').classList.add('active');
+            document.querySelector('.subtitle').textContent = 'Antiguo Testamento';
+            
+            // Aquí podrías cambiar dinámicamente los libros si fuera necesario
+        }
+
+        // Función para mostrar Nuevo Testamento
+        function showNuevoTestamento() {
+            document.querySelectorAll('.testamento-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelectorAll('.testamento-btn')[1].classList.add('active');
+            document.querySelector('.subtitle').textContent = 'Nuevo Testamento';
+            
+            // Redirigir a la página del Nuevo Testamento
+            window.location.href = 'nuevo.html';
+        }
+
         // Establecer el año actual en el copyright
         document.getElementById('current-year').textContent = new Date().getFullYear();
 
@@ -418,6 +685,91 @@
             if (e.key === 'Enter') {
                 navigateToBook();
             }
+        });
+
+        // Función para alternar la visibilidad del header
+        function toggleHeader() {
+            const header = document.querySelector('header');
+            const statusBar = document.querySelector('.status-bar');
+            
+            if (navigationVisible) {
+                // Ocultar header
+                header.classList.add('hidden');
+                statusBar.classList.add('hidden');
+                navigationVisible = false;
+            } else {
+                // Mostrar header
+                header.classList.remove('hidden');
+                statusBar.classList.remove('hidden');
+                navigationVisible = true;
+            }
+        }
+
+        // Detectar toques en la pantalla
+        document.addEventListener('touchstart', function(e) {
+            const currentTime = new Date().getTime();
+            const tapLength = currentTime - lastTapTime;
+            
+            // Si es un doble toque, alternar el header
+            if (tapLength < tapDelay && tapLength > 0) {
+                e.preventDefault();
+                toggleHeader();
+            }
+            
+            lastTapTime = currentTime;
+        });
+
+        // También alternar header con un solo toque largo (1 segundo)
+        let touchTimer;
+        document.addEventListener('touchstart', function(e) {
+            touchTimer = setTimeout(function() {
+                toggleHeader();
+            }, 1000);
+        });
+
+        document.addEventListener('touchend', function() {
+            clearTimeout(touchTimer);
+        });
+
+        // Menú lateral para móviles
+        const menuToggle = document.getElementById('menuToggle');
+        const sideMenu = document.getElementById('sideMenu');
+        const sideMenuClose = document.getElementById('sideMenuClose');
+        const overlay = document.getElementById('overlay');
+
+        function openSideMenu() {
+            sideMenu.classList.add('active');
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeSideMenu() {
+            sideMenu.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        if (menuToggle) {
+            menuToggle.addEventListener('click', openSideMenu);
+        }
+
+        if (sideMenuClose) {
+            sideMenuClose.addEventListener('click', closeSideMenu);
+        }
+
+        if (overlay) {
+            overlay.addEventListener('click', closeSideMenu);
+        }
+
+        // Efectos táctiles en botones
+        document.querySelectorAll('.go-button, .testamento-btn').forEach(element => {
+            element.addEventListener('touchstart', function() {
+                this.style.opacity = '0.7';
+            });
+            
+            element.addEventListener('touchend', function() {
+                this.style.opacity = '1';
+            });
         });
     </script>
 </body>
